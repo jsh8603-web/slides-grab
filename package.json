@@ -8,10 +8,13 @@
     "build-viewer": "node scripts/build-viewer.js"
   },
   "dependencies": {
-    "pptxgenjs": "^3.12.0",
+    "@ai-sdk/anthropic": "^3.0.48",
+    "@ai-sdk/google": "^3.0.33",
+    "@ai-sdk/openai": "^3.0.36",
+    "ai": "^6.0.103",
     "playwright": "^1.40.0",
-    "sharp": "^0.33.0",
-    "react-icons": "^5.0.0"
-  },
-  "devDependencies": {}
+    "pptxgenjs": "^3.12.0",
+    "react-icons": "^5.0.0",
+    "sharp": "^0.33.0"
+  }
 }
