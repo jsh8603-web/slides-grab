@@ -16,6 +16,10 @@ So the slides are beautiful, easily editable by AI agents, and can be converted 
 The editor is pure javascript file. You can easily add up new features like adding new coding agents, changing designs, etc.
 </p>
 
+<p align="center">
+  <video src="https://github.com/vkehfdl1/slides-grab/raw/main/docs/assets/demo.mp4" width="720" autoplay loop muted playsinline></video>
+</p>
+
 ---
 
 ## Quick Start
@@ -106,3 +110,9 @@ docs/             Installation & usage guides
 ## License
 
 [MIT](LICENSE)
+
+
+## Acknowledgment
+
+This project is built based on the [ppt_team_agent](https://github.com/uxjoseph/ppt_team_agent) by Builder Josh. Huge thanks to him!
+
