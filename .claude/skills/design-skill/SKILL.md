@@ -10,6 +10,43 @@ Delivers minimal, refined design with professional typography and precise layout
 
 ---
 
+## Design Mode
+
+Read the `Design Mode` field from `slide-outline.md` Meta section. Apply mode-specific rules from `.claude/rules/design-modes.md`.
+
+| Mode | When | Key Rule |
+|------|------|----------|
+| **Professional** | Business/consulting/executive | Action Titles, visual every slide, Pyramid Principle |
+| **Creative** | Marketing/design/competitions | Anti-AI-slop, asymmetric layouts, display fonts |
+| **Education** | Children/school/Sunday school | 18pt min, rounded corners, single concept per slide |
+| **Academic** | Research/papers/conferences | White bg, 3 colors, Ghost Deck Test, 40 words max |
+| **Minimal** | General/default | Current design philosophy below |
+
+If no Design Mode specified → default to **Minimal**.
+For mode-specific details (palettes, fonts, QA checklists), see `.claude/rules/design-modes.md`.
+
+### Mode Branching Logic
+
+1. Read `slide-outline.md` Meta → extract `Design Mode` value
+2. Load `.claude/rules/design-modes.md` → find matching mode section
+3. Apply mode-specific: color palette, font stack, layout principles, required/forbidden rules
+4. **Minimal mode**: uses the "Core Design Philosophy" section below as-is (existing behavior)
+5. **Other modes**: mode rules from `design-modes.md` override Core Design Philosophy where they conflict
+6. After all slides generated, run the mode's QA Checklist before handing off
+
+### Common Rules (All Modes)
+
+These apply regardless of mode:
+- Slide size: 720pt x 405pt (16:9 default)
+- Bottom margin: 0.5" minimum
+- Text in `<p>`, `<h1>`-`<h6>`, `<li>` only (no text directly in `<div>`)
+- `<p>`, `<h1>`-`<h6>`, `<li>` must not have background/border → wrap in `<div>`
+- Inline text wrapping with `<span>` for editor selectability
+- NanoBanana image paths: `assets/slide-{NN}-{slug}.png`
+- PPTX inspection log: check `.claude/rules/pptx-inspection-log.md` before generating
+
+---
+
 ## Core Design Philosophy
 
 ### 1. Less is More

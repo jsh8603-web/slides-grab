@@ -9,7 +9,7 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 
 ### 1. CJK 텍스트 줄바꿈 (한글 제목/키워드 밀림)
 
-**증상**: PowerPoint/LibreOffice에서 한글 텍스트가 Chrome 대비 15~20% 넓게 렌더링되어 텍스트 박스를 넘침
+**증상**: PowerPoint에서 한글 텍스트가 Chrome 대비 15~20% 넓게 렌더링되어 텍스트 박스를 넘침
 **영향 범위**: 제목(h1), 배지 번호, 짧은 키워드(2~3글자), 한 줄 문장
 **근본 원인**: Chrome과 PowerPoint의 한글 글리프 폭 메트릭 차이
 **수정 (html2pptx.cjs)**: CJK 비율 30%+ 텍스트에 폭 보정 20% (단일행) / 15% (다중행) 적용, 단일행 CJK에 `fit: "shrink"` 안전망
@@ -50,7 +50,7 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 | 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
 |------|-------------|---------|------|------|
 | 2026-03-12 | noahs-ark | 2,3 | "01" 등 번호가 줄바꿈 | CJK 폭 보정으로 간접 해결 |
-| 2026-03-12 | sailing-ships | 2 | "01" 배지 줄바꿈 (min-width: 36pt→40pt도 부족) | LibreOffice 한계, PowerPoint에서는 정상 가능성 |
+| 2026-03-12 | sailing-ships | 2 | "01" 배지 줄바꿈 (min-width: 36pt→40pt도 부족) | PowerPoint에서 정상 가능성 |
 
 ### 4. 변환 전 HTML 수정 패턴 (PPTX 변환 에러 → HTML 수정 필요)
 
@@ -81,9 +81,9 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 
 ### 6. 카드/박스 내 텍스트 오버플로 (PowerPoint 전용)
 
-**증상**: LibreOffice 검사에서는 보이지 않지만 PowerPoint에서 텍스트가 카드(roundRect) 경계를 넘침
+**증상**: PowerPoint에서 텍스트가 카드(roundRect) 경계를 넘침
 **영향 범위**: 배경색 있는 카드 안의 굵은 텍스트, 특히 한글+연도/숫자 조합 (예: "빅토리아호 (1519~1522)")
-**근본 원인**: PowerPoint가 LibreOffice보다 텍스트를 넓게 렌더링 + 카드 padding이 부족
+**근본 원인**: PowerPoint가 Chrome보다 텍스트를 넓게 렌더링 + 카드 padding이 부족
 **HTML 작성 시 예방**:
 - 카드 내 텍스트 font-size를 11pt 이하로 제한 (12pt는 위험)
 - 한글+괄호+숫자 조합은 font-size를 1~2pt 추가 축소
@@ -93,7 +93,7 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 **발생 사례**:
 | 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
 |------|-------------|---------|------|------|
-| 2026-03-13 | sailing-ships | 6 | "빅토리아호 (1519~1522)" 등 카드 텍스트 경계 초과 | LibreOffice 검사에서 미발견, PowerPoint에서 확인 |
+| 2026-03-13 | sailing-ships | 6 | "빅토리아호 (1519~1522)" 등 카드 텍스트 경계 초과 | PowerPoint MCP 검사에서 확인 |
 
 ### 7. 이미지 밝기로 인한 텍스트 가독성 저하
 
@@ -142,15 +142,48 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 | 2026-03-12 | sailing-ships | 에디터에서 모든 이미지 깨짐 | editor-server.js에 express.static 추가 |
 | 2026-03-12 | sailing-ships | Claude 서브프로세스에서 GEMINI_API_KEY 없음 | 에디터 실행 시 환경변수 전달 필수 |
 
+### 10. 슬라이드 전체 콘텐츠 하단 오버플로 (body 405pt 초과)
+
+**증상**: 슬라이드 콘텐츠가 body 하단(405pt)을 넘어 잘림. 브라우저 뷰어에서는 스크롤로 보이지만 PPTX에서는 잘려 사라짐
+**영향 범위**: 항목이 많은 슬라이드 — 4개+ 카드 그리드, 5개+ 리스트 아이템, 다단 레이아웃
+**근본 원인**: body padding + 제목 영역 + gap + 아이템 padding 누적이 405pt를 초과
+**수정 패턴**: padding 축소 (40pt→32pt), gap 축소 (14pt→10pt, 10pt→7pt), 아이템 내부 padding 축소 (18pt→14pt, 14pt→10pt), font-size 축소 (13pt→12pt, 12pt→10pt, 9pt 유지)
+**HTML 작성 시 예방**:
+- 항목 4개+ 그리드: body padding 최대 32pt, gap 최대 10pt
+- 항목 5개+ 리스트: body padding 최대 32pt, 아이템 간 gap 최대 7pt, 아이템 내부 padding 최대 10pt
+- 제목 + key-msg + 그리드 조합: 제목 margin-bottom 4pt 이하, key-msg margin-bottom 12pt 이하
+- 콘텐츠 높이 사전 계산: body padding(상+하) + 제목(~30pt) + 메시지(~18pt) + (아이템 높이 × 수) + (gap × (수-1)) ≤ 405pt
+- 여유분 없으면 font-size를 1~2pt 줄여 아이템 높이 축소
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | manufacturing-kpi-report | 3 | PQCD 4카드 그리드 하단 잘림 (padding 40pt + gap 14pt + card padding 18pt 누적) | padding 40→32pt, gap 14→10pt, card padding 18→14pt, card-title 13→12pt |
+| 2026-03-13 | manufacturing-kpi-report | 9 | 5개 체크리스트 하단 5번째 항목 잘림 (padding 40pt + gap 10pt + item padding 14pt) | padding 40→32pt, gap 10→7pt, item padding 14→10pt, check-title 13→12pt, check-desc 10→9pt |
+
+### 11. 리프 DIV 텍스트 누락 (PPTX에 텍스트 미렌더링)
+
+**증상**: 카드/박스 내부의 모든 본문 텍스트가 PPTX에서 완전히 사라짐. 제목(h1)만 보이고 나머지 텍스트 전부 누락
+**영향 범위**: `<div><span>텍스트</span></div>` 패턴으로 작성된 모든 텍스트 요소
+**근본 원인**: html2pptx.cjs가 `textTags = ['P', 'H1'~'H6', 'UL', 'OL', 'LI']`만 텍스트로 인식. `<div>` 안의 텍스트는 bg/border가 없으면 shape으로도, text로도 처리되지 않고 건너뜀
+**수정 (html2pptx.cjs)**: 리프 DIV 감지 로직 추가 — `<div>` 안에 블록 자식(div, p, h1 등)이 없고 textContent가 있으면 `<p>`처럼 텍스트 요소로 처리
+**HTML 작성 시 참고**: 이 수정 후에는 `<div><span>텍스트</span></div>` 패턴도 정상 변환됨. `<p>` 래핑 불필요
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | manufacturing-kpi-report | 전체(1-10) | 제목만 보이고 카드/리스트/배지 텍스트 전부 누락 | html2pptx.cjs에 리프 DIV → 텍스트 요소 처리 로직 추가 |
+
 ---
 
 ## 검사 통과 기록
 
 | 날짜 | 프레젠테이션 | 슬라이드 수 | 결과 | 비고 |
 |------|-------------|-----------|------|------|
-| 2026-03-12 | noahs-ark | 12 | html2pptx.cjs 수정 후 전체 통과 | CJK 폭 보정 적용, 이모지(🕊️) LibreOffice 렌더링 한계는 PowerPoint에서 정상 |
-| 2026-03-12 | sailing-ships | 8 | html2pptx.cjs gradient/경로 수정 후 통과 | "01" 배지 LibreOffice 줄바꿈 잔존 (PowerPoint 확인 필요), NanoBanana 이미지 8장 정상 |
+| 2026-03-12 | noahs-ark | 12 | html2pptx.cjs 수정 후 전체 통과 | CJK 폭 보정 적용, 이모지(🕊️) 이모지 렌더링 PowerPoint에서 정상 |
+| 2026-03-12 | sailing-ships | 8 | html2pptx.cjs gradient/경로 수정 후 통과 | "01" 배지 줄바꿈 (패턴 #3), NanoBanana 이미지 8장 정상 |
 | 2026-03-13 | sailing-ships | 8 | PowerPoint 추가 확인: 슬라이드6 카드 텍스트 밀림, 슬라이드7 이미지 밝기 | 이슈 패턴 #6, #7 신규 등록 |
-| 2026-03-13 | triassic-dinosaurs | 10 | 전체 통과 | 슬라이드2 "01" 배지 줄바꿈 (패턴 #3, LibreOffice 한계), 차트/이미지/카드 정상, NanoBanana 이미지 10장 정상 |
+| 2026-03-13 | triassic-dinosaurs | 10 | 전체 통과 | 슬라이드2 "01" 배지 줄바꿈 (패턴 #3), 차트/이미지/카드 정상, NanoBanana 이미지 10장 정상 |
 | 2026-03-13 | triassic-dinosaurs-v2 | 10 | PowerPoint 확인 → 카드 텍스트 오버플로 발견 (패턴 #9) | 슬라이드 3,8에서 텍스트가 카드 밖으로 넘침. html2pptx.cjs에 부모 shape 클램핑 추가하여 수정 |
 | 2026-03-13 | triassic-dinosaurs-v2 | 10 | 클램핑 수정 후 재변환 전체 통과 | PowerPoint MCP 프리뷰로 슬라이드 2,3,5,7,8,10 확인. 모든 텍스트가 카드 경계 내 정상 렌더링 |
+| 2026-03-13 | manufacturing-kpi-report | 10 | 텍스트 누락 발견 → 수정 후 통과 | 패턴#11: 리프DIV 텍스트 전체 누락 → html2pptx.cjs 리프DIV 처리 추가. 패턴#10: 슬라이드3,9 하단 오버플로. 패턴#4: 슬라이드1,10 배경이미지 변환 에러. PPT MCP로 전체 10장 검사 통과 |

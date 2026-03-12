@@ -1051,7 +1051,20 @@ async function extractSlideData(page) {
       }
 
       // Extract text elements (P, H1, H2, etc.)
-      if (!textTags.includes(el.tagName)) return;
+      // Also handle leaf DIVs that contain only inline content (text, span, b, i, etc.)
+      if (!textTags.includes(el.tagName)) {
+        if (el.tagName === 'DIV') {
+          const text = el.textContent.trim();
+          const hasBlockChild = el.querySelector('div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, img, svg, canvas');
+          if (text && !hasBlockChild) {
+            // This is a leaf text DIV — treat as paragraph below
+          } else {
+            return;
+          }
+        } else {
+          return;
+        }
+      }
 
       const rect = el.getBoundingClientRect();
       const text = el.textContent.trim();

@@ -26,6 +26,28 @@ Does not write the outline directly — delegates the work to `organizer-agent`.
 - Research results (optional — research-agent output)
 - Reference materials, tone/mood requests, etc.
 
+## Design Mode Selection
+
+아웃라인 작성 **전에** 디자인 모드를 결정한다. 사용자 요청의 청중/톤/주제를 분석하여 자동 매칭.
+
+### Auto-Matching Rules
+
+| 키워드 감지 | Mode | 근거 |
+|------------|------|------|
+| 비즈니스, 임원, 보고서, 투자, 컨설팅, 전략, 실적 | **Professional** | Pyramid Principle, Action Title |
+| 마케팅, 디자인, 창작, 공모전, 브랜딩, 캠페인 | **Creative** | Anti-AI-slop, display fonts |
+| 어린이, 유치원, 주일학교, 초등, 아이들, 교회학교 | **Education** | Mayer 원리, 18pt min |
+| 학술, 연구, 논문, 학회, 실험, 데이터 분석 | **Academic** | Ghost Deck Test, 3 colors |
+| 기타, 범용, 미지정 | **Minimal** | 기본값 |
+
+### 적용 절차
+
+1. 사용자 토픽에서 키워드 감지 → 모드 자동 추천
+2. organizer-agent 호출 시 `Design Mode: {mode}` 포함
+3. outline Meta 섹션에 `Design Mode` 필드 추가
+4. 사용자가 모드를 명시적으로 지정하면 해당 모드 우선 적용
+5. 모드별 상세 규칙: `.claude/rules/design-modes.md` 참조
+
 ## Output
 
 - User-approved `slide-outline.md`
@@ -197,6 +219,7 @@ slides/프레젠테이션명/assets/slide-{NN}-{영문슬러그}.png
 - **Topic**: ...
 - **Target Audience**: ...
 - **Tone/Mood**: ...
+- **Design Mode**: Professional / Creative / Education / Academic / Minimal
 - **Slide Count**: N slides
 - **Aspect Ratio**: 16:9
 - **Color Palette**: Primary [hex], Accent [hex], Background [hex]
@@ -242,6 +265,16 @@ Task tool call:
     Topic: [user topic]
     Requirements: [user requirements]
     Research results: [if available]
+    Design Mode: [auto-matched mode — Professional/Creative/Education/Academic/Minimal]
+
+    IMPORTANT — Design Mode:
+    Meta 섹션에 "Design Mode: [mode]" 필드를 반드시 포함하세요.
+    모드별 규칙은 .claude/rules/design-modes.md 참조.
+    - Professional: Action Title (주장 문장), 모든 슬라이드에 visual element 필수
+    - Creative: aesthetic preset 선정, Anti-AI-slop, display font
+    - Education: 1 슬라이드 = 1 개념, 텍스트+이미지 쌍, 18pt 이상
+    - Academic: 제목 = 완전한 문장, 40단어 이하, 흰색 배경 고정
+    - Minimal: 기본값, Pretendard, typography-driven
 
     IMPORTANT — NanoBanana 이미지 태그:
     이미지가 필요한 슬라이드에 NanoBanana: 태그를 포함하세요.
@@ -271,6 +304,10 @@ Task tool call:
 
     Current outline: [slide-outline.md content]
     User feedback: [feedback content]
+    Design Mode: [current mode from Meta section]
+
+    Design Mode 변경 요청 시 Meta 섹션 업데이트 + 전체 슬라이드에 모드 규칙 반영.
+    모드별 규칙: .claude/rules/design-modes.md 참조.
 
     NanoBanana 태그도 피드백에 맞게 수정하세요.
     프롬프트 규칙: .claude/rules/nanoBanana-guide.md 참조.
