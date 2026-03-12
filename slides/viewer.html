@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #111;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .viewer-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation bar */
+    .nav-bar {
+      height: 48px;
+      background: #1a1a1a;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .nav-bar button {
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .nav-bar button:hover {
+      background: #555;
+    }
+
+    .nav-bar button:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .slide-counter {
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 60px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-fullscreen {
+      position: absolute;
+      right: 16px;
+      background: transparent !important;
+      font-size: 18px;
+      padding: 6px 10px !important;
+    }
+
+    /* Slide viewport */
+    .slide-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-scaler {
+      width: 720pt;
+      height: 405pt;
+      position: relative;
+      transform-origin: center center;
+    }
+
+    /* Slide frames (iframes) */
+    .slide-frame {
+      position: absolute;
+      inset: 0;
+      width: 720pt;
+      height: 405pt;
+      border: none;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .slide-frame.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer-container">
+    <!-- Navigation -->
+    <div class="nav-bar">
+      <button id="btn-prev" title="Previous (\u2190)">Prev</button>
+      <span class="slide-counter" id="counter">1 / 8</span>
+      <button id="btn-next" title="Next (\u2192)">Next</button>
+      <button class="btn-fullscreen" id="btn-fs" title="Fullscreen (F)">&#x26F6;</button>
+    </div>
+
+    <!-- Slide viewport -->
+    <div class="slide-viewport" id="viewport">
+      <div class="slide-scaler" id="scaler">
+        <iframe class="slide-frame active" data-slide="1" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient(180deg, #e0f0ff 0%, #b3d9ff 50%, #87c4ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <!-- Decorative clouds -->
+  <svg style=&quot;position:absolute;top:20pt;left:40pt;opacity:0.5;&quot; width=&quot;120&quot; height=&quot;60&quot; viewBox=&quot;0 0 120 60&quot;>
+    <ellipse cx=&quot;60&quot; cy=&quot;40&quot; rx=&quot;55&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;35&quot; cy=&quot;30&quot; rx=&quot;30&quot; ry=&quot;22&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;85&quot; cy=&quot;30&quot; rx=&quot;28&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;top:40pt;right:60pt;opacity:0.4;&quot; width=&quot;100&quot; height=&quot;50&quot; viewBox=&quot;0 0 100 50&quot;>
+    <ellipse cx=&quot;50&quot; cy=&quot;32&quot; rx=&quot;45&quot; ry=&quot;18&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;30&quot; cy=&quot;24&quot; rx=&quot;25&quot; ry=&quot;18&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;70&quot; cy=&quot;24&quot; rx=&quot;22&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:80pt;left:80pt;opacity:0.3;&quot; width=&quot;90&quot; height=&quot;45&quot; viewBox=&quot;0 0 90 45&quot;>
+    <ellipse cx=&quot;45&quot; cy=&quot;30&quot; rx=&quot;40&quot; ry=&quot;15&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;25&quot; cy=&quot;22&quot; rx=&quot;22&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;65&quot; cy=&quot;22&quot; rx=&quot;20&quot; ry=&quot;14&quot; fill=&quot;#ffffff&quot;/>
+  </svg>
+
+  <!-- Tchoupi character - waving -->
+  <svg width=&quot;260&quot; height=&quot;260&quot; viewBox=&quot;0 0 260 260&quot; style=&quot;margin-bottom: 12pt;&quot;>
+    <!-- Body -->
+    <ellipse cx=&quot;130&quot; cy=&quot;155&quot; rx=&quot;70&quot; ry=&quot;85&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Belly -->
+    <ellipse cx=&quot;130&quot; cy=&quot;170&quot; rx=&quot;45&quot; ry=&quot;55&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Head -->
+    <ellipse cx=&quot;130&quot; cy=&quot;80&quot; rx=&quot;55&quot; ry=&quot;50&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Left eye white -->
+    <ellipse cx=&quot;110&quot; cy=&quot;75&quot; rx=&quot;18&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Right eye white -->
+    <ellipse cx=&quot;150&quot; cy=&quot;75&quot; rx=&quot;18&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Left pupil -->
+    <circle cx=&quot;112&quot; cy=&quot;77&quot; r=&quot;8&quot; fill=&quot;#1a1a1a&quot;/>
+    <!-- Right pupil -->
+    <circle cx=&quot;148&quot; cy=&quot;77&quot; r=&quot;8&quot; fill=&quot;#1a1a1a&quot;/>
+    <!-- Left eye shine -->
+    <circle cx=&quot;115&quot; cy=&quot;73&quot; r=&quot;3&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Right eye shine -->
+    <circle cx=&quot;151&quot; cy=&quot;73&quot; r=&quot;3&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Beak/mouth -->
+    <ellipse cx=&quot;130&quot; cy=&quot;98&quot; rx=&quot;10&quot; ry=&quot;6&quot; fill=&quot;#ff9933&quot;/>
+    <!-- Smile -->
+    <path d=&quot;M122 102 Q130 112 138 102&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <!-- Hat -->
+    <ellipse cx=&quot;130&quot; cy=&quot;42&quot; rx=&quot;30&quot; ry=&quot;12&quot; fill=&quot;#ff6b6b&quot;/>
+    <rect x=&quot;105&quot; y=&quot;30&quot; width=&quot;50&quot; height=&quot;14&quot; rx=&quot;6&quot; fill=&quot;#ff6b6b&quot;/>
+    <circle cx=&quot;130&quot; cy=&quot;26&quot; r=&quot;8&quot; fill=&quot;#ff6b6b&quot;/>
+    <!-- Left arm waving -->
+    <path d=&quot;M65 140 Q40 100 55 80&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;16&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <!-- Left hand -->
+    <ellipse cx=&quot;55&quot; cy=&quot;76&quot; rx=&quot;12&quot; ry=&quot;10&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Right arm -->
+    <path d=&quot;M195 140 Q210 155 205 170&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;16&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <!-- Feet -->
+    <ellipse cx=&quot;105&quot; cy=&quot;238&quot; rx=&quot;22&quot; ry=&quot;10&quot; fill=&quot;#ff9933&quot;/>
+    <ellipse cx=&quot;155&quot; cy=&quot;238&quot; rx=&quot;22&quot; ry=&quot;10&quot; fill=&quot;#ff9933&quot;/>
+    <!-- Cheek blush -->
+    <ellipse cx=&quot;95&quot; cy=&quot;95&quot; rx=&quot;10&quot; ry=&quot;7&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+    <ellipse cx=&quot;165&quot; cy=&quot;95&quot; rx=&quot;10&quot; ry=&quot;7&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+  </svg>
+
+  <h1 style=&quot;font-size: 52pt; font-weight: 800; color: #2a5298; letter-spacing: -0.02em; text-align: center;&quot;>안녕, 추피!</h1>
+  <p style=&quot;font-size: 20pt; font-weight: 500; color: #4a7ab5; margin-top: 8pt; text-align: center;&quot;>세상에서 제일 귀여운 펭귄 친구를 만나요</p>
+
+  <!-- Small decorative elements -->
+  <svg style=&quot;position:absolute;bottom:30pt;left:50pt;&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.6&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:50pt;right:40pt;&quot; width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff9999&quot; opacity=&quot;0.5&quot;/>
+  </svg>
+
+  <p style=&quot;position:absolute;bottom:12pt;right:20pt;font-size: 9pt; color: #7ba7d1;&quot;>그림: 티에리 쿠르탱 (Thierry Courtin) 作</p>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="2" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #fffcf0;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <!-- Left side: Tchoupi large illustration -->
+  <div style=&quot;width: 55%; height: 100%; display: flex; align-items: center; justify-content: center; background: #fff5e6; position: relative;&quot;>
+    <svg width=&quot;320&quot; height=&quot;360&quot; viewBox=&quot;0 0 320 360&quot; style=&quot;margin-top: -10pt;&quot;>
+      <!-- Body -->
+      <ellipse cx=&quot;160&quot; cy=&quot;210&quot; rx=&quot;85&quot; ry=&quot;105&quot; fill=&quot;#3a3a3a&quot;/>
+      <!-- Belly -->
+      <ellipse cx=&quot;160&quot; cy=&quot;230&quot; rx=&quot;55&quot; ry=&quot;70&quot; fill=&quot;#ffffff&quot;/>
+      <!-- Head -->
+      <ellipse cx=&quot;160&quot; cy=&quot;105&quot; rx=&quot;68&quot; ry=&quot;62&quot; fill=&quot;#3a3a3a&quot;/>
+      <!-- Left eye white -->
+      <ellipse cx=&quot;135&quot; cy=&quot;98&quot; rx=&quot;22&quot; ry=&quot;25&quot; fill=&quot;#ffffff&quot;/>
+      <!-- Right eye white -->
+      <ellipse cx=&quot;185&quot; cy=&quot;98&quot; rx=&quot;22&quot; ry=&quot;25&quot; fill=&quot;#ffffff&quot;/>
+      <!-- Left pupil -->
+      <circle cx=&quot;138&quot; cy=&quot;100&quot; r=&quot;10&quot; fill=&quot;#1a1a1a&quot;/>
+      <!-- Right pupil -->
+      <circle cx=&quot;182&quot; cy=&quot;100&quot; r=&quot;10&quot; fill=&quot;#1a1a1a&quot;/>
+      <!-- Left eye shine -->
+      <circle cx=&quot;141&quot; cy=&quot;95&quot; r=&quot;4&quot; fill=&quot;#ffffff&quot;/>
+      <!-- Right eye shine -->
+      <circle cx=&quot;185&quot; cy=&quot;95&quot; r=&quot;4&quot; fill=&quot;#ffffff&quot;/>
+      <!-- Beak -->
+      <ellipse cx=&quot;160&quot; cy=&quot;125&quot; rx=&quot;12&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+      <!-- Smile -->
+      <path d=&quot;M150 130 Q160 142 170 130&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;2.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+      <!-- Hat -->
+      <ellipse cx=&quot;160&quot; cy=&quot;56&quot; rx=&quot;36&quot; ry=&quot;14&quot; fill=&quot;#ff6b6b&quot;/>
+      <rect x=&quot;130&quot; y=&quot;42&quot; width=&quot;60&quot; height=&quot;16&quot; rx=&quot;7&quot; fill=&quot;#ff6b6b&quot;/>
+      <circle cx=&quot;160&quot; cy=&quot;36&quot; r=&quot;10&quot; fill=&quot;#ff6b6b&quot;/>
+      <!-- Arms at sides -->
+      <path d=&quot;M80 195 Q60 210 65 230&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;18&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+      <path d=&quot;M240 195 Q260 210 255 230&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;18&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+      <!-- Feet -->
+      <ellipse cx=&quot;128&quot; cy=&quot;312&quot; rx=&quot;26&quot; ry=&quot;12&quot; fill=&quot;#ff9933&quot;/>
+      <ellipse cx=&quot;192&quot; cy=&quot;312&quot; rx=&quot;26&quot; ry=&quot;12&quot; fill=&quot;#ff9933&quot;/>
+      <!-- Cheek blush -->
+      <ellipse cx=&quot;115&quot; cy=&quot;120&quot; rx=&quot;12&quot; ry=&quot;8&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+      <ellipse cx=&quot;205&quot; cy=&quot;120&quot; rx=&quot;12&quot; ry=&quot;8&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+
+      <!-- Annotation arrows and labels -->
+      <!-- Arrow to hat -->
+      <line x1=&quot;230&quot; y1=&quot;40&quot; x2=&quot;196&quot; y2=&quot;46&quot; stroke=&quot;#ff6b6b&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;4,3&quot;/>
+      <circle cx=&quot;232&quot; cy=&quot;38&quot; r=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+
+      <!-- Arrow to eyes -->
+      <line x1=&quot;248&quot; y1=&quot;95&quot; x2=&quot;210&quot; y2=&quot;98&quot; stroke=&quot;#4a90d9&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;4,3&quot;/>
+      <circle cx=&quot;250&quot; cy=&quot;94&quot; r=&quot;3&quot; fill=&quot;#4a90d9&quot;/>
+
+      <!-- Arrow to belly -->
+      <line x1=&quot;248&quot; y1=&quot;230&quot; x2=&quot;218&quot; y2=&quot;230&quot; stroke=&quot;#66bb6a&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;4,3&quot;/>
+      <circle cx=&quot;250&quot; cy=&quot;230&quot; r=&quot;3&quot; fill=&quot;#66bb6a&quot;/>
+
+      <!-- Arrow to feet -->
+      <line x1=&quot;248&quot; y1=&quot;310&quot; x2=&quot;220&quot; y2=&quot;312&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;4,3&quot;/>
+      <circle cx=&quot;250&quot; cy=&quot;309&quot; r=&quot;3&quot; fill=&quot;#ff9933&quot;/>
+    </svg>
+  </div>
+
+  <!-- Right side: text info -->
+  <div style=&quot;width: 45%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 32pt 28pt;&quot;>
+    <p style=&quot;display: inline-block; padding: 5pt 14pt; background: #ff6b6b; color: #ffffff; border-radius: 20pt; font-size: 10pt; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 16pt; width: fit-content;&quot;>CHARACTER</p>
+
+    <h1 style=&quot;font-size: 32pt; font-weight: 800; color: #2a2a2a; letter-spacing: -0.02em; margin-bottom: 20pt;&quot;>추피는<br>누구일까요?</h1>
+
+    <div style=&quot;display: flex; flex-direction: column; gap: 14pt;&quot;>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <div style=&quot;width: 8pt; height: 8pt; background: #ff6b6b; border-radius: 50%;&quot;></div>
+        <p style=&quot;font-size: 14pt; font-weight: 500; color: #444;&quot;>빨간 모자가 트레이드마크!</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <div style=&quot;width: 8pt; height: 8pt; background: #4a90d9; border-radius: 50%;&quot;></div>
+        <p style=&quot;font-size: 14pt; font-weight: 500; color: #444;&quot;>크고 동그란 눈이 매력적이에요</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <div style=&quot;width: 8pt; height: 8pt; background: #66bb6a; border-radius: 50%;&quot;></div>
+        <p style=&quot;font-size: 14pt; font-weight: 500; color: #444;&quot;>하얀 배가 폭신폭신</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <div style=&quot;width: 8pt; height: 8pt; background: #ff9933; border-radius: 50%;&quot;></div>
+        <p style=&quot;font-size: 14pt; font-weight: 500; color: #444;&quot;>노란 발이 귀여워요</p>
+      </div>
+    </div>
+
+    <div style=&quot;margin-top: 24pt; padding: 14pt 18pt; background: #fff0e0; border-radius: 12pt;&quot;>
+      <p style=&quot;font-size: 12pt; color: #886644; line-height: 1.6;&quot;>프랑스에서 온 꼬마 펭귄 추피는<br>여러분과 똑같은 호기심쟁이예요!</p>
+    </div>
+  </div>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="3" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #fff5ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <h1 style=&quot;font-size: 30pt; font-weight: 800; color: #d45d3a; margin-top: 24pt; letter-spacing: -0.02em;&quot;>추피의 가족</h1>
+  <p style=&quot;font-size: 13pt; color: #aa7766; margin-top: 4pt; margin-bottom: 16pt;&quot;>사랑이 가득한 추피네 가족을 소개해요</p>
+
+  <!-- Family illustration area -->
+  <div style=&quot;display: flex; align-items: flex-end; justify-content: center; gap: 20pt; flex: 1; padding-bottom: 30pt;&quot;>
+
+    <!-- Papa -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;130&quot; height=&quot;200&quot; viewBox=&quot;0 0 130 200&quot;>
+        <!-- Body -->
+        <ellipse cx=&quot;65&quot; cy=&quot;120&quot; rx=&quot;42&quot; ry=&quot;55&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;65&quot; cy=&quot;130&quot; rx=&quot;28&quot; ry=&quot;36&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;65&quot; cy=&quot;55&quot; rx=&quot;34&quot; ry=&quot;32&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;52&quot; cy=&quot;52&quot; rx=&quot;11&quot; ry=&quot;13&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;78&quot; cy=&quot;52&quot; rx=&quot;11&quot; ry=&quot;13&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;54&quot; cy=&quot;53&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;76&quot; cy=&quot;53&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;56&quot; cy=&quot;50&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;78&quot; cy=&quot;50&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Beak -->
+        <ellipse cx=&quot;65&quot; cy=&quot;68&quot; rx=&quot;6&quot; ry=&quot;4&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M60 71 Q65 78 70 71&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Tie -->
+        <polygon points=&quot;65,90 58,100 65,108 72,100&quot; fill=&quot;#4a7ab5&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M26 110 Q15 120 18 135&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M104 110 Q115 120 112 135&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;48&quot; cy=&quot;174&quot; rx=&quot;15&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;82&quot; cy=&quot;174&quot; rx=&quot;15&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+      </svg>
+      <div style=&quot;background: #ffffff; border-radius: 16pt; padding: 5pt 14pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 4pt;&quot;>
+        <p style=&quot;font-size: 13pt; font-weight: 700; color: #4a7ab5; text-align: center;&quot;>아빠</p>
+      </div>
+    </div>
+
+    <!-- Maman -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;125&quot; height=&quot;195&quot; viewBox=&quot;0 0 125 195&quot;>
+        <!-- Body -->
+        <ellipse cx=&quot;62&quot; cy=&quot;118&quot; rx=&quot;40&quot; ry=&quot;52&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;62&quot; cy=&quot;128&quot; rx=&quot;26&quot; ry=&quot;34&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;62&quot; cy=&quot;54&quot; rx=&quot;32&quot; ry=&quot;30&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;50&quot; cy=&quot;51&quot; rx=&quot;10&quot; ry=&quot;12&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;74&quot; cy=&quot;51&quot; rx=&quot;10&quot; ry=&quot;12&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;52&quot; cy=&quot;52&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;72&quot; cy=&quot;52&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;54&quot; cy=&quot;49&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;74&quot; cy=&quot;49&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Beak -->
+        <ellipse cx=&quot;62&quot; cy=&quot;66&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M57 69 Q62 76 67 69&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Bow -->
+        <path d=&quot;M42 30 Q32 22 36 36&quot; stroke=&quot;none&quot; fill=&quot;#ff69b4&quot;/>
+        <path d=&quot;M42 30 Q52 22 48 36&quot; stroke=&quot;none&quot; fill=&quot;#ff69b4&quot;/>
+        <circle cx=&quot;42&quot; cy=&quot;33&quot; r=&quot;4&quot; fill=&quot;#ff69b4&quot;/>
+        <!-- Necklace -->
+        <circle cx=&quot;62&quot; cy=&quot;88&quot; r=&quot;4&quot; fill=&quot;#ffd700&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M25 108 Q14 118 17 132&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M99 108 Q110 118 107 132&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;45&quot; cy=&quot;169&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;79&quot; cy=&quot;169&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+      </svg>
+      <div style=&quot;background: #ffffff; border-radius: 16pt; padding: 5pt 14pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 4pt;&quot;>
+        <p style=&quot;font-size: 13pt; font-weight: 700; color: #e8668b; text-align: center;&quot;>엄마</p>
+      </div>
+    </div>
+
+    <!-- Tchoupi -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;110&quot; height=&quot;170&quot; viewBox=&quot;0 0 110 170&quot;>
+        <!-- Body -->
+        <ellipse cx=&quot;55&quot; cy=&quot;100&quot; rx=&quot;35&quot; ry=&quot;45&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;55&quot; cy=&quot;108&quot; rx=&quot;23&quot; ry=&quot;30&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;55&quot; cy=&quot;45&quot; rx=&quot;28&quot; ry=&quot;26&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;44&quot; cy=&quot;42&quot; rx=&quot;9&quot; ry=&quot;11&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;66&quot; cy=&quot;42&quot; rx=&quot;9&quot; ry=&quot;11&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;46&quot; cy=&quot;43&quot; r=&quot;4.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;64&quot; cy=&quot;43&quot; r=&quot;4.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;48&quot; cy=&quot;40&quot; r=&quot;1.8&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;66&quot; cy=&quot;40&quot; r=&quot;1.8&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Beak -->
+        <ellipse cx=&quot;55&quot; cy=&quot;56&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M51 59 Q55 65 59 59&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;55&quot; cy=&quot;24&quot; rx=&quot;18&quot; ry=&quot;7&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;40&quot; y=&quot;17&quot; width=&quot;30&quot; height=&quot;9&quot; rx=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;14&quot; r=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M22 92 Q12 100 15 112&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;9&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M88 92 Q98 100 95 112&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;9&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;40&quot; cy=&quot;144&quot; rx=&quot;13&quot; ry=&quot;6&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;70&quot; cy=&quot;144&quot; rx=&quot;13&quot; ry=&quot;6&quot; fill=&quot;#ff9933&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;35&quot; cy=&quot;55&quot; rx=&quot;6&quot; ry=&quot;4&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+        <ellipse cx=&quot;75&quot; cy=&quot;55&quot; rx=&quot;6&quot; ry=&quot;4&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+      </svg>
+      <div style=&quot;background: #ff6b6b; border-radius: 16pt; padding: 5pt 14pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 4pt;&quot;>
+        <p style=&quot;font-size: 13pt; font-weight: 700; color: #ffffff; text-align: center;&quot;>추피</p>
+      </div>
+    </div>
+
+    <!-- Fanni (baby sister) -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;85&quot; height=&quot;130&quot; viewBox=&quot;0 0 85 130&quot;>
+        <!-- Body -->
+        <ellipse cx=&quot;42&quot; cy=&quot;78&quot; rx=&quot;26&quot; ry=&quot;32&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;42&quot; cy=&quot;84&quot; rx=&quot;17&quot; ry=&quot;22&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;42&quot; cy=&quot;36&quot; rx=&quot;22&quot; ry=&quot;20&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;34&quot; cy=&quot;34&quot; rx=&quot;7&quot; ry=&quot;9&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;50&quot; cy=&quot;34&quot; rx=&quot;7&quot; ry=&quot;9&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;35&quot; cy=&quot;35&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;49&quot; cy=&quot;35&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;37&quot; cy=&quot;32&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;51&quot; cy=&quot;32&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Beak -->
+        <ellipse cx=&quot;42&quot; cy=&quot;45&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M39 47 Q42 52 45 47&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Bow -->
+        <path d=&quot;M34 18 Q26 12 29 23&quot; stroke=&quot;none&quot; fill=&quot;#ff99cc&quot;/>
+        <path d=&quot;M34 18 Q42 12 39 23&quot; stroke=&quot;none&quot; fill=&quot;#ff99cc&quot;/>
+        <circle cx=&quot;34&quot; cy=&quot;20&quot; r=&quot;3&quot; fill=&quot;#ff99cc&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M18 72 Q10 78 13 88&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;7&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M66 72 Q74 78 71 88&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;7&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;30&quot; cy=&quot;109&quot; rx=&quot;11&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;54&quot; cy=&quot;109&quot; rx=&quot;11&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;27&quot; cy=&quot;44&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+        <ellipse cx=&quot;57&quot; cy=&quot;44&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+      </svg>
+      <div style=&quot;background: #ffffff; border-radius: 16pt; padding: 5pt 14pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 4pt;&quot;>
+        <p style=&quot;font-size: 13pt; font-weight: 700; color: #e8668b; text-align: center;&quot;>파니</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hearts decoration -->
+  <svg style=&quot;position:absolute;top:20pt;right:30pt;opacity:0.3;&quot; width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff6b6b&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;top:55pt;right:55pt;opacity:0.2;&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff6b6b&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:25pt;left:30pt;opacity:0.25;&quot; width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff6b6b&quot;/>
+  </svg>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="4" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #eef8ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <h1 style=&quot;font-size: 30pt; font-weight: 800; color: #3a8a3a; margin-top: 24pt; letter-spacing: -0.02em;&quot;>추피의 친구들</h1>
+  <p style=&quot;font-size: 13pt; color: #6aaa6a; margin-top: 4pt; margin-bottom: 20pt;&quot;>함께라서 더 즐거워요!</p>
+
+  <!-- Friends row -->
+  <div style=&quot;display: flex; align-items: flex-end; justify-content: center; gap: 40pt; flex: 1; padding-bottom: 36pt;&quot;>
+
+    <!-- Lalou -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;120&quot; height=&quot;170&quot; viewBox=&quot;0 0 120 170&quot;>
+        <!-- Body (brown bear-like) -->
+        <ellipse cx=&quot;60&quot; cy=&quot;102&quot; rx=&quot;36&quot; ry=&quot;46&quot; fill=&quot;#c4956a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;60&quot; cy=&quot;110&quot; rx=&quot;24&quot; ry=&quot;30&quot; fill=&quot;#f5e0c4&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;60&quot; cy=&quot;46&quot; rx=&quot;30&quot; ry=&quot;27&quot; fill=&quot;#c4956a&quot;/>
+        <!-- Ears -->
+        <circle cx=&quot;36&quot; cy=&quot;24&quot; r=&quot;10&quot; fill=&quot;#c4956a&quot;/>
+        <circle cx=&quot;36&quot; cy=&quot;24&quot; r=&quot;6&quot; fill=&quot;#f5e0c4&quot;/>
+        <circle cx=&quot;84&quot; cy=&quot;24&quot; r=&quot;10&quot; fill=&quot;#c4956a&quot;/>
+        <circle cx=&quot;84&quot; cy=&quot;24&quot; r=&quot;6&quot; fill=&quot;#f5e0c4&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;48&quot; cy=&quot;43&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;72&quot; cy=&quot;43&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;50&quot; cy=&quot;44&quot; r=&quot;4&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;70&quot; cy=&quot;44&quot; r=&quot;4&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;52&quot; cy=&quot;41&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;72&quot; cy=&quot;41&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Nose -->
+        <ellipse cx=&quot;60&quot; cy=&quot;54&quot; rx=&quot;5&quot; ry=&quot;3.5&quot; fill=&quot;#8b6544&quot;/>
+        <!-- Mouth -->
+        <path d=&quot;M55 58 Q60 64 65 58&quot; stroke=&quot;#8b6544&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M26 94 Q16 102 19 114&quot; stroke=&quot;#c4956a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M94 94 Q104 102 101 114&quot; stroke=&quot;#c4956a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;44&quot; cy=&quot;147&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#c4956a&quot;/>
+        <ellipse cx=&quot;76&quot; cy=&quot;147&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#c4956a&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;38&quot; cy=&quot;55&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.4&quot;/>
+        <ellipse cx=&quot;82&quot; cy=&quot;55&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.4&quot;/>
+      </svg>
+      <div style=&quot;background: #ffffff; border-radius: 16pt; padding: 6pt 16pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 6pt;&quot;>
+        <p style=&quot;font-size: 14pt; font-weight: 700; color: #c4956a; text-align: center;&quot;>랄루</p>
+        <p style=&quot;font-size: 9pt; color: #999; text-align: center;&quot;>추피의 단짝 친구</p>
+      </div>
+    </div>
+
+    <!-- Tchoupi center -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;130&quot; height=&quot;185&quot; viewBox=&quot;0 0 130 185&quot;>
+        <!-- Body -->
+        <ellipse cx=&quot;65&quot; cy=&quot;110&quot; rx=&quot;38&quot; ry=&quot;50&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;65&quot; cy=&quot;118&quot; rx=&quot;25&quot; ry=&quot;33&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;65&quot; cy=&quot;50&quot; rx=&quot;30&quot; ry=&quot;28&quot; fill=&quot;#3a3a3a&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;53&quot; cy=&quot;47&quot; rx=&quot;10&quot; ry=&quot;12&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;77&quot; cy=&quot;47&quot; rx=&quot;10&quot; ry=&quot;12&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;48&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;75&quot; cy=&quot;48&quot; r=&quot;5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;57&quot; cy=&quot;45&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;77&quot; cy=&quot;45&quot; r=&quot;2&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Beak -->
+        <ellipse cx=&quot;65&quot; cy=&quot;62&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M60 65 Q65 72 70 65&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;65&quot; cy=&quot;27&quot; rx=&quot;20&quot; ry=&quot;8&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;48&quot; y=&quot;20&quot; width=&quot;34&quot; height=&quot;10&quot; rx=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;16&quot; r=&quot;6&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Arms open wide -->
+        <path d=&quot;M30 100 Q10 85 15 70&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M100 100 Q120 85 115 70&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;48&quot; cy=&quot;158&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;82&quot; cy=&quot;158&quot; rx=&quot;14&quot; ry=&quot;7&quot; fill=&quot;#ff9933&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;40&quot; cy=&quot;60&quot; rx=&quot;6&quot; ry=&quot;4&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+        <ellipse cx=&quot;90&quot; cy=&quot;60&quot; rx=&quot;6&quot; ry=&quot;4&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+      </svg>
+      <div style=&quot;background: #ff6b6b; border-radius: 16pt; padding: 6pt 16pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 6pt;&quot;>
+        <p style=&quot;font-size: 14pt; font-weight: 700; color: #ffffff; text-align: center;&quot;>추피</p>
+      </div>
+    </div>
+
+    <!-- Pilou -->
+    <div style=&quot;display: flex; flex-direction: column; align-items: center;&quot;>
+      <svg width=&quot;120&quot; height=&quot;170&quot; viewBox=&quot;0 0 120 170&quot;>
+        <!-- Body (rabbit-like) -->
+        <ellipse cx=&quot;60&quot; cy=&quot;102&quot; rx=&quot;34&quot; ry=&quot;44&quot; fill=&quot;#aab8d0&quot;/>
+        <!-- Belly -->
+        <ellipse cx=&quot;60&quot; cy=&quot;110&quot; rx=&quot;22&quot; ry=&quot;28&quot; fill=&quot;#e8edf5&quot;/>
+        <!-- Head -->
+        <ellipse cx=&quot;60&quot; cy=&quot;48&quot; rx=&quot;28&quot; ry=&quot;25&quot; fill=&quot;#aab8d0&quot;/>
+        <!-- Long ears -->
+        <ellipse cx=&quot;44&quot; cy=&quot;10&quot; rx=&quot;8&quot; ry=&quot;24&quot; fill=&quot;#aab8d0&quot; transform=&quot;rotate(-10 44 10)&quot;/>
+        <ellipse cx=&quot;44&quot; cy=&quot;10&quot; rx=&quot;4&quot; ry=&quot;18&quot; fill=&quot;#dcc8e8&quot; transform=&quot;rotate(-10 44 10)&quot;/>
+        <ellipse cx=&quot;76&quot; cy=&quot;10&quot; rx=&quot;8&quot; ry=&quot;24&quot; fill=&quot;#aab8d0&quot; transform=&quot;rotate(10 76 10)&quot;/>
+        <ellipse cx=&quot;76&quot; cy=&quot;10&quot; rx=&quot;4&quot; ry=&quot;18&quot; fill=&quot;#dcc8e8&quot; transform=&quot;rotate(10 76 10)&quot;/>
+        <!-- Eyes -->
+        <ellipse cx=&quot;48&quot; cy=&quot;45&quot; rx=&quot;9&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;72&quot; cy=&quot;45&quot; rx=&quot;9&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;50&quot; cy=&quot;46&quot; r=&quot;4.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;70&quot; cy=&quot;46&quot; r=&quot;4.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;52&quot; cy=&quot;43&quot; r=&quot;1.8&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;72&quot; cy=&quot;43&quot; r=&quot;1.8&quot; fill=&quot;#ffffff&quot;/>
+        <!-- Nose -->
+        <ellipse cx=&quot;60&quot; cy=&quot;55&quot; rx=&quot;4&quot; ry=&quot;3&quot; fill=&quot;#e89aab&quot;/>
+        <!-- Mouth -->
+        <path d=&quot;M55 59 Q60 65 65 59&quot; stroke=&quot;#c0808f&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Whiskers -->
+        <line x1=&quot;35&quot; y1=&quot;53&quot; x2=&quot;48&quot; y2=&quot;55&quot; stroke=&quot;#8899aa&quot; stroke-width=&quot;1&quot;/>
+        <line x1=&quot;35&quot; y1=&quot;58&quot; x2=&quot;48&quot; y2=&quot;58&quot; stroke=&quot;#8899aa&quot; stroke-width=&quot;1&quot;/>
+        <line x1=&quot;72&quot; y1=&quot;55&quot; x2=&quot;85&quot; y2=&quot;53&quot; stroke=&quot;#8899aa&quot; stroke-width=&quot;1&quot;/>
+        <line x1=&quot;72&quot; y1=&quot;58&quot; x2=&quot;85&quot; y2=&quot;58&quot; stroke=&quot;#8899aa&quot; stroke-width=&quot;1&quot;/>
+        <!-- Arms -->
+        <path d=&quot;M28 94 Q18 102 21 114&quot; stroke=&quot;#aab8d0&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M92 94 Q102 102 99 114&quot; stroke=&quot;#aab8d0&quot; stroke-width=&quot;10&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;44&quot; cy=&quot;145&quot; rx=&quot;14&quot; ry=&quot;8&quot; fill=&quot;#aab8d0&quot;/>
+        <ellipse cx=&quot;76&quot; cy=&quot;145&quot; rx=&quot;14&quot; ry=&quot;8&quot; fill=&quot;#aab8d0&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;38&quot; cy=&quot;56&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.4&quot;/>
+        <ellipse cx=&quot;82&quot; cy=&quot;56&quot; rx=&quot;6&quot; ry=&quot;3.5&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.4&quot;/>
+      </svg>
+      <div style=&quot;background: #ffffff; border-radius: 16pt; padding: 6pt 16pt; box-shadow: 0 2pt 6pt rgba(0,0,0,0.08); margin-top: 6pt;&quot;>
+        <p style=&quot;font-size: 14pt; font-weight: 700; color: #7788aa; text-align: center;&quot;>필루</p>
+        <p style=&quot;font-size: 9pt; color: #999; text-align: center;&quot;>함께 뛰어노는 친구</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grass decoration at bottom -->
+  <svg style=&quot;position:absolute;bottom:0;left:0;&quot; width=&quot;720&quot; height=&quot;30&quot; viewBox=&quot;0 0 720 30&quot;>
+    <path d=&quot;M0 30 Q30 10 60 30 Q90 10 120 30 Q150 10 180 30 Q210 10 240 30 Q270 10 300 30 Q330 10 360 30 Q390 10 420 30 Q450 10 480 30 Q510 10 540 30 Q570 10 600 30 Q630 10 660 30 Q690 10 720 30&quot; fill=&quot;#8dc88d&quot; opacity=&quot;0.3&quot;/>
+  </svg>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="5" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #f5f0ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <h1 style=&quot;font-size: 28pt; font-weight: 800; color: #6a5acd; margin-top: 18pt; letter-spacing: -0.02em;&quot;>추피의 하루</h1>
+  <p style=&quot;font-size: 11pt; color: #9a8ad0; margin-top: 2pt; margin-bottom: 12pt;&quot;>추피의 하루는 신나는 일로 가득해요</p>
+
+  <!-- 2x2 Grid -->
+  <div style=&quot;display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12pt; width: 660pt; flex: 1; padding: 0 16pt 18pt 16pt;&quot;>
+
+    <!-- Morning -->
+    <div style=&quot;background: #fff8e8; border-radius: 16pt; padding: 14pt; display: flex; align-items: center; gap: 14pt; position: relative; overflow: hidden;&quot;>
+      <svg width=&quot;110&quot; height=&quot;110&quot; viewBox=&quot;0 0 110 110&quot;>
+        <!-- Sun -->
+        <circle cx=&quot;85&quot; cy=&quot;20&quot; r=&quot;14&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.4&quot;/>
+        <!-- Tchoupi with towel -->
+        <ellipse cx=&quot;55&quot; cy=&quot;65&quot; rx=&quot;25&quot; ry=&quot;32&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;72&quot; rx=&quot;16&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;35&quot; rx=&quot;20&quot; ry=&quot;18&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;46&quot; cy=&quot;33&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;64&quot; cy=&quot;33&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;47&quot; cy=&quot;34&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;63&quot; cy=&quot;34&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;49&quot; cy=&quot;32&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;32&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;44&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M52 46 Q55 51 58 46&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;55&quot; cy=&quot;20&quot; rx=&quot;13&quot; ry=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;44&quot; y=&quot;16&quot; width=&quot;22&quot; height=&quot;6&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;13&quot; r=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Toothbrush -->
+        <rect x=&quot;75&quot; y=&quot;40&quot; width=&quot;3&quot; height=&quot;22&quot; rx=&quot;1&quot; fill=&quot;#66bb6a&quot;/>
+        <rect x=&quot;72&quot; y=&quot;36&quot; width=&quot;9&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; stroke=&quot;#66bb6a&quot; stroke-width=&quot;1&quot;/>
+        <ellipse cx=&quot;37&quot; cy=&quot;96&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;73&quot; cy=&quot;96&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+      </svg>
+      <div style=&quot;display: flex; flex-direction: column; gap: 4pt;&quot;>
+        <p style=&quot;font-size: 10pt; font-weight: 600; color: #e8a030; letter-spacing: 0.02em;&quot;>MORNING</p>
+        <h2 style=&quot;font-size: 18pt; font-weight: 700; color: #555;&quot;>아침이 밝았어요</h2>
+        <p style=&quot;font-size: 11pt; color: #888; line-height: 1.5;&quot;>세수하고 이를 닦아요</p>
+      </div>
+      <!-- Sun rays decoration -->
+      <svg style=&quot;position:absolute;top:-5pt;right:-5pt;opacity:0.15;&quot; width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot;>
+        <circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;25&quot; fill=&quot;#ffd700&quot;/>
+      </svg>
+    </div>
+
+    <!-- Daytime -->
+    <div style=&quot;background: #e8f8e8; border-radius: 16pt; padding: 14pt; display: flex; align-items: center; gap: 14pt; position: relative; overflow: hidden;&quot;>
+      <svg width=&quot;110&quot; height=&quot;110&quot; viewBox=&quot;0 0 110 110&quot;>
+        <!-- Tchoupi with backpack -->
+        <ellipse cx=&quot;55&quot; cy=&quot;65&quot; rx=&quot;25&quot; ry=&quot;32&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;72&quot; rx=&quot;16&quot; ry=&quot;20&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;35&quot; rx=&quot;20&quot; ry=&quot;18&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;46&quot; cy=&quot;33&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;64&quot; cy=&quot;33&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;47&quot; cy=&quot;34&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;63&quot; cy=&quot;34&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;49&quot; cy=&quot;32&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;32&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;44&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M52 46 Q55 51 58 46&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;55&quot; cy=&quot;20&quot; rx=&quot;13&quot; ry=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;44&quot; y=&quot;16&quot; width=&quot;22&quot; height=&quot;6&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;13&quot; r=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Backpack -->
+        <rect x=&quot;68&quot; y=&quot;50&quot; width=&quot;18&quot; height=&quot;22&quot; rx=&quot;5&quot; fill=&quot;#4a90d9&quot;/>
+        <rect x=&quot;72&quot; y=&quot;55&quot; width=&quot;10&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#6ab0ff&quot;/>
+        <!-- Raised arm -->
+        <path d=&quot;M30 58 Q15 45 20 32&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;8&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <ellipse cx=&quot;37&quot; cy=&quot;96&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;73&quot; cy=&quot;96&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+      </svg>
+      <div style=&quot;display: flex; flex-direction: column; gap: 4pt;&quot;>
+        <p style=&quot;font-size: 10pt; font-weight: 600; color: #4a9a4a; letter-spacing: 0.02em;&quot;>DAYTIME</p>
+        <h2 style=&quot;font-size: 18pt; font-weight: 700; color: #555;&quot;>학교에 가요</h2>
+        <p style=&quot;font-size: 11pt; color: #888; line-height: 1.5;&quot;>친구들과 신나게 놀아요</p>
+      </div>
+    </div>
+
+    <!-- Evening -->
+    <div style=&quot;background: #e8f0ff; border-radius: 16pt; padding: 14pt; display: flex; align-items: center; gap: 14pt; position: relative; overflow: hidden;&quot;>
+      <svg width=&quot;110&quot; height=&quot;110&quot; viewBox=&quot;0 0 110 110&quot;>
+        <!-- Bathtub -->
+        <ellipse cx=&quot;55&quot; cy=&quot;78&quot; rx=&quot;42&quot; ry=&quot;22&quot; fill=&quot;#b3d9ff&quot;/>
+        <path d=&quot;M13 78 Q13 100 55 100 Q97 100 97 78&quot; fill=&quot;#87c4ff&quot;/>
+        <!-- Bubbles -->
+        <circle cx=&quot;30&quot; cy=&quot;60&quot; r=&quot;6&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.7&quot;/>
+        <circle cx=&quot;22&quot; cy=&quot;50&quot; r=&quot;4&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.5&quot;/>
+        <circle cx=&quot;80&quot; cy=&quot;55&quot; r=&quot;5&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/>
+        <circle cx=&quot;88&quot; cy=&quot;48&quot; r=&quot;3&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.5&quot;/>
+        <circle cx=&quot;45&quot; cy=&quot;52&quot; r=&quot;3.5&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.4&quot;/>
+        <!-- Tchoupi in bath (head only) -->
+        <ellipse cx=&quot;55&quot; cy=&quot;58&quot; rx=&quot;20&quot; ry=&quot;18&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;46&quot; cy=&quot;56&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;64&quot; cy=&quot;56&quot; rx=&quot;7&quot; ry=&quot;8&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;47&quot; cy=&quot;57&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;63&quot; cy=&quot;57&quot; r=&quot;3.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;49&quot; cy=&quot;55&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;55&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;67&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M52 69 Q55 74 58 69&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;55&quot; cy=&quot;43&quot; rx=&quot;13&quot; ry=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;44&quot; y=&quot;39&quot; width=&quot;22&quot; height=&quot;6&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;36&quot; r=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Rubber duck -->
+        <ellipse cx=&quot;78&quot; cy=&quot;70&quot; rx=&quot;7&quot; ry=&quot;6&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;78&quot; cy=&quot;64&quot; r=&quot;5&quot; fill=&quot;#ffd700&quot;/>
+        <ellipse cx=&quot;82&quot; cy=&quot;63&quot; rx=&quot;3&quot; ry=&quot;2&quot; fill=&quot;#ff9933&quot;/>
+        <circle cx=&quot;76&quot; cy=&quot;62&quot; r=&quot;1.5&quot; fill=&quot;#1a1a1a&quot;/>
+      </svg>
+      <div style=&quot;display: flex; flex-direction: column; gap: 4pt;&quot;>
+        <p style=&quot;font-size: 10pt; font-weight: 600; color: #5588bb; letter-spacing: 0.02em;&quot;>EVENING</p>
+        <h2 style=&quot;font-size: 18pt; font-weight: 700; color: #555;&quot;>목욕 시간이에요</h2>
+        <p style=&quot;font-size: 11pt; color: #888; line-height: 1.5;&quot;>뽀득뽀득 깨끗하게!</p>
+      </div>
+    </div>
+
+    <!-- Night -->
+    <div style=&quot;background: #2a2850; border-radius: 16pt; padding: 14pt; display: flex; align-items: center; gap: 14pt; position: relative; overflow: hidden;&quot;>
+      <!-- Stars -->
+      <svg style=&quot;position:absolute;top:8pt;right:12pt;opacity:0.6;&quot; width=&quot;80&quot; height=&quot;40&quot; viewBox=&quot;0 0 80 40&quot;>
+        <circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;2&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;35&quot; cy=&quot;5&quot; r=&quot;1.5&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;15&quot; r=&quot;2.5&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;70&quot; cy=&quot;8&quot; r=&quot;1.5&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;25&quot; cy=&quot;25&quot; r=&quot;1&quot; fill=&quot;#ffd700&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;30&quot; r=&quot;1.8&quot; fill=&quot;#ffd700&quot;/>
+      </svg>
+      <svg width=&quot;110&quot; height=&quot;110&quot; viewBox=&quot;0 0 110 110&quot;>
+        <!-- Moon -->
+        <circle cx=&quot;88&quot; cy=&quot;18&quot; r=&quot;12&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.4&quot;/>
+        <circle cx=&quot;92&quot; cy=&quot;14&quot; r=&quot;10&quot; fill=&quot;#2a2850&quot;/>
+        <!-- Pillow -->
+        <ellipse cx=&quot;55&quot; cy=&quot;80&quot; rx=&quot;38&quot; ry=&quot;14&quot; fill=&quot;#e8ddf5&quot;/>
+        <!-- Blanket -->
+        <rect x=&quot;18&quot; y=&quot;68&quot; width=&quot;74&quot; height=&quot;30&quot; rx=&quot;8&quot; fill=&quot;#b8a8d8&quot;/>
+        <!-- Tchoupi sleeping -->
+        <ellipse cx=&quot;55&quot; cy=&quot;58&quot; rx=&quot;20&quot; ry=&quot;18&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;46&quot; cy=&quot;58&quot; rx=&quot;7&quot; ry=&quot;3&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;64&quot; cy=&quot;58&quot; rx=&quot;7&quot; ry=&quot;3&quot; fill=&quot;#3a3a3a&quot;/>
+        <path d=&quot;M43 58 Q46 55 49 58&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot;/>
+        <path d=&quot;M61 58 Q64 55 67 58&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot;/>
+        <ellipse cx=&quot;55&quot; cy=&quot;67&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M52 69 Q55 73 58 69&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;55&quot; cy=&quot;43&quot; rx=&quot;13&quot; ry=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;44&quot; y=&quot;39&quot; width=&quot;22&quot; height=&quot;6&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;36&quot; r=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Zzz -->
+        <text x=&quot;78&quot; y=&quot;42&quot; font-size=&quot;14&quot; fill=&quot;#b8a8d8&quot; font-weight=&quot;700&quot; opacity=&quot;0.7&quot;>z</text>
+        <text x=&quot;86&quot; y=&quot;32&quot; font-size=&quot;11&quot; fill=&quot;#b8a8d8&quot; font-weight=&quot;700&quot; opacity=&quot;0.5&quot;>z</text>
+        <text x=&quot;92&quot; y=&quot;24&quot; font-size=&quot;8&quot; fill=&quot;#b8a8d8&quot; font-weight=&quot;700&quot; opacity=&quot;0.3&quot;>z</text>
+      </svg>
+      <div style=&quot;display: flex; flex-direction: column; gap: 4pt;&quot;>
+        <p style=&quot;font-size: 10pt; font-weight: 600; color: #b8a8d8; letter-spacing: 0.02em;&quot;>NIGHT</p>
+        <h2 style=&quot;font-size: 18pt; font-weight: 700; color: #e8e0f5;&quot;>잘 자요, 추피!</h2>
+        <p style=&quot;font-size: 11pt; color: #a098c0; line-height: 1.5;&quot;>내일 또 만나요</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flow arrows between grid cells -->
+  <svg style=&quot;position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);&quot; width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; opacity=&quot;0.2&quot;>
+    <circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;18&quot; fill=&quot;#6a5acd&quot;/>
+    <path d=&quot;M14 16 L26 16 M20 10 L26 16 L20 22&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+  </svg>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="6" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #fffde8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <h1 style=&quot;font-size: 26pt; font-weight: 800; color: #d4a020; margin-bottom: 14pt; letter-spacing: -0.02em; position: absolute; top: 18pt;&quot;>추피가 좋아하는 것들</h1>
+
+  <!-- Radial layout: Tchoupi center, icons around -->
+  <div style=&quot;position: relative; width: 500pt; height: 320pt; margin-top: 20pt;&quot;>
+
+    <!-- Center: Tchoupi -->
+    <div style=&quot;position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);&quot;>
+      <svg width=&quot;120&quot; height=&quot;140&quot; viewBox=&quot;0 0 120 140&quot;>
+        <ellipse cx=&quot;60&quot; cy=&quot;85&quot; rx=&quot;32&quot; ry=&quot;40&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;92&quot; rx=&quot;20&quot; ry=&quot;26&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;40&quot; rx=&quot;24&quot; ry=&quot;22&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;50&quot; cy=&quot;38&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;70&quot; cy=&quot;38&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;52&quot; cy=&quot;39&quot; r=&quot;4&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;68&quot; cy=&quot;39&quot; r=&quot;4&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;54&quot; cy=&quot;36&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;70&quot; cy=&quot;36&quot; r=&quot;1.5&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;50&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M56 53 Q60 59 64 53&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Hat -->
+        <ellipse cx=&quot;60&quot; cy=&quot;22&quot; rx=&quot;16&quot; ry=&quot;6&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;47&quot; y=&quot;17&quot; width=&quot;26&quot; height=&quot;7&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;60&quot; cy=&quot;14&quot; r=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Happy arms up -->
+        <path d=&quot;M30 78 Q15 60 25 48&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;8&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <path d=&quot;M90 78 Q105 60 95 48&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;8&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;44&quot; cy=&quot;124&quot; rx=&quot;12&quot; ry=&quot;6&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;76&quot; cy=&quot;124&quot; rx=&quot;12&quot; ry=&quot;6&quot; fill=&quot;#ff9933&quot;/>
+        <!-- Blush -->
+        <ellipse cx=&quot;40&quot; cy=&quot;50&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+        <ellipse cx=&quot;80&quot; cy=&quot;50&quot; rx=&quot;5&quot; ry=&quot;3&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.5&quot;/>
+      </svg>
+    </div>
+
+    <!-- Connecting lines (subtle) -->
+    <svg style=&quot;position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;&quot; viewBox=&quot;0 0 500 320&quot;>
+      <line x1=&quot;250&quot; y1=&quot;120&quot; x2=&quot;130&quot; y2=&quot;38&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+      <line x1=&quot;250&quot; y1=&quot;120&quot; x2=&quot;370&quot; y2=&quot;38&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+      <line x1=&quot;220&quot; y1=&quot;160&quot; x2=&quot;68&quot; y2=&quot;155&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+      <line x1=&quot;280&quot; y1=&quot;160&quot; x2=&quot;432&quot; y2=&quot;155&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+      <line x1=&quot;250&quot; y1=&quot;200&quot; x2=&quot;130&quot; y2=&quot;278&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+      <line x1=&quot;250&quot; y1=&quot;200&quot; x2=&quot;370&quot; y2=&quot;278&quot; stroke=&quot;#e8d88a&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4,4&quot;/>
+    </svg>
+
+    <!-- Icon 1: Toy blocks (top-left) -->
+    <div style=&quot;position: absolute; left: 60pt; top: 0pt; display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #ffe0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot;>
+          <rect x=&quot;2&quot; y=&quot;16&quot; width=&quot;14&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;#ff6b6b&quot;/>
+          <rect x=&quot;20&quot; y=&quot;16&quot; width=&quot;14&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;#4a90d9&quot;/>
+          <rect x=&quot;10&quot; y=&quot;4&quot; width=&quot;14&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;#66bb6a&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>장난감 블록</p>
+    </div>
+
+    <!-- Icon 2: Drawing (top-right) -->
+    <div style=&quot;position: absolute; right: 60pt; top: 0pt; display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #e0f0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot;>
+          <rect x=&quot;4&quot; y=&quot;4&quot; width=&quot;28&quot; height=&quot;28&quot; rx=&quot;3&quot; fill=&quot;#ffffff&quot; stroke=&quot;#66bb6a&quot; stroke-width=&quot;2&quot;/>
+          <circle cx=&quot;14&quot; cy=&quot;14&quot; r=&quot;4&quot; fill=&quot;#ffd700&quot;/>
+          <path d=&quot;M8 28 L14 18 L20 24 L26 14 L32 28&quot; fill=&quot;#87ceeb&quot; opacity=&quot;0.5&quot;/>
+          <path d=&quot;M4 28 L12 20 L18 24 L28 12&quot; stroke=&quot;#66bb6a&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>그림 그리기</p>
+    </div>
+
+    <!-- Icon 3: Playing with friends (middle-left) -->
+    <div style=&quot;position: absolute; left: 0pt; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #e0e8ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;40&quot; height=&quot;36&quot; viewBox=&quot;0 0 40 36&quot;>
+          <circle cx=&quot;12&quot; cy=&quot;10&quot; r=&quot;6&quot; fill=&quot;#3a3a3a&quot;/>
+          <ellipse cx=&quot;12&quot; cy=&quot;26&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#3a3a3a&quot;/>
+          <circle cx=&quot;28&quot; cy=&quot;10&quot; r=&quot;6&quot; fill=&quot;#c4956a&quot;/>
+          <ellipse cx=&quot;28&quot; cy=&quot;26&quot; rx=&quot;8&quot; ry=&quot;10&quot; fill=&quot;#c4956a&quot;/>
+          <!-- Heart between them -->
+          <path d=&quot;M20 16l-0.8-0.7C17.4 13.6 16 12.5 16 11.2 16 10.1 16.9 9.2 18 9.2c0.6 0 1.2.3 1.6.7.4-.4 1-.7 1.6-.7 1.1 0 2 .9 2 2.1 0 1.3-1.4 2.4-3.2 4.1L20 16z&quot; fill=&quot;#ff6b6b&quot; opacity=&quot;0.7&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>친구와 놀기</p>
+    </div>
+
+    <!-- Icon 4: Animals (middle-right) -->
+    <div style=&quot;position: absolute; right: 0pt; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #fff0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot;>
+          <!-- Cat -->
+          <ellipse cx=&quot;18&quot; cy=&quot;22&quot; rx=&quot;10&quot; ry=&quot;11&quot; fill=&quot;#ffbb66&quot;/>
+          <circle cx=&quot;18&quot; cy=&quot;12&quot; r=&quot;8&quot; fill=&quot;#ffbb66&quot;/>
+          <!-- Ears -->
+          <polygon points=&quot;11,6 8,0 14,4&quot; fill=&quot;#ffbb66&quot;/>
+          <polygon points=&quot;25,6 28,0 22,4&quot; fill=&quot;#ffbb66&quot;/>
+          <polygon points=&quot;11.5,6.5 9,1.5 13.5,4.5&quot; fill=&quot;#ffa0a0&quot;/>
+          <polygon points=&quot;24.5,6.5 27,1.5 22.5,4.5&quot; fill=&quot;#ffa0a0&quot;/>
+          <!-- Eyes -->
+          <circle cx=&quot;14&quot; cy=&quot;12&quot; r=&quot;2&quot; fill=&quot;#1a1a1a&quot;/>
+          <circle cx=&quot;22&quot; cy=&quot;12&quot; r=&quot;2&quot; fill=&quot;#1a1a1a&quot;/>
+          <!-- Nose -->
+          <ellipse cx=&quot;18&quot; cy=&quot;15&quot; rx=&quot;1.5&quot; ry=&quot;1&quot; fill=&quot;#ff8888&quot;/>
+          <!-- Whiskers -->
+          <line x1=&quot;8&quot; y1=&quot;14&quot; x2=&quot;14&quot; y2=&quot;15&quot; stroke=&quot;#cc8844&quot; stroke-width=&quot;0.8&quot;/>
+          <line x1=&quot;8&quot; y1=&quot;17&quot; x2=&quot;14&quot; y2=&quot;16&quot; stroke=&quot;#cc8844&quot; stroke-width=&quot;0.8&quot;/>
+          <line x1=&quot;22&quot; y1=&quot;15&quot; x2=&quot;28&quot; y2=&quot;14&quot; stroke=&quot;#cc8844&quot; stroke-width=&quot;0.8&quot;/>
+          <line x1=&quot;22&quot; y1=&quot;16&quot; x2=&quot;28&quot; y2=&quot;17&quot; stroke=&quot;#cc8844&quot; stroke-width=&quot;0.8&quot;/>
+          <!-- Tail -->
+          <path d=&quot;M28 24 Q34 20 32 14&quot; stroke=&quot;#ffbb66&quot; stroke-width=&quot;3&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>동물 친구들</p>
+    </div>
+
+    <!-- Icon 5: Snacks (bottom-left) -->
+    <div style=&quot;position: absolute; left: 60pt; bottom: 0pt; display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #ffe8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot;>
+          <!-- Cookie -->
+          <circle cx=&quot;18&quot; cy=&quot;18&quot; r=&quot;14&quot; fill=&quot;#d4956a&quot;/>
+          <circle cx=&quot;12&quot; cy=&quot;14&quot; r=&quot;2.5&quot; fill=&quot;#6b3a1a&quot;/>
+          <circle cx=&quot;22&quot; cy=&quot;12&quot; r=&quot;2&quot; fill=&quot;#6b3a1a&quot;/>
+          <circle cx=&quot;16&quot; cy=&quot;22&quot; r=&quot;2.5&quot; fill=&quot;#6b3a1a&quot;/>
+          <circle cx=&quot;24&quot; cy=&quot;22&quot; r=&quot;2&quot; fill=&quot;#6b3a1a&quot;/>
+          <circle cx=&quot;18&quot; cy=&quot;16&quot; r=&quot;1.5&quot; fill=&quot;#6b3a1a&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>맛있는 간식</p>
+    </div>
+
+    <!-- Icon 6: Reading (bottom-right) -->
+    <div style=&quot;position: absolute; right: 60pt; bottom: 0pt; display: flex; flex-direction: column; align-items: center;&quot;>
+      <div style=&quot;width: 64pt; height: 64pt; background: #e8e0ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;&quot;>
+        <svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot;>
+          <!-- Open book -->
+          <path d=&quot;M18 8 L4 10 L4 30 L18 28 Z&quot; fill=&quot;#4a90d9&quot;/>
+          <path d=&quot;M18 8 L32 10 L32 30 L18 28 Z&quot; fill=&quot;#5aa0e9&quot;/>
+          <!-- Pages -->
+          <line x1=&quot;8&quot; y1=&quot;14&quot; x2=&quot;16&quot; y2=&quot;13&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <line x1=&quot;8&quot; y1=&quot;18&quot; x2=&quot;16&quot; y2=&quot;17&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <line x1=&quot;8&quot; y1=&quot;22&quot; x2=&quot;16&quot; y2=&quot;21&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <line x1=&quot;20&quot; y1=&quot;13&quot; x2=&quot;28&quot; y2=&quot;14&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <line x1=&quot;20&quot; y1=&quot;17&quot; x2=&quot;28&quot; y2=&quot;18&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <line x1=&quot;20&quot; y1=&quot;21&quot; x2=&quot;28&quot; y2=&quot;22&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1&quot; opacity=&quot;0.5&quot;/>
+          <!-- Spine -->
+          <line x1=&quot;18&quot; y1=&quot;8&quot; x2=&quot;18&quot; y2=&quot;28&quot; stroke=&quot;#3a6a9a&quot; stroke-width=&quot;1.5&quot;/>
+        </svg>
+      </div>
+      <p style=&quot;font-size: 11pt; font-weight: 600; color: #666; margin-top: 4pt;&quot;>책 읽기</p>
+    </div>
+  </div>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="7" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: #eef8f8;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <!-- Left: Book covers -->
+  <div style=&quot;width: 55%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative;&quot;>
+    <!-- Stacked book covers -->
+    <svg width=&quot;340&quot; height=&quot;350&quot; viewBox=&quot;0 0 340 350&quot;>
+      <!-- Book 4 (back) -->
+      <g transform=&quot;translate(160, 20) rotate(6)&quot;>
+        <rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;160&quot; rx=&quot;6&quot; fill=&quot;#b8d8b8&quot; stroke=&quot;#8ab88a&quot; stroke-width=&quot;2&quot;/>
+        <rect x=&quot;10&quot; y=&quot;15&quot; width=&quot;100&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/>
+        <rect x=&quot;10&quot; y=&quot;30&quot; width=&quot;70&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.4&quot;/>
+        <!-- Mini Tchoupi on cover -->
+        <ellipse cx=&quot;60&quot; cy=&quot;95&quot; rx=&quot;20&quot; ry=&quot;25&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;100&quot; rx=&quot;13&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;60&quot; cy=&quot;72&quot; r=&quot;16&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;54&quot; cy=&quot;70&quot; rx=&quot;5&quot; ry=&quot;6&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;66&quot; cy=&quot;70&quot; rx=&quot;5&quot; ry=&quot;6&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;71&quot; r=&quot;2.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;71&quot; r=&quot;2.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;79&quot; rx=&quot;3&quot; ry=&quot;2&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;58&quot; rx=&quot;10&quot; ry=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;52&quot; y=&quot;55&quot; width=&quot;16&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Stars -->
+        <circle cx=&quot;20&quot; cy=&quot;140&quot; r=&quot;3&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.5&quot;/>
+        <circle cx=&quot;100&quot; cy=&quot;140&quot; r=&quot;3&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.5&quot;/>
+      </g>
+
+      <!-- Book 3 -->
+      <g transform=&quot;translate(100, 30) rotate(-4)&quot;>
+        <rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;160&quot; rx=&quot;6&quot; fill=&quot;#ffd4a8&quot; stroke=&quot;#e8b888&quot; stroke-width=&quot;2&quot;/>
+        <rect x=&quot;10&quot; y=&quot;15&quot; width=&quot;100&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/>
+        <rect x=&quot;10&quot; y=&quot;30&quot; width=&quot;80&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.4&quot;/>
+        <!-- Mini Tchoupi with food -->
+        <ellipse cx=&quot;60&quot; cy=&quot;95&quot; rx=&quot;20&quot; ry=&quot;25&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;100&quot; rx=&quot;13&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;60&quot; cy=&quot;72&quot; r=&quot;16&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;54&quot; cy=&quot;70&quot; rx=&quot;5&quot; ry=&quot;6&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;66&quot; cy=&quot;70&quot; rx=&quot;5&quot; ry=&quot;6&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;55&quot; cy=&quot;71&quot; r=&quot;2.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;71&quot; r=&quot;2.5&quot; fill=&quot;#1a1a1a&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;79&quot; rx=&quot;3&quot; ry=&quot;2&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;58&quot; rx=&quot;10&quot; ry=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;52&quot; y=&quot;55&quot; width=&quot;16&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Spoon -->
+        <rect x=&quot;82&quot; y=&quot;80&quot; width=&quot;3&quot; height=&quot;20&quot; rx=&quot;1&quot; fill=&quot;#aaaaaa&quot;/>
+        <ellipse cx=&quot;83.5&quot; cy=&quot;78&quot; rx=&quot;5&quot; ry=&quot;4&quot; fill=&quot;#aaaaaa&quot;/>
+      </g>
+
+      <!-- Book 2 -->
+      <g transform=&quot;translate(40, 50) rotate(3)&quot;>
+        <rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;160&quot; rx=&quot;6&quot; fill=&quot;#c8d4f8&quot; stroke=&quot;#a8b8e8&quot; stroke-width=&quot;2&quot;/>
+        <rect x=&quot;10&quot; y=&quot;15&quot; width=&quot;100&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/>
+        <rect x=&quot;10&quot; y=&quot;30&quot; width=&quot;60&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.4&quot;/>
+        <!-- Mini Tchoupi sleeping -->
+        <ellipse cx=&quot;60&quot; cy=&quot;100&quot; rx=&quot;30&quot; ry=&quot;12&quot; fill=&quot;#e8ddf5&quot;/>
+        <rect x=&quot;30&quot; y=&quot;90&quot; width=&quot;60&quot; height=&quot;18&quot; rx=&quot;6&quot; fill=&quot;#b8a8d8&quot;/>
+        <circle cx=&quot;60&quot; cy=&quot;82&quot; r=&quot;16&quot; fill=&quot;#3a3a3a&quot;/>
+        <path d=&quot;M50 82 Q54 79 58 82&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot;/>
+        <path d=&quot;M62 82 Q66 79 70 82&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;89&quot; rx=&quot;3&quot; ry=&quot;2&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;60&quot; cy=&quot;68&quot; rx=&quot;10&quot; ry=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;52&quot; y=&quot;65&quot; width=&quot;16&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Zzz -->
+        <text x=&quot;78&quot; y=&quot;74&quot; font-size=&quot;10&quot; fill=&quot;#b8a8d8&quot; font-weight=&quot;700&quot;>z</text>
+        <text x=&quot;84&quot; y=&quot;66&quot; font-size=&quot;8&quot; fill=&quot;#b8a8d8&quot; font-weight=&quot;700&quot;>z</text>
+      </g>
+
+      <!-- Book 1 (front) -->
+      <g transform=&quot;translate(20, 140) rotate(-2)&quot;>
+        <rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;130&quot; height=&quot;170&quot; rx=&quot;6&quot; fill=&quot;#ffb8b8&quot; stroke=&quot;#e89898&quot; stroke-width=&quot;2&quot;/>
+        <rect x=&quot;10&quot; y=&quot;15&quot; width=&quot;110&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/>
+        <rect x=&quot;10&quot; y=&quot;30&quot; width=&quot;90&quot; height=&quot;6&quot; rx=&quot;2&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.4&quot;/>
+        <!-- Mini Tchoupi with backpack -->
+        <ellipse cx=&quot;65&quot; cy=&quot;100&quot; rx=&quot;22&quot; ry=&quot;28&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;65&quot; cy=&quot;106&quot; rx=&quot;14&quot; ry=&quot;18&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;76&quot; r=&quot;18&quot; fill=&quot;#3a3a3a&quot;/>
+        <ellipse cx=&quot;58&quot; cy=&quot;74&quot; rx=&quot;6&quot; ry=&quot;7&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;72&quot; cy=&quot;74&quot; rx=&quot;6&quot; ry=&quot;7&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;59&quot; cy=&quot;75&quot; r=&quot;3&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;71&quot; cy=&quot;75&quot; r=&quot;3&quot; fill=&quot;#1a1a1a&quot;/>
+        <circle cx=&quot;60&quot; cy=&quot;73&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <circle cx=&quot;72&quot; cy=&quot;73&quot; r=&quot;1.2&quot; fill=&quot;#ffffff&quot;/>
+        <ellipse cx=&quot;65&quot; cy=&quot;84&quot; rx=&quot;4&quot; ry=&quot;2.5&quot; fill=&quot;#ff9933&quot;/>
+        <path d=&quot;M62 86 Q65 91 68 86&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+        <ellipse cx=&quot;65&quot; cy=&quot;61&quot; rx=&quot;12&quot; ry=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+        <rect x=&quot;56&quot; y=&quot;57&quot; width=&quot;18&quot; height=&quot;6&quot; rx=&quot;3&quot; fill=&quot;#ff6b6b&quot;/>
+        <circle cx=&quot;65&quot; cy=&quot;55&quot; r=&quot;4&quot; fill=&quot;#ff6b6b&quot;/>
+        <!-- Backpack -->
+        <rect x=&quot;82&quot; y=&quot;90&quot; width=&quot;14&quot; height=&quot;18&quot; rx=&quot;4&quot; fill=&quot;#4a90d9&quot;/>
+        <!-- Feet -->
+        <ellipse cx=&quot;52&quot; cy=&quot;128&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <ellipse cx=&quot;78&quot; cy=&quot;128&quot; rx=&quot;10&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+        <!-- Stars decoration -->
+        <path d=&quot;M15 150 l2 5h5l-4 3 1.5 5-4.5-3-4.5 3 1.5-5-4 3h5z&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.5&quot;/>
+        <path d=&quot;M108 150 l2 5h5l-4 3 1.5 5-4.5-3-4.5 3 1.5-5-4 3h5z&quot; fill=&quot;#ffd700&quot; opacity=&quot;0.5&quot;/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Right: Book list -->
+  <div style=&quot;width: 45%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 28pt 24pt;&quot;>
+    <p style=&quot;display: inline-block; padding: 5pt 14pt; background: #2aaa9a; color: #ffffff; border-radius: 20pt; font-size: 10pt; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 14pt; width: fit-content;&quot;>BOOK SERIES</p>
+
+    <h1 style=&quot;font-size: 26pt; font-weight: 800; color: #2a2a2a; letter-spacing: -0.02em; margin-bottom: 20pt;&quot;>추피와 함께<br>다양한 이야기를!</h1>
+
+    <div style=&quot;display: flex; flex-direction: column; gap: 12pt;&quot;>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z&quot; fill=&quot;#ffd700&quot;/></svg>
+        <p style=&quot;font-size: 15pt; font-weight: 600; color: #444;&quot;>&quot;추피, 학교에 가다&quot;</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff6b6b&quot;/></svg>
+        <p style=&quot;font-size: 15pt; font-weight: 600; color: #444;&quot;>&quot;추피, 아기가 생겼어요&quot;</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#b8a8d8&quot;/><path d=&quot;M9 14 Q9 10 12 10 Q15 10 15 14&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot;/><circle cx=&quot;12&quot; cy=&quot;8&quot; r=&quot;2&quot; fill=&quot;#ffd700&quot;/></svg>
+        <p style=&quot;font-size: 15pt; font-weight: 600; color: #444;&quot;>&quot;추피, 잘 자요&quot;</p>
+      </div>
+      <div style=&quot;display: flex; align-items: center; gap: 10pt;&quot;>
+        <svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#ff9933&quot;/><path d=&quot;M8 10 Q8 8 10 8 L14 8 Q16 8 16 10 L16 16 Q16 18 14 18 L10 18 Q8 18 8 16 Z&quot; fill=&quot;#ffffff&quot; opacity=&quot;0.6&quot;/></svg>
+        <p style=&quot;font-size: 15pt; font-weight: 600; color: #444;&quot;>&quot;추피, 밥 먹기 싫어!&quot;</p>
+      </div>
+    </div>
+
+    <div style=&quot;margin-top: 22pt; padding: 10pt 16pt; background: #d4f0ee; border-radius: 10pt;&quot;>
+      <p style=&quot;font-size: 11pt; color: #2a8a7a; font-weight: 500;&quot;>세계 50개국, 3,000만 부 이상 판매!</p>
+    </div>
+  </div>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="8" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient(180deg, #e0f0ff 0%, #b3d9ff 50%, #87c4ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <!-- Decorative clouds -->
+  <svg style=&quot;position:absolute;top:15pt;left:30pt;opacity:0.5;&quot; width=&quot;110&quot; height=&quot;50&quot; viewBox=&quot;0 0 110 50&quot;>
+    <ellipse cx=&quot;55&quot; cy=&quot;34&quot; rx=&quot;50&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;32&quot; cy=&quot;26&quot; rx=&quot;28&quot; ry=&quot;18&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;78&quot; cy=&quot;26&quot; rx=&quot;24&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;top:35pt;right:50pt;opacity:0.4;&quot; width=&quot;90&quot; height=&quot;40&quot; viewBox=&quot;0 0 90 40&quot;>
+    <ellipse cx=&quot;45&quot; cy=&quot;28&quot; rx=&quot;40&quot; ry=&quot;14&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;28&quot; cy=&quot;20&quot; rx=&quot;22&quot; ry=&quot;16&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;62&quot; cy=&quot;20&quot; rx=&quot;20&quot; ry=&quot;14&quot; fill=&quot;#ffffff&quot;/>
+  </svg>
+
+  <h1 style=&quot;font-size: 28pt; font-weight: 700; color: #2a5298; margin-bottom: 12pt; letter-spacing: -0.01em; text-align: center;&quot;>추피와 함께라면<br>매일매일이 즐거워요!</h1>
+
+  <!-- Tchoupi with open arms -->
+  <svg width=&quot;240&quot; height=&quot;220&quot; viewBox=&quot;0 0 240 220&quot; style=&quot;margin: 4pt 0;&quot;>
+    <!-- Body -->
+    <ellipse cx=&quot;120&quot; cy=&quot;135&quot; rx=&quot;55&quot; ry=&quot;68&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Belly -->
+    <ellipse cx=&quot;120&quot; cy=&quot;148&quot; rx=&quot;36&quot; ry=&quot;45&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Head -->
+    <ellipse cx=&quot;120&quot; cy=&quot;62&quot; rx=&quot;44&quot; ry=&quot;40&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Eyes -->
+    <ellipse cx=&quot;102&quot; cy=&quot;58&quot; rx=&quot;15&quot; ry=&quot;17&quot; fill=&quot;#ffffff&quot;/>
+    <ellipse cx=&quot;138&quot; cy=&quot;58&quot; rx=&quot;15&quot; ry=&quot;17&quot; fill=&quot;#ffffff&quot;/>
+    <circle cx=&quot;104&quot; cy=&quot;60&quot; r=&quot;7&quot; fill=&quot;#1a1a1a&quot;/>
+    <circle cx=&quot;136&quot; cy=&quot;60&quot; r=&quot;7&quot; fill=&quot;#1a1a1a&quot;/>
+    <circle cx=&quot;107&quot; cy=&quot;56&quot; r=&quot;2.5&quot; fill=&quot;#ffffff&quot;/>
+    <circle cx=&quot;139&quot; cy=&quot;56&quot; r=&quot;2.5&quot; fill=&quot;#ffffff&quot;/>
+    <!-- Beak -->
+    <ellipse cx=&quot;120&quot; cy=&quot;78&quot; rx=&quot;8&quot; ry=&quot;5&quot; fill=&quot;#ff9933&quot;/>
+    <!-- Big smile -->
+    <path d=&quot;M108 83 Q120 97 132 83&quot; stroke=&quot;#ff9933&quot; stroke-width=&quot;2.5&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <!-- Hat -->
+    <ellipse cx=&quot;120&quot; cy=&quot;30&quot; rx=&quot;24&quot; ry=&quot;10&quot; fill=&quot;#ff6b6b&quot;/>
+    <rect x=&quot;100&quot; y=&quot;20&quot; width=&quot;40&quot; height=&quot;12&quot; rx=&quot;5&quot; fill=&quot;#ff6b6b&quot;/>
+    <circle cx=&quot;120&quot; cy=&quot;16&quot; r=&quot;7&quot; fill=&quot;#ff6b6b&quot;/>
+    <!-- Arms wide open -->
+    <path d=&quot;M68 120 Q30 90 20 70&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;14&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <ellipse cx=&quot;18&quot; cy=&quot;66&quot; rx=&quot;10&quot; ry=&quot;8&quot; fill=&quot;#3a3a3a&quot;/>
+    <path d=&quot;M172 120 Q210 90 220 70&quot; stroke=&quot;#3a3a3a&quot; stroke-width=&quot;14&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;/>
+    <ellipse cx=&quot;222&quot; cy=&quot;66&quot; rx=&quot;10&quot; ry=&quot;8&quot; fill=&quot;#3a3a3a&quot;/>
+    <!-- Feet -->
+    <ellipse cx=&quot;96&quot; cy=&quot;200&quot; rx=&quot;18&quot; ry=&quot;9&quot; fill=&quot;#ff9933&quot;/>
+    <ellipse cx=&quot;144&quot; cy=&quot;200&quot; rx=&quot;18&quot; ry=&quot;9&quot; fill=&quot;#ff9933&quot;/>
+    <!-- Cheek blush -->
+    <ellipse cx=&quot;85&quot; cy=&quot;76&quot; rx=&quot;9&quot; ry=&quot;6&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+    <ellipse cx=&quot;155&quot; cy=&quot;76&quot; rx=&quot;9&quot; ry=&quot;6&quot; fill=&quot;#ffb3b3&quot; opacity=&quot;0.6&quot;/>
+  </svg>
+
+  <p style=&quot;font-size: 16pt; font-weight: 500; color: #4a7ab5; text-align: center; margin-top: 4pt;&quot;>우리 아이의 첫 번째 책 친구, 추피</p>
+
+  <!-- Decorative elements -->
+  <svg style=&quot;position:absolute;bottom:20pt;left:40pt;opacity:0.4;&quot; width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff9999&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:40pt;left:80pt;opacity:0.3;&quot; width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z&quot; fill=&quot;#ffd700&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:25pt;right:35pt;opacity:0.4;&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z&quot; fill=&quot;#ffd700&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:50pt;right:70pt;opacity:0.3;&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot; fill=&quot;#ff9999&quot;/>
+  </svg>
+
+  <!-- Small flower decorations -->
+  <svg style=&quot;position:absolute;bottom:15pt;left:160pt;opacity:0.35;&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot;>
+    <circle cx=&quot;10&quot; cy=&quot;6&quot; r=&quot;4&quot; fill=&quot;#ffaacc&quot;/>
+    <circle cx=&quot;6&quot; cy=&quot;10&quot; r=&quot;4&quot; fill=&quot;#ffaacc&quot;/>
+    <circle cx=&quot;14&quot; cy=&quot;10&quot; r=&quot;4&quot; fill=&quot;#ffaacc&quot;/>
+    <circle cx=&quot;10&quot; cy=&quot;14&quot; r=&quot;4&quot; fill=&quot;#ffaacc&quot;/>
+    <circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;3&quot; fill=&quot;#ffd700&quot;/>
+  </svg>
+  <svg style=&quot;position:absolute;bottom:30pt;right:150pt;opacity:0.3;&quot; width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 20 20&quot;>
+    <circle cx=&quot;10&quot; cy=&quot;6&quot; r=&quot;4&quot; fill=&quot;#aaccff&quot;/>
+    <circle cx=&quot;6&quot; cy=&quot;10&quot; r=&quot;4&quot; fill=&quot;#aaccff&quot;/>
+    <circle cx=&quot;14&quot; cy=&quot;10&quot; r=&quot;4&quot; fill=&quot;#aaccff&quot;/>
+    <circle cx=&quot;10&quot; cy=&quot;14&quot; r=&quot;4&quot; fill=&quot;#aaccff&quot;/>
+    <circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;3&quot; fill=&quot;#ffd700&quot;/>
+  </svg>
+</body>
+</html>" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TOTAL = 8;
+    let current = 1;
+
+    const frames = document.querySelectorAll('.slide-frame');
+    const counter = document.getElementById('counter');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const scaler = document.getElementById('scaler');
+    const viewport = document.getElementById('viewport');
+
+    function goTo(n) {
+      n = Math.max(1, Math.min(TOTAL, n));
+      if (n === current) return;
+      frames[current - 1].classList.remove('active');
+      current = n;
+      frames[current - 1].classList.add('active');
+      counter.textContent = current + ' / ' + TOTAL;
+      btnPrev.disabled = current === 1;
+      btnNext.disabled = current === TOTAL;
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    btnPrev.addEventListener('click', prev);
+    btnNext.addEventListener('click', next);
+    btnPrev.disabled = true;
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') { e.preventDefault(); goTo(1); }
+      else if (e.key === 'End') { e.preventDefault(); goTo(TOTAL); }
+      else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen();
+      }
+    }
+    document.getElementById('btn-fs').addEventListener('click', toggleFullscreen);
+
+    // Auto-scale to fit viewport (95% fit)
+    function rescale() {
+      const vw = viewport.clientWidth;
+      const vh = viewport.clientHeight;
+      const slideW = scaler.offsetWidth;
+      const slideH = scaler.offsetHeight;
+      const scale = Math.min(vw / slideW, vh / slideH) * 0.95;
+      scaler.style.transform = 'scale(' + scale + ')';
+    }
+
+    window.addEventListener('resize', rescale);
+    document.addEventListener('fullscreenchange', () => setTimeout(rescale, 100));
+    rescale();
+  </script>
+</body>
+</html>
