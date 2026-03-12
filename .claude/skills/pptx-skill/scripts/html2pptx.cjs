@@ -301,9 +301,13 @@ function validateTextBoxPosition(slideData, bodyDimensions) {
 // Helper: Add background to slide
 async function addBackground(slideData, targetSlide, tmpDir) {
   if (slideData.background.type === 'image' && slideData.background.path) {
-    let imagePath = slideData.background.path.startsWith('file://')
-      ? slideData.background.path.replace('file://', '')
-      : slideData.background.path;
+    let imagePath = slideData.background.path;
+    if (imagePath.startsWith('file:///')) {
+      imagePath = imagePath.slice(8);
+      if (!imagePath.match(/^[A-Za-z]:/)) imagePath = '/' + imagePath;
+    } else if (imagePath.startsWith('file://')) {
+      imagePath = imagePath.replace('file://', '');
+    }
     targetSlide.background = { path: imagePath };
   } else if (slideData.background.type === 'color' && slideData.background.value) {
     targetSlide.background = { color: slideData.background.value };
@@ -320,16 +324,29 @@ function addElements(slideData, targetSlide, pres) {
           x: el.position.x,
           y: el.position.y,
           w: el.position.w,
-          h: el.position.h
+          h: el.position.h,
+          sizing: { type: 'contain', w: el.position.w, h: el.position.h }
         });
       } else {
-        let imagePath = el.src.startsWith('file://') ? el.src.replace('file://', '') : el.src;
+        let imagePath = el.src;
+        // file:///D:/path → D:/path (Windows), file:///home/path → /home/path (Linux/Mac)
+        if (imagePath.startsWith('file:///')) {
+          imagePath = imagePath.slice(8); // remove 'file:///'
+          // On Windows, result is like 'D:/path' which is correct
+          // On Unix, we need to restore the leading '/'
+          if (!imagePath.match(/^[A-Za-z]:/)) {
+            imagePath = '/' + imagePath;
+          }
+        } else if (imagePath.startsWith('file://')) {
+          imagePath = imagePath.replace('file://', '');
+        }
         targetSlide.addImage({
           path: imagePath,
           x: el.position.x,
           y: el.position.y,
           w: el.position.w,
-          h: el.position.h
+          h: el.position.h,
+          sizing: { type: 'contain', w: el.position.w, h: el.position.h }
         });
       }
     } else if (el.type === 'line') {
@@ -384,22 +401,63 @@ function addElements(slideData, targetSlide, pres) {
       let adjustedX = el.position.x;
       let adjustedW = el.position.w;
 
-      // Make single-line text 2% wider to account for underestimate
-      if (isSingleLine) {
-        const widthIncrease = el.position.w * 0.02;
-        const align = el.style.align;
+      // Detect CJK text (Korean/Chinese/Japanese render wider in PowerPoint than Chrome)
+      const textStr = typeof el.text === 'string' ? el.text : (Array.isArray(el.text) ? el.text.map(r => r.text || '').join('') : '');
+      const hasCJK = /[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/.test(textStr);
+      const cjkRatio = textStr.length > 0 ? (textStr.match(/[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/g) || []).length / textStr.length : 0;
 
-        if (align === 'center') {
-          // Center: expand both sides
-          adjustedX = el.position.x - (widthIncrease / 2);
-          adjustedW = el.position.w + widthIncrease;
-        } else if (align === 'right') {
-          // Right: expand to the left
-          adjustedX = el.position.x - widthIncrease;
-          adjustedW = el.position.w + widthIncrease;
-        } else {
-          // Left (default): expand to the right
-          adjustedW = el.position.w + widthIncrease;
+      // CJK text needs larger buffer: PowerPoint renders ~15-20% wider than Chrome
+      let widthMultiplier;
+      if (hasCJK && cjkRatio > 0.3) {
+        widthMultiplier = isSingleLine ? 0.20 : 0.15;
+      } else {
+        widthMultiplier = isSingleLine ? 0.08 : 0.06;
+      }
+
+      const widthIncrease = el.position.w * widthMultiplier;
+      const heightIncrease = isSingleLine ? el.position.h * 0.15 : el.position.h * 0.1;
+      const align = el.style.align;
+
+      if (align === 'center') {
+        adjustedX = el.position.x - (widthIncrease / 2);
+        adjustedW = el.position.w + widthIncrease;
+      } else if (align === 'right') {
+        adjustedX = el.position.x - widthIncrease;
+        adjustedW = el.position.w + widthIncrease;
+      } else {
+        adjustedW = el.position.w + widthIncrease;
+      }
+
+      // Clamp text width to parent container boundary
+      // Find the smallest containing shape that encloses this text element
+      const textRight = adjustedX + adjustedW;
+      const textBottom = el.position.y + el.position.h;
+      let parentShape = null;
+      let parentArea = Infinity;
+      for (const other of slideData.elements) {
+        if (other.type !== 'shape') continue;
+        const sp = other.position;
+        // Check if the text's original position is inside this shape (with small tolerance)
+        const tol = 0.01; // ~1pt tolerance
+        if (el.position.x >= sp.x - tol && el.position.y >= sp.y - tol &&
+            el.position.x + el.position.w <= sp.x + sp.w + tol &&
+            el.position.y + el.position.h <= sp.y + sp.h + tol) {
+          const area = sp.w * sp.h;
+          if (area < parentArea) {
+            parentArea = area;
+            parentShape = sp;
+          }
+        }
+      }
+      if (parentShape) {
+        const parentRight = parentShape.x + parentShape.w;
+        if (textRight > parentRight) {
+          adjustedW = parentRight - adjustedX;
+        }
+        // Also clamp left edge for center-aligned text
+        if (adjustedX < parentShape.x) {
+          adjustedW -= (parentShape.x - adjustedX);
+          adjustedX = parentShape.x;
         }
       }
 
@@ -407,7 +465,7 @@ function addElements(slideData, targetSlide, pres) {
         x: adjustedX,
         y: el.position.y,
         w: adjustedW,
-        h: el.position.h,
+        h: el.position.h + heightIncrease,
         fontSize: el.style.fontSize,
         fontFace: el.style.fontFace,
         color: el.style.color,
@@ -418,7 +476,10 @@ function addElements(slideData, targetSlide, pres) {
         lineSpacing: el.style.lineSpacing,
         paraSpaceBefore: el.style.paraSpaceBefore,
         paraSpaceAfter: el.style.paraSpaceAfter,
-        inset: 0  // Remove default PowerPoint internal padding
+        inset: 0,  // Remove default PowerPoint internal padding
+        // Only apply shrink for single-line CJK text likely to overflow
+        // (LibreOffice aggressively shrinks ALL text with fit:'shrink', making multi-line text tiny)
+        ...(isSingleLine && hasCJK ? { fit: 'shrink' } : {})
       };
 
       if (el.style.align) textOptions.align = el.style.align;
@@ -803,9 +864,9 @@ async function extractSlideData(page) {
           }
         }
 
-        // Check for background images on shapes
+        // Check for background images on shapes (url() only — gradients are ignored as they become solid colors)
         const bgImage = computed.backgroundImage;
-        if (bgImage && bgImage !== 'none') {
+        if (bgImage && bgImage !== 'none' && bgImage.includes('url(')) {
           errors.push(
             'Background images on DIV elements are not supported. ' +
             'Use solid colors or borders for shapes, or use slide.addImage() in PptxGenJS to layer images.'

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 720pt; height: 405pt;
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient(180deg, #e0f0ff 0%, #b3d9ff 50%, #87c4ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <!-- Decorative clouds -->
+  <svg style="position:absolute;top:20pt;left:40pt;opacity:0.5;" width="120" height="60" viewBox="0 0 120 60">
+    <ellipse cx="60" cy="40" rx="55" ry="20" fill="#ffffff"/>
+    <ellipse cx="35" cy="30" rx="30" ry="22" fill="#ffffff"/>
+    <ellipse cx="85" cy="30" rx="28" ry="20" fill="#ffffff"/>
+  </svg>
+  <svg style="position:absolute;top:40pt;right:60pt;opacity:0.4;" width="100" height="50" viewBox="0 0 100 50">
+    <ellipse cx="50" cy="32" rx="45" ry="18" fill="#ffffff"/>
+    <ellipse cx="30" cy="24" rx="25" ry="18" fill="#ffffff"/>
+    <ellipse cx="70" cy="24" rx="22" ry="16" fill="#ffffff"/>
+  </svg>
+  <svg style="position:absolute;bottom:80pt;left:80pt;opacity:0.3;" width="90" height="45" viewBox="0 0 90 45">
+    <ellipse cx="45" cy="30" rx="40" ry="15" fill="#ffffff"/>
+    <ellipse cx="25" cy="22" rx="22" ry="16" fill="#ffffff"/>
+    <ellipse cx="65" cy="22" rx="20" ry="14" fill="#ffffff"/>
+  </svg>
+
+  <!-- Tchoupi character - waving -->
+  <svg width="260" height="260" viewBox="0 0 260 260" style="margin-bottom: 12pt;">
+    <!-- Body -->
+    <ellipse cx="130" cy="155" rx="70" ry="85" fill="#3a3a3a"/>
+    <!-- Belly -->
+    <ellipse cx="130" cy="170" rx="45" ry="55" fill="#ffffff"/>
+    <!-- Head -->
+    <ellipse cx="130" cy="80" rx="55" ry="50" fill="#3a3a3a"/>
+    <!-- Left eye white -->
+    <ellipse cx="110" cy="75" rx="18" ry="20" fill="#ffffff"/>
+    <!-- Right eye white -->
+    <ellipse cx="150" cy="75" rx="18" ry="20" fill="#ffffff"/>
+    <!-- Left pupil -->
+    <circle cx="112" cy="77" r="8" fill="#1a1a1a"/>
+    <!-- Right pupil -->
+    <circle cx="148" cy="77" r="8" fill="#1a1a1a"/>
+    <!-- Left eye shine -->
+    <circle cx="115" cy="73" r="3" fill="#ffffff"/>
+    <!-- Right eye shine -->
+    <circle cx="151" cy="73" r="3" fill="#ffffff"/>
+    <!-- Beak/mouth -->
+    <ellipse cx="130" cy="98" rx="10" ry="6" fill="#ff9933"/>
+    <!-- Smile -->
+    <path d="M122 102 Q130 112 138 102" stroke="#ff9933" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Hat -->
+    <ellipse cx="130" cy="42" rx="30" ry="12" fill="#ff6b6b"/>
+    <rect x="105" y="30" width="50" height="14" rx="6" fill="#ff6b6b"/>
+    <circle cx="130" cy="26" r="8" fill="#ff6b6b"/>
+    <!-- Left arm waving -->
+    <path d="M65 140 Q40 100 55 80" stroke="#3a3a3a" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <!-- Left hand -->
+    <ellipse cx="55" cy="76" rx="12" ry="10" fill="#3a3a3a"/>
+    <!-- Right arm -->
+    <path d="M195 140 Q210 155 205 170" stroke="#3a3a3a" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <!-- Feet -->
+    <ellipse cx="105" cy="238" rx="22" ry="10" fill="#ff9933"/>
+    <ellipse cx="155" cy="238" rx="22" ry="10" fill="#ff9933"/>
+    <!-- Cheek blush -->
+    <ellipse cx="95" cy="95" rx="10" ry="7" fill="#ffb3b3" opacity="0.6"/>
+    <ellipse cx="165" cy="95" rx="10" ry="7" fill="#ffb3b3" opacity="0.6"/>
+  </svg>
+
+  <h1 style="font-size: 52pt; font-weight: 800; color: #2a5298; letter-spacing: -0.02em; text-align: center;">안녕, 추피!</h1>
+  <p style="font-size: 20pt; font-weight: 500; color: #4a7ab5; margin-top: 8pt; text-align: center;">세상에서 제일 귀여운 펭귄 친구를 만나요</p>
+
+  <!-- Small decorative elements -->
+  <svg style="position:absolute;bottom:30pt;left:50pt;" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" fill="#ffd700" opacity="0.6"/>
+  </svg>
+  <svg style="position:absolute;bottom:50pt;right:40pt;" width="28" height="28" viewBox="0 0 24 24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#ff9999" opacity="0.5"/>
+  </svg>
+
+  <p style="position:absolute;bottom:12pt;right:20pt;font-size: 9pt; color: #7ba7d1;">그림: 티에리 쿠르탱 (Thierry Courtin) 作</p>
+</body>
+</html>

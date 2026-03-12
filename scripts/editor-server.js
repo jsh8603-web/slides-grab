@@ -38,8 +38,8 @@ async function loadDeps() {
 const DEFAULT_PORT = 3456;
 const DEFAULT_SLIDES_DIR = 'slides';
 const CODEX_MODELS = ['gpt-5.4', 'gpt-5.3-codex', 'gpt-5.3-codex-spark'];
-const ALL_MODELS = [...CODEX_MODELS, ...CLAUDE_MODELS];
-const DEFAULT_CODEX_MODEL = CODEX_MODELS[0];
+const ALL_MODELS = [...CLAUDE_MODELS, ...CODEX_MODELS];
+const DEFAULT_CODEX_MODEL = CLAUDE_MODELS[0];
 const SLIDE_FILE_PATTERN = /^slide-.*\.html$/i;
 
 const MAX_RUNS = 200;
@@ -431,6 +431,8 @@ async function startServer(opts) {
   const app = express();
   app.use(express.json({ limit: '5mb' }));
   app.use('/js', express.static(join(PACKAGE_ROOT, 'src', 'editor', 'js')));
+  app.use('/assets', express.static(join(slidesDirectory, 'assets')));
+  app.use('/slides/assets', express.static(join(slidesDirectory, 'assets')));
 
   const editorHtmlPath = join(PACKAGE_ROOT, 'src', 'editor', 'editor.html');
 

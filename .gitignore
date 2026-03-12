@@ -56,3 +56,10 @@ thumbnail-grid.png
 
 # Internal state
 .ralph/
+
+# Playwright session (Google login 등)
+.playwright-session/
+
+# NotebookLM extracted content
+notebook-content.md
+.mcp.json

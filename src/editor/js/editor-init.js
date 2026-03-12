@@ -8,6 +8,7 @@ import {
   alignLeft, alignCenter, alignRight,
   popoverTextInput, popoverApplyText, popoverTextColorInput, popoverBgColorInput,
   popoverSizeInput, popoverApplySize, toolModeDrawBtn, toolModeSelectBtn,
+  btnBgTransparent, btnUndo, btnRedo,
 } from './editor-dom.js';
 import {
   currentSlideFile, getSlideState, normalizeModelName, setStatus,
@@ -25,6 +26,7 @@ import {
 } from './editor-select.js';
 import {
   mutateSelectedObject, applyTextDecorationToken,
+  performUndo, performRedo, initUndoForSlide,
 } from './editor-direct-edit.js';
 import { updateSendState, applyChanges } from './editor-send.js';
 import { goToSlide } from './editor-navigation.js';
@@ -149,6 +151,16 @@ popoverBgColorInput.addEventListener('input', () => {
   }, 'Background color updated.', { delay: 300 });
 });
 
+btnBgTransparent.addEventListener('click', () => {
+  mutateSelectedObject((el) => {
+    el.style.backgroundColor = 'transparent';
+  }, 'Background set to transparent.');
+});
+
+// Undo / Redo
+btnUndo.addEventListener('click', performUndo);
+btnRedo.addEventListener('click', performRedo);
+
 // Style toggles
 toggleBold.addEventListener('click', () => {
   mutateSelectedObject((el) => {
@@ -201,11 +213,15 @@ alignRight.addEventListener('click', () => {
 document.addEventListener('keydown', (event) => {
   const inPromptField = document.activeElement === promptInput;
 
-  if (state.toolMode === TOOL_MODE_SELECT && (event.ctrlKey || event.metaKey) && !inPromptField) {
+  if ((event.ctrlKey || event.metaKey) && !inPromptField) {
     const key = event.key.toLowerCase();
-    if (key === 'b') { event.preventDefault(); if (!toggleBold.disabled) toggleBold.click(); return; }
-    if (key === 'i') { event.preventDefault(); if (!toggleItalic.disabled) toggleItalic.click(); return; }
-    if (key === 'u') { event.preventDefault(); if (!toggleUnderline.disabled) toggleUnderline.click(); return; }
+    if (key === 'z') { event.preventDefault(); performUndo(); return; }
+    if (key === 'y') { event.preventDefault(); performRedo(); return; }
+    if (state.toolMode === TOOL_MODE_SELECT) {
+      if (key === 'b') { event.preventDefault(); if (!toggleBold.disabled) toggleBold.click(); return; }
+      if (key === 'i') { event.preventDefault(); if (!toggleItalic.disabled) toggleItalic.click(); return; }
+      if (key === 'u') { event.preventDefault(); if (!toggleUnderline.disabled) toggleUnderline.click(); return; }
+    }
   }
 
   if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
@@ -241,6 +257,7 @@ slideIframe.addEventListener('load', () => {
     if (ss.selectedObjectXPath && !getSelectedObjectElement(slide)) {
       ss.selectedObjectXPath = '';
     }
+    initUndoForSlide(slide);
   }
   state.hoveredObjectXPath = '';
   renderBboxes();

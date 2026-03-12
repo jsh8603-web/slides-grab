@@ -1,10 +1,94 @@
-// editor-direct-edit.js — Style changes, direct save (debounced)
+// editor-direct-edit.js — Style changes, direct save (debounced), undo/redo
 
 import { localFileUpdateBySlide } from './editor-state.js';
 import { slideIframe } from './editor-dom.js';
 import { currentSlideFile, getDirectSaveState, setStatus } from './editor-utils.js';
 import { addChatMessage } from './editor-chat.js';
 import { getSelectedObjectElement, renderObjectSelection, updateObjectEditorControls, readSelectedObjectStyleState } from './editor-select.js';
+
+// --- Undo / Redo (per-slide HTML snapshot stack) ---
+const MAX_HISTORY = 40;
+const historyBySlide = new Map(); // slide -> { stack: string[], index: number }
+
+function getHistory(slide) {
+  if (!historyBySlide.has(slide)) {
+    historyBySlide.set(slide, { stack: [], index: -1 });
+  }
+  return historyBySlide.get(slide);
+}
+
+export function pushUndoSnapshot(slide) {
+  if (!slide) slide = currentSlideFile();
+  if (!slide) return;
+  const html = serializeSlideDocument(slideIframe.contentDocument);
+  if (!html) return;
+  const h = getHistory(slide);
+  // Trim any redo entries ahead of current index
+  if (h.index < h.stack.length - 1) {
+    h.stack.length = h.index + 1;
+  }
+  // Skip duplicate consecutive snapshots
+  if (h.stack.length > 0 && h.stack[h.stack.length - 1] === html) return;
+  h.stack.push(html);
+  if (h.stack.length > MAX_HISTORY) h.stack.shift();
+  h.index = h.stack.length - 1;
+}
+
+export function initUndoForSlide(slide) {
+  if (!slide) return;
+  const h = getHistory(slide);
+  if (h.stack.length === 0) {
+    const html = serializeSlideDocument(slideIframe.contentDocument);
+    if (html) {
+      h.stack.push(html);
+      h.index = 0;
+    }
+  }
+}
+
+export function canUndo(slide) {
+  if (!slide) slide = currentSlideFile();
+  if (!slide) return false;
+  const h = getHistory(slide);
+  return h.index > 0;
+}
+
+export function canRedo(slide) {
+  if (!slide) slide = currentSlideFile();
+  if (!slide) return false;
+  const h = getHistory(slide);
+  return h.index < h.stack.length - 1;
+}
+
+export function performUndo() {
+  const slide = currentSlideFile();
+  if (!slide || !canUndo(slide)) return;
+  const h = getHistory(slide);
+  h.index--;
+  applySnapshot(slide, h.stack[h.index]);
+  setStatus('Undo applied.');
+}
+
+export function performRedo() {
+  const slide = currentSlideFile();
+  if (!slide || !canRedo(slide)) return;
+  const h = getHistory(slide);
+  h.index++;
+  applySnapshot(slide, h.stack[h.index]);
+  setStatus('Redo applied.');
+}
+
+function applySnapshot(slide, html) {
+  if (!slide || !html) return;
+  const doc = slideIframe.contentDocument;
+  if (!doc) return;
+  doc.open();
+  doc.write(html);
+  doc.close();
+  renderObjectSelection();
+  updateObjectEditorControls();
+  queueDirectSave(slide, html, `${slide} restored.`);
+}
 
 export function serializeSlideDocument(doc) {
   if (!doc?.documentElement) return '';
@@ -102,7 +186,9 @@ export function applyTextDecorationToken(el, token, shouldEnable) {
 export function mutateSelectedObject(mutator, message, { delay = 0, preserveTextInput = false } = {}) {
   const selected = getSelectedObjectElement();
   if (!selected) return;
+  pushUndoSnapshot();
   mutator(selected);
+  pushUndoSnapshot(); // Save post-mutation state so undo has a target to go back from
   renderObjectSelection();
   updateObjectEditorControls({ preserveTextInput });
   scheduleDirectSave(delay, message);

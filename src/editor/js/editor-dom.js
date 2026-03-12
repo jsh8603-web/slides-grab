@@ -50,6 +50,10 @@ export const miniTag = $('#mini-tag');
 export const miniText = $('#mini-text');
 export const selectEmptyHint = $('#select-empty-hint');
 
+export const btnBgTransparent = $('#btn-bg-transparent');
+export const btnUndo = $('#btn-undo');
+export const btnRedo = $('#btn-redo');
+
 export const statusDot = $('#status-dot');
 export const statusConn = $('#status-connection');
 export const statusMsg = $('#status-message');

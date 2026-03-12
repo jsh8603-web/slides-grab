@@ -48,12 +48,20 @@ export function isSelectableElement(el) {
   return rect.width > 1 && rect.height > 1;
 }
 
+const INLINE_SELECTABLE_TAGS = new Set(['span', 'b', 'strong', 'i', 'em', 'u', 's', 'a', 'small', 'sub', 'sup', 'mark', 'code']);
+
 export function isTextEditableElement(el) {
   if (!isElementNode(el)) return false;
   const tag = el.tagName.toLowerCase();
-  if (!DIRECT_TEXT_TAGS.has(tag)) return false;
-  const INLINE_TAGS = new Set(['BR','B','STRONG','I','EM','U','S','SPAN','A','SMALL','SUB','SUP','MARK','CODE']);
+  if (!DIRECT_TEXT_TAGS.has(tag) && !INLINE_SELECTABLE_TAGS.has(tag)) return false;
+  const INLINE_TAGS = new Set(['BR','B','STRONG','I','EM','U','S','SPAN','A','SMALL','SUB','SUP','MARK','CODE','DIV']);
   return Array.from(el.children).every(c => INLINE_TAGS.has(c.tagName));
+}
+
+export function isEmphasisEditableElement(el) {
+  if (!isElementNode(el)) return false;
+  const tag = el.tagName.toLowerCase();
+  return DIRECT_TEXT_TAGS.has(tag) || tag === 'div' || INLINE_SELECTABLE_TAGS.has(tag);
 }
 
 export function getSelectableTargetAt(clientX, clientY) {
@@ -125,13 +133,14 @@ function setControlEnabled(button, enabled) {
 
 export function getSelectedObjectCapabilities(el) {
   const textEditable = isTextEditableElement(el);
+  const emphasisEditable = isEmphasisEditableElement(el);
   return {
     textEditable,
-    textColorEditable: textEditable,
+    textColorEditable: emphasisEditable,
     backgroundEditable: isElementNode(el),
     sizeEditable: textEditable,
-    emphasisEditable: textEditable,
-    alignEditable: textEditable,
+    emphasisEditable,
+    alignEditable: emphasisEditable,
   };
 }
 

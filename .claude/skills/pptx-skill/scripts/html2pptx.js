@@ -384,30 +384,26 @@ function addElements(slideData, targetSlide, pres) {
       let adjustedX = el.position.x;
       let adjustedW = el.position.w;
 
-      // Make single-line text 2% wider to account for underestimate
-      if (isSingleLine) {
-        const widthIncrease = el.position.w * 0.02;
-        const align = el.style.align;
+      // Give text boxes breathing room to prevent clipping
+      const widthIncrease = isSingleLine ? el.position.w * 0.08 : el.position.w * 0.06;
+      const heightIncrease = isSingleLine ? el.position.h * 0.1 : el.position.h * 0.1;
+      const align = el.style.align;
 
-        if (align === 'center') {
-          // Center: expand both sides
-          adjustedX = el.position.x - (widthIncrease / 2);
-          adjustedW = el.position.w + widthIncrease;
-        } else if (align === 'right') {
-          // Right: expand to the left
-          adjustedX = el.position.x - widthIncrease;
-          adjustedW = el.position.w + widthIncrease;
-        } else {
-          // Left (default): expand to the right
-          adjustedW = el.position.w + widthIncrease;
-        }
+      if (align === 'center') {
+        adjustedX = el.position.x - (widthIncrease / 2);
+        adjustedW = el.position.w + widthIncrease;
+      } else if (align === 'right') {
+        adjustedX = el.position.x - widthIncrease;
+        adjustedW = el.position.w + widthIncrease;
+      } else {
+        adjustedW = el.position.w + widthIncrease;
       }
 
       const textOptions = {
         x: adjustedX,
         y: el.position.y,
         w: adjustedW,
-        h: el.position.h,
+        h: el.position.h + heightIncrease,
         fontSize: el.style.fontSize,
         fontFace: el.style.fontFace,
         color: el.style.color,

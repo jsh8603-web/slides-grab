@@ -448,16 +448,24 @@ Rules:
 - Use HEX values with `#` prefix for `stroke`/`fill` colors.
 - Place text outside SVG using `<p>`, `<h1>`-`<h6>` tags.
 
-### 4. Image Usage Rules (Local Path / URL / Placeholder)
+### 4. Image Usage Rules (Local Path / URL / NanoBanana / Placeholder)
+
+#### NanoBanana Generated Image (Preferred)
+```html
+<img src="assets/slide-05-smart-warehouse.png" alt="스마트 창고 내부 전경"
+     style="width: 340pt; height: 220pt; object-fit: cover; border-radius: 8pt;">
+```
 
 #### Local Path Image
 ```html
-<img src="/Users/yourname/projects/assets/team-photo.png" alt="Team photo" style="width: 220pt; height: 140pt; object-fit: cover;">
+<img src="/Users/yourname/projects/assets/team-photo.png" alt="Team photo"
+     style="width: 220pt; height: 140pt; object-fit: cover;">
 ```
 
 #### URL Image
 ```html
-<img src="https://images.example.com/hero.png" alt="Hero image" style="width: 220pt; height: 140pt; object-fit: cover;">
+<img src="https://images.example.com/hero.png" alt="Hero image"
+     style="width: 220pt; height: 140pt; object-fit: cover;">
 ```
 
 #### Placeholder (Image Stand-In)
@@ -467,9 +475,42 @@ Rules:
 
 Rules:
 - Always include `alt` on `img` tags.
+- **NanoBanana 이미지 우선**: `assets/` 폴더에 이미지가 있으면 반드시 사용.
+- NanoBanana 이미지 경로: `assets/slide-{NN}-{slug}.png` (상대 경로 사용).
+- 이미지 미준비 시 `data-image-placeholder`로 영역 확보 (나중에 교체 가능).
 - Prefer local paths; URL images risk network failures.
-- Use `data-image-placeholder` to reserve space when no image is available yet.
 - Use high-resolution originals and fit with `object-fit`.
+
+#### 이미지 위 텍스트 오버레이 — WCAG AA 접근성 규칙 (#9)
+
+이미지 위에 텍스트를 배치할 때 **WCAG AA 대비율** (일반 텍스트 4.5:1, 큰 텍스트 3:1)을 충족해야 한다.
+
+**방법 1: 반투명 오버레이 (가장 안정적)**
+```html
+<div style="position: relative;">
+  <img src="assets/slide-01-cover.png" style="width: 100%; height: 100%; object-fit: cover;">
+  <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.55);"></div>
+  <div style="position: absolute; inset: 0; padding: 48pt; display: flex; flex-direction: column; justify-content: center;">
+    <h1 style="color: #ffffff; font-size: 48pt; font-weight: 700;">제목</h1>
+  </div>
+</div>
+```
+
+**방법 2: 텍스트 그림자 (가벼운 오버레이)**
+```html
+<h1 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">제목</h1>
+```
+
+**방법 3: 그라디언트 오버레이 (한쪽에 텍스트)**
+```html
+<div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 60%);"></div>
+```
+
+**선택 기준:**
+- 전면 이미지 + 중앙 텍스트 → 방법 1 (반투명 오버레이)
+- 이미지 위 제목만 → 방법 2 (텍스트 그림자)
+- 좌측 텍스트 + 우측 이미지 → 방법 3 (그라디언트)
+- 밝은 이미지에 어두운 텍스트 → `rgba(255,255,255,0.85)` 오버레이 + 어두운 텍스트
 
 ---
 
@@ -484,6 +525,27 @@ Rules:
 <div>text here</div>
 <span>text here</span>
 ```
+
+### Inline Text Wrapping (Editor Selectability)
+비주얼 에디터에서 단어/구문 단위로 선택하여 서식(볼드, 색상 등)을 수정하려면,
+`<p>` 등 블록 요소 안의 모든 텍스트 조각을 `<span>`으로 감싸야 한다.
+태그 없는 순수 텍스트 노드는 `elementFromPoint`로 선택 불가.
+
+```html
+<!-- Good — 모든 텍스트가 span으로 감싸져 있어 개별 선택 가능 -->
+<p style="font-size: 11pt;">
+  <span style="color: #FAFAF9;">바다 생물의 </span>
+  <span style="font-weight: 700; color: #D97706;">95%</span>
+  <span style="color: #FAFAF9;">가 사라졌어요!</span>
+</p>
+
+<!-- Bad — "바다 생물의 "가 순수 텍스트 노드라 에디터에서 선택 불가 -->
+<p style="font-size: 11pt; color: #FAFAF9;">
+  바다 생물의 <span style="font-weight: 700; color: #D97706;">95%</span>가 사라졌어요!
+</p>
+```
+
+**규칙**: `<p>`, `<h1>`~`<h6>`, `<li>` 안에 텍스트를 넣을 때, 단일 스타일 텍스트만 있는 경우를 제외하고 모든 텍스트 조각을 `<span>`으로 감싼다.
 
 ### Recommended Usage
 ```html
