@@ -115,6 +115,7 @@ console.log(`Found ${slideFiles.length} slides`);
 function escapeForSrcdoc(html) {
   return html
     .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
     .replace(/"/g, '&quot;');
 }
 

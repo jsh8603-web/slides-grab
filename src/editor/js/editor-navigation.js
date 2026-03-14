@@ -20,8 +20,13 @@ export function persistCurrentSlideDraft() {
   ss.model = normalizeModelName(modelSelect.value) || ss.model || state.defaultModel;
 }
 
+let _navigating = false;
+
 export async function goToSlide(index) {
   if (index < 0 || index >= state.slides.length) return;
+  if (_navigating) return;
+  _navigating = true;
+  try {
 
   const previousSlide = currentSlideFile();
   persistCurrentSlideDraft();
@@ -51,4 +56,7 @@ export async function goToSlide(index) {
   updateObjectEditorControls();
   updateSendState();
   setStatus(`Loaded ${slide}`);
+  } finally {
+    _navigating = false;
+  }
 }

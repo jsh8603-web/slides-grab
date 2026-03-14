@@ -16,8 +16,15 @@ function upsertRun(run) {
   });
 }
 
+let _evtSource = null;
+
 export function connectSSE() {
+  if (_evtSource) {
+    _evtSource.close();
+    _evtSource = null;
+  }
   const evtSource = new EventSource('/api/events');
+  _evtSource = evtSource;
 
   evtSource.onopen = () => {
     statusDot.classList.add('connected');

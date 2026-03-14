@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readdir, readFile, writeFile, mkdtemp, rm, mkdir } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdtemp, rm, mkdir, access } from 'node:fs/promises';
 import { watch as fsWatch, createReadStream } from 'node:fs';
 import { basename, dirname, extname, join, resolve, relative, sep } from 'node:path';
 import { spawn } from 'node:child_process';
@@ -437,9 +437,9 @@ async function startServer(opts) {
 
   const app = express();
   app.use(express.json({ limit: '5mb' }));
-  app.use('/js', express.static(join(PACKAGE_ROOT, 'src', 'editor', 'js')));
-  app.use('/assets', express.static(join(slidesDirectory, 'assets')));
-  app.use('/slides/assets', express.static(join(slidesDirectory, 'assets')));
+  app.use('/js', express.static(join(PACKAGE_ROOT, 'src', 'editor', 'js'), { maxAge: '1h' }));
+  app.use('/assets', express.static(join(slidesDirectory, 'assets'), { maxAge: '1h' }));
+  app.use('/slides/assets', express.static(join(slidesDirectory, 'assets'), { maxAge: '1h' }));
 
   const editorHtmlPath = join(PACKAGE_ROOT, 'src', 'editor', 'editor.html');
 
@@ -450,10 +450,13 @@ async function startServer(opts) {
     });
   }
 
+  let _cachedEditorHtml = '';
   app.get('/', async (_req, res) => {
     try {
-      const html = await readFile(editorHtmlPath, 'utf-8');
-      res.type('html').send(html);
+      if (!_cachedEditorHtml) {
+        _cachedEditorHtml = await readFile(editorHtmlPath, 'utf-8');
+      }
+      res.type('html').send(_cachedEditorHtml);
     } catch (err) {
       res.status(500).send(`Failed to load editor: ${err.message}`);
     }
@@ -516,7 +519,7 @@ async function startServer(opts) {
 
     const filePath = join(slidesDirectory, file);
     try {
-      await readFile(filePath, 'utf-8');
+      await access(filePath);
     } catch {
       return res.status(404).json({ error: `Slide not found: ${file}` });
     }
