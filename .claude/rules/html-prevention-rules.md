@@ -1,13 +1,14 @@
 # HTML 작성 시 금지/필수 규칙 (Quick Reference)
 
-Step 2 (HTML 생성) 시 이 파일만 참조. 전체 히스토리는 `pptx-inspection-log.md` 참조.
+슬라이드 HTML 생성/수정 시 이 파일의 규칙을 준수. 규칙의 근거(이슈 패턴 히스토리, 매핑 테이블, 검사 통과 기록)는 `pptx-inspection-log.md` 참조.
 
 ## 수정 기록 의무 (프로세스 진행 여부 무관)
 
 HTML/PPTX 레이아웃 에러 수정 시 — 워크플로우 중이든, 즉석 버그 수정이든 — 완료 보고 전 반드시:
-1. `pptx-inspection-log.md`에 패턴 추가/갱신 (마지막 번호 + 1) + 매핑 테이블 갱신
+1. `pptx-inspection-log.md`에 패턴 추가/갱신 (마지막 번호 + 1)
 2. 이 파일(`html-prevention-rules.md`)에 금지/필수 규칙 추가
 3. 자동 감지 가능하면 `preflight-html.js`(PF) 또는 `validate-pptx.js`(VP) 규칙 추가
+4. 3에서 PF/VP를 추가했으면 `pptx-inspection-log.md` 매핑 테이블에 ID 갱신
 
 ## 금지 (ERROR — 변환 실패 또는 텍스트 불가시)
 
