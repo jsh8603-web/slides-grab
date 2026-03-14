@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { readdir, readFile, writeFile, mkdtemp, rm, mkdir } from 'node:fs/promises';
-import { watch as fsWatch } from 'node:fs';
-import { basename, dirname, join, resolve, relative, sep } from 'node:path';
+import { watch as fsWatch, createReadStream } from 'node:fs';
+import { basename, dirname, extname, join, resolve, relative, sep } from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { tmpdir } from 'node:os';
@@ -50,6 +50,7 @@ function printUsage() {
   process.stdout.write(`Options:\n`);
   process.stdout.write(`  --port <number>           Server port (default: ${DEFAULT_PORT})\n`);
   process.stdout.write(`  --slides-dir <path>       Slide directory (default: ${DEFAULT_SLIDES_DIR})\n`);
+  process.stdout.write(`  --tunnel                  Expose via localtunnel (prints URL + QR code)\n`);
   process.stdout.write(`  Model is selected in editor UI dropdown.\n`);
   process.stdout.write(`  -h, --help                Show this help message\n`);
 }
@@ -58,6 +59,7 @@ function parseArgs(argv) {
   const opts = {
     port: DEFAULT_PORT,
     slidesDir: DEFAULT_SLIDES_DIR,
+    tunnel: false,
     help: false,
   };
 
@@ -87,6 +89,11 @@ function parseArgs(argv) {
 
     if (arg.startsWith('--slides-dir=')) {
       opts.slidesDir = arg.slice('--slides-dir='.length);
+      continue;
+    }
+
+    if (arg === '--tunnel') {
+      opts.tunnel = true;
       continue;
     }
 
@@ -570,6 +577,48 @@ async function startServer(opts) {
     res.write(`event: runsSnapshot\ndata: ${JSON.stringify(snapshotPayload)}\n\n`);
   });
 
+  // --- Output download routes ---
+  const OUTPUT_EXTENSIONS = new Set(['.pptx', '.pdf']);
+
+  app.get('/output', async (_req, res) => {
+    try {
+      const entries = await readdir(slidesDirectory, { withFileTypes: true });
+      const files = entries
+        .filter((e) => e.isFile() && !e.name.startsWith('~$') && OUTPUT_EXTENSIONS.has(extname(e.name).toLowerCase()))
+        .map((e) => e.name)
+        .sort();
+      res.json({ files });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  app.get('/output/:filename', async (req, res) => {
+    const filename = basename(req.params.filename);
+    const ext = extname(filename).toLowerCase();
+    if (!OUTPUT_EXTENSIONS.has(ext)) {
+      return res.status(400).send('Only .pptx and .pdf files are allowed.');
+    }
+
+    const filePath = join(slidesDirectory, filename);
+    const realPath = resolve(filePath);
+    if (!realPath.startsWith(slidesDirectory + sep) && realPath !== slidesDirectory) {
+      return res.status(403).send('Access denied.');
+    }
+
+    const mimeType = ext === '.pdf' ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+    res.setHeader('Content-Type', mimeType);
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+
+    const stream = createReadStream(filePath);
+    stream.on('error', (err) => {
+      if (!res.headersSent) {
+        res.status(err.code === 'ENOENT' ? 404 : 500).send(err.code === 'ENOENT' ? `File not found: ${filename}` : err.message);
+      }
+    });
+    stream.pipe(res);
+  });
+
   app.post('/api/apply', async (req, res) => {
     const { slide, prompt, selections, model } = req.body ?? {};
 
@@ -735,17 +784,68 @@ async function startServer(opts) {
     }, 300);
   });
 
-  const server = app.listen(opts.port, () => {
+  let activeTunnel = null;
+
+  const server = app.listen(opts.port, async () => {
     process.stdout.write('\n  slides-grab editor\n');
     process.stdout.write('  ─────────────────────────────────────\n');
     process.stdout.write(`  Local:       http://localhost:${opts.port}\n`);
     process.stdout.write(`  Models:      ${ALL_MODELS.join(', ')}\n`);
     process.stdout.write(`  Slides:      ${slidesDirectory}\n`);
     process.stdout.write('  ─────────────────────────────────────\n\n');
+
+    if (opts.tunnel) {
+      await openTunnel(opts.port);
+    }
   });
+
+  async function openTunnel(port) {
+    const cloudflaredBin = process.env.CLOUDFLARED_BIN || 'cloudflared';
+    const child = spawn(cloudflaredBin, ['tunnel', '--url', `http://localhost:${port}`], {
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: { ...process.env, PATH: `${process.env.PATH};${process.env.LOCALAPPDATA}\\Microsoft\\WinGet\\Packages\\Cloudflare.cloudflared_Microsoft.Winget.Source_8wekyb3d8bbwe` },
+    });
+
+    activeTunnel = child;
+
+    child.on('error', (err) => {
+      process.stderr.write(`[tunnel] Failed to start cloudflared: ${err.message}\n`);
+      process.stderr.write('[tunnel] Install: winget install Cloudflare.cloudflared\n');
+      activeTunnel = null;
+    });
+
+    child.on('close', (code) => {
+      if (activeTunnel === child) {
+        process.stdout.write(`[tunnel] cloudflared exited (code ${code}).\n`);
+        activeTunnel = null;
+      }
+    });
+
+    // cloudflared prints the URL to stderr
+    let urlFound = false;
+    child.stderr.on('data', (chunk) => {
+      const text = chunk.toString();
+      if (!urlFound) {
+        const match = text.match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/);
+        if (match) {
+          urlFound = true;
+          const url = match[0];
+          process.stdout.write(`  Tunnel:      ${url}\n`);
+          process.stdout.write(`  QR code:     https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}\n`);
+          process.stdout.write('\n  ┌──────────────────────────────────────────────────┐\n');
+          process.stdout.write(`  │  ${url.padEnd(49)}│\n`);
+          process.stdout.write('  └──────────────────────────────────────────────────┘\n\n');
+        }
+      }
+    });
+  }
 
   async function shutdown() {
     process.stdout.write('\n[editor] Shutting down...\n');
+    if (activeTunnel) {
+      activeTunnel.kill();
+      activeTunnel = null;
+    }
     watcher.close();
     for (const client of sseClients) {
       client.end();

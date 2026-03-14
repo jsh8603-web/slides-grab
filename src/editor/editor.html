@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, user-scalable=yes">
   <title>Slide Editor - ppt-agent</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <style>
@@ -1572,6 +1572,53 @@
         min-width: 160px;
       }
     }
+
+    @media (max-width: 768px), (max-height: 500px) and (orientation: landscape) {
+      .main-content {
+        flex-direction: row;
+        overflow: hidden;
+      }
+      .slide-panel {
+        flex: 1;
+        padding: 0;
+        min-width: 0;
+        overflow: hidden;
+      }
+      .slide-stage {
+        padding: 2px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .slide-wrapper {
+        transform-origin: top left !important;
+      }
+      .editor-sidebar {
+        width: 240px !important;
+        min-width: 240px !important;
+        font-size: 12px;
+        overflow-y: auto;
+      }
+      .slide-toolbox {
+        display: none;
+      }
+      .nav-bar {
+        height: 36px;
+        padding: 0 8px;
+        gap: 6px;
+      }
+      .nav-bar button {
+        height: 26px;
+        font-size: 11px;
+        padding: 0 8px;
+      }
+      .slide-counter {
+        font-size: 11px;
+        min-width: 60px;
+      }
+      .status-bar {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1584,6 +1631,9 @@
       </div>
       <div class="nav-spacer"></div>
       <span class="slide-status-chip idle" id="slide-status-chip">idle</span>
+      <div class="nav-controls" id="output-controls" style="display:none;">
+        <button id="btn-download" title="Download output files">&#11015; Download</button>
+      </div>
       <span class="brand">ppt-agent</span>
     </div>
 
@@ -1742,5 +1792,55 @@
   </div>
 
   <script type="module" src="/js/editor-init.js"></script>
+  <script>
+  (function() {
+    const btn = document.getElementById('btn-download');
+    const controls = document.getElementById('output-controls');
+
+    async function checkOutputFiles() {
+      try {
+        const res = await fetch('/output');
+        const data = await res.json();
+        if (data.files && data.files.length > 0) {
+          controls.style.display = '';
+        }
+      } catch { /* ignore */ }
+    }
+
+    let dropdownEl = null;
+    btn.addEventListener('click', async () => {
+      if (dropdownEl) { dropdownEl.remove(); dropdownEl = null; return; }
+      try {
+        const res = await fetch('/output');
+        const data = await res.json();
+        const files = data.files || [];
+        if (files.length === 0) { alert('No output files available.'); return; }
+        dropdownEl = document.createElement('div');
+        dropdownEl.style.cssText = 'position:absolute;top:100%;right:0;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 0;z-index:999;min-width:200px;box-shadow:0 4px 12px rgba(0,0,0,0.4)';
+        controls.style.position = 'relative';
+        for (const f of files) {
+          const item = document.createElement('a');
+          item.href = '/output/' + encodeURIComponent(f);
+          item.download = f;
+          item.textContent = f;
+          item.style.cssText = 'display:block;padding:8px 14px;color:var(--text-0);text-decoration:none;font-size:13px;white-space:nowrap';
+          item.addEventListener('mouseenter', () => item.style.background = 'var(--border)');
+          item.addEventListener('mouseleave', () => item.style.background = 'none');
+          dropdownEl.appendChild(item);
+        }
+        controls.appendChild(dropdownEl);
+        setTimeout(() => document.addEventListener('click', function close(e) {
+          if (!dropdownEl || !dropdownEl.contains(e.target)) { if (dropdownEl) dropdownEl.remove(); dropdownEl = null; document.removeEventListener('click', close); }
+        }), 10);
+      } catch (err) { alert('Failed: ' + err.message); }
+    });
+
+    checkOutputFiles();
+    const _outputPollId = setInterval(() => {
+      if (controls.style.display !== 'none' && controls.style.display !== '') return;
+      checkOutputFiles();
+    }, 15000);
+  })();
+  </script>
 </body>
 </html>

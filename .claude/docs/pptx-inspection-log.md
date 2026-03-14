@@ -5,7 +5,7 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 
 ### 패턴 번호 규칙 (Append-Only)
 
-- 새 패턴은 **마지막 번호 + 1**로 추가 (현재 마지막: #24)
+- 새 패턴은 **마지막 번호 + 1**로 추가 (현재 마지막: #27)
 - 기존 번호를 재배정하거나 중간에 삽입 금지 — 다른 문서(`presentation-flow.md`, `design-skill/SKILL.md` 등)에서 번호로 참조하므로 변경 시 참조 깨짐
 - 해결된 패턴도 번호를 유지하고 삭제하지 않음 (히스토리 보존)
 
@@ -134,6 +134,24 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 **근본 원인**: `actsAsText` 경로에서 `el.textContent`로만 추출 — `parseInlineFormatting()` 미호출로 색상/굵기 정보 손실
 **수정**: html2pptx.cjs — `actsAsText` 경로에서도 `parseInlineFormatting(el, baseRunOptions)` 호출하여 다중 스타일 보존
 
+### 25. CSS border-radius: 50% + border 조합 원형/도넛 차트 → PPTX에서 둥근 사각형으로 렌더링
+**증상**: `border-radius: 50%` + `border: Xpt solid color` 트릭으로 구현한 도넛 차트가 PPTX에서 원형이 아닌 둥근 사각형(roundRect)으로 변환됨
+**근본 원인**: html2pptx.cjs가 `border-radius: 50%`를 PptxGenJS `roundRect`의 `rectRadius`로 매핑 — 정원(circle)이 아닌 모서리 둥근 사각형이 됨. border trick(투명 border + 특정 면 색상)은 PPTX shape에 대응 불가
+**수정**: HTML — 도넛/원형 차트를 SVG→PNG 이미지로 생성하고 `<img>` 태그로 삽입. 중앙 텍스트는 absolute 포지션 오버레이
+**HTML 예방**: `border-radius: 50%` + `border` 조합으로 원형/도넛 차트 구현 금지 → PNG 이미지(`<img>`) + 중앙 텍스트 오버레이로 대체 [IL-25]
+
+### 26. 국기/복합 이모지 PPTX 미지원 (Flag Emoji → 텍스트 코드로 변환)
+**증상**: 🇺🇸, 🇰🇷 등 국기 이모지가 PPTX에서 "US", "KR" 등 regional indicator 문자로 표시됨
+**근본 원인**: PptxGenJS/PowerPoint가 국기 이모지(Regional Indicator Symbol 조합)를 단일 글리프로 렌더링하지 못함. 일반 이모지(🌐⚖️🏭)는 정상이지만 국기는 2개 regional indicator 조합이라 분리됨
+**수정**: HTML — 국기 이모지를 PNG 이미지로 대체 (`<img src="assets/flag-xx.png">`)
+**HTML 예방**: 국기 이모지 사용 금지 → PNG/SVG 이미지로 대체 [IL-26 / PF-12]
+
+### 27. 3열+ 그리드 카드의 대응 텍스트 오버플로 (CJK 텍스트 박스 밀림)
+**증상**: 3열 이상 grid 레이아웃에서 CJK 텍스트가 카드 하단 밖으로 밀려남
+**근본 원인**: PowerPoint의 CJK 글리프 폭이 Chrome보다 넓어 줄바꿈이 추가 발생 → 세로 공간 부족
+**수정**: 대응 텍스트 font-size 8pt → 7.5pt, line-height 1.5 → 1.4, padding 축소
+**HTML 예방**: 3열+ 그리드 내 CJK 텍스트: font-size ≤ 7.5pt, line-height ≤ 1.4, padding ≤ 8pt [IL-27]
+
 ### 24. 비-leaf DIV 내 형제 span 텍스트 누락 (배경 있는 자식 div + 인라인 span 조합)
 **증상**: `<div><div class="dot" style="background:..."></div><span>텍스트</span></div>` — dot shape은 보이나 span 텍스트 사라짐
 **근본 원인**: 부모 div는 자식 div가 있어 leaf 아님(패턴#11 제외); `<span>`은 textTags 미포함으로 어떤 처리 경로에도 해당 안 됨
@@ -186,3 +204,4 @@ MCP의 프로그래매틱 도구(`ppt_get_table_data`, `ppt_get_shape_info`, `pp
 | 2026-03-13 | coupang-investment-report | 14 | 패턴#17 최종 수정 — tableYMin을 confirmed columns에서만 계산 + Phase 3 비테이블 비활성(#20) | 근본 원인: 배지 shape이 tableYMin을 오염 → hero 요소가 테이블 범위 안으로 포함되어 스냅됨. Phase 3이 비테이블 슬라이드에서 제목을 full width로 확장(#20). `ppt_list_shapes`로 슬라이드 5/7/10 좌표 검증 완료 |
 | 2026-03-14 | samsung-investment-report | 18 | 패턴#21,#22,#23 수정 후 통과 | HEX 대문자(#21), margin 배열 순서(#22), actsAsText parseInlineFormatting 복원(#23). COM 300DPI Export로 슬라이드 1,6,16 시각 확인 — 텍스트 가시성/정렬 정상. 슬라이드1 CONTRAST ERROR 5건은 배경이미지+overlay 패턴의 false positive (표지 텍스트 정상 표시) |
 | 2026-03-14 | samsung-investment-report | 18 | 패턴#24 수정 후 통과 | 슬라이드6 도넛 차트 범례 span→p 변경. COM 300DPI Export로 슬라이드6 시각 확인 — 범례 텍스트 3개 정상 표시 |
+| 2026-03-14 | lg-hynix-investment-strategy | 15 | 패턴#25,#26,#27 수정 후 통과 | 슬라이드5 도넛→PNG img(#25), 슬라이드10 국기emoji→PNG img(#26), 슬라이드13 3열 CJK 텍스트 축소(#27). MCP 프리뷰로 시각 확인 — 도넛 원형/국기/텍스트 정상 |

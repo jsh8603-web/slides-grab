@@ -2,6 +2,13 @@
 
 Step 2 (HTML 생성) 시 이 파일만 참조. 전체 히스토리는 `pptx-inspection-log.md` 참조.
 
+## 수정 기록 의무 (프로세스 진행 여부 무관)
+
+HTML/PPTX 레이아웃 에러 수정 시 — 워크플로우 중이든, 즉석 버그 수정이든 — 완료 보고 전 반드시:
+1. `pptx-inspection-log.md`에 패턴 추가/갱신 (마지막 번호 + 1)
+2. 이 파일(`html-prevention-rules.md`)에 금지/필수 규칙 + 매핑 테이블 추가
+3. 자동 감지 가능하면 `preflight-html.js`(PF) 또는 `validate-pptx.js`(VP) 규칙 추가
+
 ## 금지 (ERROR — 변환 실패 또는 텍스트 불가시)
 
 - `linear-gradient` + 흰색/밝은 텍스트 → 단색 `background` 대체 [IL-14,16 / PF-01]
@@ -9,6 +16,8 @@ Step 2 (HTML 생성) 시 이 파일만 참조. 전체 히스토리는 `pptx-insp
 - 비-body DIV에 `background: url()` → body만 허용 [IL-04 / PF-05]
 - `rgba()` 반투명 배경 + 흰색 텍스트 → PPTX에서 예측 불가 [IL-14]
 - 배경 있는 자식 div와 형제 `<span>` 텍스트 조합 → `<span>` 대신 `<p>` 사용 [IL-24]
+- `border-radius: 50%` + `border` 조합으로 원형/도넛 차트 구현 금지 → PNG 이미지(`<img>`) + 중앙 텍스트 오버레이 [IL-25]
+- 국기 이모지(🇺🇸🇰🇷 등) 사용 금지 → PNG/SVG 이미지로 대체 (`<img src="assets/flag-xx.png">`) [IL-26 / PF-12]
 
 ## 필수 (WARN — 레이아웃 깨짐 가능)
 
@@ -16,6 +25,7 @@ Step 2 (HTML 생성) 시 이 파일만 참조. 전체 히스토리는 `pptx-insp
 - flex 컨테이너(display:flex 부모)에 `overflow: hidden` [IL-13 / PF-06]
 - 이미지 div에 `min-width: 0` (intrinsic size 방지) [IL-13]
 - 카드 내 CJK 텍스트 ≤ 11pt, 카드 폭 30% 여유 [IL-06 / PF-08]
+- 3열+ 그리드 내 CJK 텍스트: font-size ≤ 7.5pt, line-height ≤ 1.4, padding ≤ 8pt [IL-27]
 - 50% 분할 한글 제목 ≤ 14pt [IL-18]
 - 4+ 카드 그리드: body padding ≤ 32pt, gap ≤ 10pt [IL-10]
 - 5+ 리스트: gap ≤ 7pt, 아이템 padding ≤ 10pt [IL-10]
@@ -58,6 +68,9 @@ body padding(상+하) + 제목(~30pt) + 메시지(~18pt)
 | IL-22 | — | — | html2pptx 내부 (margin 배열 순서) |
 | IL-23 | — | — | html2pptx 내부 (actsAsText parseInlineFormatting) |
 | IL-24 | — | — | HTML 작성 규칙 (비-leaf div 내 span → p 변경) |
+| IL-25 | — | — | HTML 작성 규칙 (border-radius:50% + border 도넛 금지) |
+| IL-26 | PF-12 | — | 정적 regex (국기 이모지 감지) |
+| IL-27 | — | — | HTML 작성 규칙 (3열+ 그리드 CJK 텍스트 크기) |
 
 ## 변환기 내부 수정 이력 (HTML 측 영향 없음)
 

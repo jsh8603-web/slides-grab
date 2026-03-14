@@ -204,28 +204,35 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
    - `❌ ERROR` 있으면 → HTML 수정 → 재변환 (최대 2회)
    - `⚠️ WARN` 만 있으면 → 맥락 판단하여 수정 여부 결정
 
-3. **COM 300DPI 고해상도 프리뷰** (시각 품질 확인):
-   PowerPoint COM으로 4000×2250px PNG를 생성하여 실제 렌더링 결과를 확인한다.
-   MCP `ppt_get_slide_preview`(~960px)는 사용하지 않는다 — COM Export가 상위 호환.
+3. **HTML ↔ PPTX 비교 검증** (변환 충실도 확인):
+   HTML 원본의 Playwright 스크린샷과 PPTX COM 프리뷰를 나란히 비교하여, 변환 과정에서 시각적 차이가 발생한 슬라이드를 감지한다.
+
    ```bash
-   # 전체 슬라이드
+   # 3-a. HTML 스크린샷 생성 (Playwright, 1600×900)
+   node scripts/screenshot-html.mjs --slides-dir slides/프레젠테이션명 --output slides/프레젠테이션명/html-preview
+
+   # 3-b. COM 300DPI PPTX 프리뷰 생성 (4000×2250)
    powershell -ExecutionPolicy Bypass -File scripts/export-slides-png.ps1 \
      -PptxPath "slides/프레젠테이션명/프레젠테이션명.pptx" \
      -OutputDir "slides/프레젠테이션명/preview"
+   ```
 
-   # 특정 슬라이드만
+   **비교 절차**: 각 슬라이드에 대해 `html-preview/slide-{NN}.png`와 `preview/slide-{NN}.png`를 `Read`로 열어 나란히 확인:
+   - **형태 변형**: 원형→사각형, 그래프 왜곡, CSS 효과 누락 (gradient, shadow, border-radius)
+   - **텍스트 잘림/이동**: 오버플로, 줄바꿈 차이, 위치 이동
+   - **색상 차이**: 배경/전경 대비, 투명도 손실
+   - **이미지 깨짐**: placeholder 표시, 비율 왜곡
+   - **테이블/차트**: 데이터 누락, 셀 정렬, 빈 셀
+
+   **차이 발견 시**: HTML을 html2pptx 호환 방식으로 수정 (CSS 트릭 → 단순 구조 대체). 수정 후 재변환+재비교 (최대 2회)
+
+   특정 슬라이드만 비교할 때:
+   ```bash
+   node scripts/screenshot-html.mjs --slides-dir slides/프레젠테이션명 --output slides/프레젠테이션명/html-preview --slides "1,3,5"
    powershell -ExecutionPolicy Bypass -File scripts/export-slides-png.ps1 \
      -PptxPath "slides/프레젠테이션명/프레젠테이션명.pptx" \
-     -OutputDir "slides/프레젠테이션명/preview" \
-     -Slides "1,3,5"
+     -OutputDir "slides/프레젠테이션명/preview" -Slides "1,3,5"
    ```
-   생성된 PNG를 `Read` 도구로 열어 시각 확인:
-   - 테이블 데이터 누락/공란
-   - 이모지/특수문자 렌더링 (□ 깨짐)
-   - 이미지-텍스트 대비 가독성
-   - 전체적인 레이아웃 느낌
-   - 폰트 렌더링 품질
-   - 미세 정렬 오류 (3-4pt 차이도 4000px에서 감지 가능)
 
 4. **이슈 발견 시**: HTML 수정 → 재변환 → 재검증 (최대 2회)
 5. **수정 내용을 `.claude/docs/pptx-inspection-log.md`에 기록**
@@ -236,7 +243,7 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
 - **Preflight**: ERROR 0건
 - **변환 대비 검사**: `CONTRAST ERROR` 0건
 - **XML Validator**: overflow/alignment/table ERROR 0건 (VP-01~VP-07)
-- **COM 고해상도 프리뷰**: 시각적 이상 없음
+- **HTML↔PPTX 비교**: 형태 변형·텍스트 잘림·색상 차이 없음
 - 2회 수정 후에도 해결 불가 이슈는 `pptx-inspection-log.md`에 기록하고 사용자에게 보고
 
 ### 적용 범위 (Step 2.5)
@@ -261,16 +268,18 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
 # 1. 기본 포트 확인
 curl -s http://localhost:3456/ > /dev/null 2>&1
 
-# 2-a. 포트 비어있으면 기본 포트 사용 (GEMINI_API_KEY 필수 전달)
-GEMINI_API_KEY=$GEMINI_API_KEY node scripts/editor-server.js --slides-dir slides/프레젠테이션명 --port 3456 &
+# 2-a. 포트 비어있으면 기본 포트 사용 (GEMINI_API_KEY 필수 전달, --tunnel 추가)
+GEMINI_API_KEY=$GEMINI_API_KEY node scripts/editor-server.js --slides-dir slides/프레젠테이션명 --port 3456 --tunnel &
 
 # 2-b. 포트 사용 중이면 다음 포트로 실행
-GEMINI_API_KEY=$GEMINI_API_KEY node scripts/editor-server.js --slides-dir slides/프레젠테이션명 --port 3457 &
+GEMINI_API_KEY=$GEMINI_API_KEY node scripts/editor-server.js --slides-dir slides/프레젠테이션명 --port 3457 --tunnel &
 
 # 3. 서버 시작 대기 후 브라우저 자동 오픈 (필수)
 sleep 2
 start http://localhost:{포트}/ 2>/dev/null || powershell -Command "Start-Process 'http://localhost:{포트}/'" 2>/dev/null
 ```
+
+**`--tunnel` 필수 추가**: cloudflared 터널이 자동으로 열리고 콘솔에 외부 접속 URL이 출력된다.
 
 ### 에디터 실행 절차 (필수)
 
@@ -283,18 +292,21 @@ start http://localhost:{포트}/ 2>/dev/null || powershell -Command "Start-Proce
 
 ### 안내 메시지
 
-실행 후 사용자에게 실제 할당된 포트 번호로 안내:
+실행 후 사용자에게 실제 할당된 포트 번호 + 터널 URL로 안내:
 
 ```
 슬라이드가 완성됐습니다! 비주얼 에디터가 브라우저에서 열렸습니다.
 
-http://localhost:{포트}/ 에서 확인하세요.
+로컬: http://localhost:{포트}/
+외부: {터널URL} (모바일/외부 접속용)
 
 에디터에서 슬라이드를 클릭하면 직접 텍스트를 수정할 수 있고,
 영역을 드래그하면 AI에게 해당 부분 수정을 요청할 수 있습니다.
 
 수정이 끝나면 알려주세요!
 ```
+
+**터널 URL 확인**: 에디터 서버 시작 로그에서 `Tunnel:` 줄의 URL을 읽어 안내한다.
 
 ## Step 4 — 수정 반복
 
@@ -326,28 +338,21 @@ http://localhost:{포트}/ 에서 확인하세요.
 이 기록은 `html-prevention-rules.md` 업데이트의 근거가 된다. 새 패턴 등록 후 예방 규칙도 함께 갱신한다.
 
 "없어" / "완료" / "괜찮아" 등 수정 없음 의사 표현 시:
-1. **에디터 서버 종료** (필수): 에디터 포트의 프로세스를 종료한다.
-   ```bash
-   # Windows
-   netstat -ano | grep "LISTENING" | grep ":{포트}" → PID 확인 → taskkill //PID {pid} //F
-   # Unix
-   lsof -ti :{포트} | xargs kill
-   ```
+1. **에디터 서버는 유지** — Step 6/7 산출물 생성 + 외부 다운로드를 위해 종료하지 않는다.
 2. **Step 5 선택형 질문**을 한다.
 
 **절대 Step 5를 건너뛰고 변환을 시작하지 않는다.** 사용자가 명시적으로 형식을 선택할 때까지 대기.
-**에디터 서버를 종료하지 않고 다음 단계로 넘어가지 않는다.** 포트 누적을 방지.
 
 ## Step 5 — 출력 형식 선택 (필수 — 건너뛰기 금지)
 
-### 에디터 자동 종료 (Step 5 진입 시)
+### 에디터 종료 시점
 
-Step 5에 진입하면 **먼저** 에디터 서버가 실행 중인지 확인하고, 실행 중이면 종료한다:
+에디터 서버는 Step 6/7 산출물 생성이 완료된 후 종료한다 (외부 `/output` 다운로드 지원을 위해).
+Step 5에서는 종료하지 않는다.
 ```bash
-# Windows — 포트 3456~3460 범위 확인
+# Step 6/7 완료 후 종료 — Windows, 포트 3456~3460 범위
 netstat -ano | grep "LISTENING" | grep -E ":(3456|3457|3458|3459|3460)" | awk '{print $5}' | while read pid; do taskkill //PID $pid //F 2>/dev/null; done
 ```
-Step 4에서 이미 종료했더라도 이중 확인. 포트 누적 방지.
 
 수정 완료 후 **반드시** 아래 번호 선택형으로 질문한다. 임의로 형식을 결정하거나 자동 진행 금지.
 
@@ -421,19 +426,18 @@ node scripts/convert-native.mjs --slides-dir slides/프레젠테이션명 --outp
    - VP-05: 네이티브 테이블 빈 셀 / VP-06: 테이블 데이터 50%+ 공란 / VP-07: Shape 그리드 빈 셀 → 변환 로직 또는 원본 데이터 문제
    - 구조적 검사는 XML validator가 담당
 
-2. **COM 300DPI 고해상도 시각 확인**:
-   PowerPoint COM으로 4000×2250px PNG를 생성하여 실제 렌더링 결과 확인.
-   **생략 조건**: Step 2.5에서 COM 프리뷰를 이미 수행했고, Step 4에서 HTML 수정이 전혀 없었으면 생략 가능 (동일 PPTX이므로 결과 동일).
+2. **HTML ↔ PPTX 비교 검증**:
+   **생략 조건**: Step 2.5에서 비교를 이미 수행했고, Step 4에서 HTML 수정이 전혀 없었으면 생략 가능 (동일 PPTX이므로 결과 동일).
+   수정이 있었으면 수정된 슬라이드만 비교:
    ```bash
+   node scripts/screenshot-html.mjs --slides-dir slides/프레젠테이션명 --output slides/프레젠테이션명/html-preview --slides "수정된번호"
    powershell -ExecutionPolicy Bypass -File scripts/export-slides-png.ps1 \
      -PptxPath "slides/프레젠테이션명/프레젠테이션명.pptx" \
-     -OutputDir "slides/프레젠테이션명/preview"
+     -OutputDir "slides/프레젠테이션명/preview" -Slides "수정된번호"
    ```
-   생성된 PNG를 `Read` 도구로 열어 확인:
-   - 이모지/특수문자 렌더링 (□ 깨짐)
-   - 이미지-텍스트 대비 가독성
-   - 전체적인 레이아웃 느낌
-   - 폰트 렌더링 품질
+   `html-preview/` vs `preview/` PNG를 `Read`로 열어 비교:
+   - 형태 변형 (원형→사각형, 그래프 왜곡)
+   - 텍스트 잘림/이동, 색상 차이
    - 테이블 데이터 누락/공란
    - 미세 정렬 오류 (3-4pt도 4000px에서 감지 가능)
 
@@ -445,15 +449,17 @@ node scripts/convert-native.mjs --slides-dir slides/프레젠테이션명 --outp
    - 발견된 이슈와 수정 내용을 로그에 추가
    - 검사 통과 시에도 "통과" 기록 남기기
 
-5. **안내**
+5. **안내** (에디터 서버가 `--tunnel`로 실행 중이면 외부 다운로드 링크도 포함)
    ```
    PPTX 파일 검사가 완료됐습니다!
 
    파일 위치: slides/프레젠테이션명/프레젠테이션명.pptx
+   외부 다운로드: {터널URL}/output/프레젠테이션명.pptx
 
    이 파일을 더블클릭하면 PowerPoint에서 열립니다.
    텍스트, 도형, 색상 등을 자유롭게 수정할 수 있습니다.
    ```
+   **터널 URL 확인**: 에디터 서버 실행 시 콘솔에 출력된 `Tunnel:` URL 사용. 에디터가 종료됐으면 터널도 종료 상태이므로 외부 링크 생략.
 
 ## Step 7 — PDF 생성
 
@@ -461,11 +467,12 @@ node scripts/convert-native.mjs --slides-dir slides/프레젠테이션명 --outp
 slides-grab pdf --slides-dir slides/프레젠테이션명 --output "slides/프레젠테이션명/프레젠테이션명.pdf"
 ```
 
-변환 완료 후 안내:
+변환 완료 후 안내 (에디터 서버가 `--tunnel`로 실행 중이면 외부 링크 포함):
 ```
 PDF 파일이 만들어졌습니다!
 
 파일 위치: slides/프레젠테이션명/프레젠테이션명.pdf
+외부 다운로드: {터널URL}/output/프레젠테이션명.pdf
 ```
 
 ## 에러 발생 시 안내

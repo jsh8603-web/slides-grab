@@ -70,6 +70,53 @@ drawLayer.addEventListener('click', (event) => {
 window.addEventListener('mousemove', moveDrawing);
 window.addEventListener('mouseup', endDrawing);
 
+// Touch support for BBox drawing + Select
+let _touchStartPos = null;
+function touchToMouse(touchEvent) {
+  const touch = touchEvent.touches[0] || touchEvent.changedTouches[0];
+  if (!touch) return null;
+  return { clientX: touch.clientX, clientY: touch.clientY, button: 0, preventDefault: () => touchEvent.preventDefault() };
+}
+drawLayer.addEventListener('touchstart', (e) => {
+  // Allow pinch-zoom (2+ fingers)
+  if (e.touches.length >= 2) return;
+  const fake = touchToMouse(e);
+  if (!fake) return;
+  _touchStartPos = { x: fake.clientX, y: fake.clientY };
+  if (state.toolMode === TOOL_MODE_DRAW) {
+    e.preventDefault();
+    startDrawing(fake);
+  }
+  // SELECT mode: don't preventDefault so browser can still handle gestures
+}, { passive: false });
+window.addEventListener('touchmove', (e) => {
+  if (e.touches.length >= 2) return; // allow pinch-zoom
+  const fake = touchToMouse(e);
+  if (fake && state.drawing) { e.preventDefault(); moveDrawing(fake); }
+}, { passive: false });
+window.addEventListener('touchend', (e) => {
+  const fake = touchToMouse(e);
+  if (!fake) return;
+  if (state.drawing) {
+    endDrawing(fake);
+  } else if (state.toolMode === TOOL_MODE_SELECT && _touchStartPos) {
+    // Tap detection: if finger didn't move much, treat as select click
+    const dx = fake.clientX - _touchStartPos.x;
+    const dy = fake.clientY - _touchStartPos.y;
+    if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+      const target = getSelectableTargetAt(fake.clientX, fake.clientY);
+      if (target) {
+        const xpath = getXPath(target);
+        setSelectedObjectXPath(xpath, `Object selected on ${currentSlideFile()}.`);
+      } else {
+        setSelectedObjectXPath('', 'No selectable object at this point.');
+      }
+    }
+  }
+  _touchStartPos = null;
+});
+window.addEventListener('touchcancel', () => { _touchStartPos = null; });
+
 // Send
 btnSend.addEventListener('click', applyChanges);
 

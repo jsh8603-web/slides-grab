@@ -69,6 +69,7 @@ function isBrightColor(colorStr) {
 // ── CJK detection ─────────────────────────────────────────────────────────────
 
 const CJK_RE = /[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/;
+const FLAG_EMOJI_RE = /[\u{1F1E6}-\u{1F1FF}]{2}/gu;
 
 // ── Static checks (Phase 1) ──────────────────────────────────────────────────
 
@@ -178,6 +179,15 @@ function checkPF07(html, file) {
   return issues;
 }
 
+function checkPF12(html, file) {
+  const issues = [];
+  for (const m of html.matchAll(FLAG_EMOJI_RE)) {
+    issues.push(fmtError(file, 'PF-12',
+      `Flag emoji "${m[0]}" found — PowerPoint renders as text codes. Use <img> PNG instead [IL-26]`));
+  }
+  return issues;
+}
+
 function runStaticChecks(html, file) {
   return [
     ...checkPF01(html, file),
@@ -186,6 +196,7 @@ function runStaticChecks(html, file) {
     ...checkPF05(html, file),
     ...checkPF06(html, file),
     ...checkPF07(html, file),
+    ...checkPF12(html, file),
   ];
 }
 
