@@ -166,9 +166,9 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 
 | Phase | 스크립트 | 규칙 | 속도 | 감지 대상 |
 |-------|---------|------|------|----------|
-| 1 | preflight-html.js | PF-01~PF-11 | ~1초 (정적), ~30초 (--full) | gradient+흰텍스트, box-sizing 누락, overflow, CJK 폰트, 크로스슬라이드 일관성 |
+| 1 | preflight-html.js | PF-01~PF-17 | ~1초 (정적), ~30초 (--full) | gradient+흰텍스트, box-sizing 누락, overflow, CJK 폰트, 도넛차트, span누락, 미지원transform, text-shadow, 크로스슬라이드 일관성 |
 | 2 | html2pptx.cjs (변환 중) | WCAG 대비 | 슬라이드당 ~0.8초 | 텍스트-배경 대비 < 4.5:1 (WARN), < 1.5:1 (ERROR) |
-| 3 | validate-pptx.js | VP-01~VP-07 | ~2초 | 경계 초과, 컬럼 정렬, 빈 텍스트, 대비, 테이블 빈셀, 그리드 빈셀 |
+| 3 | validate-pptx.js | VP-01~VP-08 | ~2초 | 경계 초과, 컬럼 정렬, 빈 텍스트, 대비, 빈 카드, 테이블 빈셀, 그리드 빈셀 |
 
 - `--full` 플래그: Phase 1 후 Playwright 동적 검증 추가 (Phase 1.5, PF-03 overflow + PF-08 CJK)
 - `--skip-preflight`: Phase 1/1.5 건너뜀
@@ -202,6 +202,6 @@ MCP의 프로그래매틱 도구(`ppt_get_table_data`, `ppt_get_shape_info`, `pp
 | 날짜 | 프레젠테이션 | 슬라이드 수 | 결과 | 비고 |
 |------|-------------|-----------|------|------|
 | 2026-03-13 | coupang-investment-report | 14 | 패턴#17 최종 수정 — tableYMin을 confirmed columns에서만 계산 + Phase 3 비테이블 비활성(#20) | 근본 원인: 배지 shape이 tableYMin을 오염 → hero 요소가 테이블 범위 안으로 포함되어 스냅됨. Phase 3이 비테이블 슬라이드에서 제목을 full width로 확장(#20). `ppt_list_shapes`로 슬라이드 5/7/10 좌표 검증 완료 |
-| 2026-03-14 | samsung-investment-report | 18 | 패턴#21,#22,#23 수정 후 통과 | HEX 대문자(#21), margin 배열 순서(#22), actsAsText parseInlineFormatting 복원(#23). COM 300DPI Export로 슬라이드 1,6,16 시각 확인 — 텍스트 가시성/정렬 정상. 슬라이드1 CONTRAST ERROR 5건은 배경이미지+overlay 패턴의 false positive (표지 텍스트 정상 표시) |
-| 2026-03-14 | samsung-investment-report | 18 | 패턴#24 수정 후 통과 | 슬라이드6 도넛 차트 범례 span→p 변경. COM 300DPI Export로 슬라이드6 시각 확인 — 범례 텍스트 3개 정상 표시 |
-| 2026-03-14 | lg-hynix-investment-strategy | 15 | 패턴#25,#26,#27 수정 후 통과 | 슬라이드5 도넛→PNG img(#25), 슬라이드10 국기emoji→PNG img(#26), 슬라이드13 3열 CJK 텍스트 축소(#27). MCP 프리뷰로 시각 확인 — 도넛 원형/국기/텍스트 정상 |
+| 2026-03-14 (1차) | samsung-investment-report | 18 | 패턴#21,#22,#23 수정 후 통과 | HEX 대문자(#21), margin 배열 순서(#22), actsAsText parseInlineFormatting 복원(#23). COM 300DPI Export로 슬라이드 1,6,16 시각 확인 — 텍스트 가시성/정렬 정상. 슬라이드1 CONTRAST ERROR 5건은 배경이미지+overlay 패턴의 false positive (표지 텍스트 정상 표시) |
+| 2026-03-14 (2차) | samsung-investment-report | 18 | 패턴#24 수정 후 통과 | 슬라이드6 도넛 차트 범례 span→p 변경. COM 300DPI Export로 슬라이드6 시각 확인 — 범례 텍스트 3개 정상 표시 |
+| 2026-03-14 (3차) | lg-hynix-investment-strategy | 15 | 패턴#25,#26,#27 수정 후 통과 | 슬라이드5 도넛→PNG img(#25), 슬라이드10 국기emoji→PNG img(#26), 슬라이드13 3열 CJK 텍스트 축소(#27). COM 300DPI Export로 시각 확인 — 도넛 원형/국기/텍스트 정상 |

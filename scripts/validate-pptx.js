@@ -558,6 +558,33 @@ function checkShapeGridEmptyCells(shapes, slideNum) {
   return issues;
 }
 
+/**
+ * VP-08: Detect shapes with fill but no text content — possible empty card.
+ * Only flags shapes with significant area (> 50pt × 50pt = 635000 × 635000 EMU).
+ */
+function checkFilledEmptyShapes(shapes, slideNum) {
+  const issues = [];
+  const MIN_AREA = 635000 * 635000; // ~50pt × 50pt in EMU²
+
+  for (const s of shapes) {
+    if (!s.fillColor) continue;
+    const area = s.w * s.h;
+    if (area < MIN_AREA) continue;
+
+    const hasText = s.textRuns.length > 0 && s.textRuns.some(r => r.text.trim() !== '');
+    if (!hasText) {
+      const name = s.name || 'unnamed';
+      issues.push({
+        level: 'WARN',
+        code: 'VP-08',
+        slide: slideNum,
+        message: `Shape "${name}" (${emuToInches(s.w)}" × ${emuToInches(s.h)}") has fill #${s.fillColor} but no text — possible empty card`,
+      });
+    }
+  }
+  return issues;
+}
+
 function checkContrast(shapes, slideNum) {
   const issues = [];
   for (const s of shapes) {
@@ -688,6 +715,7 @@ export async function validatePptx(pptxPath) {
         ...checkColumnAlignment(shapes, slideNum),
         ...checkEmptyText(shapes, slideNum),
         ...checkContrast(shapes, slideNum),
+        ...checkFilledEmptyShapes(shapes, slideNum),
         ...checkTableEmptyCells(tables, slideNum),
         ...checkTableConsistency(tables, slideNum),
         ...checkShapeGridEmptyCells(shapes, slideNum),

@@ -188,6 +188,112 @@ function checkPF12(html, file) {
   return issues;
 }
 
+function checkPF13(html, file) {
+  const issues = [];
+  // IL-25: border-radius: 50% + border combo (donut/circle chart trick)
+  const styleRe = /style="([^"]*)"/gi;
+  let m;
+  while ((m = styleRe.exec(html)) !== null) {
+    const style = m[1];
+    if (/border-radius\s*:\s*50%/i.test(style) && /(?:^|;\s*)border\s*:/i.test(style)) {
+      issues.push(fmtError(file, 'PF-13',
+        'border-radius:50% + border combo — renders as roundRect in PPTX, use PNG image instead [IL-25]'));
+      return issues; // one per file
+    }
+  }
+  return issues;
+}
+
+function checkPF14(html, file) {
+  const issues = [];
+  // IL-24: <div> with background child div followed by direct sibling <span>
+  // Problematic: <div><div style="background:..."></div><span>text</span></div>
+  // Safe: <div><div style="background:..."></div><p><span>text</span></p></div>
+  // Detect: </div> followed by whitespace then <span> (not inside <p>)
+  const patternRe = /<div\s[^>]*style="[^"]*background[^"]*"[^>]*>\s*<\/div>\s*<span[\s>]/gi;
+  if (patternRe.test(html)) {
+    issues.push(fmtWarn(file, 'PF-14',
+      'Background div followed by sibling <span> — span text will be lost in PPTX, use <p> instead [IL-24]'));
+  }
+  return issues;
+}
+
+function checkPF15(html, file) {
+  const issues = [];
+  // IL-27: 3+ column CSS grid with CJK text > 7.5pt
+  const gridRe = /style="([^"]*grid-template-columns\s*:[^"]*)"/gi;
+  let m;
+  while ((m = gridRe.exec(html)) !== null) {
+    const style = m[1];
+    // Count columns: split grid-template-columns value by whitespace tokens
+    const colMatch = style.match(/grid-template-columns\s*:\s*([^;"]+)/i);
+    if (!colMatch) continue;
+    const colTokens = colMatch[1].trim().split(/\s+/).filter(t => t && !t.startsWith('/'));
+    if (colTokens.length < 3) continue;
+
+    // Check surrounding context (~2000 chars) for CJK text with font-size > 7.5pt
+    const afterIdx = m.index;
+    const region = html.substring(afterIdx, afterIdx + 3000);
+    if (!CJK_RE.test(region)) continue;
+
+    // Look for font-size declarations in this region
+    const fontSizeRe = /font-size\s*:\s*([\d.]+)\s*pt/gi;
+    let fs;
+    while ((fs = fontSizeRe.exec(region)) !== null) {
+      const size = parseFloat(fs[1]);
+      if (size > 7.5 && CJK_RE.test(region.substring(fs.index, fs.index + 500))) {
+        issues.push(fmtWarn(file, 'PF-15',
+          `${colTokens.length}-column grid with CJK text at ${size}pt (>7.5pt) — may overflow in PPTX [IL-27]`));
+        return issues; // one per file
+      }
+    }
+  }
+  return issues;
+}
+
+function checkPF16(html, file) {
+  const issues = [];
+  // IL-07: background image on body without text-shadow on text elements
+  const bodyBgRe = /<body[^>]*style="[^"]*background[^"]*url\s*\(/i;
+  if (!bodyBgRe.test(html)) return issues;
+
+  // Body has background image — check if text elements have text-shadow
+  // Look for text-bearing elements (h1-h6, p, span, div with text) without text-shadow
+  const textElRe = /<(h[1-6]|p)\s[^>]*style="([^"]*)"/gi;
+  let m;
+  let hasTextWithoutShadow = false;
+  while ((m = textElRe.exec(html)) !== null) {
+    const style = m[2];
+    if (!/text-shadow/i.test(style)) {
+      hasTextWithoutShadow = true;
+      break;
+    }
+  }
+  if (hasTextWithoutShadow) {
+    issues.push(fmtWarn(file, 'PF-16',
+      'Background image slide has text elements without text-shadow — readability issue in PPTX [IL-07]'));
+  }
+  return issues;
+}
+
+function checkPF17(html, file) {
+  const issues = [];
+  // Unsupported CSS transforms (scale, skew, perspective — only rotate is supported)
+  const transformRe = /transform\s*:\s*([^;"]+)/gi;
+  let m;
+  while ((m = transformRe.exec(html)) !== null) {
+    const val = m[1];
+    // Check for unsupported transform functions (translate is OK — used for centering)
+    if (/(?:scale|skew|perspective|matrix)\s*\(/i.test(val)) {
+      const fnMatch = val.match(/(scale|skew|perspective|matrix)\s*\(/i);
+      issues.push(fmtWarn(file, 'PF-17',
+        `Unsupported CSS transform "${fnMatch[1]}()" — only rotate is supported in PPTX conversion`));
+      return issues; // one per file
+    }
+  }
+  return issues;
+}
+
 function runStaticChecks(html, file) {
   return [
     ...checkPF01(html, file),
@@ -197,6 +303,11 @@ function runStaticChecks(html, file) {
     ...checkPF06(html, file),
     ...checkPF07(html, file),
     ...checkPF12(html, file),
+    ...checkPF13(html, file),
+    ...checkPF14(html, file),
+    ...checkPF15(html, file),
+    ...checkPF16(html, file),
+    ...checkPF17(html, file),
   ];
 }
 
@@ -226,21 +337,27 @@ async function runPlaywrightChecks(slidesDir, files) {
             'content height exceeds 405pt (body overflow) \u2014 will be clipped in PPTX'));
         }
 
-        // PF-08: CJK text in card div with font-size > 11pt (14.67px)
+        // PF-08: CJK text in any element with background and font-size > 11pt (14.67px)
+        // Expanded scope: scans all elements with non-transparent computed background
         const cjkIssue = await page.evaluate(() => {
           const CJK = /[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/;
-          const divs = document.querySelectorAll('div[style*="background"]');
-          for (const div of divs) {
-            const text = div.textContent || '';
+          const allEls = document.querySelectorAll('*');
+          for (const el of allEls) {
+            const cs = getComputedStyle(el);
+            const bg = cs.backgroundColor;
+            // Skip elements without a visible background
+            if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') continue;
+            // Skip body element (full slide background, not a card)
+            if (el.tagName === 'BODY') continue;
+            const text = el.textContent || '';
             if (!CJK.test(text)) continue;
-            const cs = getComputedStyle(div);
             const fontSize = parseFloat(cs.fontSize);
             // 11pt = 14.67px
             if (fontSize > 14.67) {
               return { found: true, size: Math.round(fontSize * 100) / 100 };
             }
             // Also check child elements
-            for (const child of div.querySelectorAll('*')) {
+            for (const child of el.querySelectorAll('*')) {
               const ccs = getComputedStyle(child);
               const cfs = parseFloat(ccs.fontSize);
               if (cfs > 14.67 && CJK.test(child.textContent || '')) {
