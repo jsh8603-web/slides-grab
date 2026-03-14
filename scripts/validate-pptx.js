@@ -175,6 +175,75 @@ function extractShapes(slideXml) {
   return shapes;
 }
 
+// ── Table extraction from slide XML ─────────────────────────────────────────
+
+/**
+ * Extract table info from <p:graphicFrame> blocks containing <a:tbl>.
+ * Returns array of { name, x, y, w, h, rows: [[{text, merged}]] }
+ */
+function extractTables(slideXml) {
+  const tables = [];
+
+  const gfBlocks = matchAll(slideXml, '<p:graphicFrame\\b[^>]*>([\\s\\S]*?)</p:graphicFrame>');
+
+  for (const block of gfBlocks) {
+    const inner = block[1];
+
+    // Must contain a table
+    if (!/<a:tbl\b/i.test(inner)) continue;
+
+    const table = { name: '', x: 0, y: 0, w: 0, h: 0, rows: [] };
+
+    // Name
+    const cNvPr = inner.match(/<p:cNvPr[^>]*>/i);
+    if (cNvPr) {
+      table.name = attr(cNvPr[0], 'name') || '';
+    }
+
+    // Position
+    const off = inner.match(/<a:off[^>]*>/i);
+    if (off) {
+      table.x = parseInt(attr(off[0], 'x') || '0', 10);
+      table.y = parseInt(attr(off[0], 'y') || '0', 10);
+    }
+    const ext = inner.match(/<a:ext[^>]*>/i);
+    if (ext) {
+      table.w = parseInt(attr(ext[0], 'cx') || '0', 10);
+      table.h = parseInt(attr(ext[0], 'cy') || '0', 10);
+    }
+
+    // Extract rows: <a:tr>...</a:tr>
+    const rowBlocks = matchAll(inner, '<a:tr\\b[^>]*>([\\s\\S]*?)</a:tr>');
+    for (const rowBlock of rowBlocks) {
+      const rowInner = rowBlock[1];
+      const cells = [];
+
+      // Extract cells: <a:tc>...</a:tc>
+      const cellBlocks = matchAll(rowInner, '<a:tc\\b([^>]*)>([\\s\\S]*?)</a:tc>');
+      for (const cellBlock of cellBlocks) {
+        const cellAttrs = cellBlock[1];
+        const cellInner = cellBlock[2];
+
+        // Check for merge spans (hMerge, vMerge, gridSpan, rowSpan)
+        const hMerge = /hMerge\s*=\s*"1"/i.test(cellAttrs);
+        const vMerge = /vMerge\s*=\s*"1"/i.test(cellAttrs);
+
+        // Extract all text content from <a:t> tags
+        const textParts = matchAll(cellInner, '<a:t>([\\s\\S]*?)<\\/a:t>');
+        const text = textParts.map((t) => t[1]).join('').trim();
+
+        cells.push({ text, merged: hMerge || vMerge });
+      }
+
+      table.rows.push(cells);
+    }
+
+    tables.push(table);
+  }
+
+  return tables;
+}
+
 // ── Validation checks ──────────────────────────────────────────────────────
 
 function checkOverflow(shapes, slideW, slideH, slideNum) {
@@ -315,6 +384,180 @@ function checkEmptyText(shapes, slideNum) {
   return issues;
 }
 
+function checkTableEmptyCells(tables, slideNum) {
+  const issues = [];
+  for (const t of tables) {
+    if (t.rows.length < 2) continue; // Need header + at least 1 data row
+
+    const colCount = t.rows[0].length;
+
+    // Data rows (skip header = row 0)
+    for (let rowIdx = 1; rowIdx < t.rows.length; rowIdx++) {
+      const row = t.rows[rowIdx];
+      for (let colIdx = 0; colIdx < row.length; colIdx++) {
+        const cell = row[colIdx];
+        if (cell.merged) continue; // Skip merged continuation cells
+        if (cell.text === '') {
+          const name = t.name || 'unnamed';
+          issues.push({
+            level: 'WARN',
+            code: 'VP-05',
+            slide: slideNum,
+            message: `Table "${name}" has empty cell at row ${rowIdx + 1}, col ${colIdx + 1}`,
+          });
+        }
+      }
+    }
+
+    // Check if entire data row is empty (more severe)
+    for (let rowIdx = 1; rowIdx < t.rows.length; rowIdx++) {
+      const row = t.rows[rowIdx];
+      const nonMergedCells = row.filter((c) => !c.merged);
+      if (nonMergedCells.length > 0 && nonMergedCells.every((c) => c.text === '')) {
+        const name = t.name || 'unnamed';
+        issues.push({
+          level: 'ERROR',
+          code: 'VP-05',
+          slide: slideNum,
+          message: `Table "${name}" row ${rowIdx + 1} is entirely empty`,
+        });
+      }
+    }
+  }
+  return issues;
+}
+
+function checkTableConsistency(tables, slideNum) {
+  const issues = [];
+  for (const t of tables) {
+    if (t.rows.length < 2) continue;
+
+    const headerColCount = t.rows[0].length;
+    const name = t.name || 'unnamed';
+
+    // Check column count consistency across rows
+    for (let rowIdx = 1; rowIdx < t.rows.length; rowIdx++) {
+      const rowColCount = t.rows[rowIdx].length;
+      if (rowColCount !== headerColCount) {
+        issues.push({
+          level: 'ERROR',
+          code: 'VP-06',
+          slide: slideNum,
+          message: `Table "${name}" row ${rowIdx + 1} has ${rowColCount} columns, header has ${headerColCount}`,
+        });
+      }
+    }
+
+    // Check if >50% of data cells are empty (suspicious)
+    let totalDataCells = 0;
+    let emptyDataCells = 0;
+    for (let rowIdx = 1; rowIdx < t.rows.length; rowIdx++) {
+      for (const cell of t.rows[rowIdx]) {
+        if (cell.merged) continue;
+        totalDataCells++;
+        if (cell.text === '') emptyDataCells++;
+      }
+    }
+    if (totalDataCells > 0 && emptyDataCells / totalDataCells > 0.5) {
+      issues.push({
+        level: 'ERROR',
+        code: 'VP-06',
+        slide: slideNum,
+        message: `Table "${name}" has ${emptyDataCells}/${totalDataCells} empty data cells (${Math.round(emptyDataCells / totalDataCells * 100)}%)`,
+      });
+    }
+  }
+  return issues;
+}
+
+/**
+ * VP-07: Detect shape-based table grids with empty cells.
+ * html2pptx builds tables from individual shapes (not native <a:tbl>).
+ * Groups by similar width → checks for grid pattern (2+ columns, 2+ rows)
+ * → flags when some cells have text and others don't (= missing data).
+ * Note: empty cells often have h=0 (collapsed), so height is NOT used for grouping.
+ */
+function checkShapeGridEmptyCells(shapes, slideNum) {
+  const issues = [];
+
+  const hasText = (s) => s.textRuns.length > 0 && s.textRuns.some((r) => r.text.trim() !== '');
+
+  // Include shapes with fill, even if h=0 (collapsed empty cells)
+  const filledShapes = shapes.filter((s) => s.w > 0 && s.fillColor);
+  if (filledShapes.length < 6) return issues;
+
+
+  // Group by similar width only (height varies: 0 for empty, ~24pt for filled)
+  const widthGroups = [];
+  for (const s of filledShapes) {
+    let found = false;
+    for (const g of widthGroups) {
+      const refW = g[0].w;
+      if (refW > 0 && Math.abs(s.w - refW) / refW < 0.08) {
+        g.push(s);
+        found = true;
+        break;
+      }
+    }
+    if (!found) widthGroups.push([s]);
+  }
+
+  for (const group of widthGroups) {
+    if (group.length < 6) continue;
+
+    // Grid check: 2+ distinct x AND 2+ distinct y positions
+    const xSet = new Set(group.map((s) => Math.round(s.x / COL_TOLERANCE)));
+    const ySet = new Set(group.map((s) => Math.round(s.y / COL_TOLERANCE)));
+
+
+    if (xSet.size < 2 || ySet.size < 2) continue;
+
+    // Mixed grid: some with text, some without
+    const withText = group.filter(hasText);
+    const withoutText = group.filter((s) => !hasText(s));
+    if (withText.length === 0 || withoutText.length === 0) continue;
+
+    const emptyRatio = withoutText.length / group.length;
+
+    // Per-column WARN for individual empty cells
+    const colMap = new Map();
+    for (const s of group) {
+      const xKey = Math.round(s.x / COL_TOLERANCE);
+      if (!colMap.has(xKey)) colMap.set(xKey, []);
+      colMap.get(xKey).push(s);
+    }
+
+    for (const [, colShapes] of colMap) {
+      if (colShapes.length < 2) continue;
+      const colWith = colShapes.filter(hasText);
+      const colWithout = colShapes.filter((s) => !hasText(s));
+      if (colWith.length > 0 && colWithout.length > 0) {
+        for (const s of colWithout) {
+          const name = s.name || 'unnamed';
+          issues.push({
+            level: 'WARN',
+            code: 'VP-07',
+            slide: slideNum,
+            message: `Grid cell "${name}" at (${emuToInches(s.x)}", ${emuToInches(s.y)}") has fill but no text — possible empty table cell`,
+          });
+        }
+      }
+    }
+
+    // Summary ERROR if >40% empty
+    if (emptyRatio > 0.4) {
+      issues.push({
+        level: 'ERROR',
+        code: 'VP-07',
+        slide: slideNum,
+        message: `Shape grid (${xSet.size}col × ${ySet.size}row) has ${withoutText.length}/${group.length} empty cells (${Math.round(emptyRatio * 100)}%) — likely table with missing data`,
+      });
+    }
+  }
+
+  return issues;
+}
+
 function checkContrast(shapes, slideNum) {
   const issues = [];
   for (const s of shapes) {
@@ -362,9 +605,13 @@ function extractPptx(pptxPath) {
   const absPptx = path.resolve(pptxPath);
 
   try {
+    // Copy .pptx to .zip first because PowerShell Expand-Archive requires the .zip extension
+    const absZip = path.join(tmpDir, 'archive.zip');
+    fs.copyFileSync(absPptx, absZip);
+
     // Use PowerShell Expand-Archive (available on Windows 10+)
     execSync(
-      `powershell -NoProfile -Command "Expand-Archive -Path '${absPptx.replace(/'/g, "''")}' -DestinationPath '${tmpDir.replace(/'/g, "''")}' -Force"`,
+      `powershell -NoProfile -Command "Expand-Archive -Path '${absZip.replace(/'/g, "''")}' -DestinationPath '${tmpDir.replace(/'/g, "''")}' -Force"`,
       { stdio: 'pipe', timeout: 30000 }
     );
   } catch (err) {
@@ -434,12 +681,16 @@ export async function validatePptx(pptxPath) {
       const slideNum = parseInt(slideFile.match(/\d+/)[0], 10);
       const slideXml = fs.readFileSync(path.join(slidesDir, slideFile), 'utf8');
       const shapes = extractShapes(slideXml);
+      const tables = extractTables(slideXml);
 
       const slideIssues = [
         ...checkOverflow(shapes, slideW, slideH, slideNum),
         ...checkColumnAlignment(shapes, slideNum),
         ...checkEmptyText(shapes, slideNum),
         ...checkContrast(shapes, slideNum),
+        ...checkTableEmptyCells(tables, slideNum),
+        ...checkTableConsistency(tables, slideNum),
+        ...checkShapeGridEmptyCells(shapes, slideNum),
       ];
 
       for (const issue of slideIssues) {

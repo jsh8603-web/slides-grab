@@ -7,6 +7,8 @@ description: End-to-end presentation workflow. Use when making a full presentati
 
 Guides you through the complete presentation pipeline from topic to exported file.
 
+**첫 호출 시 반드시 읽기**: `.claude/docs/presentation-flow.md` (전체 워크플로우 상세 절차)
+
 ---
 
 ## Workflow
@@ -25,6 +27,7 @@ Use **plan-skill** (`.claude/skills/plan-skill/SKILL.md`).
 ### Stage 2 — Design
 
 Use **design-skill** (`.claude/skills/design-skill/SKILL.md`).
+참조: `.claude/docs/design-modes.md` (디자인 모드별 상세), `.claude/docs/nanoBanana-guide.md` (이미지 생성)
 
 1. Read approved `slide-outline.md`.
 2. Generate `slide-*.html` files in the slides workspace (default: `slides/`).
@@ -38,9 +41,10 @@ Use **design-skill** (`.claude/skills/design-skill/SKILL.md`).
 ### Stage 3 — Export
 
 Use **pptx-skill** (`.claude/skills/pptx-skill/SKILL.md`).
+참조: `.claude/docs/pptx-inspection-log.md` (변환 이슈 패턴), `.claude/rules/html-prevention-rules.md` (HTML 금지/필수 규칙)
 
 1. Confirm user wants conversion.
-2. Export to PPTX: `slides-grab convert --slides-dir <path> --output <name>.pptx`
+2. Export to PPTX: `node scripts/convert-native.mjs --slides-dir <path> --output <name>.pptx`
 3. Export to PDF (if requested): `slides-grab pdf --slides-dir <path> --output <name>.pdf`
 4. Report results.
 
@@ -51,4 +55,5 @@ Use **pptx-skill** (`.claude/skills/pptx-skill/SKILL.md`).
 1. **Always follow the stage order**: Plan → Design → Export.
 2. **Get explicit user approval** before advancing to the next stage.
 3. **Read each stage's SKILL.md** for detailed rules — this skill only orchestrates.
-4. **Use `decks/<deck-name>/`** as the slides workspace for multi-deck projects.
+4. **Use `slides/<deck-name>/`** as the slides workspace.
+5. **Read `.claude/docs/` files on demand** — they are not auto-loaded.

@@ -46,7 +46,7 @@ Does not write the outline directly — delegates the work to `organizer-agent`.
 2. organizer-agent 호출 시 `Design Mode: {mode}` 포함
 3. outline Meta 섹션에 `Design Mode` 필드 추가
 4. 사용자가 모드를 명시적으로 지정하면 해당 모드 우선 적용
-5. 모드별 상세 규칙: `.claude/rules/design-modes.md` 참조
+5. 모드별 상세 규칙: `.claude/docs/design-modes.md` 참조
 
 ## Output
 
@@ -134,7 +134,7 @@ Complete the outline stage when the user explicitly approves.
 
 ### 영어 프롬프트 작성 규칙
 
-`.claude/rules/nanoBanana-guide.md`의 10대 규칙을 반드시 적용:
+`.claude/docs/nanoBanana-guide.md`의 10대 규칙을 반드시 적용:
 
 1. **서술형 문장** — 키워드 나열 금지, "A professional..." 형태의 완전한 문장
 2. **용도 선언** — 문장 앞에 "A presentation slide background for..." 등 용도 명시
@@ -286,7 +286,7 @@ Task tool call:
 
     IMPORTANT — Design Mode:
     Meta 섹션에 "Design Mode: [mode]" 필드를 반드시 포함하세요.
-    모드별 규칙은 .claude/rules/design-modes.md 참조.
+    모드별 규칙은 .claude/docs/design-modes.md 참조.
     - Professional: Action Title (주장 문장), 모든 슬라이드에 visual element 필수
     - Creative: aesthetic preset 선정, Anti-AI-slop, display font
     - Education: 1 슬라이드 = 1 개념, 텍스트+이미지 쌍, 18pt 이상
@@ -297,7 +297,7 @@ Task tool call:
     이미지가 필요한 슬라이드에 NanoBanana: 태그를 포함하세요.
     형식: - NanoBanana: [한글 설명] | [English prompt for Gemini]
 
-    프롬프트 작성 규칙 (.claude/rules/nanoBanana-guide.md 참조):
+    프롬프트 작성 규칙 (.claude/docs/nanoBanana-guide.md 참조):
     - 서술형 완전한 영어 문장 (키워드 나열 금지)
     - "no text" 필수 (이미지 내 텍스트 금지)
     - 색상은 Meta Color Palette의 hex 코드 사용
@@ -324,10 +324,10 @@ Task tool call:
     Design Mode: [current mode from Meta section]
 
     Design Mode 변경 요청 시 Meta 섹션 업데이트 + 전체 슬라이드에 모드 규칙 반영.
-    모드별 규칙: .claude/rules/design-modes.md 참조.
+    모드별 규칙: .claude/docs/design-modes.md 참조.
 
     NanoBanana 태그도 피드백에 맞게 수정하세요.
-    프롬프트 규칙: .claude/rules/nanoBanana-guide.md 참조.
+    프롬프트 규칙: .claude/docs/nanoBanana-guide.md 참조.
 
     Save the revised slide-outline.md.
 ```

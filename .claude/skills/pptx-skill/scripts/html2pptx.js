@@ -357,6 +357,13 @@ function addElements(slideData, targetSlide, pres) {
       if (el.shape.rectRadius > 0) shapeOptions.rectRadius = el.shape.rectRadius;
       if (el.shape.shadow) shapeOptions.shadow = el.shape.shadow;
 
+      if (el.style) {
+        if (el.style.align) shapeOptions.align = el.style.align;
+        if (el.style.valign) shapeOptions.valign = el.style.valign;
+        if (el.style.fontSize) shapeOptions.fontSize = el.style.fontSize;
+        if (el.style.color) shapeOptions.color = el.style.color;
+      }
+
       targetSlide.addText(el.text || '', shapeOptions);
     } else if (el.type === 'list') {
       const listOptions = {
@@ -786,15 +793,22 @@ async function extractSlideData(page) {
         const computed = window.getComputedStyle(el);
         const hasBg = computed.backgroundColor && computed.backgroundColor !== 'rgba(0, 0, 0, 0)';
 
+        const hasBlockChildren = Array.from(el.querySelectorAll(textTags.join(', '))).length > 0;
+        const actsAsText = !hasBlockChildren && el.textContent.trim() !== '';
+
+        console.log('actsAsText eval for:', el.outerHTML.substring(0, 50), 'actsAsText:', actsAsText, 'text:', el.textContent.trim());
+
         // Validate: Check for unwrapped text content in DIV
-        for (const node of el.childNodes) {
-          if (node.nodeType === Node.TEXT_NODE) {
-            const text = node.textContent.trim();
-            if (text) {
-              errors.push(
-                `DIV element contains unwrapped text "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}". ` +
-                'All text must be wrapped in <p>, <h1>-<h6>, <ul>, or <ol> tags to appear in PowerPoint.'
-              );
+        if (!actsAsText) {
+          for (const node of el.childNodes) {
+            if (node.nodeType === Node.TEXT_NODE) {
+              const text = node.textContent.trim();
+              if (text) {
+                errors.push(
+                  `DIV element contains unwrapped text "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}". ` +
+                  'All text must be wrapped in <p>, <h1>-<h6>, <ul>, or <ol> tags to appear in PowerPoint.'
+                );
+              }
             }
           }
         }
@@ -869,16 +883,31 @@ async function extractSlideData(page) {
           }
         }
 
-        if (hasBg || hasBorder) {
+        if (hasBg || hasBorder || actsAsText) {
           const rect = el.getBoundingClientRect();
           if (rect.width > 0 && rect.height > 0) {
             const shadow = parseBoxShadow(computed.boxShadow);
 
-            // Only add shape if there's background or uniform border
-            if (hasBg || hasUniformBorder) {
+            // Only add shape if there's background or uniform border or text
+            if (hasBg || hasUniformBorder || actsAsText) {
+              let shapeText = '';
+              if (actsAsText) {
+                const transformStr = computed.textTransform;
+                shapeText = parseInlineFormatting(el, {}, [], (str) => applyTextTransform(str, transformStr));
+                if (shapeText.length > 0 && shapeText[0].text) {
+                  // Text extraction works!
+                }
+              }
+
               elements.push({
                 type: 'shape',
-                text: '',  // Shape only - child text elements render on top
+                text: shapeText,
+                style: {
+                  align: computed.textAlign === 'start' ? 'left' : computed.textAlign,
+                  valign: 'middle',
+                  color: rgbToHex(computed.color),
+                  fontSize: pxToPoints(computed.fontSize)
+                },
                 position: {
                   x: pxToInch(rect.left),
                   y: pxToInch(rect.top),

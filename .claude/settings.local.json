@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -c D:/projects/slides-grab/.claude/rules/*.md)",
+      "Bash(wc -c C:/Users/jsh86/.claude/rules/*.md)",
+      "Bash(wc -c D:/projects/slides-grab/.claude/docs/*.md)",
+      "Read(//c/Users/jsh86/.claude/**)"
+    ]
+  }
+}

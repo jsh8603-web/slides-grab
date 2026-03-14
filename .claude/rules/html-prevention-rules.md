@@ -8,6 +8,7 @@ Step 2 (HTML 생성) 시 이 파일만 참조. 전체 히스토리는 `pptx-insp
 - `<p>`,`<h1>`~`<h6>`,`<li>`에 background/border → `<div>`로 래핑 [PF-07]
 - 비-body DIV에 `background: url()` → body만 허용 [IL-04 / PF-05]
 - `rgba()` 반투명 배경 + 흰색 텍스트 → PPTX에서 예측 불가 [IL-14]
+- 배경 있는 자식 div와 형제 `<span>` 텍스트 조합 → `<span>` 대신 `<p>` 사용 [IL-24]
 
 ## 필수 (WARN — 레이아웃 깨짐 가능)
 
@@ -50,6 +51,20 @@ body padding(상+하) + 제목(~30pt) + 메시지(~18pt)
 | IL-06 | PF-08 | — | Playwright(--full) |
 | IL-17 | — | VP-02 | XML 컬럼 정렬 |
 | — | PF-09~11 | — | 크로스 슬라이드 일관성 |
+| — | — | VP-05 | XML 테이블 빈 셀 감지 |
+| — | — | VP-06 | XML 테이블 일관성 (열 수, 공란 비율) |
+| — | — | VP-07 | XML Shape 그리드 빈 셀 감지 |
+| IL-21 | — | — | html2pptx 내부 (HEX 대문자 강제) |
+| IL-22 | — | — | html2pptx 내부 (margin 배열 순서) |
+| IL-23 | — | — | html2pptx 내부 (actsAsText parseInlineFormatting) |
+| IL-24 | — | — | HTML 작성 규칙 (비-leaf div 내 span → p 변경) |
+
+## 변환기 내부 수정 이력 (HTML 측 영향 없음)
+
+html2pptx.cjs 내부 버그 수정으로 HTML 작성 규칙에는 영향 없지만, 디버깅 시 참조:
+- **IL-21**: `rgbToHex()` 대문자 강제 — PptxGenJS가 소문자 HEX 미인식 [2026-03-14]
+- **IL-22**: margin 배열 `[L,T,R,B]` 순서 — PptxGenJS 비표준 매핑 [2026-03-14]
+- **IL-23**: actsAsText에 `parseInlineFormatting()` 복원 — 다중 색상/스팬 보존 [2026-03-14]
 
 ## 레이아웃 템플릿 참조
 

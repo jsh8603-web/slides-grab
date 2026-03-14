@@ -12,7 +12,7 @@ Delivers minimal, refined design with professional typography and precise layout
 
 ## Design Mode
 
-Read the `Design Mode` field from `slide-outline.md` Meta section. Apply mode-specific rules from `.claude/rules/design-modes.md`.
+Read the `Design Mode` field from `slide-outline.md` Meta section. Apply mode-specific rules from `.claude/docs/design-modes.md`.
 
 | Mode | When | Key Rule |
 |------|------|----------|
@@ -23,12 +23,12 @@ Read the `Design Mode` field from `slide-outline.md` Meta section. Apply mode-sp
 | **Minimal** | General/default | Current design philosophy below |
 
 If no Design Mode specified → default to **Minimal**.
-For mode-specific details (palettes, fonts, QA checklists), see `.claude/rules/design-modes.md`.
+For mode-specific details (palettes, fonts, QA checklists), see `.claude/docs/design-modes.md`.
 
 ### Mode Branching Logic
 
 1. Read `slide-outline.md` Meta → extract `Design Mode` value
-2. Load `.claude/rules/design-modes.md` → find matching mode section
+2. Load `.claude/docs/design-modes.md` → find matching mode section
 3. Apply mode-specific: color palette, font stack, layout principles, required/forbidden rules
 4. **Minimal mode**: uses the "Core Design Philosophy" section below as-is (existing behavior)
 5. **Other modes**: mode rules from `design-modes.md` override Core Design Philosophy where they conflict
@@ -43,8 +43,8 @@ These apply regardless of mode:
 - `<p>`, `<h1>`-`<h6>`, `<li>` must not have background/border → wrap in `<div>`
 - Inline text wrapping with `<span>` for editor selectability
 - NanoBanana image paths: `assets/slide-{NN}-{slug}.png`
-- NanoBanana 이미지 비율: 레이아웃의 이미지 컨테이너 비율에 맞춰 생성 (비율 매핑은 `.claude/rules/nanoBanana-guide.md` "이미지 비율 결정 규칙" 참조). 분할 레이아웃에 16:9 사용 금지
-- PPTX inspection log: check `.claude/rules/pptx-inspection-log.md` before generating
+- NanoBanana 이미지 비율: 레이아웃의 이미지 컨테이너 비율에 맞춰 생성 (비율 매핑은 `.claude/docs/nanoBanana-guide.md` "이미지 비율 결정 규칙" 참조). 분할 레이아웃에 16:9 사용 금지
+- PPTX inspection log: check `.claude/docs/pptx-inspection-log.md` before generating
 
 ---
 
@@ -502,7 +502,7 @@ Rules:
 
 #### 이미지 컨테이너 비율 가이드 (NanoBanana 비율 힌트 결정)
 
-슬라이드 레이아웃에서 이미지 컨테이너의 실제 비율에 맞춰 NanoBanana 비율 힌트를 결정한다. 상세: `.claude/rules/nanoBanana-guide.md` "이미지 비율 결정 규칙" 섹션.
+슬라이드 레이아웃에서 이미지 컨테이너의 실제 비율에 맞춰 NanoBanana 비율 힌트를 결정한다. 상세: `.claude/docs/nanoBanana-guide.md` "이미지 비율 결정 규칙" 섹션.
 
 | 레이아웃 | 이미지 컨테이너 | 비율 힌트 |
 |---------|---------------|----------|
