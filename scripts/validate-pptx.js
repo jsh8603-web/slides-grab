@@ -623,6 +623,158 @@ function checkContrast(shapes, slideNum) {
   return issues;
 }
 
+/**
+ * VP-09: Detect shapes where fit:shrink may not activate.
+ * PptxGenJS fit:shrink requires manual edit to take effect.
+ * Estimates text density vs shape area — flags when text likely overflows.
+ */
+function checkShrinkReliability(shapes, slideNum) {
+  const issues = [];
+  for (const s of shapes) {
+    if (s.textRuns.length === 0 || s.w === 0 || s.h === 0) continue;
+    // Estimate total text length
+    const totalText = s.textRuns.map(r => r.text).join('');
+    if (totalText.length < 10) continue;
+
+    // Estimate font size from XML (default ~12pt if not specified)
+    const avgCharWidthPt = 7; // rough average for mixed CJK+Latin
+    const avgLineHeightPt = 16; // rough average
+    const shapWidthPt = s.w / EMU_PER_PT;
+    const shapHeightPt = s.h / EMU_PER_PT;
+
+    const charsPerLine = Math.max(1, Math.floor(shapWidthPt / avgCharWidthPt));
+    const lines = Math.ceil(totalText.length / charsPerLine);
+    const neededHeight = lines * avgLineHeightPt;
+
+    if (neededHeight > shapHeightPt * 1.5) {
+      const name = s.name || 'unnamed';
+      issues.push({
+        level: 'WARN',
+        code: 'VP-09',
+        slide: slideNum,
+        message: `Shape "${name}" text density high (est. ${lines} lines, ~${Math.round(neededHeight)}pt needed, ${Math.round(shapHeightPt)}pt available) — fit:shrink may not activate without manual edit`,
+      });
+    }
+  }
+  return issues;
+}
+
+/**
+ * VP-10: Check gap consistency between shapes in the same row/column.
+ */
+function checkGapConsistency(shapes, slideNum) {
+  const issues = [];
+
+  // Filter to meaningful shapes
+  const meaningful = shapes.filter(s => s.w > 0 && s.h > 0 && s.w < DEFAULT_SLIDE_W * 0.8);
+  if (meaningful.length < 3) return issues;
+
+  // Group by similar y (same row, within ~10pt tolerance)
+  const rowTolerance = 10 * EMU_PER_PT;
+  const rows = [];
+  for (const s of meaningful) {
+    let found = false;
+    for (const row of rows) {
+      if (Math.abs(row.y - s.y) <= rowTolerance) {
+        row.shapes.push(s);
+        found = true;
+        break;
+      }
+    }
+    if (!found) rows.push({ y: s.y, shapes: [s] });
+  }
+
+  for (const row of rows) {
+    if (row.shapes.length < 3) continue;
+    // Sort by x position
+    const sorted = row.shapes.sort((a, b) => a.x - b.x);
+    const gaps = [];
+    for (let i = 1; i < sorted.length; i++) {
+      const gap = sorted[i].x - (sorted[i - 1].x + sorted[i - 1].w);
+      gaps.push(gap);
+    }
+    if (gaps.length < 2) continue;
+    const gapMean = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+    const gapStdDev = Math.sqrt(gaps.reduce((sum, g) => sum + (g - gapMean) ** 2, 0) / gaps.length);
+
+    // Flag if gap variance > 5pt
+    if (gapStdDev > 5 * EMU_PER_PT) {
+      const gapsPt = gaps.map(g => (g / EMU_PER_PT).toFixed(1) + 'pt').join(', ');
+      issues.push({
+        level: 'WARN',
+        code: 'VP-10',
+        slide: slideNum,
+        message: `Row at y=${emuToInches(row.y)}" has inconsistent gaps: [${gapsPt}]`,
+      });
+    }
+  }
+  return issues;
+}
+
+/**
+ * VP-11: Check reading order — shape order in spTree vs visual (y→x) order.
+ */
+function checkReadingOrder(shapes, slideNum) {
+  const issues = [];
+  const meaningful = shapes.filter(s => s.w > 0 && s.h > 0 && s.textRuns.some(r => r.text.trim()));
+  if (meaningful.length < 3) return issues;
+
+  // Visual order: sort by y then x
+  const visualOrder = [...meaningful].sort((a, b) => {
+    const yDiff = a.y - b.y;
+    if (Math.abs(yDiff) > 20 * EMU_PER_PT) return yDiff;
+    return a.x - b.x;
+  });
+
+  // Count position mismatches
+  let mismatches = 0;
+  for (let i = 0; i < meaningful.length; i++) {
+    if (meaningful[i] !== visualOrder[i]) mismatches++;
+  }
+
+  const mismatchRatio = mismatches / meaningful.length;
+  if (mismatchRatio > 0.3) {
+    issues.push({
+      level: 'WARN',
+      code: 'VP-11',
+      slide: slideNum,
+      message: `Reading order mismatch: ${mismatches}/${meaningful.length} shapes out of visual order (${Math.round(mismatchRatio * 100)}%) — may affect accessibility`,
+    });
+  }
+  return issues;
+}
+
+/**
+ * VP-12: Detect empty slides (no shapes or no text at all).
+ */
+function checkEmptySlide(shapes, tables, slideNum) {
+  const issues = [];
+  const totalShapes = shapes.length + tables.length;
+
+  if (totalShapes < 2) {
+    issues.push({
+      level: 'ERROR',
+      code: 'VP-12',
+      slide: slideNum,
+      message: `Slide has only ${totalShapes} shape(s) — likely empty or failed conversion`,
+    });
+    return issues;
+  }
+
+  // Check if any shape has text
+  const hasAnyText = shapes.some(s => s.textRuns.some(r => r.text.trim() !== ''));
+  const hasTableText = tables.some(t => t.rows.some(row => row.some(cell => cell.text.trim() !== '')));
+  if (!hasAnyText && !hasTableText) {
+    issues.push({
+      level: 'ERROR',
+      code: 'VP-12',
+      slide: slideNum,
+      message: `Slide has ${totalShapes} shapes but no text content — possible conversion failure`,
+    });
+  }
+  return issues;
+}
+
 // ── PPTX extraction & orchestration ────────────────────────────────────────
 
 function extractPptx(pptxPath) {
@@ -701,6 +853,34 @@ export async function validatePptx(pptxPath) {
         return na - nb;
       });
 
+    // VP-13: Check media file sizes
+    const mediaDir = path.join(tmpDir, 'ppt', 'media');
+    if (fs.existsSync(mediaDir)) {
+      const mediaFiles = fs.readdirSync(mediaDir);
+      let totalMediaSize = 0;
+      for (const mf of mediaFiles) {
+        const mfPath = path.join(mediaDir, mf);
+        const stat = fs.statSync(mfPath);
+        totalMediaSize += stat.size;
+        if (stat.size > 5 * 1024 * 1024) {
+          warnings.push({
+            level: 'WARN',
+            code: 'VP-13',
+            slide: 0,
+            message: `Media file "${mf}" is ${(stat.size / 1024 / 1024).toFixed(1)}MB — consider compressing`,
+          });
+        }
+      }
+      if (totalMediaSize > 20 * 1024 * 1024) {
+        warnings.push({
+          level: 'WARN',
+          code: 'VP-13',
+          slide: 0,
+          message: `Total media size ${(totalMediaSize / 1024 / 1024).toFixed(1)}MB exceeds 20MB — may cause sharing issues (Gmail 25MB, Outlook 20MB limit)`,
+        });
+      }
+    }
+
     console.log(`\nValidating ${path.basename(pptxPath)}`);
     console.log(`Slide size: ${emuToInches(slideW)}" x ${emuToInches(slideH)}" (${slideFiles.length} slides)\n`);
 
@@ -716,6 +896,10 @@ export async function validatePptx(pptxPath) {
         ...checkEmptyText(shapes, slideNum),
         ...checkContrast(shapes, slideNum),
         ...checkFilledEmptyShapes(shapes, slideNum),
+        ...checkShrinkReliability(shapes, slideNum),
+        ...checkGapConsistency(shapes, slideNum),
+        ...checkReadingOrder(shapes, slideNum),
+        ...checkEmptySlide(shapes, tables, slideNum),
         ...checkTableEmptyCells(tables, slideNum),
         ...checkTableConsistency(tables, slideNum),
         ...checkShapeGridEmptyCells(shapes, slideNum),

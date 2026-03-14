@@ -74,6 +74,18 @@ body padding(상+하) + 제목(~30pt) + 메시지(~18pt)
 | IL-26 | PF-12 | — | 정적 regex (국기 이모지 감지) |
 | IL-27 | PF-15 | — | 정적 regex (3열+ 그리드 CJK 텍스트 크기) |
 | — | PF-17 | — | 정적 regex (미지원 CSS transform 감지) |
+| — | PF-18 | — | Playwright(--full) 요소 겹침 감지 (AABB 교집합 > 20%) |
+| — | PF-19 | — | 정적 regex (미등록 폰트 감지) |
+| IL-10 | PF-20 | — | Playwright(--full) 하단 마진 침범 (369-405pt) |
+| IL-15 | PF-21 | — | Playwright(--full) 이미지 해상도/비율 검증 |
+| — | PF-22 | — | 정적 regex (미지원 CSS: backdrop-filter, clip-path 등) |
+| IL-01,02,06,18,27 | PF-23 | — | Playwright(--full) CJK 텍스트 밀도 + 20% 보정 |
+| IL-14,16 | PF-24 | — | 크로스 슬라이드 배경-텍스트 색상 대비 일관성 |
+| — | — | VP-09 | XML fit:shrink 텍스트 밀도 초과 감지 |
+| IL-17 | — | VP-10 | XML shape 간 간격 일관성 (행 gap stddev > 5pt) |
+| — | — | VP-11 | XML reading order vs 시각적 순서 불일치 |
+| IL-11,12 | — | VP-12 | XML 빈 슬라이드 감지 (shape < 2 또는 텍스트 없음) |
+| — | — | VP-13 | PPTX 미디어 파일 크기 (개별 > 5MB, 합계 > 20MB) |
 
 ## 변환기 내부 수정 이력 (HTML 측 영향 없음)
 

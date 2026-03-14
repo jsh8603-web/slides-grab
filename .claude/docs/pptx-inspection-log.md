@@ -166,11 +166,11 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 
 | Phase | 스크립트 | 규칙 | 속도 | 감지 대상 |
 |-------|---------|------|------|----------|
-| 1 | preflight-html.js | PF-01~PF-17 | ~1초 (정적), ~30초 (--full) | gradient+흰텍스트, box-sizing 누락, overflow, CJK 폰트, 도넛차트, span누락, 미지원transform, text-shadow, 크로스슬라이드 일관성 |
+| 1 | preflight-html.js | PF-01~PF-24 | ~1초 (정적), ~30초 (--full) | gradient, box-sizing, overflow, CJK, 도넛차트, span누락, transform, text-shadow, 폰트 가용성, 미지원CSS, 요소겹침, 하단마진, 이미지해상도, CJK밀도, 크로스슬라이드 일관성 |
 | 2 | html2pptx.cjs (변환 중) | WCAG 대비 | 슬라이드당 ~0.8초 | 텍스트-배경 대비 < 4.5:1 (WARN), < 1.5:1 (ERROR) |
-| 3 | validate-pptx.js | VP-01~VP-08 | ~2초 | 경계 초과, 컬럼 정렬, 빈 텍스트, 대비, 빈 카드, 테이블 빈셀, 그리드 빈셀 |
+| 3 | validate-pptx.js | VP-01~VP-13 | ~2초 | 경계 초과, 컬럼 정렬, 빈 텍스트, 대비, 빈 카드, 테이블 빈셀, 그리드 빈셀, shrink 신뢰성, 간격 일관성, reading order, 빈 슬라이드, 미디어 크기 |
 
-- `--full` 플래그: Phase 1 후 Playwright 동적 검증 추가 (Phase 1.5, PF-03 overflow + PF-08 CJK)
+- `--full` 플래그: Phase 1 후 Playwright 동적 검증 추가 (Phase 1.5, PF-03/08/18/20/21/23)
 - `--skip-preflight`: Phase 1/1.5 건너뜀
 - `--skip-validation`: Phase 3 건너뜀
 

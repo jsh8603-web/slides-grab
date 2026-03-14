@@ -294,6 +294,67 @@ function checkPF17(html, file) {
   return issues;
 }
 
+// Allowed fonts that are available in PowerPoint or embedded
+const ALLOWED_FONTS = new Set([
+  'pretendard', 'segoe ui', 'arial', 'helvetica', 'sans-serif', 'serif',
+  'times new roman', 'courier new', 'monospace', 'calibri', 'cambria',
+  'noto sans kr', 'noto sans', 'malgun gothic', 'gulim', 'dotum',
+  'biz udpgothic', 'meiryo', 'yu gothic', 'ms pgothic',
+  'inherit', 'initial', 'unset',
+  // CSS system font keywords — gracefully fall back in all environments
+  '-apple-system', 'blinkmacsystemfont', 'system-ui', 'ui-sans-serif',
+  'ui-serif', 'ui-monospace', 'ui-rounded',
+]);
+
+function checkPF19(html, file) {
+  const issues = [];
+  // Font availability: check font-family declarations against allowed list
+  const fontRe = /font-family\s*:\s*([^;"]+)/gi;
+  let m;
+  while ((m = fontRe.exec(html)) !== null) {
+    const fonts = m[1].split(',').map(f => f.trim().replace(/['"]/g, '').toLowerCase());
+    for (const font of fonts) {
+      if (!font || ALLOWED_FONTS.has(font)) continue;
+      issues.push(fmtWarn(file, 'PF-19',
+        `Font "${font}" may not be available in PowerPoint — will fallback to Arial`));
+      return issues; // one per file
+    }
+  }
+  return issues;
+}
+
+// CSS properties that html2pptx cannot convert
+const UNSUPPORTED_CSS_RE = /(?:backdrop-filter|mix-blend-mode|clip-path|mask-image|filter\s*:\s*(?!none)(?:blur|brightness|contrast|grayscale|hue-rotate|invert|saturate|sepia)|writing-mode\s*:\s*vertical|animation\s*:|@keyframes)\s*/i;
+
+function checkPF22(html, file) {
+  const issues = [];
+  const styleRe = /style="([^"]*)"/gi;
+  let m;
+  while ((m = styleRe.exec(html)) !== null) {
+    const style = m[1];
+    const unsupported = style.match(UNSUPPORTED_CSS_RE);
+    if (unsupported) {
+      const prop = unsupported[0].trim().replace(/\s*:\s*$/, '');
+      issues.push(fmtWarn(file, 'PF-22',
+        `Unsupported CSS property "${prop}" — will be ignored in PPTX conversion`));
+      return issues; // one per file
+    }
+  }
+  // Also check <style> blocks
+  const styleBlockRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  while ((m = styleBlockRe.exec(html)) !== null) {
+    const block = m[1];
+    const unsupported = block.match(UNSUPPORTED_CSS_RE);
+    if (unsupported) {
+      const prop = unsupported[0].trim().replace(/\s*:\s*$/, '');
+      issues.push(fmtWarn(file, 'PF-22',
+        `Unsupported CSS property "${prop}" in <style> block — will be ignored in PPTX conversion`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
 function runStaticChecks(html, file) {
   return [
     ...checkPF01(html, file),
@@ -308,6 +369,8 @@ function runStaticChecks(html, file) {
     ...checkPF15(html, file),
     ...checkPF16(html, file),
     ...checkPF17(html, file),
+    ...checkPF19(html, file),
+    ...checkPF22(html, file),
   ];
 }
 
@@ -371,6 +434,140 @@ async function runPlaywrightChecks(slidesDir, files) {
           results.push(fmtWarn(file, 'PF-08',
             `CJK text in card at ${cjkIssue.size}px (>${Math.round(14.67)}px / 11pt) \u2014 may overflow in PPTX`));
         }
+        // PF-18: Element overlap detection (text-on-text or image-on-text)
+        const overlapIssue = await page.evaluate(() => {
+          const textEls = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,li,div,img'));
+          const rects = textEls
+            .filter(el => {
+              const t = (el.textContent || '').trim();
+              if (!t) return false;
+              const r = el.getBoundingClientRect();
+              return r.width > 0 && r.height > 0;
+            })
+            .map(el => {
+              const r = el.getBoundingClientRect();
+              const ownText = Array.from(el.childNodes).filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('');
+              return { tag: el.tagName, left: r.left, top: r.top, right: r.right, bottom: r.bottom, area: r.width * r.height, ownText };
+            })
+            // Filter to elements with their own text content (not just inherited)
+            .filter(r => r.ownText.length > 0 || ['IMG', 'DIV'].includes(r.tag));
+
+          // Check pairwise overlaps (limit to first 50 elements for performance)
+          const check = rects.slice(0, 50);
+          for (let i = 0; i < check.length; i++) {
+            for (let j = i + 1; j < check.length; j++) {
+              const a = check[i], b = check[j];
+              // Skip parent-child relationships (one contains the other)
+              const aContainsB = a.left <= b.left && a.right >= b.right && a.top <= b.top && a.bottom >= b.bottom;
+              const bContainsA = b.left <= a.left && b.right >= a.right && b.top <= a.top && b.bottom >= a.bottom;
+              if (aContainsB || bContainsA) continue;
+
+              const overlapW = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+              const overlapH = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+              if (overlapW > 0 && overlapH > 0) {
+                const overlapArea = overlapW * overlapH;
+                const smallerArea = Math.min(a.area, b.area);
+                if (smallerArea > 0 && overlapArea / smallerArea > 0.2) {
+                  return { found: true, tag1: a.tag, tag2: b.tag, pct: Math.round(overlapArea / smallerArea * 100) };
+                }
+              }
+            }
+          }
+          return { found: false };
+        });
+        if (overlapIssue.found) {
+          results.push(fmtWarn(file, 'PF-18',
+            `Elements overlap: ${overlapIssue.tag1} and ${overlapIssue.tag2} (${overlapIssue.pct}% overlap) — may cause readability issues`));
+        }
+
+        // PF-20: Bottom margin intrusion (content in 0.5" safe zone: 369pt-405pt)
+        const marginIssue = await page.evaluate(() => {
+          const allEls = document.querySelectorAll('body > *');
+          let maxBottom = 0;
+          for (const el of allEls) {
+            const r = el.getBoundingClientRect();
+            if (r.height > 0 && r.bottom > maxBottom) maxBottom = r.bottom;
+          }
+          // 369pt = 405pt - 36pt (0.5" margin)
+          return { maxBottom: Math.round(maxBottom * 100) / 100, inMargin: maxBottom > 369, overSlide: maxBottom > 405 };
+        });
+        if (marginIssue.overSlide) {
+          // PF-03 already covers this as ERROR
+        } else if (marginIssue.inMargin) {
+          results.push(fmtWarn(file, 'PF-20',
+            `Content extends to ${marginIssue.maxBottom.toFixed(0)}pt — inside 0.5" bottom safe margin (369-405pt)`));
+        }
+
+        // PF-21: Image resolution and aspect ratio check
+        const imgIssues = await page.evaluate(() => {
+          const issues = [];
+          const imgs = document.querySelectorAll('img');
+          for (const img of imgs) {
+            if (!img.naturalWidth || !img.naturalHeight) continue;
+            const r = img.getBoundingClientRect();
+            if (r.width < 10 || r.height < 10) continue; // skip tiny/icon images
+
+            // Upscale check: display size > natural size × 2
+            const scaleX = r.width / img.naturalWidth;
+            const scaleY = r.height / img.naturalHeight;
+            if (scaleX > 2.0 || scaleY > 2.0) {
+              issues.push({ type: 'lowres', scale: Math.max(scaleX, scaleY).toFixed(1), src: img.src.split('/').pop() });
+            }
+
+            // Aspect ratio distortion: >5% difference between scale axes
+            if (Math.abs(scaleX - scaleY) / Math.max(scaleX, scaleY) > 0.05) {
+              issues.push({ type: 'distorted', src: img.src.split('/').pop(), scaleX: scaleX.toFixed(2), scaleY: scaleY.toFixed(2) });
+            }
+          }
+          return issues;
+        });
+        for (const img of imgIssues) {
+          if (img.type === 'lowres') {
+            results.push(fmtWarn(file, 'PF-21',
+              `Image "${img.src}" upscaled ${img.scale}x — will look blurry when projected`));
+          } else if (img.type === 'distorted') {
+            results.push(fmtWarn(file, 'PF-21',
+              `Image "${img.src}" aspect ratio distorted (scaleX=${img.scaleX}, scaleY=${img.scaleY})`));
+          }
+        }
+
+        // PF-23: CJK text density — predict overflow with 20% width correction
+        const densityIssue = await page.evaluate(() => {
+          const CJK = /[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/;
+          const allEls = document.querySelectorAll('div, p, span, h1, h2, h3, h4, h5, h6, li');
+          for (const el of allEls) {
+            const text = (el.textContent || '').trim();
+            if (!text || text.length < 3) continue;
+            if (!CJK.test(text)) continue;
+
+            const r = el.getBoundingClientRect();
+            if (r.width < 20) continue;
+
+            // Calculate CJK character ratio
+            const cjkChars = (text.match(/[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/g) || []).length;
+            const cjkRatio = cjkChars / text.length;
+            if (cjkRatio < 0.3) continue;
+
+            // Compare scrollWidth with clientWidth, applying 20% CJK correction
+            const correctedWidth = el.scrollWidth * (1 + cjkRatio * 0.2);
+            if (correctedWidth > r.width * 1.05) { // 5% tolerance
+              return {
+                found: true,
+                text: text.substring(0, 30),
+                containerWidth: Math.round(r.width),
+                correctedWidth: Math.round(correctedWidth),
+                cjkRatio: Math.round(cjkRatio * 100)
+              };
+            }
+          }
+          return { found: false };
+        });
+        if (densityIssue.found) {
+          results.push(fmtWarn(file, 'PF-23',
+            `CJK text "${densityIssue.text}..." (${densityIssue.cjkRatio}% CJK) will likely overflow in PPTX ` +
+            `(corrected width ${densityIssue.correctedWidth}px > container ${densityIssue.containerWidth}px)`));
+        }
+
       } catch (e) {
         results.push(fmtWarn(file, 'PF-XX', `Playwright check failed: ${e.message}`));
       } finally {
@@ -394,7 +591,7 @@ function stddev(arr) {
 
 /** Extract metrics from HTML for cross-slide consistency checks. */
 function extractSlideMetrics(html) {
-  const metrics = { h1FontSize: null, bodyPadding: null, usedColors: [] };
+  const metrics = { h1FontSize: null, bodyPadding: null, usedColors: [], bodyBgBrightness: null, textColors: [] };
 
   // h1 font-size (inline style)
   const h1Match = html.match(/<h1[^>]*style="[^"]*font-size\s*:\s*([\d.]+)\s*pt/i);
@@ -411,6 +608,27 @@ function extractSlideMetrics(html) {
     const colorMatches = styleStr.matchAll(/#([0-9a-fA-F]{6})(?=[;\s"',)]|$)/g);
     for (const m of colorMatches) {
       metrics.usedColors.push(m[1].toUpperCase());
+    }
+  }
+
+  // Body background brightness for PF-24
+  const bodyBgMatch = html.match(/<body[^>]*style="[^"]*background\s*:\s*#([0-9a-fA-F]{6})/i);
+  if (bodyBgMatch) {
+    const rgb = hexToRgb(bodyBgMatch[1]);
+    if (rgb) metrics.bodyBgBrightness = relativeLuminance(...rgb);
+  }
+
+  // Text colors for PF-24
+  const textColorRe = /(?:^|;\s*)color\s*:\s*#([0-9a-fA-F]{6})/gi;
+  for (const sb of html.matchAll(/style="([^"]*)"/gi)) {
+    const styleStr = sb[1];
+    // Skip background-color
+    let tcm;
+    while ((tcm = textColorRe.exec(styleStr)) !== null) {
+      const preceding = styleStr.substring(Math.max(0, tcm.index - 15), tcm.index);
+      if (!/background-?\s*$/i.test(preceding)) {
+        metrics.textColors.push(tcm[1].toUpperCase());
+      }
     }
   }
 
@@ -443,6 +661,31 @@ function checkConsistency(allMetrics) {
   if (allColors.size > 8) {
     warnings.push(fmtWarn('cross-slide', 'PF-11',
       `${allColors.size} unique colors used across deck (recommend ≤8)`));
+  }
+
+  // PF-24: Cross-slide background-text contrast consistency
+  for (let i = 0; i < allMetrics.length; i++) {
+    const m = allMetrics[i];
+    if (m.bodyBgBrightness === null || m.textColors.length === 0) continue;
+    const isDarkBg = m.bodyBgBrightness < 0.2;
+    const isLightBg = m.bodyBgBrightness > 0.8;
+
+    for (const tc of m.textColors) {
+      const rgb = hexToRgb(tc);
+      if (!rgb) continue;
+      const textLum = relativeLuminance(...rgb);
+      // Dark bg + dark text or light bg + light text
+      if (isDarkBg && textLum < 0.2) {
+        warnings.push(fmtWarn(`slide-${String(i + 1).padStart(2, '0')}`, 'PF-24',
+          `Dark text #${tc} on dark background (luminance ${m.bodyBgBrightness.toFixed(2)}) — low contrast`));
+        break;
+      }
+      if (isLightBg && textLum > 0.8) {
+        warnings.push(fmtWarn(`slide-${String(i + 1).padStart(2, '0')}`, 'PF-24',
+          `Light text #${tc} on light background (luminance ${m.bodyBgBrightness.toFixed(2)}) — low contrast`));
+        break;
+      }
+    }
   }
 
   return warnings;
