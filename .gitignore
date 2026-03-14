@@ -63,3 +63,8 @@ thumbnail-grid.png
 # NotebookLM extracted content
 notebook-content.md
 .mcp.json
+
+# Debug screenshots
+nlm-debug-*.png
+nlm-cleanup-*.png
+nlm-verify-*.png

@@ -43,6 +43,7 @@ These apply regardless of mode:
 - `<p>`, `<h1>`-`<h6>`, `<li>` must not have background/border → wrap in `<div>`
 - Inline text wrapping with `<span>` for editor selectability
 - NanoBanana image paths: `assets/slide-{NN}-{slug}.png`
+- NanoBanana 이미지 비율: 레이아웃의 이미지 컨테이너 비율에 맞춰 생성 (비율 매핑은 `.claude/rules/nanoBanana-guide.md` "이미지 비율 결정 규칙" 참조). 분할 레이아웃에 16:9 사용 금지
 - PPTX inspection log: check `.claude/rules/pptx-inspection-log.md` before generating
 
 ---
@@ -164,6 +165,18 @@ Theme files use shared CSS variables (`:root`). Copy a theme file to create a cu
 ---
 
 ## Layout System
+
+### PPTX-Compatible Layout Templates
+
+PPTX 호환성 수정이 미리 적용된 레이아웃 템플릿을 참조한다: `templates/layouts.css`
+
+주요 템플릿:
+- **50:50/55:45 이미지+텍스트 분할**: `box-sizing: border-box`, `overflow: hidden`, `min-width: 0` 포함 (패턴 #13, #18 방지)
+- **카드 그리드 (2열/3열)**: max-items 제한, padding/gap 안전값 (패턴 #6, #10 방지)
+- **CSS Grid 테이블**: 고정 pt 컬럼, 헤더/교차 배경 필수 (패턴 #17, #19 방지)
+- **전체 배경 이미지 + 텍스트**: 단색 오버레이, text-shadow (패턴 #7, #14 방지)
+- **배지/태그**: min-width 40pt, `white-space: nowrap` (패턴 #1, #3 방지)
+- **체크리스트**: max 5 items, gap 7pt (패턴 #10 방지)
 
 ### Spacing Standards (padding/margin)
 ```css
@@ -487,6 +500,18 @@ Rules:
 
 ### 4. Image Usage Rules (Local Path / URL / NanoBanana / Placeholder)
 
+#### 이미지 컨테이너 비율 가이드 (NanoBanana 비율 힌트 결정)
+
+슬라이드 레이아웃에서 이미지 컨테이너의 실제 비율에 맞춰 NanoBanana 비율 힌트를 결정한다. 상세: `.claude/rules/nanoBanana-guide.md` "이미지 비율 결정 규칙" 섹션.
+
+| 레이아웃 | 이미지 컨테이너 | 비율 힌트 |
+|---------|---------------|----------|
+| 전체 배경 (표지, 배경) | 720×405pt | `[16:9]` |
+| 좌우 50:50 분할 (body padding 없음) | 360×405pt | `[3:4]` |
+| 좌우 55:45 분할 (body padding 없음) | 396×405pt | `[1:1]` |
+| 좌우 분할 (body padding 있음) | ~330~360×290pt | `[4:3]` |
+| 일러스트/아이콘 (독립) | 정사각 | `[1:1]` |
+
 #### NanoBanana Generated Image (Preferred)
 ```html
 <img src="assets/slide-05-smart-warehouse.png" alt="스마트 창고 내부 전경"
@@ -538,15 +563,16 @@ Rules:
 <h1 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">제목</h1>
 ```
 
-**방법 3: 그라디언트 오버레이 (한쪽에 텍스트)**
+**방법 3: 반투명 배경 패널 (한쪽에 텍스트)**
 ```html
-<div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 60%);"></div>
+<div style="position: absolute; left: 0; top: 0; bottom: 0; width: 50%; background: rgba(0,0,0,0.7);"></div>
 ```
+> ⚠️ `linear-gradient`는 PPTX에서 렌더링 불가 — 단색 `rgba()` 또는 solid color만 사용
 
 **선택 기준:**
 - 전면 이미지 + 중앙 텍스트 → 방법 1 (반투명 오버레이)
 - 이미지 위 제목만 → 방법 2 (텍스트 그림자)
-- 좌측 텍스트 + 우측 이미지 → 방법 3 (그라디언트)
+- 좌측 텍스트 + 우측 이미지 → 방법 3 (반투명 패널)
 - 밝은 이미지에 어두운 텍스트 → `rgba(255,255,255,0.85)` 오버레이 + 어두운 텍스트
 
 ---
@@ -555,12 +581,16 @@ Rules:
 
 ### Required Tags
 ```html
-<!-- All text MUST be inside these tags -->
+<!-- All text MUST be inside these block tags -->
 <p>, <h1>-<h6>, <ul>, <ol>, <li>
 
-<!-- Forbidden - ignored in PowerPoint conversion -->
-<div>text here</div>
-<span>text here</span>
+<!-- <span> is OK as inline wrapper INSIDE block tags (for editor selectability) -->
+<p><span>text</span></p>          <!-- ✅ OK -->
+<div style="background:..."><span>text</span></div>  <!-- ✅ OK (pattern #12 fixed) -->
+
+<!-- Forbidden - standalone text without block parent -->
+<div>bare text here</div>          <!-- ⚠️ works but <p> preferred -->
+<span>text without block parent</span>  <!-- ❌ not rendered -->
 ```
 
 ### Inline Text Wrapping (Editor Selectability)
@@ -648,7 +678,7 @@ This skill is **Stage 2**. It works from the `slide-outline.md` approved by the 
 
 ## Important Notes
 
-1. **CSS gradients**: Not supported in PowerPoint conversion — replace with background images
+1. **CSS gradients**: Not supported in PowerPoint conversion — **`linear-gradient` + 흰색 텍스트 조합 절대 금지** (텍스트 완전히 사라짐). gradient가 필요하면 단색 배경으로 대체 (gradient의 시작 색상 사용)
 2. **Webfonts**: Always include the Pretendard CDN link
 3. **Image paths**: Use absolute paths or URLs
 4. **Colors**: Always include `#` prefix in CSS

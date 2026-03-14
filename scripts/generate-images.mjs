@@ -21,6 +21,20 @@ import path from "node:path";
 import { parseArgs } from "node:util";
 
 // ---------------------------------------------------------------------------
+// Aspect ratio → pixel dimensions (single source of truth)
+// ---------------------------------------------------------------------------
+const ASPECT_DIMENSIONS = {
+  "16:9": { w: 1920, h: 1080 },
+  "4:3": { w: 1440, h: 1080 },
+  "3:4": { w: 1080, h: 1440 },
+  "1:1": { w: 1080, h: 1080 },
+  "3:2": { w: 1620, h: 1080 },
+  "2:3": { w: 1080, h: 1620 },
+  "9:16": { w: 1080, h: 1920 },
+  "21:9": { w: 2520, h: 1080 },
+};
+
+// ---------------------------------------------------------------------------
 // Auto-load .env (lightweight, no dotenv dependency)
 // ---------------------------------------------------------------------------
 const envPath = path.resolve(process.cwd(), ".env");
@@ -122,21 +136,13 @@ if (args.prompt) {
 
     let buffer = Buffer.from(imgPart.inlineData.data, "base64");
 
-    // Optimize if enabled
+    // Optimize if enabled (reuse optimizeImage to avoid duplication)
     if (args.optimize) {
-      try {
-        const sharp = (await import("sharp")).default;
-        const dims = {
-          "16:9": { w: 1920, h: 1080 }, "4:3": { w: 1440, h: 1080 },
-          "1:1": { w: 1080, h: 1080 }, "3:2": { w: 1620, h: 1080 },
-          "9:16": { w: 1080, h: 1920 }, "21:9": { w: 2520, h: 1080 },
-        };
-        const t = dims[ar] || dims["16:9"];
-        buffer = await sharp(buffer)
-          .resize(t.w, t.h, { fit: "cover", position: "centre", kernel: "lanczos3" })
-          .png({ compressionLevel: 9, quality: 85 })
-          .toBuffer();
-      } catch { /* sharp unavailable */ }
+      const optimized = await optimizeImage(buffer, ar);
+      buffer = optimized.buffer;
+      if (optimized.width > 0) {
+        console.log(`   해상도: ${optimized.width}×${optimized.height} (${ar})`);
+      }
     }
 
     fs.mkdirSync(path.dirname(outFile), { recursive: true });
@@ -285,9 +291,7 @@ function parseOutline(filePath) {
 const SAFETY_MESSAGES = {
   SAFETY: "안전 필터에 의해 차단됨. 프롬프트에서 민감한 표현을 순화하세요.",
   IMAGE_SAFETY: "생성된 이미지가 안전 기준 미달. 프롬프트를 더 구체적/순화된 표현으로 수정하세요.",
-  PROHIBITED_CONTENT: "저작권/IP 보호 콘텐츠 감지. 실존 브랜드/캐릭터/인물 대신 일반적 묘사를 사용하세요.",
   OTHER: "알 수 없는 이유로 차단됨. 프롬프트를 단순화하거나 묘사를 일반화하세요.",
-  RECITATION: "기존 저작물과 유사도가 높아 차단됨. 독창적 묘사로 재작성하세요.",
 };
 
 function parseFinishReason(data) {
@@ -399,28 +403,63 @@ async function optimizeImage(buffer, aspectRatio) {
     sharp = (await import("sharp")).default;
   } catch {
     // Sharp not available — skip optimization
-    return buffer;
+    return { buffer, width: 0, height: 0 };
   }
 
-  // Target dimensions based on aspect ratio
-  const dimensions = {
-    "16:9": { w: 1920, h: 1080 },
-    "4:3": { w: 1440, h: 1080 },
-    "1:1": { w: 1080, h: 1080 },
-    "3:2": { w: 1620, h: 1080 },
-    "9:16": { w: 1080, h: 1920 },
-    "21:9": { w: 2520, h: 1080 },
-  };
-  const target = dimensions[aspectRatio] || dimensions["16:9"];
+  const target = ASPECT_DIMENSIONS[aspectRatio];
 
-  return sharp(buffer)
-    .resize(target.w, target.h, {
-      fit: "cover",
-      position: "centre",
-      kernel: "lanczos3",
-    })
-    .png({ compressionLevel: 9, quality: 85 })
-    .toBuffer();
+  // Get metadata before processing to avoid double-decode
+  const meta = await sharp(buffer).metadata();
+
+  let result, width, height;
+  if (!target) {
+    console.warn(`    ⚠️  미등록 비율 "${aspectRatio}" — 원본 비율 유지 (16:9 폴백 없음)`);
+    result = await sharp(buffer)
+      .png({ compressionLevel: 9, quality: 85 })
+      .toBuffer();
+    width = meta.width;
+    height = meta.height;
+  } else {
+    result = await sharp(buffer)
+      .resize(target.w, target.h, {
+        fit: "cover",
+        position: "centre",
+        kernel: "lanczos3",
+      })
+      .png({ compressionLevel: 9, quality: 85 })
+      .toBuffer();
+    width = target.w;
+    height = target.h;
+  }
+
+  // Brightness analysis — detect overly bright images that may cause text readability issues
+  try {
+    const stats = await sharp(result).stats();
+    const channels = stats.channels;
+    // Weighted perceived brightness (ITU-R BT.601)
+    const brightness = channels[0].mean * 0.299 + channels[1].mean * 0.587 + channels[2].mean * 0.114;
+
+    // Analyze top 1/3 region (common text overlay area)
+    const topThirdH = Math.round(height / 3);
+    if (topThirdH > 0) {
+      const topStats = await sharp(result)
+        .extract({ left: 0, top: 0, width, height: topThirdH })
+        .stats();
+      const topChannels = topStats.channels;
+      const topBrightness = topChannels[0].mean * 0.299 + topChannels[1].mean * 0.587 + topChannels[2].mean * 0.114;
+
+      if (topBrightness > 200) {
+        console.warn(`    ⚠️  BRIGHT: top region brightness=${topBrightness.toFixed(0)}/255 — text overlay may be unreadable`);
+      }
+    }
+    if (brightness > 220) {
+      console.warn(`    ⚠️  BRIGHT: overall brightness=${brightness.toFixed(0)}/255 — consider darker tones`);
+    }
+  } catch {
+    // Brightness analysis is non-critical — skip on error
+  }
+
+  return { buffer: result, width, height };
 }
 
 // ---------------------------------------------------------------------------
@@ -531,8 +570,11 @@ async function main() {
 
       // Post-processing (#7)
       let finalBuffer = buffer;
+      let resLog = "";
       if (args.optimize) {
-        finalBuffer = await optimizeImage(buffer, img.aspectRatio);
+        const optimized = await optimizeImage(buffer, img.aspectRatio);
+        finalBuffer = optimized.buffer;
+        resLog = ` ${optimized.width}×${optimized.height} (${img.aspectRatio})`;
       }
 
       fs.writeFileSync(outPath, finalBuffer);
@@ -543,7 +585,7 @@ async function main() {
       }
 
       const sizeKB = (finalBuffer.length / 1024).toFixed(0);
-      console.log(`  ✅ Slide ${img.slideNumber}: ${img.filename} (${sizeKB}KB)`);
+      console.log(`  ✅ Slide ${img.slideNumber}: ${img.filename} (${sizeKB}KB)${resLog}`);
       return { slide: img.slideNumber, status: "ok", size: finalBuffer.length };
     } catch (err) {
       console.error(`  ❌ Slide ${img.slideNumber}: ${err.message}`);

@@ -1,0 +1,528 @@
+/* ==========================================================================
+   PPTX-Compatible Layout Templates
+   ==========================================================================
+   Reusable CSS layout snippets for slide HTML generation.
+   All templates include fixes from pptx-inspection-log.md patterns.
+
+   Slide spec: 720pt x 405pt, bottom margin 0.5" (36pt minimum).
+   Usable content height: ~369pt (405pt - 36pt).
+
+   Usage: Copy the relevant template into your slide HTML <style> block.
+   Each template is self-contained — no external dependencies.
+
+   GLOBAL RULES (apply to ALL templates):
+   - linear-gradient + white text is FORBIDDEN (pattern #14)
+   - Use solid background colors only for PPTX compatibility
+   - <p>, <h1>-<h6>, <li> must NOT have background/border — wrap in <div>
+   - CJK (Korean/Japanese/Chinese) titles: keep font-size <= 14pt in split layouts
+   - All images: use <img> tags, not background-image on non-body divs
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. TEMPLATE: 50:50 Image+Text Split
+   ==========================================================================
+   Prevents: flex overflow (#13), CJK title clipping (#18)
+
+   Usage:
+   <div class="split-layout">
+     <div class="split-image"><img src="..." alt=""></div>
+     <div class="split-text">
+       <h1>Title here</h1>
+       <p>Body text here</p>
+     </div>
+   </div>
+
+   Notes:
+   - CJK titles in the text area: use font-size 14pt or smaller
+   - For 15+ character Korean titles, reduce font-size by 1-2pt more
+   - Image aspect ratio hint for NanoBanana: [3:4] (360x405pt container)
+   ========================================================================== */
+
+.split-layout {
+  display: flex;
+  width: 720pt;
+  height: 405pt;
+  overflow: hidden;        /* pattern #13: prevent child overflow */
+  max-width: 720pt;        /* pattern #13: hard boundary */
+}
+
+.split-layout .split-image {
+  flex: 0 0 50%;
+  min-width: 0;            /* pattern #13: prevent intrinsic size overflow */
+  overflow: hidden;        /* pattern #13: clip oversized images */
+}
+
+.split-layout .split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-layout .split-text {
+  flex: 1;
+  box-sizing: border-box;  /* pattern #13: padding included in width */
+  min-width: 0;             /* pattern #13: prevent flex blowout */
+  padding: 24pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-layout .split-text h1 {
+  font-size: 14pt;          /* pattern #18: safe for CJK in 50% width */
+  font-weight: 700;
+  margin: 0 0 12pt 0;
+  line-height: 1.3;
+}
+
+.split-layout .split-text p {
+  font-size: 11pt;
+  line-height: 1.5;
+  margin: 0 0 8pt 0;
+}
+
+
+/* ==========================================================================
+   2. TEMPLATE: 55:45 Image+Text Split
+   ==========================================================================
+   Prevents: flex overflow (#13), CJK title clipping (#18)
+
+   Usage:
+   <div class="split-layout-wide">
+     <div class="split-wide-image"><img src="..." alt=""></div>
+     <div class="split-wide-text">
+       <h1>Title here</h1>
+       <p>Body text here</p>
+     </div>
+   </div>
+
+   Notes:
+   - Wider image (55%) for visual-heavy slides
+   - Text area is narrower (~324pt total, ~280pt after padding)
+   - CJK titles: 13pt or smaller recommended
+   - Image aspect ratio hint for NanoBanana: [1:1] (396x405pt container)
+   ========================================================================== */
+
+.split-layout-wide {
+  display: flex;
+  width: 720pt;
+  height: 405pt;
+  overflow: hidden;
+  max-width: 720pt;
+}
+
+.split-layout-wide .split-wide-image {
+  flex: 0 0 55%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.split-layout-wide .split-wide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-layout-wide .split-wide-text {
+  flex: 1;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 24pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-layout-wide .split-wide-text h1 {
+  font-size: 13pt;          /* narrower text area, smaller font */
+  font-weight: 700;
+  margin: 0 0 12pt 0;
+  line-height: 1.3;
+}
+
+.split-layout-wide .split-wide-text p {
+  font-size: 11pt;
+  line-height: 1.5;
+  margin: 0 0 8pt 0;
+}
+
+
+/* ==========================================================================
+   3. TEMPLATE: Card Grid (2 columns)
+   ==========================================================================
+   Prevents: card text overflow (#6), bottom overflow (#10)
+
+   Max items: 4 (2x2 grid). For 5+ items, split across slides.
+
+   Usage:
+   <div class="card-grid-2">
+     <div class="card">
+       <div class="card-title"><span>Title</span></div>
+       <p>Description text</p>
+     </div>
+     <!-- repeat up to 4 cards -->
+   </div>
+
+   Notes:
+   - Card title font-size: 12pt max (11pt for Korean+number combos)
+   - Card width has 30% text headroom built in
+   - Body padding 32pt keeps content within 405pt height
+   - Height budget: 32+32(padding) + 30(title) + 18(msg) + 2*(card) + gap
+   ========================================================================== */
+
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10pt;               /* pattern #10: tight gap prevents overflow */
+}
+
+.card-grid-2 .card {
+  padding: 14pt;            /* pattern #10: reduced from 18pt */
+  border-radius: 12pt;
+  box-sizing: border-box;
+  overflow: hidden;         /* safety: clip any overflow */
+}
+
+.card-grid-2 .card .card-title {
+  font-size: 12pt;          /* pattern #6: max 12pt for CJK safety */
+  font-weight: 700;
+  margin: 0 0 6pt 0;
+  line-height: 1.3;
+}
+
+.card-grid-2 .card p {
+  font-size: 10pt;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   4. TEMPLATE: Card Grid (3 columns)
+   ==========================================================================
+   Prevents: card text overflow (#6), bottom overflow (#10)
+
+   Max items: 3 (single row only). For 4+ items, use 2-column or split.
+
+   Usage:
+   <div class="card-grid-3">
+     <div class="card-sm">
+       <div class="card-sm-title"><span>Title</span></div>
+       <p>Description</p>
+     </div>
+     <!-- repeat up to 3 cards -->
+   </div>
+
+   Notes:
+   - Smaller padding than 2-column to fit 3 cards
+   - Single row only — stacking 2 rows will overflow
+   ========================================================================== */
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8pt;
+}
+
+.card-grid-3 .card-sm {
+  padding: 10pt;            /* pattern #10: compact padding for 3-col */
+  border-radius: 10pt;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-grid-3 .card-sm .card-sm-title {
+  font-size: 11pt;
+  font-weight: 700;
+  margin: 0 0 4pt 0;
+  line-height: 1.3;
+}
+
+.card-grid-3 .card-sm p {
+  font-size: 9pt;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   5. TEMPLATE: CSS Grid Table
+   ==========================================================================
+   Prevents: column misalignment (#17), padding mismatch (#19)
+
+   MUST use fixed pt column widths, NOT fr or %.
+   Header row MUST have a background color (critical for column anchoring).
+   Alternating row backgrounds recommended for shape anchoring.
+
+   Usage:
+   <div class="grid-table" style="grid-template-columns: 120pt 150pt 150pt 150pt;">
+     <div class="grid-th"><span>Header 1</span></div>
+     <div class="grid-th"><span>Header 2</span></div>
+     <div class="grid-th"><span>Header 3</span></div>
+     <div class="grid-th"><span>Header 4</span></div>
+
+     <div class="grid-td"><span>Cell</span></div>
+     <div class="grid-td"><span>Cell</span></div>
+     <div class="grid-td"><span>Cell</span></div>
+     <div class="grid-td"><span>Cell</span></div>
+
+     <div class="grid-td alt"><span>Cell</span></div>
+     <div class="grid-td alt"><span>Cell</span></div>
+     <div class="grid-td alt"><span>Cell</span></div>
+     <div class="grid-td alt"><span>Cell</span></div>
+   </div>
+
+   Notes:
+   - Column widths MUST be fixed pt values (e.g., 120pt 200pt 200pt)
+   - Total column widths should not exceed (720pt - 2*body_padding)
+   - All cell content MUST be wrapped in <span> tags
+   - Header background = column anchor for html2pptx alignment
+   - .alt rows provide additional anchoring via background shapes
+   ========================================================================== */
+
+.grid-table {
+  display: grid;
+  /* grid-template-columns: set via inline style with fixed pt values */
+  gap: 0;
+  width: 100%;
+}
+
+.grid-table .grid-th {
+  background: #1E293B;      /* dark header = strong column anchor */
+  color: #FFFFFF;
+  font-size: 10pt;
+  font-weight: 700;
+  padding: 8pt 10pt;
+  box-sizing: border-box;
+}
+
+.grid-table .grid-th span {
+  display: inline;
+}
+
+.grid-table .grid-td {
+  font-size: 10pt;
+  padding: 7pt 10pt;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.grid-table .grid-td span {
+  display: inline;
+}
+
+.grid-table .grid-td.alt {
+  background: #F5F5F4;     /* alternating row = additional shape anchor */
+}
+
+
+/* ==========================================================================
+   6. TEMPLATE: Full Background Image + Text Overlay
+   ==========================================================================
+   Prevents: invisible text (#14), low contrast (#7), WCAG failure (#16)
+
+   Uses SOLID color overlay — NOT linear-gradient (PPTX incompatible).
+   Uses <img> tag positioned absolutely, not background-image on div.
+
+   Usage:
+   <body style="margin:0; padding:0; overflow:hidden;">
+     <img src="assets/slide-NN-bg.png" class="bg-image" alt="">
+     <div class="bg-overlay"></div>
+     <div class="bg-content">
+       <h1>Title Text</h1>
+       <p>Subtitle or body text</p>
+     </div>
+   </body>
+
+   Notes:
+   - Overlay uses rgba solid color with high opacity (0.7+)
+   - DO NOT use linear-gradient for the overlay (pattern #14)
+   - All text gets text-shadow for extra readability safety
+   - NanoBanana prompt should include "dark moody atmosphere" for bg images
+   ========================================================================== */
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 720pt;
+  height: 405pt;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 720pt;
+  height: 405pt;
+  background: rgba(0, 0, 0, 0.7);   /* pattern #7: high opacity for contrast */
+  /* DO NOT use linear-gradient here — pattern #14 */
+  z-index: 1;
+}
+
+.bg-content {
+  position: relative;
+  z-index: 2;
+  padding: 40pt;
+  box-sizing: border-box;
+  width: 720pt;
+  height: 405pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-content h1 {
+  color: #FFFFFF;
+  font-size: 24pt;
+  font-weight: 700;
+  margin: 0 0 12pt 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);  /* pattern #7: readability */
+}
+
+.bg-content p {
+  color: #FFFFFF;
+  font-size: 14pt;
+  margin: 0 0 8pt 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================================================
+   7. TEMPLATE: Badge / Tag
+   ==========================================================================
+   Prevents: number wrapping (#3), CJK text wrapping (#1)
+
+   Usage:
+   <div class="badge"><span>01</span></div>
+   <div class="tag"><span>Category</span></div>
+
+   Notes:
+   - min-width 40pt ensures 2-digit numbers never wrap
+   - white-space:nowrap prevents any line breaking
+   - For CJK text badges, increase min-width to 48pt
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40pt;          /* pattern #3: 2-digit numbers need 40pt+ */
+  height: 28pt;
+  padding: 4pt 10pt;
+  border-radius: 14pt;
+  font-size: 11pt;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;       /* pattern #1, #3: never wrap */
+  box-sizing: border-box;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40pt;
+  padding: 4pt 12pt;
+  border-radius: 8pt;
+  font-size: 9pt;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   8. TEMPLATE: Checklist / List
+   ==========================================================================
+   Prevents: bottom overflow (#10)
+
+   Max items: 5. For 6+ items, split across slides.
+
+   Usage:
+   <div class="checklist">
+     <div class="check-item">
+       <div class="check-num"><span>1</span></div>
+       <div class="check-body">
+         <div class="check-title"><span>Item title</span></div>
+         <p>Item description text here</p>
+       </div>
+     </div>
+     <!-- repeat up to 5 items -->
+   </div>
+
+   Height budget (5 items, body padding 32pt top+bottom):
+     32 + 32 (body padding) + 30 (slide title) + 18 (subtitle)
+     + 5 * ~50pt (item) + 4 * 7pt (gap) = ~394pt < 405pt
+   ========================================================================== */
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 7pt;                 /* pattern #10: tight gap for 5 items */
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10pt;
+  padding: 10pt;            /* pattern #10: reduced internal padding */
+  border-radius: 8pt;
+  box-sizing: border-box;
+}
+
+.check-item .check-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28pt;
+  height: 28pt;
+  border-radius: 14pt;
+  font-size: 11pt;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;       /* pattern #3: prevent number wrapping */
+  flex-shrink: 0;
+}
+
+.check-item .check-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.check-item .check-title {
+  font-size: 12pt;           /* pattern #10: reduced from 13pt */
+  font-weight: 700;
+  margin: 0 0 2pt 0;
+  line-height: 1.3;
+}
+
+.check-item .check-body p {
+  font-size: 9pt;            /* pattern #10: compact description */
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   UTILITY: Body Base (apply to all slides)
+   ==========================================================================
+   Standard body setup for 720x405pt slides with PPTX-safe defaults.
+
+   Usage: Apply to <body> tag of every slide HTML.
+   ========================================================================== */
+
+.slide-body {
+  margin: 0;
+  padding: 32pt;             /* pattern #10: safe default (not 40pt) */
+  width: 720pt;
+  height: 405pt;
+  box-sizing: border-box;
+  overflow: hidden;           /* prevent any content from exceeding slide */
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+}

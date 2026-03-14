@@ -326,6 +326,45 @@ async function inspectSlide(page, fileName, slidesDir) {
   };
 }
 
+/**
+ * Programmatic API for validate-slides.
+ * @param {string} slidesDir - Path to directory containing slide-*.html files
+ * @returns {Promise<{ errors: string[], warnings: string[], passed: boolean }>}
+ */
+export async function validateSlides(slidesDir) {
+  const absDir = resolve(process.cwd(), slidesDir);
+  const slideFiles = await findSlideFiles(absDir);
+  if (slideFiles.length === 0) {
+    return { errors: [`No slide-*.html files found in: ${absDir}`], warnings: [], passed: false };
+  }
+
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({ viewport: { width: 1920, height: 1080 } });
+  const page = await context.newPage();
+  const errors = [];
+  const warnings = [];
+
+  try {
+    for (const slideFile of slideFiles) {
+      try {
+        const result = await inspectSlide(page, slideFile, absDir);
+        for (const issue of result.critical) {
+          errors.push(`❌ ERROR [${slideFile}] ${issue.code}: ${issue.message}`);
+        }
+        for (const issue of result.warning) {
+          warnings.push(`⚠️  WARN  [${slideFile}] ${issue.code}: ${issue.message}`);
+        }
+      } catch (error) {
+        errors.push(`❌ ERROR [${slideFile}] validation-error: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    }
+  } finally {
+    await browser.close();
+  }
+
+  return { errors, warnings, passed: errors.length === 0 };
+}
+
 async function main() {
   const options = parseCliArgs(process.argv.slice(2));
   if (options.help) {

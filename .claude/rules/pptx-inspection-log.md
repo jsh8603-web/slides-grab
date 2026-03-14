@@ -1,7 +1,13 @@
 # PPTX 검사 기록
 
-PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이슈 패턴을 HTML 생성/수정에 반영한다.
+Step 2(HTML 생성), Step 2.5(PPT MCP 사전 검증), Step 6(PPTX 생성) 시작 전 반드시 이 파일을 읽고, 기존 이슈 패턴을 반영한다.
 검사 Phase 완료 후 발견/수정 내용을 이 파일에 추가한다.
+
+### 패턴 번호 규칙 (Append-Only)
+
+- 새 패턴은 **마지막 번호 + 1**로 추가 (현재 마지막: #20)
+- 기존 번호를 재배정하거나 중간에 삽입 금지 — 다른 문서(`presentation-flow.md`, `design-skill/SKILL.md` 등)에서 번호로 참조하므로 변경 시 참조 깨짐
+- 해결된 패턴도 번호를 유지하고 삭제하지 않음 (히스토리 보존)
 
 ---
 
@@ -174,6 +180,177 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 |------|-------------|---------|------|------|
 | 2026-03-13 | manufacturing-kpi-report | 전체(1-10) | 제목만 보이고 카드/리스트/배지 텍스트 전부 누락 | html2pptx.cjs에 리프 DIV → 텍스트 요소 처리 로직 추가 |
 
+### 12. 배경 있는 리프 DIV의 span 텍스트 누락 (Shape 내부 텍스트 미삽입)
+
+**증상**: `<div style="background:..."><span>텍스트</span></div>` 패턴에서 배경 shape은 렌더링되지만 내부 텍스트가 완전히 사라짐. 아이콘 박스, 배지, 태그 등 작은 shape 내부 글자/숫자가 비어 보임
+**영향 범위**: 배경(background) 또는 테두리(border)가 있는 div가 블록 자식(div, p, h1 등) 없이 직접 span/b/i/em 등 인라인 요소만 포함하는 모든 경우
+**근본 원인**: html2pptx.cjs의 shape 추출 로직(line 937-990)에서 배경 있는 div를 shape으로 변환 시 `text: ''`(빈 문자열)로 설정하고 return. 내부 `<span>`은 textTags에 포함되지 않아 별도 텍스트 요소로도 처리되지 않음. 패턴 #11의 리프 DIV 처리는 배경 없는 div만 대상이므로 이 케이스를 놓침
+**수정 (html2pptx.cjs)**: shape 추출 시 리프 div 감지 추가 — 블록 자식이 없고 textContent가 있으면 span/b/i/em에서 텍스트 + 스타일(fontSize, fontFace, color, bold, italic) 추출 → shape의 text에 PptxGenJS 포맷 배열로 삽입. flex align-items/justify-content 감지하여 shape 내 텍스트 정렬(align/valign)도 적용. 자식 요소는 processed에 추가하여 이중 렌더링 방지
+**HTML 작성 시 참고**: 이 수정 후 `<div style="background:..."><span>텍스트</span></div>` 패턴이 정상 변환됨
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | manufacturing-kpi-report | 1 | "Executive Report" 태그 텍스트 미표시 | html2pptx.cjs 리프 shape 텍스트 추출 |
+| 2026-03-13 | manufacturing-kpi-report | 2 | detail-icon 숫자 1-4 미표시 | 동일 |
+| 2026-03-13 | manufacturing-kpi-report | 3 | card-icon P/Q/C/D 글자 미표시 | 동일 |
+| 2026-03-13 | manufacturing-kpi-report | 4 | loss-tag 6개 텍스트 전부 미표시 | 동일 |
+| 2026-03-13 | manufacturing-kpi-report | 8 | bottom-icon ↻ 미표시 | 동일 |
+| 2026-03-13 | manufacturing-kpi-report | 9 | check-num 번호 1-5 미표시 | 동일 |
+| 2026-03-13 | manufacturing-kpi-report | 10 | takeaway-num 번호 1-4 미표시 | 동일 |
+
+### 13. Flex 레이아웃 이미지+텍스트 분할 시 오버플로 (box-sizing 누락)
+
+**증상**: 이미지+텍스트 좌우 분할 레이아웃에서 이미지가 슬라이드 오른쪽 경계(720pt)를 넘어 삐져나옴
+**영향 범위**: `flex: 0 0 50~55%` (이미지) + `flex: 1` (텍스트) 병렬 레이아웃의 모든 슬라이드
+**근본 원인**: CSS flex에서 `flex: 1` 텍스트 div의 padding이 `content-box` (기본값)이면 padding이 flex 할당 폭 바깥으로 추가됨. 예: 이미지 55%=396pt + 텍스트 flex:1=324pt + padding 46pt = 370pt → 총 766pt > 720pt
+**수정 (HTML)**: 3가지 동시 적용 — ① 텍스트 div에 `box-sizing: border-box; min-width: 0;` ② flex 컨테이너 div에 `overflow: hidden; max-width: 720pt;` ③ 이미지 div에 `min-width: 0;`
+**HTML 작성 시 예방**:
+- 이미지+텍스트 병렬 레이아웃의 `flex: 1` div에 반드시 `box-sizing: border-box; min-width: 0;` 적용
+- flex 컨테이너(display: flex 부모) div에 `overflow: hidden;` 적용 (body의 overflow: hidden만으로는 부족)
+- 이미지 div에 `min-width: 0;` 적용 (이미지 intrinsic size가 flex-basis를 넘지 않도록)
+- `flex: 0 0 N%` 이미지 div에도 `overflow: hidden` 적용
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | mesozoic-dinosaurs | 3,4,5,6,8 | 이미지가 720pt 경계 밖으로 넘침 | 텍스트 div에 box-sizing: border-box; min-width: 0 추가 |
+| 2026-03-13 | mesozoic-dinosaurs | 3,4,5,6,8,9,10,11,12,13,15 | box-sizing만으로 브라우저 에디터에서 오버플로 미해소 | flex 컨테이너에 overflow: hidden + max-width: 720pt, 이미지 div에 min-width: 0 추가 |
+
+### 14. CSS linear-gradient 배경 + 흰색 텍스트 → PPTX에서 텍스트 안 보임
+
+**증상**: `linear-gradient` 배경을 가진 div 안의 흰색(`#FFFFFF`) 텍스트가 PPTX에서 보이지 않음. 배경색이 사라지고 흰색 텍스트만 남아 밝은 배경에 묻힘
+**영향 범위**: `background: linear-gradient(...)` + `color: #FFFFFF` 조합의 모든 요소 (배너, 헤더 바, CTA 등)
+**근본 원인**: html2pptx.cjs가 CSS `linear-gradient`를 PPTX shape fill로 변환하지 않음. gradient는 에러를 발생시키지 않지만(패턴 #4-1), 실제 배경색으로 렌더링되지도 않음. design-skill에도 "CSS gradients: Not supported in PowerPoint conversion" 경고가 있지만 슬라이드 생성 시 위반
+**수정 (HTML)**: `linear-gradient(...)` → 단색 `background: #주색상`으로 교체
+**HTML 작성 시 예방**:
+- **`linear-gradient` + 흰색 텍스트 조합 절대 금지** — PPTX에서 텍스트가 완전히 사라짐
+- gradient가 필요하면 단색 배경으로 대체 (gradient의 시작 색상 사용)
+- 이 규칙은 `rgba()` 배경에도 적용 — `rgba(255,255,255,0.2)` 같은 반투명도 PPTX에서 예측 불가
+**PPT MCP 검사 시 주의**: 프리뷰 썸네일에서 텍스트가 "연하게 보이면" 실제 PowerPoint에서는 안 보일 가능성 높음. 흰색 텍스트가 있는 슬라이드는 배경 shape의 fill 유무를 반드시 확인
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | mesozoic-dinosaurs | 7 | 퀴즈 배너 `linear-gradient(135deg, #3B82F6, #6366F1)` + 흰색 제목/부제 → PPTX에서 안 보임 | `background: #3B82F6` 단색으로 교체 |
+| 2026-03-13 | mesozoic-dinosaurs | 14 | 퀴즈 배너 `linear-gradient(135deg, #F97316, #F59E0B)` + 흰색 제목 → 동일 | `background: #F97316` 단색으로 교체 |
+
+### 15. 이미지 비율 불일치 (Sharp 후처리 폴백)
+
+**증상**: NanoBanana `[3:4]` 비율 힌트로 생성된 이미지가 1920×1080 (16:9)으로 리사이즈되어 찌그러짐. 슬라이드의 세로 이미지 컨테이너에 가로 이미지가 들어가 비율 왜곡
+**영향 범위**: Sharp `dimensions` 맵에 미등록된 비율 힌트를 사용하는 모든 이미지
+**근본 원인**: `generate-images.mjs`의 `optimizeImage()` + 단일 이미지 모드의 `dimensions` 맵에 `"3:4"` 항목이 없어 `dimensions["16:9"]`로 silent fallback
+**수정 (generate-images.mjs)**: ① dimensions 맵에 `3:4`, `2:3` 추가 (총 8개 비율) ② 미등록 비율 시 `console.warn` 경고 + 원본 비율 유지 (16:9 폴백 제거) ③ 생성 완료 시 `{width}×{height} ({ratio})` 해상도 로그 자동 출력
+**HTML 작성 시 예방**: 이미지 생성 로그에서 해상도와 비율 힌트 불일치 확인. 불일치 시 `dimensions` 맵 업데이트 필요
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | mesozoic-dinosaurs | 3,4,8 | `[3:4]` 요청 → 1920×1080 출력 (16:9 폴백) → 세로 컨테이너에 가로 이미지 | generate-images.mjs dimensions 맵에 3:4 추가 + 미등록 비율 경고 |
+
+### 16. WCAG 대비율 미달 (프로그래매틱 감지)
+
+**증상**: 텍스트 색상과 배경 색상의 WCAG 대비율이 낮아 PPTX에서 텍스트가 보이지 않거나 읽기 어려움
+**영향 범위**: 모든 텍스트 요소 — gradient fallback 실패(패턴 #14)뿐 아니라, 밝은 배경+밝은 텍스트, 어두운 배경+어두운 텍스트 등 모든 저대비 조합
+**감지 방법**:
+- **빌드타임**: `html2pptx.cjs`가 변환 시 WCAG 대비율을 자동 계산하여 경고 출력. `convert-native.mjs`가 전체 슬라이드 경고를 summary로 출력
+- **PPT MCP**: `ppt_get_shape_info` (fill color) + `ppt_get_text` (text color)로 프로그래매틱 확인
+**임계값**:
+- < 1.5:1 → **ERROR** (불가시 — 텍스트를 읽을 수 없음)
+- < 4.5:1 → **WARN** (WCAG AA 미달 — 읽기 어려움)
+**근본 원인**: CSS `linear-gradient`가 PPTX에서 단색 fallback으로 변환되지만, fallback 색상 추출 실패 시 배경이 사라짐. 또는 디자인 시 배경-텍스트 대비를 고려하지 않은 경우
+**수정**: HTML에서 `linear-gradient` → 단색 `background`로 교체, 또는 텍스트 색상을 배경과 충분한 대비가 있는 색으로 변경
+**HTML 작성 시 예방**: `linear-gradient` + 흰색 텍스트 절대 금지 (패턴 #14). 모든 텍스트의 배경 대비를 의식적으로 확인
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | mesozoic-dinosaurs | 16 | 하단 박스 `linear-gradient(135deg, #3B82F6, #10B981)` + `color: #FFFFFF` → gradient fallback 후에도 PPTX에서 흰 배경에 흰 텍스트 | `background: #3B82F6` 단색으로 교체 |
+
+### 17. 테이블 컬럼 정렬 틀어짐 (CJK 폭 보정 + center-align 오프셋)
+
+**증상**: 테이블(flex 또는 CSS grid)에서 PPTX 컬럼이 행마다 어긋남. 헤더(배경 있음)와 바디 셀(배경 없음)의 수직 정렬이 깨짐
+**영향 범위**: 배경 있는 셀(shape)과 배경 없는 셀(text)이 혼재하는 모든 테이블형 레이아웃
+**근본 원인 (2단계)**:
+1. **CJK 폭 보정 차등**: 배경 있는 셀은 shape으로 변환되어 원본 위치 유지. 배경 없는 셀은 text로 변환되어 CJK 비율에 따라 +8~20% 폭 보정 → 같은 컬럼인데 행마다 x/w가 달라짐
+2. **center-align 오프셋**: `text-align: center`인 셀은 Chrome이 텍스트 바운딩 박스를 셀 중앙에 배치 → 텍스트 x ≠ 셀 x. Shape의 x는 셀 전체 위치인데 텍스트의 x는 바운딩 박스 위치 → 정확 좌표 비교(±3pt)로는 매칭 불가
+**수정 (html2pptx.cjs)**: `addElements()`에 3단계 **컬럼 정렬 후처리** 추가. 텍스트 요소를 즉시 addText()하지 않고 `pendingText[]`에 수집한 뒤:
+- **Phase 1**: 배경 있는 shape(내장 텍스트 포함)의 (x, w) 좌표를 "컬럼 앵커"로 수집. **confirmed table columns** (ySet.size >= 2)에서만 Y 범위(tableYMin~tableYMax) 계산 — 배지/히어로 등 non-table shape이 Y 범위를 오염시키지 않도록 함
+- **Phase 2 (Containment Snapping)**: 4가지 조건을 **모두** 만족해야 스냅:
+  1. **confirmed column** (ySet.size >= 2) — 단일 Y shape은 테이블이 아님
+  2. **수직 범위 내** — 텍스트 Y가 confirmed columns의 Y 범위 안에 있어야 함 (Y_TOL=0, strict)
+  3. **폭 유사** — 텍스트 원래 폭(origW) ≤ 컬럼 폭 × 1.5
+  4. **높이 유사** — 텍스트 높이 ≤ max shape cell height × 2.0 (히어로 숫자 제외)
+  스냅 시 x/w를 shape 컬럼의 x/w로 교체 + `fit:'shrink'` + `margin:[0,0,0,0]` (패턴 #19 참조)
+- **Phase 3 (Peer Normalization)**: **테이블이 있는 슬라이드에서만** 실행. 테이블 Y 범위 내 unsnapped 텍스트만 대상. 동일 x(±3pt) 그룹 내 3개+ & 다중 y → 그룹 내 최소 x / 최대 right로 통일. **테이블 없는 슬라이드에서는 Phase 3 비활성** (패턴 #20 참조)
+
+**⚠️ HTML 테이블 작성 필수 규칙 (이 패턴 재발 방지)**:
+1. **CSS grid 사용 필수** — `display: grid; grid-template-columns: 고정pt 고정pt ...` (flex: 1 대신). 고정 컬럼 폭은 Chrome과 PowerPoint 모두 동일 위치 보장
+2. **교차 행 배경 적용 권장** — `.alt { background: #F5F5F4 }` 등으로 짝수 행에 배경을 주면 해당 셀이 shape으로 변환되어 컬럼 앵커 역할. 배경 없는 셀만 있는 컬럼은 앵커가 없어 snapping 불가
+3. **헤더 행에 반드시 배경 적용** — 헤더 배경이 모든 컬럼의 기준 앵커가 됨
+4. **셀 내 텍스트는 `<span>` 래핑** — `<div class="cell"><span>텍스트</span></div>` 패턴. div가 배경 있으면 shape+텍스트, 없으면 leaf div→텍스트 요소로 처리
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | coupang-investment-report | 10 | CSS grid 4열 비교표 — 배경 없는 셀이 CJK+center 보정으로 컬럼 어긋남 | html2pptx.cjs: containment snapping (텍스트 중심점 기반 매칭) |
+| 2026-03-13 | coupang-investment-report | 7 | 1차 containment snapping이 제목까지 스냅 → 제목 레이아웃 깨짐 | Y 범위 체크 + 폭 비교 체크 추가로 테이블 셀만 스냅 |
+| 2026-03-13 | coupang-investment-report | 10 | 테이블 1열(비교 항목) 좌측 정렬 미세 차이 — inset vs margin 불일치 | Phase 2 스냅 시 margin:[0,0,0,0] 적용 (패턴 #19) |
+| 2026-03-13 | coupang-investment-report | 10 | "20.7%" + "1위 역전" 겹침 — tableYMin이 비테이블 shape(배지)에서 계산되어 hero 요소가 테이블 범위 안으로 포함 | Phase 1: tableYMin/tableYMax를 confirmed columns에서만 계산 |
+
+### 18. 이미지+텍스트 50% 분할 레이아웃에서 제목 잘림
+
+**증상**: 좌우 50:50 이미지+텍스트 분할에서 긴 한글 제목이 텍스트 영역 오른쪽 경계를 넘어 잘림
+**영향 범위**: `flex: 0 0 50%` (이미지) + `flex: 1` (텍스트) 병렬 레이아웃의 긴 제목
+**근본 원인**: 텍스트 영역 실제 폭 ≈ 316pt (360pt - padding 44pt). 한글 16pt × 25자 ≈ 280pt → CJK +20% 보정 후 ~336pt > 316pt → 오른쪽 잘림
+**수정 (HTML)**: 제목 font-size 16pt → 14pt로 축소
+**HTML 작성 시 예방**: 50% 분할 레이아웃의 텍스트 영역에서 한글 제목은 14pt 이하 사용. 15자 이상 한글 제목은 font-size를 1~2pt 추가 축소하거나 줄바꿈 허용
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | coupang-investment-report | 11 | "$1.2B 바우처와 대만 투자 손실이 2026년 이익을 압박한다" 제목 오른쪽 잘림 | font-size 16pt → 14pt |
+
+### 19. 테이블 셀 내부 패딩 불일치 (PptxGenJS `inset` 무효 속성)
+
+**증상**: 같은 테이블 컬럼인데 배경 있는 셀(shape)과 배경 없는 셀(text)의 좌측 정렬이 ~3.6pt 어긋남. 확대하면 보이지만 MCP 프리뷰 축소 해상도에서는 감지 불가
+**영향 범위**: shape(margin:[0,0,0,0])과 text element가 혼재하는 모든 테이블 레이아웃
+**근본 원인**: html2pptx.cjs에서 shape에는 `margin: [0, 0, 0, 0]` (유효), text에는 `inset: 0` (무효)을 설정. **PptxGenJS는 `inset` 속성을 인식하지 않아 silently 무시** → text element에 기본 내부 패딩(~3.6pt/0.05")이 적용되어 shape과 좌측 정렬이 불일치
+**수정 (html2pptx.cjs)**: Phase 2 containment snapping에서 스냅된 text element에 `margin: [0, 0, 0, 0]` 적용. 전역 적용 시 제목 등 비테이블 텍스트 레이아웃이 깨지므로 **테이블 셀로 판정된 텍스트에만** 적용
+**검사 시 주의**: MCP 프리뷰 썸네일(~960px 폭)에서는 3-4pt 차이를 감지 불가. **테이블이 있는 슬라이드는 `ppt_get_shape_info`로 shape/text의 margin 속성을 프로그래매틱으로 비교**하거나, PowerPoint에서 직접 확대(200%+) 확인 필요
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | coupang-investment-report | 10 | 1열 "비교 항목" 라벨들이 헤더 대비 ~3.6pt 오른쪽으로 밀림 | Phase 2 스냅에 margin:[0,0,0,0] 추가 |
+
+### 20. Phase 3 Peer Normalization이 비테이블 텍스트를 그룹화하여 폭 오버플로
+
+**증상**: 테이블이 없는 슬라이드에서 제목(h1), 히어로 숫자, 캡션, 비교 문구 등이 전부 full width(720pt)로 확장되어 좌측 패딩 밖으로 삐져나옴
+**영향 범위**: 테이블이 없고, 같은 X에 3개+ 텍스트 요소가 있는 모든 슬라이드 (대부분의 비테이블 슬라이드)
+**근본 원인**: Phase 3 Peer Normalization이 테이블 유무와 무관하게 모든 unsnapped 텍스트를 origX 기준으로 그룹화. 제목+히어로+캡션이 모두 body padding 위치(~32pt)에 있어 하나의 그룹으로 묶임 → CJK 폭 보정으로 확장된 제목의 넓은 width가 전체 그룹에 전파
+**수정 (html2pptx.cjs)**: Phase 3을 **테이블이 있는 슬라이드에서만** 실행 (tableColumns.length >= 2). 테이블이 없으면 Phase 3 후보를 빈 배열로 설정하여 normalization 건너뜀
+
+**발생 사례**:
+| 날짜 | 프레젠테이션 | 슬라이드 | 이슈 | 수정 |
+|------|-------------|---------|------|------|
+| 2026-03-13 | coupang-investment-report | 5 | h1 "WOW 회원이 해지하지 않는 이유..." 제목이 left=0, width=720으로 확장 → 배지(left=32) 밖으로 삐져나옴 | Phase 3을 테이블 슬라이드에서만 실행하도록 변경 |
+
+---
+
+## 검사 프로세스 한계 및 개선사항
+
+### MCP 프리뷰 해상도 한계
+
+PPT MCP `ppt_get_slide_preview`는 ~960px 폭의 썸네일을 반환한다. 이 해상도에서 **감지 가능한 최소 차이는 ~8-10pt**. 이하의 미세 차이(3-4pt 패딩, 1-2pt 정렬 오프셋)는 프리뷰만으로 감지 불가.
+
+**대응 전략**:
+1. **테이블/그리드 슬라이드는 프리뷰 외 추가 검증 필수**:
+   - `ppt_get_shape_info`로 shape과 text element의 x/w/margin 수치 비교
+   - 동일 컬럼 내 shape.x와 text.x의 차이가 0.03"(~2pt) 이상이면 이슈로 판정
+2. **축소 프리뷰에서 "아마 괜찮을 것" 판단 금지** (기존 패턴 #14 규칙과 동일 적용 범위 확대)
+3. **알려진 감지 불가 이슈 목록**: inset/margin 불일치(#19), 미세 CJK 폭 차이(#1 경미 케이스), 소수점 좌표 반올림 차이
+
 ---
 
 ## 검사 통과 기록
@@ -187,3 +364,11 @@ PPTX 생성 Phase (Step 6) 시작 전 반드시 이 파일을 읽고, 기존 이
 | 2026-03-13 | triassic-dinosaurs-v2 | 10 | PowerPoint 확인 → 카드 텍스트 오버플로 발견 (패턴 #9) | 슬라이드 3,8에서 텍스트가 카드 밖으로 넘침. html2pptx.cjs에 부모 shape 클램핑 추가하여 수정 |
 | 2026-03-13 | triassic-dinosaurs-v2 | 10 | 클램핑 수정 후 재변환 전체 통과 | PowerPoint MCP 프리뷰로 슬라이드 2,3,5,7,8,10 확인. 모든 텍스트가 카드 경계 내 정상 렌더링 |
 | 2026-03-13 | manufacturing-kpi-report | 10 | 텍스트 누락 발견 → 수정 후 통과 | 패턴#11: 리프DIV 텍스트 전체 누락 → html2pptx.cjs 리프DIV 처리 추가. 패턴#10: 슬라이드3,9 하단 오버플로. 패턴#4: 슬라이드1,10 배경이미지 변환 에러. PPT MCP로 전체 10장 검사 통과 |
+| 2026-03-13 | manufacturing-kpi-report | 10 | 재검사: 패턴#12 발견 → 수정 후 통과 | 배경 있는 리프 div의 span 텍스트 미삽입 (슬라이드 1,2,3,4,8,9,10 총 7장 영향). html2pptx.cjs에 리프 shape 텍스트 추출 + align/valign 적용. PPT MCP 전체 10장 프리뷰 확인 통과 |
+| 2026-03-13 | mesozoic-dinosaurs | 16 | 패턴#13 발견 → HTML 수정 후 전체 통과 | flex 병렬 레이아웃 box-sizing 누락으로 이미지 오버플로 (슬라이드 3,4,5,6,8). box-sizing: border-box 추가. PPT MCP 전체 16장 프리뷰 확인 통과 |
+| 2026-03-13 | mesozoic-dinosaurs | 16 | 패턴#13 추가 수정 → 전체 통과 | box-sizing만으로 브라우저 에디터 오버플로 미해소 → flex 컨테이너에 overflow: hidden + max-width: 720pt, 이미지 div에 min-width: 0 추가. PPT MCP 전체 11개 수정 슬라이드 프리뷰 확인 통과 |
+| 2026-03-13 | mesozoic-dinosaurs | 16 | 패턴#15 수정 후 재변환 전체 통과 | 3:4 이미지 3장 재생성 (1080×1440 정상), generate-images.mjs dimensions 맵 수정. PPT MCP 전체 16장 프리뷰 확인 — 오버플로/잘림/누락 없음 |
+| 2026-03-13 | mesozoic-dinosaurs | 16 | 패턴#14 수정 후 재변환 전체 통과 | 슬라이드 7,14 linear-gradient → 단색 배경 교체. PPT MCP 프리뷰 확인 — 제목 텍스트 선명 |
+| 2026-03-13 | coupang-investment-report | 14 | 패턴#17 1차 수정 (좌표 비교) 실패 → 2차 수정 (containment snapping) 성공 | 1차: origX vs col.x 비교 → center-align 오프셋으로 매칭 실패. 2차: 텍스트 중심점이 shape 범위 내인지 containment 검사 + x/w를 shape 컬럼으로 교체. PPT MCP 프리뷰 확인 — 테이블 4열 전부 정렬 정상 |
+| 2026-03-13 | coupang-investment-report | 14 | 패턴#17 3차 수정 — Y 범위+폭 비교 체크 추가. 패턴#19 margin 적용 | containment snapping이 제목까지 스냅하는 regression 수정. Y 범위·폭 비교·컬럼 수 3중 조건으로 테이블 셀만 정확히 판별. 슬라이드 7 제목 정상, 슬라이드 10 테이블 정렬 정상 |
+| 2026-03-13 | coupang-investment-report | 14 | 패턴#17 최종 수정 — tableYMin을 confirmed columns에서만 계산 + Phase 3 비테이블 비활성(#20) | 근본 원인: 배지 shape이 tableYMin을 오염 → hero 요소가 테이블 범위 안으로 포함되어 스냅됨. Phase 3이 비테이블 슬라이드에서 제목을 full width로 확장(#20). `ppt_list_shapes`로 슬라이드 5/7/10 좌표 검증 완료 |
