@@ -163,8 +163,8 @@ node scripts/generate-images.mjs \
    ```
    - ERROR 발견 시 자동 수정 → 재검증. 사용자 질문 없이 처리
    - WARN은 맥락 판단하여 수정 여부 결정
-   - Preflight는 9개 안티패턴을 밀리초 단위로 정적 검사 (PF-01~PF-08)
-   - `--full` 플래그로 Playwright 기반 심층 검사도 가능 (오버플로, CJK 폰트 크기)
+   - Preflight는 11개 규칙을 밀리초 단위로 검사 (PF-01~PF-08 정적 + PF-09~PF-11 크로스슬라이드 일관성)
+   - `--full` 플래그로 Playwright 기반 동적 검사 추가 (PF-03 overflow, PF-08 CJK 폰트 크기, ~30초 소요)
 9. 생성 완료 후 자동으로 Step 2.5 진행 (끊기지 않게)
 
 ## Step 2.5 — 자동화 검증 + MCP 시각 확인 (필수 — 건너뛰기 금지)
@@ -372,9 +372,9 @@ node scripts/convert-native.mjs --slides-dir slides/프레젠테이션명 --outp
    ```
 
 1. **프로그래매틱 검증 결과 확인** — `convert-native.mjs` 출력에서:
-   - Preflight ERROR/WARN 확인 (Step 6-2에서 이미 실행됨)
-   - 빌드타임 CONTRAST ERROR/WARN 확인
-   - XML Validator ERROR/WARN 확인 (오버플로, 정렬, 대비, 빈 텍스트)
+   - `❌ Preflight found N ERROR(s)` / `⚠️ Preflight found N warning(s)` 확인 (PF-01~PF-11)
+   - `⚠️ N contrast issue(s) found` 확인: `[file] <tag> "text": color on bg (ratio:1) ERROR/WARN`
+   - `❌ Post-validation found N ERROR(s)` / `⚠️ Post-validation found N warning(s)` 확인 (VP-01~VP-04)
    - 구조적 검사는 XML validator가 담당 — MCP `ppt_list_shapes` 좌표 비교 불필요
 
 2. **MCP 시각 품질 확인** — 다음 경우에만 실행:

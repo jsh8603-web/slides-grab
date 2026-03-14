@@ -338,6 +338,22 @@ Step 2(HTML 생성), Step 2.5(PPT MCP 사전 검증), Step 6(PPTX 생성) 시작
 
 ---
 
+## 현재 검사 파이프라인 (convert-native.mjs 3단계)
+
+`convert-native.mjs` 실행 시 아래 3단계가 자동 순차 실행된다. 각 단계 ERROR 시 중단.
+
+| Phase | 스크립트 | 규칙 | 속도 | 감지 대상 |
+|-------|---------|------|------|----------|
+| 1 | preflight-html.js | PF-01~PF-11 | ~1초 (정적), ~30초 (--full) | gradient+흰텍스트, box-sizing 누락, overflow, CJK 폰트, 크로스슬라이드 일관성 |
+| 2 | html2pptx.cjs (변환 중) | WCAG 대비 | 슬라이드당 ~0.8초 | 텍스트-배경 대비 < 4.5:1 (WARN), < 1.5:1 (ERROR) |
+| 3 | validate-pptx.js | VP-01~VP-04 | ~2초 | 경계 초과, 컬럼 정렬, 빈 텍스트, 대비 |
+
+- `--full` 플래그: Phase 1 후 Playwright 동적 검증 추가 (Phase 1.5, PF-03 overflow + PF-08 CJK)
+- `--skip-preflight`: Phase 1/1.5 건너뜀
+- `--skip-validation`: Phase 3 건너뜀
+
+---
+
 ## 검사 프로세스 한계 및 개선사항
 
 ### MCP 프리뷰 해상도 한계
