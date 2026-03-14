@@ -100,7 +100,9 @@ PPTX structure validation
 python .claude/skills/pptx-skill/ooxml/scripts/validate.py unpacked_dir --original presentation.pptx
 ```
 
-## Reference Documents
+## Reference Documents (에러 시에만 참조)
+
+정상 변환 시 아래 문서 Read 불필요. 변환 에러 발생 시에만 참조한다.
 
 - [html2pptx.md](html2pptx.md) - HTML to PPTX conversion detailed guide
 - [ooxml.md](ooxml.md) - Office Open XML technical reference

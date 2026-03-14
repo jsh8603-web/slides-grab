@@ -50,6 +50,17 @@ Use **pptx-skill** (`.claude/skills/pptx-skill/SKILL.md`).
 
 ---
 
+## 참조 파일 로드 규칙
+
+| 상황 | auto-loaded (항상 보임) | 스킬 | 추가 Read (조건부) |
+|------|----------------------|------|-------------------|
+| 프레젠테이션 새로 만들기 | prevention-rules + flow | presentation → plan → design | design-modes.md, nanoBanana-guide.md |
+| HTML 슬라이드 생성 (Step 2) | prevention-rules | design-skill | media-guide.md (차트/이미지 시), design-modes.md |
+| HTML 즉석 수정 (스킬 미호출) | prevention-rules | — | — |
+| PPTX 변환 (Step 6) | prevention-rules | pptx-skill | html2pptx.md (에러 시), pptx-inspection-log.md |
+| 레이아웃 버그 수정 | prevention-rules | — | pptx-inspection-log.md (패턴 기록) |
+| 검증 규칙 추가 | prevention-rules | — | pptx-inspection-log.md (매핑 테이블) |
+
 ## Rules
 
 1. **Always follow the stage order**: Plan → Design → Export.

@@ -205,3 +205,53 @@ MCP의 프로그래매틱 도구(`ppt_get_table_data`, `ppt_get_shape_info`, `pp
 | 2026-03-14 (1차) | samsung-investment-report | 18 | 패턴#21,#22,#23 수정 후 통과 | HEX 대문자(#21), margin 배열 순서(#22), actsAsText parseInlineFormatting 복원(#23). COM 300DPI Export로 슬라이드 1,6,16 시각 확인 — 텍스트 가시성/정렬 정상. 슬라이드1 CONTRAST ERROR 5건은 배경이미지+overlay 패턴의 false positive (표지 텍스트 정상 표시) |
 | 2026-03-14 (2차) | samsung-investment-report | 18 | 패턴#24 수정 후 통과 | 슬라이드6 도넛 차트 범례 span→p 변경. COM 300DPI Export로 슬라이드6 시각 확인 — 범례 텍스트 3개 정상 표시 |
 | 2026-03-14 (3차) | lg-hynix-investment-strategy | 15 | 패턴#25,#26,#27 수정 후 통과 | 슬라이드5 도넛→PNG img(#25), 슬라이드10 국기emoji→PNG img(#26), 슬라이드13 3열 CJK 텍스트 축소(#27). COM 300DPI Export로 시각 확인 — 도넛 원형/국기/텍스트 정상 |
+
+---
+
+## Preflight 자동 감지 ID 매핑 (IL ↔ PF ↔ VP)
+
+디버깅 및 검증 규칙 추가 시 참조. `html-prevention-rules.md`에서 이동됨.
+
+| IL 패턴 | PF 규칙 | VP 규칙 | 감지 방식 |
+|---------|---------|---------|----------|
+| IL-14,16 | PF-01 | VP-04 | 정적 regex + XML 대비 |
+| IL-13 | PF-02,06 | — | 정적 regex |
+| IL-04 | PF-04,05 | — | 정적 regex |
+| IL-07 | PF-07,16 | — | 정적 regex (PF-07: 태그 검사, PF-16: text-shadow 누락) |
+| IL-10 | PF-03 | VP-01 | Playwright(--full) + XML 오버플로 |
+| IL-06 | PF-08 | — | Playwright(--full, 전체 computed background 스캔) |
+| IL-17 | — | VP-02 | XML 컬럼 정렬 |
+| — | PF-09~11 | — | 크로스 슬라이드 일관성 |
+| — | — | VP-05 | XML 테이블 빈 셀 감지 |
+| — | — | VP-06 | XML 테이블 일관성 (열 수, 공란 비율) |
+| — | — | VP-07 | XML Shape 그리드 빈 셀 감지 |
+| — | — | VP-08 | XML fill 있는데 텍스트 없는 shape (빈 카드) |
+| IL-21 | — | — | html2pptx 내부 (HEX 대문자 강제) |
+| IL-22 | — | — | html2pptx 내부 (margin 배열 순서) |
+| IL-23 | — | — | html2pptx 내부 (actsAsText parseInlineFormatting) |
+| IL-24 | PF-14 | — | 정적 regex (배경 자식 div + 형제 span 감지) |
+| IL-25 | PF-13 | — | 정적 regex (border-radius:50% + border 감지) |
+| IL-26 | PF-12 | — | 정적 regex (국기 이모지 감지) |
+| IL-27 | PF-15 | — | 정적 regex (3열+ 그리드 CJK 텍스트 크기) |
+| — | PF-17 | — | 정적 regex (미지원 CSS transform 감지) |
+| — | PF-18 | — | Playwright(--full) 요소 겹침 감지 (AABB 교집합 > 20%) |
+| — | PF-19 | — | 정적 regex (미등록 폰트 감지) |
+| IL-10 | PF-20 | — | Playwright(--full) 하단 마진 침범 (369-405pt) |
+| IL-15 | PF-21 | — | Playwright(--full) 이미지 해상도/비율 검증 |
+| — | PF-22 | — | 정적 regex (미지원 CSS: backdrop-filter, clip-path 등) |
+| IL-01,02,06,18,27 | PF-23 | — | Playwright(--full) CJK 텍스트 밀도 + 20% 보정 |
+| IL-14,16 | PF-24 | — | 크로스 슬라이드 배경-텍스트 색상 대비 일관성 |
+| — | — | VP-09 | XML fit:shrink 텍스트 밀도 초과 감지 |
+| IL-17 | — | VP-10 | XML shape 간 간격 일관성 (행 gap stddev > 5pt) |
+| — | — | VP-11 | XML reading order vs 시각적 순서 불일치 |
+| IL-11,12 | — | VP-12 | XML 빈 슬라이드 감지 (shape < 2 또는 텍스트 없음) |
+| — | — | VP-13 | PPTX 미디어 파일 크기 (개별 > 5MB, 합계 > 20MB) |
+
+---
+
+## 변환기 내부 수정 이력 (HTML 측 영향 없음)
+
+html2pptx.cjs 내부 버그 수정으로 HTML 작성 규칙에는 영향 없지만, 디버깅 시 참조:
+- **IL-21**: `rgbToHex()` 대문자 강제 — PptxGenJS가 소문자 HEX 미인식 [2026-03-14]
+- **IL-22**: margin 배열 `[L,T,R,B]` 순서 — PptxGenJS 비표준 매핑 [2026-03-14]
+- **IL-23**: actsAsText에 `parseInlineFormatting()` 복원 — 다중 색상/스팬 보존 [2026-03-14]

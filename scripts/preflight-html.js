@@ -5,6 +5,7 @@
  * Usage:
  *   node scripts/preflight-html.js --slides-dir slides/presentation-name
  *   node scripts/preflight-html.js --slides-dir slides/presentation-name --full
+ *   node scripts/preflight-html.js --slides-dir slides/presentation-name --full --summary
  *
  * Phase 1 (default): Static regex/string checks — fast, no browser.
  * Phase 2 (--full):  Playwright checks for overflow and CJK font-size.
@@ -752,14 +753,16 @@ async function main() {
   const args = process.argv.slice(2);
   let slidesDir = null;
   let full = false;
+  let summary = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--slides-dir' && args[i + 1]) slidesDir = args[++i];
     if (args[i] === '--full') full = true;
+    if (args[i] === '--summary') summary = true;
   }
 
   if (!slidesDir) {
-    console.error('Usage: node scripts/preflight-html.js --slides-dir <dir> [--full]');
+    console.error('Usage: node scripts/preflight-html.js --slides-dir <dir> [--full] [--summary]');
     process.exit(1);
   }
 
@@ -769,8 +772,41 @@ async function main() {
 
   const result = await preflightCheck(slidesDir, { full });
 
-  for (const line of [...result.errors, ...result.warnings]) {
-    console.log(line);
+  if (summary) {
+    // --summary: ERROR detailed, WARN aggregated by rule ID
+    for (const line of result.errors) {
+      console.log(line);
+    }
+    if (result.warnings.length > 0) {
+      // Group warnings by rule ID (e.g. "PF-08")
+      const stripAnsi = s => s.replace(/\x1b\[[0-9;]*m/g, '');
+      const warnGroups = new Map();
+      for (const line of result.warnings) {
+        const plain = stripAnsi(line);
+        const idMatch = plain.match(/\] (PF-\d+):/);
+        const fileMatch = plain.match(/\[([^\]]+)\]/);
+        const id = idMatch ? idMatch[1] : 'OTHER';
+        const file = fileMatch ? fileMatch[1] : 'unknown';
+        if (!warnGroups.has(id)) warnGroups.set(id, { files: [], msg: '' });
+        const group = warnGroups.get(id);
+        group.files.push(file);
+        if (!group.msg) {
+          const msgMatch = plain.match(/PF-\d+: (.+)/);
+          group.msg = msgMatch ? msgMatch[1] : '';
+        }
+      }
+      console.log('');
+      for (const [id, group] of warnGroups) {
+        const fileList = group.files.length <= 3
+          ? group.files.join(', ')
+          : `${group.files[0]}~${group.files[group.files.length - 1]}`;
+        console.log(`${YELLOW}${id}: ${group.files.length} slides (${fileList}) — ${group.msg}${RESET}`);
+      }
+    }
+  } else {
+    for (const line of [...result.errors, ...result.warnings]) {
+      console.log(line);
+    }
   }
 
   const total = result.errors.length + result.warnings.length;
