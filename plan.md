@@ -1,168 +1,198 @@
-# HTML/PPTX 프로그래매틱 검증 강화 계획 v2
+# 토큰 최적화 계획 v3
 
-## Context
+## 핵심 원리
 
-현재 파이프라인: PF-01~17 (preflight-html.js) + VP-01~08 (validate-pptx.js) + html2pptx 내부 WCAG 체크.
-IL 패턴 27개 중 대부분에 자동 감지가 있으나, Playwright 동적 검증과 PPTX XML 후검증에 추가 가능한 영역이 있다.
+**rules/** = 매 대화 자동 로드 (토큰 고정 비용)
+**skills/** = 프로세스 트리거 시에만 로드 (온디맨드)
 
-웹 리서치 + 기존 IL 패턴 분석 결과, 아래 13개 방안을 도출했다.
-
----
-
-## 방안 목록
-
-### 1. Playwright 요소 겹침(Overlap) 감지 — PF-18 (--full)
-
-**문제**: 절대 위치(absolute) 요소가 다른 텍스트 위에 겹쳐 가독성 저하. PPTX에서는 z-order가 다르게 적용될 수 있음.
-**근거**: IL-07 (이미지+텍스트 가독성), Playwright issue #34778 (overlap detection 미지원)
-**구현**: `--full` 모드에서 모든 텍스트 요소의 `getBoundingClientRect()` 수집 → 텍스트-텍스트, 이미지-텍스트 간 겹침 면적 계산 → 겹침 > 20% 시 WARN
-**Level**: WARN
-**비용**: 낮음 (기존 Playwright 세션 재사용)
-
-### 2. 폰트 가용성 검증 — PF-19 (정적)
-
-**문제**: HTML에서 사용한 폰트가 PowerPoint에 없으면 Arial 폴백 → 레이아웃 전면 붕괴. Pretendard 같은 웹폰트는 시스템에 설치 안 되어 있을 수 있음.
-**근거**: 리서치 — PptxGenJS는 폰트 임베딩 미지원, PowerPoint가 시스템 폰트로 폴백
-**구현**: HTML `font-family` 파싱 → 허용 폰트 목록(`Pretendard`, `Segoe UI`, `Arial`, `sans-serif` 등)과 대조 → 미등록 폰트 WARN
-**Level**: WARN
-**비용**: 매우 낮음 (regex)
-
-### 3. `fit:"shrink"` 신뢰성 보정 — VP-09
-
-**문제**: PptxGenJS의 `fit:"shrink"`가 PowerPoint에서 즉시 적용 안 됨 (편집/리사이즈 후에만 동작). 텍스트가 shape 경계를 넘어도 shrink가 작동 안 할 수 있음.
-**근거**: PptxGenJS issue #330, #544 — shrink가 편집 이벤트 없이는 미작동
-**구현**: PPTX XML에서 `<a:bodyPr>` autofit 속성 + 텍스트 런 총 길이 추정 → shape 면적 대비 텍스트 밀도 계산 → 밀도 초과 시 WARN ("shrink may not activate without manual edit")
-**Level**: WARN
-**비용**: 중간 (텍스트 길이 × 추정 폰트 크기 → 면적 비교)
-
-### 4. Shape 간 간격 일관성 검증 — VP-10
-
-**문제**: 카드 레이아웃에서 shape 간 gap이 불균일하면 시각적 품질 저하. html2pptx CJK 보정으로 간격이 달라질 수 있음.
-**근거**: IL-17 (컬럼 정렬), IL-13 (flex 오버플로)
-**구현**: 같은 y 높이의 shape 그룹(행) 또는 같은 x의 shape 그룹(열) 식별 → 인접 shape 간 gap 계산 → gap stddev > 임계값 시 WARN
-**Level**: WARN
-**비용**: 중간 (기존 shape 추출 재사용)
-
-### 5. 하단 마진 침범 검증 강화 — PF-20 (--full)
-
-**문제**: 현재 PF-03은 body scrollHeight > clientHeight만 체크. 하단 0.5" 마진 내 콘텐츠는 잡지 못함.
-**근거**: IL-10 (콘텐츠 하단 오버플로), CLAUDE.md "하단 여백 0.5" 이상"
-**구현**: Playwright에서 모든 자식 요소의 `getBoundingClientRect().bottom` 최대값 → 405pt - 36pt(0.5") = 369pt 초과 시 WARN
-**Level**: WARN (369pt 초과), ERROR (405pt 초과 = 기존 PF-03)
-**비용**: 낮음
-
-### 6. 이미지 해상도/비율 검증 — PF-21 (--full)
-
-**문제**: 저해상도 이미지가 프로젝터에서 깨져 보임. 비율 불일치로 이미지 왜곡.
-**근거**: IL-15 (이미지 비율 불일치)
-**구현**: Playwright에서 모든 `<img>` naturalWidth/naturalHeight vs. 렌더링 크기 비교 → 확대율 > 2x 시 WARN (저해상도), 비율 차이 > 5% 시 WARN (왜곡)
-**Level**: WARN
-**비용**: 낮음
-
-### 7. PPTX Reading Order 검증 — VP-11
-
-**문제**: PPTX의 shape 순서(`<p:spTree>` 내 순서)가 시각적 배치와 불일치하면 스크린리더 접근성 저하 + 탭 순서 혼란.
-**근거**: 리서치 — Section508.gov reading order 가이드, PowerPoint 접근성 체커
-**구현**: spTree 내 shape 순서 vs. y→x 좌표 기반 시각적 순서 비교 → 순서 불일치 비율 > 30% 시 WARN
-**Level**: WARN
-**비용**: 낮음 (기존 shape 좌표 활용)
-
-### 8. 미지원 CSS 속성 종합 감지 — PF-22 (정적)
-
-**문제**: html2pptx가 변환할 수 없는 CSS 속성 사용 시 시각적 차이 발생. 현재 PF-17은 transform만 감지.
-**근거**: 리서치 — PptxGenJS 미지원: `backdrop-filter`, `mix-blend-mode`, `clip-path`, `mask`, `filter`(blur/brightness), `writing-mode: vertical`
-**구현**: 미지원 속성 목록 regex 매칭 → 각각 WARN
-**Level**: WARN
-**비용**: 매우 낮음 (regex)
-
-### 9. 텍스트 밀도 사전 계산 (CJK 보정 포함) — PF-23 (--full)
-
-**문제**: PowerPoint의 CJK 글리프 폭이 Chrome보다 15-20% 넓어 줄바꿈 추가 발생 → 세로 오버플로.
-**근거**: IL-01,02,06,09,18,27 (CJK 텍스트 관련 이슈 6개)
-**구현**: Playwright에서 각 텍스트 요소의 `scrollWidth` vs. `clientWidth` 비교 + CJK 비율 × 1.2 보정 → 보정 후 오버플로 예상 시 WARN. 현재 PF-08은 font-size만 체크하지만 이건 실제 텍스트 길이 × 컨테이너 폭 비율까지 검증.
-**Level**: WARN
-**비용**: 중간 (모든 텍스트 요소 순회)
-
-### 10. PPTX 내 빈 슬라이드 감지 — VP-12
-
-**문제**: 변환 실패로 shape가 전혀 없거나 배경만 있는 빈 슬라이드 생성 가능.
-**근거**: IL-11,12 (텍스트 누락 패턴)
-**구현**: 슬라이드당 shape 수 < 2 또는 텍스트 런 총 수 = 0 시 ERROR
-**Level**: ERROR
-**비용**: 매우 낮음
-
-### 11. 크로스 슬라이드 색상 대비 일관성 — PF-24 (정적)
-
-**문제**: 동일 덱에서 밝은 배경 슬라이드와 어두운 배경 슬라이드가 혼재할 때, 텍스트 색상이 한쪽에서 안 보일 수 있음.
-**근거**: IL-14,16 (gradient+흰텍스트), PF-11 (색상 팔레트)
-**구현**: 각 슬라이드의 body background 밝기 분류 (light/dark) → 텍스트 색상이 배경 유형에 부적합한 경우 WARN (예: 어두운 배경에 어두운 텍스트)
-**Level**: WARN
-**비용**: 낮음 (기존 luminance 함수 재사용)
-
-### ~~12. HTML `<style>` 블록 미지원 선택자 감지 — PF-25 (정적)~~ [삭제됨]
-
-**삭제 사유**: html2pptx.cjs는 Playwright `page.evaluate`로 computed styles를 사용하므로 `<style>` 블록 클래스도 정상 처리됨. 전제가 잘못됨.
-
-### 13. PPTX 파일 크기 + 이미지 최적화 검증 — VP-13
-
-**문제**: 고해상도 이미지가 다수 포함되면 PPTX가 수십 MB → 이메일 첨부/공유 불가.
-**근거**: 실무 — 프레젠테이션 공유 시 파일 크기 제한 (Gmail 25MB, Outlook 20MB)
-**구현**: PPTX 내 `ppt/media/` 디렉토리의 이미지 파일 크기 합계 → 총 크기 > 20MB 시 WARN, 개별 이미지 > 5MB 시 WARN
-**Level**: WARN
-**비용**: 매우 낮음 (파일 크기 합산)
+→ rules/ 중 불필요한 **참조 데이터**만 제거하고, **규칙 자체**는 한 곳에 유지
 
 ---
 
-## 우선순위 매트릭스
+## v2에서 발견된 구조적 위험
 
-| 순위 | 방안 | 영향도 | 구현 비용 | 기존 IL 커버 |
-|------|------|--------|----------|-------------|
-| 1 | #10 빈 슬라이드 감지 (VP-12) | 높음 | 매우 낮음 | IL-11,12 |
-| 2 | #5 하단 마진 강화 (PF-20) | 높음 | 낮음 | IL-10 |
-| 3 | #2 폰트 가용성 (PF-19) | 높음 | 매우 낮음 | 신규 |
-| 4 | #9 CJK 텍스트 밀도 (PF-23) | 높음 | 중간 | IL-01,02,06,18,27 |
-| 5 | #8 미지원 CSS 종합 (PF-22) | 중간 | 매우 낮음 | 신규 |
-| 6 | #6 이미지 해상도/비율 (PF-21) | 중간 | 낮음 | IL-15 |
-| 7 | #1 요소 겹침 감지 (PF-18) | 중간 | 낮음 | IL-07 |
-| 8 | #4 Shape 간격 일관성 (VP-10) | 중간 | 중간 | IL-17 |
-| ~~9~~ | ~~#12 style 블록 미지원 (PF-25)~~ | — | — | 삭제됨 (전제 오류) |
-| 10 | #11 크로스 색상 대비 (PF-24) | 낮음 | 낮음 | IL-14,16 |
-| 11 | #13 파일 크기 (VP-13) | 낮음 | 매우 낮음 | 신규 |
-| 12 | #3 fit:shrink 신뢰성 (VP-09) | 낮음 | 중간 | 신규 |
-| 13 | #7 Reading Order (VP-11) | 낮음 | 낮음 | 신규 |
+### 위험 1: 수정 기록 위치 혼란
+
+현재 "수정 기록 의무"는 단순: **3곳 업데이트** (inspection-log + prevention-rules + 스크립트)
+
+v2 방안 1 (WARN을 design-skill로 이동) 적용 시:
+- "이 규칙은 ERROR인가 WARN인가?" 판단 분기가 추가됨
+- ERROR → rules/ 업데이트, WARN → design-skill/ 업데이트
+- **즉석 버그 수정 시 잘못된 파일에 기록하거나 누락할 위험**
+
+### 위험 2: Single Source of Truth 위반
+
+html-prevention-rules.md가 HTML 규칙의 **유일한 출처** 역할:
+- design-skill도 참조, pptx-skill도 참조, 즉석 수정도 참조
+- 규칙을 두 곳에 분산하면 **동기화 실패** 위험
+- 새 규칙 추가 시 "어디에 넣지?" 고민 발생
+
+### 위험 3: 스킬 라우팅 모호
+
+현재: 어떤 단계든 html-prevention-rules.md는 **항상 보임** (auto-loaded)
+분산 후: Step 2에서 WARN은 design-skill 내부, Step 6에서 WARN은... pptx-skill에 없음
+- pptx 변환 에러 디버깅 시 WARN 규칙을 확인하려면 design-skill을 별도로 열어야 함
+
+---
+
+## 수정된 방안 1: 규칙 유지 + 참조 데이터만 이동
+
+**원칙 변경**: 규칙(ERROR+WARN)은 rules/에 **모두 유지** → Single Source of Truth 보존.
+참조 데이터(매핑 테이블, 변환기 이력)만 docs/로 이동 + 규칙 텍스트 압축.
+
+### 이동 대상 (규칙이 아닌 참조 데이터)
+
+| 구분 | 줄 수 | 이동 | 이유 |
+|------|-------|------|------|
+| 매핑 테이블 (PF/VP ↔ IL 대응표) | 35줄 | → docs/pptx-inspection-log.md | 디버깅 참조용, 규칙 준수에 불필요 |
+| 변환기 내부 수정 이력 | 6줄 | → docs/pptx-inspection-log.md | html2pptx.cjs 이력, HTML 작성과 무관 |
+| 레이아웃 템플릿 참조 포인터 | 2줄 | → design-skill에 이미 존재 | 중복 제거 |
+
+### 잔류 (rules/에 유지)
+
+| 구분 | 줄 수 | 이유 |
+|------|-------|------|
+| 수정 기록 의무 | 10줄 | 프로세스 규칙 (항상 필요) |
+| 금지 규칙 (ERROR) 7개 | 9줄 | 변환 실패 방지 |
+| 필수 규칙 (WARN) 12개 | 14줄 | 레이아웃 깨짐 방지 |
+| 테이블 레이아웃 4개 | 5줄 | CSS grid 필수 패턴 |
+| 높이 계산 공식 | 4줄 | 코드 블록 제거, 텍스트만 |
+
+### 압축 (기존 규칙 텍스트 간소화)
+
+높이 계산 코드 블록 (``` ... ```) → 한 줄 수식으로 압축
+
+**결과**: rules/ 100줄 → ~55줄 (**-45줄**)
+**수정 기록 의무**: 변경 없음 — 여전히 "이 파일에 추가" 한 곳
+**스킬 라우팅**: 변경 없음 — 모든 단계에서 rules/ 자동 참조
+
+---
+
+## 방안 2: presentation-flow.md 정리 (v2와 동일)
+
+체크포인트 유지, 단계 요약(presentation-skill과 중복) 제거
+
+**결과**: rules/ 35줄 → ~28줄 (**-7줄**)
+
+---
+
+## 방안 3: 검증 출력 요약 모드 --summary (v2와 동일)
+
+ERROR 상세 출력 + WARN 규칙별 집계+파일 목록
+
+```
+❌ ERROR [slide-03.html] PF-01: linear-gradient with white text
+
+PF-08: 10 slides (slide-04~14) — CJK text in card >11pt
+PF-23: 11 slides (slide-04~15) — CJK text density overflow
+```
+
+**결과**: 검증 출력 -80%
+
+---
+
+## 방안 4: design-skill Chart/Diagram/Image 분리 (v2와 동일)
+
+Chart.js + Mermaid + SVG + Image 가이드 (~186줄) → `design-skill/media-guide.md`
+아웃라인에 차트/다이어그램/이미지가 있을 때만 Read.
+
+**결과**: design-skill 685줄 → ~499줄 (**-186줄**)
+
+### 라우팅 명확화
+
+SKILL.md에 참조 분기 추가:
+```
+## 참조 파일 로드 규칙
+- 차트/다이어그램/이미지 슬라이드 존재 → `media-guide.md` Read
+- PPTX 변환 이슈 디버깅 → `pptx-inspection-log.md` Read
+- 디자인 모드 상세 → `design-modes.md` Read
+- 위 해당 없으면 추가 Read 불필요
+```
+
+---
+
+## 방안 5: pptx-skill 에러 시에만 참조 (v2와 동일)
+
+SKILL.md에 명시: "정상 변환 시 html2pptx.md/ooxml.md Read 불필요, 에러 발생 시에만 참조"
+
+**결과**: 정상 변환 시 -1,051줄
+
+---
+
+## 방안 6: 스킬 중복 제거 — 비-안전 항목만 (v2와 동일)
+
+안전 규칙 반복은 의도적으로 유지. 파일명 규칙, 참조 경로 등 비-안전 중복만 제거.
+
+**결과**: 총 -30줄
+
+---
+
+## 방안 7: --diff 재검사 (v2와 동일)
+
+Phase 3 (크로스 슬라이드)는 전체 유지, Phase 1~2만 diff 대상.
+
+**결과**: 반복 검증 -70%
+
+---
+
+## 스킬 라우팅 매트릭스 (혼란 방지)
+
+각 상황에서 어떤 파일을 참조하는지 명시. 이 매트릭스를 presentation-skill에 추가.
+
+| 상황 | auto-loaded (항상 보임) | 스킬 | 추가 Read (조건부) |
+|------|----------------------|------|-------------------|
+| 프레젠테이션 새로 만들기 | CLAUDE.md + prevention-rules + flow | presentation-skill → plan-skill → design-skill | design-modes.md, nanoBanana-guide.md |
+| HTML 슬라이드 생성 (Step 2) | CLAUDE.md + prevention-rules | design-skill | media-guide.md (차트 시), design-modes.md |
+| HTML 즉석 수정 (스킬 미호출) | CLAUDE.md + prevention-rules | — | — |
+| PPTX 변환 (Step 6) | CLAUDE.md + prevention-rules | pptx-skill | html2pptx.md (에러 시), pptx-inspection-log.md |
+| 레이아웃 버그 수정 | CLAUDE.md + prevention-rules | — | pptx-inspection-log.md (패턴 기록) |
+| 검증 규칙 추가 | CLAUDE.md + prevention-rules | — | pptx-inspection-log.md (매핑 테이블) |
+
+**핵심**: prevention-rules.md는 **모든 상황**에서 auto-loaded → 규칙 누락 없음.
+스킬 미호출 상황(즉석 수정, 버그 수정)에서도 규칙이 보임.
+
+---
+
+## 우선순위
+
+| 순위 | 방안 | 절감 | 퀄리티 위험 | 혼란 위험 |
+|------|------|------|-----------|----------|
+| 1 | **방안 1 (v3)**: 참조 데이터만 이동 + 압축 | **매 대화 -45줄** | NONE | NONE — Single Source 유지 |
+| 2 | **방안 3**: --summary 옵션 | **검증 시 -80%** | LOW | NONE |
+| 3 | **방안 5**: pptx 참조 선택적 로드 | **변환 시 -1,051줄** | LOW | NONE |
+| 4 | **방안 4**: Chart/Image 분리 + 라우팅 명확화 | **호출 시 -186줄** | LOW | LOW — 라우팅 규칙 명시 |
+| 5 | **방안 6**: 비-안전 중복만 제거 | **호출 시 -30줄** | LOW | NONE |
+| 6 | **방안 2**: 단계 요약 제거 | **매 대화 -7줄** | NONE | NONE |
+| 7 | **방안 7**: --diff 재검사 | **반복 -70%** | LOW | NONE |
+
+---
 
 ## 수정 파일
 
-| 파일 | 추가 규칙 |
-|------|----------|
-| `scripts/preflight-html.js` | PF-18~24 (정적 4개 + Playwright 4개, PF-25 삭제) |
-| `scripts/validate-pptx.js` | VP-09~13 (5개) |
-| `.claude/rules/html-prevention-rules.md` | 매핑 테이블 갱신 |
-| `.claude/docs/pptx-inspection-log.md` | 파이프라인 테이블 갱신 |
+| 파일 | 변경 |
+|------|------|
+| `.claude/rules/html-prevention-rules.md` | 매핑 테이블+이력+포인터 제거, 높이 계산 압축 (~55줄) |
+| `.claude/rules/presentation-flow.md` | 단계 요약 제거 (~28줄) |
+| `.claude/skills/design-skill/SKILL.md` | Chart/Image → media-guide.md 분리, 라우팅 규칙 추가 |
+| `.claude/skills/design-skill/media-guide.md` | 신규: Chart.js/Mermaid/SVG/Image 가이드 (~186줄) |
+| `.claude/skills/presentation-skill/SKILL.md` | 스킬 라우팅 매트릭스 추가 |
+| `.claude/skills/pptx-skill/SKILL.md` | "에러 시에만 참조" 명시 |
+| `.claude/docs/pptx-inspection-log.md` | 매핑 테이블 + 변환기 내부 이력 수용 |
+| `scripts/preflight-html.js` | --summary 옵션 추가 |
 
-## 구현 규모
+## 예상 총 절감 (v3)
 
-- 정적 규칙 4개 (PF-19,22,24 + VP-12): regex/파일 크기 — 각 20~40줄
-- Playwright 규칙 3개 (PF-18,20,21 + PF-23): 기존 세션 내 evaluate 추가 — 각 30~50줄
-- VP XML 규칙 4개 (VP-09,10,11,13): 기존 shape/테이블 데이터 활용 — 각 20~40줄
+- **매 대화 자동 로드**: 178줄 → 126줄 (**-29%**, v2 -43%에서 축소 — 안전+혼란 방지 우선)
+- **design-skill 호출 시**: 685줄 → 499줄 (**-27%**)
+- **정상 PPTX 변환**: -1,051줄 참조 파일 절약
+- **검증 출력**: -80% 토큰 절감 (--summary)
+- **반복 검증**: -70% (--diff)
 
-총 예상: ~400줄 추가. S 스케일 직접 수행 가능.
+## v2 → v3 변경 요약
 
-## 검증
-
-```bash
-# 기존 테스트 통과
-npm test
-
-# 정적 검사 (신규 규칙 포함)
-node scripts/preflight-html.js --slides-dir slides/lg-hynix-investment-strategy
-
-# 동적 검사 (Playwright 신규 규칙)
-node scripts/preflight-html.js --slides-dir slides/lg-hynix-investment-strategy --full
-
-# PPTX 변환 + 검증
-node scripts/convert-native.mjs --slides-dir slides/lg-hynix-investment-strategy --output slides/lg-hynix-investment-strategy/test-output.pptx
-
-# 전체 슬라이드 폴더 false positive 확인
-for dir in slides/*/; do node scripts/preflight-html.js --slides-dir "$dir"; done
-```
+| 항목 | v2 | v3 | 이유 |
+|------|-----|-----|------|
+| 방안 1 | WARN을 design-skill로 이동 (-70줄) | 참조 데이터만 이동 + 압축 (-45줄) | 규칙 분산 → 수정 기록 혼란 + SSoT 위반 |
+| 매 대화 절감 | -43% | -29% | 규칙을 한 곳에 유지하는 대가 |
+| 스킬 라우팅 | 암묵적 | **매트릭스 명시** | 혼란 방지 |
+| 수정 기록 의무 | 2곳 분산 | **1곳 유지** | 기록 누락 방지 |

@@ -4,7 +4,32 @@
       "Bash(wc -c D:/projects/slides-grab/.claude/rules/*.md)",
       "Bash(wc -c C:/Users/jsh86/.claude/rules/*.md)",
       "Bash(wc -c D:/projects/slides-grab/.claude/docs/*.md)",
-      "Read(//c/Users/jsh86/.claude/**)"
+      "Read(//c/Users/jsh86/.claude/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git -C \"C:/Users/jsh86/.claude\" status)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "Bash(npm test:*)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/lg-hynix-investment-strategy)",
+      "Bash(for dir:*)",
+      "Bash(do echo:*)",
+      "Bash(node scripts/preflight-html.js --slides-dir \"$dir\")",
+      "Bash(done)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/lg-hynix-investment-strategy --full)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/samsung-investment-report/)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/tax-efficient-jv-guide/)",
+      "Bash(find D:/projects/slides-grab/.claude/skills -type f -name *.md -o -name *.js -o -name *.py)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/naver-investment-strategy --summary)",
+      "Bash(node scripts/preflight-html.js --slides-dir slides/naver-investment-strategy --full --summary)",
+      "Bash(node scripts/convert-native.mjs --slides-dir slides/naver-investment-strategy --output slides/naver-investment-strategy/naver-investment-strategy.pptx --full)",
+      "Bash(node scripts/convert-native.mjs --help)",
+      "Bash(node scripts/convert-native.mjs --slides-dir slides/naver-investment-strategy --output slides/naver-investment-strategy/naver-investment-strategy.pptx --skip-preflight)",
+      "Bash(node scripts/screenshot-html.mjs --slides-dir slides/naver-investment-strategy --output slides/naver-investment-strategy/html-preview)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File scripts/export-slides-png.ps1 -PptxPath \"slides/naver-investment-strategy/naver-investment-strategy.pptx\" -OutputDir \"slides/naver-investment-strategy/pptx-preview\")",
+      "Bash(node scripts/cli.js pdf --slides-dir slides/naver-investment-strategy --output slides/naver-investment-strategy/naver-investment-strategy.pdf)",
+      "Bash(npx slides-grab:*)",
+      "Bash(node scripts/build-viewer.js --slides-dir slides/naver-investment-strategy)"
     ]
   }
 }
