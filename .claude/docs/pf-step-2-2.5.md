@@ -19,8 +19,7 @@
    ```bash
    node scripts/preflight-html.js --slides-dir slides/프레젠테이션명
    ```
-   - ERROR 또는 오탐 WARN 발견 시: **오탐/정탐 판정** → 오탐이면 PF 탐지 코드 수정, 정탐이면 슬라이드 HTML 수정 + design-skill 생성 규칙 추가
-   - WARN은 맥락 판단하여 수정 여부 결정
+   - ERROR/WARN 발견 시: **3분류 판정 (오탐/정탐-수정/정탐-한계)** → CLAUDE.md §공통 절차의 해당 체크리스트 실행
    - 코드 수정 시 즉시 `progress.md` 검증 항목에 기재 (§E)
    - Preflight 규칙 (PF-01~PF-55 정적 + PF-03,PF-08,PF-18~PF-28 동적)
    - **PF-25 (Hard Floor)**: font-size < 10pt 검출 → ERROR. 모드별 상위 하한도 검출 (Education: 18pt)
@@ -50,7 +49,7 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
 
 2. **자동 검증 결과 확인**:
    - `❌ ERROR` 있으면 → HTML 수정 → 재변환 (최대 2회)
-   - `⚠️ WARN` 만 있으면 → 맥락 판단하여 수정 여부 결정
+   - `⚠️ WARN` 만 있으면 → 3분류 판정 (오탐/정탐-수정/정탐-한계) 실행
 
 3. **HTML ↔ PPTX 비교 검증** (변환 충실도 확인):
    HTML 원본의 Playwright 스크린샷과 PPTX COM 프리뷰를 나란히 비교하여, 변환 과정에서 시각적 차이가 발생한 슬라이드를 감지한다.
@@ -100,13 +99,11 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
      -OutputDir "slides/프레젠테이션명/preview" -Slides "1,3,5"
    ```
 
-4. **VP/COM ERROR 또는 오탐 WARN → 오탐/정탐 판정 + 코드 수정 (필수)**
-   PF 검사를 통과해도 VP/COM에서 ERROR 또는 오탐 WARN이 발생할 수 있다 (변환 후에만 드러나는 이슈).
-   ERROR 또는 오탐 WARN 발견 시:
-   - **오탐** (VP/COM 탐지 로직 문제) → `validate-pptx.js` 또는 COM 비교 로직 수정
-   - **정탐** (실제 렌더링 문제) → HTML 원본 수정 + `design-skill/SKILL.md` 또는 `html-prevention-rules.md` 생성 규칙 추가
-   - 코드 수정 시 즉시 `progress.md` 검증 항목에 기재 (§E)
-   - 재변환 → 재검증 (최대 2회). ERROR는 반드시 수정, WARN은 맥락 판단.
+4. **VP/COM ERROR/WARN → CLAUDE.md §공통 절차 실행 (필수)**
+   PF 검사를 통과해도 VP/COM에서 ERROR/WARN이 발생할 수 있다 (변환 후에만 드러나는 이슈).
+   ERROR/WARN 발견 시 **즉시 3분류 판정 (오탐/정탐-수정/정탐-한계) → CLAUDE.md §공통 절차의 해당 체크리스트를 실행**:
+   - 오탐/정탐-수정 → A~I 체크리스트 생성 + 코드 수정 + 재변환 → 재검증 (최대 2회)
+   - 정탐-한계 → 간소화 A~D 체크리스트 (IL 기록 + 회피 규칙)
 
 5. **이슈 발견 시**: HTML 수정 → 재변환 → 재검증 (최대 2회)
 6. **수정 내용을 `.claude/docs/pptx-inspection-log.md`에 기록** (오탐도 "오탐 수정" 명시)
@@ -137,7 +134,10 @@ HTML 슬라이드 생성 완료 후, **에디터 실행 전에** 프로그래매
 
 **컨텍스트 압축 후 재개 시**: progress.md에 "Step 2.5 COM 비교 통과" 기록이 없으면, 대화 요약에 "변환 성공"이라고 되어 있어도 Step 2.5를 재실행해야 한다. 변환 성공 ≠ COM 비교 통과.
 
-**게이트 통과 시 필수 행동**:
-1. `progress.md`에 "Step 2.5 COM 비교 검증 통과" 기록
-2. `pptx-inspection-log.md`에 수정 내용 기록 (수정이 있었으면)
-3. 그 후에만 Step 3 진행
+**게이트 통과 시 필수 행동** (완료 게이트):
+```
+- [ ] 1. progress.md에 "Step 2.5 COM 비교 검증 통과" 기록
+- [ ] 2. pptx-inspection-log.md에 수정 내용 기록 (수정이 있었으면)
+- [ ] 3. 전부 [x] 확인 후 Step 3 진행
+```
+전부 `[x]` 전까지 Step 3 에디터/다운로드 링크 제공 금지.

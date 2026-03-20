@@ -136,6 +136,11 @@ grid-template-columns: 1fr 1.618fr;   /* Golden ratio */
 
 차트, 다이어그램, SVG 아이콘, 이미지 사용 시 → `media-guide.md` 참조.
 
+### CSS 차트 필수 규칙 (IL-67~69)
+- **바 높이 공식**: `max_bar_height = container_height - label_height(~14pt) - gap(~4pt)`. overflow:hidden 컨테이너에서 라벨 잘림 방지
+- **다중 시리즈 라벨**: 2개 이상 시리즈 비교 차트는 **모든 시리즈에 라벨 필수** (강조 대상만 라벨링 금지)
+- **배경 이미지 위 텍스트**: 반드시 불투명 오버레이(`background: #색상; opacity: 0.5~0.7`) + `text-shadow` 적용. `rgba()` 금지 (PF-36 위반)
+
 ---
 
 ## Text Usage Rules

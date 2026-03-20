@@ -1,4 +1,19 @@
 {
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node D:/projects/slides-grab/scripts/checklist-guard.mjs",
+            "timeout": 10,
+            "statusMessage": "Checking checklist guard..."
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash(wc -c D:/projects/slides-grab/.claude/rules/*.md)",

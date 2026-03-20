@@ -7,7 +7,7 @@
 모든 규칙은 **정량적** 작성. 정성적 표현("적절히", "여유 확보") 금지 → 에이전트가 무시함.
 필수: ① 수치 임계값 ② 계산 공식 ③ 위반/수정 예시 (`docs/html-rule-examples.md`에)
 
-_파이프라인 수정 의무 (오탐/정탐 분기, A~E 절차) → `CLAUDE.md` §자가 개선 피드백 루프_
+_파이프라인 수정 의무 (3분류 판정: 오탐/정탐-수정/정탐-한계, A~I 절차) → `CLAUDE.md` §자가 개선 피드백 루프_
 
 ## 금지 (ERROR — 변환 실패 또는 텍스트 불가시)
 
@@ -42,6 +42,31 @@ _파이프라인 수정 의무 (오탐/정탐 분기, A~E 절차) → `CLAUDE.md
 
 - `assets/` 이미지 width < 100pt → 내용 식별 불가. 최소 width 150pt 이상 권장
 - 분할 레이아웃 이미지: width 200pt 이상, 헤더/아이콘 이미지: width 120pt 이상
+
+## 경고 — flex:1 + overflow:hidden 내 고정높이 잘림 [IL-65 / PF-59]
+
+- `flex:1; overflow:hidden` 컨테이너 안에 `height > 90pt` 자식 → 상단 콘텐츠 잘릴 수 있음
+- 막대 차트: 최대 막대 높이 80pt 이하 권장, 라벨 공간 확보
+- `align-items: flex-end` 사용 시 특히 주의 — 상단 라벨이 먼저 잘림
+
+## 경고 — 배지/장식 div 내 텍스트 색상 불가시 [IL-66 / PF-60]
+
+- `border-radius: 50%` 또는 width/height ≤ 40pt인 장식 div 내 텍스트 → PPTX에서 배지 배경이 텍스트에 전달 안 됨
+- 텍스트 `color`는 **해당 div의 부모 배경** 대비 3:1 이상 필수
+- 흰색 텍스트(#FFFFFF)를 배지 안에 쓸 때: 부모 배경이 밝으면(#F8FAFC, #FFF7ED 등) 불가시 → 어두운 색(#92400E, #065F46 등) 사용
+
+## 경고 — 배경 이미지 위 텍스트 대비 부족 [IL-69 / PF-61]
+
+- 배경 `<img>`(absolute) 위에 텍스트를 배치할 때 반드시 **불투명 오버레이 + text-shadow** 필요
+- 오버레이: `background: #1E293B; opacity: 0.5~0.7` (rgba() 금지 — PF-36 위반)
+- text-shadow: `text-shadow: 0 2px 8pt rgba(0,0,0,0.5)` 등
+- PF-61 WARN (--full 모드): Playwright가 조상/형제에서 absolute `<img>` 탐지 → overlay/text-shadow 없으면 경고
+
+## 금지 — 이미지 src 경로 불일치 [IL-64 / PF-58]
+
+- `<img src="assets/...">` 작성 시 반드시 `ls assets/` 실행하여 실제 파일명 확인
+- NanoBanana 생성 파일명은 generate-images.mjs가 결정 → 아웃라인 slug와 다를 수 있음
+- PF-58 ERROR: 존재하지 않는 파일 참조 시 에러
 
 ## 필수 — 이미지 높이 [IL-04 / PF-04]
 

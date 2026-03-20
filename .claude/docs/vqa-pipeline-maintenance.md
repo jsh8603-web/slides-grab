@@ -3,20 +3,20 @@
 이미지 생성 플로우 실행 후, 아래 기준으로 파이프라인을 점검하고 즉시 수정한다.
 "향후 개선" 항목으로 미루지 않는다 — 발견 즉시 수정.
 
-## 0. 오탐/정탐 분기 — 수정 대상이 다르다
+## 0. 3분류 판정 — 수정 대상이 다르다
 
-에러 발견 시 먼저 **오탐인지 정탐인지 판정**. 판정에 따라 수정할 코드가 다르다:
+에러 발견 시 먼저 **3분류 판정 (오탐/정탐-수정/정탐-한계)**. 판정에 따라 수정 대상과 체크리스트가 달라진다:
 
-| 탐지 프로세스 | 오탐 시 수정 대상 (탐지 코드) | 정탐 시 수정 대상 (생성 코드) |
-|:------------:|---------------------------|---------------------------|
-| **IV** (이미지 검증) | `generate-images.mjs` IV 검증부 | `nanoBanana-guide.md` 프롬프트 규칙 |
-| **IP** (프롬프트 검사) | `generate-images.mjs` IP 검증부 | `nanoBanana-guide.md` + `enhancePrompt()` |
-| **IC** (이미지 맥락 확인) | IC 검증 프롬프트/임계값 | `plan-skill/SKILL.md` 아웃라인 이미지 설명 규칙 |
-| **VQA** (품질 스코어링) | `scoreImageWithVQA` 프롬프트/임계값 | `nanoBanana-guide.md` + `enhancePrompt()` |
+| 탐지 프로세스 | 오탐 시 수정 (탐지 코드) | 정탐-수정 시 수정 (생성 코드) | 정탐-한계 시 행동 |
+|:------------:|---------------------------|---------------------------|----------------|
+| **IV** | `generate-images.mjs` IV 검증부 | `nanoBanana-guide.md` 프롬프트 규칙 | IL 기록 + 해당 구도 금지 |
+| **IP** | `generate-images.mjs` IP 검증부 | `nanoBanana-guide.md` + `enhancePrompt()` | (거의 없음 — 프롬프트 수정 항상 가능) |
+| **IC** | IC 검증 프롬프트/임계값 | `plan-skill/SKILL.md` 아웃라인 이미지 설명 규칙 | IL 기록 + 추상 메타포 대체 |
+| **VQA** | `scoreImageWithVQA` 프롬프트/임계값 | `nanoBanana-guide.md` + `enhancePrompt()` | IL 기록 + 해당 카테고리 게이트 하향 |
 
-HTML/PPTX 파이프라인(PF/VP/COM)도 동일 분기 적용 — 전체 테이블은 `CLAUDE.md` 참조.
+체크리스트: 오탐/정탐-수정 → `CLAUDE.md` §공통 절차 A~I, 정탐-한계 → 간소화 A~D.
 
-**기록 의무 (오탐/정탐 무관):** 모든 에러를 `pptx-inspection-log.md`에 기록. 오탐은 "오탐 수정" 명시.
+**기록 의무 (판정 무관):** 모든 에러를 `pptx-inspection-log.md`에 기록. 오탐은 "오탐", 정탐-한계는 "정탐-한계 + 한계 원인" 명시.
 
 ## 1. 토크나이저 노이즈 검출
 
@@ -43,7 +43,7 @@ node -e "const j=JSON.parse(require('fs').readFileSync('.claude/docs/nanoBanana-
 ```
 상위 20개 키워드 중 **사진 기법/피사체/분위기가 아닌 키워드**가 있으면 노이즈.
 
-### 수정 후 필수 절차
+### 수정 후 필수 절차 (완료 게이트: 전부 `[x]` 전까지 다음 작업 차단)
 1. `node -c scripts/generate-images.mjs` syntax check
 2. 샘플 프롬프트 3개로 토크나이저 출력 확인
 3. 누적 DB 초기화 후 `--force --update-scores`로 재구축 (또는 다음 생성 시 자연 갱신)

@@ -1312,6 +1312,79 @@
       "expectedLevel": null,
       "description": "External image with small width — should be ignored (only assets/ checked)",
       "input": { "html": "<img src=\"https://example.com/logo.png\" style=\"width:50pt;\">" }
+    },
+
+    {
+      "id": "PF-58-TP-001",
+      "rule": "PF-58",
+      "type": "true_positive",
+      "source": "IL-64 — image src file not found",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Image references nonexistent file in assets/",
+      "input": { "html": "<img src=\"assets/slide-14-nonexistent.png\" style=\"width:300pt;\">", "slidesDir": "__MOCK_DIR__" }
+    },
+    {
+      "id": "PF-58-FP-001",
+      "rule": "PF-58",
+      "type": "false_positive",
+      "source": "synthetic — external URL image",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "External URL images should be skipped (not local file check)",
+      "input": { "html": "<img src=\"https://cdn.example.com/image.png\" style=\"width:300pt;\">" }
+    },
+
+    {
+      "id": "PF-59-TP-001",
+      "rule": "PF-59",
+      "type": "true_positive",
+      "source": "IL-65 — flex:1 overflow:hidden with tall child",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "flex:1 + overflow:hidden + flex-direction:column container with child height 100pt — may clip",
+      "input": { "html": "<div style=\"flex:1; overflow:hidden; flex-direction:column;\"><div style=\"height:100pt; background:#F59E0B;\"></div></div>" }
+    },
+    {
+      "id": "PF-59-FP-001",
+      "rule": "PF-59",
+      "type": "false_positive",
+      "source": "synthetic — small height child",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "flex:1 + overflow:hidden with child height 60pt — within safe limit",
+      "input": { "html": "<div style=\"flex:1; overflow:hidden; flex-direction:column;\"><div style=\"height:60pt; background:#334155;\"></div></div>" }
+    },
+
+    {
+      "id": "PF-60-TP-001",
+      "rule": "PF-60",
+      "type": "true_positive",
+      "source": "IL-66 — white text in badge on light parent",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Badge div with border-radius:50% + white text, parent background #FFF7ED — invisible in PPTX",
+      "input": { "html": "<div style=\"background: #FFF7ED; padding: 8pt;\"><div style=\"width: 28pt; height: 28pt; background: #F59E0B; border-radius: 50%;\"><p style=\"color: #FFFFFF;\">1</p></div></div>" }
+    },
+    {
+      "id": "PF-60-FP-001",
+      "rule": "PF-60",
+      "type": "false_positive",
+      "source": "synthetic — dark text in badge on light parent",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Badge with dark text #92400E on light parent #F8FAFC — good contrast 6.8:1",
+      "input": { "html": "<div style=\"background: #F8FAFC; padding: 8pt;\"><div style=\"width: 26pt; height: 26pt; background: #F59E0B; border-radius: 50%;\"><p style=\"color: #92400E;\">1</p></div></div>" }
+    },
+    {
+      "id": "PF-60-FP-002",
+      "rule": "PF-60",
+      "type": "false_positive",
+      "source": "synthetic — regular div (no border-radius:50%)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal div with white text — not a badge, should not trigger PF-60",
+      "input": { "html": "<div style=\"background: #FFF7ED; padding: 8pt;\"><div style=\"background: #334155; padding: 10pt;\"><p style=\"color: #FFFFFF;\">Title</p></div></div>" }
     }
   ]
 }

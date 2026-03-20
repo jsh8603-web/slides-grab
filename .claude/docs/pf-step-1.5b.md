@@ -67,66 +67,50 @@ node scripts/generate-images.mjs \
 방향 전환: IV FAIL 2회 시 유형 전환 (메타포→일러스트→아이콘→SVG→HTML), 3회 시 HTML-only.
 상세 규칙: `nanoBanana-guide.md` "이미지 검수 프로세스 (IP/IV/IC)" 섹션 참조.
 
-### IP/IV/IC/VQA 에러 발생 시 — 오탐/정탐 분기 + 코드 수정 (필수)
+### IP/IV/IC/VQA 에러 발생 시 — 3분류 판정 + 코드 수정 (필수)
 
-에러 발견 시 **오탐인지 정탐인지 판정** → 수정 대상이 달라진다.
-전체 프로세스별 수정 대상 테이블: `CLAUDE.md` §파이프라인 자동 개선 의무.
+에러 발견 시 **3분류 판정 (오탐/정탐-수정/정탐-한계)** → 판정에 따라 체크리스트가 달라진다.
+체크리스트 구조: `CLAUDE.md` §공통 절차 참조 (오탐/정탐-수정 → A~I, 정탐-한계 → 간소화 A~D).
 
-#### 단계별 오탐/정탐 판정 기준 + 즉시 행동
+#### 단계별 3분류 판정 기준 + 즉시 행동
 
 **IP (프롬프트 검증)**:
 | 판정 | 기준 | 수정 대상 | 재검증 |
 |------|------|----------|--------|
 | 오탐 | 프롬프트가 정상인데 IP가 ERROR/WARN 잘못 발생 | `generate-images.mjs` validateImageIP() | 동일 프롬프트 `--dry` 재실행 → IP 에러 소멸 확인 |
-| 정탐 | 프롬프트에 실제 문제 (한글, 숫자 데이터 등) | `nanoBanana-guide.md` + `plan-skill/SKILL.md` NanoBanana 태그 | 프롬프트 수정 후 `--dry` 재실행 → IP PASS 확인 |
+| 정탐-수정 | 프롬프트에 실제 문제 (한글, 숫자 데이터 등) | `nanoBanana-guide.md` + `plan-skill/SKILL.md` NanoBanana 태그 | 프롬프트 수정 후 `--dry` 재실행 → IP PASS 확인 |
+| 정탐-한계 | **(IP는 프롬프트 검사 → 수정 항상 가능, 거의 없음)** | — | — |
 
 **IV (생성 후 메타데이터 검증)**:
 | 판정 | 기준 | 수정 대상 | 재검증 |
 |------|------|----------|--------|
 | 오탐 | 이미지가 정상인데 IV 임계값이 너무 엄격 | `generate-images.mjs` validateImage() 임계값 | 동일 이미지에 수정된 IV 재실행 → WARN/FAIL 소멸 확인 |
-| 정탐 | 이미지에 실제 문제 (너무 어둡고, 거의 흰색 등) | `nanoBanana-guide.md` 프롬프트 규칙 + `enhancePrompt()` | `--regenerate {번호}` 재생성 → IV PASS 확인 |
+| 정탐-수정 | 이미지에 실제 문제 (너무 어둡고, 거의 흰색 등) | `nanoBanana-guide.md` 프롬프트 규칙 + `enhancePrompt()` | `--regenerate {번호}` 재생성 → IV PASS 확인 |
+| 정탐-한계 | Gemini 모델이 특정 구도/스타일 생성 불가 | — | IL 기록 + 회피 규칙 (해당 구도 금지) |
 
 **VQA (품질 스코어링)**:
 | 판정 | 기준 | 수정 대상 | 재검증 |
 |------|------|----------|--------|
 | 오탐 | 이미지 품질은 좋은데 VQA 점수가 낮음 (모델 오판) | `generate-images.mjs` scoreImageWithVQA() 프롬프트/게이트 | 게이트 조정 후 기존 WARN 이미지 5개 재스코어링 → 점수 변화 확인 |
-| 정탐 | VQA가 정확히 문제 짚음 (프롬프트 불이행, 텍스트 포함 등) | `nanoBanana-guide.md` + `enhancePrompt()` | `--regenerate {번호}` 재생성 → VQA 점수 개선 확인 |
+| 정탐-수정 | VQA가 정확히 문제 짚음 (프롬프트 불이행, 텍스트 포함 등) | `nanoBanana-guide.md` + `enhancePrompt()` | `--regenerate {번호}` 재생성 → VQA 점수 개선 확인 |
+| 정탐-한계 | 특정 카테고리에서 모델 점수가 고착 (키워드 DB 한계) | — | IL 기록 + 해당 카테고리 게이트 하향 |
 
 **IC (이미지 맥락 검증)** — Step 2.5/6-3 COM 비교 시 실행:
 | 판정 | 기준 | 수정 대상 | 재검증 |
 |------|------|----------|--------|
 | 오탐 | 이미지가 맥락에 맞는데 IC 판정이 FAIL | IC 판정 기준 자체를 문서에서 수정 | 수정된 기준으로 해당 이미지 재판정 |
-| 정탐 — 프롬프트 문제 | 프롬프트가 슬라이드 맥락과 안 맞음 | `plan-skill/SKILL.md` NanoBanana 태그 규칙 | 프롬프트 수정 + 재생성 + IC 재판정 |
-| 정탐 — 이미지 품질 문제 | 대비 부족, 비율 왜곡, 해상도 저하 | `nanoBanana-guide.md` + HTML CSS (오버레이/shadow) | 이미지 재생성 또는 HTML 보정 후 COM 재확인 |
+| 정탐-수정 (프롬프트) | 프롬프트가 슬라이드 맥락과 안 맞음 | `plan-skill/SKILL.md` NanoBanana 태그 규칙 | 프롬프트 수정 + 재생성 + IC 재판정 |
+| 정탐-수정 (품질) | 대비 부족, 비율 왜곡, 해상도 저하 | `nanoBanana-guide.md` + HTML CSS (오버레이/shadow) | 이미지 재생성 또는 HTML 보정 후 COM 재확인 |
+| 정탐-한계 | Gemini가 특정 주제를 정확히 생성 불가 | — | IL 기록 + 추상 메타포로 대체 (회피 규칙) |
 
-#### IP/IV/VQA 에러 발생 시 체크리스트
+#### 에러 발생 시 → CLAUDE.md §공통 절차 실행
 
-```
-- [ ] 1. 에러 식별: {IP/IV/VQA}-{NN} slide-{NN} {에러 내용}
-- [ ] 2. 오탐/정탐 판정 (위 기준 참조)
-- [ ] 3-a. [오탐] 탐지 코드 수정 (generate-images.mjs)
-      3-b. [정탐] 생성 코드 수정 (nanoBanana-guide.md / enhancePrompt / NanoBanana 태그)
-- [ ] 4. 재검증 실행 (위 재검증 열 참조)
-- [ ] 5. progress.md 체크박스 추가:
-      `- [ ] {IP/IV/VQA}-{NN} slide-{NN} {오탐/정탐} → {탐지/생성}코드: {수정 내용}`
-- [ ] 6. change-log.md 기록 (탐지/생성 코드 수정 시)
-- [ ] 7. nanoBanana-guide.md 또는 vqa-pipeline-maintenance.md 규칙 갱신
-- [ ] 8. 승격 검토: 동일 패턴 2회+ → 전단계 규칙 등록 (CLAUDE.md §탐지 결과 승격)
-```
+모든 파이프라인(IP/IV/VQA/IC)에서 ERROR/WARN/FAIL 발견 시:
+1. **3분류 판정** (위 테이블 참조)
+2. **오탐/정탐-수정** → CLAUDE.md §공통 절차 A~I 체크리스트 생성 + 실행
+3. **정탐-한계** → CLAUDE.md §공통 절차 간소화 A~D 체크리스트 생성 + 실행
 
-#### IC 에러 발생 시 체크리스트 (Step 2.5/6-3)
-
-```
-- [ ] 1. IC 에러 식별: IC-{NN} slide-{NN} {에러 내용}
-- [ ] 2. 오탐/정탐 판정 (위 IC 테이블 참조)
-- [ ] 3-a. [오탐] IC 판정 기준 문서 수정
-      3-b. [정탐-프롬프트] NanoBanana 태그 수정 + 재생성
-      3-c. [정탐-품질] HTML CSS 보정 (text-shadow, 오버레이) 또는 이미지 재생성
-- [ ] 4. 재검증: COM 프리뷰 재생성 → Read로 확인
-- [ ] 5. progress.md 체크박스 추가:
-      `- [ ] IC-{NN} slide-{NN} {오탐/정탐} → {수정 내용}`
-- [ ] 6. pptx-inspection-log.md에 기록 (레이아웃 관련 IC 이슈 시)
-```
+**완료 게이트**: 전부 `[x]` 전까지 다음 이미지/슬라이드/Step 진행 금지.
 
 ### 이미지 품질 게이트 (생성 완료 후 필수)
 

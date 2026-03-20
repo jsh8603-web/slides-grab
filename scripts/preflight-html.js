@@ -986,6 +986,112 @@ function checkPF40(html, file) {
 }
 
 /**
+ * PF-58: Image src points to non-existent file in assets/
+ * Catches filename mismatches between HTML and actual asset files
+ */
+function checkPF58(html, file, slidesDir) {
+  const issues = [];
+  const imgRe = /<img\b([^>]*)>/gi;
+  let m;
+  while ((m = imgRe.exec(html)) !== null) {
+    const attrs = m[1];
+    const srcMatch = attrs.match(/src\s*=\s*["']([^"']+)/i);
+    if (!srcMatch) continue;
+    const src = srcMatch[1];
+    // Only check local assets/ paths, skip URLs
+    if (/^https?:\/\//i.test(src)) continue;
+    if (!slidesDir) continue;
+    const filePath = path.join(slidesDir, src);
+    if (!fs.existsSync(filePath)) {
+      issues.push(fmtError(file, 'PF-58',
+        `Image file not found: "${src}" — check filename matches actual asset [IL-64]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-59: flex:1 + overflow:hidden container with tall fixed-height children
+ * Content at the top may be clipped when align-items:flex-end pushes content down
+ */
+function checkPF59(html, file) {
+  const issues = [];
+  // Find flex:1 containers with overflow:hidden and flex-direction:column (or default)
+  // Then check if they contain children with large fixed heights
+  const containerRe = /style\s*=\s*"([^"]*flex:\s*1[^"]*overflow:\s*hidden[^"]*)"/gi;
+  let m;
+  while ((m = containerRe.exec(html)) !== null) {
+    const style = m[1];
+    // Only check column-direction flex containers (bar charts, vertical layouts)
+    // Skip row-direction (default) as height clipping is less common
+    if (!/flex-direction:\s*column/i.test(style) && !/align-items:\s*flex-end/i.test(style)) continue;
+    // Look at the content after this container opening for fixed heights
+    const after = html.substring(m.index, Math.min(m.index + 2000, html.length));
+    const heightMatches = [...after.matchAll(/height:\s*(\d+(?:\.\d+)?)pt/gi)];
+    if (heightMatches.length === 0) continue;
+    const maxHeight = Math.max(...heightMatches.map(h => parseFloat(h[1])));
+    if (maxHeight > 90) {
+      issues.push(fmtWarn(file, 'PF-59',
+        `flex:1 + overflow:hidden container has child with height ${maxHeight}pt — content may be clipped at top [IL-65]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-60: Badge/decoration div text color invisible against parent background [IL-66]
+ * Small divs (border-radius:50% or width/height ≤40pt) with text — PPTX may not
+ * transfer the badge's background to the text shape, so text color must contrast
+ * against the PARENT container's background, not just the badge's own background.
+ */
+function checkPF60(html, file) {
+  const issues = [];
+  // Find badge divs with border-radius:50% AND a background color AND containing text
+  // The badge must have its own background (colored circle) to be relevant
+  const badgeRe = /<div\b[^>]*style\s*=\s*"([^"]*border-radius:\s*50%[^"]*)"\s*>\s*<(?:p|h[1-6])\b[^>]*style\s*=\s*"([^"]*color:\s*(#[0-9A-Fa-f]{3,8})[^"]*)"/gi;
+  let m;
+  while ((m = badgeRe.exec(html)) !== null) {
+    const divStyle = m[1];
+    const textColor = m[3].toUpperCase();
+    // Badge must have its own background color
+    const badgeBgMatch = divStyle.match(/background(?:-color)?:\s*(#[0-9A-Fa-f]{3,8})/i);
+    if (!badgeBgMatch) continue;
+    const pos = m.index;
+    // Find the nearest ancestor div with a background color (the parent card/container)
+    const before = html.substring(Math.max(0, pos - 1500), pos);
+    const parentBgs = [...before.matchAll(/background(?:-color)?:\s*(#[0-9A-Fa-f]{3,8})/gi)];
+    if (parentBgs.length === 0) continue;
+    const parentBg = parentBgs[parentBgs.length - 1][1].toUpperCase();
+    // Calculate contrast of text against PARENT background (not badge background)
+    const ratio = contrastRatio(textColor, parentBg);
+    if (ratio < 3.0) {
+      issues.push(fmtWarn(file, 'PF-60',
+        `Badge text "${textColor}" on parent background "${parentBg}" — contrast ${ratio.toFixed(1)}:1 < 3:1. PPTX may not render badge fill → text invisible [IL-66]`));
+    }
+  }
+  return issues;
+}
+
+// Helper for PF-60: WCAG contrast ratio calculation
+function contrastRatio(hex1, hex2) {
+  function hexToRgb(hex) {
+    hex = hex.replace('#', '');
+    if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+    return [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)];
+  }
+  function luminance(rgb) {
+    const [r, g, b] = rgb.map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+  const l1 = luminance(hexToRgb(hex1));
+  const l2 = luminance(hexToRgb(hex2));
+  return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+}
+
+/**
  * PF-56: Image container with flex centering but missing explicit height
  * flex align-items:center without height causes container to collapse → centering has no effect
  */
@@ -1124,6 +1230,8 @@ function runStaticChecks(html, file) {
     ...checkPF55(html, file),
     ...checkPF56(html, file),
     ...checkPF57(html, file),
+    ...checkPF59(html, file),
+    ...checkPF60(html, file),
   ];
 }
 
@@ -1360,6 +1468,102 @@ async function runPlaywrightChecks(slidesDir, files) {
             `(corrected width ${densityIssue.correctedWidth}px > container ${densityIssue.containerWidth}px)`));
         }
 
+        // PF-61: Image background contrast — check text readability on background images
+        // Samples pixel brightness under text elements that sit on top of images
+        const imgContrastIssues = await page.evaluate(() => {
+          const issues = [];
+          // Find text elements positioned over background images
+          const textEls = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span');
+          for (const el of textEls) {
+            const text = (el.textContent || '').trim();
+            if (!text || text.length < 2) continue;
+            const cs = getComputedStyle(el);
+            const textColor = cs.color;
+            // Parse text color rgb
+            const rgbMatch = textColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+            if (!rgbMatch) continue;
+            const [tr, tg, tb] = [+rgbMatch[1], +rgbMatch[2], +rgbMatch[3]];
+
+            // Check if any ancestor has a background-image or if there's an <img> behind this element
+            let hasImageBg = false;
+            let ancestor = el.parentElement;
+            while (ancestor) {
+              const acs = getComputedStyle(ancestor);
+              if (acs.backgroundImage && acs.backgroundImage !== 'none') {
+                hasImageBg = true;
+                break;
+              }
+              ancestor = ancestor.parentElement;
+            }
+            // Also check for <img> siblings/cousins that might be positioned behind (absolute/relative)
+            // Walk up ALL ancestors — the <img> may be a sibling of any ancestor, not just the closest positioned one
+            if (!hasImageBg) {
+              const elRect = el.getBoundingClientRect();
+              let walk = el.parentElement;
+              while (walk && walk !== document.body) {
+                const imgs = walk.querySelectorAll(':scope > img');
+                for (const img of imgs) {
+                  const imgCs = getComputedStyle(img);
+                  if (imgCs.position === 'absolute' || imgCs.position === 'fixed') {
+                    const imgRect = img.getBoundingClientRect();
+                    if (imgRect.left <= elRect.left && imgRect.right >= elRect.right &&
+                        imgRect.top <= elRect.top && imgRect.bottom >= elRect.bottom) {
+                      hasImageBg = true;
+                      break;
+                    }
+                  }
+                }
+                if (hasImageBg) break;
+                walk = walk.parentElement;
+              }
+            }
+            if (!hasImageBg) continue;
+
+            // Check if there's a solid overlay between image and text
+            // Walk up from text element, check for solid background divs
+            let hasOverlay = false;
+            let cur = el.parentElement;
+            while (cur && cur !== document.body) {
+              const curCs = getComputedStyle(cur);
+              const bg = curCs.backgroundColor;
+              if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
+                // Parse alpha
+                const rgbaM = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+                if (rgbaM) {
+                  const alpha = rgbaM[4] !== undefined ? parseFloat(rgbaM[4]) : 1;
+                  if (alpha >= 0.4) {
+                    hasOverlay = true;
+                    break;
+                  }
+                }
+              }
+              // Check opacity property on the element (used for overlays)
+              const opacity = parseFloat(curCs.opacity);
+              if (opacity < 1 && curCs.backgroundColor && curCs.backgroundColor !== 'transparent' && curCs.backgroundColor !== 'rgba(0, 0, 0, 0)') {
+                hasOverlay = true;
+                break;
+              }
+              cur = cur.parentElement;
+            }
+
+            // Check text-shadow as fallback readability aid
+            const hasShadow = cs.textShadow && cs.textShadow !== 'none';
+
+            if (!hasOverlay && !hasShadow) {
+              issues.push({
+                text: text.substring(0, 40),
+                color: `rgb(${tr},${tg},${tb})`,
+                tag: el.tagName
+              });
+            }
+          }
+          return issues;
+        });
+        for (const issue of imgContrastIssues) {
+          results.push(fmtWarn(file, 'PF-61',
+            `Text "${issue.text}..." (${issue.color}) on background image without overlay or text-shadow — may be unreadable [IL-69]`));
+        }
+
       } catch (e) {
         results.push(fmtWarn(file, 'PF-XX', `Playwright check failed: ${e.message}`));
       }
@@ -1577,7 +1781,10 @@ export async function preflightCheck(slidesDir, options = {}) {
   // Phase 1: static checks + metric collection
   for (const file of files) {
     const html = fs.readFileSync(path.join(absDir, file), 'utf-8');
-    const issues = runStaticChecks(html, file);
+    const issues = [
+      ...runStaticChecks(html, file),
+      ...checkPF58(html, file, absDir),
+    ];
     for (const line of issues) {
       if (line.includes('ERROR')) errors.push(line);
       else warnings.push(line);

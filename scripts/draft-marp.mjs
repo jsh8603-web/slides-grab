@@ -105,21 +105,47 @@ function parseSlides(text) {
       imageFile: null,
     };
 
-    // Type
+    // Type (also match **슬라이드 유형**: Korean format)
     const typeMatch = block.match(/^-\s+\*\*Type\*\*:\s*(.+)/m);
     if (typeMatch) slide.type = typeMatch[1].trim();
+    if (!slide.type) {
+      const korTypeMatch = block.match(/^\*\*슬라이드 유형\*\*:\s*(.+)/m);
+      if (korTypeMatch) {
+        const raw = korTypeMatch[1].trim();
+        // Map Korean type names to English for Marp class matching
+        const typeMap = { '표지': 'Cover', '클로징': 'Closing', '목차': 'Contents' };
+        const parenthetical = raw.match(/\(([^)]+)\)/);
+        slide.type = parenthetical ? parenthetical[1].trim() : (typeMap[raw] || raw);
+      }
+    }
 
-    // Title
+    // Title (also match **헤드라인**: and **헤드라인**:\n as fallback)
     const titleMatch = block.match(/^-\s+\*\*Title\*\*:\s*(.+)/m);
     if (titleMatch) slide.title = titleMatch[1].trim();
+    if (!slide.title) {
+      const headlineMatch = block.match(/^\*\*헤드라인\*\*:\s*\n?(.+)/m);
+      if (headlineMatch) slide.title = headlineMatch[1].trim();
+    }
+    // Last resort: use headerTitle from ### Slide N - Title
+    if (!slide.title && slide.headerTitle) {
+      slide.title = slide.headerTitle;
+    }
 
-    // Subtitle
+    // Subtitle (also match **서브헤드라인**:)
     const subtitleMatch = block.match(/^-\s+\*\*Subtitle\*\*:\s*(.+)/m);
     if (subtitleMatch) slide.subtitle = subtitleMatch[1].trim();
+    if (!slide.subtitle) {
+      const subHeadMatch = block.match(/^\*\*서브헤드라인\*\*:\s*\n?(.+)/m);
+      if (subHeadMatch) slide.subtitle = subHeadMatch[1].trim();
+    }
 
-    // Key Message
+    // Key Message (also match **핵심 메시지**: with blockquote)
     const keyMsgMatch = block.match(/^-\s+\*\*Key Message\*\*:\s*(.+)/m);
     if (keyMsgMatch) slide.keyMessage = keyMsgMatch[1].trim();
+    if (!slide.keyMessage) {
+      const korMsgMatch = block.match(/^\*\*핵심 메시지\*\*:\s*\n>\s*(.+)/m);
+      if (korMsgMatch) slide.keyMessage = korMsgMatch[1].trim();
+    }
 
     // Quote
     const quoteMatch = block.match(/^-\s+\*\*Quote\*\*:\s*(.+)/m);
@@ -218,6 +244,67 @@ function parseSlides(text) {
     const nanoMatch = block.match(/^-\s+NanoBanana:/m);
     if (nanoMatch) {
       slide.hasImage = true;
+    }
+
+    // ── Generic body content extractor (Korean outline fallback) ──
+    // If structured fields are empty, extract content from the block
+    if (slide.details.length === 0 && slide.items.length === 0 && slide.timelineData.length === 0) {
+      const bodyLines = [];
+
+      // Extract tables (markdown format)
+      const tableRegex = /^\|.+\|$/gm;
+      const tableMatches = block.match(tableRegex);
+      if (tableMatches) {
+        for (const row of tableMatches) {
+          // Skip separator rows
+          if (/^\|[\s-:|]+\|$/.test(row)) continue;
+          bodyLines.push(row);
+        }
+      }
+
+      // Extract code blocks (formulas)
+      const codeBlocks = block.match(/```[\s\S]*?```/g);
+      if (codeBlocks) {
+        for (const cb of codeBlocks) {
+          const inner = cb.replace(/^```\w*\n?/, '').replace(/\n?```$/, '').trim();
+          if (inner) {
+            // Take first 4 lines of each code block to avoid overflow
+            const codeLines = inner.split('\n').slice(0, 4);
+            bodyLines.push('```');
+            bodyLines.push(...codeLines);
+            bodyLines.push('```');
+          }
+        }
+      }
+
+      // Extract bullet points (Korean format: • or - prefixed, not metadata fields)
+      const bulletRegex = /^[•]\s+\*\*(.+?)\*\*[：:]\s*(.+)/gm;
+      let bulletMatch;
+      while ((bulletMatch = bulletRegex.exec(block)) !== null) {
+        bodyLines.push(`- **${bulletMatch[1]}**: ${bulletMatch[2].substring(0, 80)}`);
+      }
+
+      // Extract Hero Number
+      const heroMatch = block.match(/\*\*Hero Number\*\*:\s*(.+)/);
+      if (heroMatch) {
+        bodyLines.push(`### ${heroMatch[1].replace(/`/g, '')}`);
+      }
+
+      // Extract 분석 결론
+      const conclusionMatch = block.match(/\*\*분석 결론\*\*:\s*(.+)/);
+      if (conclusionMatch) {
+        bodyLines.push(`> ${conclusionMatch[1]}`);
+      }
+
+      // Extract 사례 결론
+      const caseMatch = block.match(/\*\*사례 결론\*\*:\s*(.+)/);
+      if (caseMatch) {
+        bodyLines.push(`> ${caseMatch[1]}`);
+      }
+
+      if (bodyLines.length > 0) {
+        slide._rawBody = bodyLines.join('\n');
+      }
     }
 
     slides.push(slide);
@@ -322,6 +409,12 @@ function slideToMarp(slide, assetsDir) {
   // Statistics type: key message as big text
   if (type === "statistics" && slide.keyMessage) {
     lines.push(`### ${slide.keyMessage}`);
+    lines.push("");
+  }
+
+  // Raw body content (Korean outline fallback)
+  if (slide._rawBody) {
+    lines.push(slide._rawBody);
     lines.push("");
   }
 
