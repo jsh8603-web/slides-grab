@@ -109,6 +109,85 @@ skills/           Codex skill definitions
 docs/             Installation & usage guides
 ```
 
+
+---
+
+## AI Presentation Pipeline
+
+This project includes an automated presentation pipeline that generates, validates, and exports slides.
+
+### Pipeline Overview (Step 0-7)
+
+```
+Step 0: Source Collection    → Gather content (NotebookLM, files, URLs)
+Step 1: Outline              → Structure slides with AI (plan-skill)
+Step 1.5B: Image Generation  → NanoBanana (Gemini API) with VQA scoring
+Step 2: HTML Slides          → Generate slide HTML (design-skill)
+Step 2.5: Auto Validation    → PF + VP + COM verification gate
+Step 3-4: Editor             → Visual editor (editor-server + Cloudflare tunnel)
+Step 5-6: Export PPTX        → convert-native.mjs with XML validation
+Step 7: Export PDF            → Final output
+```
+
+### Quality Assurance (QA) System
+
+7 automated validators run at different pipeline stages:
+
+| Validator | Stage | What it checks |
+|-----------|-------|----------------|
+| **PF** (Preflight) | HTML generation | Font, overflow, contrast, layout rules |
+| **VP** (Validate PPTX) | After conversion | PPTX XML structure integrity |
+| **COM** (Compare) | After conversion | HTML vs PPTX visual comparison |
+| **IP** (Image Prompt) | Before generation | Prompt quality and safety |
+| **IV** (Image Validation) | After generation | Size, brightness, format checks |
+| **VQA** (Visual QA) | After generation | AI-scored image quality (27.5 max) |
+| **IC** (Image in Context) | After insertion | Image-slide context match |
+
+### 3-Category Classification
+
+Every detected issue is classified before fixing:
+
+| Category | Definition | Action |
+|----------|-----------|--------|
+| **False Positive** | Detection is wrong | Fix detection code |
+| **True Positive (fixable)** | Real issue, can fix | Fix generation code |
+| **True Positive (limitation)** | Real issue, engine limit | Add workaround rule |
+
+### Automated Guards
+
+`checklist-guard.mjs` (PreToolUse hook) enforces 7 rules:
+
+1. **Rule 1**: Pipeline code edits require an open checklist in progress.md
+2. **Rule 2**: Warn on step advancement with uncompleted checklists
+3. **Rule 3**: Slide HTML edits require proper issue classification
+4. **Rule 4**: Block edits when post-production V-NN verification is pending
+5. **Rule 5**: Block edits when active rules remain unchecked after Step 7
+6. **Rule 6**: Block Write overwrites that remove required sections from protected files
+
+`post-compact-restore.mjs` (PostCompact hook) restores session context after auto-compression.
+
+### Tests
+
+```bash
+node tests/test-guard.mjs                                    # Guard rule tests (21 cases)
+node tests/test-guard.mjs --validate slides/presentation-name  # Validate progress.md pipeline
+```
+
+### Abbreviation Reference
+
+| Abbr | Full Name | Description |
+|------|-----------|-------------|
+| PF | Preflight | HTML static validation |
+| VP | Validate PPTX | PPTX XML structure validation |
+| COM | Compare | HTML vs PPTX visual comparison |
+| IC | Image in Context | Image-slide context match |
+| IV | Image Validation | Image quality validation |
+| IP | Image Prompt | Image prompt validation |
+| VQA | Visual QA | AI-based image quality score (27.5 max) |
+| IL | Inspection Log | PPTX conversion issue patterns |
+| V-NN | Verification | Post-production verification items |
+| C-NN | Change-log | Code change log entries |
+
 ## License
 
 [MIT](LICENSE)

@@ -23,17 +23,13 @@ progress.md는 각 Step 완료·수정 발생·로그 기록 시 **즉시 갱신
 5. 게이트 통과 기록 없으면 해당 Step 재실행
 6. 위 1~5 완료 후에만 작업 재개
 
-| 체크포인트 | 검증 방법 | 미충족 시 |
-|-----------|----------|----------|
-| **활성 규칙 재로드** | **progress.md `## 활성 규칙`의 `[ ]` 항목** | **해당 규칙 파일 Read로 재로드** |
-| Step 0 소스 확인 | progress.md 또는 사용자 번호 응답 | Step 0 재시작 |
-| Step 1 아웃라인 승인 | progress.md 또는 "진행" 응답 | 아웃라인 재제시 |
-| Step 1.5A 초안 확인 | progress.md 또는 "진행" 응답 | 초안 재생성 |
-| Step 1.5B 이미지 생성 | assets/ 폴더에 이미지 존재 | 이미지 재생성 |
-| **Step 2.5 COM 비교** | **progress.md "통과" 기록** | **에디터 링크 제공 금지, Step 2.5 재실행** |
-| **Step 4 수정 재검증** | **수정 유형별 재검증 매트릭스 준수** | **재검증 미완료 시 Step 5 진행 금지** |
-| **Step 6-3 COM 비교** | **progress.md "통과" 기록** | **다운로드 링크 제공 금지, Step 6-3 재실행** |
-| **Step 7.5 V-NN 검증** | **progress.md `## 탐지 코드 수정 검증`의 V-NN 전부 `[x]`** | **완료 보고 금지, V-NN 순차 실행** |
+| 체크포인트 | 미충족 시 |
+|-----------|----------|
+| **활성 규칙 재로드** (`## 활성 규칙` `[ ]` 항목) | 해당 규칙 파일 Read 재로드 |
+| Step 0~1.5B 각 단계 | 해당 Step 재시작 |
+| **Step 2.5 / 6-3 COM 비교** (progress.md "통과" 기록) | 에디터/다운로드 링크 제공 금지, 재실행 |
+| **Step 4 수정 재검증** | Step 5 진행 금지 |
+| **Step 7.5 V-NN 검증** (V-NN 전부 `[x]`) | 완료 보고 금지, V-NN 순차 실행 |
 
 ## Step별 로드 규칙 (토큰 최적화)
 
@@ -48,8 +44,5 @@ progress.md는 각 Step 완료·수정 발생·로그 기록 시 **즉시 갱신
 | 5-6-7 변환 | `pf-step-5-6-7.md` | **`pptx-skill`** 호출, `html-prevention-rules.md`, `pptx-inspection-log.md` | nanoBanana, design-modes, design-skill |
 
 **공통 규칙**:
-- `progress.md`는 매 Step에서 Read/Write
-- `production-reporting-rules.md`는 **세션 시작 시 1회** Read — 모든 Step에서 보고 규칙 적용 (활성 규칙으로 관리)
-- `presentation-flow.md`는 **현재 Step 섹션만** Read (offset/limit 사용, 전체 Read 금지)
-- 스킬 호출(bold)은 해당 Step 진입 시 1회만. Step 전환 시 이전 스킬 재호출 금지
-- **이미 컨텍스트에 있는 파일은 재로드 금지** — 대화 압축 후에만 재로드 (progress.md `## 활성 규칙` 참조)
+- `progress.md`는 매 Step에서 Read/Write. 이미 컨텍스트에 있는 파일은 재로드 금지 (압축 후에만).
+- `production-reporting-rules.md`는 세션 시작 시 1회 Read (활성 규칙으로 관리).

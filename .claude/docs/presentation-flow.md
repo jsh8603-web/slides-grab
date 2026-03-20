@@ -73,7 +73,7 @@
 
 ## 활성 규칙 (세션 복원 시 `[ ]` 항목의 규칙 파일을 Read로 재로드)
 
-### 전체 프로덕션
+### 전체 프로덕션 (Step 7 완료 직후 전부 `[x]` 체크)
 - [ ] 워크플로우 상세 (`presentation-flow.md`) — 프로덕션 완료까지
 - [ ] 프로덕션 보고 규칙 (`production-reporting-rules.md`) — 세션 시작 시 1회 로드, 모든 Step에서 보고 의무
 
@@ -168,6 +168,19 @@ IC 결과도 progress.md에 기록. IC FAIL 시 이미지 재생성 또는 HTML 
 
 범용 갱신 규칙 → `CLAUDE.md` §파이프라인 MD 생성 규칙.
 세션 복원 절차 → 아래 §세션 복원 시 체크포인트 검증.
+
+## 승격 체크리스트 템플릿
+
+승격 결정 즉시, 코드 수정 **전에** progress.md에 아래 체크리스트를 추가:
+```
+### 승격: {후단계}-{NN} → {전단계}-{NN}
+- [ ] 1. pptx-inspection-log.md에 "승격: {COM/VP}-{NN} → {PF/VP/IP}-{NN}" 기록
+- [ ] 2. 전단계 탐지 코드에 새 규칙 구현
+- [ ] 3. html-prevention-rules.md 또는 nanoBanana-guide.md에 생성 규칙 추가
+- [ ] 4. change-log.md C-NN 기재 + progress.md V-NN 검증 계획 등록
+- [ ] 5. 회귀 테스트 실행
+```
+전부 `[x]` 전까지 다음 작업 차단.
 
 ## 세션 복원 시 체크포인트 검증 (필수)
 

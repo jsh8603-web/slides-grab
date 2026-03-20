@@ -2,6 +2,21 @@
 
 자동승인 모드에서도 보고는 생략하지 않습니다.
 
+## 약어 사전
+
+| 약어 | 풀네임 | 설명 |
+|------|--------|------|
+| PF | Preflight | HTML 정적 검증 (폰트, overflow, 대비 등) |
+| VP | Validate PPTX | PPTX XML 구조 검증 |
+| COM | Compare | HTML↔PPTX 시각 비교 |
+| IC | Image in Context | 이미지-슬라이드 맥락 일치 검증 |
+| IV | Image Validation | 이미지 품질 검증 (크기, 밝기, 포맷) |
+| IP | Image Prompt | 이미지 생성 프롬프트 검증 |
+| VQA | Visual QA | AI 기반 이미지 품질 점수 (27.5점 만점) |
+| IL | Inspection Log | PPTX 변환 이슈 패턴 기록 |
+| V-NN | Verification | 탐지 코드 수정 후 검증 항목 |
+| C-NN | Change-log | 코드 변동 기록 항목 |
+
 ## 보고 원칙
 
 - 각 단계의 시작과 끝에 상태를 알림

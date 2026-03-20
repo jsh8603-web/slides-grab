@@ -1,0 +1,473 @@
+#!/usr/bin/env node
+/**
+ * test-guard.mjs — Automated tests for checklist-guard.mjs + progress.md validator
+ *
+ * Usage:
+ *   node tests/test-guard.mjs              # Run guard rule tests (Phase B + C)
+ *   node tests/test-guard.mjs --validate slides/프레젠테이션명  # Validate progress.md pipeline
+ */
+
+import { spawnSync } from 'child_process';
+import { writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const PROJECT_ROOT = 'D:/projects/slides-grab';
+const GUARD_SCRIPT = join(PROJECT_ROOT, 'scripts/checklist-guard.mjs');
+const TEST_DIR = join(PROJECT_ROOT, 'slides/_guard-test');
+
+// ─── Validator Mode ────────────────────────────────────────────────
+
+if (process.argv.includes('--validate')) {
+  const idx = process.argv.indexOf('--validate');
+  const target = process.argv[idx + 1];
+  if (!target) {
+    console.error('Usage: node tests/test-guard.mjs --validate slides/프레젠테이션명');
+    process.exit(1);
+  }
+  const progressPath = join(PROJECT_ROOT, target, 'progress.md');
+  if (!existsSync(progressPath)) {
+    console.error(`progress.md not found: ${progressPath}`);
+    process.exit(1);
+  }
+  const content = readFileSync(progressPath, 'utf8');
+  const results = validateProgress(content, target);
+  printValidatorResults(results);
+  process.exit(results.some(r => !r.pass) ? 1 : 0);
+}
+
+// ─── Validator Logic ───────────────────────────────────────────────
+
+function validateProgress(content, target) {
+  const results = [];
+
+  // V1: Step 순서 완전성 — Step 0~7 전부 [x]
+  {
+    const steps = [0, 1, 2, 3, 4, 5, 6, 7];
+    const missing = steps.filter(n => {
+      const re = new RegExp(`\\[x\\]\\s*Step ${n}[:\\s]`);
+      return !re.test(content);
+    });
+    // Also check for Step 1.5A, 1.5B, 2.5 (common sub-steps)
+    results.push({
+      id: 'V1', name: 'Step 순서 완전성',
+      pass: missing.length === 0,
+      detail: missing.length === 0
+        ? 'Step 0~7 전부 [x]'
+        : `미완료 Step: ${missing.join(', ')}`
+    });
+  }
+
+  // V2: 이슈 체크리스트 완료
+  {
+    const issuePattern = /^### (이슈|사용자 피드백|정탐-한계|승격|규칙 개선)/gm;
+    const lines = content.split('\n');
+    const openIssueItems = [];
+    let inIssue = false;
+    for (const line of lines) {
+      if (issuePattern.test(line)) inIssue = true;
+      else if (/^##[^#]/.test(line) || (/^### /.test(line) && !issuePattern.test(line))) {
+        // Reset for non-issue ### headers — but need to re-check
+        if (/^##[^#]/.test(line)) inIssue = false;
+      }
+      // Re-check issue pattern each line since lastIndex moves
+      issuePattern.lastIndex = 0;
+      if (/^### (이슈|사용자 피드백|정탐-한계|승격|규칙 개선)/.test(line)) inIssue = true;
+      else if (/^##[^#]/.test(line)) inIssue = false;
+
+      if (inIssue && /^- \[ \]/.test(line.trim())) {
+        openIssueItems.push(line.trim());
+      }
+    }
+    results.push({
+      id: 'V2', name: '이슈 체크리스트 완료',
+      pass: openIssueItems.length === 0,
+      detail: openIssueItems.length === 0
+        ? '모든 이슈 체크리스트 완료'
+        : `미완료 ${openIssueItems.length}건: ${openIssueItems[0]}...`
+    });
+  }
+
+  // V3: V-NN 검증 완료
+  {
+    const vnnSection = content.match(/## 탐지 코드 수정 검증[^\n]*\n([\s\S]*?)(?=\n##[^#]|$)/);
+    const openVnn = vnnSection
+      ? vnnSection[1].split('\n').filter(l => /^- \[ \]\s*V-\d+/.test(l.trim()))
+      : [];
+    results.push({
+      id: 'V3', name: 'V-NN 검증 완료',
+      pass: openVnn.length === 0,
+      detail: openVnn.length === 0
+        ? (vnnSection ? 'V-NN 전부 완료' : 'V-NN 섹션 없음 (수정 없었음)')
+        : `미완료: ${openVnn.map(l => l.trim()).join('; ')}`
+    });
+  }
+
+  // V4: V-NN 부적절한 이월 없음
+  {
+    const vnnSection = content.match(/## 탐지 코드 수정 검증[^\n]*\n([\s\S]*?)(?=\n##[^#]|$)/);
+    const badDeferrals = vnnSection
+      ? vnnSection[1].split('\n').filter(l => {
+          const t = l.trim();
+          return /^\- \[x\].*이월/.test(t) && /스트레스|회귀|regression|stress/.test(t);
+        })
+      : [];
+    results.push({
+      id: 'V4', name: 'V-NN 부적절한 이월 없음',
+      pass: badDeferrals.length === 0,
+      detail: badDeferrals.length === 0
+        ? '부적절한 이월 없음'
+        : `부적절 이월 ${badDeferrals.length}건`
+    });
+  }
+
+  // V5: 활성 규칙 전부 로드
+  {
+    const activeSection = content.match(/## 활성 규칙[^\n]*\n([\s\S]*?)(?=\n##[^#]|$)/);
+    const openRules = activeSection
+      ? activeSection[1].split('\n').filter(l => /^- \[ \]/.test(l.trim()))
+      : [];
+    results.push({
+      id: 'V5', name: '활성 규칙 전부 로드',
+      pass: openRules.length === 0,
+      detail: openRules.length === 0
+        ? '활성 규칙 전부 완료'
+        : `미로드: ${openRules.map(l => l.trim()).join('; ')}`
+    });
+  }
+
+  // V6: 로그 기록 완료
+  {
+    const logSection = content.match(/## 로그 기록 상태[^\n]*\n([\s\S]*?)(?=\n##[^#]|$)/);
+    const openLogs = logSection
+      ? logSection[1].split('\n').filter(l => /^- \[ \]/.test(l.trim()))
+      : [];
+    results.push({
+      id: 'V6', name: '로그 기록 완료',
+      pass: openLogs.length === 0,
+      detail: openLogs.length === 0
+        ? (logSection ? '로그 기록 전부 완료' : '로그 기록 섹션 없음')
+        : `미기록 ${openLogs.length}건`
+    });
+  }
+
+  // V7: change-log 정리
+  {
+    const changeLogPath = join(PROJECT_ROOT, target, 'change-log.md');
+    const exists = existsSync(changeLogPath);
+    results.push({
+      id: 'V7', name: 'change-log 정리',
+      pass: !exists,
+      detail: exists ? 'change-log.md가 아직 남아있음 (삭제 필요)' : 'change-log.md 정리 완료'
+    });
+  }
+
+  return results;
+}
+
+function printValidatorResults(results) {
+  console.log('\n=== progress.md Pipeline Validator ===\n');
+  let allPass = true;
+  for (const r of results) {
+    const icon = r.pass ? 'PASS' : 'FAIL';
+    console.log(`  ${icon}  ${r.id}: ${r.name}`);
+    console.log(`        ${r.detail}`);
+    if (!r.pass) allPass = false;
+  }
+  console.log(`\n${allPass ? 'ALL PASS' : 'SOME FAILED'}\n`);
+}
+
+// ─── Guard Rule Tests ──────────────────────────────────────────────
+
+function setup() {
+  rmSync(TEST_DIR, { recursive: true, force: true });
+  mkdirSync(TEST_DIR, { recursive: true });
+}
+
+function cleanup() {
+  rmSync(TEST_DIR, { recursive: true, force: true });
+}
+
+function writeProgress(content) {
+  writeFileSync(join(TEST_DIR, 'progress.md'), content, 'utf8');
+}
+
+function removeProgress() {
+  rmSync(join(TEST_DIR, 'progress.md'), { force: true });
+}
+
+/**
+ * Invoke checklist-guard with a fake tool call via stdin.
+ * Returns { exitCode, stdout, stderr }
+ * For Write tool, pass content in opts.content.
+ */
+function invokeGuard(filePath, toolName = 'Edit', opts = {}) {
+  const absPath = filePath.startsWith(PROJECT_ROOT)
+    ? filePath
+    : join(PROJECT_ROOT, filePath).replace(/\\/g, '/');
+
+  const toolInput = { file_path: absPath };
+  if (opts.content !== undefined) toolInput.content = opts.content;
+
+  const stdinData = JSON.stringify({
+    tool_name: toolName,
+    tool_input: toolInput
+  });
+
+  const result = spawnSync('node', [GUARD_SCRIPT], {
+    input: stdinData,
+    encoding: 'utf8',
+    timeout: 10000,
+  });
+
+  const stdout = result.stdout || '';
+  const stderr = result.stderr || '';
+  const exitCode = result.status ?? 1;
+
+  // Try to parse JSON output (new format)
+  let json = null;
+  try { json = JSON.parse(stdout); } catch { /* raw text output */ }
+
+  return {
+    exitCode,
+    stdout,
+    stderr,
+    json,
+    blocked: exitCode === 2 || (json && json.decision === 'block'),
+    reason: json?.reason || stdout,
+    hasAnalysis: !!(json?.additionalContext),
+  };
+}
+
+// ─── Test Runner ───────────────────────────────────────────────────
+
+let passed = 0;
+let failed = 0;
+const failures = [];
+
+function assert(testId, description, condition, detail = '') {
+  if (condition) {
+    passed++;
+    console.log(`  PASS  ${testId}: ${description}`);
+  } else {
+    failed++;
+    console.log(`  FAIL  ${testId}: ${description}`);
+    if (detail) console.log(`        ${detail}`);
+    failures.push(`${testId}: ${description}`);
+  }
+}
+
+// ─── Phase B: Existing Rule Tests ──────────────────────────────────
+
+function runPhaseB() {
+  console.log('\n--- Phase B: Existing Rule Tests ---\n');
+
+  // B1: Rule 1 BLOCK — pipeline file edit with no checklist
+  setup();
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 0\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('B1', 'Rule 1 차단: pipeline edit without checklist', r.blocked && r.hasAnalysis,
+      `blocked=${r.blocked}, hasAnalysis=${r.hasAnalysis}, exitCode=${r.exitCode}`);
+  }
+
+  // B2: Rule 1 ALLOW — pipeline file edit with open checklist
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('B2', 'Rule 1 허용: pipeline edit with open checklist', r.exitCode === 0,
+      `exitCode=${r.exitCode}`);
+  }
+
+  // B3: Rule 3 BLOCK — slide HTML edit with A.판정 unchecked
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('B3', 'Rule 3 차단: slide edit with 판정 unchecked', r.blocked && r.hasAnalysis,
+      `blocked=${r.blocked}, hasAnalysis=${r.hasAnalysis}`);
+  }
+
+  // B4: Rule 3 ALLOW — slide HTML edit with A.판정 checked
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('B4', 'Rule 3 허용: slide edit with 판정 checked', r.exitCode === 0,
+      `exitCode=${r.exitCode}`);
+  }
+
+  // B5: Rule 4 BLOCK — Step 7 done but V-NN open
+  writeProgress(`# Progress\n## 현재 단계\n- [x] Step 7: 최종 출력\n## 탐지 코드 수정 검증\n- [ ] V-01: PF-60 회귀 테스트\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('B5', 'Rule 4 차단: Step 7 done + V-NN open', r.blocked && r.hasAnalysis,
+      `blocked=${r.blocked}, hasAnalysis=${r.hasAnalysis}`);
+  }
+
+  // B6: Rule 2 WARNING — progress.md edit with open items (stderr warning, exit 0)
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정\n- [ ] B. 코드 수정\n`);
+  {
+    const r = invokeGuard('slides/_guard-test/progress.md');
+    assert('B6', 'Rule 2 경고: progress.md edit with open items', r.exitCode === 0 && r.stderr.includes('미완료'),
+      `exitCode=${r.exitCode}, stderr includes 미완료=${r.stderr.includes('미완료')}`);
+  }
+
+  // B7: Rule 5 BLOCK — Step 7 done but active rules unchecked
+  writeProgress(`# Progress\n## 현재 단계\n- [x] Step 7: 최종 출력\n## 활성 규칙\n- [ ] production-reporting-rules.md\n- [x] html-prevention-rules.md\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('B7', 'Rule 5 차단: Step 7 done + active rules unchecked', r.blocked && r.reason.includes('활성 규칙'),
+      `blocked=${r.blocked}, reason=${r.reason.slice(0, 60)}`);
+  }
+
+  // B8: Rule 5 ALLOW — Step 7 done, all active rules checked
+  writeProgress(`# Progress\n## 현재 단계\n- [x] Step 7: 최종 출력\n## 활성 규칙\n- [x] production-reporting-rules.md\n- [x] html-prevention-rules.md\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('B8', 'Rule 5 허용: Step 7 done + all rules checked', r.exitCode === 0,
+      `exitCode=${r.exitCode}`);
+  }
+
+  cleanup();
+}
+
+// ─── Phase C: Gap Tests ────────────────────────────────────────────
+
+function runPhaseC() {
+  console.log('\n--- Phase C: Gap Tests ---\n');
+
+  // C1: No progress.md in slide folder — slide HTML edit should be blocked
+  setup();
+  removeProgress(); // ensure no progress.md in _guard-test
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('C1', 'Gap 1: no progress.md -> BLOCK slide edit', r.blocked,
+      `blocked=${r.blocked}, exitCode=${r.exitCode}`);
+  }
+
+  // C2: Unmonitored skill files should be blocked
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 1\n`);
+  {
+    const r = invokeGuard('.claude/skills/plan-skill/SKILL.md');
+    assert('C2', 'Gap 3: plan-skill/SKILL.md monitored', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+  {
+    const r = invokeGuard('.claude/skills/pptx-skill/SKILL.md');
+    assert('C2b', 'Gap 3: pptx-skill/SKILL.md monitored', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+  {
+    const r = invokeGuard('.claude/skills/presentation-skill/SKILL.md');
+    assert('C2c', 'Gap 3: presentation-skill/SKILL.md monitored', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C3: 승격 section recognized as issue
+  writeProgress(`# Progress\n## 수정 이력\n### 승격: COM-01 -> PF-60\n- [ ] 1. IL 기록\n- [ ] 2. 전단계 규칙\n`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('C3', 'Gap 5: 승격 section recognized', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C4: Non-standard HTML name (cover.html, not slide-NN.html)
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n`);
+  {
+    const r = invokeGuard('slides/_guard-test/cover.html');
+    assert('C4', 'Gap 8: cover.html matched as slide HTML', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C5: Block outputs include additionalContext for agent analysis
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 0\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    assert('C5', 'Block output has additionalContext for auto-analysis', r.hasAnalysis && r.json?.additionalContext.includes('근본 원인 분석'),
+      `hasAnalysis=${r.hasAnalysis}`);
+  }
+
+  cleanup();
+}
+
+// ─── Phase D: Integrity & Extended Coverage ─────────────────────────
+
+function runPhaseD() {
+  console.log('\n--- Phase D: Integrity & Extended PIPELINE_FILES Tests ---\n');
+
+  // C6: CLAUDE.md Edit without checklist → BLOCK (Rule 1)
+  setup();
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 0\n`);
+  {
+    const r = invokeGuard('CLAUDE.md');
+    assert('C6', 'CLAUDE.md Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C7: .claude/settings.local.json Edit without checklist → BLOCK (Rule 1)
+  {
+    const r = invokeGuard('.claude/settings.local.json');
+    assert('C7', 'settings.local.json Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C8: pf-step-2-2.5.md Edit without checklist → BLOCK (Rule 1)
+  {
+    const r = invokeGuard('.claude/docs/pf-step-2-2.5.md');
+    assert('C8', 'pf-step-2-2.5.md Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C9: CLAUDE.md Write with checklist + all required sections → ALLOW
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  {
+    const fullContent = [
+      '# CLAUDE.md',
+      '## 자가 개선 피드백 루프',
+      '### 파이프라인 자동 개선 의무',
+      '## 파이프라인 MD 생성 규칙',
+      '### 활성 규칙 체크박스',
+      '## 온디맨드 참조',
+    ].join('\n');
+    const r = invokeGuard('CLAUDE.md', 'Write', { content: fullContent });
+    assert('C9', 'CLAUDE.md Write with all required sections → ALLOW', r.exitCode === 0,
+      `exitCode=${r.exitCode}`);
+  }
+
+  // C10: CLAUDE.md Write with checklist but missing required section → BLOCK (Rule 6)
+  {
+    const partialContent = [
+      '# CLAUDE.md',
+      '### 파이프라인 자동 개선 의무',
+      '## 파이프라인 MD 생성 규칙',
+      '### 활성 규칙 체크박스',
+      '## 온디맨드 참조',
+      // Missing: '## 자가 개선 피드백 루프'
+    ].join('\n');
+    const r = invokeGuard('CLAUDE.md', 'Write', { content: partialContent });
+    assert('C10', 'CLAUDE.md Write missing section → BLOCK (Rule 6)', r.blocked && r.reason.includes('필수 섹션'),
+      `blocked=${r.blocked}, reason=${(r.reason || '').slice(0, 60)}`);
+  }
+
+  // C11: settings.local.json Write missing checklist-guard → BLOCK (Rule 6)
+  {
+    const badSettings = JSON.stringify({ hooks: { PreToolUse: [] } });
+    const r = invokeGuard('.claude/settings.local.json', 'Write', { content: badSettings });
+    assert('C11', 'settings.local.json Write missing guard hooks → BLOCK (Rule 6)', r.blocked && r.reason.includes('필수 섹션'),
+      `blocked=${r.blocked}, reason=${(r.reason || '').slice(0, 60)}`);
+  }
+
+  cleanup();
+}
+
+// ─── Main ──────────────────────────────────────────────────────────
+
+console.log('=== Checklist Guard Tests ===');
+runPhaseB();
+runPhaseC();
+runPhaseD();
+
+console.log(`\n=== Results: ${passed} passed, ${failed} failed ===`);
+if (failures.length > 0) {
+  console.log('\nFailures:');
+  for (const f of failures) console.log(`  - ${f}`);
+}
+process.exit(failed > 0 ? 1 : 0);

@@ -12,6 +12,19 @@
           }
         ]
       }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node D:/projects/slides-grab/scripts/post-compact-restore.mjs",
+            "timeout": 10,
+            "statusMessage": "Restoring session context..."
+          }
+        ]
+      }
     ]
   },
   "permissions": {
