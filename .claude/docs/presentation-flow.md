@@ -75,7 +75,7 @@
 
 ### 전체 프로덕션
 - [ ] 워크플로우 상세 (`presentation-flow.md`) — 프로덕션 완료까지
-- [ ] 프로덕션 보고 규칙 (`production-reporting-rules.md`) — Step 1에서 1회 로드
+- [ ] 프로덕션 보고 규칙 (`production-reporting-rules.md`) — 세션 시작 시 1회 로드, 모든 Step에서 보고 의무
 
 ### Step 1 아웃라인
 - [ ] 디자인 모드: {모드명} (`design-modes.md`) — Step 2~4 완료까지

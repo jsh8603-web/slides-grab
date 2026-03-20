@@ -41,7 +41,7 @@ progress.md는 각 Step 완료·수정 발생·로그 기록 시 **즉시 갱신
 
 | Step | Step 절차 파일 | 추가 Read 대상 (docs/ 경로 생략) | 로드 금지 |
 |------|------|------|------|
-| 0-1 소스/아웃라인 | `pf-step-0-1.md` | `design-modes.md`, `production-reporting-rules.md`(1회), `plan-skill` 호출 | nanoBanana, pptx-inspection-log |
+| 0-1 소스/아웃라인 | `pf-step-0-1.md` | `design-modes.md`, `plan-skill` 호출 | nanoBanana, pptx-inspection-log |
 | 1.5B 이미지 | `pf-step-1.5b.md` | `nanoBanana-guide.md`, `vqa-pipeline-maintenance.md` | design-modes, html-prevention-rules |
 | 2-2.5 HTML/검증 | `pf-step-2-2.5.md` | **`design-skill`** 호출, `html-prevention-rules.md`, `pptx-inspection-log.md` | nanoBanana, vqa, design-modes |
 | 3-4 에디터/수정 | `pf-step-3-4.md` | `html-prevention-rules.md` (수정 시만), `nanoBanana-guide.md` (이미지 교체 시만) | 조건 미해당 파일 |
@@ -49,7 +49,7 @@ progress.md는 각 Step 완료·수정 발생·로그 기록 시 **즉시 갱신
 
 **공통 규칙**:
 - `progress.md`는 매 Step에서 Read/Write
-- `production-reporting-rules.md`는 **Step 1에서 1회만** Read (이후 재로드 금지)
+- `production-reporting-rules.md`는 **세션 시작 시 1회** Read — 모든 Step에서 보고 규칙 적용 (활성 규칙으로 관리)
 - `presentation-flow.md`는 **현재 Step 섹션만** Read (offset/limit 사용, 전체 Read 금지)
 - 스킬 호출(bold)은 해당 Step 진입 시 1회만. Step 전환 시 이전 스킬 재호출 금지
 - **이미 컨텍스트에 있는 파일은 재로드 금지** — 대화 압축 후에만 재로드 (progress.md `## 활성 규칙` 참조)
