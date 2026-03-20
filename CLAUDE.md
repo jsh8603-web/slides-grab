@@ -236,8 +236,11 @@ Step별 로드 파일: `rules/presentation-flow.md` §Step별 로드 규칙
 파이프라인 코드 수정(탐지/생성/변환 코드, 규칙 파일) 즉시 — §공통 절차의 Step E에 해당:
 1. `slides/프레젠테이션명/change-log.md`에 변동 항목 기재
 2. `progress.md`에 `- [ ] change-log.md 검증 (C-01~C-NN)` 체크박스 추가
-3. 프로덕션 완료 → 검증 에이전트가 change-log.md의 각 항목 검증 실행
-4. 전 항목 통과 → change-log.md 삭제 + progress.md 체크 `[x]`
+3. **Step 7.5 (프로덕션 후 검증)에서 change-log.md 검증 실행**:
+   - 각 C-NN 항목의 `**검증**:` 명령어를 실제 실행하여 통과 확인
+   - "다음 세션에서 확인" 류의 행동 검증 항목은 이월 사유 기재
+   - 실행 가능한 검증 명령어가 전부 통과해야 다음 단계 진행
+4. 전 항목 통과 → **change-log.md 삭제** + progress.md V-02 체크 `[x]`
 
 **완료 게이트**: 1~2가 progress.md에 기록되기 전까지 다음 코드 수정 금지.
 
