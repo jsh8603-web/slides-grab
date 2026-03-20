@@ -1,0 +1,1317 @@
+{
+  "_doc": "PF (Preflight HTML) regression test cases for STATIC rules only. Each case has an HTML snippet that feeds into the corresponding checkPF* function. type: true_positive = should detect, false_positive = should NOT detect. expectedLevel: 'ERROR'|'WARN'|null. status: 'known_issue' = code doesn't match desired behavior (tracked for future fix).",
+  "cases": [
+    {
+      "id": "PF-01-TP-001",
+      "rule": "PF-01",
+      "type": "true_positive",
+      "source": "IL-14 — gradient + white text",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "linear-gradient on div with white text — text invisible in PPTX",
+      "input": { "html": "<div style=\"background: linear-gradient(to right, #1a1a1a, #333); padding: 20pt;\"><p style=\"color: #fff;\">Title text</p></div>" }
+    },
+    {
+      "id": "PF-01-TP-002",
+      "rule": "PF-01",
+      "type": "true_positive",
+      "source": "IL-14 — radial-gradient + bright hex text",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "radial-gradient with bright #fff text color",
+      "input": { "html": "<div style=\"background-image: radial-gradient(circle, #000, #222);\"><h1 style=\"color: #fff;\">Hero</h1></div>" }
+    },
+    {
+      "id": "PF-01-TP-003",
+      "rule": "PF-01",
+      "type": "true_positive",
+      "status": "known_issue",
+      "source": "IL-14 — radial-gradient + rgb() text with spaces",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "actualLevel": null,
+      "description": "radial-gradient with rgb(255, 255, 255) — color extraction regex fails on spaced rgb()",
+      "_known_issue": "PF-01 color regex [^;\"'\\s]+ breaks on rgb(R, G, B) with spaces. Only #hex and rgb(R,G,B) without spaces work.",
+      "input": { "html": "<div style=\"background-image: radial-gradient(circle, #000, #222);\"><h1 style=\"color: rgb(255, 255, 255);\">Hero</h1></div>" }
+    },
+    {
+      "id": "PF-01-FP-001",
+      "rule": "PF-01",
+      "type": "false_positive",
+      "source": "synthetic — gradient with dark text (good contrast)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Gradient background with dark text — no visibility issue",
+      "input": { "html": "<div style=\"background: linear-gradient(to bottom, #eee, #ccc);\"><p style=\"color: #333;\">Dark text</p></div>" }
+    },
+    {
+      "id": "PF-01-FP-002",
+      "rule": "PF-01",
+      "type": "false_positive",
+      "source": "synthetic — no gradient at all",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Solid background with white text — no gradient, should not trigger",
+      "input": { "html": "<div style=\"background: #1a1a1a;\"><p style=\"color: #fff;\">Text</p></div>" }
+    },
+
+    {
+      "id": "PF-02-TP-001",
+      "rule": "PF-02",
+      "type": "true_positive",
+      "source": "IL-13 — flex:1 without box-sizing",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "flex:1 div missing box-sizing:border-box — may cause overflow",
+      "input": { "html": "<div style=\"display:flex;\"><div style=\"flex: 1; padding: 20pt;\">Content</div></div>" }
+    },
+    {
+      "id": "PF-02-FP-001",
+      "rule": "PF-02",
+      "type": "false_positive",
+      "source": "synthetic — flex:1 with box-sizing:border-box",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "flex:1 with box-sizing:border-box — correct pattern",
+      "input": { "html": "<div style=\"display:flex;\"><div style=\"flex: 1; box-sizing: border-box; padding: 20pt;\">Content</div></div>" }
+    },
+
+    {
+      "id": "PF-04-TP-001",
+      "rule": "PF-04",
+      "type": "true_positive",
+      "source": "IL-04 — img height:100% without max-height",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "img with height:100% but no max-height — may overflow bottom margin",
+      "input": { "html": "<img src=\"photo.jpg\" style=\"height: 100%; width: auto;\">" }
+    },
+    {
+      "id": "PF-04-FP-001",
+      "rule": "PF-04",
+      "type": "false_positive",
+      "source": "synthetic — img height:100% with max-height",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "img with height:100% AND max-height — safe pattern",
+      "input": { "html": "<img src=\"photo.jpg\" style=\"height: 100%; max-height: 369pt; width: auto;\">" }
+    },
+
+    {
+      "id": "PF-05-TP-001",
+      "rule": "PF-05",
+      "type": "true_positive",
+      "source": "IL-04 — div with background url()",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Non-body div with background url() — fails in html2pptx",
+      "input": { "html": "<div style=\"background: url(assets/bg.jpg) center/cover;\">Content</div>" }
+    },
+    {
+      "id": "PF-05-TP-002",
+      "rule": "PF-05",
+      "type": "true_positive",
+      "source": "synthetic — div with background-image url()",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Non-body div with background-image url()",
+      "input": { "html": "<div style=\"background-image: url(assets/photo.png);\">Content</div>" }
+    },
+    {
+      "id": "PF-05-FP-001",
+      "rule": "PF-05",
+      "type": "false_positive",
+      "source": "synthetic — body with background url() is OK",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "No div has background url() — only plain text",
+      "input": { "html": "<body style=\"background: #1a1a1a;\"><p>Hello</p></body>" }
+    },
+
+    {
+      "id": "PF-06-TP-001",
+      "rule": "PF-06",
+      "type": "true_positive",
+      "source": "IL-13 — flex container with img missing overflow:hidden",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "display:flex div containing img but no overflow:hidden",
+      "input": { "html": "<div style=\"display: flex; gap: 10pt;\"><img src=\"photo.jpg\" style=\"width: 50%;\"><div>Text</div></div>" }
+    },
+    {
+      "id": "PF-06-FP-001",
+      "rule": "PF-06",
+      "type": "false_positive",
+      "source": "synthetic — flex container with overflow:hidden",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Flex container has overflow:hidden — safe",
+      "input": { "html": "<div style=\"display: flex; overflow: hidden;\"><img src=\"photo.jpg\"><div>Text</div></div>" }
+    },
+
+    {
+      "id": "PF-07-TP-001",
+      "rule": "PF-07",
+      "type": "true_positive",
+      "source": "IL-07 — p tag with background",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "<p> with background style — must wrap in <div>",
+      "input": { "html": "<p style=\"background: #FFD700; padding: 8pt;\">Highlighted text</p>" }
+    },
+    {
+      "id": "PF-07-TP-002",
+      "rule": "PF-07",
+      "type": "true_positive",
+      "source": "synthetic — h2 with border",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "<h2> with border style — must wrap in <div>",
+      "input": { "html": "<h2 style=\"border: 2pt solid #333; padding: 10pt;\">Title</h2>" }
+    },
+    {
+      "id": "PF-07-TP-003",
+      "rule": "PF-07",
+      "type": "true_positive",
+      "source": "synthetic — li with background",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "<li> with background style — must wrap in <div>",
+      "input": { "html": "<li style=\"background: #eee; margin: 4pt;\">Item</li>" }
+    },
+    {
+      "id": "PF-07-FP-001",
+      "rule": "PF-07",
+      "type": "false_positive",
+      "source": "synthetic — p with only color (no bg/border)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "<p> with color only — no background or border, should not trigger",
+      "input": { "html": "<p style=\"color: #333; font-size: 14pt;\">Normal text</p>" }
+    },
+
+    {
+      "id": "PF-12-TP-001",
+      "rule": "PF-12",
+      "type": "true_positive",
+      "source": "IL-26 — flag emoji",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Flag emoji in text — renders as text codes in PowerPoint",
+      "input": { "html": "<p>\ud83c\uddfa\ud83c\uddf8 United States</p>" }
+    },
+    {
+      "id": "PF-12-FP-001",
+      "rule": "PF-12",
+      "type": "false_positive",
+      "source": "synthetic — regular emoji (not flag)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Regular emoji works fine in PowerPoint",
+      "input": { "html": "<p>\ud83c\udf0d Global Markets \u2696\ufe0f</p>" }
+    },
+
+    {
+      "id": "PF-13-TP-001",
+      "rule": "PF-13",
+      "type": "true_positive",
+      "source": "IL-25 — donut chart border-radius:50% + border",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "border-radius:50% + border combo — renders as roundRect in PPTX",
+      "input": { "html": "<div style=\"width: 120pt; height: 120pt; border-radius: 50%; border: 20pt solid #E4002B;\"></div>" }
+    },
+    {
+      "id": "PF-13-FP-001",
+      "rule": "PF-13",
+      "type": "false_positive",
+      "source": "synthetic — border-radius:50% without border (avatar)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "border-radius:50% alone is fine (profile photo clip)",
+      "input": { "html": "<img style=\"border-radius: 50%; width: 60pt; height: 60pt;\" src=\"avatar.jpg\">" }
+    },
+
+    {
+      "id": "PF-14-TP-001",
+      "rule": "PF-14",
+      "type": "true_positive",
+      "source": "IL-24 — background div + sibling span",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Background div followed by sibling <span> — span text lost in PPTX",
+      "input": { "html": "<div><div style=\"background: #E4002B; width: 8pt; height: 8pt; border-radius: 50%;\"></div> <span>Item label</span></div>" }
+    },
+    {
+      "id": "PF-14-FP-001",
+      "rule": "PF-14",
+      "type": "false_positive",
+      "source": "synthetic — background div + sibling <p> (correct pattern)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Background div + <p> sibling — correct pattern",
+      "input": { "html": "<div><div style=\"background: #E4002B; width: 8pt; height: 8pt;\"></div><p>Item label</p></div>" }
+    },
+
+    {
+      "id": "PF-15-TP-001",
+      "rule": "PF-15",
+      "type": "true_positive",
+      "source": "IL-27 — 3-column grid with CJK text >7.5pt",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "3-column grid with CJK text at 9pt — may overflow in PPTX",
+      "input": { "html": "<div style=\"display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt;\"><div style=\"font-size: 9pt;\"><p>\ub300\uc751 \uc804\ub7b5 \uac1c\uc694</p></div><div><p>Column 2</p></div><div><p>Column 3</p></div></div>" }
+    },
+    {
+      "id": "PF-15-TP-002",
+      "rule": "PF-15",
+      "type": "true_positive",
+      "source": "synthetic — repeat(4, 1fr) grid with CJK",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "4-column grid using repeat() with CJK text at 10pt",
+      "input": { "html": "<div style=\"display: grid; grid-template-columns: repeat(4, 1fr); gap: 8pt;\"><div style=\"font-size: 10pt;\">\ud22c\uc790 \uc804\ub7b5</div><div>\uc2e4\uc801</div><div>\uc804\ub9dd</div><div>\uacb0\ub860</div></div>" }
+    },
+    {
+      "id": "PF-15-FP-001",
+      "rule": "PF-15",
+      "type": "false_positive",
+      "source": "synthetic — 2-column grid (below threshold)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "2-column grid with CJK — below 3-column threshold",
+      "input": { "html": "<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 10pt;\"><div style=\"font-size: 12pt;\">\uc81c\ubaa9</div><div>\ub0b4\uc6a9</div></div>" }
+    },
+    {
+      "id": "PF-15-FP-002",
+      "rule": "PF-15",
+      "type": "false_positive",
+      "source": "synthetic — 3-column grid with CJK <=7.5pt",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "3-column grid with CJK at 7pt — within safe threshold",
+      "input": { "html": "<div style=\"display: grid; grid-template-columns: 1fr 1fr 1fr;\"><div style=\"font-size: 7pt;\">\ud55c\uae00</div><div>B</div><div>C</div></div>" }
+    },
+
+    {
+      "id": "PF-16-TP-001",
+      "rule": "PF-16",
+      "type": "true_positive",
+      "source": "IL-07 — body bg image + text without text-shadow",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Body background image with text elements missing text-shadow",
+      "input": { "html": "<body style=\"background: url(assets/bg.jpg) center/cover;\"><h1 style=\"color: #fff; font-size: 24pt;\">Title</h1><p style=\"color: #fff; font-size: 14pt;\">Subtitle</p></body>" }
+    },
+    {
+      "id": "PF-16-FP-001",
+      "rule": "PF-16",
+      "type": "false_positive",
+      "source": "synthetic — body bg image + text WITH text-shadow",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Body background image but all text has text-shadow — safe",
+      "input": { "html": "<body style=\"background: url(assets/bg.jpg) center/cover;\"><h1 style=\"color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);\">Title</h1><p style=\"color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);\">Subtitle</p></body>" }
+    },
+    {
+      "id": "PF-16-FP-002",
+      "rule": "PF-16",
+      "type": "false_positive",
+      "source": "synthetic — no body background image",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "No background image on body — text-shadow not needed",
+      "input": { "html": "<body style=\"background: #1a1a1a;\"><h1 style=\"color: #fff; font-size: 24pt;\">Title</h1></body>" }
+    },
+
+    {
+      "id": "PF-17-TP-001",
+      "rule": "PF-17",
+      "type": "true_positive",
+      "source": "synthetic — scale transform",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "CSS transform scale() — not supported in PPTX",
+      "input": { "html": "<div style=\"transform: scale(1.5);\">Enlarged</div>" }
+    },
+    {
+      "id": "PF-17-TP-002",
+      "rule": "PF-17",
+      "type": "true_positive",
+      "source": "synthetic — skewX transform",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "CSS transform skewX() — not supported in PPTX",
+      "input": { "html": "<div style=\"transform: skewX(15deg);\">Skewed</div>" }
+    },
+    {
+      "id": "PF-17-FP-001",
+      "rule": "PF-17",
+      "type": "false_positive",
+      "source": "synthetic — rotate transform (supported)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "CSS transform rotate() — supported in PPTX",
+      "input": { "html": "<div style=\"transform: rotate(45deg);\">Rotated</div>" }
+    },
+    {
+      "id": "PF-17-FP-002",
+      "rule": "PF-17",
+      "type": "false_positive",
+      "source": "synthetic — translate transform (OK)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "CSS transform translate() — used for centering, not flagged",
+      "input": { "html": "<div style=\"transform: translate(-50%, -50%);\">Centered</div>" }
+    },
+
+    {
+      "id": "PF-19-TP-001",
+      "rule": "PF-19",
+      "type": "true_positive",
+      "source": "synthetic — unregistered font",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Font 'Dancing Script' not in allowed list — will fallback to Arial",
+      "input": { "html": "<p style=\"font-family: 'Dancing Script', cursive; font-size: 14pt;\">Fancy text</p>" }
+    },
+    {
+      "id": "PF-19-FP-001",
+      "rule": "PF-19",
+      "type": "false_positive",
+      "source": "synthetic — Pretendard font (allowed)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Pretendard is in allowed list",
+      "input": { "html": "<p style=\"font-family: 'Pretendard', sans-serif; font-size: 14pt;\">Normal text</p>" }
+    },
+    {
+      "id": "PF-19-FP-002",
+      "rule": "PF-19",
+      "type": "false_positive",
+      "source": "synthetic — system font keywords",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "System font keywords are allowed",
+      "input": { "html": "<p style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\">System text</p>" }
+    },
+
+    {
+      "id": "PF-22-TP-001",
+      "rule": "PF-22",
+      "type": "true_positive",
+      "source": "synthetic — backdrop-filter",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "backdrop-filter — unsupported in PPTX",
+      "input": { "html": "<div style=\"backdrop-filter: blur(10px); background: rgba(0,0,0,0.3);\">Overlay</div>" }
+    },
+    {
+      "id": "PF-22-TP-002",
+      "rule": "PF-22",
+      "type": "true_positive",
+      "source": "synthetic — clip-path",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "clip-path — unsupported in PPTX",
+      "input": { "html": "<div style=\"clip-path: polygon(50% 0%, 0% 100%, 100% 100%);\">Triangle</div>" }
+    },
+    {
+      "id": "PF-22-TP-003",
+      "rule": "PF-22",
+      "type": "true_positive",
+      "source": "synthetic — box-shadow inset",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "box-shadow inset — inset shadows ignored in PPTX",
+      "input": { "html": "<div style=\"box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);\">Card</div>" }
+    },
+    {
+      "id": "PF-22-TP-004",
+      "rule": "PF-22",
+      "type": "true_positive",
+      "source": "synthetic — filter:blur in style block",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "filter: blur() in <style> block — unsupported in PPTX",
+      "input": { "html": "<style>.overlay { filter: blur(5px); }</style><div class=\"overlay\">Blurred</div>" }
+    },
+    {
+      "id": "PF-22-FP-001",
+      "rule": "PF-22",
+      "type": "false_positive",
+      "source": "synthetic — box-shadow without inset (supported)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Outer box-shadow — supported in PPTX",
+      "input": { "html": "<div style=\"box-shadow: 0 4px 8px rgba(0,0,0,0.2);\">Card</div>" }
+    },
+
+    {
+      "id": "PF-25-TP-001",
+      "rule": "PF-25",
+      "type": "true_positive",
+      "source": "IL-32 — font-size below hard floor",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "font-size 7pt — below 10pt hard floor",
+      "input": { "html": "<p style=\"font-size: 7pt;\">Tiny text</p>" }
+    },
+    {
+      "id": "PF-25-TP-002",
+      "rule": "PF-25",
+      "type": "true_positive",
+      "source": "synthetic — multiple sub-10pt sizes",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Multiple font-size violations: 6pt and 8pt",
+      "input": { "html": "<p style=\"font-size: 6pt;\">Label</p><span style=\"font-size: 8pt;\">Caption</span>" }
+    },
+    {
+      "id": "PF-25-FP-001",
+      "rule": "PF-25",
+      "type": "false_positive",
+      "source": "synthetic — font-size exactly 10pt (at threshold)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "font-size 10pt — exactly at hard floor, should pass",
+      "input": { "html": "<p style=\"font-size: 10pt;\">Normal caption</p>" }
+    },
+    {
+      "id": "PF-25-FP-002",
+      "rule": "PF-25",
+      "type": "false_positive",
+      "source": "synthetic — font-size 14pt (well above floor)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "font-size 14pt — well above floor",
+      "input": { "html": "<p style=\"font-size: 14pt;\">Body text</p>" }
+    },
+
+    {
+      "id": "PF-27-TP-001",
+      "rule": "PF-27",
+      "type": "true_positive",
+      "source": "IL-34 — narrow CJK badge without nowrap",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "CJK text in 80pt-wide container without white-space:nowrap",
+      "input": { "html": "<div style=\"width: 80pt; background: #E4002B; padding: 4pt;\"><span>\uadfc\ud1f4\ubc95 \uc81c8\uc870</span></div>" }
+    },
+    {
+      "id": "PF-27-FP-001",
+      "rule": "PF-27",
+      "type": "false_positive",
+      "source": "synthetic — narrow CJK badge WITH nowrap",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "CJK badge with white-space:nowrap — safe",
+      "input": { "html": "<div style=\"width: 80pt; white-space: nowrap; background: #E4002B;\"><span>\uadfc\ud1f4\ubc95 \uc81c8\uc870</span></div>" }
+    },
+    {
+      "id": "PF-27-FP-002",
+      "rule": "PF-27",
+      "type": "false_positive",
+      "source": "synthetic — wide container (>=150pt)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "CJK text in 200pt container — above 150pt threshold",
+      "input": { "html": "<div style=\"width: 200pt; background: #E4002B;\"><span>\uadfc\ud1f4\ubc95 \uc81c8\uc870</span></div>" }
+    },
+
+    {
+      "id": "PF-28-TP-001",
+      "rule": "PF-28",
+      "type": "true_positive",
+      "source": "synthetic — slide with >120 word equivalents",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Slide with excessive text — over 120 word equivalents (130+ words)",
+      "input": { "html": "<body><div><p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur</p></div></body>" }
+    },
+    {
+      "id": "PF-28-TP-002",
+      "rule": "PF-28",
+      "type": "true_positive",
+      "source": "synthetic — slide with 81-120 word equivalents (WARN)",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Slide with moderate text — 81-120 word equivalents triggers WARN (~93 words)",
+      "input": { "html": "<body><div><p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam</p></div></body>" }
+    },
+    {
+      "id": "PF-28-FP-001",
+      "rule": "PF-28",
+      "type": "false_positive",
+      "source": "synthetic — slide with <=80 words",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Slide with minimal text — under 80 words",
+      "input": { "html": "<body><h1>Title</h1><p>Short paragraph with just a few words.</p></body>" }
+    },
+
+    {
+      "id": "PF-29-TP-001",
+      "rule": "PF-29",
+      "type": "true_positive",
+      "source": "synthetic — img missing alt text",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image without alt attribute — accessibility issue",
+      "input": { "html": "<img src=\"assets/chart.png\" style=\"width: 300pt; height: 200pt;\">" }
+    },
+    {
+      "id": "PF-29-TP-002",
+      "rule": "PF-29",
+      "type": "true_positive",
+      "source": "synthetic — img with empty alt",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image with empty alt=\"\" — needs descriptive text",
+      "input": { "html": "<img src=\"assets/photo.jpg\" alt=\"\" style=\"width: 200pt;\">" }
+    },
+    {
+      "id": "PF-29-FP-001",
+      "rule": "PF-29",
+      "type": "false_positive",
+      "source": "synthetic — img with descriptive alt",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Image with proper alt text — passes accessibility check",
+      "input": { "html": "<img src=\"assets/revenue-chart.png\" alt=\"2025 Revenue Growth Chart\" style=\"width: 300pt;\">" }
+    },
+    {
+      "id": "PF-29-FP-002",
+      "rule": "PF-29",
+      "type": "false_positive",
+      "source": "synthetic — tiny decorative icon (skipped)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Small icon (<= 2-digit width in px) — skipped by size filter",
+      "input": { "html": "<img src=\"icon.png\" width=\"16px\" style=\"width: 16px;\">" }
+    },
+
+    {
+      "id": "PF-30-TP-001",
+      "rule": "PF-30",
+      "type": "true_positive",
+      "source": "synthetic — title smaller than body",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "h1 at 14pt but p at 16pt — hierarchy inversion",
+      "input": { "html": "<h1 style=\"font-size: 14pt;\">Title</h1><p style=\"font-size: 16pt;\">Body text with larger font</p>" }
+    },
+    {
+      "id": "PF-30-FP-001",
+      "rule": "PF-30",
+      "type": "false_positive",
+      "source": "synthetic — title larger than body (correct hierarchy)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "h1 at 24pt, p at 14pt — correct hierarchy",
+      "input": { "html": "<h1 style=\"font-size: 24pt;\">Title</h1><p style=\"font-size: 14pt;\">Body text</p>" }
+    },
+
+    {
+      "id": "PF-34-TP-001",
+      "rule": "PF-34",
+      "type": "true_positive",
+      "source": "IL-45 — inline span color in heading",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "h2 with inline span color change — PPTX adds extra line breaks",
+      "input": { "html": "<h2 style=\"font-size: 18pt;\">\uae09\uc5ec\uc758 <span style=\"color: #E4002B;\">9.7%~23%+</span><br>\ubc94\uc704\ub85c \ub2ec\ub77c\uc9c4\ub2e4</h2>" }
+    },
+    {
+      "id": "PF-34-FP-001",
+      "rule": "PF-34",
+      "type": "false_positive",
+      "source": "synthetic — span wraps entire content",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Span wraps entire heading content — no text outside span, no split issue",
+      "input": { "html": "<h1><span style=\"color: #E4002B;\">Full Title In Span</span></h1>" }
+    },
+    {
+      "id": "PF-34-FP-002",
+      "rule": "PF-34",
+      "type": "false_positive",
+      "source": "synthetic — no span in heading",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Plain heading without any span",
+      "input": { "html": "<h1 style=\"font-size: 24pt; color: #333;\">Simple Title</h1>" }
+    },
+
+    {
+      "id": "PF-35-TP-001",
+      "rule": "PF-35",
+      "type": "true_positive",
+      "source": "IL-44 — li + ::before pseudo-element",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "<li> with ::before pseudo — PPTX ignores pseudo-elements",
+      "input": { "html": "<style>li::before { content: '\\2022'; color: #E4002B; }</style><ul><li>First item</li><li>Second item</li></ul>" }
+    },
+    {
+      "id": "PF-35-FP-001",
+      "rule": "PF-35",
+      "type": "false_positive",
+      "source": "synthetic — li without pseudo-elements",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Plain list without pseudo-elements — safe",
+      "input": { "html": "<ul><li>First item</li><li>Second item</li></ul>" }
+    },
+    {
+      "id": "PF-35-FP-002",
+      "rule": "PF-35",
+      "type": "false_positive",
+      "source": "synthetic — ::before without li",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Pseudo-element on div (no li) — does not match pattern",
+      "input": { "html": "<style>.icon::before { content: '\\2605'; }</style><div class=\"icon\">Star item</div>" }
+    },
+
+    {
+      "id": "PF-36-TP-001",
+      "rule": "PF-36",
+      "type": "true_positive",
+      "source": "IL-43 — rgba background in style block",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "background: rgba() with alpha < 1 — becomes opaque shape in PPTX",
+      "input": { "html": "<style>.overlay { background: rgba(232, 145, 58, 0.15); }</style><div class=\"overlay\">Content</div>" }
+    },
+    {
+      "id": "PF-36-TP-002",
+      "rule": "PF-36",
+      "type": "true_positive",
+      "source": "synthetic — rgba inline style",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Inline rgba background-color with alpha 0.3",
+      "input": { "html": "<div style=\"background-color: rgba(0, 0, 0, 0.3); padding: 10pt;\">Dimmed</div>" }
+    },
+    {
+      "id": "PF-36-FP-001",
+      "rule": "PF-36",
+      "type": "false_positive",
+      "source": "synthetic — rgba with alpha 0 (fully transparent)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "rgba with alpha 0 — fully transparent, no issue",
+      "input": { "html": "<style>.bg { background: rgba(0, 0, 0, 0); }</style><div class=\"bg\">Transparent</div>" }
+    },
+    {
+      "id": "PF-36-FP-002",
+      "rule": "PF-36",
+      "type": "false_positive",
+      "source": "synthetic — rgba with alpha 1.0 (fully opaque)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "rgba with alpha 1.0 — fully opaque, same as solid color",
+      "input": { "html": "<div style=\"background: rgba(232, 145, 58, 1.0);\">Solid</div>" }
+    },
+
+    {
+      "id": "PF-37-TP-001",
+      "rule": "PF-37",
+      "type": "true_positive",
+      "source": "IL-28 — CSS border triangle",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "border-top + transparent — CSS triangle renders as white block in PPTX",
+      "input": { "html": "<div style=\"width: 0; height: 0; border-top: 20pt solid #E4002B; border-right: 20pt solid transparent;\"></div>" }
+    },
+    {
+      "id": "PF-37-TP-002",
+      "rule": "PF-37",
+      "type": "true_positive",
+      "source": "synthetic — border triangle in style block",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "CSS triangle in <style> block",
+      "input": { "html": "<style>.arrow { border-left: 15pt solid transparent; border-bottom: 15pt solid #333; }</style><div class=\"arrow\"></div>" }
+    },
+    {
+      "id": "PF-37-FP-001",
+      "rule": "PF-37",
+      "type": "false_positive",
+      "source": "synthetic — normal border without transparent",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal solid border — no triangle trick",
+      "input": { "html": "<div style=\"border-top: 2pt solid #333;\">Section divider</div>" }
+    },
+
+    {
+      "id": "PF-38-TP-001",
+      "rule": "PF-38",
+      "type": "true_positive",
+      "source": "IL-38 — text-decoration underline",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "text-decoration: underline — position distorted in PPTX",
+      "input": { "html": "<span style=\"text-decoration: underline; color: #E4002B;\">Important</span>" }
+    },
+    {
+      "id": "PF-38-FP-001",
+      "rule": "PF-38",
+      "type": "false_positive",
+      "source": "synthetic — text-decoration: none",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "text-decoration: none — should not trigger",
+      "input": { "html": "<a style=\"text-decoration: none; color: #0066cc;\">Link</a>" }
+    },
+
+    {
+      "id": "PF-39-TP-001",
+      "rule": "PF-39",
+      "type": "true_positive",
+      "source": "IL-39 — non-body div with background-image: linear-gradient",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "div with background-image: linear-gradient — converts to solid rect in PPTX",
+      "input": { "html": "<div style=\"background-image: linear-gradient(to right, #1a1a1a, #333);\">Content</div>" }
+    },
+    {
+      "id": "PF-39-TP-002",
+      "rule": "PF-39",
+      "type": "true_positive",
+      "source": "synthetic — gradient in style block on non-body selector",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "CSS class with background-image: linear-gradient in <style>",
+      "input": { "html": "<style>.bg-grid { background-image: linear-gradient(180deg, #1a1a1a, transparent); }</style><div class=\"bg-grid\">Content</div>" }
+    },
+    {
+      "id": "PF-39-FP-001",
+      "rule": "PF-39",
+      "type": "false_positive",
+      "source": "synthetic — body background-image gradient (allowed)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "body selector with gradient — allowed",
+      "input": { "html": "<style>body { background-image: linear-gradient(to bottom, #1a1a1a, #333); }</style><body><p>Text</p></body>" }
+    },
+
+    {
+      "id": "PF-40-TP-001",
+      "rule": "PF-40",
+      "type": "true_positive",
+      "source": "IL-31 — AI infographic image with chart keyword",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image in assets/ with 'chart' in filename — likely fake data",
+      "input": { "html": "<img src=\"assets/revenue-chart.png\" alt=\"Revenue Chart\" style=\"width: 300pt;\">" }
+    },
+    {
+      "id": "PF-40-TP-002",
+      "rule": "PF-40",
+      "type": "true_positive",
+      "source": "synthetic — image with infographic alt text",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image with 'infographic' in alt text — AI fake data risk",
+      "input": { "html": "<img src=\"assets/slide4-visual.png\" alt=\"Business infographic overview\">" }
+    },
+    {
+      "id": "PF-40-FP-001",
+      "rule": "PF-40",
+      "type": "false_positive",
+      "source": "synthetic — assets image without banned keywords",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal photo in assets/ — no chart/graph keywords",
+      "input": { "html": "<img src=\"assets/office-photo.png\" alt=\"Modern office building\">" }
+    },
+    {
+      "id": "PF-40-FP-002",
+      "rule": "PF-40",
+      "type": "false_positive",
+      "source": "synthetic — external URL image (not assets/)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "External image with chart keyword — not in assets/, should be skipped",
+      "input": { "html": "<img src=\"https://example.com/chart.png\" alt=\"External chart\">" }
+    },
+
+    {
+      "id": "PF-41-TP-001",
+      "rule": "PF-41",
+      "type": "true_positive",
+      "source": "IL-46 — letter-spacing > 1pt",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "letter-spacing: 2pt — ignored in PPTX, text width differs",
+      "input": { "html": "<h1 style=\"letter-spacing: 2pt; font-size: 24pt;\">HERO TITLE</h1>" }
+    },
+    {
+      "id": "PF-41-FP-001",
+      "rule": "PF-41",
+      "type": "false_positive",
+      "source": "synthetic — letter-spacing within threshold",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "letter-spacing: 0.5pt — within +-1pt threshold",
+      "input": { "html": "<p style=\"letter-spacing: 0.5pt;\">Minor spacing</p>" }
+    },
+
+    {
+      "id": "PF-42-TP-001",
+      "rule": "PF-42",
+      "type": "true_positive",
+      "source": "IL-47 — opacity on non-body element",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "opacity: 0.5 — ignored in PPTX, renders fully opaque",
+      "input": { "html": "<div style=\"opacity: 0.5; background: #333;\">Dimmed card</div>" }
+    },
+    {
+      "id": "PF-42-TP-002",
+      "rule": "PF-42",
+      "type": "true_positive",
+      "source": "synthetic — opacity in style block",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "opacity in <style> block — ignored in PPTX",
+      "input": { "html": "<style>.dim { opacity: 0.3; }</style><div class=\"dim\">Faded</div>" }
+    },
+    {
+      "id": "PF-42-FP-001",
+      "rule": "PF-42",
+      "type": "false_positive",
+      "source": "synthetic — opacity: 1.0 (fully opaque)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "opacity: 1.0 — no transparency, no issue",
+      "input": { "html": "<div style=\"opacity: 1.0; background: #333;\">Solid card</div>" }
+    },
+    {
+      "id": "PF-42-FP-002",
+      "rule": "PF-42",
+      "type": "false_positive",
+      "source": "synthetic — opacity on body (skipped)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "opacity on <body> — skipped by body check",
+      "input": { "html": "<body style=\"opacity: 0.9;\"><p>Text</p></body>" }
+    },
+
+    {
+      "id": "PF-43-TP-001",
+      "rule": "PF-43",
+      "type": "true_positive",
+      "source": "IL-48 — object-fit: cover",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "object-fit: cover — PPTX converts to contain mode",
+      "input": { "html": "<img src=\"photo.jpg\" style=\"object-fit: cover; width: 300pt; height: 200pt;\">" }
+    },
+    {
+      "id": "PF-43-FP-001",
+      "rule": "PF-43",
+      "type": "false_positive",
+      "source": "synthetic — object-fit: contain (supported)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "object-fit: contain — this is the PPTX default, no issue",
+      "input": { "html": "<img src=\"photo.jpg\" style=\"object-fit: contain; width: 300pt;\">" }
+    },
+
+    {
+      "id": "PF-44-TP-001",
+      "rule": "PF-44",
+      "type": "true_positive",
+      "source": "IL-49 — outline property",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "outline: 2pt solid — ignored in PPTX",
+      "input": { "html": "<div style=\"outline: 2pt solid #E4002B;\">Highlighted</div>" }
+    },
+    {
+      "id": "PF-44-FP-001",
+      "rule": "PF-44",
+      "type": "false_positive",
+      "source": "synthetic — outline: none",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "outline: none — explicitly none, should not trigger",
+      "input": { "html": "<div style=\"outline: none;\">No outline</div>" }
+    },
+    {
+      "id": "PF-44-FP-002",
+      "rule": "PF-44",
+      "type": "false_positive",
+      "source": "synthetic — outline: 0",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "outline: 0 — zero value, should not trigger",
+      "input": { "html": "<div style=\"outline: 0;\">No outline</div>" }
+    },
+
+    {
+      "id": "PF-45-TP-001",
+      "rule": "PF-45",
+      "type": "true_positive",
+      "source": "IL-50 — negative margin <= -5pt",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "margin-top: -10pt — PPTX positioning may differ",
+      "input": { "html": "<div style=\"margin-top: -10pt;\">Overlapping element</div>" }
+    },
+    {
+      "id": "PF-45-FP-001",
+      "rule": "PF-45",
+      "type": "false_positive",
+      "source": "synthetic — small negative margin (> -5pt)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "margin-top: -3pt — within acceptable range",
+      "input": { "html": "<div style=\"margin-top: -3pt;\">Minor overlap</div>" }
+    },
+
+    {
+      "id": "PF-46-TP-001",
+      "rule": "PF-46",
+      "type": "true_positive",
+      "source": "IL-51 — text-indent",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "text-indent: 20pt — ignored in PPTX",
+      "input": { "html": "<p style=\"text-indent: 20pt;\">First line indented paragraph.</p>" }
+    },
+    {
+      "id": "PF-46-FP-001",
+      "rule": "PF-46",
+      "type": "false_positive",
+      "source": "synthetic — text-indent: 0",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "text-indent: 0 — no indent, should not trigger",
+      "input": { "html": "<p style=\"text-indent: 0pt;\">Normal paragraph.</p>" }
+    },
+
+    {
+      "id": "PF-47-TP-001",
+      "rule": "PF-47",
+      "type": "true_positive",
+      "source": "IL-52 — word-break: break-all",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "word-break: break-all — ignored in PPTX",
+      "input": { "html": "<div style=\"word-break: break-all;\">LongTextWithoutSpaces</div>" }
+    },
+    {
+      "id": "PF-47-FP-001",
+      "rule": "PF-47",
+      "type": "false_positive",
+      "source": "synthetic — word-break: normal",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "word-break: normal — default behavior, should not trigger",
+      "input": { "html": "<div style=\"word-break: normal;\">Normal text</div>" }
+    },
+
+    {
+      "id": "PF-48-TP-001",
+      "rule": "PF-48",
+      "type": "true_positive",
+      "source": "IL-53 — column-count: 2",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "column-count: 2 — CSS columns not supported in PPTX",
+      "input": { "html": "<div style=\"column-count: 2; column-gap: 20pt;\"><p>First column text.</p><p>Second column text.</p></div>" }
+    },
+    {
+      "id": "PF-48-FP-001",
+      "rule": "PF-48",
+      "type": "false_positive",
+      "source": "synthetic — column-count: 1",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "column-count: 1 — single column, no issue",
+      "input": { "html": "<div style=\"column-count: 1;\"><p>Single column</p></div>" }
+    },
+    {
+      "id": "PF-48-FP-002",
+      "rule": "PF-48",
+      "type": "false_positive",
+      "source": "synthetic — grid-template-columns should not match",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "grid-template-columns contains 'columns' but is not column-count",
+      "input": { "html": "<div style=\"display: grid; grid-template-columns: 1fr 1fr;\">Grid</div>" }
+    },
+
+    {
+      "id": "PF-49-TP-001",
+      "rule": "PF-49",
+      "type": "true_positive",
+      "source": "IL-54 — mix-blend-mode: multiply",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "mix-blend-mode: multiply — ignored in PPTX",
+      "input": { "html": "<div style=\"mix-blend-mode: multiply; background: #E4002B;\">Blended</div>" }
+    },
+    {
+      "id": "PF-49-FP-001",
+      "rule": "PF-49",
+      "type": "false_positive",
+      "source": "synthetic — mix-blend-mode: normal",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "mix-blend-mode: normal — default, no issue",
+      "input": { "html": "<div style=\"mix-blend-mode: normal;\">Normal blend</div>" }
+    },
+
+    {
+      "id": "PF-50-TP-001",
+      "rule": "PF-50",
+      "type": "true_positive",
+      "source": "IL-55 — border-image",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "border-image — not supported in PPTX",
+      "input": { "html": "<div style=\"border-image: linear-gradient(to right, #E4002B, #333) 1;\">Gradient border</div>" }
+    },
+    {
+      "id": "PF-50-FP-001",
+      "rule": "PF-50",
+      "type": "false_positive",
+      "status": "known_issue",
+      "source": "synthetic — border-image: none",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "actualLevel": "WARN",
+      "description": "border-image: none — explicitly none, but regex (?!none) lookahead fails after \\s* backtracking",
+      "_known_issue": "PF-50 regex /border-image(?:-source)?\\s*:\\s*(?!none)/ — the \\s* before (?!none) can match 0 chars, making lookahead see space not 'none'. Needs \\s+ or anchor fix.",
+      "input": { "html": "<div style=\"border-image: none; border: 1pt solid #333;\">Normal border</div>" }
+    },
+
+    {
+      "id": "PF-51-TP-001",
+      "rule": "PF-51",
+      "type": "true_positive",
+      "source": "IL-56 — position: sticky",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "position: sticky — treated as absolute in PPTX",
+      "input": { "html": "<div style=\"position: sticky; top: 0;\">Sticky header</div>" }
+    },
+    {
+      "id": "PF-51-FP-001",
+      "rule": "PF-51",
+      "type": "false_positive",
+      "source": "synthetic — position: absolute (not sticky)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "position: absolute — not sticky, should not trigger",
+      "input": { "html": "<div style=\"position: absolute; top: 10pt;\">Absolute element</div>" }
+    },
+
+    {
+      "id": "PF-52-TP-001",
+      "rule": "PF-52",
+      "type": "true_positive",
+      "source": "IL-57 — @font-face",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "@font-face custom font — PPTX uses system fonts",
+      "input": { "html": "<style>@font-face { font-family: 'CustomFont'; src: url('fonts/custom.woff2'); }</style><p style=\"font-family: 'CustomFont';\">Custom text</p>" }
+    },
+    {
+      "id": "PF-52-FP-001",
+      "rule": "PF-52",
+      "type": "false_positive",
+      "source": "synthetic — no @font-face",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "No @font-face declaration — system fonts only",
+      "input": { "html": "<style>body { font-family: Pretendard, sans-serif; }</style><p>System font text</p>" }
+    },
+
+    {
+      "id": "PF-53-TP-001",
+      "rule": "PF-53",
+      "type": "true_positive",
+      "source": "IL-58 — direction: rtl",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "direction: rtl — PPTX may not respect RTL",
+      "input": { "html": "<p style=\"direction: rtl;\">Arabic text here</p>" }
+    },
+    {
+      "id": "PF-53-FP-001",
+      "rule": "PF-53",
+      "type": "false_positive",
+      "source": "synthetic — direction: ltr (default)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "direction: ltr — default direction, no issue",
+      "input": { "html": "<p style=\"direction: ltr;\">Normal LTR text</p>" }
+    },
+
+    {
+      "id": "PF-54-TP-001",
+      "rule": "PF-54",
+      "type": "true_positive",
+      "source": "IL-59 — white-space: pre",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "white-space: pre — PPTX whitespace handling differs",
+      "input": { "html": "<pre style=\"white-space: pre;\">  indented\n  code\n  block</pre>" }
+    },
+    {
+      "id": "PF-54-TP-002",
+      "rule": "PF-54",
+      "type": "true_positive",
+      "source": "synthetic — white-space: pre-line",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "white-space: pre-line — PPTX line-break handling differs",
+      "input": { "html": "<div style=\"white-space: pre-line;\">Line 1\nLine 2</div>" }
+    },
+    {
+      "id": "PF-54-FP-001",
+      "rule": "PF-54",
+      "type": "false_positive",
+      "source": "synthetic — white-space: normal",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "white-space: normal — default, should not trigger",
+      "input": { "html": "<p style=\"white-space: normal;\">Normal whitespace</p>" }
+    },
+    {
+      "id": "PF-54-FP-002",
+      "rule": "PF-54",
+      "type": "false_positive",
+      "source": "synthetic — white-space: nowrap (not pre)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "white-space: nowrap — different property, should not trigger PF-54",
+      "input": { "html": "<div style=\"white-space: nowrap;\">No wrapping</div>" }
+    },
+
+    {
+      "id": "PF-55-TP-001",
+      "rule": "PF-55",
+      "type": "true_positive",
+      "source": "IL-60 — span background + contrasting color",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "span with background:#E4002B + color:#FFF — PPTX strips span bg, white text invisible",
+      "input": { "html": "<p><span style=\"background: #E4002B; color: #FFF; padding: 2pt 6pt;\">2X</span> growth</p>" }
+    },
+    {
+      "id": "PF-55-TP-002",
+      "rule": "PF-55",
+      "type": "true_positive",
+      "source": "synthetic — span background-color without explicit text color",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "span with background-color but no explicit color — bg still stripped",
+      "input": { "html": "<span style=\"background-color: #FFD700; padding: 4pt;\">Highlighted</span>" }
+    },
+    {
+      "id": "PF-55-FP-001",
+      "rule": "PF-55",
+      "type": "false_positive",
+      "status": "known_issue",
+      "source": "synthetic — span background: none",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "actualLevel": "ERROR",
+      "description": "span with background: none — should not trigger but regex (?!none) lookahead fails",
+      "_known_issue": "PF-55 regex (?!none|transparent) lookahead doesn't properly exclude 'none' due to \\s* backtracking in the background match. Same class of bug as PF-50.",
+      "input": { "html": "<span style=\"background: none; color: #E4002B;\">Red text</span>" }
+    },
+    {
+      "id": "PF-55-FP-002",
+      "rule": "PF-55",
+      "type": "false_positive",
+      "status": "known_issue",
+      "source": "synthetic — span background: transparent",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "actualLevel": "ERROR",
+      "description": "span with background: transparent — should not trigger but regex lookahead fails",
+      "_known_issue": "Same (?!none|transparent) lookahead bug as PF-55-FP-001.",
+      "input": { "html": "<span style=\"background: transparent; font-weight: 700;\">Bold text</span>" }
+    },
+    {
+      "id": "PF-55-FP-003",
+      "rule": "PF-55",
+      "type": "false_positive",
+      "source": "synthetic — span with only color (no background)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Span with only color styling — no background at all, should not trigger",
+      "input": { "html": "<span style=\"color: #E4002B; font-weight: 700;\">Red bold text</span>" }
+    },
+    {
+      "id": "PF-56-TP-001",
+      "rule": "PF-56",
+      "type": "true_positive",
+      "source": "payroll-v2 slide-10 — flex centering without height",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image container has display:flex + align-items:center but no height — centering ineffective",
+      "input": { "html": "<div style=\"display:flex;width:100%;height:405pt;\"><div style=\"width:324pt;min-width:0;display:flex;align-items:center;justify-content:center;\"><img src=\"assets/slide-10-test.png\" style=\"width:324pt;\"></div></div>" }
+    },
+    {
+      "id": "PF-56-FP-001",
+      "rule": "PF-56",
+      "type": "false_positive",
+      "source": "payroll-v2 slide-10 fixed — has height:100%",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Image container has flex centering WITH explicit height — should not warn",
+      "input": { "html": "<div style=\"display:flex;width:100%;height:405pt;\"><div style=\"width:324pt;height:100%;min-width:0;display:flex;align-items:center;justify-content:center;\"><img src=\"assets/slide-10-test.png\" style=\"width:324pt;\"></div></div>" }
+    },
+    {
+      "id": "PF-56-FP-002",
+      "rule": "PF-56",
+      "type": "false_positive",
+      "source": "synthetic — CSS class with height",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Image container uses CSS class that defines height — should not warn",
+      "input": { "html": "<style>.image-col { width:324pt; height:100%; display:flex; align-items:center; justify-content:center; }</style><div class=\"image-col\"><img src=\"assets/slide-18-test.png\"></div>" }
+    },
+    {
+      "id": "PF-57-TP-001",
+      "rule": "PF-57",
+      "type": "true_positive",
+      "source": "payroll-v2 — small corner image",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Image with width 80pt — too small to see content clearly",
+      "input": { "html": "<img src=\"assets/slide-38-icon.png\" style=\"width:80pt;\">" }
+    },
+    {
+      "id": "PF-57-FP-001",
+      "rule": "PF-57",
+      "type": "false_positive",
+      "source": "synthetic — normal sized image",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Image with width 240pt — normal size, should not warn",
+      "input": { "html": "<img src=\"assets/slide-10-normal.png\" style=\"width:240pt;max-height:360pt;\">" }
+    },
+    {
+      "id": "PF-57-FP-002",
+      "rule": "PF-57",
+      "type": "false_positive",
+      "source": "synthetic — external URL image (not assets/)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "External image with small width — should be ignored (only assets/ checked)",
+      "input": { "html": "<img src=\"https://example.com/logo.png\" style=\"width:50pt;\">" }
+    }
+  ]
+}

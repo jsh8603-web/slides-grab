@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><style>* { margin:0; padding:0; box-sizing:border-box; } body { font-family:sans-serif; }</style></head>
+<body style="width:720pt;height:405pt;margin:0;padding:0;overflow:hidden;background:#1B2A4A;">
+<!-- VP-14: bg shape + text shape 동일 위치 (grid 셀 — sibling 쌍 skip 확인) -->
+<div style="display:flex;flex-wrap:wrap;gap:10pt;padding:40pt;">
+  <div style="width:200pt;position:relative;">
+    <div style="position:absolute;top:0;left:0;width:200pt;height:80pt;background:#2A3F6A;border-radius:8pt;"></div>
+    <div style="position:relative;padding:16pt;">
+      <p style="font-size:14pt;font-weight:700;color:#FFFFFF;"><span>국민연금</span></p>
+      <p style="font-size:24pt;font-weight:700;color:#E8913A;"><span>4.5%</span></p>
+    </div>
+  </div>
+  <div style="width:200pt;position:relative;">
+    <div style="position:absolute;top:0;left:0;width:200pt;height:80pt;background:#2A3F6A;border-radius:8pt;"></div>
+    <div style="position:relative;padding:16pt;">
+      <p style="font-size:14pt;font-weight:700;color:#FFFFFF;"><span>건강보험</span></p>
+      <p style="font-size:24pt;font-weight:700;color:#E8913A;"><span>3.545%</span></p>
+    </div>
+  </div>
+</div>
+</body></html>

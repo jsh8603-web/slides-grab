@@ -1,0 +1,30 @@
+{
+  "config": {
+    "slides": 10,
+    "runs": 1,
+    "mode": "baseline"
+  },
+  "timestamp": "2026-03-20T00:55:28.608Z",
+  "timing": {
+    "preflight_static_ms": {
+      "avg": 71,
+      "min": 71,
+      "max": 71
+    },
+    "conversion_ms": {
+      "avg": 4424,
+      "min": 4424,
+      "max": 4424
+    }
+  },
+  "quality": {
+    "pf_errors": 1,
+    "pf_warnings": 8,
+    "vp_errors": 0,
+    "vp_warnings": 0
+  },
+  "api": {},
+  "output": {
+    "pptx_kb": 150
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "config": {
+    "slides": 10,
+    "runs": 1,
+    "mode": "comparison"
+  },
+  "timestamp": "2026-03-20T03:23:34.294Z",
+  "timing": {
+    "preflight_static_ms": {
+      "avg": 118,
+      "min": 118,
+      "max": 118
+    },
+    "conversion_ms": {
+      "avg": 4848,
+      "min": 4848,
+      "max": 4848
+    },
+    "com_export_ms": {
+      "avg": 4895,
+      "min": 4895,
+      "max": 4895
+    }
+  },
+  "quality": {
+    "pf_errors": 1,
+    "pf_warnings": 8,
+    "vp_errors": 0,
+    "vp_warnings": 0,
+    "com_diff_issues": 0
+  },
+  "api": {},
+  "output": {
+    "pptx_kb": 150
+  }
+}

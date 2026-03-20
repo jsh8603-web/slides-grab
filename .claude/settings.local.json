@@ -29,7 +29,27 @@
       "Bash(powershell.exe -ExecutionPolicy Bypass -File scripts/export-slides-png.ps1 -PptxPath \"slides/naver-investment-strategy/naver-investment-strategy.pptx\" -OutputDir \"slides/naver-investment-strategy/pptx-preview\")",
       "Bash(node scripts/cli.js pdf --slides-dir slides/naver-investment-strategy --output slides/naver-investment-strategy/naver-investment-strategy.pdf)",
       "Bash(npx slides-grab:*)",
-      "Bash(node scripts/build-viewer.js --slides-dir slides/naver-investment-strategy)"
+      "Bash(node scripts/build-viewer.js --slides-dir slides/naver-investment-strategy)",
+      "Bash(mkdir -p /tmp/nb-round3)",
+      "Bash(node scripts/generate-images.mjs --outline test-round3-final.md --output /tmp/nb-round3 --concurrency 2)",
+      "Bash(cp tests/stress-slides/payroll-v2-changes/assets/test-image.png tests/production-fixtures/slides-10/assets/slide-03-chart.png)",
+      "Bash(cp tests/stress-slides/payroll-v2-changes/assets/test-image.png tests/production-fixtures/slides-10/assets/slide-05-network.png)",
+      "Bash(cp tests/stress-slides/payroll-v2-changes/assets/test-image.png tests/production-fixtures/slides-10/assets/slide-07-dashboard.png)",
+      "Bash(node scripts/auto-production-test.mjs --slides 10 --baseline --skip-com)",
+      "Bash(node -e \"const http = require\\(''http''\\); console.log\\(''globalAgent keepAlive:'', http.globalAgent.keepAlive\\)\")",
+      "Bash(node tests/detection-regression/run-ip-iv-regression.mjs)",
+      "Bash(node tests/stress-slides/run-stress.mjs --dir payroll-v2-changes)",
+      "Bash(node scripts/auto-production-test.mjs --slides 10 --compare tests/production-runs/baseline-10.json --skip-com)",
+      "Bash(wc -l D:/projects/slides-grab/.claude/docs/presentation-flow.md D:/projects/slides-grab/.claude/docs/pf-step-*.md)",
+      "Bash(node tests/detection-regression/run-pf-regression.mjs)",
+      "Bash(node tests/detection-regression/run-vp-regression.mjs)",
+      "Bash(node scripts/auto-production-test.mjs --slides 10 --skip-com --compare tests/production-runs/baseline-10.json)",
+      "Bash(node scripts/preflight-html.js --slides-dir tests/production-fixtures/slides-10 --full)",
+      "Bash(wc -l D:/projects/slides-grab/.claude/skills/*/SKILL.md D:/projects/slides-grab/.claude/docs/nanoBanana-guide.md D:/projects/slides-grab/.claude/docs/production-reporting-rules.md)",
+      "Bash(node -e \"try{require\\(''adm-zip''\\);console.log\\(''adm-zip available''\\)}catch{console.log\\(''no adm-zip''\\)}\")",
+      "Bash(node -e \"import\\(''jszip''\\).then\\(\\(\\)=>console.log\\(''jszip available''\\)\\).catch\\(\\(\\)=>console.log\\(''no jszip''\\)\\)\")",
+      "Bash(node scripts/validate-pptx.js --input slides/coupang-investment-report/coupang-investment-report.pptx)",
+      "Bash(node scripts/auto-production-test.mjs --slides 10 --compare tests/production-runs/baseline-10.json --runs 1)"
     ]
   }
 }

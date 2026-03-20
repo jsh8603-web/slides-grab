@@ -151,28 +151,96 @@ async function main() {
   if (!options.skipValidation) {
     const validatorUrl = new URL('./validate-pptx.js', import.meta.url);
     if (fs.existsSync(fileURLToPath(validatorUrl))) {
-      console.log('\nRunning post-PPTX validation...');
+      console.log('\nRunning post-PPTX XML validation...');
       try {
         const { validatePptx } = await import(validatorUrl.href);
         const result = await validatePptx(outputPath);
         const fmtIssue = (i) => `[slide ${i.slide}] ${i.code}: ${i.message}`;
         if (result.errors.length > 0) {
-          console.error(`\n❌ Post-validation found ${result.errors.length} ERROR(s):\n`);
+          console.error(`\n❌ XML validation found ${result.errors.length} ERROR(s):\n`);
           for (const e of result.errors) {
             console.error(`  ${fmtIssue(e)}`);
           }
         }
         if (result.warnings.length > 0) {
-          console.warn(`\n⚠️  Post-validation found ${result.warnings.length} warning(s):\n`);
+          console.warn(`\n⚠️  XML validation found ${result.warnings.length} warning(s):\n`);
           for (const w of result.warnings) {
             console.warn(`  ${fmtIssue(w)}`);
           }
         }
         if (result.passed) {
-          console.log('  Post-validation: all checks passed ✓');
+          console.log('  XML validation: all checks passed ✓');
         }
       } catch (err) {
-        console.warn(`  Post-validation skipped: ${err.message}`);
+        console.warn(`  XML validation skipped: ${err.message}`);
+      }
+    }
+  }
+
+  // Phase 4: Post-PPTX COM validation (--full only, requires PowerPoint)
+  if (!options.skipValidation && options.full) {
+    const comValidatorUrl = new URL('./validate-pptx-com.mjs', import.meta.url);
+    if (fs.existsSync(fileURLToPath(comValidatorUrl))) {
+      console.log('\nRunning COM validation (PowerPoint rendering engine)...');
+      try {
+        const { validatePptxCom } = await import(comValidatorUrl.href);
+        const comResult = await validatePptxCom(outputPath);
+        const fmtIssue = (i) => `[slide ${i.slide}] ${i.code} "${i.shape}": ${i.message}`;
+
+        // Separate by VC code
+        const overflowIssues = comResult.issues.filter(i => i.code === 'VC-02' || i.code === 'VC-03');
+        const overlapIssues = comResult.issues.filter(i => i.code === 'VC-04');
+        const boundsIssues = comResult.issues.filter(i => i.code === 'VC-01');
+        const autoShrinkIssues = comResult.issues.filter(i => i.code === 'VC-05');
+        const fontSubIssues = comResult.issues.filter(i => i.code === 'VC-06');
+        const proximityIssues = comResult.issues.filter(i => i.code === 'VC-07');
+
+        if (overflowIssues.length > 0) {
+          const errors = overflowIssues.filter(i => i.level === 'ERROR');
+          const warns = overflowIssues.filter(i => i.level === 'WARN');
+          console.error(`\n❌ COM: ${errors.length} text overflow ERROR(s), ${warns.length} warning(s):\n`);
+          for (const e of overflowIssues) {
+            const icon = e.level === 'ERROR' ? 'ERROR' : 'WARN ';
+            console.error(`  ${icon} ${fmtIssue(e)}`);
+          }
+        }
+
+        if (boundsIssues.length > 0) {
+          console.warn(`\n⚠️  COM: ${boundsIssues.length} out-of-bounds issue(s):\n`);
+          for (const b of boundsIssues) {
+            console.warn(`  ${fmtIssue(b)}`);
+          }
+        }
+
+        const overlapErrors = overlapIssues.filter(i => i.level === 'ERROR');
+        if (overlapErrors.length > 0) {
+          console.warn(`\n⚠️  COM: ${overlapErrors.length} shape overlap ERROR(s), ${overlapIssues.length - overlapErrors.length} warning(s):\n`);
+          for (const e of overlapErrors) {
+            console.warn(`  ${fmtIssue(e)}`);
+          }
+        }
+
+        if (autoShrinkIssues.length > 0) {
+          console.warn(`\n⚠️  COM: ${autoShrinkIssues.length} auto-shrink warning(s):\n`);
+          for (const e of autoShrinkIssues) console.warn(`  ${fmtIssue(e)}`);
+        }
+
+        if (fontSubIssues.length > 0) {
+          console.warn(`\n⚠️  COM: ${fontSubIssues.length} font substitution warning(s):\n`);
+          for (const e of fontSubIssues) console.warn(`  ${fmtIssue(e)}`);
+        }
+
+        if (proximityIssues.length > 0) {
+          console.warn(`\n⚠️  COM: ${proximityIssues.length} decoration proximity warning(s):\n`);
+          for (const e of proximityIssues) console.warn(`  ${fmtIssue(e)}`);
+        }
+
+        console.log(`\n  COM validation: ${comResult.slideCount} slides, ${comResult.errors} error(s), ${comResult.warnings} warning(s)`);
+        if (comResult.passed) {
+          console.log('  COM validation: no critical errors ✓');
+        }
+      } catch (err) {
+        console.warn(`  COM validation skipped: ${err.message}`);
       }
     }
   }

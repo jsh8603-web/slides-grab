@@ -443,7 +443,9 @@ function addElements(slideData, targetSlide, pres) {
       const textStr = typeof el.text === 'string' ? el.text : (Array.isArray(el.text) ? el.text.map(r => r.text || '').join('') : '');
       const hasCJK = /[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/.test(textStr);
 
-      // Weighted width correction: CJK chars ×0.18, Latin ×0.06, digits ×0.04
+      // Weighted width correction: CJK chars ×0.25, Latin ×0.08, digits ×0.05
+      // PowerPoint renders CJK glyphs 15-20% wider than Chrome, plus PptxGenJS applies
+      // ~3.6pt internal margin per side (7.2pt total) that `inset: 0` cannot override.
       let widthMultiplier = 0;
       if (textStr.length > 0) {
         let cjkCount = 0, latinCount = 0, digitCount = 0, otherCount = 0;
@@ -460,14 +462,16 @@ function addElements(slideData, targetSlide, pres) {
           }
         }
         const total = textStr.length;
-        const singleLineFactor = isSingleLine ? 1.25 : 1.0;
-        widthMultiplier = ((cjkCount * 0.18 + latinCount * 0.06 + digitCount * 0.04 + otherCount * 0.05) / total) * singleLineFactor;
+        const singleLineFactor = isSingleLine ? 1.3 : 1.0;
+        widthMultiplier = ((cjkCount * 0.25 + latinCount * 0.08 + digitCount * 0.05 + otherCount * 0.06) / total) * singleLineFactor;
       }
 
       // Badge minimum width: small shapes with ≤3 chars get minimum width guarantee
       const isBadge = el.position.w < (50 / 72) && textStr.length <= 3;
 
-      const widthIncrease = el.position.w * widthMultiplier;
+      // Minimum 10pt (0.139") absolute increase to compensate for PptxGenJS internal margin (~7.2pt)
+      const minWidthIncrease = 10 / 72; // 10pt in inches
+      const widthIncrease = Math.max(el.position.w * widthMultiplier, minWidthIncrease);
       const heightIncrease = isSingleLine ? el.position.h * 0.15 : el.position.h * 0.1;
       const align = el.style.align;
 

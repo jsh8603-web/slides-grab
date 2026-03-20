@@ -14,10 +14,12 @@
  *   const { errors, warnings, passed } = await validatePptx('path/to.pptx');
  */
 
-import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import os from 'node:os';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const JSZip = require('jszip');
 
 // ── Constants ──────────────────────────────────────────────────────────────
 
@@ -96,6 +98,15 @@ function parseSlideDimensions(presentationXml) {
   };
 }
 
+/**
+ * Extract slide background color from <p:bg> element.
+ * Returns 6-char hex string or null if no solid fill background.
+ */
+function extractSlideBgColor(slideXml) {
+  const bgMatch = slideXml.match(/<p:bg>[\s\S]*?<a:solidFill>\s*<a:srgbClr\s+val="([0-9A-Fa-f]{6})"/i);
+  return bgMatch ? bgMatch[1].toUpperCase() : null;
+}
+
 // ── Shape extraction from slide XML ────────────────────────────────────────
 
 /**
@@ -110,7 +121,7 @@ function extractShapes(slideXml) {
 
   for (const block of spBlocks) {
     const inner = block[1];
-    const shape = { name: '', x: 0, y: 0, w: 0, h: 0, fillColor: null, textRuns: [] };
+    const shape = { name: '', x: 0, y: 0, w: 0, h: 0, fillColor: null, hasTxBody: false, textRuns: [] };
 
     // Shape name from <p:nvSpPr><p:cNvPr ... name="..."/>
     const cNvPr = inner.match(/<p:cNvPr[^>]*>/i);
@@ -144,7 +155,8 @@ function extractShapes(slideXml) {
     // Text runs from <p:txBody>
     const txBody = inner.match(/<p:txBody>([\s\S]*?)<\/p:txBody>/i);
     if (txBody) {
-      const runs = matchAll(txBody[1], '<a:r>([\s\S]*?)<\\/a:r>');
+      shape.hasTxBody = true;
+      const runs = matchAll(txBody[1], '<a:r>([\\s\\S]*?)<\\/a:r>');
       for (const run of runs) {
         const runInner = run[1];
 
@@ -165,7 +177,13 @@ function extractShapes(slideXml) {
           if (rPrBroad) color = rPrBroad[1].toUpperCase();
         }
 
-        shape.textRuns.push({ text, color });
+        // Font size: <a:rPr sz="1200"/> = 12pt (hundredths of point)
+        let fontSize = null;
+        const szSource = rPr ? rPr[0] : runInner;
+        const szMatch = szSource.match(/\bsz="(\d+)"/i);
+        if (szMatch) fontSize = parseInt(szMatch[1]) / 100;
+
+        shape.textRuns.push({ text, color, fontSize });
       }
     }
 
@@ -363,14 +381,45 @@ function checkColumnAlignment(shapes, slideNum) {
   return issues;
 }
 
+/**
+ * Check if a shape has a sibling that overlaps it (containment or significant overlap).
+ * html2pptx splits background fill and text into separate shapes — the fill shape
+ * contains the text shape (text is inset by padding).
+ * @param {object} shape - shape to check
+ * @param {object[]} allShapes - all shapes on the slide
+ * @param {function} siblingFilter - predicate for qualifying siblings
+ * @returns {boolean}
+ */
+function hasOverlappingSibling(shape, allShapes, siblingFilter) {
+  const sx = shape.x, sy = shape.y, sw = shape.w, sh = shape.h;
+  const sCx = sx + sw / 2, sCy = sy + sh / 2;
+  for (const other of allShapes) {
+    if (other === shape) continue;
+    if (!siblingFilter(other)) continue;
+    // Check if other's center is inside shape, or shape's center is inside other
+    const ox = other.x, oy = other.y, ow = other.w, oh = other.h;
+    const oCx = ox + ow / 2, oCy = oy + oh / 2;
+    const otherCenterInShape = oCx >= sx && oCx <= sx + sw && oCy >= sy && oCy <= sy + sh;
+    const shapeCenterInOther = sCx >= ox && sCx <= ox + ow && sCy >= oy && sCy <= oy + oh;
+    if (otherCenterInShape || shapeCenterInOther) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function checkEmptyText(shapes, slideNum) {
   const issues = [];
   for (const s of shapes) {
-    // Only check shapes that have a txBody (textRuns array exists and has entries)
-    // but all runs are empty
-    if (s.textRuns.length > 0) {
-      const allEmpty = s.textRuns.every((r) => r.text.trim() === '');
+    // Check shapes with txBody but no meaningful text content
+    if (s.hasTxBody) {
+      const allEmpty = s.textRuns.length === 0 || s.textRuns.every((r) => r.text.trim() === '');
       if (allEmpty) {
+        // Suppress if this is html2pptx's fill-only shape with a text sibling nearby
+        if (s.fillColor && hasOverlappingSibling(s, shapes,
+          (o) => o.textRuns.length > 0 && o.textRuns.some(r => r.text.trim()))) {
+          continue;
+        }
         const name = s.name || 'unnamed';
         issues.push({
           level: 'WARN',
@@ -483,7 +532,9 @@ function checkShapeGridEmptyCells(shapes, slideNum) {
   const hasText = (s) => s.textRuns.length > 0 && s.textRuns.some((r) => r.text.trim() !== '');
 
   // Include shapes with fill, even if h=0 (collapsed empty cells)
-  const filledShapes = shapes.filter((s) => s.w > 0 && s.fillColor);
+  // Exclude fill-only shapes that are html2pptx bg siblings (have overlapping text shape)
+  const filledShapes = shapes.filter((s) => s.w > 0 && s.fillColor && !hasOverlappingSibling(s, shapes,
+    (o) => o.textRuns.length > 0 && o.textRuns.some(r => r.text.trim())));
   if (filledShapes.length < 6) return issues;
 
 
@@ -573,6 +624,11 @@ function checkFilledEmptyShapes(shapes, slideNum) {
 
     const hasText = s.textRuns.length > 0 && s.textRuns.some(r => r.text.trim() !== '');
     if (!hasText) {
+      // Suppress if this is html2pptx's background-fill shape with a text sibling nearby
+      if (hasOverlappingSibling(s, shapes,
+        (o) => o.textRuns.length > 0 && o.textRuns.some(r => r.text.trim()))) {
+        continue;
+      }
       const name = s.name || 'unnamed';
       issues.push({
         level: 'WARN',
@@ -585,13 +641,65 @@ function checkFilledEmptyShapes(shapes, slideNum) {
   return issues;
 }
 
-function checkContrast(shapes, slideNum) {
+/**
+ * Find the best background color for a text shape by looking for
+ * overlapping filled shapes (html2pptx splits bg fill and text into separate shapes).
+ * Returns the fillColor of the best-matching background shape, or 'FFFFFF' (slide bg).
+ */
+function findBackgroundColor(textShape, allShapes, slideBgColor, excludeColors = []) {
+  const tx = textShape.x, ty = textShape.y;
+  const tw = textShape.w, th = textShape.h;
+  const tCx = tx + tw / 2, tCy = ty + th / 2; // center of text shape
+
+  let bestFill = null;
+  let bestScore = -Infinity;
+
+  for (const bg of allShapes) {
+    if (bg === textShape) continue;
+    if (!bg.fillColor) continue;
+    if (excludeColors.length > 0 && excludeColors.includes(bg.fillColor.toUpperCase())) continue;
+    if (bg.w === 0 || bg.h === 0) continue;
+
+    const bx = bg.x, by = bg.y, bw = bg.w, bh = bg.h;
+
+    // Check if bg shape contains or substantially overlaps the text shape center
+    const containsCenter = tCx >= bx && tCx <= bx + bw && tCy >= by && tCy <= by + bh;
+    if (!containsCenter) continue;
+
+    // Score: prefer shapes that most closely match the text shape bounds (same origin = sibling)
+    // Higher score = better match
+    const dxOff = Math.abs(bx - tx);
+    const dyOff = Math.abs(by - ty);
+    const dw = Math.abs(bw - tw);
+    const dh = Math.abs(bh - th);
+    // Penalize distance; prefer shapes at same position with similar size
+    const score = -(dxOff + dyOff + dw + dh);
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestFill = bg.fillColor;
+    }
+  }
+
+  return bestFill || slideBgColor || 'FFFFFF';
+}
+
+function checkContrast(shapes, slideNum, slideBgColor) {
   const issues = [];
   for (const s of shapes) {
     if (s.textRuns.length === 0) continue;
 
-    // Determine background color: shape fill, or assume white slide background
-    const bgColor = s.fillColor || 'FFFFFF';
+    // Determine background color: shape fill, nearest overlapping filled shape, slide bg, or white
+    let bgColor = s.fillColor || findBackgroundColor(s, shapes, slideBgColor);
+
+    // VP-04 오탐 방지: 텍스트와 동색 배경 감지 시 해당 색 제외하고 재탐색
+    if (!s.fillColor) {
+      const fgColors = s.textRuns.filter(r => r.color).map(r => r.color.toUpperCase());
+      if (fgColors.includes(bgColor.toUpperCase())) {
+        const altBg = findBackgroundColor(s, shapes, slideBgColor, [bgColor.toUpperCase()]);
+        if (altBg.toUpperCase() !== bgColor.toUpperCase()) bgColor = altBg;
+      }
+    }
 
     for (const run of s.textRuns) {
       if (!run.text.trim()) continue;
@@ -775,42 +883,330 @@ function checkEmptySlide(shapes, tables, slideNum) {
   return issues;
 }
 
-// ── PPTX extraction & orchestration ────────────────────────────────────────
-
-function extractPptx(pptxPath) {
-  const tmpDir = path.join(os.tmpdir(), `validate-pptx-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`);
-  fs.mkdirSync(tmpDir, { recursive: true });
-
-  const absPptx = path.resolve(pptxPath);
-
-  try {
-    // Copy .pptx to .zip first because PowerShell Expand-Archive requires the .zip extension
-    const absZip = path.join(tmpDir, 'archive.zip');
-    fs.copyFileSync(absPptx, absZip);
-
-    // Use PowerShell Expand-Archive (available on Windows 10+)
-    execSync(
-      `powershell -NoProfile -Command "Expand-Archive -Path '${absZip.replace(/'/g, "''")}' -DestinationPath '${tmpDir.replace(/'/g, "''")}' -Force"`,
-      { stdio: 'pipe', timeout: 30000 }
-    );
-  } catch (err) {
-    // Fallback: try unzip command (Git Bash / MSYS2 / WSL)
-    try {
-      execSync(`unzip -o -q "${absPptx}" -d "${tmpDir}"`, { stdio: 'pipe', timeout: 30000 });
-    } catch {
-      throw new Error(`Failed to extract PPTX. PowerShell error: ${err.message}`);
-    }
-  }
-
-  return tmpDir;
+/**
+ * VP-14: Detect overlapping text shapes on the same slide.
+ * Compares bounding boxes of all shapes with text content.
+ * Overlap > 20% of the smaller shape's area → ERROR (text unreadable).
+ * Overlap 5-20% → WARN.
+ * Ignores parent-child containment (one fully containing the other).
+ */
+function shapeText(s) {
+  return (s.textRuns || []).map(r => r.text).join('').trim();
 }
 
-function cleanupDir(dirPath) {
-  try {
-    fs.rmSync(dirPath, { recursive: true, force: true });
-  } catch {
-    // Ignore cleanup errors
+function checkShapeOverlap(shapes, slideNum) {
+  const issues = [];
+  // Filter to shapes with text content or fill and meaningful size (> 20pt × 20pt)
+  const MIN_SIZE = 20 * 12700; // 20pt in EMU
+  const textShapes = shapes.filter(s => {
+    const text = shapeText(s);
+    return (text.length > 0 || s.fillColor) && s.w > MIN_SIZE && s.h > MIN_SIZE;
+  });
+
+  if (textShapes.length < 2) return issues;
+
+  // Limit pairwise check to first 60 shapes for performance
+  const check = textShapes.slice(0, 60);
+  const found = new Set();
+
+  for (let i = 0; i < check.length; i++) {
+    for (let j = i + 1; j < check.length; j++) {
+      const a = check[i];
+      const b = check[j];
+
+      const aRight = a.x + a.w;
+      const aBottom = a.y + a.h;
+      const bRight = b.x + b.w;
+      const bBottom = b.y + b.h;
+
+      // Skip if one fully contains the other (parent-child)
+      const aContainsB = a.x <= b.x && aRight >= bRight && a.y <= b.y && aBottom >= bBottom;
+      const bContainsA = b.x <= a.x && bRight >= aRight && b.y <= a.y && bBottom >= aBottom;
+      if (aContainsB || bContainsA) continue;
+
+      // Skip bg+text sibling pairs: one has fill only (no text), other has text
+      // html2pptx splits grid/table cells into separate fill and text shapes
+      const aHasText = shapeText(a).length > 0;
+      const bHasText = shapeText(b).length > 0;
+      if ((!aHasText && a.fillColor && bHasText) || (!bHasText && b.fillColor && aHasText)) continue;
+
+      const overlapW = Math.min(aRight, bRight) - Math.max(a.x, b.x);
+      const overlapH = Math.min(aBottom, bBottom) - Math.max(a.y, b.y);
+
+      if (overlapW > 0 && overlapH > 0) {
+        const overlapArea = overlapW * overlapH;
+        const aArea = a.w * a.h;
+        const bArea = b.w * b.h;
+        const smallerArea = Math.min(aArea, bArea);
+        const pct = Math.round(overlapArea / smallerArea * 100);
+
+        if (pct >= 5) {
+          const key = `${i}-${j}`;
+          if (found.has(key)) continue;
+          found.add(key);
+
+          const aText = shapeText(a).substring(0, 20) || `[${a.name}]`;
+          const bText = shapeText(b).substring(0, 20) || `[${b.name}]`;
+
+          if (pct >= 20) {
+            issues.push({
+              level: 'ERROR',
+              code: 'VP-14',
+              slide: slideNum,
+              message: `Shapes overlap ${pct}%: "${aText}..." ↔ "${bText}..." — text unreadable, fix layout or split slide`,
+            });
+          } else {
+            issues.push({
+              level: 'WARN',
+              code: 'VP-14',
+              slide: slideNum,
+              message: `Shapes overlap ${pct}%: "${aText}..." ↔ "${bText}..." — may cause readability issues`,
+            });
+          }
+        }
+      }
+    }
   }
+  return issues;
+}
+
+// ── Picture extraction (for z-order check) ─────────────────────────────────
+
+/**
+ * Extract picture shapes from <p:pic> blocks.
+ * Returns array of { name, x, y, w, h, type: 'picture', xmlOrder }
+ */
+function extractPictures(slideXml) {
+  const pics = [];
+  const picBlocks = matchAll(slideXml, '<p:pic\\b[^>]*>([\\s\\S]*?)</p:pic>');
+
+  for (const block of picBlocks) {
+    const inner = block[1];
+    const pic = { name: '', x: 0, y: 0, w: 0, h: 0, type: 'picture' };
+
+    const cNvPr = inner.match(/<p:cNvPr[^>]*>/i);
+    if (cNvPr) {
+      pic.name = attr(cNvPr[0], 'name') || '';
+    }
+
+    const off = inner.match(/<a:off[^>]*>/i);
+    if (off) {
+      pic.x = parseInt(attr(off[0], 'x') || '0', 10);
+      pic.y = parseInt(attr(off[0], 'y') || '0', 10);
+    }
+
+    const ext = inner.match(/<a:ext[^>]*>/i);
+    if (ext) {
+      pic.w = parseInt(attr(ext[0], 'cx') || '0', 10);
+      pic.h = parseInt(attr(ext[0], 'cy') || '0', 10);
+    }
+
+    pics.push(pic);
+  }
+  return pics;
+}
+
+/**
+ * Get all elements (shapes + pictures) in XML order for z-order analysis.
+ * Elements appearing later in XML are rendered on top.
+ */
+function extractAllElementsOrdered(slideXml) {
+  const elements = [];
+  // Match both <p:sp> and <p:pic> blocks with their positions in the XML
+  const re = /<(p:sp|p:pic)\b[^>]*>([\s\S]*?)<\/\1>/g;
+  let m;
+  let order = 0;
+  while ((m = re.exec(slideXml)) !== null) {
+    const type = m[1] === 'p:pic' ? 'picture' : 'shape';
+    const inner = m[2];
+    const el = { type, name: '', x: 0, y: 0, w: 0, h: 0, xmlOrder: order++, textRuns: [], fillColor: null };
+
+    const cNvPr = inner.match(/<p:cNvPr[^>]*>/i);
+    if (cNvPr) el.name = attr(cNvPr[0], 'name') || '';
+
+    const off = inner.match(/<a:off[^>]*>/i);
+    if (off) {
+      el.x = parseInt(attr(off[0], 'x') || '0', 10);
+      el.y = parseInt(attr(off[0], 'y') || '0', 10);
+    }
+
+    const ext = inner.match(/<a:ext[^>]*>/i);
+    if (ext) {
+      el.w = parseInt(attr(ext[0], 'cx') || '0', 10);
+      el.h = parseInt(attr(ext[0], 'cy') || '0', 10);
+    }
+
+    if (type === 'shape') {
+      const txBody = inner.match(/<p:txBody>([\s\S]*?)<\/p:txBody>/i);
+      if (txBody) {
+        const runs = matchAll(txBody[1], '<a:r>([\\s\\S]*?)<\\/a:r>');
+        for (const run of runs) {
+          const tMatch = run[1].match(/<a:t>([\s\S]*?)<\/a:t>/i);
+          el.textRuns.push({ text: tMatch ? tMatch[1] : '' });
+        }
+      }
+      const txBodyStart = inner.indexOf('<p:txBody');
+      const spPrSection = txBodyStart >= 0 ? inner.slice(0, txBodyStart) : inner;
+      const spFill = spPrSection.match(/<a:solidFill>\s*<a:srgbClr\s+val="([0-9A-Fa-f]{6})"/i);
+      if (spFill) el.fillColor = spFill[1].toUpperCase();
+    }
+
+    elements.push(el);
+  }
+  return elements;
+}
+
+// CJK character detection for VP-16
+const CJK_CHAR_RE = /[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/g;
+
+/**
+ * VP-15: Check if picture shapes are behind overlapping text shapes (z-order issue)
+ */
+function checkPictureZOrder(allElements, slideNum) {
+  const issues = [];
+  const MIN_SIZE = 30 * EMU_PER_PT; // 30pt
+
+  const pictures = allElements.filter(e => e.type === 'picture' && e.w > MIN_SIZE && e.h > MIN_SIZE);
+  const textShapes = allElements.filter(e => {
+    if (e.type !== 'shape') return false;
+    const text = (e.textRuns || []).map(r => r.text).join('').trim();
+    return text.length > 0 && e.w > MIN_SIZE && e.h > MIN_SIZE;
+  });
+
+  for (const pic of pictures) {
+    for (const shape of textShapes) {
+      // Check overlap
+      const overlapW = Math.min(pic.x + pic.w, shape.x + shape.w) - Math.max(pic.x, shape.x);
+      const overlapH = Math.min(pic.y + pic.h, shape.y + shape.h) - Math.max(pic.y, shape.y);
+      if (overlapW <= 0 || overlapH <= 0) continue;
+
+      const overlapArea = overlapW * overlapH;
+      const picArea = pic.w * pic.h;
+      const pct = Math.round(overlapArea / picArea * 100);
+      if (pct < 10) continue;
+
+      // Picture has HIGHER xmlOrder = rendered ON TOP (OK)
+      // Picture has LOWER xmlOrder = rendered BEHIND text (problem)
+      if (pic.xmlOrder > shape.xmlOrder) {
+        // Picture is on top of text — this obscures text
+        const shapeText = (shape.textRuns || []).map(r => r.text).join('').trim().substring(0, 20);
+        issues.push({
+          level: 'WARN',
+          code: 'VP-15',
+          slide: slideNum,
+          message: `Picture "${pic.name}" overlaps text "${shapeText}..." (${pct}% of picture) and is rendered ON TOP — text may be hidden`,
+        });
+      }
+    }
+  }
+  return issues;
+}
+
+/**
+ * VP-16: Estimate CJK text width vs shape width — predict overflow/wrapping
+ */
+function checkCjkTextOverflow(shapes, slideNum) {
+  const issues = [];
+
+  for (const s of shapes) {
+    if (s.w === 0 || s.h === 0) continue;
+    const text = shapeText(s);
+    if (text.length < 2) continue;
+
+    // Count CJK characters
+    const cjkMatches = text.match(CJK_CHAR_RE);
+    if (!cjkMatches || cjkMatches.length === 0) continue;
+
+    const cjkCount = cjkMatches.length;
+    const latinCount = text.length - cjkCount;
+    const cjkRatio = cjkCount / text.length;
+    if (cjkRatio < 0.2) continue;
+
+    // Use actual font size from textRuns if available, fallback to 12pt
+    const fontSizes = s.textRuns.filter(r => r.fontSize).map(r => r.fontSize);
+    const estimatedFontPt = fontSizes.length > 0 ? Math.max(...fontSizes) : 12;
+    const fontEmu = estimatedFontPt * EMU_PER_PT;
+
+    // Estimate text width: CJK ≈ 1.0 × fontSize, Latin ≈ 0.55 × fontSize
+    const estimatedWidth = (cjkCount * fontEmu * 1.0) + (latinCount * fontEmu * 0.55);
+
+    // Compare with shape width (minus estimated padding ~5pt each side)
+    const availableWidth = s.w - (10 * EMU_PER_PT);
+
+    if (availableWidth <= 0) continue;
+
+    const ratio = estimatedWidth / availableWidth;
+
+    // Multi-line wrapping check: if shape is tall enough, wrapping is OK
+    const linesNeeded = Math.ceil(estimatedWidth / availableWidth);
+    const lineHeightEmu = fontEmu * 1.2; // PPTX default single spacing
+    const heightNeeded = linesNeeded * lineHeightEmu;
+    // Subtract estimated padding (~5pt top + 5pt bottom) from shape height for available height
+    const availableHeight = s.h - (10 * EMU_PER_PT);
+    const verticalOverflow = heightNeeded > availableHeight;
+
+    // Downgrade to WARN for cases where PPTX shrink-to-fit likely handles it:
+    // - Short text (≤5 chars): badge/label text, shrink always works
+    // - Small font (≤12pt) needing only 2 lines: minor overflow, PPTX autofit handles it
+    // - Height overflow < 50%: borderline cases where PPTX font compression resolves it
+    const isShortText = text.length <= 5;
+    const isMinorOverflow = linesNeeded <= 2 && estimatedFontPt <= 12;
+    const overflowRatio = availableHeight > 0 ? heightNeeded / availableHeight : Infinity;
+    const isBorderlineOverflow = overflowRatio < 1.5;
+
+    if (ratio > 1.2 && verticalOverflow && !isShortText && !isMinorOverflow && !isBorderlineOverflow) {
+      const availPt = Math.round(availableWidth / EMU_PER_PT);
+      const estPt = Math.round(estimatedWidth / EMU_PER_PT);
+      issues.push({
+        level: 'ERROR',
+        code: 'VP-16',
+        slide: slideNum,
+        message: `CJK text "${text.substring(0, 25)}..." ${estPt}pt > available ${availPt}pt (${estimatedFontPt}pt font, ${linesNeeded} lines needed, shape too short) — will overflow [IL-37]`,
+      });
+    } else if (ratio > 1.2 && (isShortText || isMinorOverflow || isBorderlineOverflow || !verticalOverflow)) {
+      // Wraps but fits vertically — WARN only
+      const availPt = Math.round(availableWidth / EMU_PER_PT);
+      const estPt = Math.round(estimatedWidth / EMU_PER_PT);
+      issues.push({
+        level: 'WARN',
+        code: 'VP-16',
+        slide: slideNum,
+        message: `CJK text "${text.substring(0, 25)}..." wraps to ${linesNeeded} lines (${estPt}pt / ${availPt}pt, ${estimatedFontPt}pt font) — fits vertically [IL-37]`,
+      });
+    } else if (ratio > 0.95) {
+      const availPt = Math.round(availableWidth / EMU_PER_PT);
+      const estPt = Math.round(estimatedWidth / EMU_PER_PT);
+      issues.push({
+        level: 'WARN',
+        code: 'VP-16',
+        slide: slideNum,
+        message: `CJK text "${text.substring(0, 25)}..." fills ${Math.round(ratio * 100)}% of available width (${estPt}pt / ${availPt}pt, ${estimatedFontPt}pt font) — may wrap in PPTX [IL-37]`,
+      });
+    }
+  }
+  return issues;
+}
+
+// ── PPTX extraction & orchestration ────────────────────────────────────────
+
+/**
+ * Load PPTX into memory using JSZip (no temp dirs, no exec).
+ * Returns a Map<string, string|Buffer> of file paths to contents.
+ */
+async function loadPptxInMemory(pptxPath) {
+  const data = fs.readFileSync(path.resolve(pptxPath));
+  const zip = await JSZip.loadAsync(data);
+  const files = new Map();
+  for (const [name, entry] of Object.entries(zip.files)) {
+    if (entry.dir) continue;
+    // XML files as text, media files as Buffer
+    if (name.endsWith('.xml') || name.endsWith('.rels')) {
+      files.set(name, await entry.async('text'));
+    } else {
+      files.set(name, await entry.async('nodebuffer'));
+    }
+  }
+  return files;
 }
 
 /**
@@ -823,78 +1219,74 @@ export async function validatePptx(pptxPath) {
     throw new Error(`File not found: ${pptxPath}`);
   }
 
-  const tmpDir = extractPptx(pptxPath);
+  const zipFiles = await loadPptxInMemory(pptxPath);
   const errors = [];
   const warnings = [];
 
   try {
     // Read slide dimensions from presentation.xml
-    const presXmlPath = path.join(tmpDir, 'ppt', 'presentation.xml');
     let slideW = DEFAULT_SLIDE_W;
     let slideH = DEFAULT_SLIDE_H;
-    if (fs.existsSync(presXmlPath)) {
-      const presXml = fs.readFileSync(presXmlPath, 'utf8');
+    const presXml = zipFiles.get('ppt/presentation.xml');
+    if (presXml) {
       const dims = parseSlideDimensions(presXml);
       slideW = dims.width;
       slideH = dims.height;
     }
 
-    // Find all slide XML files
-    const slidesDir = path.join(tmpDir, 'ppt', 'slides');
-    if (!fs.existsSync(slidesDir)) {
+    // Find all slide XML files from in-memory map
+    const slideEntries = [];
+    for (const [name] of zipFiles) {
+      const m = name.match(/^ppt\/slides\/slide(\d+)\.xml$/i);
+      if (m) slideEntries.push({ name, num: parseInt(m[1], 10) });
+    }
+    slideEntries.sort((a, b) => a.num - b.num);
+
+    if (slideEntries.length === 0) {
       throw new Error('No ppt/slides directory found in PPTX');
     }
 
-    const slideFiles = fs.readdirSync(slidesDir)
-      .filter((f) => /^slide\d+\.xml$/i.test(f))
-      .sort((a, b) => {
-        const na = parseInt(a.match(/\d+/)[0], 10);
-        const nb = parseInt(b.match(/\d+/)[0], 10);
-        return na - nb;
-      });
-
     // VP-13: Check media file sizes
-    const mediaDir = path.join(tmpDir, 'ppt', 'media');
-    if (fs.existsSync(mediaDir)) {
-      const mediaFiles = fs.readdirSync(mediaDir);
-      let totalMediaSize = 0;
-      for (const mf of mediaFiles) {
-        const mfPath = path.join(mediaDir, mf);
-        const stat = fs.statSync(mfPath);
-        totalMediaSize += stat.size;
-        if (stat.size > 5 * 1024 * 1024) {
-          warnings.push({
-            level: 'WARN',
-            code: 'VP-13',
-            slide: 0,
-            message: `Media file "${mf}" is ${(stat.size / 1024 / 1024).toFixed(1)}MB — consider compressing`,
-          });
-        }
-      }
-      if (totalMediaSize > 20 * 1024 * 1024) {
+    let totalMediaSize = 0;
+    for (const [name, content] of zipFiles) {
+      if (!name.startsWith('ppt/media/')) continue;
+      const size = Buffer.isBuffer(content) ? content.length : Buffer.byteLength(content);
+      totalMediaSize += size;
+      if (size > 5 * 1024 * 1024) {
+        const mf = name.split('/').pop();
         warnings.push({
           level: 'WARN',
           code: 'VP-13',
           slide: 0,
-          message: `Total media size ${(totalMediaSize / 1024 / 1024).toFixed(1)}MB exceeds 20MB — may cause sharing issues (Gmail 25MB, Outlook 20MB limit)`,
+          message: `Media file "${mf}" is ${(size / 1024 / 1024).toFixed(1)}MB — consider compressing`,
         });
       }
     }
+    if (totalMediaSize > 20 * 1024 * 1024) {
+      warnings.push({
+        level: 'WARN',
+        code: 'VP-13',
+        slide: 0,
+        message: `Total media size ${(totalMediaSize / 1024 / 1024).toFixed(1)}MB exceeds 20MB — may cause sharing issues (Gmail 25MB, Outlook 20MB limit)`,
+      });
+    }
 
     console.log(`\nValidating ${path.basename(pptxPath)}`);
-    console.log(`Slide size: ${emuToInches(slideW)}" x ${emuToInches(slideH)}" (${slideFiles.length} slides)\n`);
+    console.log(`Slide size: ${emuToInches(slideW)}" x ${emuToInches(slideH)}" (${slideEntries.length} slides)\n`);
 
-    for (const slideFile of slideFiles) {
-      const slideNum = parseInt(slideFile.match(/\d+/)[0], 10);
-      const slideXml = fs.readFileSync(path.join(slidesDir, slideFile), 'utf8');
+    for (const { name: slidePath, num: slideNum } of slideEntries) {
+      const slideXml = zipFiles.get(slidePath);
       const shapes = extractShapes(slideXml);
       const tables = extractTables(slideXml);
+      const slideBgColor = extractSlideBgColor(slideXml);
+
+      const allElements = extractAllElementsOrdered(slideXml);
 
       const slideIssues = [
         ...checkOverflow(shapes, slideW, slideH, slideNum),
         ...checkColumnAlignment(shapes, slideNum),
         ...checkEmptyText(shapes, slideNum),
-        ...checkContrast(shapes, slideNum),
+        ...checkContrast(shapes, slideNum, slideBgColor),
         ...checkFilledEmptyShapes(shapes, slideNum),
         ...checkShrinkReliability(shapes, slideNum),
         ...checkGapConsistency(shapes, slideNum),
@@ -903,6 +1295,9 @@ export async function validatePptx(pptxPath) {
         ...checkTableEmptyCells(tables, slideNum),
         ...checkTableConsistency(tables, slideNum),
         ...checkShapeGridEmptyCells(shapes, slideNum),
+        ...checkShapeOverlap(shapes, slideNum),
+        ...checkPictureZOrder(allElements, slideNum),
+        ...checkCjkTextOverflow(shapes, slideNum),
       ];
 
       for (const issue of slideIssues) {
@@ -914,7 +1309,7 @@ export async function validatePptx(pptxPath) {
       }
     }
   } finally {
-    cleanupDir(tmpDir);
+    // In-memory — no cleanup needed
   }
 
   return { errors, warnings, passed: errors.length === 0 };

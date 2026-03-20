@@ -56,6 +56,18 @@ Does not write the outline directly — delegates the work to `organizer-agent`.
 
 ## Workflow
 
+### 0. Prepare VQA Keyword Data (자동 — organizer-agent 호출 전)
+
+**필수**: organizer-agent를 호출하기 전에 아래 명령으로 키워드 데이터를 자동 추출:
+
+```bash
+node scripts/extract-keywords.mjs
+```
+
+출력 결과를 organizer-agent 호출 프롬프트의 `[KEYWORD_INJECTION]` 자리에 그대로 삽입.
+
+이 단계를 건너뛰면 organizer-agent가 검증된 키워드를 사용하지 않아 VQA 점수가 낮아집니다.
+
 ### 1. Delegate Draft Creation to organizer-agent
 
 Use the Task tool to call `organizer-agent` and generate a `slide-outline.md` draft.
@@ -64,7 +76,24 @@ Use the Task tool to call `organizer-agent` and generate a `slide-outline.md` dr
 - User topic and requirements
 - Research results (if available)
 - Tone/mood requests
+- **VQA keyword data** (Step 0에서 추출한 추천/비추천 키워드)
 - Expected format for `slide-outline.md` (see format below)
+
+### 1.5. NanoBanana Prompt Review (자동 — organizer-agent 완료 후)
+
+organizer-agent가 아웃라인을 완성하면, supervisor가 직접 모든 `NanoBanana:` 프롬프트를 검토·개선한다.
+이 단계는 VQA 테스트에서 학습한 패턴을 실제 프롬프트에 반영하는 **품질 게이트** 역할.
+
+**검토 기준** (nanoBanana-guide.md + extract-keywords.mjs 출력 참조):
+
+1. **추천 키워드 반영**: Step 0 키워드 데이터에서 해당 카테고리의 추천 키워드가 프롬프트에 자연스럽게 포함되어 있는지 확인. 없으면 추가.
+2. **비추천 키워드 제거**: avg < 18 키워드가 포함되어 있으면 대체어로 교체.
+3. **10대 규칙 준수**: 서술형 문장, no text 필수, hex 색상, 비율 힌트, 조명/구도 키워드 등.
+4. **Tier 적합성**: 슬라이드 복잡도에 맞는 tier가 지정되었는지 확인.
+5. **알려진 한계 회피**: hub-spoke 3/5+, staircase 등 불안정 도형이 사용되면 대체안 제시.
+6. **프롬프트 길이**: 600자 이내 (IP-08 WARN 방지). enhancePrompt()가 ~150자를 추가하므로 원본은 ~450자 이내.
+
+**수정 방법**: 아웃라인 파일의 NanoBanana 태그를 직접 Edit하여 개선. 구조/콘텐츠는 변경하지 않음.
 
 ### 2. Present Outline to User
 
@@ -95,135 +124,88 @@ Complete the outline stage when the user explicitly approves.
 1. **Never proceed to the next stage without approval** — Maintain the revision loop until the user explicitly signals approval ("looks good", "approved", "OK", "proceed", etc.).
 2. **Never write the outline directly** — Always delegate to `organizer-agent`.
 3. **Never start HTML generation** — This skill's scope ends at `slide-outline.md` approval. HTML generation is the responsibility of `design-skill`.
+4. **NanoBanana 인포그래픽 금지** — AI 생성 이미지에 가짜 데이터(차트, 그래프, 표, 캘린더, 숫자)가 포함되는 프롬프트 작성 금지. 데이터 시각화는 HTML/CSS로 직접 구현한다.
+5. **NanoBanana 한글 텍스트 금지** — AI 이미지 내 한글 텍스트가 포함되는 프롬프트 금지. 텍스트가 필요하면 영문만 사용하거나 HTML 텍스트 오버레이로 처리.
+
+## 슬라이드 밀도 제한
+
+1슬라이드에 다음 조합이 동시에 존재하면 **반드시 2장 이상으로 분할**:
+- 표(table/grid) + 계산박스(calculation) + 수식(formula)
+- 5행 이상 표 + 3개 이상 부가 텍스트 블록
+- 4개 이상 카드 + 각 카드에 3줄 이상 텍스트
+
+**밀도 초과 시 대응 (폰트 축소 대신):**
+1. 슬라이드 분할 (요약 → 상세)
+2. 항목 수 감소 (핵심 3개만 남기고 appendix로 이동)
+3. 레이아웃 단순화 (표 → 핵심 지표 3개 하이라이트)
+
+---
+
+## 복잡도 사전 판정 (NanoBanana 태그 작성 전 필수)
+
+1. 핵심 개념 수 → Tier 1(1-2개) / Tier 2(3-5개) / Tier 3(6개+)
+2. `nanoBanana-guide.md` "이미지 유형 결정 트리" 적용
+3. Visual 메타 태그로 판정 기록:
+
+| 태그 | 의미 |
+|------|------|
+| `Visual: NanoBanana (Tier 1, metaphor photo)` | AI 히어로 이미지 |
+| `Visual: NanoBanana (Tier 2, context background)` | AI 배경 |
+| `Visual: NanoBanana (Tier 2, icon set: [아이콘...])` | AI 아이콘 세트 |
+| `Visual: NanoBanana (infographic frame, timeline N nodes)` | AI 프레임 |
+| `Visual: HTML chart/diagram` | HTML 직접 구현 |
+| `Visual: HTML only` | 텍스트/테이블만 |
 
 ---
 
 ## NanoBanana 이미지 태그
 
-아웃라인 작성 시, 이미지가 필요한 슬라이드에 `NanoBanana:` 태그를 포함한다.
-사용자가 Gemini 앱에서 미리 이미지를 생성할 수 있도록 아웃라인 단계에서 안내하는 것이 목적.
-
 ### 태그 형식
-
 ```markdown
 - NanoBanana: [한글 설명] | [English prompt for Gemini]
 ```
 
-- **한글 설명**: 사용자가 이미지 의도를 이해할 수 있는 간단한 설명
-- **English prompt**: Gemini에 그대로 복사-붙여넣기할 수 있는 완성형 영어 프롬프트
+### 비율 힌트 (레이아웃 기반 결정 — 16:9 기본값 금지)
 
-### 비율 힌트 (레이아웃 기반 필수 결정)
+| 레이아웃 | 비율 |
+|---------|------|
+| 전체 배경 (표지, 섹션) | `[16:9]` |
+| 좌우 50:50 (padding 없음) | `[3:4]` |
+| 좌우 55:45 (padding 없음) | `[1:1]` |
+| 좌우 분할 (padding 있음) | `[4:3]` |
+| 일러스트/아이콘 | `[1:1]` |
 
-**16:9를 기본값으로 쓰지 않는다.** 슬라이드 Layout에서 이미지 컨테이너의 실제 비율에 맞춰 결정한다.
-프롬프트 앞에 `[비율]` 힌트를 넣으면 스크립트가 자동 파싱하여 Gemini API에 전달.
+### 프롬프트 작성 규칙
 
-| 레이아웃 | 이미지 컨테이너 | 비율 힌트 |
-|---------|---------------|----------|
-| 전체 배경 (표지, 섹션, 인포그래픽) | 720×405pt | `[16:9]` |
-| 좌우 50:50 분할 (body padding 없음) | 360×405pt | `[3:4]` |
-| 좌우 55:45 분할 (body padding 없음) | 396×405pt | `[1:1]` |
-| 좌우 분할 (body padding 있음, 내부 flex) | ~330~360×290pt | `[4:3]` |
-| 일러스트/아이콘 (독립) | 정사각 | `[1:1]` |
-
-```markdown
-- NanoBanana: 쥬라기 풍경 | [3:4] A charming illustration of a Jurassic landscape... 3:4 portrait aspect ratio.
-- NanoBanana: T-Rex 일러스트 | [4:3] A powerful illustration of a T-Rex... 4:3 aspect ratio.
-```
-
-지원 비율: `1:1`, `16:9`, `4:3`, `3:4`, `3:2`, `2:3`, `9:16`, `21:9` (Sharp 후처리도 동일 8개 지원)
-
-### 영어 프롬프트 작성 규칙
-
-`.claude/docs/nanoBanana-guide.md`의 10대 규칙을 반드시 적용:
-
-1. **서술형 문장** — 키워드 나열 금지, "A professional..." 형태의 완전한 문장
-2. **용도 선언** — 문장 앞에 "A presentation slide background for..." 등 용도 명시
-3. **`no text` 필수** — 이미지 내 텍스트 금지 (HTML에서 오버레이)
-4. **긍정 표현** — "no X" 대신 원하는 상태를 서술
-5. **촬영 용어** — 구도 제어: `wide-angle`, `bird's-eye view` 등
-6. **조명 묘사** — `soft ambient lighting`, `three-point softbox` 등
-7. **색상 hex 코드** — 슬라이드 테마와 일치하는 팔레트 명시 (Meta Color Palette에서 가져옴)
-8. **스타일 키워드** — `minimalist`, `flat design`, `corporate` 등 2~3개
-9. **`[비율] aspect ratio`** — 레이아웃 기반 비율 결정 (위 테이블 참조). 전체 배경만 16:9, 분할 레이아웃은 컨테이너 비율에 맞춤
-10. **네거티브 스페이스** — 배경용 이미지는 텍스트 영역 확보 명시
-11. **`transparent` 금지** — Gemini 투명 배경 미지원, `pure white (#FFFFFF) background` 사용
-
-### 슬라이드 유형별 프롬프트 템플릿
-
-**표지 (Cover)** — 전체 배경, `[16:9]`:
-```
-[16:9] A professional presentation cover for [주제].
-[스타일] design with [색상 팔레트 hex].
-Clean centered composition with ample negative space for title text overlay.
-No text. 16:9 aspect ratio, high resolution.
-```
-
-**콘텐츠 배경 (Content)** — 전체 배경, `[16:9]`:
-```
-[16:9] A subtle muted background for a presentation content slide about [주제].
-Soft [색상] tones, abstract [패턴] texture.
-Must not compete with overlaid text and data. Desaturated, professional.
-No text. 16:9 aspect ratio.
-```
-
-**병렬 레이아웃 이미지** — 비율은 레이아웃에 따라 결정:
-```
-[비율] A [스타일] illustration of [대상] for a presentation slide.
-[상세 묘사]. [색상 팔레트].
-Muted desaturated background. No text. [비율] aspect ratio.
-```
-비율 결정: 위 "비율 힌트" 테이블에서 Layout에 맞는 비율 선택. 분할 레이아웃에 16:9 사용 금지.
-
-**일러스트 (Illustration)** — 독립 아이콘, `[1:1]`:
-```
-[1:1] A [스타일] illustration of [대상] for a presentation slide.
-Flat design, limited [N]-color palette ([hex 코드]).
-Clean vector-like appearance, pure white (#FFFFFF) background.
-No text. 1:1 square aspect ratio.
-```
-주의: Gemini는 투명 배경 미지원. `transparent` 대신 `pure white (#FFFFFF) background` 사용.
-
-**인포그래픽 (Infographic)** — 전체 폭, `[16:9]`:
-```
-[16:9] A polished editorial infographic showing [데이터/프로세스].
-[N] steps with labeled icons. Flat vector style, [색상 팔레트].
-Legible at 600px width. No text labels (will be added separately).
-16:9 aspect ratio.
-```
+**`nanoBanana-guide.md` 10대 규칙 필수 적용.** 핵심 요약:
+1. 서술형 문장 (키워드 나열 금지)
+2. 용도 선언 ("A presentation slide background for...")
+3. `"no text"` 필수
+4. 긍정 표현
+5. 촬영 용어 (wide-angle, bird's-eye 등)
+6. 조명 묘사
+7. 색상은 이름으로 (hex 직접 사용 금지 — enhancePrompt가 자동 주입)
+8. 스타일 키워드 2-3개
+9. `[비율]` 힌트 + aspect ratio 문구
+10. 분할 레이아웃: `centered composition, fills the frame` (negative space 금지)
+11. `transparent` 금지 → `pure white (#FFFFFF) background`
 
 ### 태그 작성 예시
 
 ```markdown
 ### Slide 1 - Cover
 - **Type**: Cover
-- **Title**: AI가 바꾸는 물류의 미래
-- NanoBanana: AI 물류 테마 표지 배경 | [16:9] A professional presentation cover for AI-powered logistics innovation. Futuristic tech aesthetic with deep navy (#0F172A) and electric blue (#3B82F6) gradient. Abstract network nodes and flowing data streams in the background. Clean centered composition with ample negative space for title text overlay. Soft ambient lighting with subtle glow effects. No text. 16:9 aspect ratio, high resolution.
+- NanoBanana: AI 물류 표지 | [16:9] A professional presentation cover for AI-powered logistics. Futuristic tech aesthetic with deep navy and electric blue. Abstract network nodes, ample negative space. No text. 16:9 aspect ratio.
 
-### Slide 5 - 스마트 창고 시스템
-- **Type**: Content
+### Slide 5 - 스마트 창고
 - **Layout**: 왼쪽 이미지 (50%) + 오른쪽 카드 (50%), body padding 없음
-- **Key Message**: 자동화 창고의 핵심 구성요소
-- NanoBanana: 스마트 창고 내부 전경 | [3:4] A photorealistic elevated shot of a modern automated warehouse interior with robotic arms and conveyor systems. Illuminated by cool white industrial LED lighting from above. Clean, organized shelving rows stretching into the distance. Professional corporate photography style. No text. 3:4 portrait aspect ratio.
-
-### Slide 8 - 비용 절감 효과
-- **Type**: Statistics (전체 배경)
-- **Key Message**: 연간 30% 비용 절감
-- NanoBanana: 비용 절감 인포그래픽 배경 | [16:9] A subtle muted background for a statistics slide. Soft blue-gray (#94A3B8) tones with abstract upward-trending arrow shapes. Desaturated, minimal, with significant negative space for chart overlay. No text. 16:9 aspect ratio.
+- NanoBanana: 스마트 창고 내부 | [3:4] A photorealistic elevated shot of modern automated warehouse with robotic arms. Cool white LED lighting. Fills the frame, centered composition. No text. 3:4 portrait aspect ratio.
 ```
 
 ### 이미지 자동 생성
 
-아웃라인 승인 후 `generate-images.mjs`가 태그를 파싱하여 Gemini API로 자동 생성한다.
-```bash
-node scripts/generate-images.mjs --outline slide-outline.md --output slides/프레젠테이션명/assets
-```
-
-### 이미지 파일 명명 규칙 (자동 생성됨)
-
-```
-slides/프레젠테이션명/assets/slide-{NN}-{영문슬러그}.png
-```
-예: `assets/slide-01-cover.png`, `assets/slide-05-smart-warehouse.png`
+아웃라인 승인 후: `node scripts/generate-images.mjs --outline slide-outline.md --output slides/프레젠테이션명/assets`
+파일 명명: `assets/slide-{NN}-{영문슬러그}.png`
 
 ---
 
@@ -235,7 +217,7 @@ slides/프레젠테이션명/assets/slide-{NN}-{영문슬러그}.png
 ## Meta
 - **Topic**: ...
 - **Target Audience**: ...
-- **Tone/Mood**: ...
+- **Tone/Mood**: ... (반드시 영어로 작성 — 예: "Professional, data-driven, practical guide". 한국어 Tone/Mood는 generate-images.mjs 스타일 앵커에서 제거됨)
 - **Design Mode**: Professional / Creative / Education / Academic / Minimal
 - **Slide Count**: N slides
 - **Aspect Ratio**: 16:9
@@ -304,6 +286,17 @@ Task tool call:
     - 기본 비율 16:9, 다른 비율 시 [1:1] 힌트 포함
     - "transparent" 금지 → "pure white (#FFFFFF) background" 사용
     - 조명/구도/스타일 키워드 포함
+
+    CRITICAL — VQA 검증된 키워드 (준수 필수, 검증 대상):
+    아래는 VQA 스코어링으로 검증된 카테고리별 키워드 데이터입니다.
+    각 NanoBanana 프롬프트는 해당 카테고리의 추천 키워드를 2~4개 포함해야 합니다 (5개 이상 금지 — 과밀은 VQA 점수를 낮춤).
+    키워드를 자연스러운 영어 문장 안에 녹여서 사용하세요 (단순 나열 금지).
+    hex 색상 코드(#RRGGBB)는 프롬프트에 넣지 마세요 — Gemini가 무시하며 PF를 낮춥니다. 자연어 색상명("deep navy", "warm gold") 사용.
+    프롬프트 길이는 450자 이내로 작성하세요 (자동 강화로 ~150자 추가됨).
+
+    [KEYWORD_INJECTION]
+
+    검증된 프롬프트 템플릿: .claude/docs/nanoBanana-prompt-library.md 참조
 
     Meta 섹션에 Color Palette 필수 포함 (hex 코드).
 

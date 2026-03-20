@@ -38,6 +38,17 @@ font-family: 'Pretendard', 'Inter', -apple-system, 'Segoe UI', sans-serif;
 - **1 슬라이드 = 1 메시지**: 보조 데이터는 appendix로 분리
 - **Every slide must have 1+ visual element**: 텍스트만 있는 슬라이드 금지 (차트, 아이콘, 이미지, 다이어그램 중 하나 이상)
 
+### Typography Hard Floor (Professional)
+
+| Purpose | Min Size | 위반 시 대응 |
+|---------|:--------:|-------------|
+| Slide Title | 24pt | 문장 축약 |
+| Body | 14pt | 항목 감소 또는 슬라이드 분할 |
+| Caption/Source | 10pt | 텍스트 축약 |
+| Label/Badge | 10pt | 약어 사용 |
+
+**10pt 미만 텍스트 생성 절대 금지.** 콘텐츠 초과 시 폰트 축소 대신 슬라이드 분할.
+
 ### Required Rules
 
 - 숫자/데이터는 가장 큰 폰트로 강조 (Hero Number 패턴)
@@ -52,6 +63,15 @@ font-family: 'Pretendard', 'Inter', -apple-system, 'Segoe UI', sans-serif;
 - 본문 텍스트 center 정렬 (좌측 정렬 원칙, 숫자/캡션 예외)
 - 워드아트/그림자 효과가 과도한 제목
 - 글머리 기호(bullet) 3단계 이상 중첩
+- **10pt 미만 폰트 사용** — Hard Floor 위반
+
+### NanoBanana 사용 규칙 (Professional)
+
+- **허용 범위**: Tier 1-2 + 아이콘 세트
+- **아이콘 스타일**: 플랫 2색 아이콘, 굵은 아웃라인, 브랜드 accent 색상
+- **인포그래픽 프레임**: 허용 (프레임만, 데이터 없이)
+- **핵심 키워드**: `corporate`, `polished editorial`, `professional`, `clean`
+- **Tier 3 슬라이드**: NanoBanana 미사용 → HTML-only 데이터 시각화
 
 ### QA Checklist
 
@@ -120,6 +140,17 @@ outline Meta의 Color Palette를 우선 사용하되, preset별 권장 팔레트
 - **악센트**: 전체 면적의 10~15%만 차지
 - **흑백 + 1색**: 가장 안전한 creative 팔레트
 
+### Typography Hard Floor (Creative)
+
+| Purpose | Min Size |
+|---------|:--------:|
+| Headline | 28pt |
+| Subhead | 16pt |
+| Body | 14pt |
+| Caption | 10pt |
+
+**10pt 미만 텍스트 생성 절대 금지.**
+
 ### Required Rules
 
 - 첫 3장 안에 aesthetic direction이 명확히 드러나야 한다
@@ -135,6 +166,14 @@ outline Meta의 Color Palette를 우선 사용하되, preset별 권장 팔레트
 - 모든 슬라이드가 동일한 레이아웃 반복
 - Drop shadow + rounded corner + gradient의 3종 세트 남용
 - "Designed with AI" 느낌의 과도하게 깔끔한 대칭
+
+### NanoBanana 사용 규칙 (Creative)
+
+- **허용 범위**: 전 Tier 적극 사용
+- **아이콘 스타일**: 아이소메트릭, 파스텔, 소프트 쉐도우
+- **인포그래픽 프레임**: 허용 (추상 shapes 포함)
+- **핵심 키워드**: `aesthetic`, `bold`, `expressive`, `dynamic composition`
+- **NanoBanana 프롬프트에 aesthetic preset 키워드 필수 포함**
 
 ### QA Checklist
 
@@ -227,6 +266,19 @@ Google Fonts CDN:
 
 6개+ 항목이 한 슬라이드에 필요하면 반드시 분할. Segmenting Principle (1슬라이드=1개념)과도 부합.
 
+### Typography Hard Floor (Education)
+
+Education 모드는 일반 Hard Floor보다 높은 최소값을 적용한다:
+
+| Purpose | Upper (9-12) | Lower (6-8) |
+|---------|:------------:|:------------:|
+| Title | 28pt | 32pt |
+| Body | **18pt** | **22pt** |
+| Caption | 14pt | 16pt |
+| Label | **14pt** | **16pt** |
+
+**18pt (upper) / 22pt (lower) 미만 텍스트 생성 절대 금지.**
+
 ### Required Rules
 
 - 슬라이드당 텍스트 최대 30단어 (lower) / 50단어 (upper)
@@ -242,6 +294,14 @@ Google Fonts CDN:
 - 텍스트만 있는 슬라이드 (이미지/아이콘 반드시 동반)
 - 3단계 이상 계층 구조 (최대 2단계: 제목 + 본문)
 - 추상적 비유 (lower 그룹에서는 구체적 사물로만 설명)
+
+### NanoBanana 사용 규칙 (Education)
+
+- **허용 범위**: Tier 1 + 구체적 사물 (추상 메타포 금지)
+- **아이콘 스타일**: 둥근 캐릭터형, 원색, 친근한 느낌
+- **인포그래픽 프레임**: 단순한 것만 허용 (복잡한 프레임은 혼란 유발)
+- **핵심 키워드**: `friendly`, `pastel`, `flat`, `rounded`, `cheerful`
+- **Lower (6-8)에서는 추상적 비유 금지** — 구체적 사물로만 표현
 
 ### QA Checklist
 
@@ -292,14 +352,16 @@ font-family: 'Pretendard', 'Arial', 'Calibri', sans-serif;
 - **본문 40단어 이하**: 슬라이드당 본문 텍스트 최대 40단어 (제목 제외)
 - **데이터 중심**: 주장에는 반드시 수치/데이터 동반
 
-### Typography
+### Typography (Hard Floor 포함)
 
-| Purpose | Size | Weight |
-|---------|------|--------|
-| Slide Title | 28-32pt | 700 |
-| Body | 18-22pt | 400 |
-| Axis Label / Caption | 12-14pt | 400 |
-| Source / Footnote | 10-11pt | 400 |
+| Purpose | Size | Weight | Hard Floor |
+|---------|------|--------|:----------:|
+| Slide Title | 28-32pt | 700 | **24pt** |
+| Body | 18-22pt | 400 | **14pt** |
+| Axis Label / Caption | 12-14pt | 400 | **10pt** |
+| Source / Footnote | 10-11pt | 400 | **10pt** |
+
+**10pt 미만 텍스트 생성 절대 금지.**
 
 ### Required Rules
 
@@ -316,6 +378,14 @@ font-family: 'Pretendard', 'Arial', 'Calibri', sans-serif;
 - 3색 초과 사용 (Primary + Accent + Gray 계열만)
 - 애니메이션/전환 효과
 - 이모지
+
+### NanoBanana 사용 규칙 (Academic)
+
+- **허용 범위**: 표지 1장만
+- **아이콘 스타일**: 금지 (장식 요소 전면 금지)
+- **인포그래픽 프레임**: 금지
+- **핵심 키워드**: 해당 없음 — 데이터와 텍스트만으로 구성
+- **NanoBanana 태그**: 표지 이외 슬라이드에 작성 금지
 
 ### QA Checklist
 
@@ -359,11 +429,32 @@ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-s
 - Strategic Color: 2-3색 제한, 단색 베이스 + 악센트
 - Whitespace: 공백을 적극 활용
 
+### Typography Hard Floor (Minimal)
+
+design-skill의 기본 타이포그래피 Hard Floor 적용:
+
+| Purpose | Min Size |
+|---------|:--------:|
+| Slide Title | 24pt |
+| Body | 14pt |
+| Caption | 10pt |
+| Label | 10pt |
+
+**10pt 미만 텍스트 생성 절대 금지.**
+
 ### Required Rules
 
 - Pretendard 웹폰트 CDN 링크 필수 포함
 - 720pt x 405pt 슬라이드 규격
 - 하단 여백 0.5" 이상
+
+### NanoBanana 사용 규칙 (Minimal)
+
+- **허용 범위**: Professional과 동일 (Tier 1-2 + 아이콘 세트)
+- **아이콘 스타일**: 라인 아이콘, 1색, 가는 스트로크
+- **인포그래픽 프레임**: 허용 (프레임만)
+- **핵심 키워드**: `muted`, `desaturated`, `minimal`, `subtle`
+- **과도한 이미지 사용 자제**: typography-driven 원칙에 따라 이미지는 보조 역할
 
 ### QA Checklist
 
@@ -383,3 +474,17 @@ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-s
 | 어린이, 유치원, 주일학교, 초등 | Education | 18pt min + single concept + rounded |
 | 학술, 연구, 논문, 학회 | Academic | White bg + Ghost Deck Test + 40 words |
 | 기타, 범용, 미지정 | Minimal | Pretendard + whitespace + typography |
+
+---
+
+## NanoBanana IV 프로파일 (디자인 모드별)
+
+`generate-images.mjs`의 `DESIGN_MODE_PROFILES`에 정의. 이미지 생성 후 IV 검증 시 모드별 밝기/채도 임계값을 적용.
+
+| Mode | Min Brightness | Max Brightness | Min Saturation | 특성 |
+|------|:-:|:-:|:-:|------|
+| Professional | 40 | 230 | 0.05 | 중립 톤, 과도한 밝기/어둠 방지 |
+| Creative | 20 | 250 | 0.10 | 넓은 범위 허용, 채도 요구 |
+| Education | 60 | 240 | 0.15 | 밝고 선명한 색상 요구 |
+| Academic | 50 | 245 | 0.0 | 흰 배경 기반, 채도 무관 |
+| Minimal | 40 | 240 | 0.0 | 기본값, 채도 무관 |

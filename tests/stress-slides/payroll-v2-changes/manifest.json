@@ -1,0 +1,96 @@
+{
+  "name": "payroll-v2 코드 변경 스트레스 테스트 (C-01~C-14)",
+  "description": "PF-56/57 신규 규칙, VP-04/14/16 오탐 수정, enhancePrompt 분할 레이아웃 구도 — edge case 통합 검증",
+  "cases": [
+    {
+      "slide": "slide-01.html",
+      "description": "PF-56 정탐: flex centering + no height (기본 케이스)",
+      "expect": { "PF-56": "WARN" }
+    },
+    {
+      "slide": "slide-02.html",
+      "description": "PF-56 통과: flex centering + height:100% (정상)",
+      "expect": { "PF-56": null }
+    },
+    {
+      "slide": "slide-03.html",
+      "description": "PF-56 통과: CSS class에 height 정의 (class 감지 확인)",
+      "expect": { "PF-56": null }
+    },
+    {
+      "slide": "slide-04.html",
+      "description": "PF-56 edge: flex + align-items:center 있지만 display:flex 없음 → 통과",
+      "expect": { "PF-56": null }
+    },
+    {
+      "slide": "slide-05.html",
+      "description": "PF-56 edge: 중첩 flex — 외부 height 있지만 내부 height 없음 → WARN",
+      "expect": { "PF-56": "WARN" }
+    },
+    {
+      "slide": "slide-06.html",
+      "description": "PF-57 정탐: 이미지 width 50pt (극단값, 경계 100pt 미만)",
+      "expect": { "PF-57": "WARN" }
+    },
+    {
+      "slide": "slide-07.html",
+      "description": "PF-57 경계값: 이미지 width 99pt → WARN",
+      "expect": { "PF-57": "WARN" }
+    },
+    {
+      "slide": "slide-08.html",
+      "description": "PF-57 경계값: 이미지 width 100pt → 통과 (정확히 경계)",
+      "expect": { "PF-57": null }
+    },
+    {
+      "slide": "slide-09.html",
+      "description": "PF-57 경계값: 이미지 width 101pt → 통과",
+      "expect": { "PF-57": null }
+    },
+    {
+      "slide": "slide-10.html",
+      "description": "PF-57 통과: 외부 URL 이미지 (assets/ 아님) width 30pt → 무시",
+      "expect": { "PF-57": null }
+    },
+    {
+      "slide": "slide-11.html",
+      "description": "PF-56+57 복합: flex no height + width 80pt → 둘 다 WARN",
+      "expect": { "PF-56": "WARN", "PF-57": "WARN" }
+    },
+    {
+      "slide": "slide-12.html",
+      "description": "PF-57 edge: height만 60pt, width 미지정 → WARN",
+      "expect": { "PF-57": "WARN" }
+    },
+    {
+      "slide": "slide-13.html",
+      "description": "VP-04 대비 검사: 테이블 헤더(#1B2A4A) 위 #FFFFFF 텍스트 → VP-04 clean (excludeColors 작동)",
+      "expect": { "VP-04": null }
+    },
+    {
+      "slide": "slide-14.html",
+      "description": "VP-14 통과: bg shape + text shape 동일 위치 (sibling 쌍 skip)",
+      "expect": { "VP-14": null }
+    },
+    {
+      "slide": "slide-15.html",
+      "description": "VP-16 통과: 10pt CJK 텍스트 멀티라인 wrapping — 높이 수용 가능",
+      "expect": { "VP-16": null }
+    },
+    {
+      "slide": "slide-16.html",
+      "description": "VP-16 통과: 짧은 CJK 텍스트(3자) badge — shrink-to-fit WARN 강등",
+      "expect": {}
+    },
+    {
+      "slide": "slide-17.html",
+      "description": "enhancePrompt: 분할 레이아웃(4:3) → fills the frame (단위 테스트로 검증)",
+      "expect": { "PROMPT_CONTAINS": "fills the frame" }
+    },
+    {
+      "slide": "slide-18.html",
+      "description": "PF-56 극단: section 태그 + flex centering + no height → WARN",
+      "expect": { "PF-56": "WARN" }
+    }
+  ]
+}

@@ -1,0 +1,771 @@
+{
+  "_doc": "IP/IV regression test cases. IP cases test prompt validation, IV cases test image metadata validation. type: true_positive = should detect, false_positive = should NOT detect.",
+  "cases": [
+    {
+      "id": "IP-01-TP-001",
+      "rule": "IP-01",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — Korean text in prompt blocks generation",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Prompt contains Korean text — Gemini will render broken Korean glyphs",
+      "input": { "prompt": "물류 창고 내부 사진, 컨베이어 벨트가 보이는 장면" }
+    },
+    {
+      "id": "IP-02-TP-001",
+      "rule": "IP-02",
+      "type": "true_positive",
+      "source": "generate-images.mjs — tier >= 3 triggers HTML chart recommendation",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Tier 3 images are complex charts — should recommend HTML chart instead",
+      "input": { "prompt": "Complex multi-layered data visualization with comparison matrix", "tier": 3 }
+    },
+    {
+      "id": "IP-02-TP-002",
+      "rule": "IP-02",
+      "type": "true_positive",
+      "source": "synthetic — tier 4 should also trigger",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Tier 4 (if ever used) should also warn",
+      "input": { "prompt": "Detailed process flow with multiple interconnected stages", "tier": 4 }
+    },
+    {
+      "id": "IP-02-FP-001",
+      "rule": "IP-02",
+      "type": "false_positive",
+      "source": "synthetic — tier 2 should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Tier 2 is standard — no warning needed",
+      "input": { "prompt": "Abstract gradient illustration of cloud computing concept", "tier": 2 }
+    },
+    {
+      "id": "IP-02-FP-002",
+      "rule": "IP-02",
+      "type": "false_positive",
+      "source": "synthetic — tier 1 should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Tier 1 is simple — no warning needed",
+      "input": { "prompt": "Soft blue background texture with subtle noise", "tier": 1 }
+    },
+    {
+      "id": "IP-03-TP-001",
+      "rule": "IP-03",
+      "type": "true_positive",
+      "source": "generate-images.mjs — 1:1 without icon keyword is suspicious",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "1:1 ratio is intended for icons — prompt without 'icon' likely misuses the ratio",
+      "input": { "prompt": "Abstract geometric pattern with blue gradient", "aspectRatio": "1:1" }
+    },
+    {
+      "id": "IP-03-TP-002",
+      "rule": "IP-03",
+      "type": "true_positive",
+      "source": "synthetic — 1:1 with unrelated description",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "1:1 landscape photo is definitely a mismatch",
+      "input": { "prompt": "Panoramic mountain vista with morning fog", "aspectRatio": "1:1" }
+    },
+    {
+      "id": "IP-03-FP-001",
+      "rule": "IP-03",
+      "type": "false_positive",
+      "source": "synthetic — 1:1 with icon keyword is correct usage",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "1:1 ratio with icon keyword — expected usage",
+      "input": { "prompt": "Flat design icon representing cloud computing, minimal style", "aspectRatio": "1:1" }
+    },
+    {
+      "id": "IP-03-FP-002",
+      "rule": "IP-03",
+      "type": "false_positive",
+      "source": "synthetic — non-1:1 ratio should never trigger IP-03",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "16:9 ratio without icon keyword — IP-03 only checks 1:1",
+      "input": { "prompt": "Abstract geometric pattern with blue gradient", "aspectRatio": "16:9" }
+    },
+    {
+      "id": "IP-04-TP-001",
+      "rule": "IP-04",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — numeric data triggers fake infographic",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Prompt contains percentage — Gemini will generate fake data chart",
+      "input": { "prompt": "Bar chart showing 45% increase in revenue, pie chart with $1.2M label" }
+    },
+    {
+      "id": "IP-04-FP-001",
+      "rule": "IP-04",
+      "type": "false_positive",
+      "source": "synthetic — aspect ratio hint contains numbers but not data",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Numbers in aspect ratio hints like [3:4] should not trigger IP-04",
+      "input": { "prompt": "Aerial view of logistics hub at night, dramatic lighting [3:4]" }
+    },
+    {
+      "id": "IP-05-TP-001",
+      "rule": "IP-05",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — text rendering keywords",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Prompt requests text rendering — Gemini will render broken text",
+      "input": { "prompt": "Infographic with caption: 'Total Revenue Growth' and labeled axes" }
+    },
+    {
+      "id": "IP-06-TP-001",
+      "rule": "IP-06",
+      "type": "true_positive",
+      "source": "generate-images.mjs — prompt < 20 chars too short",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Very short prompt produces low-quality or random output",
+      "input": { "prompt": "blue background" }
+    },
+    {
+      "id": "IP-06-TP-002",
+      "rule": "IP-06",
+      "type": "true_positive",
+      "source": "synthetic — exactly 19 chars (boundary)",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Boundary case: 19 chars is under 20 threshold",
+      "input": { "prompt": "abstract blue waves" }
+    },
+    {
+      "id": "IP-06-FP-001",
+      "rule": "IP-06",
+      "type": "false_positive",
+      "source": "synthetic — exactly 20 chars should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Boundary case: exactly 20 chars meets minimum",
+      "input": { "prompt": "abstract blue waves!" }
+    },
+    {
+      "id": "IP-06-FP-002",
+      "rule": "IP-06",
+      "type": "false_positive",
+      "source": "synthetic — long prompt should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal length prompt with adequate detail",
+      "input": { "prompt": "Abstract geometric illustration of modern cloud computing infrastructure with blue gradient tones" }
+    },
+    {
+      "id": "IP-07-TP-001",
+      "rule": "IP-07",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — quoted text becomes literal rendering",
+      "date": "2026-03-20",
+      "expectedLevel": "ERROR",
+      "description": "Quoted phrases cause Gemini to render literal text in image",
+      "input": { "prompt": "Abstract design with the text \"Revenue Growth\" prominently displayed" }
+    },
+    {
+      "id": "IP-08-FP-001",
+      "rule": "IP-08",
+      "type": "false_positive",
+      "source": "R56-R60 testing — long but effective prompts should only WARN, not block",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Prompt over 600 chars gets WARN (not ERROR) — generation continues",
+      "input": { "prompt": "A very detailed abstract vector graphic illustration showing a modern logistics warehouse interior with conveyor belts and automated sorting systems, muted desaturated tones, soft diffused lighting, geometric shapes representing packages flowing through the system, no text no labels no annotations, main element offset left, clean minimal composition with plenty of negative space, corporate professional feel with navy and orange accent colors, suitable for business presentation background, abstract and non-literal interpretation preferred over photorealistic rendering" }
+    },
+    {
+      "id": "IP-09-TP-001",
+      "rule": "IP-09",
+      "type": "true_positive",
+      "source": "generate-images.mjs — portrait ratio with wide-angle keyword",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Portrait 3:4 ratio contradicts wide-angle keyword — mismatch",
+      "input": { "prompt": "Panoramic wide-angle cityscape at sunset with golden light", "aspectRatio": "3:4" }
+    },
+    {
+      "id": "IP-09-TP-002",
+      "rule": "IP-09",
+      "type": "true_positive",
+      "source": "generate-images.mjs — portrait ratio with ultrawide keyword",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Portrait 9:16 ratio contradicts ultrawide keyword",
+      "input": { "prompt": "Ultrawide cinematic landscape of desert dunes at dawn", "aspectRatio": "9:16" }
+    },
+    {
+      "id": "IP-09-TP-003",
+      "rule": "IP-09",
+      "type": "true_positive",
+      "source": "generate-images.mjs — landscape ratio with tall/towering keyword",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Landscape 16:9 with tall keyword — vertical subject in horizontal frame",
+      "input": { "prompt": "Tall towering skyscraper reaching into clouds, dramatic perspective", "aspectRatio": "16:9" }
+    },
+    {
+      "id": "IP-09-TP-004",
+      "rule": "IP-09",
+      "type": "true_positive",
+      "source": "generate-images.mjs — landscape ratio with portrait keyword",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Landscape 3:2 with portrait keyword — mismatch",
+      "input": { "prompt": "Portrait orientation photograph of a lighthouse", "aspectRatio": "3:2" }
+    },
+    {
+      "id": "IP-09-FP-001",
+      "rule": "IP-09",
+      "type": "false_positive",
+      "source": "generate-images.mjs B2 — 'vertical bar chart' describes bar direction, not image orientation",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Vertical bar chart in landscape frame is correct — 'vertical' modifies 'bar', not image",
+      "input": { "prompt": "Abstract vertical bar chart with ascending gradient bars", "aspectRatio": "16:9" }
+    },
+    {
+      "id": "IP-09-FP-002",
+      "rule": "IP-09",
+      "type": "false_positive",
+      "source": "synthetic — landscape ratio with no conflicting keywords",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal landscape prompt with no vertical keywords — no mismatch",
+      "input": { "prompt": "Soft gradient abstract background with geometric elements", "aspectRatio": "16:9" }
+    },
+    {
+      "id": "IP-09-FP-003",
+      "rule": "IP-09",
+      "type": "false_positive",
+      "source": "synthetic — portrait ratio with no wide-angle keywords",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal portrait prompt — no wide-angle keywords, no mismatch",
+      "input": { "prompt": "Abstract vertical composition of flowing waterfall, misty atmosphere", "aspectRatio": "3:4" }
+    },
+    {
+      "id": "IP-09-FP-004",
+      "rule": "IP-09",
+      "type": "false_positive",
+      "source": "generate-images.mjs B2 — 'vertical column' describes chart type, not image orientation",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Vertical column chart in 21:9 landscape is correct",
+      "input": { "prompt": "Minimalist vertical column chart showing quarterly progress", "aspectRatio": "21:9" }
+    },
+    {
+      "id": "IP-10-TP-001",
+      "rule": "IP-10",
+      "type": "true_positive",
+      "source": "generate-images.mjs — tier mismatch >= 2 between specified and estimated",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Tier 1 specified but prompt has many concept keywords — estimated tier 3",
+      "input": { "prompt": "Complex chart showing process flow with graph data and comparison matrix versus table statistics in pipeline workflow timeline stages", "tier": 1 }
+    },
+    {
+      "id": "IP-10-FP-001",
+      "rule": "IP-10",
+      "type": "false_positive",
+      "source": "synthetic — tier matches estimation",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Tier 1 with simple prompt — estimated tier 1, no mismatch",
+      "input": { "prompt": "Soft blue gradient background with subtle noise texture", "tier": 1 }
+    },
+    {
+      "id": "IP-10-FP-002",
+      "rule": "IP-10",
+      "type": "false_positive",
+      "source": "synthetic — off by only 1 tier should not trigger (threshold is >= 2)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Tier 2 specified, estimated 1 — difference is only 1, no warning",
+      "input": { "prompt": "Abstract illustration of a modern cityscape", "tier": 2 }
+    },
+    {
+      "id": "IP-11-TP-001",
+      "rule": "IP-11",
+      "type": "true_positive",
+      "source": "generate-images.mjs — inherent text subject: compass",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Compass has inherent N/S/E/W labels — VQA text_absence will be low",
+      "input": { "prompt": "Detailed compass showing cardinal directions with golden frame" }
+    },
+    {
+      "id": "IP-11-TP-002",
+      "rule": "IP-11",
+      "type": "true_positive",
+      "source": "generate-images.mjs — inherent text subject: calculator",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Calculator inherently shows numbers on buttons and display",
+      "input": { "prompt": "Retro calculator with large buttons in pastel colors" }
+    },
+    {
+      "id": "IP-11-TP-003",
+      "rule": "IP-11",
+      "type": "true_positive",
+      "source": "generate-images.mjs — inherent text subject: keyboard",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Keyboard has letters on every key",
+      "input": { "prompt": "Mechanical keyboard with RGB lighting, macro shot" }
+    },
+    {
+      "id": "IP-11-TP-004",
+      "rule": "IP-11",
+      "type": "true_positive",
+      "source": "generate-images.mjs — inherent text subject: clock",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Clock face has numbers",
+      "input": { "prompt": "Vintage wall clock with roman numerals and brass frame" }
+    },
+    {
+      "id": "IP-11-TP-005",
+      "rule": "IP-11",
+      "type": "true_positive",
+      "source": "generate-images.mjs — inherent text subject: dashboard",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Dashboard has labels and readouts",
+      "input": { "prompt": "Modern car dashboard with glowing instruments at night" }
+    },
+    {
+      "id": "IP-11-FP-001",
+      "rule": "IP-11",
+      "type": "false_positive",
+      "source": "synthetic — generic subject without inherent text",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Mountain landscape has no inherent text elements",
+      "input": { "prompt": "Majestic mountain landscape at sunrise with morning fog" }
+    },
+    {
+      "id": "IP-11-FP-002",
+      "rule": "IP-11",
+      "type": "false_positive",
+      "source": "synthetic — abstract concept without inherent text",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Abstract flowing shapes have no text",
+      "input": { "prompt": "Abstract flowing liquid metal shapes in silver and blue tones" }
+    },
+    {
+      "id": "IP-13-TP-001",
+      "rule": "IP-13",
+      "type": "true_positive",
+      "source": "R56-R60 testing — staircase element count unreliable",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Staircase keyword triggers WARN — Gemini consistently miscounts elements",
+      "input": { "prompt": "Four-step staircase diagram with ascending bars showing growth progression" }
+    },
+    {
+      "id": "IP-14-TP-001",
+      "rule": "IP-14",
+      "type": "true_positive",
+      "source": "generate-images.mjs — warm keywords with cool-dominant palette",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Warm keywords (sunset, golden) conflict with blue-dominant palette",
+      "input": {
+        "prompt": "Warm golden sunset amber landscape with fire-like glow and autumn leaves",
+        "_paletteColors": [
+          { "r": 30, "g": 60, "b": 180 },
+          { "r": 20, "g": 50, "b": 160 },
+          { "r": 40, "g": 70, "b": 200 },
+          { "r": 25, "g": 55, "b": 170 }
+        ]
+      }
+    },
+    {
+      "id": "IP-14-TP-002",
+      "rule": "IP-14",
+      "type": "true_positive",
+      "source": "generate-images.mjs — cool keywords with warm-dominant palette",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Cool keywords (icy, frozen, arctic) conflict with red/orange palette",
+      "input": {
+        "prompt": "Icy frozen arctic winter landscape with frost crystals",
+        "_paletteColors": [
+          { "r": 200, "g": 80, "b": 30 },
+          { "r": 180, "g": 70, "b": 20 },
+          { "r": 210, "g": 90, "b": 40 }
+        ]
+      }
+    },
+    {
+      "id": "IP-14-FP-001",
+      "rule": "IP-14",
+      "type": "false_positive",
+      "source": "synthetic — warm keywords with warm-matching palette (no conflict)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Warm keywords with warm palette — colors match, no conflict",
+      "input": {
+        "prompt": "Warm golden sunset amber glow over desert dunes",
+        "_paletteColors": [
+          { "r": 220, "g": 150, "b": 50 },
+          { "r": 200, "g": 130, "b": 40 },
+          { "r": 180, "g": 120, "b": 30 }
+        ]
+      }
+    },
+    {
+      "id": "IP-14-FP-002",
+      "rule": "IP-14",
+      "type": "false_positive",
+      "source": "synthetic — only 1 warm keyword (need >= 2 to trigger)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Single warm keyword with cool palette — under threshold of 2 warm matches",
+      "input": {
+        "prompt": "Sunset landscape with rolling hills and misty valleys",
+        "_paletteColors": [
+          { "r": 30, "g": 60, "b": 180 },
+          { "r": 20, "g": 50, "b": 160 }
+        ]
+      }
+    },
+    {
+      "id": "IP-14-FP-003",
+      "rule": "IP-14",
+      "type": "false_positive",
+      "source": "synthetic — no palette colors provided",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Warm keywords but no palette colors — cannot check conflict",
+      "input": {
+        "prompt": "Warm golden sunset amber landscape with fire glow"
+      }
+    },
+    {
+      "id": "IP-15-TP-001",
+      "rule": "IP-15",
+      "type": "true_positive",
+      "source": "generate-images.mjs — requires VQA keyword DB for testing",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "status": "known_issue",
+      "actualLevel": null,
+      "description": "Prompt with zero recommended keywords — requires keyword DB which is not available in regression runner",
+      "input": { "prompt": "Generic abstract design without any quality keywords from the database" }
+    },
+    {
+      "id": "IP-15-FP-001",
+      "rule": "IP-15",
+      "type": "false_positive",
+      "source": "generate-images.mjs — requires VQA keyword DB for testing",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "status": "known_issue",
+      "actualLevel": null,
+      "description": "Prompt with 2-4 recommended keywords — requires keyword DB which is not available in regression runner",
+      "input": { "prompt": "Minimalist flat design icon with soft gradient and clean lines" }
+    },
+    {
+      "id": "IP-16-TP-001",
+      "rule": "IP-16",
+      "type": "true_positive",
+      "source": "generate-images.mjs — 3+ hex colors Gemini ignores",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "3 hex color codes in prompt — Gemini cannot match specific hex tones",
+      "input": { "prompt": "Abstract gradient background using #1A2B3C, #4D5E6F, and #7A8B9C color scheme" }
+    },
+    {
+      "id": "IP-16-TP-002",
+      "rule": "IP-16",
+      "type": "true_positive",
+      "source": "synthetic — 5 hex colors well above threshold",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "5 hex codes is excessive — Gemini will ignore most",
+      "input": { "prompt": "Corporate palette #FF5733 primary, #C70039 accent, #900C3F secondary, #581845 dark, #FFC300 highlight on geometric shapes" }
+    },
+    {
+      "id": "IP-16-FP-001",
+      "rule": "IP-16",
+      "type": "false_positive",
+      "source": "synthetic — 2 hex colors is under threshold",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Only 2 hex codes — under the >= 3 threshold",
+      "input": { "prompt": "Gradient background from #1A2B3C to #4D5E6F with soft transition" }
+    },
+    {
+      "id": "IP-16-FP-002",
+      "rule": "IP-16",
+      "type": "false_positive",
+      "source": "synthetic — no hex colors at all",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Natural color names instead of hex codes — preferred approach",
+      "input": { "prompt": "Gradient background from navy blue to steel gray with soft transition" }
+    },
+    {
+      "id": "IV-01-TP-001",
+      "rule": "IV-01",
+      "type": "true_positive",
+      "source": "generate-images.mjs — safety filter blocked",
+      "date": "2026-03-20",
+      "expectedLevel": "FAIL",
+      "description": "Gemini safety filter blocked the generation — must retry with different prompt",
+      "input": { "finishReason": "SAFETY", "avgBrightness": 0, "fileSize": 0 }
+    },
+    {
+      "id": "IV-01-FP-001",
+      "rule": "IV-01",
+      "type": "false_positive",
+      "source": "synthetic — normal completion should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Normal STOP finish reason — not blocked",
+      "input": { "finishReason": "STOP", "avgBrightness": 128, "fileSize": 50000 }
+    },
+    {
+      "id": "IV-01-FP-002",
+      "rule": "IV-01",
+      "type": "false_positive",
+      "source": "synthetic — null finish reason should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Missing finishReason is not a safety block",
+      "input": { "finishReason": null, "avgBrightness": 128, "fileSize": 50000 }
+    },
+    {
+      "id": "IV-02-TP-001",
+      "rule": "IV-02",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — very dark image unusable as non-cover",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Non-cover image with avg brightness < 30 is too dark for text readability",
+      "input": { "avgBrightness": 25, "prompt": "Abstract geometric shapes in soft pastel tones", "fileSize": 50000 }
+    },
+    {
+      "id": "IV-02-FP-001",
+      "rule": "IV-02",
+      "type": "false_positive",
+      "source": "synthetic — dark cover slide is intentional",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Dark image with 'cover' in slide title — intentionally dark for cover design",
+      "input": { "avgBrightness": 20, "slideTitle": "Presentation Cover — Dark Theme", "prompt": "Abstract dark design", "fileSize": 50000 }
+    },
+    {
+      "id": "IV-02-FP-002",
+      "rule": "IV-02",
+      "type": "false_positive",
+      "source": "synthetic — night scene is intentionally dark",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Night scene in slide title — dark is expected",
+      "input": { "avgBrightness": 15, "slideTitle": "City at night with neon lights", "prompt": "Neon cityscape", "fileSize": 50000 }
+    },
+    {
+      "id": "IV-02-FP-003",
+      "rule": "IV-02",
+      "type": "false_positive",
+      "source": "synthetic — brightness >= 30 should not trigger",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Brightness at exactly 30 — at boundary, should not trigger",
+      "input": { "avgBrightness": 30, "prompt": "Dim atmospheric illustration", "fileSize": 50000 }
+    },
+    {
+      "id": "IV-03-TP-001",
+      "rule": "IV-03",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — near-white image is unusable",
+      "date": "2026-03-20",
+      "expectedLevel": "FAIL",
+      "description": "Image with avg brightness > 240 for regular photo — near white",
+      "input": { "avgBrightness": 245, "prompt": "Colorful abstract illustration", "fileSize": 15000 }
+    },
+    {
+      "id": "IV-03-TP-002",
+      "rule": "IV-03",
+      "type": "true_positive",
+      "source": "synthetic — icon type with brightness > 252",
+      "date": "2026-03-20",
+      "expectedLevel": "FAIL",
+      "description": "Icon type gets relaxed threshold (252) but 253 still exceeds it",
+      "input": { "avgBrightness": 253, "prompt": "Flat icon design of cloud computing", "aspectRatio": "1:1", "fileSize": 15000 }
+    },
+    {
+      "id": "IV-03-FP-001",
+      "rule": "IV-03",
+      "type": "false_positive",
+      "source": "synthetic — white minimalist design has brightness check disabled",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "White minimalist design — threshold set to 255, effectively disabled",
+      "input": { "avgBrightness": 254, "prompt": "White minimalist geometric shapes on clean background", "fileSize": 20000 }
+    },
+    {
+      "id": "IV-03-FP-002",
+      "rule": "IV-03",
+      "type": "false_positive",
+      "source": "synthetic — frame type with brightness 250 (under 252 threshold)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Frame type with brightness under relaxed threshold — acceptable",
+      "input": { "avgBrightness": 250, "prompt": "Timeline frame with three steps in minimal style", "fileSize": 20000 }
+    },
+    {
+      "id": "IV-05-TP-001",
+      "rule": "IV-05",
+      "type": "true_positive",
+      "source": "nanoBanana-guide — empty/corrupt file",
+      "date": "2026-03-20",
+      "expectedLevel": "FAIL",
+      "description": "File under 10KB for photo type is likely corrupt or empty",
+      "input": { "fileSize": 5000, "prompt": "Detailed landscape photograph", "fileSize": 5000 }
+    },
+    {
+      "id": "IV-05-FP-001",
+      "rule": "IV-05",
+      "type": "false_positive",
+      "source": "synthetic — icon file at 6KB is above icon threshold (5KB)",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Icon type has lower min size (5120) — 6KB is acceptable",
+      "input": { "fileSize": 6000, "prompt": "Simple flat icon design", "aspectRatio": "1:1", "isIconType": true }
+    },
+    {
+      "id": "IV-09-FP-001",
+      "rule": "IV-09",
+      "type": "false_positive",
+      "source": "synthetic — natural subject with warm tones against cool palette is acceptable",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Photographic natural subjects have inherent color variation — IV-09 threshold should be relaxed (200 for natural)",
+      "input": { "minColorDistance": 150, "category": "photo", "isNaturalSubject": true, "paletteColors": ["#1B2A4A", "#E8913A"] }
+    },
+    {
+      "id": "IV-10-TP-001",
+      "rule": "IV-10",
+      "type": "true_positive",
+      "source": "generate-images.mjs — edge density too low for tier",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Default type tier 2 with edge density below minimum 0.05",
+      "input": {
+        "prompt": "Abstract illustration of network connections",
+        "tier": 2,
+        "edgeDensity": 0.01,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-TP-002",
+      "rule": "IV-10",
+      "type": "true_positive",
+      "source": "generate-images.mjs — edge density too high for tier",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Default type tier 1 with edge density above maximum 0.25",
+      "input": {
+        "prompt": "Simple abstract gradient background",
+        "tier": 1,
+        "edgeDensity": 0.35,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-TP-003",
+      "rule": "IV-10",
+      "type": "true_positive",
+      "source": "synthetic — photographic type tier 1 below minimum 0.02",
+      "date": "2026-03-20",
+      "expectedLevel": "WARN",
+      "description": "Photographic content should have some edge detail — 0.01 too low",
+      "input": {
+        "prompt": "Cinematic aerial photograph of coastline",
+        "tier": 1,
+        "edgeDensity": 0.01,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-FP-001",
+      "rule": "IV-10",
+      "type": "false_positive",
+      "source": "synthetic — cover/background type has relaxed range",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Cover slide with low edge density is normal — covers are simple",
+      "input": {
+        "prompt": "Abstract gradient background",
+        "slideTitle": "Presentation Cover",
+        "tier": 1,
+        "edgeDensity": 0.01,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-FP-002",
+      "rule": "IV-10",
+      "type": "false_positive",
+      "source": "synthetic — frame type has wider range",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Frame/diagram type allows higher edge density — vector diagrams are naturally detailed",
+      "input": {
+        "prompt": "Timeline frame showing quarterly milestones with flowchart connections",
+        "tier": 2,
+        "edgeDensity": 0.45,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-FP-003",
+      "rule": "IV-10",
+      "type": "false_positive",
+      "source": "synthetic — photographic type allows high edge density",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Cinematic photograph naturally has high edge density — within range",
+      "input": {
+        "prompt": "Cinematic aerial photograph of a dense city skyline",
+        "tier": 2,
+        "edgeDensity": 0.55,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    },
+    {
+      "id": "IV-10-FP-004",
+      "rule": "IV-10",
+      "type": "false_positive",
+      "source": "synthetic — no edgeDensity means IV-10 cannot run",
+      "date": "2026-03-20",
+      "expectedLevel": null,
+      "description": "Missing edgeDensity data — IV-10 should skip (not error)",
+      "input": {
+        "prompt": "Abstract background design",
+        "tier": 2,
+        "fileSize": 50000,
+        "avgBrightness": 128
+      }
+    }
+  ]
+}

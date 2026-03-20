@@ -1,0 +1,21 @@
+{
+  "run": 1,
+  "slides": 10,
+  "timestamp": "2026-03-20T03:23:24.426Z",
+  "timing": {
+    "preflight_static_ms": 118,
+    "conversion_ms": 4848,
+    "com_export_ms": 4895
+  },
+  "quality": {
+    "pf_errors": 1,
+    "pf_warnings": 8,
+    "vp_errors": 0,
+    "vp_warnings": 0,
+    "com_diff_issues": 0
+  },
+  "api": {},
+  "output": {
+    "pptx_kb": 150
+  }
+}

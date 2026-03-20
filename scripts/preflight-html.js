@@ -229,8 +229,17 @@ function checkPF15(html, file) {
     // Count columns: split grid-template-columns value by whitespace tokens
     const colMatch = style.match(/grid-template-columns\s*:\s*([^;"]+)/i);
     if (!colMatch) continue;
-    const colTokens = colMatch[1].trim().split(/\s+/).filter(t => t && !t.startsWith('/'));
-    if (colTokens.length < 3) continue;
+    const colValue = colMatch[1].trim();
+    // Handle repeat() shorthand: repeat(4, 1fr) → 4 columns
+    const repeatMatch = colValue.match(/repeat\(\s*(\d+)/);
+    let colCount;
+    if (repeatMatch) {
+      colCount = parseInt(repeatMatch[1], 10);
+    } else {
+      const colTokens = colValue.split(/\s+/).filter(t => t && !t.startsWith('/'));
+      colCount = colTokens.length;
+    }
+    if (colCount < 3) continue;
 
     // Check surrounding context (~2000 chars) for CJK text with font-size > 7.5pt
     const afterIdx = m.index;
@@ -244,7 +253,7 @@ function checkPF15(html, file) {
       const size = parseFloat(fs[1]);
       if (size > 7.5 && CJK_RE.test(region.substring(fs.index, fs.index + 500))) {
         issues.push(fmtWarn(file, 'PF-15',
-          `${colTokens.length}-column grid with CJK text at ${size}pt (>7.5pt) — may overflow in PPTX [IL-27]`));
+          `${colCount}-column grid with CJK text at ${size}pt (>7.5pt) — may overflow in PPTX [IL-27]`));
         return issues; // one per file
       }
     }
@@ -255,8 +264,10 @@ function checkPF15(html, file) {
 function checkPF16(html, file) {
   const issues = [];
   // IL-07: background image on body without text-shadow on text elements
-  const bodyBgRe = /<body[^>]*style="[^"]*background[^"]*url\s*\(/i;
-  if (!bodyBgRe.test(html)) return issues;
+  // Check both inline style on <body> and <style> block for body { background: url(...) }
+  const bodyBgInline = /<body[^>]*style="[^"]*background[^"]*url\s*\(/i.test(html);
+  const bodyBgStyle = /body\s*\{[^}]*background[^}]*url\s*\(/i.test(html);
+  if (!bodyBgInline && !bodyBgStyle) return issues;
 
   // Body has background image — check if text elements have text-shadow
   // Look for text-bearing elements (h1-h6, p, span, div with text) without text-shadow
@@ -285,8 +296,8 @@ function checkPF17(html, file) {
   while ((m = transformRe.exec(html)) !== null) {
     const val = m[1];
     // Check for unsupported transform functions (translate is OK — used for centering)
-    if (/(?:scale|skew|perspective|matrix)\s*\(/i.test(val)) {
-      const fnMatch = val.match(/(scale|skew|perspective|matrix)\s*\(/i);
+    if (/(?:scale\w*|skew\w*|perspective|matrix\w*)\s*\(/i.test(val)) {
+      const fnMatch = val.match(/(scale\w*|skew\w*|perspective|matrix\w*)\s*\(/i);
       issues.push(fmtWarn(file, 'PF-17',
         `Unsupported CSS transform "${fnMatch[1]}()" — only rotate is supported in PPTX conversion`));
       return issues; // one per file
@@ -325,7 +336,7 @@ function checkPF19(html, file) {
 }
 
 // CSS properties that html2pptx cannot convert
-const UNSUPPORTED_CSS_RE = /(?:backdrop-filter|mix-blend-mode|clip-path|mask-image|filter\s*:\s*(?!none)(?:blur|brightness|contrast|grayscale|hue-rotate|invert|saturate|sepia)|writing-mode\s*:\s*vertical|animation\s*:|@keyframes)\s*/i;
+const UNSUPPORTED_CSS_RE = /(?:backdrop-filter|clip-path|mask-image|filter\s*:\s*(?!none)(?:blur|brightness|contrast|drop-shadow|grayscale|hue-rotate|invert|saturate|sepia)|writing-mode\s*:\s*vertical|animation\s*:|@keyframes)\s*/i;
 
 function checkPF22(html, file) {
   const issues = [];
@@ -340,6 +351,12 @@ function checkPF22(html, file) {
         `Unsupported CSS property "${prop}" — will be ignored in PPTX conversion`));
       return issues; // one per file
     }
+    // box-shadow: inset — html2pptx ignores inset shadows
+    if (/box-shadow\s*:[^;]*\binset\b/i.test(style)) {
+      issues.push(fmtWarn(file, 'PF-22',
+        `box-shadow: inset — inset shadows ignored in PPTX, only outer shadows supported`));
+      return issues;
+    }
   }
   // Also check <style> blocks
   const styleBlockRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
@@ -351,6 +368,712 @@ function checkPF22(html, file) {
       issues.push(fmtWarn(file, 'PF-22',
         `Unsupported CSS property "${prop}" in <style> block — will be ignored in PPTX conversion`));
       return issues;
+    }
+    if (/box-shadow\s*:[^;]*\binset\b/i.test(block)) {
+      issues.push(fmtWarn(file, 'PF-22',
+        `box-shadow: inset in <style> — inset shadows ignored in PPTX`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+function checkPF25(html, file) {
+  const issues = [];
+  // Hard Floor: font-size < 10pt is ERROR (design-skill typography minimum)
+  // Scans all inline style font-size declarations
+  const fontSizeRe = /font-size\s*:\s*([\d.]+)\s*pt/gi;
+  let m;
+  const violations = [];
+  while ((m = fontSizeRe.exec(html)) !== null) {
+    const size = parseFloat(m[1]);
+    if (size < 10) {
+      violations.push(size);
+    }
+  }
+  if (violations.length > 0) {
+    const unique = [...new Set(violations)].sort((a, b) => a - b);
+    issues.push(fmtError(file, 'PF-25',
+      `Font size below Hard Floor (10pt): found ${unique.join('pt, ')}pt — increase to 10pt+ or split slide [IL-31]`));
+  }
+  return issues;
+}
+
+function checkPF27(html, file) {
+  const issues = [];
+  // CJK badge/label nowrap check: elements with explicit small width + CJK text without nowrap
+  // Pattern: style="...width: Xpt..." containing CJK text without white-space: nowrap
+  const styleBlockRe = /style="([^"]*)"/gi;
+  let m;
+  const violations = [];
+  while ((m = styleBlockRe.exec(html)) !== null) {
+    const style = m[1];
+    // Check if element has explicit small width (< 150pt)
+    const widthMatch = style.match(/(?:^|;\s*)width\s*:\s*([\d.]+)\s*pt/i);
+    if (!widthMatch) continue;
+    const width = parseFloat(widthMatch[1]);
+    if (width >= 150) continue;
+    // Check if it has nowrap already
+    if (/white-space\s*:\s*nowrap/i.test(style)) continue;
+    // Check surrounding context for CJK text (approximate: look at nearby HTML content)
+    const pos = m.index;
+    const nearby = html.substring(pos, Math.min(pos + 500, html.length));
+    if (CJK_RE.test(nearby)) {
+      violations.push(width);
+    }
+  }
+  if (violations.length > 0) {
+    const unique = [...new Set(violations)].sort((a, b) => a - b);
+    issues.push(fmtWarn(file, 'PF-27',
+      `CJK text in narrow container (${unique.join('pt, ')}pt width) without white-space:nowrap — may wrap in PPTX [IL-34]`));
+  }
+  return issues;
+}
+
+function checkPF28(html, file) {
+  const issues = [];
+  // Word count per slide: > 80 words WARN, > 120 ERROR (5x5/6x6 Rule, BCG principle)
+  // Strip HTML tags, then count words
+  // Extract body content only (ignore head/title/meta)
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  const bodyContent = bodyMatch ? bodyMatch[1] : html;
+  const textOnly = bodyContent.replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z]+;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  // Count: CJK characters count as 1 word each, Latin words split by space
+  const cjkChars = (textOnly.match(/[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/g) || []).length;
+  // For word count: split non-CJK text by spaces, filter empties
+  const nonCjk = textOnly.replace(/[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/g, ' ');
+  const latinWords = nonCjk.split(/\s+/).filter(w => w.length > 0).length;
+  // CJK: roughly 2 characters = 1 "word equivalent" for density
+  const wordEquiv = latinWords + Math.ceil(cjkChars / 2);
+  if (wordEquiv > 120) {
+    issues.push(fmtError(file, 'PF-28',
+      `Slide has ~${wordEquiv} word equivalents (max 120) — split content across slides [6x6 Rule]`));
+  } else if (wordEquiv > 80) {
+    issues.push(fmtWarn(file, 'PF-28',
+      `Slide has ~${wordEquiv} word equivalents (recommend ≤80) — consider reducing text [5x5 Rule]`));
+  }
+  return issues;
+}
+
+function checkPF29(html, file) {
+  const issues = [];
+  // Image alt text check: <img> without alt or with alt="" (WCAG, Grackle, MS)
+  const imgRe = /<img\b([^>]*)>/gi;
+  let m;
+  let missing = 0;
+  while ((m = imgRe.exec(html)) !== null) {
+    const attrs = m[1];
+    // Skip tiny decorative images (icons)
+    if (/width\s*[:=]\s*["']?\d{1,2}(px|pt)/i.test(attrs)) continue;
+    // Check for alt attribute
+    const altMatch = attrs.match(/\balt\s*=\s*"([^"]*)"/i);
+    if (!altMatch || altMatch[1].trim() === '') {
+      missing++;
+    }
+  }
+  if (missing > 0) {
+    issues.push(fmtWarn(file, 'PF-29',
+      `${missing} image(s) missing alt text — add descriptive alt for accessibility [WCAG]`));
+  }
+  return issues;
+}
+
+function checkPF30(html, file) {
+  const issues = [];
+  // Font hierarchy inversion: title (h1/h2) font-size ≤ body (p/div/li) font-size
+  let titleSize = 0;
+  let bodyMaxSize = 0;
+
+  // Find h1/h2 font sizes
+  const titleRe = /<h[12][^>]*style="[^"]*font-size\s*:\s*([\d.]+)\s*pt/gi;
+  let m;
+  while ((m = titleRe.exec(html)) !== null) {
+    const size = parseFloat(m[1]);
+    if (size > titleSize) titleSize = size;
+  }
+
+  // Find body text font sizes (p, div with text, li)
+  const bodyRe = /<(?:p|li)\b[^>]*style="[^"]*font-size\s*:\s*([\d.]+)\s*pt/gi;
+  while ((m = bodyRe.exec(html)) !== null) {
+    const size = parseFloat(m[1]);
+    if (size > bodyMaxSize) bodyMaxSize = size;
+  }
+
+  if (titleSize > 0 && bodyMaxSize > 0 && titleSize <= bodyMaxSize) {
+    issues.push(fmtWarn(file, 'PF-30',
+      `Font hierarchy inversion: title ${titleSize}pt ≤ body ${bodyMaxSize}pt — title should be larger [2502.15412]`));
+  }
+  return issues;
+}
+
+// PF-31: Inline <span> inside heading/paragraph causes extra line breaks in PPTX [IL-45]
+function checkPF34(html, file) {
+  const issues = [];
+  // Match <h1>...<span ...>...</span>...</h1> where text exists both before and inside span
+  // This pattern causes PPTX converter to split span into separate paragraph
+  const textElRe = /<(h[1-6]|p)\b[^>]*>([\s\S]*?)<\/\1>/gi;
+  let m;
+  while ((m = textElRe.exec(html)) !== null) {
+    const tag = m[1];
+    const content = m[2];
+    // Check if content has text + <span> + text (mixed inline content)
+    // Skip if span wraps entire content (no split issue)
+    const spanRe = /<span\b[^>]*(?:style|class)[^>]*>/gi;
+    const spans = content.match(spanRe);
+    if (!spans) continue;
+    // Check if there's text content outside spans
+    const textOutsideSpans = content
+      .replace(/<span\b[\s\S]*?<\/span>/gi, '')
+      .replace(/<br\s*\/?>/gi, '')
+      .replace(/<[^>]+>/g, '')
+      .replace(/\s+/g, '')
+      .trim();
+    if (textOutsideSpans.length > 0 && spans.length > 0) {
+      // Count expected line increase
+      const brCount = (content.match(/<br\s*\/?>/gi) || []).length;
+      const htmlLines = brCount + 1;
+      const pptxLines = htmlLines + spans.length; // each span boundary adds a line
+      issues.push(fmtError(file, 'PF-34',
+        `<${tag}> has inline <span> with mixed text — PPTX will add ${spans.length} extra line(s) (${htmlLines}→${pptxLines} lines). Use separate <p> elements instead [IL-45]`));
+    }
+  }
+  return issues;
+}
+
+// PF-32: <li> + ::before/::after pseudo-element — PPTX ignores pseudo-elements [IL-44]
+function checkPF35(html, file) {
+  const issues = [];
+  const hasLi = /<li\b/i.test(html);
+  const hasPseudo = /::(?:before|after)\s*\{/i.test(html);
+  if (hasLi && hasPseudo) {
+    issues.push(fmtError(file, 'PF-35',
+      `<li> with ::before/::after pseudo-element — PPTX ignores pseudo-elements, causing position errors. Use <p> + inline bullet character instead [IL-44]`));
+  }
+  return issues;
+}
+
+// PF-33: background: rgba() on any element — creates opaque shape covering text in PPTX [IL-43]
+function checkPF36(html, file) {
+  const issues = [];
+  // Extract CSS from <style> blocks
+  const styleRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  let styleMatch;
+  while ((styleMatch = styleRe.exec(html)) !== null) {
+    const css = styleMatch[1];
+    // Find background: rgba(...) or background-color: rgba(...)
+    const bgRgbaRe = /background(?:-color)?\s*:\s*rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/gi;
+    let bgMatch;
+    while ((bgMatch = bgRgbaRe.exec(css)) !== null) {
+      const alpha = parseFloat(bgMatch[4]);
+      if (alpha > 0 && alpha < 1.0) {
+        issues.push(fmtError(file, 'PF-36',
+          `background: rgba(${bgMatch[1]},${bgMatch[2]},${bgMatch[3]},${bgMatch[4]}) — PPTX converts ANY alpha to opaque shape. Use solid hex: blend with parent color [IL-43]`));
+      }
+    }
+  }
+  // Also check inline styles
+  const inlineRe = /style="[^"]*background(?:-color)?\s*:\s*rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/gi;
+  let inlineMatch;
+  while ((inlineMatch = inlineRe.exec(html)) !== null) {
+    const alpha = parseFloat(inlineMatch[4]);
+    if (alpha > 0 && alpha < 1.0) {
+      issues.push(fmtError(file, 'PF-36',
+        `Inline background: rgba(${inlineMatch[1]},${inlineMatch[2]},${inlineMatch[3]},${inlineMatch[4]}) — PPTX converts ANY alpha to opaque shape. Use solid hex [IL-43]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-37: CSS border-triangle detection (IL-28)
+ * border-top/bottom/left/right + transparent → white block in PPTX
+ */
+function checkPF37(html, file) {
+  const issues = [];
+  const allCss = [];
+  // Collect CSS from <style> blocks
+  const styleRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  let m;
+  while ((m = styleRe.exec(html)) !== null) allCss.push(m[1]);
+  // Collect inline styles
+  const inlineRe = /style="([^"]*)"/gi;
+  while ((m = inlineRe.exec(html)) !== null) allCss.push(m[1]);
+
+  for (const css of allCss) {
+    // Check for border-side with transparent
+    const borderTransRe = /border-(top|bottom|left|right)\s*:\s*[^;]*transparent/gi;
+    let bm;
+    while ((bm = borderTransRe.exec(css)) !== null) {
+      issues.push(fmtError(file, 'PF-37',
+        `border-${bm[1]}: ...transparent — CSS triangle trick renders as white block in PPTX. Use rect shapes or SVG instead [IL-28]`));
+      break; // one per CSS block is enough
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-38: text-decoration: underline detection (IL-38)
+ * Underline position is distorted in PPTX
+ */
+function checkPF38(html, file) {
+  const issues = [];
+  const re = /text-decoration(?:-line)?\s*:\s*[^;]*underline/gi;
+  if (re.test(html)) {
+    issues.push(fmtError(file, 'PF-38',
+      `text-decoration: underline — position distorted in PPTX. Use color or font-weight:700 for emphasis instead [IL-38]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-39: Non-body div with background-image: linear-gradient (IL-39)
+ * Converts to solid rectangle covering content in PPTX
+ */
+function checkPF39(html, file) {
+  const issues = [];
+  // Check inline styles on non-body elements
+  const inlineGradRe = /<(?!body\b)(\w+)[^>]*style="[^"]*background-image\s*:\s*linear-gradient\([^"]*"/gi;
+  let m;
+  while ((m = inlineGradRe.exec(html)) !== null) {
+    issues.push(fmtError(file, 'PF-39',
+      `<${m[1]}> has background-image: linear-gradient() — PPTX converts to solid rectangle covering content. Move to body background or use PNG [IL-39]`));
+  }
+  // Check <style> blocks for non-body selectors with background-image: linear-gradient
+  const styleRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  while ((m = styleRe.exec(html)) !== null) {
+    const css = m[1];
+    // Match CSS rules: selector { ... background-image: linear-gradient ... }
+    const ruleRe = /([^{}]+)\{([^}]*background-image\s*:\s*linear-gradient[^}]*)\}/gi;
+    let rm;
+    while ((rm = ruleRe.exec(css)) !== null) {
+      const selector = rm[1].trim();
+      // Skip body/html selectors
+      if (/^(body|html)\s*$/i.test(selector)) continue;
+      issues.push(fmtError(file, 'PF-39',
+        `CSS "${selector}" has background-image: linear-gradient() — PPTX converts to solid rectangle. Move to body or use PNG [IL-39]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-40: AI-generated infographic image detection (IL-31)
+ * Images in assets/ with chart/graph/data keywords likely contain fake data
+ */
+/**
+ * PF-41: letter-spacing detection
+ * html2pptx ignores letter-spacing — text width differs in PPTX
+ */
+function checkPF41(html, file) {
+  const issues = [];
+  const re = /letter-spacing\s*:\s*(-?[\d.]+)\s*pt/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const val = Math.abs(parseFloat(m[1]));
+    if (val > 1) {
+      issues.push(fmtWarn(file, 'PF-41',
+        `letter-spacing: ${m[1]}pt — ignored in PPTX (>±1pt threshold). Remove or accept width difference [IL-46]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-42: opacity on non-body elements
+ * html2pptx ignores standalone opacity CSS — element renders fully opaque in PPTX
+ */
+function checkPF42(html, file) {
+  const issues = [];
+  // Check inline styles for opacity (not inside rgba)
+  const styleRe = /style="([^"]*)"/gi;
+  let m;
+  while ((m = styleRe.exec(html)) !== null) {
+    const style = m[1];
+    // Match standalone opacity property (not inside rgba/hsla)
+    const opacityMatch = style.match(/(?:^|;\s*)opacity\s*:\s*([\d.]+)/i);
+    if (!opacityMatch) continue;
+    const val = parseFloat(opacityMatch[1]);
+    if (val < 1.0) {
+      // Check it's not on body
+      const tagBefore = html.substring(Math.max(0, m.index - 30), m.index);
+      if (/<body\b/i.test(tagBefore)) continue;
+      issues.push(fmtWarn(file, 'PF-42',
+        `opacity: ${val} — ignored in PPTX, element will be fully opaque. Use rgba() background or remove [IL-47]`));
+      return issues;
+    }
+  }
+  // Also check <style> blocks
+  const styleBlockRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  while ((m = styleBlockRe.exec(html)) !== null) {
+    const css = m[1];
+    const opacityMatch = css.match(/(?:^|;\s*|{\s*)opacity\s*:\s*([\d.]+)/i);
+    if (opacityMatch) {
+      const val = parseFloat(opacityMatch[1]);
+      if (val < 1.0) {
+        issues.push(fmtWarn(file, 'PF-42',
+          `opacity: ${val} in <style> — ignored in PPTX, element will be fully opaque [IL-47]`));
+        return issues;
+      }
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-43: object-fit: cover/fill/scale-down on img
+ * html2pptx forces all images to contain mode — cover/fill intent lost
+ */
+function checkPF43(html, file) {
+  const issues = [];
+  const re = /object-fit\s*:\s*(cover|fill|scale-down)/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    issues.push(fmtWarn(file, 'PF-43',
+      `object-fit: ${m[1]} — PPTX converts all images to contain mode. Crop intent will be lost [IL-48]`));
+    return issues;
+  }
+  return issues;
+}
+
+/**
+ * PF-44: outline property (not none/0)
+ * html2pptx ignores outline completely — use border instead
+ */
+function checkPF44(html, file) {
+  const issues = [];
+  const re = /(?:^|;\s*)outline\s*:\s*([^;"]+)/gi;
+  const allCss = [];
+  // Collect inline styles
+  let m;
+  const inlineRe = /style="([^"]*)"/gi;
+  while ((m = inlineRe.exec(html)) !== null) allCss.push(m[1]);
+  // Collect <style> blocks
+  const styleBlockRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  while ((m = styleBlockRe.exec(html)) !== null) allCss.push(m[1]);
+
+  for (const css of allCss) {
+    const outlineRe = /(?:^|;\s*)outline\s*:\s*([^;"]+)/gi;
+    let om;
+    while ((om = outlineRe.exec(css)) !== null) {
+      const val = om[1].trim().toLowerCase();
+      if (val === 'none' || val === '0' || val === '0px' || val === '0pt') continue;
+      issues.push(fmtWarn(file, 'PF-44',
+        `outline: ${val} — ignored in PPTX. Use border instead [IL-49]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-45: Negative margins (≤ -5pt)
+ * PPTX shape positioning may differ with large negative margins
+ */
+function checkPF45(html, file) {
+  const issues = [];
+  const re = /margin(?:-(?:top|bottom|left|right))?\s*:\s*(-[\d.]+)\s*pt/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const val = parseFloat(m[1]);
+    if (val <= -5) {
+      issues.push(fmtWarn(file, 'PF-45',
+        `Negative margin ${m[1]}pt — PPTX shape positioning may differ. Consider absolute positioning [IL-50]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-46: text-indent
+ * html2pptx does not extract text-indent — first-line indent ignored in PPTX
+ */
+function checkPF46(html, file) {
+  const issues = [];
+  const re = /text-indent\s*:\s*(-?[\d.]+)\s*(?:pt|px|em)/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const val = parseFloat(m[1]);
+    if (val !== 0) {
+      issues.push(fmtWarn(file, 'PF-46',
+        `${m[0].match(/text-indent\s*:\s*[^;]+/)[0]} — ignored in PPTX. Use padding-left instead [IL-51]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-47: word-break: break-all / overflow-wrap: break-word
+ * PPTX ignores these — line break positions differ
+ */
+function checkPF47(html, file) {
+  const issues = [];
+  if (/word-break\s*:\s*break-all/i.test(html)) {
+    issues.push(fmtWarn(file, 'PF-47',
+      `word-break: break-all — ignored in PPTX, line breaks will differ. Verify text fits [IL-52]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-48: column-count / columns (multi-column layout)
+ * html2pptx does not support CSS columns — renders as single column
+ */
+function checkPF48(html, file) {
+  const issues = [];
+  // Avoid matching grid-template-columns by requiring word boundary before 'column-count'/'columns'
+  const re = /(?<![a-z-])(?:column-count|columns)\s*:\s*(\d+)/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const count = parseInt(m[1], 10);
+    if (count >= 2) {
+      issues.push(fmtError(file, 'PF-48',
+        `column-count: ${count} — CSS columns not supported in PPTX, will render as single column. Use CSS grid or flex instead [IL-53]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-49: mix-blend-mode (non-normal)
+ * PPTX ignores blend modes — visual effect lost
+ */
+function checkPF49(html, file) {
+  const issues = [];
+  const re = /mix-blend-mode\s*:\s*(\w[\w-]*)/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    if (m[1].toLowerCase() !== 'normal') {
+      issues.push(fmtWarn(file, 'PF-49',
+        `mix-blend-mode: ${m[1]} — ignored in PPTX, visual effect will be lost [IL-54]`));
+      return issues;
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-50: border-image / border-image-source
+ * PPTX does not support image/gradient borders
+ */
+function checkPF50(html, file) {
+  const issues = [];
+  if (/border-image(?:-source)?\s*:\s*(?!none)/i.test(html)) {
+    issues.push(fmtWarn(file, 'PF-50',
+      `border-image — not supported in PPTX, border will be missing. Use solid border instead [IL-55]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-51: position: sticky
+ * PPTX treats sticky as absolute — positioning differs
+ */
+function checkPF51(html, file) {
+  const issues = [];
+  if (/position\s*:\s*sticky/i.test(html)) {
+    issues.push(fmtWarn(file, 'PF-51',
+      `position: sticky — treated as absolute in PPTX, positioning will differ [IL-56]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-52: @font-face custom font
+ * PPTX falls back to system fonts — layout may change
+ */
+function checkPF52(html, file) {
+  const issues = [];
+  if (/@font-face\s*\{/i.test(html)) {
+    issues.push(fmtWarn(file, 'PF-52',
+      `@font-face custom font — PPTX uses system fonts, layout may change [IL-57]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-53: direction: rtl
+ * PPTX may not respect text direction
+ */
+function checkPF53(html, file) {
+  const issues = [];
+  if (/direction\s*:\s*rtl/i.test(html)) {
+    issues.push(fmtWarn(file, 'PF-53',
+      `direction: rtl — PPTX may not respect RTL text direction [IL-58]`));
+  }
+  return issues;
+}
+
+/**
+ * PF-54: white-space: pre / pre-line
+ * PPTX whitespace handling differs
+ */
+function checkPF54(html, file) {
+  const issues = [];
+  if (/white-space\s*:\s*pre(?:-line)?(?:\s|;|"|$)/i.test(html)) {
+    // Skip white-space: pre-wrap (commonly used and less problematic)
+    const match = html.match(/white-space\s*:\s*(pre(?:-line)?)(?:\s|;|"|$)/i);
+    if (match) {
+      issues.push(fmtWarn(file, 'PF-54',
+        `white-space: ${match[1]} — PPTX whitespace/line-break handling may differ [IL-59]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-55: Inline <span> with background inside text elements
+ * html2pptx strips span backgrounds → text becomes invisible on parent bg
+ */
+function checkPF55(html, file) {
+  const issues = [];
+  // Match <span with background/background-color in style attribute
+  const spanBgRe = /<span\b[^>]*style="[^"]*background(?:-color)?\s*:\s*(?!none|transparent)[^"]*"[^>]*>/gi;
+  let m;
+  while ((m = spanBgRe.exec(html)) !== null) {
+    const tag = m[0];
+    // Check if this span also has a contrasting text color (the dangerous pattern)
+    const colorMatch = tag.match(/(?<!-)color\s*:\s*(#[0-9A-Fa-f]{3,8}|rgba?\([^)]+\)|[a-z]+)/i);
+    const bgMatch = tag.match(/background(?:-color)?\s*:\s*(#[0-9A-Fa-f]{3,8}|rgba?\([^)]+\)|[a-z]+)/i);
+    if (bgMatch) {
+      const msg = colorMatch
+        ? `<span> with background:${bgMatch[1]} + color:${colorMatch[1]} — PPTX strips span background, text color remains on parent bg → may become invisible. Use parent div background or text-only styling [IL-60]`
+        : `<span> with background:${bgMatch[1]} — PPTX strips span background. Move background to parent <div> [IL-60]`;
+      issues.push(fmtError(file, 'PF-55', msg));
+    }
+  }
+  return issues;
+}
+
+function checkPF40(html, file) {
+  const issues = [];
+  const BANNED_KEYWORDS = /chart|graph|table|data|infographic|calendar|spreadsheet|timeline|diagram|funnel|waterfall|donut|pie|heatmap/i;
+
+  const imgRe = /<img\b([^>]*)>/gi;
+  let m;
+  while ((m = imgRe.exec(html)) !== null) {
+    const attrs = m[1];
+    const srcMatch = attrs.match(/src\s*=\s*["']([^"']+)/i);
+    if (!srcMatch) continue;
+    const src = srcMatch[1];
+    // Only check assets/ images (AI-generated), skip external URLs and SVGs
+    if (!/assets\//i.test(src)) continue;
+    if (/\.svg$/i.test(src)) continue;
+
+    const filename = src.split('/').pop().toLowerCase();
+    const altMatch = attrs.match(/alt\s*=\s*["']([^"']*)/i);
+    const alt = altMatch ? altMatch[1] : '';
+
+    const filenameHit = filename.match(BANNED_KEYWORDS);
+    const altHit = alt.match(BANNED_KEYWORDS);
+
+    if (filenameHit || altHit) {
+      const keyword = (filenameHit || altHit)[0];
+      issues.push(fmtWarn(file, 'PF-40',
+        `AI image "${src}" may contain fake ${keyword} data — use HTML/CSS or PPTX native chart instead [IL-31]`));
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-56: Image container with flex centering but missing explicit height
+ * flex align-items:center without height causes container to collapse → centering has no effect
+ */
+function checkPF56(html, file) {
+  const issues = [];
+  // Find <img> tags with assets/ src (project images)
+  const imgRe = /<img\b[^>]*src\s*=\s*["'](?:assets\/[^"']+)["'][^>]*>/gi;
+  let m;
+  while ((m = imgRe.exec(html)) !== null) {
+    const imgPos = m.index;
+    // Look for the closest parent div/element with flex + align-items:center
+    // Search backwards from img position for style containing align-items
+    const before = html.substring(Math.max(0, imgPos - 800), imgPos);
+    // Find the innermost opening div/element before this img
+    const parentDivs = [...before.matchAll(/<(?:div|section)\b([^>]*)>/gi)];
+    if (parentDivs.length === 0) continue;
+    const closestParent = parentDivs[parentDivs.length - 1];
+    const parentAttrs = closestParent[1];
+    // Check inline style
+    const styleMatch = parentAttrs.match(/style\s*=\s*["']([^"']+)/i);
+    if (!styleMatch) continue;
+    const style = styleMatch[1];
+    // Must have flex centering
+    const hasFlex = /display\s*:\s*flex/i.test(style);
+    const hasAlignCenter = /align-items\s*:\s*center/i.test(style);
+    if (!hasFlex || !hasAlignCenter) continue;
+    // Check if height is set (height:100%, height:NNpt, etc.)
+    const hasHeight = /(?:^|;)\s*height\s*:/i.test(style);
+    if (!hasHeight) {
+      // Also check if it might be in a CSS class (check <style> block)
+      // Extract class if any
+      const classMatch = parentAttrs.match(/class\s*=\s*["']([^"']+)/i);
+      let heightInClass = false;
+      if (classMatch) {
+        const className = classMatch[1].trim().split(/\s+/)[0];
+        const classRe = new RegExp(`\\.${className}\\s*\\{([^}]+)\\}`, 'i');
+        const classBody = html.match(classRe);
+        if (classBody && /height\s*:/i.test(classBody[1])) {
+          heightInClass = true;
+        }
+      }
+      if (!heightInClass) {
+        const src = (m[0].match(/src=["']([^"']+)/i) || [])[1] || 'unknown';
+        issues.push(fmtWarn(file, 'PF-56',
+          `Image container has flex centering but no explicit height — vertical centering will not work (img: ${src})`));
+      }
+    }
+  }
+  return issues;
+}
+
+/**
+ * PF-57: Image too small relative to its container
+ * Detects images with max-width/width < 30% of slide width (720pt) in split layouts
+ */
+function checkPF57(html, file) {
+  const issues = [];
+  const imgRe = /<img\b([^>]*)>/gi;
+  let m;
+  while ((m = imgRe.exec(html)) !== null) {
+    const attrs = m[1];
+    const srcMatch = attrs.match(/src\s*=\s*["']([^"']+)/i);
+    if (!srcMatch) continue;
+    const src = srcMatch[1];
+    if (!/assets\//i.test(src)) continue; // only project images
+
+    // Extract image dimensions from inline style or attributes
+    const styleMatch = attrs.match(/style\s*=\s*["']([^"']+)/i);
+    const style = styleMatch ? styleMatch[1] : '';
+
+    // Get width/max-width in pt
+    let imgWidth = null;
+    const widthStyle = style.match(/(?:max-)?width\s*:\s*([\d.]+)\s*pt/i);
+    const widthAttr = attrs.match(/width\s*=\s*["']?([\d.]+)/i);
+    if (widthStyle) imgWidth = parseFloat(widthStyle[1]);
+    else if (widthAttr) imgWidth = parseFloat(widthAttr[1]);
+
+    let imgHeight = null;
+    const heightStyle = style.match(/(?:max-)?height\s*:\s*([\d.]+)\s*pt/i);
+    if (heightStyle) imgHeight = parseFloat(heightStyle[1]);
+
+    // If image has explicit small dimensions
+    if (imgWidth !== null && imgWidth < 100) {
+      issues.push(fmtWarn(file, 'PF-57',
+        `Image "${src}" width=${imgWidth}pt is very small (<100pt) — content may be hard to see`));
+    } else if (imgHeight !== null && imgHeight < 80 && imgWidth === null) {
+      issues.push(fmtWarn(file, 'PF-57',
+        `Image "${src}" height=${imgHeight}pt is very small (<80pt) — content may be hard to see`));
     }
   }
   return issues;
@@ -372,6 +1095,35 @@ function runStaticChecks(html, file) {
     ...checkPF17(html, file),
     ...checkPF19(html, file),
     ...checkPF22(html, file),
+    ...checkPF25(html, file),
+    ...checkPF27(html, file),
+    ...checkPF28(html, file),
+    ...checkPF29(html, file),
+    ...checkPF30(html, file),
+    ...checkPF34(html, file),
+    ...checkPF35(html, file),
+    ...checkPF36(html, file),
+    ...checkPF37(html, file),
+    ...checkPF38(html, file),
+    ...checkPF39(html, file),
+    ...checkPF40(html, file),
+    ...checkPF41(html, file),
+    ...checkPF42(html, file),
+    ...checkPF43(html, file),
+    ...checkPF44(html, file),
+    ...checkPF45(html, file),
+    ...checkPF46(html, file),
+    ...checkPF47(html, file),
+    ...checkPF48(html, file),
+    ...checkPF49(html, file),
+    ...checkPF50(html, file),
+    ...checkPF51(html, file),
+    ...checkPF52(html, file),
+    ...checkPF53(html, file),
+    ...checkPF54(html, file),
+    ...checkPF55(html, file),
+    ...checkPF56(html, file),
+    ...checkPF57(html, file),
   ];
 }
 
@@ -381,12 +1133,13 @@ async function runPlaywrightChecks(slidesDir, files) {
   const { chromium } = await import('playwright');
   const browser = await chromium.launch({ headless: true });
   const results = [];
+  // A-02: Reuse a single page instead of newPage()/close() per file
+  const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
 
   try {
     for (const file of files) {
       const filePath = path.resolve(slidesDir, file);
       const fileUrl = `file:///${filePath.replace(/\\/g, '/')}`;
-      const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
 
       try {
         await page.goto(fileUrl, { waitUntil: 'domcontentloaded', timeout: 10000 });
@@ -477,20 +1230,23 @@ async function runPlaywrightChecks(slidesDir, files) {
           return { found: false };
         });
         if (overlapIssue.found) {
-          results.push(fmtWarn(file, 'PF-18',
-            `Elements overlap: ${overlapIssue.tag1} and ${overlapIssue.tag2} (${overlapIssue.pct}% overlap) — may cause readability issues`));
+          const isError = overlapIssue.pct >= 20;
+          results.push((isError ? fmtError : fmtWarn)(file, 'PF-18',
+            `Elements overlap: ${overlapIssue.tag1} and ${overlapIssue.tag2} (${overlapIssue.pct}% overlap) — ${isError ? 'text unreadable, fix layout or split slide' : 'may cause readability issues'}`));
         }
 
         // PF-20: Bottom margin intrusion (content in 0.5" safe zone: 369pt-405pt)
+        // getBoundingClientRect returns px; convert to pt: pt = px * 0.75 (72/96)
         const marginIssue = await page.evaluate(() => {
           const allEls = document.querySelectorAll('body > *');
-          let maxBottom = 0;
+          let maxBottomPx = 0;
           for (const el of allEls) {
             const r = el.getBoundingClientRect();
-            if (r.height > 0 && r.bottom > maxBottom) maxBottom = r.bottom;
+            if (r.height > 0 && r.bottom > maxBottomPx) maxBottomPx = r.bottom;
           }
+          const maxBottomPt = maxBottomPx * 0.75; // px → pt
           // 369pt = 405pt - 36pt (0.5" margin)
-          return { maxBottom: Math.round(maxBottom * 100) / 100, inMargin: maxBottom > 369, overSlide: maxBottom > 405 };
+          return { maxBottom: Math.round(maxBottomPt * 100) / 100, inMargin: maxBottomPt > 369, overSlide: maxBottomPt > 405 };
         });
         if (marginIssue.overSlide) {
           // PF-03 already covers this as ERROR
@@ -519,6 +1275,15 @@ async function runPlaywrightChecks(slidesDir, files) {
             if (Math.abs(scaleX - scaleY) / Math.max(scaleX, scaleY) > 0.05) {
               issues.push({ type: 'distorted', src: img.src.split('/').pop(), scaleX: scaleX.toFixed(2), scaleY: scaleY.toFixed(2) });
             }
+
+            // DPI estimation: display pt * 96/72 → effective pixels needed, compare with natural
+            // For projection: 96 DPI minimum, so display width in inches × 96 = min pixels
+            // Slide is 720pt = 10 inches, so 1pt ≈ 1/72 inch
+            const displayWidthInches = r.width / 72;
+            const effectiveDPI = img.naturalWidth / displayWidthInches;
+            if (effectiveDPI < 72 && r.width > 50) {
+              issues.push({ type: 'lowdpi', src: img.src.split('/').pop(), dpi: Math.round(effectiveDPI) });
+            }
           }
           return issues;
         });
@@ -529,7 +1294,33 @@ async function runPlaywrightChecks(slidesDir, files) {
           } else if (img.type === 'distorted') {
             results.push(fmtWarn(file, 'PF-21',
               `Image "${img.src}" aspect ratio distorted (scaleX=${img.scaleX}, scaleY=${img.scaleY})`));
+          } else if (img.type === 'lowdpi') {
+            results.push(fmtWarn(file, 'PF-21',
+              `Image "${img.src}" effective DPI ${img.dpi} (min 72) — will look pixelated when projected`));
           }
+        }
+
+        // PF-26: Content section density — count visible top-level content blocks
+        const densityCheck = await page.evaluate(() => {
+          const body = document.body;
+          if (!body) return { count: 0 };
+          const children = Array.from(body.children);
+          let visibleBlocks = 0;
+          for (const child of children) {
+            const r = child.getBoundingClientRect();
+            // Count only visible blocks with meaningful size (> 30px height, > 50px width)
+            if (r.height > 30 && r.width > 50) {
+              visibleBlocks++;
+            }
+          }
+          return { count: visibleBlocks };
+        });
+        if (densityCheck.count > 5) {
+          results.push(fmtError(file, 'PF-26',
+            `Slide has ${densityCheck.count} top-level content blocks (max 5) — split into multiple slides [IL-33]`));
+        } else if (densityCheck.count > 4) {
+          results.push(fmtWarn(file, 'PF-26',
+            `Slide has ${densityCheck.count} top-level content blocks — consider splitting for readability [IL-33]`));
         }
 
         // PF-23: CJK text density — predict overflow with 20% width correction
@@ -571,11 +1362,10 @@ async function runPlaywrightChecks(slidesDir, files) {
 
       } catch (e) {
         results.push(fmtWarn(file, 'PF-XX', `Playwright check failed: ${e.message}`));
-      } finally {
-        await page.close();
       }
     }
   } finally {
+    await page.close();
     await browser.close();
   }
   return results;
@@ -592,11 +1382,13 @@ function stddev(arr) {
 
 /** Extract metrics from HTML for cross-slide consistency checks. */
 function extractSlideMetrics(html) {
-  const metrics = { h1FontSize: null, bodyPadding: null, usedColors: [], bodyBgBrightness: null, textColors: [] };
+  const metrics = { h1FontSize: null, h1Text: null, bodyPadding: null, usedColors: [], bodyBgBrightness: null, textColors: [] };
 
-  // h1 font-size (inline style)
+  // h1 font-size (inline style) and text content
   const h1Match = html.match(/<h1[^>]*style="[^"]*font-size\s*:\s*([\d.]+)\s*pt/i);
   if (h1Match) metrics.h1FontSize = parseFloat(h1Match[1]);
+  const h1TextMatch = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+  if (h1TextMatch) metrics.h1Text = h1TextMatch[1].replace(/<[^>]+>/g, '').trim();
 
   // body padding (inline style)
   const bodyMatch = html.match(/<body[^>]*style="[^"]*padding\s*:\s*([^;"]+)/i);
@@ -612,23 +1404,55 @@ function extractSlideMetrics(html) {
     }
   }
 
-  // Body background brightness for PF-24
-  const bodyBgMatch = html.match(/<body[^>]*style="[^"]*background\s*:\s*#([0-9a-fA-F]{6})/i);
+  // Body background brightness for PF-24 — check both inline and <style> block
+  const bodyBgMatch = html.match(/<body[^>]*style="[^"]*background\s*:\s*#([0-9a-fA-F]{6})/i)
+    || html.match(/body\s*\{[^}]*background\s*:\s*#([0-9a-fA-F]{6})/i);
   if (bodyBgMatch) {
     const rgb = hexToRgb(bodyBgMatch[1]);
     if (rgb) metrics.bodyBgBrightness = relativeLuminance(...rgb);
   }
 
-  // Text colors for PF-24
+  // All container background colors for PF-24 (div/section/header with background)
+  // Used to avoid false positives: white text on dark div is fine even if body bg is white
+  metrics.containerBgColors = [];
+  const styleBlockMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+  const bgRe = /background\s*:\s*#([0-9a-fA-F]{6})/gi;
+  for (const sb of html.matchAll(/style="([^"]*)"/gi)) {
+    let bm;
+    while ((bm = bgRe.exec(sb[1])) !== null) {
+      metrics.containerBgColors.push(bm[1].toUpperCase());
+    }
+  }
+  if (styleBlockMatch) {
+    let bm;
+    const bgReBlock = /background\s*:\s*#([0-9a-fA-F]{6})/gi;
+    while ((bm = bgReBlock.exec(styleBlockMatch[1])) !== null) {
+      metrics.containerBgColors.push(bm[1].toUpperCase());
+    }
+  }
+
+  // Text colors for PF-24 — check both inline styles and <style> blocks
   const textColorRe = /(?:^|;\s*)color\s*:\s*#([0-9a-fA-F]{6})/gi;
+  // Inline styles
   for (const sb of html.matchAll(/style="([^"]*)"/gi)) {
     const styleStr = sb[1];
-    // Skip background-color
     let tcm;
     while ((tcm = textColorRe.exec(styleStr)) !== null) {
       const preceding = styleStr.substring(Math.max(0, tcm.index - 15), tcm.index);
       if (!/background-?\s*$/i.test(preceding)) {
         metrics.textColors.push(tcm[1].toUpperCase());
+      }
+    }
+  }
+  // Style block color declarations (for slides with CSS in <style>)
+  if (styleBlockMatch) {
+    const styleBlock = styleBlockMatch[1];
+    const blockColorRe = /(?:^|;\s*)color\s*:\s*#([0-9a-fA-F]{6})/gi;
+    let bcm;
+    while ((bcm = blockColorRe.exec(styleBlock)) !== null) {
+      const preceding = styleBlock.substring(Math.max(0, bcm.index - 15), bcm.index);
+      if (!/background-?\s*$/i.test(preceding)) {
+        metrics.textColors.push(bcm[1].toUpperCase());
       }
     }
   }
@@ -664,18 +1488,54 @@ function checkConsistency(allMetrics) {
       `${allColors.size} unique colors used across deck (recommend ≤8)`));
   }
 
+  // PF-31: Title uniqueness (Grackle, MS Accessibility)
+  const titles = allMetrics.map((m, i) => ({ text: m.h1Text, slide: i + 1 })).filter(t => t.text);
+  const titleMap = new Map();
+  for (const t of titles) {
+    const norm = t.text.toLowerCase().trim();
+    if (!norm) continue;
+    if (!titleMap.has(norm)) titleMap.set(norm, []);
+    titleMap.get(norm).push(t.slide);
+  }
+  for (const [title, slides] of titleMap) {
+    if (slides.length > 1) {
+      warnings.push(fmtWarn('cross-slide', 'PF-31',
+        `Duplicate slide title "${title.substring(0, 40)}..." on slides ${slides.join(', ')} — each slide should have a unique title [WCAG]`));
+    }
+  }
+
   // PF-24: Cross-slide background-text contrast consistency
+  // Improved: check if text has sufficient contrast with ANY background on the slide
+  // (body bg OR container div bg) to avoid false positives from table headers etc.
   for (let i = 0; i < allMetrics.length; i++) {
     const m = allMetrics[i];
     if (m.bodyBgBrightness === null || m.textColors.length === 0) continue;
     const isDarkBg = m.bodyBgBrightness < 0.2;
     const isLightBg = m.bodyBgBrightness > 0.8;
 
+    // Collect all background luminances on this slide (body + container divs)
+    const allBgLums = [m.bodyBgBrightness];
+    for (const bgHex of (m.containerBgColors || [])) {
+      const bgRgb = hexToRgb(bgHex);
+      if (bgRgb) allBgLums.push(relativeLuminance(...bgRgb));
+    }
+
     for (const tc of m.textColors) {
       const rgb = hexToRgb(tc);
       if (!rgb) continue;
       const textLum = relativeLuminance(...rgb);
-      // Dark bg + dark text or light bg + light text
+
+      // Check: does this text color have good contrast with ANY background on the slide?
+      // WCAG contrast ratio = (L1 + 0.05) / (L2 + 0.05) where L1 > L2
+      const hasGoodContrast = allBgLums.some(bgLum => {
+        const l1 = Math.max(textLum, bgLum);
+        const l2 = Math.min(textLum, bgLum);
+        return (l1 + 0.05) / (l2 + 0.05) >= 3.0; // minimum 3:1 for large text
+      });
+
+      if (hasGoodContrast) continue; // text is readable on at least one background
+
+      // No background provides sufficient contrast — warn
       if (isDarkBg && textLum < 0.2) {
         warnings.push(fmtWarn(`slide-${String(i + 1).padStart(2, '0')}`, 'PF-24',
           `Dark text #${tc} on dark background (luminance ${m.bodyBgBrightness.toFixed(2)}) — low contrast`));
