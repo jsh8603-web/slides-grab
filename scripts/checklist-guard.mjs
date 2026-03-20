@@ -132,7 +132,7 @@ function parseChecklists(content) {
   let sectionHasOpen = false;
   let section판정Checked = false;
 
-  const ISSUE_PATTERN = /^### (이슈|사용자 피드백|정탐-한계|규칙 개선|승격)/;
+  const ISSUE_PATTERN = /^### (이슈|사용자 피드백|정탐-한계|정탐-수정|규칙 개선|승격)/;
 
   function flushSection() {
     if (currentSection && sectionHasOpen) {

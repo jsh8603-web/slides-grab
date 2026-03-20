@@ -455,6 +455,16 @@ function runPhaseD() {
       `blocked=${r.blocked}, reason=${(r.reason || '').slice(0, 60)}`);
   }
 
+  // C12: "### 정탐-수정 #N:" heading recognized as issue section → has open checklist
+  setup();
+  writeProgress(`# Progress\n## 이벤트 발생\n### 정탐-수정 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  {
+    const r = invokeGuard('scripts/preflight-html.js');
+    // Should be ALLOWED because there IS an open checklist ([ ] B.)
+    assert('C12', '정탐-수정 heading recognized → open checklist allows edit', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
   cleanup();
 }
 

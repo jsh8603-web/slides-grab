@@ -1092,6 +1092,51 @@ function contrastRatio(hex1, hex2) {
 }
 
 /**
+ * PF-62: conic-gradient / radial-gradient — PPTX cannot render these CSS functions
+ * conic-gradient: completely lost (donut charts disappear) → ERROR
+ * radial-gradient: may render as solid color → WARN
+ */
+function checkPF62(html, file) {
+  const issues = [];
+  // Check inline styles
+  const inlineConicRe = /<(\w+)[^>]*style="[^"]*conic-gradient\s*\([^"]*"/gi;
+  let m;
+  while ((m = inlineConicRe.exec(html)) !== null) {
+    issues.push(fmtError(file, 'PF-62',
+      `<${m[1]}> uses conic-gradient() — completely lost in PPTX. Replace with horizontal bar chart (div+width%) or table [IL-70]`));
+  }
+  const inlineRadialRe = /<(?!body\b)(\w+)[^>]*style="[^"]*radial-gradient\s*\([^"]*"/gi;
+  while ((m = inlineRadialRe.exec(html)) !== null) {
+    issues.push(fmtWarn(file, 'PF-62',
+      `<${m[1]}> uses radial-gradient() — may render as solid color in PPTX. Consider solid background or PNG [IL-70]`));
+  }
+  // Check <style> blocks
+  const styleRe = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  while ((m = styleRe.exec(html)) !== null) {
+    const css = m[1];
+    if (/conic-gradient/i.test(css)) {
+      const selectorRe = /([^{}]+)\{[^}]*conic-gradient\s*\([^}]*\}/gi;
+      let rm;
+      while ((rm = selectorRe.exec(css)) !== null) {
+        issues.push(fmtError(file, 'PF-62',
+          `CSS "${rm[1].trim()}" uses conic-gradient() — completely lost in PPTX. Replace with bar chart [IL-70]`));
+      }
+    }
+    if (/radial-gradient/i.test(css)) {
+      const selectorRe = /([^{}]+)\{[^}]*radial-gradient\s*\([^}]*\}/gi;
+      let rm;
+      while ((rm = selectorRe.exec(css)) !== null) {
+        const sel = rm[1].trim();
+        if (/^(body|html)\s*$/i.test(sel)) continue;
+        issues.push(fmtWarn(file, 'PF-62',
+          `CSS "${sel}" uses radial-gradient() — may render as solid color in PPTX [IL-70]`));
+      }
+    }
+  }
+  return issues;
+}
+
+/**
  * PF-56: Image container with flex centering but missing explicit height
  * flex align-items:center without height causes container to collapse → centering has no effect
  */
@@ -1232,6 +1277,7 @@ function runStaticChecks(html, file) {
     ...checkPF57(html, file),
     ...checkPF59(html, file),
     ...checkPF60(html, file),
+    ...checkPF62(html, file),
   ];
 }
 

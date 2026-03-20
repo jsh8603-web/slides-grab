@@ -68,6 +68,13 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 **수정 패턴**: 이미지 위에 `background: #1E293B; opacity: 0.65` 오버레이 div + text-shadow 추가. rgba() 금지 (PF-36 위반) → opacity 속성 사용
 **예방**: design-skill에 "배경 이미지 위 텍스트 시 반드시 불투명 오버레이 + text-shadow 필수" 강화
 
+### 70. conic-gradient / radial-gradient PPTX 변환 불가 (IL-70 / PF-62)
+**증상**: CSS `conic-gradient()`로 구현한 도넛 차트가 PPTX에서 완전 소실. 빈 영역만 남고 차트 데이터 시각화 없음
+**근본 원인**: html2pptx가 conic-gradient를 지원하지 않음. radial-gradient도 솔리드 색상으로 폴백
+**놓친 파이프라인**: PF (미지원 CSS 목록에 conic-gradient 미등록)
+**예방 규칙**: PF-62 ERROR (conic-gradient), PF-62 WARN (radial-gradient)
+**수정 패턴**: 가로 바 차트(div+width%), 테이블, 또는 숫자 강조 카드로 대체
+
 ### 64. 이미지 src 파일명과 실제 assets 파일명 불일치 → 깨진 이미지 (IL-64 / PF-58)
 **증상**: HTML에서 `src="assets/slide-14-three-shields.png"`로 참조하지만 실제 파일은 `slide-14-tax-shield-3-fcff.png` → 브라우저/PPTX에서 이미지 깨짐
 **근본 원인**: 슬라이드 생성 시 NanoBanana 프롬프트 slug 기반 파일명을 추측하지만, generate-images.mjs가 실제 생성한 파일명과 다름
@@ -130,6 +137,7 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 | IL-65 | PF-59 | — | 정적 (flex 잘림) |
 | IL-66 | PF-60 | — | 정적 (배지 대비) |
 | IL-69 | PF-61 | — | Playwright (이미지 배경 대비) |
+| IL-70 | PF-62 | — | 정적 (conic/radial-gradient) |
 | IL-36 | — | VP-15 | XML z-order 역전 |
 | IL-37 | — | VP-16 | XML CJK 폭 오버플로 |
 | — | — | VC-01~07 | COM (실측 overflow 등) |
