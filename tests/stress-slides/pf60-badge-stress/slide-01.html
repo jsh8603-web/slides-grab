@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><style>* { margin:0; padding:0; box-sizing:border-box; } body { width:720pt; height:405pt; overflow:hidden; font-family:sans-serif; }</style></head>
+<body>
+<div style="width:720pt;height:405pt;padding:40pt;background:#FFFFFF;">
+  <h1 style="font-size:24pt;color:#333;margin-bottom:20pt;"><span>PF-60 Stress Test — Badge Variants</span></h1>
+
+  <!-- TP-1: 흰 텍스트 + 밝은 부모 배경 → WARN expected -->
+  <div style="background:#F8FAFC;padding:16pt;margin-bottom:12pt;border-radius:8pt;">
+    <div style="width:32pt;height:32pt;border-radius:50%;background:#F59E0B;display:flex;align-items:center;justify-content:center;">
+      <p style="font-size:12pt;color:#FFFFFF;font-weight:700;"><span>1</span></p>
+    </div>
+    <p style="font-size:12pt;color:#333;"><span>TP-1: 흰색 on 밝은 부모</span></p>
+  </div>
+
+  <!-- TP-2: 흰 텍스트 + 흰 부모 배경 → WARN expected -->
+  <div style="background:#FFFFFF;padding:16pt;margin-bottom:12pt;border-radius:8pt;border:1pt solid #E5E7EB;">
+    <div style="width:28pt;height:28pt;border-radius:50%;background:#3B82F6;display:flex;align-items:center;justify-content:center;">
+      <p style="font-size:11pt;color:#FFFFFF;font-weight:700;"><span>2</span></p>
+    </div>
+    <p style="font-size:12pt;color:#333;"><span>TP-2: 흰색 on 흰 부모</span></p>
+  </div>
+
+  <!-- FP-1: 어두운 텍스트 + 밝은 부모 → NO WARN (충분한 대비) -->
+  <div style="background:#FFF7ED;padding:16pt;margin-bottom:12pt;border-radius:8pt;">
+    <div style="width:36pt;height:36pt;border-radius:50%;background:#F59E0B;display:flex;align-items:center;justify-content:center;">
+      <p style="font-size:13pt;color:#92400E;font-weight:700;"><span>3</span></p>
+    </div>
+    <p style="font-size:12pt;color:#333;"><span>FP-1: 어두운색 on 밝은 부모 (대비 충분)</span></p>
+  </div>
+
+  <!-- FP-2: 흰 텍스트 + 어두운 부모 → NO WARN (부모가 어두움) -->
+  <div style="background:#1E293B;padding:16pt;margin-bottom:12pt;border-radius:8pt;">
+    <div style="width:40pt;height:40pt;border-radius:50%;background:#F59E0B;display:flex;align-items:center;justify-content:center;">
+      <p style="font-size:14pt;color:#FFFFFF;font-weight:700;"><span>4</span></p>
+    </div>
+    <p style="font-size:12pt;color:#CBD5E1;"><span>FP-2: 흰색 on 어두운 부모 (대비 충분)</span></p>
+  </div>
+
+  <!-- TP-3: 매우 작은 배지 (20pt) + 밝은 부모 → WARN -->
+  <div style="background:#F0F9FF;padding:16pt;margin-bottom:12pt;border-radius:8pt;">
+    <div style="width:20pt;height:20pt;border-radius:50%;background:#EF4444;display:flex;align-items:center;justify-content:center;">
+      <p style="font-size:10pt;color:#FEE2E2;font-weight:700;"><span>!</span></p>
+    </div>
+    <p style="font-size:12pt;color:#333;"><span>TP-3: 연한색 on 밝은 부모 (20pt 미니 배지)</span></p>
+  </div>
+</div>
+</body></html>

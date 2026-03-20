@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><style>* { margin:0; padding:0; box-sizing:border-box; } body { width:720pt; height:405pt; overflow:hidden; font-family:sans-serif; }</style></head>
+<body>
+<!-- FP-1: 배경 이미지 + 오버레이(opacity) + text-shadow → NO WARN -->
+<div style="width:720pt;height:405pt;position:relative;overflow:hidden;">
+  <img src="bg.png" style="position:absolute;top:0;left:0;width:720pt;height:405pt;object-fit:cover;" alt="bg">
+  <div style="position:absolute;top:0;left:0;width:720pt;height:405pt;background:#1E293B;opacity:0.6;z-index:1;"></div>
+  <div style="position:relative;z-index:2;padding:60pt;">
+    <h1 style="font-size:32pt;color:#FFFFFF;text-shadow:0 2pt 8pt rgba(0,0,0,0.5);"><span>FP-1: 오버레이+그림자 있음</span></h1>
+    <p style="font-size:16pt;color:#E2E8F0;text-shadow:0 1pt 4pt rgba(0,0,0,0.4);"><span>PF-61 NO WARN expected</span></p>
+  </div>
+</div>
+</body></html>

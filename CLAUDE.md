@@ -86,7 +86,7 @@ ERROR 정탐-한계는 추가로 **심각도 재검토** 필수 (ERROR 유지 or
 - [ ] E. 규칙 추가/갱신 (html-prevention-rules.md / nanoBanana-guide.md)
 - [ ] F. change-log.md C-NN 기재
 - [ ] G. 회귀 테스트: 케이스 DB 추가 + 러너 실행 (PF/VP/IP-IV ~1초, 즉시 실행 필수)
-- [ ] H. progress.md V-NN 검증 계획 등록 (스트레스/프로덕션)
+- [ ] H. progress.md V-NN 검증 계획 등록 — 반드시 구체적 행동 명시: `tests/stress-slides/{테스트명}/`에 TP/FP 테스트 슬라이드 생성 + PF/VP 실행. "다음 세션 이월"은 테스트 슬라이드로 검증 불가한 항목만 허용
 - [ ] I. 승격 검토 (동일 패턴 2회+ → 전단계, WARN 3회+ → ERROR)
 ```
 
