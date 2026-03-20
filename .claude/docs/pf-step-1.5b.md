@@ -18,11 +18,11 @@ node scripts/generate-images.mjs \
   --outline slide-outline.md \
   --output slides/프레젠테이션명/assets
 
-# 체인 모드 권장 (첫 이미지를 참조로 덱 일관성 유지)
+# 체인 모드 + VQA 권장 (덱 일관성 + 품질 스코어링)
 node scripts/generate-images.mjs \
   --outline slide-outline.md \
   --output slides/프레젠테이션명/assets \
-  --chain
+  --chain --vqa
 ```
 
 ### 주요 옵션
@@ -36,6 +36,8 @@ node scripts/generate-images.mjs \
 | `--force` | false | 기존 이미지 전부 덮어쓰기 |
 | `--regenerate` | - | 특정 슬라이드만 재생성 (예: `--regenerate 3,5,8`) |
 | `--optimize` / `--no-optimize` | true | Sharp 후처리 (1920×1080 리사이즈 + 압축) |
+| `--vqa` | false | Gemini Vision VQA 스코어링 (5기준 품질 평가, FAIL 시 자동 재시도) |
+| `--vqa-only` | false | 기존 이미지 VQA 스코어링만 실행 (재생성 없음) |
 | `--dry` | false | 프롬프트만 확인 (API 호출 없음) |
 
 ### 이미지-텍스트 대비 규칙
@@ -114,7 +116,10 @@ node scripts/generate-images.mjs \
 
 ### 이미지 품질 게이트 (생성 완료 후 필수)
 
-IP/IV 자동 검수를 통과한 이미지도 **Read 도구로 직접 열어** 전수 시각 검사한다 (Opus 멀티모달).
+**VQA 스코어링 필수**: `--vqa` 플래그로 생성 시 자동 실행. 미사용 시 `--vqa-only`로 사후 실행.
+VQA FAIL (<22점) 이미지는 `--regenerate` + `--vqa`로 재생성. WARN (22~24점)은 시각 검사 후 판단.
+
+IP/IV/VQA 자동 검수를 통과한 이미지도 **Read 도구로 직접 열어** 전수 시각 검사한다 (Opus 멀티모달).
 
 #### 검사 절차
 
