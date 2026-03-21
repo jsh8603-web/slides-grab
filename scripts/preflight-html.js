@@ -47,25 +47,7 @@ function relativeLuminance(r, g, b) {
   return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
 }
 
-/** Returns true if a CSS color string is "bright" (luminance > 0.8). */
-function isBrightColor(colorStr) {
-  if (!colorStr) return false;
-  const s = colorStr.trim().toLowerCase();
-  // #fff / #ffffff / #FFF
-  const hexMatch = s.match(/^#([0-9a-f]{3,6})$/i);
-  if (hexMatch) {
-    const rgb = hexToRgb(hexMatch[1]);
-    return rgb ? relativeLuminance(...rgb) > 0.8 : false;
-  }
-  // rgb(r, g, b) or rgba(r, g, b, a)
-  const rgbMatch = s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
-  if (rgbMatch) {
-    const [, r, g, b] = rgbMatch.map(Number);
-    return relativeLuminance(r, g, b) > 0.8;
-  }
-  if (s === 'white') return true;
-  return false;
-}
+// isBrightColor removed — was only used by PF-01 (now removed)
 
 // ── CJK detection ─────────────────────────────────────────────────────────────
 
@@ -74,32 +56,8 @@ const FLAG_EMOJI_RE = /[\u{1F1E6}-\u{1F1FF}]{2}/gu;
 
 // ── Static checks (Phase 1) ──────────────────────────────────────────────────
 
-function checkPF01(html, file) {
-  // linear-gradient + bright text child
-  const issues = [];
-  // Find style blocks that contain gradient AND color
-  // Strategy: find elements whose inline style has gradient bg, then look for color on same or child
-  const gradientDivRe = /style="[^"]*(?:background(?:-image)?\s*:\s*[^"]*(?:linear|radial)-gradient)[^"]*"/gi;
-  let m;
-  while ((m = gradientDivRe.exec(html)) !== null) {
-    const styleStr = m[0];
-    // Grab surrounding context (~500 chars after) to find child text colors
-    const after = html.substring(m.index, m.index + 800);
-    // Check for color declarations in that region
-    const colorMatches = after.matchAll(/color\s*:\s*([^;"'\s]+(?:\([^)]*\))?)/gi);
-    for (const cm of colorMatches) {
-      // Skip background-color
-      const preceding = after.substring(0, cm.index);
-      if (/background-?\s*$/i.test(preceding)) continue;
-      if (isBrightColor(cm[1])) {
-        issues.push(fmtError(file, 'PF-01',
-          'linear-gradient with white/bright text \u2014 text will be invisible in PPTX'));
-        return issues; // one per file is enough
-      }
-    }
-  }
-  return issues;
-}
+// PF-01: REMOVED — subsumed by PF-39 (linear-gradient) + PF-62 (radial/conic-gradient)
+// Gradient loss in PPTX makes text invisibility moot; PF-39/62 already catch the root cause.
 
 function checkPF02(html, file) {
   const issues = [];
@@ -1232,7 +1190,7 @@ function checkPF57(html, file) {
 
 function runStaticChecks(html, file) {
   return [
-    ...checkPF01(html, file),
+    // PF-01 removed (subsumed by PF-39 + PF-62)
     ...checkPF02(html, file),
     ...checkPF04(html, file),
     ...checkPF05(html, file),
@@ -1308,40 +1266,8 @@ async function runPlaywrightChecks(slidesDir, files) {
             'content height exceeds 405pt (body overflow) \u2014 will be clipped in PPTX'));
         }
 
-        // PF-08: CJK text in any element with background and font-size > 11pt (14.67px)
-        // Expanded scope: scans all elements with non-transparent computed background
-        const cjkIssue = await page.evaluate(() => {
-          const CJK = /[\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uAC00-\uD7AF]/;
-          const allEls = document.querySelectorAll('*');
-          for (const el of allEls) {
-            const cs = getComputedStyle(el);
-            const bg = cs.backgroundColor;
-            // Skip elements without a visible background
-            if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') continue;
-            // Skip body element (full slide background, not a card)
-            if (el.tagName === 'BODY') continue;
-            const text = el.textContent || '';
-            if (!CJK.test(text)) continue;
-            const fontSize = parseFloat(cs.fontSize);
-            // 11pt = 14.67px
-            if (fontSize > 14.67) {
-              return { found: true, size: Math.round(fontSize * 100) / 100 };
-            }
-            // Also check child elements
-            for (const child of el.querySelectorAll('*')) {
-              const ccs = getComputedStyle(child);
-              const cfs = parseFloat(ccs.fontSize);
-              if (cfs > 14.67 && CJK.test(child.textContent || '')) {
-                return { found: true, size: Math.round(cfs * 100) / 100 };
-              }
-            }
-          }
-          return { found: false };
-        });
-        if (cjkIssue.found) {
-          results.push(fmtWarn(file, 'PF-08',
-            `CJK text in card at ${cjkIssue.size}px (>${Math.round(14.67)}px / 11pt) \u2014 may overflow in PPTX`));
-        }
+        // PF-08: REMOVED — subsumed by PF-23 (CJK text density with precise width calculation)
+        // PF-23 fires on all slides PF-08 fires on, with more precise overflow prediction.
         // PF-18: Element overlap detection (text-on-text or image-on-text)
         const overlapIssue = await page.evaluate(() => {
           const textEls = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,li,div,img'));

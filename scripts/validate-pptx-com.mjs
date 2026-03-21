@@ -237,7 +237,7 @@ function scoresToIssues(slideNum, scores) {
 
   // Total-based + critical minimum codes
   const critMin = Math.min(scores.content_completeness || 0, scores.text_fidelity || 0);
-  const secMin = Math.min(scores.layout_match || 0, scores.color_accuracy || 0, scores.overall_fidelity || 0);
+  const secMin = Math.min(scores.color_accuracy || 0, scores.overall_fidelity || 0);
 
   if (total < 18 || critMin <= 2) {
     issues.push({

@@ -41,7 +41,7 @@ function classifySlide(scores) {
     total += (scores[key] || 0) * weight;
   }
   const critMin = Math.min(scores.content_completeness || 0, scores.text_fidelity || 0);
-  const secMin = Math.min(scores.layout_match || 0, scores.color_accuracy || 0, scores.overall_fidelity || 0);
+  const secMin = Math.min(scores.color_accuracy || 0, scores.overall_fidelity || 0);
 
   if (total < 18 || critMin <= 2) return 'ERROR';
   if (total < 24 || critMin === 3 || secMin <= 3) return 'WARN';

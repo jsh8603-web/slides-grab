@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><style>
+body { margin: 0; width: 720pt; height: 405pt; font-family: Pretendard, sans-serif; background: #f0f0f0; }
+/* PF-36: rgba background */
+.card { background-color: rgba(100,100,200,0.5); padding: 10pt; margin: 5pt; }
+/* PF-42: opacity */
+.faded { opacity: 0.7; }
+/* PF-62: radial-gradient */
+.radial { background-image: radial-gradient(circle, red, blue); width: 100pt; height: 100pt; }
+/* PF-01: gradient + bright text */
+.grad-bright { background-image: linear-gradient(to right, #333, #666); color: #ffffff; }
+</style></head>
+<body>
+<!-- PF-08 + PF-23 overlap: CJK in card with background -->
+<div class="card" style="width: 200pt; font-size: 14pt;">
+한국어 텍스트가 카드 안에 있고 폰트가 크면 PF-08과 PF-23이 동시에 발화합니다
+</div>
+
+<!-- PF-07 + PF-36 overlap: p with rgba background -->
+<p style="background: rgba(255,0,0,0.3); border: 1px solid red; padding: 5pt;">
+PF-07 (p with background/border) + PF-36 (rgba background)
+</p>
+
+<!-- PF-34 + PF-55 overlap: span with bg inside heading -->
+<h2 style="font-size: 18pt;">제목 텍스트 <span style="background: #ff0000; color: #ffffff;">강조</span> 나머지</h2>
+
+<!-- PF-01 + PF-62 overlap: radial-gradient + bright text -->
+<div class="radial" style="color: #ffffff; font-size: 12pt;">밝은 텍스트</div>
+
+<!-- PF-01: linear-gradient + bright text (only PF-01) -->
+<div class="grad-bright" style="padding: 10pt; font-size: 12pt;">그라데이션 위 흰색</div>
+
+<!-- PF-02 + PF-59 overlap: flex:1 issues -->
+<div style="display: flex; height: 80pt;">
+<div style="flex: 1; font-size: 11pt;">플렉스 컨테이너 텍스트</div>
+</div>
+
+<!-- PF-27: CJK narrow container -->
+<div style="width: 60pt; font-size: 10pt;">좁은박스한글</div>
+
+<!-- PF-42: opacity in style block already covered above -->
+<div class="faded" style="font-size: 11pt;">투명도 요소</div>
+
+<!-- Pad to near bottom for PF-20 -->
+<div style="height: 150pt;"></div>
+<div style="font-size: 10pt;">하단 컨텐츠</div>
+</body></html>
