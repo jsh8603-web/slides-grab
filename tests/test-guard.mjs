@@ -10,6 +10,7 @@
 import { spawnSync } from 'child_process';
 import { writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'fs';
 import { join } from 'path';
+import { pathToFileURL } from 'url';
 
 const PROJECT_ROOT = 'D:/projects/slides-grab';
 const GUARD_SCRIPT = join(PROJECT_ROOT, 'scripts/checklist-guard.mjs');
@@ -455,6 +456,14 @@ function runPhaseD() {
       `blocked=${r.blocked}, reason=${(r.reason || '').slice(0, 60)}`);
   }
 
+  // C11b: validate-pptx-com.mjs Edit without checklist → BLOCK (Rule 1)
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 0\n`);
+  {
+    const r = invokeGuard('scripts/validate-pptx-com.mjs');
+    assert('C11b', 'validate-pptx-com.mjs Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
   // C12: "### 정탐-수정 #N:" heading recognized as issue section → has open checklist
   setup();
   writeProgress(`# Progress\n## 이벤트 발생\n### 정탐-수정 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
@@ -463,6 +472,104 @@ function runPhaseD() {
     // Should be ALLOWED because there IS an open checklist ([ ] B.)
     assert('C12', '정탐-수정 heading recognized → open checklist allows edit', !r.blocked,
       `blocked=${r.blocked}`);
+  }
+
+  // C13: test-vision-accuracy.mjs Edit without checklist → BLOCK
+  writeProgress(`# Progress\n## 현재 단계\n- [ ] Step 0\n`);
+  {
+    const r = invokeGuard('scripts/test-vision-accuracy.mjs');
+    assert('C13', 'test-vision-accuracy.mjs Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // C14: vision-ground-truth.json Edit without checklist → BLOCK
+  {
+    const r = invokeGuard('tests/vision-ground-truth.json');
+    assert('C14', 'vision-ground-truth.json Edit without checklist → BLOCK', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  cleanup();
+}
+
+// ─── Phase E: Auto-Checklist Injection Tests ─────────────────────────
+
+async function runPhaseE() {
+  console.log('\n--- Phase E: Auto-Checklist Injection Tests ---\n');
+
+  // E1: injectChecklist creates placeholder in progress.md
+  setup();
+  writeProgress(`# Progress\n## 완료 단계\n- [x] Step 2 HTML 생성\n## 이벤트 발생 → 체크박스 TASK 관리\n\n### 이슈 #1: test\n- [x] A. 판정: 정탐-수정\n- [x] B. 완료\n\n## 탐지 코드 수정 검증\n`);
+  {
+    // Import and call injectChecklist
+    const { injectChecklist } = await import(pathToFileURL(join(PROJECT_ROOT, 'scripts/auto-checklist.mjs')).href);
+    const injected = injectChecklist(TEST_DIR, {
+      pipeline: 'PF',
+      errors: ['[slide-01.html] PF-01: gradient text', '[slide-03.html] PF-07: p with background']
+    });
+    assert('E1', 'injectChecklist returns true on success', injected === true, `injected=${injected}`);
+
+    // Verify content
+    const content = readFileSync(join(TEST_DIR, 'progress.md'), 'utf8');
+    assert('E1b', 'Injected checklist has issue #2', content.includes('### 이슈 #2:'),
+      `content includes issue #2: ${content.includes('### 이슈 #2:')}`);
+    assert('E1c', 'Injected checklist has 판정 placeholder', content.includes('- [ ] A. 판정: (미입력'),
+      `has 판정: ${content.includes('- [ ] A. 판정: (미입력')}`);
+    assert('E1d', 'Injected checklist mentions PF pipeline', content.includes('PF ERROR 2건'),
+      `has PF ERROR: ${content.includes('PF ERROR 2건')}`);
+    assert('E1e', 'Injected before 탐지 코드 수정 검증', content.indexOf('이슈 #2') < content.indexOf('탐지 코드 수정 검증'),
+      `order correct`);
+  }
+
+  // E2: Guard blocks slide edit when auto-checklist has unchecked 판정
+  {
+    // progress.md now has the auto-injected checklist with [ ] A. 판정
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('E2', 'Guard blocks slide edit with auto-injected unchecked 판정', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // E3: After agent fills in 판정, guard allows slide edit
+  {
+    let content = readFileSync(join(TEST_DIR, 'progress.md'), 'utf8');
+    // Replace the auto-generated placeholder with a filled 판정
+    content = content.replace(
+      '- [ ] A. 판정: (미입력 — 오탐/정탐-수정/정탐-한계 중 선택)',
+      '- [x] A. 판정: 정탐-수정 — gradient 대체 필요'
+    );
+    writeFileSync(join(TEST_DIR, 'progress.md'), content, 'utf8');
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('E3', 'Guard allows slide edit after 판정 filled', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // E4: injectChecklist returns false when no progress.md exists
+  {
+    const tmpDir = join(PROJECT_ROOT, 'slides/_no-progress-test');
+    mkdirSync(tmpDir, { recursive: true });
+    const { injectChecklist } = await import(pathToFileURL(join(PROJECT_ROOT, 'scripts/auto-checklist.mjs')).href);
+    const injected = injectChecklist(tmpDir, { pipeline: 'VP', errors: ['test error'] });
+    assert('E4', 'injectChecklist returns false when no progress.md', injected === false, `injected=${injected}`);
+    rmSync(tmpDir, { recursive: true, force: true });
+  }
+
+  // E5: injectChecklist returns false when no errors
+  {
+    const { injectChecklist } = await import(pathToFileURL(join(PROJECT_ROOT, 'scripts/auto-checklist.mjs')).href);
+    const injected = injectChecklist(TEST_DIR, { pipeline: 'PF', errors: [] });
+    assert('E5', 'injectChecklist returns false with empty errors', injected === false, `injected=${injected}`);
+  }
+
+  // E6: Multiple injections increment issue number
+  setup();
+  writeProgress(`# Progress\n## 이벤트 발생\n\n### 이슈 #1: existing\n- [x] A. done\n\n## 탐지 코드 수정 검증\n`);
+  {
+    const { injectChecklist } = await import(pathToFileURL(join(PROJECT_ROOT, 'scripts/auto-checklist.mjs')).href);
+    injectChecklist(TEST_DIR, { pipeline: 'PF', errors: ['slide-01: err1'] });
+    injectChecklist(TEST_DIR, { pipeline: 'CONTRAST', errors: ['slide-05: err2'] });
+    const content = readFileSync(join(TEST_DIR, 'progress.md'), 'utf8');
+    assert('E6', 'Multiple injections produce #2 and #3', content.includes('이슈 #2') && content.includes('이슈 #3'),
+      `has #2=${content.includes('이슈 #2')}, #3=${content.includes('이슈 #3')}`);
   }
 
   cleanup();
@@ -474,6 +581,7 @@ console.log('=== Checklist Guard Tests ===');
 runPhaseB();
 runPhaseC();
 runPhaseD();
+await runPhaseE();
 
 console.log(`\n=== Results: ${passed} passed, ${failed} failed ===`);
 if (failures.length > 0) {

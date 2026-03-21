@@ -1,0 +1,53 @@
+{
+  "ai-infra-investment": {
+    "slidesDir": "slides/ai-infra-investment",
+    "pptx": "slides/ai-infra-investment/ai-infra-investment.pptx",
+    "slides": {
+      "slide-01": {
+        "expected": "WARN",
+        "reason": "missing space AI인프라 + line break 중심축이/다 — Vision consistently scores TF=3 (WARN level)",
+        "mustDetect": ["text_fidelity"],
+        "mustNotFlag": ["color_accuracy"]
+      },
+      "slide-02": { "expected": "PASS" },
+      "slide-03": {
+        "expected": "PASS",
+        "tolerance": "WARN",
+        "note": "CAGR line break difference — rendering engine variance"
+      },
+      "slide-04": {
+        "expected": "PASS",
+        "tolerance": "WARN",
+        "note": "layout/color minor rendering differences"
+      },
+      "slide-05": { "expected": "PASS" },
+      "slide-06": {
+        "expected": "PASS",
+        "tolerance": "WARN",
+        "note": "$ sign bolder, border thickness — rendering engine variance"
+      },
+      "slide-07": {
+        "expected": "WARN",
+        "reason": "missing space 장기TCO — real text fidelity issue",
+        "mustDetect": ["text_fidelity"]
+      },
+      "slide-08": { "expected": "PASS" },
+      "slide-09": {
+        "expected": "WARN",
+        "reason": "table row backgrounds white→colored — real color issue in PPTX conversion",
+        "mustDetect": ["color_accuracy"]
+      },
+      "slide-10": {
+        "expected": "PASS",
+        "tolerance": "WARN",
+        "note": "colors preserved, common FP target — layout shift from conversion engine"
+      },
+      "slide-11": {
+        "expected": "PASS",
+        "tolerance": "WARN",
+        "note": "line break + font weight differences — rendering engine variance"
+      },
+      "slide-12": { "expected": "PASS", "tolerance": "WARN" }
+    }
+  }
+}

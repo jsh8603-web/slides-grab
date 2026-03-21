@@ -28,6 +28,7 @@ const PIPELINE_FILES = new Set([
   'scripts/generate-images.mjs',
   'scripts/html2pptx.cjs',
   'scripts/convert-native.mjs',
+  'scripts/validate-pptx-com.mjs',
   // Rule / guide docs
   '.claude/docs/html-prevention-rules.md',
   '.claude/docs/nanoBanana-guide.md',
@@ -58,6 +59,10 @@ const PIPELINE_FILES = new Set([
   '.claude/settings.local.json',
   'scripts/checklist-guard.mjs',
   'scripts/post-compact-restore.mjs',
+  'scripts/auto-checklist.mjs',
+  // Vision accuracy test framework
+  'scripts/test-vision-accuracy.mjs',
+  'tests/vision-ground-truth.json',
 ]);
 
 // Required sections/strings that must survive Write overwrites (Rule 6)
