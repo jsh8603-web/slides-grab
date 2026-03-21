@@ -19,6 +19,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
+import { injectChecklist } from "./auto-checklist.mjs";
 
 // ---------------------------------------------------------------------------
 // Aspect ratio → pixel dimensions (single source of truth)
@@ -238,7 +239,7 @@ function parseOutline(filePath) {
   const slideImageCount = {};
 
   for (const line of lines) {
-    const slideMatch = line.match(/^###\s+(?:Slide|슬라이드)\s+(\d+)\s*[-–—]\s*(.+)/i);
+    const slideMatch = line.match(/^#{2,3}\s+(?:Slide|슬라이드)\s+(\d+)\s*[-–—:]\s*(.+)/i);
     if (slideMatch) {
       currentSlide = {
         number: parseInt(slideMatch[1], 10),
@@ -2410,7 +2411,31 @@ async function main() {
     if (ivFailed > 0) {
       console.log(`   ⚠️  IV FAIL ${ivFailed}건 — 프롬프트를 수정하거나 유형을 전환하세요.`);
     }
+    // Auto-inject checklist for IP/IV errors
+    const slidesParent = path.dirname(outputDir);
+    const ipErrors = results.filter(r => r.value?.status === "ip-error").map(r => `slide-${String(r.value.slide).padStart(2, '0')}: IP ERROR`);
+    const ivErrors = results.filter(r => r.value?.status === "iv-fail").map(r => `slide-${String(r.value.slide).padStart(2, '0')}: IV FAIL`);
+    const genErrors = results.filter(r => r.value?.status === "error").map(r => `slide-${String(r.value.slide).padStart(2, '0')}: generation error`);
+    if (ipErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IP', errors: ipErrors });
+    if (ivErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IV', errors: ivErrors });
+    if (genErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IMG', errors: genErrors });
     process.exit(1);
+  }
+
+  // Auto-inject checklist for IP/IV WARNs from successful results
+  {
+    const slidesParent = path.dirname(outputDir);
+    const ipWarns = [];
+    const ivWarns = [];
+    for (const r of results) {
+      const v = r.value;
+      if (!v || v.status !== 'ok') continue;
+      const sn = `slide-${String(v.slide).padStart(2, '0')}`;
+      if (v.ip) for (const i of v.ip) { if (i.level === 'WARN') ipWarns.push(`${sn}: ${i.rule} ${i.msg}`); }
+      if (v.iv) for (const i of v.iv) { if (i.level === 'WARN') ivWarns.push(`${sn}: ${i.rule} ${i.msg}`); }
+    }
+    if (ipWarns.length > 0) injectChecklist(slidesParent, { pipeline: 'IP', errors: ipWarns, severity: 'WARN' });
+    if (ivWarns.length > 0) injectChecklist(slidesParent, { pipeline: 'IV', errors: ivWarns, severity: 'WARN' });
   }
 }
 

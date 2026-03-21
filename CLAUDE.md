@@ -23,7 +23,7 @@ NanoBanana: `node scripts/generate-images.mjs --outline outline.md --output asse
 
 | | HTML/PPTX | 이미지 생성 (NanoBanana) |
 |---|---|---|
-| 감지 | PF/VP + COM 비교 | IV/IP + VQA 스코어링 |
+| 감지 | PF/VP + VV (Vision Validation) 비교 | IV/IP + VQA 스코어링 |
 | 기록 | `pptx-inspection-log.md` | `nanoBanana-report.json` (recommendations 포함) |
 | 규칙 갱신 | `html-prevention-rules.md` + PF/VP 코드 | IV/IP 규칙 + STOPWORDS + VQA 게이트 |
 | 자동 방지 | 다음 빌드에서 PF/VP 검출 | 다음 생성에서 IV/IP 검출 |
@@ -38,19 +38,25 @@ NanoBanana: `node scripts/generate-images.mjs --outline outline.md --output asse
 에러 발견 시 먼저 **3분류 판정**. 판정에 따라 수정 대상과 체크리스트가 달라진다:
 - **오탐** (false positive): 탐지 코드가 정상 결과물을 에러로 잡음 → **탐지 코드** 수정 → A~I 체크리스트
 - **정탐-수정** (true positive, fixable): 실제 문제 + 수정 가능 → **생성 코드** 수정 → A~I 체크리스트
-- **정탐-한계** (true positive, limitation): 실제 문제 + 수정 불가 (엔진/모델 한계) → IL 기록 + 회피 규칙 → **간소화** 체크리스트
+- **정탐-한계** (true positive, limitation): 실제 문제 + 수정 불가 (엔진/모델 한계) → IL 기록 + 생성 금지 규칙 등록 → **간소화** 체크리스트
 
-#### 전체 탐지 프로세스별 수정 대상
+#### 판정별 수정 대상 파일
 
-| 탐지 프로세스 | 파이프라인 | 오탐 → 탐지 코드 | 정탐-수정 → 생성 코드 | 정탐-한계 → 회피 규칙 |
-|:------------:|:---------:|---------------|-------------------|-----------------|
-| **PF** | HTML/PPTX | `preflight-html.js` | `design-skill/SKILL.md` + `html-prevention-rules.md` | (거의 없음) |
-| **VP** | HTML/PPTX | `validate-pptx.js` | `design-skill/SKILL.md` + `html-prevention-rules.md` | html2pptx 변환 한계 |
-| **COM** | HTML/PPTX | COM 비교 로직 | `design-skill/SKILL.md` + `html2pptx.cjs` | html2pptx 고유 동작 |
-| **IV** | 이미지 | `generate-images.mjs` IV부 | `nanoBanana-guide.md` | Gemini 모델 한계 |
-| **IP** | 이미지 | `generate-images.mjs` IP부 | `nanoBanana-guide.md` + `enhancePrompt()` | (거의 없음) |
-| **IC** | 이미지 | IC 검증 기준 | `plan-skill/SKILL.md` NanoBanana 태그 | Gemini 생성 한계 |
-| **VQA** | 이미지 | `scoreImageWithVQA` 프롬프트/게이트 | `nanoBanana-guide.md` + `enhancePrompt()` | 카테고리 점수 천장 |
+**HTML/PPTX 파이프라인** (PF/VP/COM)
+
+| 판정 | B. 대상 수정 | C. 원인 수정 | D. 재발 방지 |
+|------|------------|------------|------------|
+| **오탐** | 해당 없음 | 탐지 코드: `preflight-html.js`, `validate-pptx.js`, `validate-pptx-com.mjs` | C=D |
+| **정탐-수정** | HTML/PPTX 결과물 | 생성 규칙: `html-prevention-rules.md`, `html2pptx.cjs` | 탐지 코드: `preflight-html.js`, `validate-pptx.js` |
+| **정탐-한계** | 해당 없음 | 생성 금지 규칙: `html-prevention-rules.md` | — |
+
+**이미지 파이프라인** (IV/IP/IC/VQA)
+
+| 판정 | B. 대상 수정 | C. 원인 수정 | D. 재발 방지 |
+|------|------------|------------|------------|
+| **오탐** | 해당 없음 | 탐지 코드: `generate-images.mjs` | C=D |
+| **정탐-수정** | 이미지/프롬프트 재생성 | 생성 규칙: `nanoBanana-guide.md`, `generate-images.mjs` (프롬프트) | 탐지 코드: `generate-images.mjs` |
+| **정탐-한계** | 해당 없음 | 생성 금지 규칙: `nanoBanana-guide.md` | — |
 
 #### 공통 절차 — 3분류 판정 + 선행 체크리스트 + 완료 게이트
 
@@ -62,9 +68,13 @@ NanoBanana: `node scripts/generate-images.mjs --outline outline.md --output asse
 |------|------|---------|:--------:|
 | **오탐** | 탐지가 틀림 (실제 문제 없음) | 탐지 코드 | A~I 전체 |
 | **정탐-수정** | 탐지 맞음 + 수정 가능 | 생성/HTML/프롬프트 코드 | A~I 전체 |
-| **정탐-한계** | 탐지 맞음 + 수정 불가 (엔진/모델 한계) | 없음 | **간소화 A~D** |
+| **정탐-한계** | 탐지 맞음 + 수정 불가 (엔진/모델 한계) | 없음 | **간소화 A~C** |
 
 ERROR 정탐-한계는 추가로 **심각도 재검토** 필수 (ERROR 유지 or WARN 강등).
+
+**회피 금지 (오탐/정탐-수정)**: 오탐 또는 정탐-수정 판정 시 **반드시 원인 수정(C) + 재발 방지(D)를 실행**한다. `--skip-*` 플래그, "향후 개선" 등으로 체크리스트 항목을 대체하고 다음 작업으로 넘어가는 것은 금지.
+
+**B·C·D는 각각 독립적 단계**: 앞 단계를 수행해도 뒷 단계를 "해당 없음"으로 건너뛸 수 없다. 정탐-수정의 C는 **반드시** 위 테이블 C열 파일(생성 규칙)을 수정하고, D는 **반드시** D열 파일(탐지 코드)을 수정하거나 기존 탐지 규칙이 이미 잡는다면 **구체적 규칙 코드(PF-XX, VP-XX, IV-XX 등)를 명시**해야 한다. "해당 없음"은 오탐의 B에만 허용.
 
 **절차**:
 
@@ -73,15 +83,32 @@ ERROR 정탐-한계는 추가로 **심각도 재검토** 필수 (ERROR 유지 or
 
 **사용자 피드백 = 무조건 정탐**: 사용자가 지적한 이슈는 오탐이 될 수 없다 (사용자가 문제라고 보면 문제). 판정은 **정탐-수정 / 정탐-한계**만 해당. 추가로 **"어떤 파이프라인이 이걸 잡았어야 하는가?"** 를 판단하여 탐지 규칙 보강 여부를 결정한다.
 
-체크리스트 템플릿(A~I / A~D)은 `presentation-flow.md` §progress.md 템플릿 참조. `checklist-guard.mjs`가 체크리스트 존재를 자동 검증 — **progress.md에 존재하지 않으면 코드 수정 차단**.
+체크리스트 템플릿(A~I / A~C)은 `presentation-flow.md` §progress.md 템플릿 참조. `checklist-guard.mjs`가 체크리스트 존재를 자동 검증 — **progress.md에 존재하지 않으면 코드 수정 차단**.
 
-##### 파이프라인별 재검증 방법 (A~I 체크리스트 C항목)
+##### Auto-Checklist — 파이프라인 ERROR 시 자동 체크리스트 주입
+
+`auto-checklist.mjs`가 파이프라인 스크립트에 내장되어, ERROR 발견 시 progress.md에 placeholder 체크리스트를 자동 생성한다. 이를 통해 Guard Rule 3이 판정 없는 슬라이드 수정을 차단한다.
+
+**동작 흐름**:
+```
+파이프라인 스크립트에서 ERROR 발견 (PF/VP/CONTRAST/IP/IV)
+  → auto-checklist.mjs가 progress.md에 자동 추가:
+    ### 이슈 #N: {pipeline} ERROR {count}건 ({slides}) — 자동 생성
+    - [ ] A. 판정: (미입력 — 오탐/정탐-수정/정탐-한계 중 선택)
+    - [ ] B~I. (판정 후 체크리스트 완성 — B. 대상 수정, C. 원인 수정, D. 재발 방지, E. 테스트, ...)
+  → 에이전트가 슬라이드 Edit 시도 → Guard Rule 3: 판정 미완료 → BLOCK
+  → 에이전트가 3분류 판정을 먼저 수행한 후에만 수정 가능
+```
+
+**호출 스크립트**: `convert-native.mjs` (PF/VP/CONTRAST), `generate-images.mjs` (IP/IV/IMG)
+
+##### 파이프라인별 재검증 방법 (A~I 체크리스트 D. 재발 방지)
 
 | 파이프라인 | 오탐 재검증 | 정탐-수정 재검증 |
 |----------|----------|-------------|
 | **PF** | 수정된 PF 규칙으로 동일 HTML 재실행 → 에러 소멸 | HTML 수정 후 PF 재실행 → PASS |
 | **VP** | 수정된 VP 규칙으로 동일 PPTX 재실행 → 에러 소멸 | HTML 수정 → 재변환 → VP PASS |
-| **COM** | — (수동 비교라 N/A) | HTML 수정 → 재변환 → 재비교 |
+| **COM (VV)** | 수정된 Vision 프롬프트로 재비교 → 에러 소멸 | HTML 수정 → 재변환 → `--full` 재실행 → VV PASS |
 | **IP** | 동일 프롬프트 `--dry` 재실행 → 에러 소멸 | 프롬프트 수정 `--dry` → IP PASS |
 | **IV** | 동일 이미지에 수정된 IV 재실행 → 소멸 | `--regenerate {번호}` → IV PASS |
 | **VQA** | 기존 WARN 이미지 5개 재스코어링 → 점수 변화 | `--regenerate {번호}` → VQA 점수 개선 |
@@ -155,7 +182,7 @@ Step/Phase 완료, 수정 발생, IL 기록, 게이트 통과 시 **즉시** 갱
 
 **프로덕션 후 검증 게이트**: Step 7 출력 완료 후, progress.md `## 탐지 코드 수정 검증`의 V-NN `[ ]` 항목을 전부 실행해야 완료 보고 가능. 상세: `pf-step-5-6-7.md` §Step 7.5
 
-**기록 대상**: 탐지 코드(`preflight-html.js`, `validate-pptx.js`, `generate-images.mjs`), 생성 규칙(`design-skill/SKILL.md`, `html-prevention-rules.md`, `nanoBanana-guide.md`), 변환 코드(`html2pptx.cjs`, `convert-native.mjs`), 파이프라인 설정(STOPWORDS, 임계값)
+**기록 대상**: 탐지 코드(`preflight-html.js`, `validate-pptx.js`, `validate-pptx-com.mjs`, `generate-images.mjs`), 생성 규칙(`design-skill/SKILL.md`, `html-prevention-rules.md`, `nanoBanana-guide.md`), 변환 코드(`html2pptx.cjs`, `convert-native.mjs`), 파이프라인 설정(STOPWORDS, 임계값)
 **기록 제외** (progress.md에서 관리): HTML 슬라이드 내용 수정, 이미지 재생성, PPTX 재변환 실행
 
 **항목 형식**:

@@ -26,7 +26,7 @@ async function main() {
   const outputPath = path.resolve(options.output);
 
   const files = fs.readdirSync(slidesDir)
-    .filter(f => /^slide-\d+\.html$/.test(f))
+    .filter(f => /^slide-\d+[^]*\.html$/.test(f))
     .sort();
 
   if (files.length === 0) {

@@ -11,17 +11,26 @@
 | "슬라이드 수정해줘" / "편집기 열어줘" / "에디터 열어줘" | Step 3 |
 | "pptx 변환" / "pdf 변환" / "내보내기" | Step 5 |
 
-## 세션 복원 (컨텍스트 압축 포함)
+## 세션 복원 (압축 + 대화 이어받기)
 
 progress.md는 각 Step 완료·수정 발생·로그 기록 시 **즉시 갱신**하여 상시 최신 유지 (자동 압축은 예고 없이 발생하므로).
 
-**새 세션 첫 행동** (대화 요약보다 우선, 컨텍스트 압축 후에도 동일):
+다음 상황 **모두**에서 동일한 복원 절차를 실행한다:
+- **컨텍스트 압축** (PostCompact 훅 트리거 — 같은 세션 내 자동 압축)
+- **대화 이어받기** (conversation continuation — 이전 대화가 컨텍스트 한도 초과로 새 세션에서 요약과 함께 시작. PostCompact 훅 미발동이므로 에이전트가 직접 복원)
+
+**감지**: 시스템 메시지에 "continued from a previous conversation" 또는 대화 요약이 포함된 경우.
+
+**새 세션 첫 행동** (대화 요약보다 우선):
 1. `slides/프레젠테이션명/progress.md`를 Read
 2. `## 활성 규칙`의 `[ ]` 미체크 항목 → **해당 docs 파일을 즉시 Read로 재로드** (이 단계를 건너뛰면 이후 절차 위반의 근본 원인이 됨)
 3. **미완료 이슈 체크리스트 확인** → `### 이슈 #N` 하위에 `[ ]` 미완료 항목 → 해당 항목부터 처리 완료 후 작업 재개 (CLAUDE.md §공통 절차 참조)
 4. `## 로그 기록 상태`에 `[ ]` 미기록 항목 → `pptx-inspection-log.md`에 먼저 기록
 5. 게이트 통과 기록 없으면 해당 Step 재실행
-6. 위 1~5 완료 후에만 작업 재개
+6. **복원 완료 마커 갱신**: `touch slides/프레젠테이션명/.restore-marker` (session-restore-guard가 이 마커로 복원 완료를 확인 — 없으면 Edit/Write/Bash 차단)
+7. 위 1~6 완료 후에만 작업 재개
+
+**하드 가드**: `session-restore-guard.mjs`가 PreToolUse(Edit|Write|Bash)에서 `.restore-marker`의 mtime < `progress.md` mtime이면 차단. PostCompact 시 `post-compact-restore.mjs`가 marker를 삭제하여 재복원 강제.
 
 | 체크포인트 | 미충족 시 |
 |-----------|----------|

@@ -1095,6 +1095,83 @@ function checkPF62(html, file) {
 }
 
 /**
+ * PF-63: HTML <table> usage — PPTX conversion loses table structure
+ * html2pptx cannot convert HTML tables; they render as plain text or disappear entirely.
+ * Detected from 3-round PF/VC gap test: slide-02 VC ERROR (CC=1,TF=1,LM=1).
+ */
+function checkPF63(html, file) {
+  const issues = [];
+  // Match <table> tags (case-insensitive), but exclude <table> inside comments
+  const commentless = html.replace(/<!--[\s\S]*?-->/g, '');
+  const tableRe = /<table\b/gi;
+  let m;
+  while ((m = tableRe.exec(commentless)) !== null) {
+    issues.push(fmtError(file, 'PF-63',
+      `<table> element detected — PPTX conversion cannot render HTML tables. Use div-based grid layout instead`));
+  }
+  return issues;
+}
+
+/**
+ * PF-64: flex-wrap pill/badge layout — many small items with flex-wrap
+ * When multiple small divs are arranged with flex-wrap, PPTX conversion fails
+ * because html2pptx positions each item independently and they overlap.
+ * Detected from 3-round PF/VC gap test: slide-16 VC ERROR (CC=1,TF=1).
+ *
+ * Detection: container with display:flex + flex-wrap:wrap containing 4+ child elements
+ * with small explicit widths or inline-block-like sizing.
+ */
+function checkPF64(html, file) {
+  const issues = [];
+  // Step 1: Find div openings with style attributes
+  const divOpenRe = /<div\b[^>]*style\s*=\s*"([^"]*)"[^>]*>/gi;
+  let m;
+  while ((m = divOpenRe.exec(html)) !== null) {
+    const style = m[1];
+    if (!/display:\s*flex/i.test(style)) continue;
+    if (!/flex-wrap:\s*wrap/i.test(style)) continue;
+
+    // Step 2: Find matching </div> using depth counting
+    let depth = 1;
+    let pos = m.index + m[0].length;
+    let endPos = -1;
+    while (pos < html.length && depth > 0) {
+      const nextOpen = html.indexOf('<div', pos);
+      const nextClose = html.indexOf('</div>', pos);
+      if (nextClose === -1) break;
+      if (nextOpen !== -1 && nextOpen < nextClose) {
+        depth++;
+        pos = nextOpen + 4;
+      } else {
+        depth--;
+        if (depth === 0) { endPos = nextClose; break; }
+        pos = nextClose + 6;
+      }
+    }
+    if (endPos === -1) continue;
+    const inner = html.slice(m.index + m[0].length, endPos);
+
+    // Step 3: Count child divs/spans with pill-like styling
+    const childRe = /<(?:div|span)\b[^>]*style\s*=\s*"([^"]*)"/gi;
+    let childCount = 0;
+    let pillCount = 0;
+    let cm;
+    while ((cm = childRe.exec(inner)) !== null) {
+      childCount++;
+      const cStyle = cm[1];
+      if (/border-radius/i.test(cStyle) || /padding:\s*\d+px\s+\d+px/i.test(cStyle)) {
+        pillCount++;
+      }
+    }
+    if (childCount >= 4 && pillCount >= 2) {
+      issues.push(fmtWarn(file, 'PF-64',
+        `flex-wrap container with ${childCount} pill/badge children — PPTX conversion may overlap or misalign items. Use fixed grid layout instead`));
+    }
+  }
+  return issues;
+}
+
+/**
  * PF-56: Image container with flex centering but missing explicit height
  * flex align-items:center without height causes container to collapse → centering has no effect
  */
@@ -1236,6 +1313,8 @@ function runStaticChecks(html, file) {
     ...checkPF59(html, file),
     ...checkPF60(html, file),
     ...checkPF62(html, file),
+    ...checkPF63(html, file),
+    ...checkPF64(html, file),
   ];
 }
 
@@ -1271,7 +1350,7 @@ async function runPlaywrightChecks(slidesDir, files) {
         // PF-18: Element overlap detection (text-on-text or image-on-text)
         const overlapIssue = await page.evaluate(() => {
           const textEls = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,li,div,img'));
-          const rects = textEls
+          const entries = textEls
             .filter(el => {
               const t = (el.textContent || '').trim();
               if (!t) return false;
@@ -1281,17 +1360,32 @@ async function runPlaywrightChecks(slidesDir, files) {
             .map(el => {
               const r = el.getBoundingClientRect();
               const ownText = Array.from(el.childNodes).filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('');
-              return { tag: el.tagName, left: r.left, top: r.top, right: r.right, bottom: r.bottom, area: r.width * r.height, ownText };
+              return { el, tag: el.tagName, left: r.left, top: r.top, right: r.right, bottom: r.bottom, area: r.width * r.height, ownText };
             })
             // Filter to elements with their own text content (not just inherited)
             .filter(r => r.ownText.length > 0 || ['IMG', 'DIV'].includes(r.tag));
 
           // Check pairwise overlaps (limit to first 50 elements for performance)
-          const check = rects.slice(0, 50);
+          const check = entries.slice(0, 50);
           for (let i = 0; i < check.length; i++) {
             for (let j = i + 1; j < check.length; j++) {
               const a = check[i], b = check[j];
-              // Skip parent-child relationships (one contains the other)
+              // Skip DOM containment (parent-child in DOM tree)
+              if (a.el.contains(b.el) || b.el.contains(a.el)) continue;
+              // Skip elements in different branches of the same flex/grid container
+              let skipFlexGrid = false;
+              let ancestor = a.el;
+              while (ancestor.parentElement) {
+                const container = ancestor.parentElement;
+                const pd = getComputedStyle(container).display;
+                if (/flex|grid|inline-flex|inline-grid/.test(pd)) {
+                  // ancestor is a flex/grid item; if b is in the same container but different subtree, skip
+                  if (!ancestor.contains(b.el) && container.contains(b.el)) { skipFlexGrid = true; break; }
+                }
+                ancestor = container;
+              }
+              if (skipFlexGrid) continue;
+              // Skip bounding-box containment (one visually contains the other)
               const aContainsB = a.left <= b.left && a.right >= b.right && a.top <= b.top && a.bottom >= b.bottom;
               const bContainsA = b.left <= a.left && b.right >= a.right && b.top <= a.top && b.bottom >= a.bottom;
               if (aContainsB || bContainsA) continue;
@@ -1536,6 +1630,92 @@ async function runPlaywrightChecks(slidesDir, files) {
             `Text "${issue.text}..." (${issue.color}) on background image without overlay or text-shadow — may be unreadable [IL-69]`));
         }
 
+        // PF-65: Table/grid cell text overflow — detect text wrapping in cells that should be single-line
+        const cellOverflowIssues = await page.evaluate(() => {
+          const issues = [];
+          // Check CSS Grid cells and <td>/<th>
+          const cells = document.querySelectorAll('td, th, [class*="st-cell"], [class*="cell"]');
+          // Also check grid container direct children (common CSS table pattern)
+          const gridContainers = document.querySelectorAll('[style*="grid-template-columns"]');
+          const allCells = new Set(cells);
+          for (const gc of gridContainers) {
+            for (const child of gc.children) allCells.add(child);
+          }
+          // Also find grid via computed style
+          const allDivs = document.querySelectorAll('div');
+          for (const d of allDivs) {
+            if (getComputedStyle(d).display === 'grid') {
+              for (const child of d.children) allCells.add(child);
+            }
+          }
+          for (const cell of allCells) {
+            const text = (cell.textContent || '').trim();
+            if (!text || text.length < 2) continue;
+            const cs = getComputedStyle(cell);
+            if (cs.whiteSpace === 'pre-wrap' || cs.whiteSpace === 'pre-line') continue;
+            const r = cell.getBoundingClientRect();
+            if (r.width <= 0 || r.height <= 0) continue;
+            // Horizontal overflow (scrollWidth exceeds visible width)
+            if (cell.scrollWidth > cell.clientWidth + 2) {
+              issues.push({ text: text.substring(0, 30), tag: cell.tagName, type: 'scrollWidth' });
+              continue;
+            }
+            // Line-count heuristic: short text forced into 2+ lines by narrow column
+            const fontSize = parseFloat(cs.fontSize) || 14;
+            const lineHeight = parseFloat(cs.lineHeight) || fontSize * 1.4;
+            const padTop = parseFloat(cs.paddingTop) || 0;
+            const padBot = parseFloat(cs.paddingBottom) || 0;
+            const contentHeight = r.height - padTop - padBot;
+            const actualLines = Math.round(contentHeight / lineHeight);
+            if (actualLines >= 2 && text.length <= 12) {
+              issues.push({ text: text.substring(0, 30), tag: cell.tagName, type: 'multiline' });
+            }
+          }
+          return issues;
+        });
+        for (const issue of cellOverflowIssues) {
+          results.push(fmtWarn(file, 'PF-65',
+            `Table/grid cell text wraps unexpectedly: "${issue.text}" (${issue.tag}, ${issue.type}) — widen column or shorten text`));
+        }
+
+        // PF-66: overflow:hidden content clipping — detect content cut off by hidden overflow
+        const clipIssues = await page.evaluate(() => {
+          const issues = [];
+          const allEls = document.querySelectorAll('div, section, article, li, aside, main');
+          for (const el of allEls) {
+            const cs = getComputedStyle(el);
+            if (cs.overflow !== 'hidden' && cs.overflowY !== 'hidden') continue;
+            const r = el.getBoundingClientRect();
+            if (r.width <= 0 || r.height <= 0) continue;
+            // Vertical clipping: content taller than visible area
+            if (el.scrollHeight > el.clientHeight + 2) {
+              const allText = (el.textContent || '').trim();
+              if (!allText) continue;
+              // Find first clipped child element for diagnostic
+              let clippedText = '';
+              const children = el.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,span,div');
+              for (const child of children) {
+                const cr = child.getBoundingClientRect();
+                if (cr.bottom > r.bottom + 1 && (child.textContent || '').trim()) {
+                  clippedText = (child.textContent || '').trim().substring(0, 30);
+                  break;
+                }
+              }
+              issues.push({
+                clipped: Math.round(el.scrollHeight - el.clientHeight),
+                text: clippedText || allText.substring(allText.length - 30),
+                tag: el.tagName,
+                cls: (el.className || '').toString().substring(0, 20)
+              });
+            }
+          }
+          return issues;
+        });
+        for (const issue of clipIssues) {
+          results.push(fmtError(file, 'PF-66',
+            `overflow:hidden clips content by ${issue.clipped}px: "${issue.text}" (${issue.tag}.${issue.cls}) — reduce content or remove overflow:hidden`));
+        }
+
       } catch (e) {
         results.push(fmtWarn(file, 'PF-XX', `Playwright check failed: ${e.message}`));
       }
@@ -1736,10 +1916,25 @@ function checkConsistency(allMetrics) {
  * @param {{ full?: boolean }} options
  * @returns {Promise<{ errors: string[], warnings: string[], passed: boolean }>}
  */
+// Parse an ANSI-formatted issue line into a structured object
+function parseIssueLine(line) {
+  const plain = line.replace(/\x1b\[[0-9;]*m/g, '');
+  const level = plain.includes('ERROR') ? 'ERROR' : 'WARN';
+  const fileMatch = plain.match(/\[([^\]]+)\]/);
+  const ruleMatch = plain.match(/\] (PF-\d+):/);
+  const msgMatch = plain.match(/PF-\d+: (.+)/);
+  return {
+    file: fileMatch ? fileMatch[1] : 'unknown',
+    rule: ruleMatch ? ruleMatch[1] : 'UNKNOWN',
+    level,
+    message: msgMatch ? msgMatch[1] : plain,
+  };
+}
+
 export async function preflightCheck(slidesDir, options = {}) {
   const absDir = path.resolve(slidesDir);
   const files = fs.readdirSync(absDir)
-    .filter(f => /^slide-\d+\.html$/.test(f))
+    .filter(f => /^slide-\d+[^]*\.html$/.test(f))
     .sort();
 
   if (files.length === 0) {
@@ -1781,6 +1976,15 @@ export async function preflightCheck(slidesDir, options = {}) {
     }
   }
 
+  // --json mode: also return structured array
+  if (options.json) {
+    const structured = [
+      ...errors.map(parseIssueLine),
+      ...warnings.map(parseIssueLine),
+    ];
+    return { errors, warnings, passed: errors.length === 0, structured };
+  }
+
   return { errors, warnings, passed: errors.length === 0 };
 }
 
@@ -1793,23 +1997,33 @@ async function main() {
   let slidesDir = null;
   let full = false;
   let summary = false;
+  let json = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--slides-dir' && args[i + 1]) slidesDir = args[++i];
     if (args[i] === '--full') full = true;
     if (args[i] === '--summary') summary = true;
+    if (args[i] === '--json') json = true;
   }
 
   if (!slidesDir) {
-    console.error('Usage: node scripts/preflight-html.js --slides-dir <dir> [--full] [--summary]');
+    console.error('Usage: node scripts/preflight-html.js --slides-dir <dir> [--full] [--summary] [--json]');
     process.exit(1);
   }
 
-  console.log(`${BOLD}Pre-flight HTML check: ${path.resolve(slidesDir)}${RESET}`);
-  if (full) console.log('  (Playwright checks enabled with --full)\n');
-  else console.log('  (Static checks only \u2014 use --full for Playwright overflow/CJK checks)\n');
+  if (!json) {
+    console.log(`${BOLD}Pre-flight HTML check: ${path.resolve(slidesDir)}${RESET}`);
+    if (full) console.log('  (Playwright checks enabled with --full)\n');
+    else console.log('  (Static checks only \u2014 use --full for Playwright overflow/CJK checks)\n');
+  }
 
-  const result = await preflightCheck(slidesDir, { full });
+  const result = await preflightCheck(slidesDir, { full, json });
+
+  // --json: output structured JSON and exit
+  if (json) {
+    console.log(JSON.stringify(result.structured || [], null, 2));
+    process.exit(result.passed ? 0 : 1);
+  }
 
   if (summary) {
     // --summary: ERROR detailed, WARN aggregated by rule ID

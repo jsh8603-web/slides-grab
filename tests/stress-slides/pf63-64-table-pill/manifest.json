@@ -1,0 +1,56 @@
+{
+  "name": "PF-63/64 스트레스 테스트",
+  "description": "HTML <table> 사용 (PF-63) + flex-wrap pill 레이아웃 (PF-64) 탐지",
+  "cases": [
+    {
+      "slide": "slide-01.html",
+      "description": "TP: 기본 HTML <table> — PF-63 ERROR",
+      "expect": { "PF-63": "ERROR" }
+    },
+    {
+      "slide": "slide-02.html",
+      "description": "TP: 중첩 table (table 안에 table) — PF-63 ERROR 2회",
+      "expect": { "PF-63": "ERROR" }
+    },
+    {
+      "slide": "slide-03.html",
+      "description": "FP 방지: div 기반 grid (table 없음) — PF-63 clean",
+      "expect": { "PF-63": null }
+    },
+    {
+      "slide": "slide-04.html",
+      "description": "Edge: 주석 안의 <table> — PF-63 clean (주석 무시)",
+      "expect": { "PF-63": null }
+    },
+    {
+      "slide": "slide-05.html",
+      "description": "TP: flex-wrap + 6개 pill 자식 — PF-64 WARN",
+      "expect": { "PF-64": "WARN" }
+    },
+    {
+      "slide": "slide-06.html",
+      "description": "FP 방지: flex-wrap + 2개 자식 (pill 미달) — PF-64 clean",
+      "expect": { "PF-64": null }
+    },
+    {
+      "slide": "slide-07.html",
+      "description": "FP 방지: flex nowrap (wrap 아님) + 6개 자식 — PF-64 clean",
+      "expect": { "PF-64": null }
+    },
+    {
+      "slide": "slide-08.html",
+      "description": "Edge: flex-wrap + 4개 자식 (경계값) + pill 스타일 — PF-64 WARN",
+      "expect": { "PF-64": "WARN" }
+    },
+    {
+      "slide": "slide-09.html",
+      "description": "Edge: flex-wrap + 4개 자식 but pill 1개만 (pill 미달) — PF-64 clean",
+      "expect": { "PF-64": null }
+    },
+    {
+      "slide": "slide-10.html",
+      "description": "복합: table + flex-wrap pill 동시 — PF-63 ERROR + PF-64 WARN",
+      "expect": { "PF-63": "ERROR", "PF-64": "WARN" }
+    }
+  ]
+}

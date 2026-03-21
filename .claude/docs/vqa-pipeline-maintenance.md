@@ -14,7 +14,7 @@
 | **IC** | IC 검증 프롬프트/임계값 | `plan-skill/SKILL.md` 아웃라인 이미지 설명 규칙 | IL 기록 + 추상 메타포 대체 |
 | **VQA** | `scoreImageWithVQA` 프롬프트/임계값 | `nanoBanana-guide.md` + `enhancePrompt()` | IL 기록 + 해당 카테고리 게이트 하향 |
 
-체크리스트: 오탐/정탐-수정 → `CLAUDE.md` §공통 절차 A~I, 정탐-한계 → 간소화 A~D.
+체크리스트: 오탐/정탐-수정 → `CLAUDE.md` §공통 절차 A~I, 정탐-한계 → 간소화 A~C.
 
 **기록 의무 (판정 무관):** 모든 에러를 `pptx-inspection-log.md`에 기록. 오탐은 "오탐", 정탐-한계는 "정탐-한계 + 한계 원인" 명시.
 

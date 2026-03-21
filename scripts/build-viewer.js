@@ -89,7 +89,7 @@ const OUTPUT = join(SLIDES_DIR, 'viewer.html');
 let slideFiles = [];
 try {
   slideFiles = readdirSync(SLIDES_DIR)
-    .filter(f => /^slide-\d+\.html$/.test(f))
+    .filter(f => /^slide-\d+[^]*\.html$/.test(f))
     .sort((a, b) => {
       const numA = parseInt(a.match(/\d+/)[0], 10);
       const numB = parseInt(b.match(/\d+/)[0], 10);

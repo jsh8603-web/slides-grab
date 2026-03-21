@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><style>
+body { margin: 0; width: 720pt; height: 405pt; font-family: sans-serif; background: #0f172a; color: #fff; }
+.hero { display: flex; align-items: baseline; gap: 8pt; }
+.hero-val { font-size: 42pt; font-weight: 800; color: #f59e0b; }
+.hero-unit { font-size: 16pt; color: #94a3b8; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-top: 20pt; }
+.cell { background: #1e293b; border-radius: 8pt; padding: 14pt; }
+</style></head>
+<body>
+<!-- FP-2: Flex baseline + grid siblings — should NOT trigger overlap -->
+<div class="hero">
+  <p class="hero-val"><span>$613B</span></p>
+  <p class="hero-unit"><span>market size</span></p>
+</div>
+<div class="grid">
+  <div class="cell"><p>Grid cell 1 with text content here</p></div>
+  <div class="cell"><p>Grid cell 2 with text content here</p></div>
+  <div class="cell"><p>Grid cell 3 with text content here</p></div>
+  <div class="cell"><p>Grid cell 4 with text content here</p></div>
+</div>
+</body></html>

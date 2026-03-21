@@ -137,7 +137,7 @@ Step 7: Export PDF            → Final output
 |-----------|-------|----------------|
 | **PF** (Preflight) | HTML generation | Font, overflow, contrast, layout rules |
 | **VP** (Validate PPTX) | After conversion | PPTX XML structure integrity |
-| **COM** (Compare) | After conversion | HTML vs PPTX visual comparison |
+| **COM/VV** (Vision Validation) | After conversion | Gemini Vision HTML vs PPTX visual fidelity comparison |
 | **IP** (Image Prompt) | Before generation | Prompt quality and safety |
 | **IV** (Image Validation) | After generation | Size, brightness, format checks |
 | **VQA** (Visual QA) | After generation | AI-scored image quality (27.5 max) |
@@ -166,10 +166,24 @@ Every detected issue is classified before fixing:
 
 `post-compact-restore.mjs` (PostCompact hook) restores session context after auto-compression.
 
+`auto-checklist.mjs` auto-injects placeholder checklists into progress.md when pipeline scripts detect ERRORs:
+
+```
+Pipeline script detects ERROR (PF/VP/CONTRAST/COM/IP/IV)
+  -> auto-checklist.mjs adds to progress.md:
+     ### Issue #N: {pipeline} ERROR {count} ({slides}) -- auto-generated
+     - [ ] A. Classification: (pending)
+  -> Agent tries to edit slide HTML
+  -> Guard Rule 3: classification pending -> BLOCK
+  -> Agent must complete 3-category classification before editing
+```
+
+Integrated in: `convert-native.mjs` (PF/VP/CONTRAST errors), `generate-images.mjs` (IP/IV/IMG errors)
+
 ### Tests
 
 ```bash
-node tests/test-guard.mjs                                    # Guard rule tests (21 cases)
+node tests/test-guard.mjs                                    # Guard rule tests (33 cases)
 node tests/test-guard.mjs --validate slides/presentation-name  # Validate progress.md pipeline
 ```
 
@@ -179,7 +193,7 @@ node tests/test-guard.mjs --validate slides/presentation-name  # Validate progre
 |------|-----------|-------------|
 | PF | Preflight | HTML static validation |
 | VP | Validate PPTX | PPTX XML structure validation |
-| COM | Compare | HTML vs PPTX visual comparison |
+| COM/VV | Vision Validation | Gemini Vision HTML vs PPTX visual fidelity comparison (VC-01~08) |
 | IC | Image in Context | Image-slide context match |
 | IV | Image Validation | Image quality validation |
 | IP | Image Prompt | Image prompt validation |

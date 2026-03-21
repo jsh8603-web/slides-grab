@@ -929,6 +929,8 @@ function checkShapeOverlap(shapes, slideNum) {
       const aHasText = shapeText(a).length > 0;
       const bHasText = shapeText(b).length > 0;
       if ((!aHasText && a.fillColor && bHasText) || (!bHasText && b.fillColor && aHasText)) continue;
+      // Skip fill-only pairs: neither shape has text → no readability impact
+      if (!aHasText && !bHasText) continue;
 
       const overlapW = Math.min(aRight, bRight) - Math.max(a.x, b.x);
       const overlapH = Math.min(aBottom, bBottom) - Math.max(a.y, b.y);
@@ -938,6 +940,15 @@ function checkShapeOverlap(shapes, slideNum) {
         const aArea = a.w * a.h;
         const bArea = b.w * b.h;
         const smallerArea = Math.min(aArea, bArea);
+        // Skip layout neighbor overlaps: shapes aligned in a row/column with thin overlap strip
+        // (html2pptx conversion artifact from flex/grid layouts)
+        const yOverlap = Math.min(aBottom, bBottom) - Math.max(a.y, b.y);
+        const minH = Math.min(a.h, b.h);
+        const xOverlap = Math.min(aRight, bRight) - Math.max(a.x, b.x);
+        const minW = Math.min(a.w, b.w);
+        // Same row (>50% vertical overlap) with thin horizontal strip, or same column with thin vertical strip
+        if ((yOverlap > minH * 0.5 && xOverlap < minW * 0.25) ||
+            (xOverlap > minW * 0.5 && yOverlap < minH * 0.25)) continue;
         const pct = Math.round(overlapArea / smallerArea * 100);
 
         if (pct >= 5) {
@@ -1214,7 +1225,7 @@ async function loadPptxInMemory(pptxPath) {
  * @param {string} pptxPath - Path to the .pptx file
  * @returns {{ errors: Array, warnings: Array, passed: boolean }}
  */
-export async function validatePptx(pptxPath) {
+export async function validatePptx(pptxPath, options = {}) {
   if (!fs.existsSync(pptxPath)) {
     throw new Error(`File not found: ${pptxPath}`);
   }
@@ -1271,8 +1282,10 @@ export async function validatePptx(pptxPath) {
       });
     }
 
-    console.log(`\nValidating ${path.basename(pptxPath)}`);
-    console.log(`Slide size: ${emuToInches(slideW)}" x ${emuToInches(slideH)}" (${slideEntries.length} slides)\n`);
+    if (!options.quiet) {
+      console.log(`\nValidating ${path.basename(pptxPath)}`);
+      console.log(`Slide size: ${emuToInches(slideW)}" x ${emuToInches(slideH)}" (${slideEntries.length} slides)\n`);
+    }
 
     for (const { name: slidePath, num: slideNum } of slideEntries) {
       const slideXml = zipFiles.get(slidePath);
@@ -1323,11 +1336,12 @@ function formatIssue(issue) {
 }
 
 function parseCliArgs(argv) {
-  const args = { input: null };
+  const args = { input: null, json: false };
   for (let i = 0; i < argv.length; i++) {
     if ((argv[i] === '--input' || argv[i] === '-i') && argv[i + 1]) {
       args.input = argv[++i];
     }
+    if (argv[i] === '--json') args.json = true;
   }
   return args;
 }
@@ -1336,12 +1350,19 @@ async function main() {
   const args = parseCliArgs(process.argv.slice(2));
 
   if (!args.input) {
-    console.error('Usage: node scripts/validate-pptx.js --input <path-to.pptx>');
+    console.error('Usage: node scripts/validate-pptx.js --input <path-to.pptx> [--json]');
     process.exit(1);
   }
 
   try {
     const { errors, warnings, passed } = await validatePptx(args.input);
+
+    // --json: output structured JSON and exit
+    if (args.json) {
+      const all = [...errors, ...warnings];
+      console.log(JSON.stringify(all, null, 2));
+      process.exit(passed ? 0 : 1);
+    }
 
     // Print all issues
     for (const w of warnings) console.log(formatIssue(w));

@@ -74,12 +74,13 @@ function parseSlides(text) {
   const slides = [];
   // Normalize line endings for consistent regex matching
   const normalized = text.replace(/\r\n/g, "\n");
-  // Split by ### Slide N headings
-  const slideBlocks = normalized.split(/(?=### Slide \d+)/);
+  // Split by ### Slide N or ## 슬라이드 N headings
+  const slideBlocks = normalized.split(/(?=(?:### Slide|## 슬라이드) \d+)/);
 
   for (const block of slideBlocks) {
+    // Match English "### Slide N - Title" or Korean "## 슬라이드 N: Title"
     const headerMatch = block.match(
-      /^### Slide (\d+)\s*-\s*(.+?)$/m
+      /^(?:### Slide|## 슬라이드) (\d+)\s*[-:]\s*(.+?)$/m
     );
     if (!headerMatch) continue;
 

@@ -74,7 +74,7 @@ start http://localhost:{포트}/ 2>/dev/null || powershell -Command "Start-Proce
 **사용자 피드백 = 무조건 정탐** (오탐 불가). 슬라이드 HTML 수정 전에 반드시:
 1. **3분류 판정**: 정탐-수정 / 정탐-한계 판정
 2. **파이프라인 귀속**: "어떤 파이프라인이 이걸 잡았어야 하는가?" 판단
-3. **체크리스트 생성**: progress.md에 해당 체크리스트(A~I 또는 간소화 A~D) 추가
+3. **체크리스트 생성**: progress.md에 해당 체크리스트(A~I 또는 간소화 A~C) 추가
 4. **A. 판정 완료**: `[x] A. 판정:` 체크 후에만 HTML 수정 시작
 
 **하드 가드**: `checklist-guard.mjs`가 슬라이드 HTML 수정을 감시. progress.md에 판정(A항목) 미완료 이슈가 있으면 Edit/Write 차단.

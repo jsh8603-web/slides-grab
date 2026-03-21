@@ -26,16 +26,14 @@ No Design Mode specified → **Minimal**. Mode details in `.claude/docs/design-m
 ### Common Rules (All Modes)
 - Slide size: 720pt x 405pt (16:9)
 - Bottom margin: 0.5" minimum
-- **Typography Hard Floor**: 10pt 미만 금지. 콘텐츠 초과 시 슬라이드 분할
 - **슬라이드 밀도 제한**: 표+계산박스+수식 동시 배치 시 분할 의무
 - **콘텐츠 균형**: 좌우/상하 분할 시 콘텐츠에 비례 (50:50 고정 금지)
 - **빈 공간 활용**: 30%+ 빈 공간+다른 영역 넘침 → 레이아웃 재설계
-- Text in `<p>`, `<h1>`-`<h6>`, `<li>` only
-- `<p>`, `<h1>`-`<h6>`, `<li>`에 background/border 금지 → `<div>` 래핑
 - Inline text: `<span>`으로 감싸서 editor selectability 확보
 - NanoBanana image: `assets/slide-{NN}-{slug}.png`, 비율은 컨테이너에 맞춤
 - **AI 이미지 금지**: 가짜 데이터(차트/표/숫자), AI 이미지 내 한글 텍스트
 - PPTX inspection log: `.claude/docs/pptx-inspection-log.md` 확인 후 생성
+- **PPTX 호환 규칙**: `.claude/docs/html-prevention-rules.md` 참조 (금지/필수 규칙의 단일 소스)
 
 ---
 
@@ -67,7 +65,7 @@ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-s
 
 ## Typography System
 
-### Font Size Scale (Hard Floor — 위반 금지)
+### Font Size Scale
 
 | Purpose | Size | Min | Weight |
 |---------|------|:---:|--------|
@@ -79,40 +77,14 @@ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-s
 | Caption | 12-14pt | **10pt** | 400 |
 | Label | 10-12pt | **10pt** | 500-600 |
 
-Hard Floor 위반 시: 텍스트 축약 → 항목 수 줄이기 → 슬라이드 분할 → 레이아웃 변경
-
-### 슬라이드 텍스트 밀도 제한 (PF-28)
-
-**계산**: `word_equiv = latin_words + ceil(cjk_chars / 2)`
-
-| 수준 | word equiv | 조치 |
-|------|:---------:|------|
-| 정상 | ≤ 80 | — |
-| WARN | 81–120 | 축약 검토 |
-| ERROR | > 120 | 슬라이드 분할 필수 |
-
-생성 시: 표 `행×열×셀평균(CJK 3-5자)` → word equiv 추산. 120 초과 예상 시 분할.
-
-### 텍스트-배경 대비 (PF-24)
-
-| 텍스트 크기 | 최소 대비 |
-|------------|:--------:|
-| 24pt+ | 3:1 |
-| 24pt 미만 | 4.5:1 |
-
-밝은 배경→어두운 텍스트(#333333↓), 어두운 배경→밝은 텍스트. 중간톤 배경(#999 근처) 사용 금지.
+Hard Floor·밀도 제한·대비 기준 → `html-prevention-rules.md` §최소 폰트 사이즈, §밀도 제한, §텍스트-배경 대비 참조
 
 ---
 
 ## Layout System
 
 ### PPTX-Compatible Templates
-`templates/layouts.css` 참조. 주요 호환성 수정 포함:
-- **분할 레이아웃**: `box-sizing: border-box`, `overflow: hidden`, `min-width: 0`
-- **카드 그리드**: max-items 제한, 안전 padding/gap
-- **CSS Grid 테이블**: 고정 pt 컬럼, 헤더/교차 배경 필수
-- **전체 배경+텍스트**: 단색 오버레이, text-shadow
-- **배지/태그**: `min-width: 40pt`, `white-space: nowrap`
+`templates/layouts.css` 참조. PPTX 호환 상세 → `html-prevention-rules.md` 참조
 
 ### Spacing Standards
 ```css
@@ -136,29 +108,15 @@ grid-template-columns: 1fr 1.618fr;   /* Golden ratio */
 
 차트, 다이어그램, SVG 아이콘, 이미지 사용 시 → `media-guide.md` 참조.
 
-### CSS 차트 필수 규칙 (IL-67~69)
-- **바 높이 공식**: `max_bar_height = container_height - label_height(~14pt) - gap(~4pt)`. overflow:hidden 컨테이너에서 라벨 잘림 방지
-- **다중 시리즈 라벨**: 2개 이상 시리즈 비교 차트는 **모든 시리즈에 라벨 필수** (강조 대상만 라벨링 금지)
-- **배경 이미지 위 텍스트**: 반드시 불투명 오버레이(`background: #색상; opacity: 0.5~0.7`) + `text-shadow` 적용. `rgba()` 금지 (PF-36 위반)
+### CSS 차트/이미지 규칙
+차트·다이어그램·배경이미지 PPTX 호환 규칙 → `html-prevention-rules.md` 참조 (IL-67~69, PF-36, PF-66 등)
 
 ---
 
 ## Text Usage Rules
 
-```html
-<!-- All text in block tags -->
-<p>, <h1>-<h6>, <ul>, <ol>, <li>
-
-<!-- span OK as inline wrapper INSIDE block tags -->
-<p><span>text</span></p>                              <!-- ✅ -->
-<div style="background:..."><span>text</span></div>    <!-- ✅ -->
-
-<!-- Forbidden -->
-<span>text without block parent</span>                 <!-- ❌ -->
-```
-
-### Inline Text Wrapping (Editor Selectability)
 `<p>` 안의 모든 텍스트 조각을 `<span>`으로 감싸야 editor에서 개별 선택 가능.
+텍스트 태그 규칙·금지 패턴 → `html-prevention-rules.md` 참조
 
 ---
 
@@ -184,8 +142,6 @@ Template files in `templates/`: cover, contents, section-divider, content, stati
 
 ## Important Notes
 
-1. **CSS gradients**: `linear-gradient` + 흰색 텍스트 절대 금지 (텍스트 사라짐). 단색 대체
-2. **Webfonts**: Pretendard CDN 필수
-3. **Image paths**: Absolute paths or URLs
-4. **Colors**: CSS에 `#` prefix 포함
-5. **Text**: Never place text directly in div without block tag
+1. **Webfonts**: Pretendard CDN 필수
+2. **Image paths**: Absolute paths or URLs
+3. **Colors**: CSS에 `#` prefix 포함

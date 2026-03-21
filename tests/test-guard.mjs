@@ -272,7 +272,7 @@ function runPhaseB() {
   }
 
   // B2: Rule 1 ALLOW — pipeline file edit with open checklist
-  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 원인 수정\n`);
   {
     const r = invokeGuard('scripts/preflight-html.js');
     assert('B2', 'Rule 1 허용: pipeline edit with open checklist', r.exitCode === 0,
@@ -280,7 +280,7 @@ function runPhaseB() {
   }
 
   // B3: Rule 3 BLOCK — slide HTML edit with A.판정 unchecked
-  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 원인 수정\n`);
   {
     const r = invokeGuard('slides/_guard-test/slide-01.html');
     assert('B3', 'Rule 3 차단: slide edit with 판정 unchecked', r.blocked && r.hasAnalysis,
@@ -288,7 +288,7 @@ function runPhaseB() {
   }
 
   // B4: Rule 3 ALLOW — slide HTML edit with A.판정 checked
-  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 원인 수정\n`);
   {
     const r = invokeGuard('slides/_guard-test/slide-01.html');
     assert('B4', 'Rule 3 허용: slide edit with 판정 checked', r.exitCode === 0,
@@ -304,7 +304,7 @@ function runPhaseB() {
   }
 
   // B6: Rule 2 WARNING — progress.md edit with open items (stderr warning, exit 0)
-  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정\n- [ ] B. 원인 수정\n`);
   {
     const r = invokeGuard('slides/_guard-test/progress.md');
     assert('B6', 'Rule 2 경고: progress.md edit with open items', r.exitCode === 0 && r.stderr.includes('미완료'),
@@ -418,7 +418,7 @@ function runPhaseD() {
   }
 
   // C9: CLAUDE.md Write with checklist + all required sections → ALLOW
-  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 수정 이력\n### 이슈 #1: test\n- [ ] A. 판정: 정탐-수정\n- [ ] B. 원인 수정\n`);
   {
     const fullContent = [
       '# CLAUDE.md',
@@ -466,7 +466,7 @@ function runPhaseD() {
 
   // C12: "### 정탐-수정 #N:" heading recognized as issue section → has open checklist
   setup();
-  writeProgress(`# Progress\n## 이벤트 발생\n### 정탐-수정 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 코드 수정\n`);
+  writeProgress(`# Progress\n## 이벤트 발생\n### 정탐-수정 #1: test\n- [x] A. 판정: 정탐-수정\n- [ ] B. 원인 수정\n`);
   {
     const r = invokeGuard('scripts/preflight-html.js');
     // Should be ALLOWED because there IS an open checklist ([ ] B.)
@@ -575,6 +575,301 @@ async function runPhaseE() {
   cleanup();
 }
 
+// ─── Phase F: Rule 7 Completion Gate Tests ───────────────────────
+
+async function runPhaseF() {
+  console.log('\n--- Phase F: Rule 7 Completion Gate Tests ---\n');
+
+  // F1: 정탐-수정 [ ] 남음 + 다른 slide Edit → BLOCK 7a
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient text
+- [x] A. 판정: 정탐-수정
+- [ ] B. 원인 수정: PF 규칙 추가
+- [ ] C. 재검증
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-05.html');
+    assert('F1', 'Rule 7a 차단: 정탐-수정 미완료 + 다른 slide', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F2: 정탐-수정 [ ] 남음 + 이슈 내 slide Edit → ALLOW
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.html');
+    assert('F2', 'Rule 7a 허용: 정탐-수정 미완료 + 이슈 내 slide', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F3: 정탐-한계 [ ] 남음 + 다른 slide Edit → ALLOW
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: VP WARN (slide-02) — 변환 한계
+- [x] A. 판정: 정탐-한계
+- [ ] B. IL 기록
+- [ ] C. 회피 규칙
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-05.html');
+    assert('F3', 'Rule 7a 허용: 정탐-한계는 Rule 7 미적용', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F4: 오탐 [ ] 남음 + 다른 slide Edit → BLOCK 7a
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: PF 오탐 (slide-03) — false positive
+- [x] A. 판정: 오탐
+- [ ] B. 탐지 코드 수정
+- [ ] C. 테스트 실행
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-07.html');
+    assert('F4', 'Rule 7a 차단: 오탐 미완료 + 다른 slide', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F5: 정탐-수정 전부 [x] + 다른 slide Edit → ALLOW
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient text
+- [x] A. 판정: 정탐-수정
+- [x] B. 원인 수정: PF-60 규칙 추가
+- [x] C. 재검증: PF PASS
+- [x] D. change-log C-01 기록
+- [x] E. 회귀 테스트 PASS
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-05.html');
+    assert('F5', 'Rule 7a 허용: 정탐-수정 전부 완료 + 다른 slide', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F6: Write progress.md: 정탐-수정 전부 [x], 코드 항목 없음 → BLOCK 7b
+  setup();
+  writeProgress('dummy');
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient text
+- [x] A. 판정: 정탐-수정
+- [x] B. HTML 수정 완료
+- [x] C. 확인 완료
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F6', 'Rule 7b 차단: 정탐-수정 완료인데 코드/change-log/테스트 누락', r.blocked && r.json?.additionalContext?.includes('Rule 7b'),
+      `blocked=${r.blocked}, analysis includes 7b=${r.json?.additionalContext?.includes('Rule 7b')}`);
+  }
+
+  // F7: Write progress.md: 정탐-수정 전부 [x], 필수 항목 있음 → ALLOW
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient text
+- [x] A. 판정: 정탐-수정
+- [x] B. 탐지 코드 수정: PF-60 규칙 추가
+- [x] C. 재검증: preflight PASS
+- [x] D. change-log C-01 기록
+- [x] E. 회귀 테스트 PASS
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F7', 'Rule 7b 허용: 정탐-수정 완료 + 필수 항목 존재', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F8: Write progress.md: 오탐 전부 [x], 테스트 없음 → BLOCK 7b
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF 오탐 (slide-03)
+- [x] A. 판정: 오탐
+- [x] B. 탐지 코드 수정: PF-50 조건 완화
+- [x] C. change-log C-02 기록
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F8', 'Rule 7b 차단: 오탐 완료인데 테스트 없음', r.blocked && r.json?.additionalContext?.includes('Rule 7b'),
+      `blocked=${r.blocked}, analysis includes 7b=${r.json?.additionalContext?.includes('Rule 7b')}`);
+  }
+
+  // F9: B~I placeholder + 다른 slide Edit → ALLOW (Rule 3이 처리)
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR 2건 (slide-01, slide-03) — 자동 생성
+- [ ] A. 판정: (미입력 — 오탐/정탐-수정/정탐-한계 중 선택)
+- [ ] B~I. (판정 후 체크리스트 완성)
+`);
+  {
+    // Rule 3 will block this for 판정 missing, but Rule 7a should NOT trigger
+    // because isExpanded=false (B~I placeholder)
+    const r = invokeGuard('slides/_guard-test/slide-05.html');
+    // It will be blocked by Rule 3 (판정 missing), not by 7a
+    assert('F9', 'Placeholder: Rule 3 차단 (7a 아님)', r.blocked && !r.reason.includes('7a'),
+      `blocked=${r.blocked}, reason=${(r.reason || '').slice(0, 80)}`);
+  }
+
+  // F10: 이슈 2개: 1개 완료 + 1개 미완료(정탐-수정) → BLOCK 7a
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — 완료
+- [x] A. 판정: 정탐-수정
+- [x] B. 원인 수정: PF-60 규칙 추가
+- [x] C. change-log C-01 기록
+- [x] D. 회귀 테스트 PASS
+
+### 이슈 #2: VP ERROR (slide-03) — 미완료
+- [x] A. 판정: 정탐-수정
+- [ ] B. 원인 수정: VP 규칙 추가
+- [ ] C. 재검증
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/slide-07.html');
+    assert('F10', 'Rule 7a 차단: 2개 이슈 중 1개 미완료 + 다른 slide', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F11: 정탐-수정 open (slide-01) + outline.md Edit → BLOCK 7a (비-HTML 콘텐츠)
+  setup();
+  writeProgress(`# Progress
+## 수정 이력
+### 이슈 #1: IV ERROR (slide-01) — 이미지 품질
+- [x] A. 판정: 정탐-수정
+- [ ] B. 원인 수정: IV 규칙 추가
+- [ ] C. 재검증
+`);
+  {
+    const r = invokeGuard('slides/_guard-test/outline.md');
+    assert('F11', 'Rule 7a 차단: 이미지 파이프라인 이슈 + outline.md 수정', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F12: 정탐-수정 open (slide-01) + assets/image-05.png Edit → BLOCK 7a
+  {
+    const r = invokeGuard('slides/_guard-test/assets/image-05.png');
+    assert('F12', 'Rule 7a 차단: 이슈 open + 다른 이미지 파일 수정', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F13: 정탐-수정 open (slide-01) + slide-01.json 관련 파일 Edit → ALLOW
+  {
+    const r = invokeGuard('slides/_guard-test/slide-01.json');
+    assert('F13', 'Rule 7a 허용: 이슈 내 슬라이드와 같은 stem 파일', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F14: Rule 7b — 이미지 파이프라인 (IV) 정탐-수정 닫을 때 테스트 없음 → BLOCK
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: IV ERROR (slide-03) — 이미지 텍스트 감지 실패
+- [x] A. 판정: 정탐-수정
+- [x] B. 탐지 코드 수정: IV 규칙 완화
+- [x] C. change-log C-03 기록
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F14', 'Rule 7b 차단: IV 이슈 닫을 때 테스트 누락', r.blocked && r.json?.additionalContext?.includes('Rule 7b'),
+      `blocked=${r.blocked}, analysis includes 7b=${r.json?.additionalContext?.includes('Rule 7b')}`);
+  }
+
+  // F19: Rule 7b — 테스트 있지만 회귀 없음 → BLOCK
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient
+- [x] A. 판정: 정탐-수정
+- [x] B. 탐지 코드 수정: PF-60 규칙 추가
+- [x] C. change-log C-01 기록
+- [x] D. 테스트 PASS
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F19', 'Rule 7b 차단: 테스트 있지만 회귀 테스트 없음', r.blocked && r.json?.additionalContext?.includes('Rule 7b'),
+      `blocked=${r.blocked}, analysis includes 7b=${r.json?.additionalContext?.includes('Rule 7b')}`);
+  }
+
+  // F20: Rule 7b — 회귀 있지만 테스트 통과 없음 → BLOCK
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient
+- [x] A. 판정: 정탐-수정
+- [x] B. 탐지 코드 수정: PF-60 규칙 추가
+- [x] C. change-log C-01 기록
+- [x] D. 회귀 확인 예정
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F20', 'Rule 7b 차단: 회귀 있지만 테스트 통과 없음', r.blocked && r.json?.additionalContext?.includes('Rule 7b'),
+      `blocked=${r.blocked}, analysis includes 7b=${r.json?.additionalContext?.includes('Rule 7b')}`);
+  }
+
+  // F21: Rule 7b — 테스트 통과 + 회귀 모두 있음 → ALLOW
+  {
+    const newContent = `# Progress
+## 수정 이력
+### 이슈 #1: PF ERROR (slide-01) — gradient
+- [x] A. 판정: 정탐-수정
+- [x] B. 탐지 코드 수정: PF-60 규칙 추가
+- [x] C. change-log C-01 기록
+- [x] D. 회귀 테스트 PASS
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F21', 'Rule 7b 허용: 테스트 통과 + 회귀 모두 존재', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F15: auto-checklist WARN severity — 체크리스트 주입 + 라벨 확인
+  setup();
+  writeProgress(`# Progress\n## 이벤트 발생\n\n## 탐지 코드 수정 검증\n`);
+  {
+    const { injectChecklist } = await import(pathToFileURL(join(PROJECT_ROOT, 'scripts/auto-checklist.mjs')).href);
+    const injected = injectChecklist(TEST_DIR, {
+      pipeline: 'PF',
+      errors: ['[slide-02.html] PF-23: CJK overflow'],
+      severity: 'WARN'
+    });
+    assert('F15', 'WARN severity 체크리스트 주입 성공', injected === true, `injected=${injected}`);
+    const content = readFileSync(join(TEST_DIR, 'progress.md'), 'utf8');
+    assert('F15b', 'WARN 라벨 포함', content.includes('PF WARN 1건'),
+      `has PF WARN: ${content.includes('PF WARN 1건')}`);
+  }
+
+  // F16: WARN 체크리스트도 가드가 판정 미완료로 차단
+  {
+    const r = invokeGuard('slides/_guard-test/slide-02.html');
+    assert('F16', 'WARN 체크리스트도 판정 미완료 시 slide 수정 차단', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F17: WARN 정탐-수정 이슈 open + 다른 slide → BLOCK 7a
+  {
+    let content = readFileSync(join(TEST_DIR, 'progress.md'), 'utf8');
+    content = content.replace(
+      '- [ ] A. 판정: (미입력 — 오탐/정탐-수정/정탐-한계 중 선택)',
+      '- [x] A. 판정: 정탐-수정 — PF-23 조건 조정 필요'
+    ).replace(
+      '- [ ] B~I. (판정 후 체크리스트 완성)',
+      '- [ ] B. 탐지 코드 수정\n- [ ] C. 테스트'
+    );
+    writeFileSync(join(TEST_DIR, 'progress.md'), content, 'utf8');
+    const r = invokeGuard('slides/_guard-test/slide-05.html');
+    assert('F17', 'WARN 정탐-수정 미완료 + 다른 slide → BLOCK 7a', r.blocked && r.json?.additionalContext?.includes('Rule 7a'),
+      `blocked=${r.blocked}, analysis includes 7a=${r.json?.additionalContext?.includes('Rule 7a')}`);
+  }
+
+  // F18: WARN 정탐-수정 이슈의 해당 slide → ALLOW
+  {
+    const r = invokeGuard('slides/_guard-test/slide-02.html');
+    assert('F18', 'WARN 정탐-수정 미완료 + 이슈 내 slide → ALLOW', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  cleanup();
+}
+
 // ─── Main ──────────────────────────────────────────────────────────
 
 console.log('=== Checklist Guard Tests ===');
@@ -582,6 +877,7 @@ runPhaseB();
 runPhaseC();
 runPhaseD();
 await runPhaseE();
+await runPhaseF();
 
 console.log(`\n=== Results: ${passed} passed, ${failed} failed ===`);
 if (failures.length > 0) {

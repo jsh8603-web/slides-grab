@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><style>
+body { margin: 0; width: 720pt; height: 405pt; font-family: sans-serif; background: #fff; }
+.cards { display: flex; gap: 12pt; }
+.card { flex: 1; background: #f0f0f0; border-radius: 8pt; padding: 16pt; }
+</style></head>
+<body>
+<!-- FP-1: Flex siblings — cards should NOT trigger overlap -->
+<div class="cards">
+  <div class="card">
+    <h2>Card One</h2>
+    <p>Description text for card one with details</p>
+  </div>
+  <div class="card">
+    <h2>Card Two</h2>
+    <p>Description text for card two with details</p>
+  </div>
+  <div class="card">
+    <h2>Card Three</h2>
+    <p>Description text for card three with more</p>
+  </div>
+</div>
+</body></html>

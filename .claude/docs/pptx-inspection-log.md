@@ -5,7 +5,7 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 
 ### 패턴 번호 규칙 (Append-Only)
 
-- 새 패턴은 **마지막 번호 + 1**로 추가 (현재 마지막: #69, PF 마지막: PF-61, VC 마지막: VC-07)
+- 새 패턴은 **마지막 번호 + 1**로 추가 (현재 마지막: #71, PF 마지막: PF-66, VC 마지막: VC-07)
 - 기존 번호를 재배정하거나 중간에 삽입 금지
 - IL-1~59 상세: `pptx-inspection-log-archive.md` 참조 (해결된 패턴, PF 규칙으로 자동 방지)
 
@@ -74,6 +74,13 @@ Step 2(HTML 생성), Step 2.5(자동화 검증 + COM 고해상도 확인), Step 
 **놓친 파이프라인**: PF (미지원 CSS 목록에 conic-gradient 미등록)
 **예방 규칙**: PF-62 ERROR (conic-gradient), PF-62 WARN (radial-gradient)
 **수정 패턴**: 가로 바 차트(div+width%), 테이블, 또는 숫자 강조 카드로 대체
+
+### 71. CSS 특이성 충돌로 텍스트 색상 소실 (IL-71 / 탐지 불가)
+**증상**: `.tc-risk-high p { color: #EF4444 }`로 빨간색 지정했지만, `.r-odd .tc p { color: #1A1A2E }`가 특이성 우위(0,2,1 > 0,1,1)로 덮어씀 → 의도한 색상 미적용
+**근본 원인**: CSS 특이성(specificity) 규칙 미준수. 더 구체적인 선택자가 우선
+**놓친 파이프라인**: 전부 — HTML 렌더링 자체가 잘못되어 PF(정적), VP(XML), Vision(시각 비교) 모두 탐지 불가
+**예방 규칙**: 자동 탐지 불가. html-prevention-rules.md에 생성 시 주의사항으로 등록
+**수정 패턴**: 특이성 맞추기(`.r-odd .tc.tc-risk-high p`) 또는 inline style 사용
 
 ### 64. 이미지 src 파일명과 실제 assets 파일명 불일치 → 깨진 이미지 (IL-64 / PF-58)
 **증상**: HTML에서 `src="assets/slide-14-three-shields.png"`로 참조하지만 실제 파일은 `slide-14-tax-shield-3-fcff.png` → 브라우저/PPTX에서 이미지 깨짐

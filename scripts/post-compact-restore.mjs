@@ -6,7 +6,7 @@
  * to re-read progress.md and reload active rules.
  */
 
-import { readdirSync, statSync } from 'fs';
+import { readdirSync, statSync, unlinkSync } from 'fs';
 import { join } from 'path';
 
 const PROJECT_ROOT = 'D:/projects/slides-grab';
@@ -35,15 +35,21 @@ if (!progressPath) {
   process.exit(0);
 }
 
+// Delete restore marker to force re-restoration after compaction
+const progressDir = join(progressPath, '..');
+const markerPath = join(progressDir, '.restore-marker');
+try { unlinkSync(markerPath); } catch { /* marker didn't exist */ }
+
 const result = {
   additionalContext: `[PostCompact 세션 복원] 컨텍스트 압축이 발생했습니다.
 
 즉시 실행 (CLAUDE.md §세션 복원 절차):
 1. Read: ${progressPath}
 2. ## 활성 규칙의 [ ] 미체크 항목 → 해당 docs 파일을 Read로 재로드
-3. 미완료 이슈 체크리스트([ ] 항목) → 해당 항목부터 처리
-4. ## 로그 기록 상태의 [ ] 항목 → pptx-inspection-log.md에 먼저 기록
-5. 위 완료 후에만 작업 재개`
+3. Read: .claude/docs/production-reporting-rules.md (보고 규칙 — 모든 Step에서 적용)
+4. 미완료 이슈 체크리스트([ ] 항목) → 해당 항목부터 처리
+5. ## 로그 기록 상태의 [ ] 항목 → pptx-inspection-log.md에 먼저 기록
+6. 위 완료 후에만 작업 재개`
 };
 
 process.stdout.write(JSON.stringify(result));

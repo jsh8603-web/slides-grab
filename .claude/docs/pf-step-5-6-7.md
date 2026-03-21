@@ -103,7 +103,7 @@ node scripts/convert-native.mjs --slides-dir slides/프레젠테이션명 --outp
    - HTML 수정(슬라이드 내용) + PF/VP 규칙 추가(재발 방지) 양쪽 모두 완료해야 게이트 통과
    - 재변환 → VP/COM 재검증 (최대 2회)
    - 오탐/정탐-수정 → A~I 체크리스트 + 코드 수정 + 재검증
-   - 정탐-한계 → 간소화 A~D (IL 기록 + 회피 규칙)
+   - 정탐-한계 → 간소화 A~C (IL 기록 + 회피 규칙)
 
    흔한 VP/COM ERROR → HTML 수정 패턴:
    | VP/COM 코드 | 원인 | HTML 수정 방향 |

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><style>
+body { margin: 0; width: 720pt; height: 405pt; font-family: sans-serif; background: #fff; display: flex; flex-direction: column; }
+.row { display: flex; gap: 10pt; }
+</style></head>
+<body>
+<!-- Edge-2: Nested flex — body is flex, children contain flex, mixed with absolute -->
+<div class="row" style="flex: 1;">
+  <div style="flex: 1; padding: 10pt;">
+    <p style="font-size: 16pt;">Left column text</p>
+  </div>
+  <div style="flex: 1; padding: 10pt; position: relative;">
+    <p style="font-size: 16pt;">Right column text</p>
+    <!-- This absolute element overlaps with the right column text — should be caught -->
+    <p style="position: absolute; top: 5pt; left: 5pt; font-size: 16pt; color: red;">Absolute overlap!</p>
+  </div>
+</div>
+</body></html>
