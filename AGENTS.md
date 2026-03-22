@@ -76,6 +76,6 @@ slides-grab is an agent-first PPT framework. AI agents write HTML slides directl
 4. **JavaScript, not TypeScript** — Use JSDoc for type hints if needed.
 5. **Test scripts by running them** — Use `node scripts/<name>.js` to verify they work.
 6. **Playwright browser reuse** — When processing multiple slides, keep the browser instance open and reuse it across slides for performance.
-7. **Environment variables for API keys** — `GEMINI_API_KEY`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`. Never hardcode keys.
+7. **Environment variables for API keys** — `GEMINI_API_KEY`, `OPENAI_API_KEY`. Never hardcode keys.
 8. **CSS-safe HTML** — All text in semantic tags (`<p>`, `<h1>`-`<h6>`, `<ul>`, `<ol>`), backgrounds only on `<div>` elements.
 9. **Auto-Approval Workflow** — Process all required approvals automatically, apply final file modifications, and execute all actions independently without asking the user for confirmation.
