@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-03-18T15:55:29.392Z",
+  "summary": {
+    "total": 25,
+    "pass": 25,
+    "warn": 20,
+    "fail": 2,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 20.8,
+    "min": 17,
+    "max": 23,
+    "distribution": {
+      "25": 0,
+      "23-24": 3,
+      "20-22": 20,
+      "15-19": 2,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "icon": {
+      "avg": 21.2,
+      "count": 6
+    },
+    "cover": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 20.7,
+      "count": 10
+    }
+  },
+  "by_rule": {
+    "IP-11": 1,
+    "IV-03": 5,
+    "IP-09": 1,
+    "IP-03": 4,
+    "IV-10": 4,
+    "IP-08": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 9,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 2,
+        "color_harmony": 4,
+        "presentation_fit": 3,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 17,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 3,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 4,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": []
+}

@@ -1,0 +1,181 @@
+{
+  "background": {
+    "modern": {
+      "avg": 21,
+      "count": 3
+    },
+    "lighting": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 20.6,
+      "count": 9
+    },
+    "depth": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "close-up": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "soft": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "field": {
+      "avg": 20.3,
+      "count": 4
+    },
+    "close-up of": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "shallow depth": {
+      "avg": 20.3,
+      "count": 4
+    },
+    "depth of": {
+      "avg": 20.3,
+      "count": 4
+    },
+    "of field": {
+      "avg": 20.3,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "blue": {
+      "avg": 20.2,
+      "count": 6
+    },
+    "shallow": {
+      "avg": 20.2,
+      "count": 5
+    },
+    "shot": {
+      "avg": 20.2,
+      "count": 6
+    },
+    "shot of": {
+      "avg": 20.2,
+      "count": 5
+    },
+    "metaphor": {
+      "avg": 20.1,
+      "count": 9
+    },
+    "cool": {
+      "avg": 20,
+      "count": 3
+    },
+    "wide-angle shot": {
+      "avg": 20,
+      "count": 3
+    },
+    "clean": {
+      "avg": 19.8,
+      "count": 6
+    },
+    "wide-angle": {
+      "avg": 19.8,
+      "count": 4
+    },
+    "warm": {
+      "avg": 19.6,
+      "count": 5
+    }
+  },
+  "icon": {
+    "blue": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "white": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "navy": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "on white": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "white background": {
+      "avg": 19.7,
+      "count": 3
+    }
+  },
+  "cover": {},
+  "frame": {
+    "vector style": {
+      "avg": 20.3,
+      "count": 4
+    },
+    "frame": {
+      "avg": 20,
+      "count": 5
+    },
+    "minimal": {
+      "avg": 20,
+      "count": 5
+    },
+    "navy": {
+      "avg": 20,
+      "count": 5
+    },
+    "clean": {
+      "avg": 20,
+      "count": 5
+    },
+    "flat": {
+      "avg": 20,
+      "count": 5
+    },
+    "vector": {
+      "avg": 20,
+      "count": 5
+    },
+    "gray": {
+      "avg": 20,
+      "count": 5
+    },
+    "clean flat": {
+      "avg": 20,
+      "count": 5
+    },
+    "flat vector": {
+      "avg": 20,
+      "count": 5
+    },
+    "light gray": {
+      "avg": 20,
+      "count": 5
+    },
+    "gray background": {
+      "avg": 20,
+      "count": 5
+    },
+    "clean flat vector": {
+      "avg": 20,
+      "count": 5
+    },
+    "blue": {
+      "avg": 19.8,
+      "count": 4
+    },
+    "bold": {
+      "avg": 19.7,
+      "count": 3
+    }
+  }
+}

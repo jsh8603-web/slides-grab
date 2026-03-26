@@ -1,0 +1,823 @@
+{
+  "cover": {
+    "view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atrium": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "corridors": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medical": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "professionals": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "walking": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luminous": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hallway": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "architecture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern hospital": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hospital atrium": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass corridors": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medical professionals": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "professionals walking": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luminous hallway": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green tones": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern hospital atrium": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft ambient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting illuminating glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating glass corridors": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medical professionals walking": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "wide-angle": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "hospital": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "dusk": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "soft": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "green": {
+      "avg": 25,
+      "count": 2,
+      "pf": 4
+    },
+    "aerial": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sprawling": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "golden": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pathways": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "buildings": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "like": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "neural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "networks": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "perspective": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "aerial wide-angle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sprawling green": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green hospital": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hospital campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft golden": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "golden dusk": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk pathways": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pathways connecting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting buildings": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "buildings like": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "like neural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "neural networks": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "networks cinematic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cinematic perspective": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sprawling green hospital": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green hospital campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft golden dusk": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "golden dusk pathways": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk pathways connecting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pathways connecting buildings": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting buildings like": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "buildings like neural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "like neural networks": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "neural networks cinematic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "networks cinematic perspective": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "background": {
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "understated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analytical precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige tones faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting analytical precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "antique": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "compass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "resting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "symbolizing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "navigation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "complex": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medical": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "decisions": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "harmony": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate antique": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "antique compass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "compass resting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "it symbolizing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "symbolizing navigation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "complex medical": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medical decisions": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm wood": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate antique compass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "antique compass resting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "it symbolizing navigation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "complex medical decisions": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

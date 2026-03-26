@@ -1,0 +1,2532 @@
+{
+  "cover": {
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "contemporary": {
+      "avg": 25,
+      "count": 1
+    },
+    "confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate background": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin accent": {
+      "avg": 25,
+      "count": 1
+    },
+    "accent circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle in": {
+      "avg": 25,
+      "count": 1
+    },
+    "right corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner contemporary": {
+      "avg": 25,
+      "count": 1
+    },
+    "contemporary confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "confident mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "central empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty area": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner contemporary confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "coral": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "dark slate": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "warm coral": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 24,
+      "count": 1
+    },
+    "coastal": {
+      "avg": 24,
+      "count": 1
+    },
+    "cliffs": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "ocean": {
+      "avg": 24,
+      "count": 1
+    },
+    "waves": {
+      "avg": 24,
+      "count": 1
+    },
+    "crashing": {
+      "avg": 24,
+      "count": 1
+    },
+    "base": {
+      "avg": 24,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 24,
+      "count": 1
+    },
+    "of dramatic": {
+      "avg": 24,
+      "count": 1
+    },
+    "dramatic coastal": {
+      "avg": 24,
+      "count": 1
+    },
+    "coastal cliffs": {
+      "avg": 24,
+      "count": 1
+    },
+    "cliffs with": {
+      "avg": 24,
+      "count": 1
+    },
+    "slate rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock and": {
+      "avg": 24,
+      "count": 1
+    },
+    "and warm": {
+      "avg": 24,
+      "count": 1
+    },
+    "coral sunset": {
+      "avg": 24,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky ocean": {
+      "avg": 24,
+      "count": 1
+    },
+    "ocean waves": {
+      "avg": 24,
+      "count": 1
+    },
+    "waves crashing": {
+      "avg": 24,
+      "count": 1
+    },
+    "crashing at": {
+      "avg": 24,
+      "count": 1
+    },
+    "at base": {
+      "avg": 24,
+      "count": 1
+    },
+    "base vast": {
+      "avg": 24,
+      "count": 1
+    },
+    "vast sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky area": {
+      "avg": 24,
+      "count": 1
+    },
+    "text overlay": {
+      "avg": 24,
+      "count": 1
+    },
+    "dramatic coastal cliffs": {
+      "avg": 24,
+      "count": 1
+    },
+    "warm coral sunset": {
+      "avg": 24,
+      "count": 1
+    },
+    "coral sunset sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sunset sky ocean": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky ocean waves": {
+      "avg": 24,
+      "count": 1
+    },
+    "ocean waves crashing": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "frame": {
+    "donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring on": {
+      "avg": 25,
+      "count": 1
+    },
+    "first quarter": {
+      "avg": 25,
+      "count": 1
+    },
+    "second quarter": {
+      "avg": 25,
+      "count": 1
+    },
+    "quarter warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth quarter": {
+      "avg": 25,
+      "count": 1
+    },
+    "quarter pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "four segments": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments total": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "venn": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlapping": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal venn": {
+      "avg": 25,
+      "count": 1
+    },
+    "venn diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "left circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle dark": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate right": {
+      "avg": 25,
+      "count": 1
+    },
+    "right circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap area": {
+      "avg": 25,
+      "count": 1
+    },
+    "area blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "blended tone": {
+      "avg": 25,
+      "count": 1
+    },
+    "two circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles total": {
+      "avg": 25,
+      "count": 1
+    },
+    "slightly overlapping": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlapping in": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal venn diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle warm coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "pyramid": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal pyramid": {
+      "avg": 25,
+      "count": 1
+    },
+    "pyramid on": {
+      "avg": 25,
+      "count": 1
+    },
+    "horizontal layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked from": {
+      "avg": 25,
+      "count": 1
+    },
+    "to narrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrow top": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest in": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral top": {
+      "avg": 25,
+      "count": 1
+    },
+    "top layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest in": {
+      "avg": 25,
+      "count": 1
+    },
+    "three layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers total": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "scatter": {
+      "avg": 25,
+      "count": 1
+    },
+    "plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "clusters": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "grouped": {
+      "avg": 25,
+      "count": 1
+    },
+    "together": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal scatter": {
+      "avg": 25,
+      "count": 1
+    },
+    "scatter plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "plot on": {
+      "avg": 25,
+      "count": 1
+    },
+    "two clusters": {
+      "avg": 25,
+      "count": 1
+    },
+    "clusters of": {
+      "avg": 25,
+      "count": 1
+    },
+    "of dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots left": {
+      "avg": 25,
+      "count": 1
+    },
+    "left cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "cluster with": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots grouped": {
+      "avg": 25,
+      "count": 1
+    },
+    "grouped together": {
+      "avg": 25,
+      "count": 1
+    },
+    "together right": {
+      "avg": 25,
+      "count": 1
+    },
+    "right cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "with warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal scatter plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate dots grouped": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots grouped together": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral dots grouped": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "dark slate": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "minimal": {
+      "avg": 24,
+      "count": 7
+    },
+    "chart": {
+      "avg": 24,
+      "count": 2
+    },
+    "stone": {
+      "avg": 24,
+      "count": 7
+    },
+    "medium": {
+      "avg": 24,
+      "count": 2
+    },
+    "warm": {
+      "avg": 24,
+      "count": 7
+    },
+    "coral": {
+      "avg": 24,
+      "count": 7
+    },
+    "light stone": {
+      "avg": 24,
+      "count": 7
+    },
+    "stone background": {
+      "avg": 24,
+      "count": 7
+    },
+    "background first": {
+      "avg": 24,
+      "count": 2
+    },
+    "medium in": {
+      "avg": 24,
+      "count": 2
+    },
+    "warm coral": {
+      "avg": 24,
+      "count": 7
+    },
+    "slate three": {
+      "avg": 24,
+      "count": 2
+    },
+    "light slate": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "in warm": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "fourth": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pale": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "slate fourth": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pale coral": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "coral four": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "diagram": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "diagram on": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "first": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "second": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "slate second": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "coral third": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "bar": {
+      "avg": 23,
+      "count": 2
+    },
+    "tallest": {
+      "avg": 23,
+      "count": 1
+    },
+    "short": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "side": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal vertical": {
+      "avg": 23,
+      "count": 1
+    },
+    "vertical bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 23,
+      "count": 1
+    },
+    "chart frame": {
+      "avg": 23,
+      "count": 1
+    },
+    "first bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar tallest": {
+      "avg": 23,
+      "count": 1
+    },
+    "tallest in": {
+      "avg": 23,
+      "count": 1
+    },
+    "second bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "third bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 23,
+      "count": 1
+    },
+    "short in": {
+      "avg": 23,
+      "count": 1
+    },
+    "vertical bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars total": {
+      "avg": 23,
+      "count": 1
+    },
+    "total side": {
+      "avg": 23,
+      "count": 1
+    },
+    "side by": {
+      "avg": 23,
+      "count": 1
+    },
+    "by side": {
+      "avg": 23,
+      "count": 1
+    },
+    "first bar tallest": {
+      "avg": 23,
+      "count": 1
+    },
+    "slate second bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "second bar medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 23,
+      "count": 1
+    },
+    "progress": {
+      "avg": 23,
+      "count": 1
+    },
+    "centered": {
+      "avg": 23,
+      "count": 1
+    },
+    "long": {
+      "avg": 23,
+      "count": 1
+    },
+    "rounded": {
+      "avg": 23,
+      "count": 1
+    },
+    "rectangle": {
+      "avg": 23,
+      "count": 1
+    },
+    "two-fifths": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "remaining": {
+      "avg": 23,
+      "count": 1
+    },
+    "three-fifths": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "simple": {
+      "avg": 23,
+      "count": 1
+    },
+    "shape": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal horizontal": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal progress": {
+      "avg": 23,
+      "count": 1
+    },
+    "progress bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar centered": {
+      "avg": 23,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 23,
+      "count": 1
+    },
+    "background long": {
+      "avg": 23,
+      "count": 1
+    },
+    "long rounded": {
+      "avg": 23,
+      "count": 1
+    },
+    "rounded rectangle": {
+      "avg": 23,
+      "count": 1
+    },
+    "rectangle left": {
+      "avg": 23,
+      "count": 1
+    },
+    "left two-fifths": {
+      "avg": 23,
+      "count": 1
+    },
+    "two-fifths filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled in": {
+      "avg": 23,
+      "count": 1
+    },
+    "coral remaining": {
+      "avg": 23,
+      "count": 1
+    },
+    "remaining right": {
+      "avg": 23,
+      "count": 1
+    },
+    "right three-fifths": {
+      "avg": 23,
+      "count": 1
+    },
+    "three-fifths in": {
+      "avg": 23,
+      "count": 1
+    },
+    "gray bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 23,
+      "count": 1
+    },
+    "simple shape": {
+      "avg": 23,
+      "count": 1
+    },
+    "progress bar centered": {
+      "avg": 23,
+      "count": 1
+    },
+    "long rounded rectangle": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm coral remaining": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold simple shape": {
+      "avg": 23,
+      "count": 1
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "process": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons": {
+      "avg": 22,
+      "count": 1
+    },
+    "pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "row": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron process": {
+      "avg": 22,
+      "count": 1
+    },
+    "process diagram": {
+      "avg": 22,
+      "count": 1
+    },
+    "four arrow-shaped": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped chevrons": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "pointing right": {
+      "avg": 22,
+      "count": 1
+    },
+    "horizontal row": {
+      "avg": 22,
+      "count": 1
+    },
+    "row first": {
+      "avg": 22,
+      "count": 1
+    },
+    "first dark": {
+      "avg": 22,
+      "count": 1
+    },
+    "second warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "fourth pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "four chevrons": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons total": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal chevron process": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron process diagram": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped chevrons pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "slate second warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "second warm coral": {
+      "avg": 22,
+      "count": 1
+    },
+    "slate fourth pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "fourth pale coral": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "bicycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "train": {
+      "avg": 25,
+      "count": 1
+    },
+    "airplane": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "matching filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled flat": {
+      "avg": 25,
+      "count": 1
+    },
+    "flat icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons on": {
+      "avg": 25,
+      "count": 2
+    },
+    "stone background": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "car silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "bicycle silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "train silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette an": {
+      "avg": 25,
+      "count": 1
+    },
+    "an airplane": {
+      "avg": 25,
+      "count": 1
+    },
+    "airplane silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette dark": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill consistent": {
+      "avg": 25,
+      "count": 1
+    },
+    "consistent modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern style": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "raindrop": {
+      "avg": 25,
+      "count": 1
+    },
+    "snowflake": {
+      "avg": 25,
+      "count": 1
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "matching outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "snowflake warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outlines consistent": {
+      "avg": 25,
+      "count": 1
+    },
+    "snowflake warm coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "car": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "slate": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "modern": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "light stone": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "dark slate": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "coral": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "warm coral": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "isometric": {
+      "avg": 24,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "auto": {
+      "avg": 24,
+      "count": 1
+    },
+    "repair": {
+      "avg": 24,
+      "count": 1
+    },
+    "garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "lift": {
+      "avg": 24,
+      "count": 1
+    },
+    "tools": {
+      "avg": 24,
+      "count": 1
+    },
+    "workbench": {
+      "avg": 24,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 24,
+      "count": 1
+    },
+    "accents": {
+      "avg": 24,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "illustration of": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern auto": {
+      "avg": 24,
+      "count": 1
+    },
+    "auto repair": {
+      "avg": 24,
+      "count": 1
+    },
+    "repair garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "garage with": {
+      "avg": 24,
+      "count": 1
+    },
+    "with car": {
+      "avg": 24,
+      "count": 1
+    },
+    "car lift": {
+      "avg": 24,
+      "count": 1
+    },
+    "lift tools": {
+      "avg": 24,
+      "count": 1
+    },
+    "tools and": {
+      "avg": 24,
+      "count": 1
+    },
+    "and workbench": {
+      "avg": 24,
+      "count": 1
+    },
+    "workbench dark": {
+      "avg": 24,
+      "count": 1
+    },
+    "slate and": {
+      "avg": 24,
+      "count": 1
+    },
+    "and warm": {
+      "avg": 24,
+      "count": 1
+    },
+    "coral color": {
+      "avg": 24,
+      "count": 1
+    },
+    "color scheme": {
+      "avg": 24,
+      "count": 1
+    },
+    "scheme with": {
+      "avg": 24,
+      "count": 1
+    },
+    "stone accents": {
+      "avg": 24,
+      "count": 1
+    },
+    "accents clean": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern auto repair": {
+      "avg": 24,
+      "count": 1
+    },
+    "auto repair garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "car lift tools": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "background": {
+    "thin": {
+      "avg": 25,
+      "count": 2
+    },
+    "diagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "parallel": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "slate": {
+      "avg": 25,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 2
+    },
+    "structured": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin diagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagonal parallel": {
+      "avg": 25,
+      "count": 1
+    },
+    "parallel lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale slate": {
+      "avg": 25,
+      "count": 2
+    },
+    "slate on": {
+      "avg": 25,
+      "count": 2
+    },
+    "stone barely": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible geometric": {
+      "avg": 25,
+      "count": 2
+    },
+    "geometric pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "clean structured": {
+      "avg": 25,
+      "count": 1
+    },
+    "structured mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle thin diagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin diagonal parallel": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagonal parallel lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone barely visible": {
+      "avg": 25,
+      "count": 2
+    },
+    "honeycomb": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "mesh": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle honeycomb": {
+      "avg": 25,
+      "count": 1
+    },
+    "honeycomb hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagonal pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern in": {
+      "avg": 25,
+      "count": 1
+    },
+    "geometric mesh": {
+      "avg": 25,
+      "count": 1
+    },
+    "mesh modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle honeycomb hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "honeycomb hexagonal pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "mesh modern tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "plus": {
+      "avg": 25,
+      "count": 1
+    },
+    "sign": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "large plus": {
+      "avg": 25,
+      "count": 1
+    },
+    "plus sign": {
+      "avg": 25,
+      "count": 1
+    },
+    "sign cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone background": {
+      "avg": 25,
+      "count": 1
+    },
+    "dark slate": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "geometric shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape high": {
+      "avg": 25,
+      "count": 1
+    },
+    "high contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "plus sign cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "sign cross shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross shape centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate filled cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin dramatic coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic coral outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "light stone": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "barely": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "visible": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "barely visible": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "mood extremely": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "modern": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "smooth": {
+      "avg": 20,
+      "count": 1
+    },
+    "concrete": {
+      "avg": 20,
+      "count": 1
+    },
+    "texture": {
+      "avg": 20,
+      "count": 1
+    },
+    "tones": {
+      "avg": 20,
+      "count": 1
+    },
+    "urban": {
+      "avg": 20,
+      "count": 1
+    },
+    "surface": {
+      "avg": 20,
+      "count": 1
+    },
+    "feel": {
+      "avg": 20,
+      "count": 1
+    },
+    "subtle smooth": {
+      "avg": 20,
+      "count": 1
+    },
+    "smooth concrete": {
+      "avg": 20,
+      "count": 1
+    },
+    "concrete texture": {
+      "avg": 20,
+      "count": 1
+    },
+    "texture in": {
+      "avg": 20,
+      "count": 1
+    },
+    "stone tones": {
+      "avg": 20,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 20,
+      "count": 1
+    },
+    "visible urban": {
+      "avg": 20,
+      "count": 1
+    },
+    "urban surface": {
+      "avg": 20,
+      "count": 1
+    },
+    "surface feel": {
+      "avg": 20,
+      "count": 1
+    },
+    "feel modern": {
+      "avg": 20,
+      "count": 1
+    },
+    "modern minimal": {
+      "avg": 20,
+      "count": 1
+    },
+    "minimal mood": {
+      "avg": 20,
+      "count": 1
+    },
+    "subtle smooth concrete": {
+      "avg": 20,
+      "count": 1
+    },
+    "smooth concrete texture": {
+      "avg": 20,
+      "count": 1
+    },
+    "stone tones barely": {
+      "avg": 20,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 20,
+      "count": 1
+    },
+    "barely visible urban": {
+      "avg": 20,
+      "count": 1
+    },
+    "visible urban surface": {
+      "avg": 20,
+      "count": 1
+    },
+    "urban surface feel": {
+      "avg": 20,
+      "count": 1
+    },
+    "surface feel modern": {
+      "avg": 20,
+      "count": 1
+    },
+    "feel modern minimal": {
+      "avg": 20,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "volcanic": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 2
+    },
+    "rocks": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 25,
+      "count": 2
+    },
+    "black volcanic": {
+      "avg": 25,
+      "count": 1
+    },
+    "volcanic sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky above": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate rocks": {
+      "avg": 25,
+      "count": 1
+    },
+    "rocks in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in foreground": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast between": {
+      "avg": 25,
+      "count": 1
+    },
+    "dark sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand and": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "volcanic sand beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground dramatic contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "underwater": {
+      "avg": 25,
+      "count": 1
+    },
+    "reef": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "vivid": {
+      "avg": 25,
+      "count": 1
+    },
+    "marine": {
+      "avg": 25,
+      "count": 1
+    },
+    "life": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic underwater": {
+      "avg": 25,
+      "count": 1
+    },
+    "underwater shot": {
+      "avg": 25,
+      "count": 1
+    },
+    "of coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral reef": {
+      "avg": 25,
+      "count": 1
+    },
+    "reef formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "formations warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones with": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate deep": {
+      "avg": 25,
+      "count": 1
+    },
+    "deep water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water background": {
+      "avg": 25,
+      "count": 1
+    },
+    "background vivid": {
+      "avg": 25,
+      "count": 1
+    },
+    "vivid marine": {
+      "avg": 25,
+      "count": 1
+    },
+    "marine life": {
+      "avg": 25,
+      "count": 1
+    },
+    "life colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "dark water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water area": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral reef formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "reef formations warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "formations warm coral": {
+      "avg": 25,
+      "count": 1
+    },
+    "vivid marine life": {
+      "avg": 25,
+      "count": 1
+    },
+    "marine life colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "bridge": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "structure": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "evening": {
+      "avg": 25,
+      "count": 1
+    },
+    "strong": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "large steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "steel bridge": {
+      "avg": 25,
+      "count": 1
+    },
+    "bridge at": {
+      "avg": 25,
+      "count": 1
+    },
+    "at sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset dark": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal structure": {
+      "avg": 25,
+      "count": 1
+    },
+    "structure silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette against": {
+      "avg": 25,
+      "count": 1
+    },
+    "against warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral evening": {
+      "avg": 25,
+      "count": 1
+    },
+    "evening sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky strong": {
+      "avg": 25,
+      "count": 1
+    },
+    "strong geometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "geometric lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "slate metal structure": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal structure silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm coral evening": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral evening sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "evening sky strong": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines industrial beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "coral": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "slate": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "warm coral": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "dark slate": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "sky": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "side": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "one side": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "side for": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "text overlay": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "dramatic": {
+      "avg": 24,
+      "count": 2
+    },
+    "and warm": {
+      "avg": 24,
+      "count": 2
+    },
+    "formations": {
+      "avg": 24,
+      "count": 2
+    },
+    "natural": {
+      "avg": 23,
+      "count": 1
+    },
+    "stone": {
+      "avg": 23,
+      "count": 1
+    },
+    "arch": {
+      "avg": 23,
+      "count": 1
+    },
+    "desert": {
+      "avg": 23,
+      "count": 1
+    },
+    "rock": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear": {
+      "avg": 23,
+      "count": 1
+    },
+    "geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "grand": {
+      "avg": 23,
+      "count": 1
+    },
+    "scale": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic shot": {
+      "avg": 23,
+      "count": 1
+    },
+    "natural stone": {
+      "avg": 23,
+      "count": 1
+    },
+    "stone arch": {
+      "avg": 23,
+      "count": 1
+    },
+    "arch in": {
+      "avg": 23,
+      "count": 1
+    },
+    "the desert": {
+      "avg": 23,
+      "count": 1
+    },
+    "desert dark": {
+      "avg": 23,
+      "count": 1
+    },
+    "slate and": {
+      "avg": 23,
+      "count": 1
+    },
+    "coral rock": {
+      "avg": 23,
+      "count": 1
+    },
+    "rock formations": {
+      "avg": 23,
+      "count": 1
+    },
+    "formations against": {
+      "avg": 23,
+      "count": 1
+    },
+    "against clear": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "geological landscape": {
+      "avg": 23,
+      "count": 1
+    },
+    "landscape grand": {
+      "avg": 23,
+      "count": 1
+    },
+    "grand scale": {
+      "avg": 23,
+      "count": 1
+    },
+    "scale composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition ample": {
+      "avg": 23,
+      "count": 1
+    },
+    "natural stone arch": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm coral rock": {
+      "avg": 23,
+      "count": 1
+    },
+    "coral rock formations": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear sky dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky dramatic geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "grand scale composition": {
+      "avg": 23,
+      "count": 1
+    }
+  }
+}

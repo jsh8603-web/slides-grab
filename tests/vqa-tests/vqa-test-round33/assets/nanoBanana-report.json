@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-03-19T04:43:31.073Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 10,
+      "23-24": 7,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 23.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IV-03": 7,
+    "IV-10": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested four segments, but the image only shows three segments in the donut chart."
+      }
+    },
+    {
+      "slide": 13,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image is professional but lacks the 'tech modern' style requested in the prompt, appearing more as a realistic nature photograph."
+      }
+    },
+    {
+      "slide": 16,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a 'Background snow' color, but the image shows a dark, cloudy sky instead of snow, which is a significant deviation from the specified color palette for the background."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified 'spoke two light cya', but the image shows one spoke in primary cyan and another in very light grey, which doesn't clearly match 'light cya' for the second specified spoke."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The specified 'Accent charcoal' color is missing from the image's color palette."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 25, n=2)",
+        "medium (avg 24.5, n=2)",
+        "line (avg 24.5, n=2)",
+        "middle (avg 24.5, n=2)",
+        "modern (avg 24.4, n=5)"
+      ],
+      "bottom_keywords": [
+        "chart (avg 22.7, n=3)",
+        "lights (avg 23, n=2)",
+        "important (avg 23.2, n=6)",
+        "not (avg 23.2, n=6)",
+        "more (avg 23.2, n=6)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "line (avg 24.8, n=5)",
+        "sky (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 17 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "green (avg 24.7, n=6)",
+        "olive (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 33 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "concentric (avg 24.8, n=5)",
+        "inner (avg 24.8, n=5)",
+        "nested (avg 24.8, n=5)",
+        "minimal diagram (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 97 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.9, n=6)",
+        "regular (avg 24.5, n=5)",
+        "cream (avg 24.5, n=7)",
+        "barely (avg 24.5, n=20)",
+        "visible (avg 24.5, n=20)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 41 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "field (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 42 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

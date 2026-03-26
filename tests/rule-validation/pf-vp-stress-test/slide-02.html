@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, 'Segoe UI', sans-serif;
+  background: #F0FDFA;
+  color: #0F172A;
+  display: flex; flex-direction: column;
+  padding: 24pt 32pt 28pt;
+  overflow: hidden;
+}
+.title {
+  font-size: 24pt; font-weight: 700; color: #1E293B;
+  margin-bottom: 16pt; line-height: 1.3;
+}
+.content {
+  display: flex; gap: 20pt;
+  flex: 1; min-height: 0; overflow: hidden;
+}
+.chart-area {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 8pt;
+  overflow: hidden;
+}
+.bar-row {
+  display: flex; align-items: center; gap: 8pt;
+}
+.bar-label {
+  width: 80pt; font-size: 11pt; font-weight: 600;
+  color: #1E293B; text-align: right;
+  white-space: nowrap;
+}
+.bar-track {
+  flex: 1; min-width: 0; height: 28pt;
+  background: #E2E8F0; border-radius: 4pt;
+  position: relative; overflow: hidden;
+}
+.bar-fill {
+  height: 100%; border-radius: 4pt;
+  background: #14B8A6;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 8pt;
+}
+.bar-value {
+  font-size: 11pt; font-weight: 700; color: #FFFFFF;
+  white-space: nowrap;
+}
+.bar-fill-alt { background: #0D9488; }
+.bar-fill-light { background: #0D9488; }
+.side-panel {
+  width: 200pt;
+  display: flex; flex-direction: column; gap: 10pt;
+}
+.card {
+  background: #FFFFFF;
+  border: 1pt solid #E2E8F0;
+  border-radius: 8pt;
+  padding: 12pt;
+  overflow: hidden;
+}
+.card-title {
+  font-size: 13pt; font-weight: 700; color: #14B8A6;
+  margin-bottom: 6pt;
+}
+.card-body {
+  font-size: 11pt; color: #334155; line-height: 1.45;
+}
+.badges {
+  display: flex; gap: 10pt;
+  margin-top: auto;
+  padding-top: 12pt;
+}
+.badge {
+  display: flex; align-items: center; justify-content: center;
+  padding: 6pt 14pt;
+  border-radius: 20pt;
+  background: #1E293B;
+  white-space: nowrap;
+}
+.badge p {
+  font-size: 11pt; font-weight: 600; color: #14B8A6;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+  <div class="title"><span>민간 우주 기업 평균 성장률 163%</span></div>
+
+  <div class="content">
+    <div class="chart-area">
+      <div class="bar-row">
+        <div class="bar-label"><span>SpaceX</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:100%">
+            <span class="bar-value">340%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Rocket Lab</span></div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-alt" style="width:53%">
+            <span class="bar-value">180%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Blue Origin</span></div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:35%">
+            <span class="bar-value">120%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Relativity</span></div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-alt" style="width:28%">
+            <span class="bar-value">95%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Firefly</span></div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-light" style="width:23%">
+            <span class="bar-value">78%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-panel">
+      <div class="card">
+        <div class="card-title"><span>주요 트렌드</span></div>
+        <div class="card-body">
+          <p><span>재사용 로켓 기술이 발사 비용을 90% 절감하며 시장 진입 장벽을 낮추고 있다</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span>투자 포인트</span></div>
+        <div class="card-body">
+          <p><span>소형위성 군집과 우주 인터넷이 2030년까지 $1,200억 시장을 형성할 전망이다</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="badges">
+    <div class="badge"><p>재사용 로켓</p></div>
+    <div class="badge"><p>소형위성 군집</p></div>
+    <div class="badge"><p>우주관광 상용화</p></div>
+  </div>
+</body>
+</html>

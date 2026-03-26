@@ -1,0 +1,221 @@
+{
+  "timestamp": "2026-03-19T08:39:28.645Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 5,
+    "fail": 2,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.3,
+    "min": 14.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 6,
+      "25-27": 2,
+      "22-24": 5,
+      "17-21": 1,
+      "<17": 1
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 23.8,
+      "count": 11
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 22,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 25.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 3,
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 10,
+      "total": 14.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 2,
+        "color_harmony": 4,
+        "presentation_fit": 2,
+        "co_reason": "The image features a realistic rendering of a plaque on a wall, which is too busy and lacks the clean negative space typically desired for presentation slides. It deviates significantly from the requested 'clean flat vector on neutral background' suitable for a minimal bar chart.",
+        "detected_text": [],
+        "pf_reason": "The image displays a logo on a textured metal plaque, completely failing to generate 'a minimal vertical bar chart with 4 bars of different heights' as specified in the prompt. The background is also a concrete wall, not a clean neutral background."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 20.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image depicts a horizontal flow diagram with four stages instead of a minimal staircase with three ascending steps as described in the prompt. It also shows four elements instead of three steps. The color application based on 'first step orange, second dark orange, third navy' is not followed due to the incorrect subject matter. The overall concept is significantly different from the prompt's core request for a staircase."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image contains 5 chevron segments, but the prompt requested a diagram with 4 arrow-shaped segments."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified '3 arrow-shaped segments' and a 'third light orange' segment, but the image displays only 2 segments (navy and orange) and lacks the third segment and color."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image does not follow the specified color palette; it lacks the primary navy and instead uses warm orange/red/brown as primary colors. While other aspects of the prompt are met, the color palette is a significant deviation from the instruction."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.1,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 32,
+      "severity": "HIGH",
+      "action": "FAIL rate 32% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 27.5, n=2)",
+        "pattern (avg 27.5, n=2)",
+        "rounded (avg 26.5, n=2)",
+        "main (avg 25.8, n=3)",
+        "element (avg 25.8, n=3)"
+      ],
+      "bottom_keywords": [
+        "block (avg 21.5, n=2)",
+        "ascending (avg 21.5, n=2)",
+        "blocks (avg 21.5, n=2)",
+        "ascending blocks (avg 21.5, n=2)",
+        "orange (avg 24.2, n=9)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 26.6, n=6)",
+        "pattern sophisticated (avg 26.6, n=6)",
+        "line pattern sophisticated (avg 26.6, n=6)",
+        "pattern (avg 26.5, n=6)",
+        "base (avg 26.5, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)",
+        "olive (avg 24.6, n=5)",
+        "olive green (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 26.5, n=6)",
+        "rectangles (avg 26.5, n=6)",
+        "rounded rectangles (avg 26.5, n=6)",
+        "by arrows (avg 26.5, n=6)",
+        "rounded (avg 26.5, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 147 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.3, n=6)",
+        "pattern warm (avg 26.3, n=6)",
+        "subtle cream (avg 26.3, n=6)",
+        "cream paper (avg 26.3, n=6)",
+        "subtle fiber (avg 26.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 19,
+    "retried": 4
+  }
+}

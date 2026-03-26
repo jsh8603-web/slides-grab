@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-03-19T09:13:03.709Z",
+  "summary": {
+    "total": 10,
+    "pass": 10,
+    "warn": 3,
+    "fail": 3,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.6,
+    "min": 14.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 1,
+      "22-24": 3,
+      "17-21": 2,
+      "<17": 1
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 23.6,
+      "count": 9
+    },
+    "icon": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 1,
+      "total": 14.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 1,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": [
+          "STRATEGY",
+          "GROWTH"
+        ],
+        "pf_reason": "The image shows two segments instead of three, and they are not arrow-shaped. The requested third light orange segment is missing. Crucially, the prompt specified 'Absolutely no text', but the image contains the words 'STRATEGY' and 'GROWTH'."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": [],
+        "pf_reason": "The prompt requested exactly 5 steps, but the image shows more (approximately 9). The requested 'colors from light orange to dark navy' was interpreted as a contrast between orange treads and navy risers rather than a gradient across the steps. Additionally, the style is a rendered 3D scene with shadows, not a clean flat vector as specified."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 21.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The third step is not distinctly \"dark orange\"; it's almost the same shade as the second orange step, making the color progression less clear than described."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'Accent orange' for the icons, but the icons are white instead of orange. The color palette is not as requested for the accent color, though the other colors fit the prompt requirements (primary navy, background neutral)."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt asked for 3 ascending steps, but the image shows 4 bars. The color progression specified for the three steps (orange, dark orange, navy) is also not matched; the image shows orange, darker orange, another dark orange/brown, and then navy. The prompt asked for a \"staircase\" but separate bars are shown instead. The image has a 16:9 aspect ratio as requested, and a clean flat vector on a neutral background with no text, numbers, or labels as requested. The overall style and color palette match the request. However, the core subject details significantly differ from the prompt's specific requirements, thus impacting prompt fidelity significantly. Therefore, it is rated as 'below average' (2). The image shows 4 bars when 3 ascending steps were requested. The colors for the steps also do not align with the prompt's instruction: first orange, second dark orange, third navy. The image shows: first orange, second darker orange, third even darker orange/brown, fourth navy. This deviates from the specific number and color assignment of the 'steps' requested in the prompt. While the overall aesthetic and elements like aspect ratio and text absence match, the core visual elements like the count and specific color progression of the 'staircase' are not accurately represented. This is why the prompt fidelity is rated 2. The image's colors are harmonious and professional. The composition is clean and offers good negative space, making it suitable for a presentation slide. No text is detected. All elements considered, the image has good quality but low fidelity to the prompt's specific details. So, prompt fidelity is 2 (below average) with a detailed reason, and all other aspects are rated highly based on their individual merits. The prompt specifically asked for a \"staircase with 3 ascending steps from left to right\" and specific colors for *those three steps*. The image shows 4 distinct bars, not a staircase, and the color sequence is different. Therefore, the discrepancy is significant enough for a score of 2. The individual element details, especially the count and specific color assignment, are incorrect. The style and overall color palette are good, but the core subject isn't accurate. Therefore, a score of 2 is appropriate. The prompt asked for specific details of the staircase. Specifically, '3 ascending steps' and the colors for 'First step orange, second dark orange, third navy'. The image shows 4 distinct bars. The colors are orange, a slightly darker orange, a medium-dark orange/brown, and then navy. This does not match the requested count or the specified color progression for the three steps. Thus, the fidelity to these core details is low. The other aspects (style, no text, background, aspect ratio) are correct, but the fundamental description of the main object is not. This warrants a score of 2 for prompt fidelity. The negative space is adequate, and the colors are harmonious, contributing to a high presentation fit. No text is present. Therefore, the JSON accurately reflects these observations, with the prompt fidelity being the main point of concern due to the mismatch in the number of elements and their specific color assignments from the prompt. The image shows 4 distinct bars instead of 3 steps. The color progression specified in the prompt was 'First step orange, second dark orange, third navy'. The image's color progression is: first orange, second darker orange, third even darker orange/brown, and fourth navy. The number of elements and their specific colors do not match the prompt's request. This is a significant deviation in the core subject matter. All other criteria are met. The number of 'steps' is 4 instead of 3, and the color of the third 'step' is not navy as specified in the prompt. This constitutes a significant departure from the prompt's instructions regarding the primary subject's structure and color scheme. Hence, a score of 2 is appropriate for prompt fidelity. All other metrics like composition, color harmony, text absence, and presentation fit are excellent. This leads to the following JSON. The prompt requested "
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 2.6,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 56,
+      "severity": "HIGH",
+      "action": "FAIL rate 56% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "radial (avg 26.5, n=3)",
+        "connection (avg 26.5, n=3)",
+        "circle (avg 26.5, n=3)",
+        "circles (avg 26.5, n=3)",
+        "thin (avg 26.5, n=3)"
+      ],
+      "bottom_keywords": [
+        "bar (avg 21.2, n=3)",
+        "bars (avg 21.2, n=3)",
+        "increasing (avg 21.2, n=3)",
+        "height (avg 21.2, n=3)",
+        "increasing height (avg 21.2, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 27.1, n=6)",
+        "pattern sophisticated (avg 27.1, n=6)",
+        "line pattern sophisticated (avg 27.1, n=6)",
+        "pattern (avg 27, n=6)",
+        "base (avg 27, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "inside (avg 25.1, n=6)",
+        "rounded (avg 25.1, n=6)",
+        "cloud (avg 25, n=6)",
+        "neutral (avg 25, n=6)",
+        "filled (avg 25, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 26.9, n=5)",
+        "rounded rectangles (avg 26.9, n=5)",
+        "by arrows (avg 26.9, n=5)",
+        "rounded (avg 26.9, n=5)",
+        "narrowing (avg 26.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 167 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.6, n=5)",
+        "pattern warm (avg 26.6, n=5)",
+        "subtle cream (avg 26.6, n=5)",
+        "cream paper (avg 26.6, n=5)",
+        "subtle fiber (avg 26.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 16,
+    "retried": 6
+  }
+}

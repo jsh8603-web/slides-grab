@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5F3EE;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+.header { margin-bottom: 14pt; }
+h1 {
+  font-size: 20pt; font-weight: 700;
+  color: #1A2B4A;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 12pt; font-weight: 400;
+  color: #6B7A8D;
+}
+.roadmap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10pt;
+  margin-bottom: 14pt;
+}
+.phase {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 12pt;
+  position: relative;
+}
+.phase-tag {
+  display: inline-block;
+  background: #C8A96E;
+  color: #1A2B4A;
+  font-size: 10pt; font-weight: 700;
+  padding: 2pt 8pt;
+  border-radius: 2pt;
+  margin-bottom: 6pt;
+}
+.phase-title {
+  font-size: 12pt; font-weight: 700;
+  color: #1A2B4A;
+  margin-bottom: 6pt;
+}
+.phase-item {
+  font-size: 10pt; color: #1C1C1C;
+  line-height: 1.5;
+}
+.bullet {
+  color: #C8A96E;
+  font-weight: 700;
+}
+.divider {
+  width: 100%;
+  height: 1pt;
+  background: #E8E4DE;
+  margin-bottom: 12pt;
+}
+.takeaways {
+  display: flex; flex-direction: column;
+  gap: 6pt;
+  flex: 1; min-height: 0;
+}
+.takeaway {
+  display: flex; align-items: flex-start;
+  gap: 8pt;
+}
+.takeaway-num {
+  background: #1A2B4A;
+  color: #FFFFFF;
+  font-size: 10pt; font-weight: 700;
+  width: 18pt; height: 18pt;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1pt;
+}
+.takeaway-text {
+  font-size: 11pt; color: #1C1C1C;
+  line-height: 1.5;
+}
+.takeaway-bold {
+  font-weight: 700;
+  color: #1A2B4A;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <h1><span>실리콘 동료를 먼저 감독하는 조직이 다음 10년을 설계한다</span></h1>
+    <p class="sub"><span>지금 시작해야 할 3가지 행동</span></p>
+  </div>
+  <div class="roadmap">
+    <div class="phase">
+      <div class="phase-tag"><span>지금 (0~3개월)</span></div>
+      <p class="phase-title"><span>탐색 + 기반 구축</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>도입 후보 업무 식별</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>거버넌스 프레임워크 정의</span></p>
+    </div>
+    <div class="phase">
+      <div class="phase-tag"><span>단기 (3~12개월)</span></div>
+      <p class="phase-title"><span>파일럿 + 학습</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>업무 재설계·실행</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>ROI 측정 + 확산 선정</span></p>
+    </div>
+    <div class="phase">
+      <div class="phase-tag"><span>중기 (1~3년)</span></div>
+      <p class="phase-title"><span>전사 확산</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>수퍼바이저 체계 구축</span></p>
+      <p class="phase-item"><span class="bullet">· </span><span>거버넌스 전사 적용</span></p>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="takeaways">
+    <div class="takeaway">
+      <div class="takeaway-num"><span>1</span></div>
+      <p class="takeaway-text"><span class="takeaway-bold">시장은 움직이고 있다</span> <span>— $120B, 관망 > 도입 비용</span></p>
+    </div>
+    <div class="takeaway">
+      <div class="takeaway-num"><span>2</span></div>
+      <p class="takeaway-text"><span class="takeaway-bold">재설계가 핵심이다</span> <span>— 에이전트를 가정하고 설계하라</span></p>
+    </div>
+    <div class="takeaway">
+      <div class="takeaway-num"><span>3</span></div>
+      <p class="takeaway-text"><span class="takeaway-bold">모든 직원이 수퍼바이저다</span> <span>— 역할의 축소가 아닌 격상</span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

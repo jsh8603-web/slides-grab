@@ -1,0 +1,57 @@
+{
+  "slide": 2,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Authoritative, forward-looking, and strategically urgent — conveying both the inevitability of AI agent adoption and the cost of inaction. Color palette: Primary (Deep Navy), Accent (Warm Gold), Background (Warm Ivory), Text (Near Black), Muted (Steel Gray). A subtle warm ivory paper texture with faint grid lines suggesting exponential growth curves in the background, delicate fiber pattern visible under raking light, muted and non-distracting, suitable as a data slide backdrop, no text 1",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 204,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 1,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 4,
+      "detected_text": [
+        "THE AI AGENT IMPERATIVE",
+        "Naviating Tomorrow's Landscape",
+        "ADOPTION",
+        "Inevitable Evolution",
+        "Enhanced Efficiency",
+        "Strategic Advantage",
+        "Innovation Unleashed",
+        "INACTION",
+        "Escalating Costs",
+        "Market Irrelevance",
+        "Operational Lag",
+        "Missed Opportunity",
+        "THE FUTURE DEMANDS ACTION. NOW",
+        "Don't Be Left Behind",
+        "16"
+      ]
+    },
+    "total": 22.5,
+    "detected_text": [
+      "THE AI AGENT IMPERATIVE",
+      "Naviating Tomorrow's Landscape",
+      "ADOPTION",
+      "Inevitable Evolution",
+      "Enhanced Efficiency",
+      "Strategic Advantage",
+      "Innovation Unleashed",
+      "INACTION",
+      "Escalating Costs",
+      "Market Irrelevance",
+      "Operational Lag",
+      "Missed Opportunity",
+      "THE FUTURE DEMANDS ACTION. NOW",
+      "Don't Be Left Behind",
+      "16"
+    ],
+    "reasons": {}
+  }
+}

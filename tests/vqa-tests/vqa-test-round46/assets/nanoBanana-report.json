@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-03-19T08:24:26.316Z",
+  "summary": {
+    "total": 15,
+    "pass": 14,
+    "warn": 4,
+    "fail": 3,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.9,
+    "min": 20,
+    "max": 27.5,
+    "distribution": {
+      "25": 0,
+      "23-24": 3,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24.6,
+      "count": 10
+    },
+    "metaphor": {
+      "avg": 22,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 26.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IV-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "pf_reason": "The prompt requested a 16:9 aspect ratio, but the generated image is square. Additionally, the second step is not a distinct 'dark orange' as specified in the prompt, appearing to be the same shade of orange as the first step, just taller. The prompt specified 'second dark orange'. This is not implemented. There is no distinction in the orange color used for the first and second steps, except for the height difference. The image is generated as a solid orange step for both first and second steps. The request for 'second dark orange' is clearly missed here. So, the request for a 'dark orange' is not implemented in the second step. The aspect ratio is also incorrect. The requested aspect ratio is 16:9, but the generated image is square. The image is meant to be used as a slide frame or illustration, and therefore, the aspect ratio is important. The discrepancy affects the prompt fidelity significantly. Therefore, the score is 2. The other features match the prompt, such as 'minimal staircase', '3 ascending steps from left to right', 'first step orange', 'third navy', 'clean flat vector', 'neutral background', and 'absolutely no text, no numbers, no labels'. The primary issues are the aspect ratio and the specific color for the second step. So, I will rate the image 2 out of 5 for prompt fidelity, as these are critical elements of the prompt. I will keep this detailed explanation in the `pf_reason` to highlight all discrepancies. The image is not a 'staircase' but a bar chart style representation of increasing height, which is acceptable but not precisely a staircase. The prompt specifies 'A minimal staircase with 3 ascending steps', but the image generated shows 3 ascending bars, which could be considered a form of a staircase in an abstract sense. However, the exact phrasing of 'staircase' might imply more depth or step-like structure rather than flat bars. However, given the 'minimal' and 'flat vector' style, this interpretation is acceptable. So, I will focus on the most important discrepancies. I have highlighted the two main discrepancies: aspect ratio and the 'dark orange' for the second step. I will rate it 2 out of 5 for prompt fidelity. I am making it 2 because the aspect ratio is a significant miss, making it difficult to use as a slide frame directly without further adjustments or cropping that deviate from the original generation. The color discrepancy for the second step is also a key detail missed. For presentation fit, I will consider the impact of the aspect ratio. If it was intended as a full slide background/frame, the square aspect ratio is a significant limitation for a 16:9 presentation. If it's an illustration to be placed on a slide, it's more flexible. Given the prompt's specific mention of 16:9, it leans towards a frame or a carefully fitted illustration. I will rate it 3 for presentation fit because it *could* be used as an illustration but not as a direct 16:9 frame without modification. This is why I am giving it a 3, as it is adequate as an illustration but not as a frame due to aspect ratio. The prompt asked for 'presentation_fit: Would this work as a slide frame/illustration?'. It would work as an illustration, but not as a slide frame. Therefore, the score of 3 is appropriate. The color harmony is excellent as the colors work well together and match a professional style. The composition is also good, with good negative space for text overlay. Text absence is excellent as there is no text. So, I have finalized my scores and reasons. The `pf_reason` clearly explains the issues with color and aspect ratio. The `presentation_fit` score of 3 is justified due to the aspect ratio issue preventing it from being a direct 16:9 slide frame, though it could work as an illustration. My explanation for the scoring is complete and aligned with the prompt's instructions. I will ensure the JSON is correctly formatted. The image does not contain any text, numbers, or symbols, so `text_absence` is 5 and `detected_text` is an empty array. The color palette of 'Primary navy, Accent orange, Background neutral' is well-represented, and the colors work harmoniously. The composition has good negative space and balance. So, `color_harmony` is 5, and `composition` is 4. I will now create the final JSON output. My `pf_reason` is detailed enough. I will just make it more concise to fit within the typical reason length while retaining the core issues. I have combined the reasons for prompt fidelity and presentation fit effectively. My final check ensures all conditions are met and the JSON is valid. The schema requires `pf_reason`, `ch_reason`, `co_reason` only if scores are <=3. `composition` is 4, `color_harmony` is 5, so no `co_reason` or `ch_reason` is needed. `prompt_fidelity` is 2, so `pf_reason` is required. `presentation_fit` is 3, so a reason could be beneficial for clarity, but the schema doesn't strictly require it for `presentation_fit`. I will adhere to the explicit schema requirement for `pf_reason`, `co_reason`, `ch_reason`. Since presentation_fit is not one of those, I won't add a dedicated reason for it, but the aspect ratio issue mentioned in `pf_reason` indirectly explains the presentation fit score. However, looking at the schema, it *does* allow for `ch_reason`, `co_reason`, and `pf_reason` but doesn't *require* them unless scores are <=3. For `presentation_fit`, there is no `pr_reason` field. So my current plan is correct. I have already drafted `pf_reason`. I will make sure the wording for `pf_reason` is exactly as I decided: "
+      }
+    },
+    {
+      "slide": 10,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "detected_text": [],
+        "pf_reason": "The generated image is square (1:1) instead of the requested 16:9 aspect ratio."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image does not incorporate the 'primary navy' color specified in the prompt. The color palette is entirely warm tones (orange, gold, brown) without any prominent cool or navy elements."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows 5 ascending steps instead of the requested 4. The color of the fourth step is also different from the prompt."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 4 arrow-shaped segments, but the image shows 5. The fifth segment is a very light orange, which was not described."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "widest (avg 27.5, n=2)",
+        "subtle (avg 27.5, n=2)",
+        "pattern (avg 27.5, n=2)",
+        "rounded (avg 27, n=2)",
+        "main (avg 26.1, n=4)"
+      ],
+      "bottom_keywords": [
+        "block (avg 21.5, n=2)",
+        "ascending (avg 21.5, n=2)",
+        "blocks (avg 21.5, n=2)",
+        "ascending blocks (avg 21.5, n=2)",
+        "orange (avg 24.6, n=10)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "slate (avg 24.8, n=5)",
+        "near (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 123 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "artistic (avg 25, n=5)",
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)",
+        "paper (avg 24.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 63 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 62 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 14,
+    "retried": 0
+  }
+}

@@ -1,0 +1,1492 @@
+{
+  "cover": {
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta": {
+      "avg": 25,
+      "count": 2
+    },
+    "orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "artisan": {
+      "avg": 25,
+      "count": 2
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner artisan": {
+      "avg": 25,
+      "count": 1
+    },
+    "artisan warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm terracotta orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner artisan warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "handmade": {
+      "avg": 25,
+      "count": 1
+    },
+    "pottery": {
+      "avg": 25,
+      "count": 1
+    },
+    "vessels": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "weathered": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "handmade terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta pottery": {
+      "avg": 25,
+      "count": 1
+    },
+    "pottery vessels": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue weathered": {
+      "avg": 25,
+      "count": 1
+    },
+    "weathered wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean artisan": {
+      "avg": 25,
+      "count": 1
+    },
+    "artisan atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "handmade terracotta pottery": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta pottery vessels": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue weathered wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "weathered wall mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall mediterranean artisan": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean artisan atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "short": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-long": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "pie": {
+      "avg": 25,
+      "count": 1
+    },
+    "wedge": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "wedges": {
+      "avg": 25,
+      "count": 1
+    },
+    "complete": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 3
+    },
+    "terracotta orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange wedge": {
+      "avg": 25,
+      "count": 1
+    },
+    "complete circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta orange wedge": {
+      "avg": 25,
+      "count": 1
+    },
+    "funnel": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "sections": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering": {
+      "avg": 25,
+      "count": 1
+    },
+    "downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest terracotta middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "chevron": {
+      "avg": 25,
+      "count": 1
+    },
+    "process": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrow-shaped": {
+      "avg": 25,
+      "count": 1
+    },
+    "chevrons": {
+      "avg": 25,
+      "count": 1
+    },
+    "row": {
+      "avg": 25,
+      "count": 1
+    },
+    "chevron process": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrow-shaped chevrons": {
+      "avg": 25,
+      "count": 1
+    },
+    "row chevron": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta chevron": {
+      "avg": 25,
+      "count": 1
+    },
+    "venn": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlapping": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "areas": {
+      "avg": 25,
+      "count": 1
+    },
+    "blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles overlapping": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap areas": {
+      "avg": 25,
+      "count": 1
+    },
+    "areas blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "coral overlap areas": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap areas blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 25,
+      "count": 1
+    },
+    "seven-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "three-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately seven-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "ecru": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "terracotta": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "coral": {
+      "avg": 24.7,
+      "count": 6
+    },
+    "pale": {
+      "avg": 24,
+      "count": 2
+    },
+    "circles": {
+      "avg": 24,
+      "count": 2
+    },
+    "cycle": {
+      "avg": 23,
+      "count": 1
+    },
+    "corners": {
+      "avg": 23,
+      "count": 1
+    },
+    "curved": {
+      "avg": 23,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 23,
+      "count": 1
+    },
+    "nodes": {
+      "avg": 23,
+      "count": 1
+    },
+    "by curved": {
+      "avg": 23,
+      "count": 1
+    },
+    "curved arrows": {
+      "avg": 23,
+      "count": 1
+    },
+    "by curved arrows": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "ecru": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "house": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "key": {
+      "avg": 25,
+      "count": 1
+    },
+    "lamp": {
+      "avg": 25,
+      "count": 1
+    },
+    "chair": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "home": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "house silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "key silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "lamp silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "chair silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "needle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thread": {
+      "avg": 25,
+      "count": 1
+    },
+    "ball": {
+      "avg": 25,
+      "count": 1
+    },
+    "yarn": {
+      "avg": 25,
+      "count": 1
+    },
+    "scissors": {
+      "avg": 25,
+      "count": 1
+    },
+    "thimble": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "yarn scissors": {
+      "avg": 25,
+      "count": 1
+    },
+    "thimble terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "thimble terracotta outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "pottery": {
+      "avg": 25,
+      "count": 1
+    },
+    "studio": {
+      "avg": 25,
+      "count": 1
+    },
+    "wheel": {
+      "avg": 25,
+      "count": 1
+    },
+    "kiln": {
+      "avg": 25,
+      "count": 1
+    },
+    "shelves": {
+      "avg": 25,
+      "count": 1
+    },
+    "ceramics": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "pottery studio": {
+      "avg": 25,
+      "count": 1
+    },
+    "wheel kiln": {
+      "avg": 25,
+      "count": 1
+    },
+    "ceramics terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "ecru accents": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "background": {
+    "basket": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "rattan": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle basket": {
+      "avg": 25,
+      "count": 1
+    },
+    "basket weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven rattan": {
+      "avg": 25,
+      "count": 1
+    },
+    "rattan surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle basket weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "basket weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "ecru fine woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine woven rattan": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven rattan surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "rattan surface feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface feel warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel warm natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "ecru fine": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "texture": {
+      "avg": 24,
+      "count": 2
+    },
+    "warm": {
+      "avg": 24,
+      "count": 2
+    },
+    "ecru": {
+      "avg": 24,
+      "count": 4
+    },
+    "pale": {
+      "avg": 24,
+      "count": 3
+    },
+    "terracotta": {
+      "avg": 24,
+      "count": 3
+    },
+    "fine": {
+      "avg": 24,
+      "count": 3
+    },
+    "surface": {
+      "avg": 24,
+      "count": 2
+    },
+    "feel": {
+      "avg": 24,
+      "count": 3
+    },
+    "pale terracotta": {
+      "avg": 24,
+      "count": 2
+    },
+    "surface feel": {
+      "avg": 24,
+      "count": 2
+    },
+    "tile": {
+      "avg": 24,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "moroccan": {
+      "avg": 24,
+      "count": 1
+    },
+    "zellige": {
+      "avg": 24,
+      "count": 1
+    },
+    "artisan": {
+      "avg": 24,
+      "count": 1
+    },
+    "refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "tile pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "fine moroccan": {
+      "avg": 24,
+      "count": 1
+    },
+    "moroccan zellige": {
+      "avg": 24,
+      "count": 1
+    },
+    "zellige feel": {
+      "avg": 24,
+      "count": 1
+    },
+    "feel artisan": {
+      "avg": 24,
+      "count": 1
+    },
+    "artisan refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "ecru fine moroccan": {
+      "avg": 24,
+      "count": 1
+    },
+    "fine moroccan zellige": {
+      "avg": 24,
+      "count": 1
+    },
+    "moroccan zellige feel": {
+      "avg": 24,
+      "count": 1
+    },
+    "zellige feel artisan": {
+      "avg": 24,
+      "count": 1
+    },
+    "feel artisan refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "five-pointed": {
+      "avg": 24,
+      "count": 1
+    },
+    "star": {
+      "avg": 24,
+      "count": 1
+    },
+    "centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "five-pointed star": {
+      "avg": 24,
+      "count": 1
+    },
+    "star centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "terracotta filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled star": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "five-pointed star centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "terracotta filled star": {
+      "avg": 24,
+      "count": 1
+    },
+    "plaster": {
+      "avg": 23,
+      "count": 1
+    },
+    "wall": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones": {
+      "avg": 23,
+      "count": 1
+    },
+    "stucco": {
+      "avg": 23,
+      "count": 1
+    },
+    "mediterranean": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle plaster": {
+      "avg": 23,
+      "count": 1
+    },
+    "plaster wall": {
+      "avg": 23,
+      "count": 1
+    },
+    "wall texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm ecru": {
+      "avg": 23,
+      "count": 1
+    },
+    "terracotta tones": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine stucco": {
+      "avg": 23,
+      "count": 1
+    },
+    "stucco surface": {
+      "avg": 23,
+      "count": 1
+    },
+    "feel mediterranean": {
+      "avg": 23,
+      "count": 1
+    },
+    "mediterranean warm": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle plaster wall": {
+      "avg": 23,
+      "count": 1
+    },
+    "plaster wall texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "pale terracotta tones": {
+      "avg": 23,
+      "count": 1
+    },
+    "terracotta tones fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones fine stucco": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine stucco surface": {
+      "avg": 23,
+      "count": 1
+    },
+    "stucco surface feel": {
+      "avg": 23,
+      "count": 1
+    },
+    "surface feel mediterranean": {
+      "avg": 23,
+      "count": 1
+    },
+    "feel mediterranean warm": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 25,
+      "count": 4
+    },
+    "red": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta": {
+      "avg": 25,
+      "count": 4
+    },
+    "canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 2
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 2
+    },
+    "desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 3
+    },
+    "composition": {
+      "avg": 25,
+      "count": 2
+    },
+    "side": {
+      "avg": 25,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 4
+    },
+    "red terracotta": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "canyon walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 2
+    },
+    "red terracotta canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta canyon walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic desert geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert geological atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "weathered": {
+      "avg": 25,
+      "count": 1
+    },
+    "painted": {
+      "avg": 25,
+      "count": 1
+    },
+    "wooden": {
+      "avg": 25,
+      "count": 1
+    },
+    "door": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "adobe": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural": {
+      "avg": 25,
+      "count": 2
+    },
+    "charm": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "painted wooden": {
+      "avg": 25,
+      "count": 1
+    },
+    "wooden door": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored adobe": {
+      "avg": 25,
+      "count": 1
+    },
+    "adobe wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural charm": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "painted wooden door": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta colored adobe": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored adobe wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "adobe wall mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall mediterranean architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean architectural charm": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful": {
+      "avg": 25,
+      "count": 1
+    },
+    "spice": {
+      "avg": 25,
+      "count": 1
+    },
+    "mounds": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "displayed": {
+      "avg": 25,
+      "count": 1
+    },
+    "ceramic": {
+      "avg": 25,
+      "count": 1
+    },
+    "bowls": {
+      "avg": 25,
+      "count": 1
+    },
+    "exotic": {
+      "avg": 25,
+      "count": 1
+    },
+    "market": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful spice": {
+      "avg": 25,
+      "count": 1
+    },
+    "spice mounds": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones displayed": {
+      "avg": 25,
+      "count": 1
+    },
+    "ceramic bowls": {
+      "avg": 25,
+      "count": 1
+    },
+    "bowls exotic": {
+      "avg": 25,
+      "count": 1
+    },
+    "exotic market": {
+      "avg": 25,
+      "count": 1
+    },
+    "market atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful spice mounds": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm orange tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange tones displayed": {
+      "avg": 25,
+      "count": 1
+    },
+    "ceramic bowls exotic": {
+      "avg": 25,
+      "count": 1
+    },
+    "bowls exotic market": {
+      "avg": 25,
+      "count": 1
+    },
+    "exotic market atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "market atmosphere warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere warm rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rich colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "mosque": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "domes": {
+      "avg": 25,
+      "count": 1
+    },
+    "minarets": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "twilight": {
+      "avg": 25,
+      "count": 1
+    },
+    "mosque silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette domes": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "mosque silhouette domes": {
+      "avg": 25,
+      "count": 1
+    },
+    "terracotta sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic architectural atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  }
+}

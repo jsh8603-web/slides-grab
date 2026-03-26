@@ -1,0 +1,2278 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "majestic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "waters": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sails": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "behind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maritime": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "majestic tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean waters": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sun": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun reflections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflections epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic maritime": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maritime atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "majestic tall ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall ship sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden ocean waters": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset dramatic warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic warm golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean blue water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sun reflections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun reflections epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflections epic maritime": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic maritime atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maritime atmosphere photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "scene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "viking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "longship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cutting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stormy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grey-blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "north": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "waves": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "iconic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dragon-head": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "prow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spray": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "striped": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sail": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "strong": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overcast": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rim": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "epic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "adventurous": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean": {
+      "avg": 27.5,
+      "count": 3,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "hull": {
+      "avg": 27.5,
+      "count": 3,
+      "pf": 5
+    },
+    "carvings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic scene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "viking longship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "longship cutting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stormy grey-blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grey-blue north": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "north sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea waves": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "iconic dragon-head": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dragon-head prow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "prow emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea spray": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spray striped": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "striped red": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sail billowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strong wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody overcast": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overcast sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic rim": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rim lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "waves epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic adventurous": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "adventurous atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "hull carvings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic cinematic scene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "viking longship cutting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stormy grey-blue north": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grey-blue north sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "north sea waves": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "iconic dragon-head prow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dragon-head prow emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea spray striped": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spray striped red": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strong wind moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind moody overcast": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody overcast sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic rim lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "waves epic adventurous": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic adventurous atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bird": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "s-eye": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fleet": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spanish": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "galleon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ships": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "formation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turquoise": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "caribbean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "stern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "decorations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "scale": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "least": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial bird": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bird s-eye": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "s-eye view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spanish galleon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "galleon ships": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ships sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turquoise caribbean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "caribbean sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall ships": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden stern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stern decorations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "decorations sparkling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkling ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scale composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic aerial bird": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial bird s-eye": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bird s-eye view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spanish galleon ships": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "galleon ships sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turquoise caribbean sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate golden stern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden stern decorations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stern decorations sparkling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "decorations sparkling ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkling ocean surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean surface reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface reflecting warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting warm sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm sunlight cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight cinematic epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic epic scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic scale composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean blue water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue water warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water warm gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold ship details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "breathtaking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "massive": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "five-masted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full-rigged": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "similar": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "preussen": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "open": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "deployed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overwhelming": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "waterline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emphasize": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "enormous": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wispy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clouds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "awe-inspiring": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "monumental": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "breathtaking wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "massive five-masted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "five-masted full-rigged": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full-rigged ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship similar": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "preussen under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under full": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full sail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sails deployed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overwhelming wall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low waterline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "waterline angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "enormous scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean clear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clear sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wispy clouds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clouds warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting highlighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel hull": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hull awe-inspiring": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "awe-inspiring monumental": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "monumental scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "breathtaking wide-angle photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "massive five-masted full-rigged": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "five-masted full-rigged ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full-rigged ship similar": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "preussen under full": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under full sail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low waterline angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue ocean clear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean clear sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wispy clouds warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clouds warm golden-hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel hull awe-inspiring": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hull awe-inspiring monumental": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "awe-inspiring monumental scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stunning": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cruise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "anchored": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "crystal-clear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bay": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "partially": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "furled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "island": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aspirational": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautiful": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "yet": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "timeless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stunning photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern luxury": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing cruise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cruise ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "crystal-clear tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical bay": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship rigging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sails partially": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "partially furled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "furled lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green island": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "island hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm turquoise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turquoise water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water aspirational": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aspirational beautiful": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautiful modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern yet": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "yet timeless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern luxury sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury sailing cruise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing cruise ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cruise ship tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship tall ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "crystal-clear tropical bay": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional tall ship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall ship rigging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sails partially furled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "partially furled lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "furled lush green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green island": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green island hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm turquoise water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turquoise water aspirational": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water aspirational beautiful": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aspirational beautiful modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautiful modern yet": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern yet timeless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic": {
+      "avg": 27.3,
+      "count": 4,
+      "pf": 5
+    },
+    "ship": {
+      "avg": 27.3,
+      "count": 4,
+      "pf": 5
+    },
+    "sails": {
+      "avg": 27.3,
+      "count": 4,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.3,
+      "count": 5,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.2,
+      "count": 3,
+      "pf": 5
+    },
+    "billowing": {
+      "avg": 27.2,
+      "count": 3,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 27.2,
+      "count": 3,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.2,
+      "count": 3,
+      "pf": 5
+    },
+    "rigging": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "canvas": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "sunlight": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "tall ship": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "warm sunlight": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "detailed": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "close-up": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mast": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "system": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rope": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "networks": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ropes": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maritime": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detailed photorealistic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic close-up": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rigging system": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "up intricate": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate rope": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rope networks": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "networks wooden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden mast": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canvas sails": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue sky": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight catching": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain dramatic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic low-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low-angle perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maritime photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detailed photorealistic close-up": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall ship s": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ship s mast": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "up intricate rope": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate rope networks": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rope networks wooden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "networks wooden mast": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue sky warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky warm sunlight": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm sunlight catching": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood grain dramatic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain dramatic low-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic low-angle perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "icon": {
+    "icons": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "representing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sailing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ship": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "parts": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "mast": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sail": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hull": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "keel": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "yard": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "uses": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cel-shading": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "limited": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ocean": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "uniform": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "weight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "row": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "representing sailing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sailing ship": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ship parts": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "parts mast": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "mast sail": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sail hull": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hull keel": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "uses bold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cel-shading limited": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ocean blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "uniform 2px": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px line": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line weight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "weight rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "representing sailing ship": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sailing ship parts": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ship parts mast": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "parts mast sail": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "mast sail hull": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sail hull keel": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ocean blue warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue warm gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "uniform 2px line": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px line weight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line weight rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "weight rounded corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

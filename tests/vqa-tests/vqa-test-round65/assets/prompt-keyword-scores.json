@@ -1,0 +1,154 @@
+{
+  "frame": {
+    "donut": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "main": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "element": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "offset": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "main element": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "element offset": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "main element offset": {
+      "avg": 26.1,
+      "count": 4,
+      "pf": 4.3
+    },
+    "blue": {
+      "avg": 26,
+      "count": 3,
+      "pf": 4
+    },
+    "blue sections": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "sections": {
+      "avg": 24.8,
+      "count": 4,
+      "pf": 3.5
+    },
+    "coral": {
+      "avg": 24.8,
+      "count": 6,
+      "pf": 3.5
+    },
+    "labels": {
+      "avg": 24.8,
+      "count": 6,
+      "pf": 3.5
+    },
+    "annotations": {
+      "avg": 24.8,
+      "count": 6,
+      "pf": 3.5
+    },
+    "radial": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "connection": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "circle": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "thin": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "lines": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "circles": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "radial connection": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "by thin": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "thin lines": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "coral circles": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "by thin lines": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 3.5
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "pointed": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "horizontally": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "pointed sections": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "alternating": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "horizontally alternating": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    }
+  }
+}

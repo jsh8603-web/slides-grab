@@ -1,0 +1,880 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cyan": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cyan": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass towers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban innovation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cyan": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cyan led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city skyline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk tall glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass towers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban innovation cyan": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cyan led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue-white": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue-white faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue-white faint steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "district": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "livable": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "future": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city district": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall sustainable": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable buildings": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "livable future": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "future golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart city": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city district": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall sustainable": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall sustainable buildings": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "livable future golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "future golden sunrise": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 2,
+      "pf": 4
+    },
+    "golden": {
+      "avg": 24.5,
+      "count": 2,
+      "pf": 4
+    },
+    "moody": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wooden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bridge": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "over": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "calm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "water": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hour": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grain": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "aged": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "timbers": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wind": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gentle": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ripples": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sea": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "surface": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "communities": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "moody cinematic": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wooden bridge": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bridge structure": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure over": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "over calm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "calm water": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "golden hour": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grain texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "aged timbers": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "timbers wind": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gentle ripples": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sea surface": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure connecting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting communities": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "communities shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wooden bridge structure": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bridge structure over": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure over calm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "over calm water": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "aged timbers wind": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure connecting communities": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "connecting communities shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "communities shallow dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

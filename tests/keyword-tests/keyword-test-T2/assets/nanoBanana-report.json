@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-03-19T10:51:25.006Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.6,
+    "min": 22,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 2,
+      "25-27": 1,
+      "22-24": 2,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 24.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 26.5,
+      "count": 1
+    },
+    "frame": {
+      "avg": 22,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 27.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-14": 2,
+    "IP-08": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 11 nodes instead of 10. The nodes are connected by a straight line, not a curved ribbon path. The prompt's 'Flat v' is incomplete. The actual colors match the general intent but exact hex codes were not provided in the prompt. However, the discrepancies in node count and path type are significant. It is a straight line, not a curved ribbon. The prompt also specifies a "
+      }
+    },
+    {
+      "slide": 2,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt accurately describes the first three icons (upward bar chart growth, handshake partnership, team silhouettes) and the overall style and color palette. However, the prompt was cut off at \"bottom-left: team s\" and did not describe the fourth icon shown in the bottom-right, which is a target with an arrow."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 8,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "golden (avg 27.5, n=2)",
+        "atmosphere (avg 27.2, n=3)",
+        "lighting (avg 27.2, n=3)",
+        "warm (avg 27, n=2)",
+        "sophisticated (avg 27, n=2)"
+      ],
+      "bottom_keywords": [
+        "labels (avg 23.3, n=2)",
+        "annotations (avg 23.3, n=2)",
+        "subtle (avg 25.3, n=3)",
+        "growth (avg 26, n=2)",
+        "warm (avg 27, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27.1, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 40 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 25.9, n=6)",
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "silhouette (avg 25.6, n=5)",
+        "green (avg 25.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27.1, n=6)",
+        "rounded rectangles (avg 27.1, n=6)",
+        "by arrows (avg 27.1, n=6)",
+        "rounded (avg 27.1, n=6)",
+        "pyramid (avg 26.9, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 198 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=5)",
+        "ship (avg 27.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 92 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 5,
+    "retried": 0
+  }
+}

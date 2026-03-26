@@ -1,0 +1,1568 @@
+{
+  "metaphor": {
+    "close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wheels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "teeth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surfaces": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "revealing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "machining": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "components": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blurred": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orchestration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "systematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "collaboration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "close-up macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass gear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear wheels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate teeth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "teeth warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting long": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional metal": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal surfaces": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surfaces texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights revealing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "revealing fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine machining": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground gear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "components softly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softly blurred": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blurred conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "precision orchestration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "systematic collaboration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking brass gear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass gear wheels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate teeth warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "teeth warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting long shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional metal surfaces": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal surfaces texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surfaces texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional highlights revealing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights revealing fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "revealing fine machining": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "components softly blurred": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softly blurred conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blurred conveying precision": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying precision orchestration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "warm": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "directional": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "shadows": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "traditional": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "texture": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "moody": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "weathered": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "wooden": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "grain": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "running": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "forked": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "path": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "carved": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "direction": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "leading": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "rough": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "splintered": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "other": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "polished": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "finish": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "inlay": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "craftsmanship": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "aesthetic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "tonal": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "range": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "emphasizing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "divergence": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "moody directional": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "weathered wooden": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "wooden surface": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "grain running": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "forked path": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "path carved": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "direction leading": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "rough splintered": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "splintered texture": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "smooth polished": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "polished finish": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "finish brass": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "brass inlay": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "smooth path": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "path traditional": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "traditional craftsmanship": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "craftsmanship aesthetic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "aesthetic warm": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "warm tonal": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "tonal range": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "shadows emphasizing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "weathered wooden surface": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "forked path carved": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "rough splintered texture": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "smooth polished finish": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "polished finish brass": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "finish brass inlay": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "smooth path traditional": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "path traditional craftsmanship": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "traditional craftsmanship aesthetic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "craftsmanship aesthetic warm": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "aesthetic warm tonal": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "warm tonal range": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    }
+  },
+  "cover": {
+    "photorealistic": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "wide-angle": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "view": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "sleek": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "modern": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "corporate": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "office": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "dusk": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "golden": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "reflecting": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "off": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "tall": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "glass": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "towers": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "floor-to-ceiling": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "windows": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "lone": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "silhouetted": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "standing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "desk": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "softly": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "holographic": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "interface": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "panels": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "conveying": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "atmosphere": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "trust": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "quiet": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "transformation": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "full": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "environmental": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "depth": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic wide-angle": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "wide-angle view": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "sleek modern": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "modern corporate": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "corporate office": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "dusk warm": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "warm golden": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "reflecting off": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "off tall": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "tall glass": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "glass towers": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "floor-to-ceiling windows": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "standing desk": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "by softly": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "softly glowing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing holographic": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "holographic interface": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "interface panels": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "panels conveying": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated atmosphere": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "quiet transformation": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "transformation full": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "full environmental": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "environmental depth": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic wide-angle view": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "sleek modern corporate": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "modern corporate office": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "dusk warm golden": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "reflecting off tall": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "off tall glass": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "tall glass towers": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "by softly glowing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "softly glowing holographic": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing holographic interface": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "holographic interface panels": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "interface panels conveying": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "quiet transformation full": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "transformation full environmental": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    },
+    "full environmental depth": {
+      "avg": 23,
+      "count": 1,
+      "pf": 4
+    }
+  },
+  "background": {
+    "photorealistic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "boardroom": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flooding": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panoramic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conference": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "environmental": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "awakening": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sense": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "new": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "era": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beginning": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "optimistic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic wide-angle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern boardroom": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panoramic windows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long polished": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished conference": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conference table": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table full": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full environmental": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "environmental depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline awakening": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "new era": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "era beginning": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beginning sophisticated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "optimistic atmosphere": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic wide-angle view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn warm golden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long polished conference": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished conference table": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conference table full": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table full environmental": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full environmental depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline awakening": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "new era beginning": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "era beginning sophisticated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "exponential": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curves": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "delicate": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "raking": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "non-distracting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suitable": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "backdrop": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ivory": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting exponential": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "exponential growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth curves": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "delicate fiber": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under raking": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "non-distracting suitable": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suitable as": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle warm ivory": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ivory paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory paper texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid lines": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines suggesting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting exponential": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting exponential growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "exponential growth curves": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "delicate fiber pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "non-distracting suitable as": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

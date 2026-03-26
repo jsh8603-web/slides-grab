@@ -1,0 +1,1752 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 23,
+      "count": 1
+    },
+    "active": {
+      "avg": 23,
+      "count": 1
+    },
+    "volcano": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion": {
+      "avg": 23,
+      "count": 2
+    },
+    "red": {
+      "avg": 23,
+      "count": 2
+    },
+    "lava": {
+      "avg": 23,
+      "count": 1
+    },
+    "flows": {
+      "avg": 23,
+      "count": 1
+    },
+    "obsidian": {
+      "avg": 23,
+      "count": 2
+    },
+    "rock": {
+      "avg": 23,
+      "count": 1
+    },
+    "under": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 23,
+      "count": 2
+    },
+    "geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "active volcano": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion red": {
+      "avg": 23,
+      "count": 2
+    },
+    "red lava": {
+      "avg": 23,
+      "count": 1
+    },
+    "lava flows": {
+      "avg": 23,
+      "count": 1
+    },
+    "rock under": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "geological atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion red lava": {
+      "avg": 23,
+      "count": 1
+    },
+    "red lava flows": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky dramatic geological": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic geological atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "brushstroke": {
+      "avg": 23,
+      "count": 1
+    },
+    "empty": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold vermilion": {
+      "avg": 23,
+      "count": 1
+    },
+    "red brushstroke": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold vermilion red": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion red brushstroke": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "frame": {
+    "waffle": {
+      "avg": 23,
+      "count": 1
+    },
+    "five-by-five": {
+      "avg": 23,
+      "count": 1
+    },
+    "grid": {
+      "avg": 23,
+      "count": 1
+    },
+    "equal": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifteen": {
+      "avg": 23,
+      "count": 1
+    },
+    "ten": {
+      "avg": 23,
+      "count": 1
+    },
+    "twenty-five": {
+      "avg": 23,
+      "count": 1
+    },
+    "five-by-five grid": {
+      "avg": 23,
+      "count": 1
+    },
+    "equal squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares fifteen": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifteen squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled vermilion": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion ten": {
+      "avg": 23,
+      "count": 1
+    },
+    "ten squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled pale": {
+      "avg": 23,
+      "count": 1
+    },
+    "twenty-five squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "equal squares fifteen": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares fifteen squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifteen squares filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares filled vermilion": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled vermilion ten": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion ten squares": {
+      "avg": 23,
+      "count": 1
+    },
+    "ten squares filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "squares filled pale": {
+      "avg": 23,
+      "count": 1
+    },
+    "radar": {
+      "avg": 22,
+      "count": 1
+    },
+    "spider": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon": {
+      "avg": 22,
+      "count": 1
+    },
+    "wireframe": {
+      "avg": 22,
+      "count": 1
+    },
+    "axes": {
+      "avg": 22,
+      "count": 1
+    },
+    "radiating": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 3
+    },
+    "three-quarters": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "axis": {
+      "avg": 22,
+      "count": 1
+    },
+    "lines": {
+      "avg": 22,
+      "count": 1
+    },
+    "radar spider": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon wireframe": {
+      "avg": 22,
+      "count": 1
+    },
+    "axes radiating": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin obsidian": {
+      "avg": 22,
+      "count": 1
+    },
+    "obsidian axis": {
+      "avg": 22,
+      "count": 1
+    },
+    "axis lines": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon thin obsidian": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin obsidian axis": {
+      "avg": 22,
+      "count": 1
+    },
+    "obsidian axis lines": {
+      "avg": 22,
+      "count": 1
+    },
+    "sankey": {
+      "avg": 22,
+      "count": 1
+    },
+    "flow": {
+      "avg": 22,
+      "count": 1
+    },
+    "streams": {
+      "avg": 22,
+      "count": 1
+    },
+    "merging": {
+      "avg": 22,
+      "count": 1
+    },
+    "smooth": {
+      "avg": 22,
+      "count": 1
+    },
+    "curved": {
+      "avg": 22,
+      "count": 1
+    },
+    "paths": {
+      "avg": 22,
+      "count": 1
+    },
+    "sankey flow": {
+      "avg": 22,
+      "count": 1
+    },
+    "vermilion streams": {
+      "avg": 22,
+      "count": 1
+    },
+    "obsidian streams": {
+      "avg": 22,
+      "count": 1
+    },
+    "smooth curved": {
+      "avg": 22,
+      "count": 1
+    },
+    "curved flow": {
+      "avg": 22,
+      "count": 1
+    },
+    "flow paths": {
+      "avg": 22,
+      "count": 1
+    },
+    "smooth curved flow": {
+      "avg": 22,
+      "count": 1
+    },
+    "curved flow paths": {
+      "avg": 22,
+      "count": 1
+    },
+    "alabaster": {
+      "avg": 21.8,
+      "count": 5
+    },
+    "vermilion": {
+      "avg": 21.8,
+      "count": 5
+    },
+    "obsidian": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "pale": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "vermilion filled": {
+      "avg": 21.5,
+      "count": 2
+    },
+    "half-circle": {
+      "avg": 21,
+      "count": 1
+    },
+    "gauge": {
+      "avg": 21,
+      "count": 1
+    },
+    "meter": {
+      "avg": 21,
+      "count": 1
+    },
+    "semicircle": {
+      "avg": 21,
+      "count": 1
+    },
+    "arc": {
+      "avg": 21,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 21,
+      "count": 1
+    },
+    "two-thirds": {
+      "avg": 21,
+      "count": 1
+    },
+    "needle": {
+      "avg": 21,
+      "count": 1
+    },
+    "mark": {
+      "avg": 21,
+      "count": 1
+    },
+    "half-circle gauge": {
+      "avg": 21,
+      "count": 1
+    },
+    "gauge meter": {
+      "avg": 21,
+      "count": 1
+    },
+    "semicircle arc": {
+      "avg": 21,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 21,
+      "count": 1
+    },
+    "approximately two-thirds": {
+      "avg": 21,
+      "count": 1
+    },
+    "obsidian needle": {
+      "avg": 21,
+      "count": 1
+    },
+    "two-thirds mark": {
+      "avg": 21,
+      "count": 1
+    },
+    "half-circle gauge meter": {
+      "avg": 21,
+      "count": 1
+    },
+    "vermilion filled arc": {
+      "avg": 21,
+      "count": 1
+    },
+    "stepped": {
+      "avg": 21,
+      "count": 1
+    },
+    "progress": {
+      "avg": 21,
+      "count": 1
+    },
+    "bar": {
+      "avg": 21,
+      "count": 1
+    },
+    "ascending": {
+      "avg": 21,
+      "count": 1
+    },
+    "steps": {
+      "avg": 21,
+      "count": 1
+    },
+    "like": {
+      "avg": 21,
+      "count": 1
+    },
+    "staircase": {
+      "avg": 21,
+      "count": 1
+    },
+    "step": {
+      "avg": 21,
+      "count": 1
+    },
+    "shortest": {
+      "avg": 21,
+      "count": 1
+    },
+    "tall": {
+      "avg": 21,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 21,
+      "count": 1
+    },
+    "stepped progress": {
+      "avg": 21,
+      "count": 1
+    },
+    "progress bar": {
+      "avg": 21,
+      "count": 1
+    },
+    "ascending steps": {
+      "avg": 21,
+      "count": 1
+    },
+    "staircase step": {
+      "avg": 21,
+      "count": 1
+    },
+    "shortest vermilion": {
+      "avg": 21,
+      "count": 1
+    },
+    "vermilion step": {
+      "avg": 21,
+      "count": 1
+    },
+    "tall vermilion": {
+      "avg": 21,
+      "count": 1
+    },
+    "tallest pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "stepped progress bar": {
+      "avg": 21,
+      "count": 1
+    },
+    "shortest vermilion step": {
+      "avg": 21,
+      "count": 1
+    },
+    "tall vermilion step": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "background": {
+    "treemap": {
+      "avg": 25,
+      "count": 1
+    },
+    "rectangles": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "together": {
+      "avg": 25,
+      "count": 1
+    },
+    "largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "red": {
+      "avg": 25,
+      "count": 1
+    },
+    "salmon": {
+      "avg": 25,
+      "count": 1
+    },
+    "blocks": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed together": {
+      "avg": 25,
+      "count": 1
+    },
+    "together largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "largest vermilion": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes packed together": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed together largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "together largest vermilion": {
+      "avg": 25,
+      "count": 1
+    },
+    "raw": {
+      "avg": 25,
+      "count": 1
+    },
+    "concrete": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 2
+    },
+    "cool": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 2
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "cement": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "brutalist": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle raw": {
+      "avg": 25,
+      "count": 1
+    },
+    "raw concrete": {
+      "avg": 25,
+      "count": 1
+    },
+    "concrete texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "cool alabaster": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones fine": {
+      "avg": 25,
+      "count": 2
+    },
+    "fine industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial cement": {
+      "avg": 25,
+      "count": 1
+    },
+    "cement surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern brutalist": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle raw concrete": {
+      "avg": 25,
+      "count": 1
+    },
+    "raw concrete texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones fine industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine industrial cement": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial cement surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "cement surface modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface modern brutalist": {
+      "avg": 25,
+      "count": 1
+    },
+    "film": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "noise": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "analog": {
+      "avg": 25,
+      "count": 1
+    },
+    "photography": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle film": {
+      "avg": 25,
+      "count": 1
+    },
+    "film grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain noise": {
+      "avg": 25,
+      "count": 1
+    },
+    "noise texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm alabaster": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine analog": {
+      "avg": 25,
+      "count": 1
+    },
+    "analog photography": {
+      "avg": 25,
+      "count": 1
+    },
+    "photography grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle film grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "film grain noise": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain noise texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale vermilion tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion tones fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones fine analog": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine analog photography": {
+      "avg": 25,
+      "count": 1
+    },
+    "analog photography grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "photography grain feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain feel cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel cinematic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "obsidian": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "pale": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "alabaster": {
+      "avg": 24.4,
+      "count": 5
+    },
+    "vermilion": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "fine": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "feel": {
+      "avg": 24,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 2
+    },
+    "pale vermilion": {
+      "avg": 24,
+      "count": 2
+    },
+    "plus-sign": {
+      "avg": 24,
+      "count": 1
+    },
+    "cross": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "plus-sign cross": {
+      "avg": 24,
+      "count": 1
+    },
+    "cross shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "vermilion filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled cross": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin obsidian": {
+      "avg": 24,
+      "count": 1
+    },
+    "plus-sign cross shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "vermilion filled cross": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "bold": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "stripe": {
+      "avg": 23,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 23,
+      "count": 1
+    },
+    "candy": {
+      "avg": 23,
+      "count": 1
+    },
+    "forty-five": {
+      "avg": 23,
+      "count": 1
+    },
+    "degrees": {
+      "avg": 23,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 23,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "diagonal stripe": {
+      "avg": 23,
+      "count": 1
+    },
+    "stripe pattern": {
+      "avg": 23,
+      "count": 1
+    },
+    "alabaster fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine candy": {
+      "avg": 23,
+      "count": 1
+    },
+    "candy stripe": {
+      "avg": 23,
+      "count": 1
+    },
+    "stripe feel": {
+      "avg": 23,
+      "count": 1
+    },
+    "forty-five degrees": {
+      "avg": 23,
+      "count": 1
+    },
+    "degrees bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle thin diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin diagonal stripe": {
+      "avg": 23,
+      "count": 1
+    },
+    "diagonal stripe pattern": {
+      "avg": 23,
+      "count": 1
+    },
+    "alabaster fine candy": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine candy stripe": {
+      "avg": 23,
+      "count": 1
+    },
+    "candy stripe feel": {
+      "avg": 23,
+      "count": 1
+    },
+    "forty-five degrees bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "icon": {
+    "isometric": {
+      "avg": 24,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "repair": {
+      "avg": 24,
+      "count": 1
+    },
+    "garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "lift": {
+      "avg": 24,
+      "count": 1
+    },
+    "toolbox": {
+      "avg": 24,
+      "count": 1
+    },
+    "vehicle": {
+      "avg": 24,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "car repair": {
+      "avg": 24,
+      "count": 1
+    },
+    "repair garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "lift toolbox": {
+      "avg": 24,
+      "count": 1
+    },
+    "vehicle vermilion": {
+      "avg": 24,
+      "count": 1
+    },
+    "car repair garage": {
+      "avg": 24,
+      "count": 1
+    },
+    "alabaster": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "car": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "obsidian": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "steering": {
+      "avg": 23,
+      "count": 1
+    },
+    "wheel": {
+      "avg": 23,
+      "count": 1
+    },
+    "gas": {
+      "avg": 23,
+      "count": 1
+    },
+    "pump": {
+      "avg": 23,
+      "count": 1
+    },
+    "wrench": {
+      "avg": 23,
+      "count": 1
+    },
+    "fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "automotive": {
+      "avg": 23,
+      "count": 1
+    },
+    "car silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "steering wheel": {
+      "avg": 23,
+      "count": 1
+    },
+    "wheel silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "gas pump": {
+      "avg": 23,
+      "count": 1
+    },
+    "pump silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "wrench silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette obsidian": {
+      "avg": 23,
+      "count": 1
+    },
+    "obsidian fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "steering wheel silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "gas pump silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "wrench silhouette obsidian": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette obsidian fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion": {
+      "avg": 23,
+      "count": 2
+    },
+    "icons": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "grid": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "dumbbell": {
+      "avg": 22,
+      "count": 1
+    },
+    "running": {
+      "avg": 22,
+      "count": 1
+    },
+    "shoe": {
+      "avg": 22,
+      "count": 1
+    },
+    "stopwatch": {
+      "avg": 22,
+      "count": 1
+    },
+    "water": {
+      "avg": 22,
+      "count": 1
+    },
+    "bottle": {
+      "avg": 22,
+      "count": 1
+    },
+    "athletic": {
+      "avg": 22,
+      "count": 1
+    },
+    "running shoe": {
+      "avg": 22,
+      "count": 1
+    },
+    "water bottle": {
+      "avg": 22,
+      "count": 1
+    },
+    "bottle vermilion": {
+      "avg": 22,
+      "count": 1
+    },
+    "water bottle vermilion": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "torii": {
+      "avg": 25,
+      "count": 1
+    },
+    "gate": {
+      "avg": 25,
+      "count": 1
+    },
+    "standing": {
+      "avg": 25,
+      "count": 1
+    },
+    "calm": {
+      "avg": 25,
+      "count": 1
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "behind": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "japanese": {
+      "avg": 25,
+      "count": 1
+    },
+    "spiritual": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion red": {
+      "avg": 25,
+      "count": 1
+    },
+    "red torii": {
+      "avg": 25,
+      "count": 1
+    },
+    "torii gate": {
+      "avg": 25,
+      "count": 1
+    },
+    "gate standing": {
+      "avg": 25,
+      "count": 1
+    },
+    "calm water": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette behind": {
+      "avg": 25,
+      "count": 1
+    },
+    "behind serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene japanese": {
+      "avg": 25,
+      "count": 1
+    },
+    "japanese spiritual": {
+      "avg": 25,
+      "count": 1
+    },
+    "spiritual atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion red torii": {
+      "avg": 25,
+      "count": 1
+    },
+    "red torii gate": {
+      "avg": 25,
+      "count": 1
+    },
+    "torii gate standing": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain silhouette behind": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette behind serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "behind serene japanese": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene japanese spiritual": {
+      "avg": 25,
+      "count": 1
+    },
+    "japanese spiritual atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "thunderstorm": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "breaking": {
+      "avg": 25,
+      "count": 1
+    },
+    "storm": {
+      "avg": 25,
+      "count": 1
+    },
+    "clouds": {
+      "avg": 25,
+      "count": 1
+    },
+    "epic": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "drama": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic thunderstorm": {
+      "avg": 25,
+      "count": 1
+    },
+    "thunderstorm sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset breaking": {
+      "avg": 25,
+      "count": 1
+    },
+    "obsidian storm": {
+      "avg": 25,
+      "count": 1
+    },
+    "storm clouds": {
+      "avg": 25,
+      "count": 1
+    },
+    "clouds epic": {
+      "avg": 25,
+      "count": 1
+    },
+    "epic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric drama": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic thunderstorm sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "vermilion sunset breaking": {
+      "avg": 25,
+      "count": 1
+    },
+    "obsidian storm clouds": {
+      "avg": 25,
+      "count": 1
+    },
+    "storm clouds epic": {
+      "avg": 25,
+      "count": 1
+    },
+    "clouds epic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "epic atmospheric drama": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "red": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "dramatic": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "vermilion": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "obsidian": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "aerial": {
+      "avg": 24,
+      "count": 1
+    },
+    "desert": {
+      "avg": 24,
+      "count": 1
+    },
+    "sand": {
+      "avg": 24,
+      "count": 1
+    },
+    "dunes": {
+      "avg": 24,
+      "count": 1
+    },
+    "shadow": {
+      "avg": 24,
+      "count": 1
+    },
+    "patterns": {
+      "avg": 24,
+      "count": 1
+    },
+    "martian": {
+      "avg": 24,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 24,
+      "count": 3
+    },
+    "cinematic aerial": {
+      "avg": 24,
+      "count": 1
+    },
+    "red desert": {
+      "avg": 24,
+      "count": 1
+    },
+    "vermilion sand": {
+      "avg": 24,
+      "count": 1
+    },
+    "sand dunes": {
+      "avg": 24,
+      "count": 1
+    },
+    "dramatic shadow": {
+      "avg": 24,
+      "count": 1
+    },
+    "shadow patterns": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky martian": {
+      "avg": 24,
+      "count": 1
+    },
+    "vermilion sand dunes": {
+      "avg": 24,
+      "count": 1
+    },
+    "dramatic shadow patterns": {
+      "avg": 24,
+      "count": 1
+    },
+    "macro": {
+      "avg": 23,
+      "count": 1
+    },
+    "glowing": {
+      "avg": 23,
+      "count": 1
+    },
+    "hot": {
+      "avg": 23,
+      "count": 1
+    },
+    "metal": {
+      "avg": 23,
+      "count": 1
+    },
+    "being": {
+      "avg": 23,
+      "count": 1
+    },
+    "forged": {
+      "avg": 23,
+      "count": 1
+    },
+    "orange": {
+      "avg": 23,
+      "count": 1
+    },
+    "heat": {
+      "avg": 23,
+      "count": 1
+    },
+    "workshop": {
+      "avg": 23,
+      "count": 1
+    },
+    "environment": {
+      "avg": 23,
+      "count": 1
+    },
+    "industrial": {
+      "avg": 23,
+      "count": 1
+    },
+    "craftsmanship": {
+      "avg": 23,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 23,
+      "count": 1
+    },
+    "depth": {
+      "avg": 23,
+      "count": 1
+    },
+    "field": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 23,
+      "count": 1
+    },
+    "glowing hot": {
+      "avg": 23,
+      "count": 1
+    },
+    "hot metal": {
+      "avg": 23,
+      "count": 1
+    },
+    "metal being": {
+      "avg": 23,
+      "count": 1
+    },
+    "being forged": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion orange": {
+      "avg": 23,
+      "count": 1
+    },
+    "orange heat": {
+      "avg": 23,
+      "count": 1
+    },
+    "workshop environment": {
+      "avg": 23,
+      "count": 1
+    },
+    "environment industrial": {
+      "avg": 23,
+      "count": 1
+    },
+    "industrial craftsmanship": {
+      "avg": 23,
+      "count": 1
+    },
+    "craftsmanship atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere shallow": {
+      "avg": 23,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 23,
+      "count": 1
+    },
+    "glowing hot metal": {
+      "avg": 23,
+      "count": 1
+    },
+    "hot metal being": {
+      "avg": 23,
+      "count": 1
+    },
+    "metal being forged": {
+      "avg": 23,
+      "count": 1
+    },
+    "vermilion orange heat": {
+      "avg": 23,
+      "count": 1
+    },
+    "workshop environment industrial": {
+      "avg": 23,
+      "count": 1
+    },
+    "environment industrial craftsmanship": {
+      "avg": 23,
+      "count": 1
+    },
+    "industrial craftsmanship atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "craftsmanship atmosphere shallow": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere shallow depth": {
+      "avg": 23,
+      "count": 1
+    }
+  }
+}

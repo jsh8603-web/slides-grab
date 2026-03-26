@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-03-19T03:02:09.634Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 0,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.1,
+    "min": 17,
+    "max": 25,
+    "distribution": {
+      "25": 13,
+      "23-24": 6,
+      "20-22": 0,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 2,
+    "IP-08": 1,
+    "IV-03": 2,
+    "IV-10": 3,
+    "IP-11": 1,
+    "IV-09": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 19,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 2,
+        "co_reason": "The centered large hexagon leaves limited flexible negative space for text overlay, though it matches the prompt's request for a centered element.",
+        "detected_text": [],
+        "pf_reason": "The image is a square aspect ratio, not the requested 16:9."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'Background light gray', but the central empty area is a medium-dark gray, and the overall background is dark slate, not light gray. This is a minor deviation from the requested color palette for the background element, though the dark slate and bright teal are accurate for other elements."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specifies a 'Primary dark slate' color which is not present in the image. The icons are bright teal on a white and light gray background. Otherwise, the image matches the description well, with matching outline icons in a 2x2 grid, bright teal outlines, uniform stroke weight, and rounded corners, all in a professional, tech-modern style."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The bright teal area does not appear to have transparency as specified in the prompt; it is a solid color rather than translucent."
+      }
+    },
+    {
+      "slide": 20,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specifies \"some filled light gray\" circles, but the image only shows dark slate and bright teal filled circles on a light gray background. The background areas between the dots are light gray, but no dots are explicitly filled with light gray. However, the overall concept of a dot map with the specified colors and style is well-matched. This is a minor deviation. Alternatively, one could interpret 'some light gray' as the spaces between the dots, but the phrasing 'some filled' implies the circles themselves would be filled with light gray. Given the ambiguity, I'm leaning slightly towards a minor deviation. Without this, it would be a 5. But given the strictness, I'll go with 4. If the prompt was clearer, the score could change. Considering the *spirit* of the prompt, it's very close. Let me re-evaluate, "
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "soft (avg 25, n=2)",
+        "pie (avg 25, n=2)",
+        "first (avg 25, n=2)",
+        "second (avg 25, n=2)",
+        "medium (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "filled (avg 22, n=4)",
+        "with bright (avg 22, n=3)",
+        "glowing (avg 23.5, n=2)",
+        "data (avg 23.5, n=2)",
+        "rows (avg 23.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

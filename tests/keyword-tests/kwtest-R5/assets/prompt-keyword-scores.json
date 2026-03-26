@@ -1,0 +1,865 @@
+{
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "industry": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food industry": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "industry data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint emerald": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food industry data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "industry data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "food": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "agricultural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "agricultural innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food technology innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cinematic aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush tropical greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall green plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "agricultural innovation warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunlight filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "frame": {
+    "flowchart": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brown": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nodes": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bathed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure bathed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass structure bathed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "farm": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "moody": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fields": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stretching": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distance": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden farm": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm gate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour tropical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical green": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green fields": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fields stretching": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distance wind-blown": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown tall": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall grass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground warm": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long shadows": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows shallow": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden farm gate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour tropical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour tropical green": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical green fields": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green fields stretching": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distance wind-blown tall": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown tall grass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground warm directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long shadows shallow": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows shallow dof": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

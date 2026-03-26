@@ -1,0 +1,286 @@
+{
+  "frame": {
+    "chevron": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "process": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pointed": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "chevron process": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pointed sections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "radial": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "connection": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "circle": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "circles": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "thin": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "lines": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "connecting": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "main": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "element": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "positioned": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "leaving": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "open": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "radial connection": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "orange circles": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "thin lines": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "lines connecting": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "main element": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "element positioned": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "thin lines connecting": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "main element positioned": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "it thin": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "it thin lines": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "colors": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "orange": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "labels": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "annotations": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "captions": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "captions colors": {
+      "avg": 25.3,
+      "count": 6,
+      "pf": 3.8
+    },
+    "bars orange": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "bar": {
+      "avg": 22.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "bars": {
+      "avg": 22.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "increasing": {
+      "avg": 22.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "height": {
+      "avg": 22.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "increasing height": {
+      "avg": 22.3,
+      "count": 2,
+      "pf": 2.5
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "icons": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "neutral": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "2x2": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "grid": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "silhouette": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "lightbulb": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "target": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "handshake": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "inside": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "rounded": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "colors": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "2x2 grid": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "lightbulb silhouette": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "target silhouette": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "handshake silhouette": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-03-19T05:40:11.730Z",
+  "summary": {
+    "total": 20,
+    "pass": 19,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.3,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 5,
+      "23-24": 9,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 23,
+      "count": 2
+    },
+    "frame": {
+      "avg": 21.8,
+      "count": 5
+    },
+    "background": {
+      "avg": 24.4,
+      "count": 5
+    },
+    "icon": {
+      "avg": 23,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 1,
+    "IV-10": 2,
+    "IP-11": 2,
+    "IP-03": 1,
+    "IP-08": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The vermilion filled arc covers less than half, not approximately two-thirds as specified in the prompt. The accent color was specified as 'obsidian' but the image shows a black needle and dot, which is acceptable for 'obsidian'. The prompt also ended abruptly, so it is possible there were more elements that were not rendered."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 'Four ascending steps' but the image shows five steps. Additionally, the last step is grey instead of vermilion as implied by the prompt's description of the steps. The prompt also specifies 'dramatic bold' which isn't fully conveyed by the image's minimalist style, though it is professional and bold in its lines."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt requested a pentagon wireframe with five axes, but the image shows an octagon with eight axes."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested three vermilion streams on the left merging into two obsidian streams on the right. The image shows only two vermilion streams on the left merging into a single central stream, which then splits into two obsidian streams on the right. The number of initial streams is incorrect."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The accent color specified as 'obsidian' is rendered as light grey shadows, not a dark black. The style is professional but lacks a 'dramatic bold' feel for outline icons."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 25, n=2)",
+        "texture (avg 25, n=2)",
+        "tones (avg 25, n=2)",
+        "fine (avg 25, n=2)",
+        "tones fine (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "vermilion filled (avg 22.3, n=3)",
+        "icons (avg 22.5, n=2)",
+        "2x2 (avg 22.5, n=2)",
+        "2x2 grid (avg 22.5, n=2)",
+        "filled (avg 22.6, n=5)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "corner (avg 24.8, n=6)",
+        "bold (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 22 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 34 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 123 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)",
+        "weave (avg 24.6, n=5)",
+        "weave texture (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 59 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 58 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 1
+  }
+}

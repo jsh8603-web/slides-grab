@@ -1,0 +1,1053 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "factory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maturity": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "levels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "absent": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leaving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foundation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illustration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart factory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "factory maturity": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "maturity levels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "absent leaving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers representing smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing smart factory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart factory maturity": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "factory maturity levels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "factory": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "exterior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "industrial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "amber-lit": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "manufacturing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "complex": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "architectural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart factory": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "factory exterior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "industrial buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber-lit windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing warmly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmly soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "haze over": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "manufacturing complex": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "architectural lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart factory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart factory exterior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber-lit windows glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows glowing warmly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing warmly soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmly soft atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft atmospheric haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric haze over": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale silver sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surrounding": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clouds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "factory campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting surrounding": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surrounding green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver clouds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic smart factory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart factory campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden dusk wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk wide-angle perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting surrounding green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm silver clouds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "information": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suitable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlaying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "statistics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern detail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending softly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softly gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting layered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layered information": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface suitable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlaying charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern detail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones blending softly": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending softly gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain suggesting layered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting layered information": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 26.5,
+      "count": 2,
+      "pf": 5
+    },
+    "interlocking": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gears": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlighted": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surrounding": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mechanical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "details": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "precision": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "systems": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking wooden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden gears": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear highlighted": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber orange": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surrounding gears": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural wood": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones ornate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate mechanical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mechanical details": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "details suggesting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting precision": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected systems": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking wooden gears": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones ornate mechanical": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate mechanical details": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mechanical details suggesting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "details suggesting precision": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

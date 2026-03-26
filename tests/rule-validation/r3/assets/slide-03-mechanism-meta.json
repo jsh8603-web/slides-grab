@@ -1,0 +1,25 @@
+{
+  "slide": 3,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Authoritative, data-driven, and forward-looking — conveying strategic urgency with measured confidence. Color palette: Primary , Accent , Background , Text , Muted. A close-up of intricate brass gears and mechanical components, texture warm directional light casting long shadows across the metallic surface, traditional craftsmanship meeting modern precision, moody atmosphere emphasizing depth and complexity, no text 16:9 aspect ratio. Sharp focus, high quality. Ample negative space on one",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 51,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 5,
+      "composition": 5,
+      "color_harmony": 4,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 25,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

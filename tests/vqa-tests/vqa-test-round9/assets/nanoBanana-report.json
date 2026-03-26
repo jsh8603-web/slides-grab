@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-03-19T01:29:06.719Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.3,
+    "min": 19,
+    "max": 25,
+    "distribution": {
+      "25": 7,
+      "23-24": 6,
+      "20-22": 5,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "metaphor": {
+      "avg": 22.8,
+      "count": 6
+    },
+    "frame": {
+      "avg": 23,
+      "count": 6
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "background": {
+      "avg": 23,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IV-09": 3,
+    "IP-03": 1,
+    "IV-03": 2,
+    "IV-02": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 20,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt specified 4 arrow-shaped segments, but the image shows 5 segments. The background is warm gray, not light gray as specified by the prompt for 'Clean flat vector on light gray background'. However, it matches the 'Background warm gray' specified in the color palette section, which takes precedence as it's more specific regarding color harmony requirements. The primary discrepancy is the number of segments, which is a key detail for a process diagram. The prompt also had a trailing 'Absolutely no ' which implies 'Absolutely no text', but the image does not have text, so this is met well. The background color also matches a specific color in the palette so that's not a deviation. The only deviation is the number of segments in the diagram, which is a major point for a process diagram, hence the score of 2. It is not poor (1) because a lot of elements are there, but the main element that describes the diagram is off, hence below average (2). Given this is a specific instruction to follow, a prompt fidelity score of 2 is appropriate. Although, looking back, the prompt states 'Background warm gray' under color palette and 'light gray background' at the end. I will assume 'warm gray' is more specific and thus the image fits the background color instruction. The number of segments is the only strong point of deviation. So, 2 it is. The rest of the prompt is well-followed. I will keep the pf_reason concise for the number of segments only to highlight the biggest deviation. Prompt specified 4 segments, but the image has 5. This is a crucial detail for a process diagram, impacting fidelity significantly. It is not a poor (1) score as many other elements like color, style, and transition are correct. It is below average (2) because of this specific deviation, which is a key aspect of the prompt's instructions for the diagram itself. Prompt specified 4 segments, but the image shows 5. This is a significant deviation for a process diagram where the number of steps is critical. This is a crucial detail for a process diagram, impacting fidelity significantly. It is not a poor (1) score as many other elements like color, style, and transition are correct. It is below average (2) because of this specific deviation, which is a key aspect of the prompt's instructions for the diagram itself. There is no other deviation besides the number of segments. All colors match what was requested, and the style is professional and clean. The primary deviation is the count of segments for the chevron process diagram. The prompt requested '4 arrow-shaped segments', but the image displays 5. All other aspects of the prompt, including colors, style, and transition, are accurately represented."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The image does not adhere to the specified color palette of 'Primary deep navy', 'Accent teal', and 'Background warm gray'. While a blurred blue sky is present, the primary colors are soft pink and the background is not warm gray, and deep navy is absent. The provided color palette was largely ignored, despite the visual elements of cherry blossoms and a blurred blue sky matching the prompt."
+      }
+    },
+    {
+      "slide": 13,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image does not adhere to the specified color palette of deep navy, accent teal, and warm gray; instead, it uses a pure black background and the primary colors are from the rainbow spectrum. The style and subject are otherwise well-matched."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a center circle connected to 6 outer circles, but the image shows 8 outer circles. While the overall concept is correct, the specific count is not met by the image."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "stylized symbol on screen"
+        ]
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 19,
+    "retried": 0
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-03-19T04:39:21.164Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 5,
+      "20-22": 4,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.7,
+      "count": 6
+    },
+    "background": {
+      "avg": 23.7,
+      "count": 6
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IV-09": 3,
+    "IV-10": 3,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows a regal curtain frame instead of a minimal pie chart as requested in the prompt."
+      }
+    },
+    {
+      "slide": 11,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "co_reason": "The prominent central gold motif occupies a significant portion of the slide, reducing flexible negative space for text overlay and making it less \"extremely minimal\" as described for a background.",
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image is not 'minimal' or 'clean flat' as requested in the prompt, featuring ornate gold patterns on the chevrons rather than a plain, flat design for the main color fills. The second chevron also has burgundy borders, deviating slightly from a purely 'gold' fill as implied for the second element."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The gold square has a gradient instead of being a clean flat vector as specified in the prompt."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The stained glass windows are multicolored rather than primarily burgundy, and the background stone is more beige/sandstone than ivory, not matching the requested color palette. A cinematic wide shot of Gothic cathedral interior with rich burgundy stained glass windows and golden light beams. Dramatic architectural atmosphere. Vast ceiling area for text overlay. Absolutely \""
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "middle (avg 25, n=3)",
+        "stacked (avg 25, n=2)",
+        "burgundy middle (avg 25, n=2)",
+        "icons (avg 25, n=2)",
+        "2x2 (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "atmosphere (avg 22, n=3)",
+        "circle (avg 22, n=2)",
+        "regal (avg 22.5, n=4)",
+        "texture (avg 22.5, n=2)",
+        "luxurious (avg 22.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "gold (avg 25, n=5)",
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "thin (avg 25, n=6)",
+        "atmosphere (avg 25, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 15 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "green (avg 24.7, n=7)",
+        "olive (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 28 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "layers (avg 24.8, n=5)",
+        "layers stacked (avg 24.8, n=5)",
+        "sand (avg 24.8, n=6)",
+        "parchment (avg 24.8, n=8)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 90 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.9, n=7)",
+        "pattern (avg 24.6, n=9)",
+        "barely (avg 24.6, n=19)",
+        "visible (avg 24.6, n=19)",
+        "barely visible (avg 24.6, n=19)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 38 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=6)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "field (avg 24.9, n=6)",
+        "sunset sky (avg 24.9, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 40 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 23,
+    "retried": 3
+  }
+}

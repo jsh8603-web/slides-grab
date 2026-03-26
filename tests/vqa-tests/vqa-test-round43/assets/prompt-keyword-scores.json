@@ -1,0 +1,294 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "donut": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "hollow": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "orange orange": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "orange thick": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "flowchart": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "hub-spoke": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "circle": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "circles": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "connecting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "orange circles": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "thin lines": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "lines connecting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "thin lines connecting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 5
+    },
+    "widest": {
+      "avg": 24,
+      "count": 2,
+      "pf": 4
+    },
+    "sections": {
+      "avg": 23.3,
+      "count": 4,
+      "pf": 3.8
+    },
+    "orange": {
+      "avg": 23.2,
+      "count": 10,
+      "pf": 3.7
+    },
+    "funnel": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "narrowing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "down": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "narrowest": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "sections narrowing": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "narrowing down": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "sections narrowing down": {
+      "avg": 23,
+      "count": 1,
+      "pf": 3
+    },
+    "chevron": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 3.5
+    },
+    "process": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 3.5
+    },
+    "arrow-shaped": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 3.5
+    },
+    "chevron process": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 3.5
+    },
+    "arrow-shaped sections": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 3.5
+    },
+    "staircase": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "ascending": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "steps": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "step": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "ascending steps": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "step orange": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "bar": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "bars": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "different": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "heights": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "alternating": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "different heights": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    },
+    "orange alternating": {
+      "avg": 21,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

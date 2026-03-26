@@ -1,0 +1,585 @@
+{
+  "frame": {
+    "radial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "connection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "connecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "element": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "positioned": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "leaving": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "open": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "radial connection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange circles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin lines": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "lines connecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "element positioned": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "thin lines connecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element positioned": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "2x2": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "matrix": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "equal": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "quadrants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "separated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "quadrant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "different": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shade": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2 matrix": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "equal quadrants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "quadrants separated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "separated by": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by thin": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "different shade": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "equal quadrants separated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "quadrants separated by": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "separated by thin": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by thin lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "widest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circles": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "orange": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "labels": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "annotations": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "captions": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "colors": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "captions colors": {
+      "avg": 25.8,
+      "count": 6,
+      "pf": 3.8
+    },
+    "timeline": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "circular": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "milestones": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "alternating": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "circular milestones": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "orange alternating": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "alternating circles": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "orange alternating circles": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bars": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "increasing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "height": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "increasing height": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "chevron": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "process": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "pointed": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "sections": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "chevron process": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "pointed sections": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "cover": {
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "empty": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line pattern sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "cinematic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ocean": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "scene": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gentle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rolling": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "waves": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "colors": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "foam": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "serene": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cinematic ocean": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "ocean scene": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gentle rolling": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rolling waves": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "foam serene": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cinematic ocean scene": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gentle rolling waves": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "icons": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neutral": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cloud": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shield": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rocket": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "inside": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "colors": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2 grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gear silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cloud silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shield silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rocket silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

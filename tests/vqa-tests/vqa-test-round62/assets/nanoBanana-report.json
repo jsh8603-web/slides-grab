@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-03-19T09:55:09.176Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 6,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.9,
+    "min": 21,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 12,
+      "25-27": 1,
+      "22-24": 6,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "icon": {
+      "avg": 26,
+      "count": 3
+    },
+    "background": {
+      "avg": 26.8,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 26.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 3,
+    "IV-09": 2,
+    "IV-10": 3,
+    "IP-08": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 7,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested five smaller circles, but the image shows six. Additionally, the image uses various shades of green and yellow for the spokes beyond the specified primary forest green and accent rich gold."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The proportions of the pie chart wedges do not match the prompt. The forest green wedge is significantly larger than one third, and the rich gold wedge is much smaller than one quarter."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "Background is pale sage instead of white. Outlines are forest green, not rich gold; gold is used for internal details/accents."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified the forest green arc covering approximately three-fifths (60%) of the circle, but the image shows it covering approximately half (50%) of the circle. This is a significant deviation from the requested proportion. The 'remaining two-fif' part of the prompt was incomplete, but implied the rest of the circle, which is not accurately represented by the 50/50 split shown for a 60/40 request. Overall, the colors, style, and presence of a progress ring are correct, but the core measurement is off. If the prompt intended 50% it would have said half, not three-fifths. If it had been 'approximately half' then 50% would have been acceptable but it gave a more specific fraction which 50% is not approximately matching, three fifths is 60% and this is exactly 50%. The prompt also used the word 'approximately' but 50% is not an approximation of 60%. The approximation would be closer to 60%, such as 58% or 62%. As such the fidelity is poor. The output also failed to complete the last word 'fifths' of 'two-fif'. The image output does not appear to follow the prompt faithfully enough to compensate for this prompt error. Therefore, I will assume the prompt means 'two-fifths'. 3/5 (60%) and 2/5 (40%). The image clearly shows 1/2 and 1/2. Thus there is no 'approximately' and it is simply wrong. The prompt fidelity will be lower to reflect this poor matching of quantity. The image is visually good but does not match the prompt's request for quantity. The prompt did not complete the word 'fifths', stopping at 'two-fif', but the intention was clear. The image shows a 50/50 split rather than the requested 60/40 split (three-fifths filled). Given it is a 'progress ring', this proportion is key to prompt fidelity and is incorrect. As such the score is low for a clear prompt fidelity failure. It is not poor because the image still looks good, but it is below average for failing a clear metric. This is not an opinion it is a fact that 50% is not 60%. Therefore the prompt fidelity is a 2. Also, the prompt states 'Arc starting from top going clockwise'. The image provided starts the arc from the very bottom of the circle and goes clockwise. The arc should start from the very top not from the bottom as the image shows. The image clearly starts from the bottom. Another point of failure regarding prompt fidelity. This lowers the prompt fidelity score even more, from a 3 to a 2. There are 2 separate mistakes, both of which are specific and measurable. If there were one mistake, it would be a 3. If there are 2 mistakes, it will be a 2. As there are more than 1 mistake. I cannot give a 3. I will give it a 2 because it is below average. It's not a 1 as it does display an arc and is a progress ring, and it is the correct colors. However, the exact positioning and proportion are wrong. This is the difference between a 1 and a 2. So it is below average, a 2. Also, the text 'two-fif' is not completed by the user, but the image is not penalized for this as the AI needs to make an interpretation and it is assumed it would be two-fifths, so the image is penalized for failing to match the assumption of two-fifths. The image shows 1/2 not 2/5. This is another reason for the low fidelity. Both of these are specific points of failure. The user mentioned 'approximately three-fifths' which could have been 50% but since they said 'three-fifths' it must be closer to 60% than 50% so there is a failure on the part of the AI in creating the correct proportion. The image generated shows a 50/50 split, but the prompt requested \"approximately three-fifths (60%)\". This means the green arc should be larger than what is depicted. Also, the prompt clearly states, \"Arc starting from top going clockwise.\" The image shows the arc starting from the bottom, not the top. These are two distinct and measurable inaccuracies regarding the prompt's instructions. If there was only one such error, a score of 3 (adequate) might be acceptable, but with two significant deviations, the fidelity is below average. Given that a \"progress ring\" relies heavily on accurate proportions and starting points, these errors are critical to the image's purpose. Thus, a score of 2 is appropriate."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt description cuts off before fully describing the middle and third bars. While the colors for the described bars match, the middle rich gold bar is much longer than the top forest green bar, which was described as 'extending halfway', implying a similar or specified length for the middle bar was intended. The third bar is not described at all in the prompt."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "dense (avg 27.5, n=2)",
+        "sunlight (avg 27.5, n=4)",
+        "serene (avg 27.5, n=2)",
+        "atmosphere (avg 27.5, n=4)",
+        "green tones (avg 27.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "main (avg 22, n=2)",
+        "element (avg 22, n=2)",
+        "offset (avg 22, n=2)",
+        "main element (avg 22, n=2)",
+        "element offset (avg 22, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)",
+        "base (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 36 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "inside (avg 25.3, n=6)",
+        "rounded (avg 25.3, n=6)",
+        "filled (avg 25.2, n=6)",
+        "silhouette (avg 25.2, n=6)",
+        "charcoal (avg 25, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 51 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=6)",
+        "rounded rectangles (avg 27, n=6)",
+        "by arrows (avg 27, n=6)",
+        "rounded (avg 27, n=6)",
+        "narrowest (avg 26.8, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 177 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=6)",
+        "pattern warm (avg 26.8, n=6)",
+        "fiber pattern (avg 26.8, n=6)",
+        "paper (avg 26.8, n=6)",
+        "paper texture (avg 26.8, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 76 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "warm (avg 25.9, n=13)",
+        "catching (avg 25.8, n=6)",
+        "blue (avg 25.8, n=7)",
+        "sky (avg 25.7, n=8)",
+        "lighting (avg 25.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 76 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

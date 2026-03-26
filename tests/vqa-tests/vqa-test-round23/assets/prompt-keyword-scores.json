@@ -1,0 +1,3036 @@
+{
+  "cover": {
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "board": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "cover charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal background": {
+      "avg": 25,
+      "count": 1
+    },
+    "very subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle turquoise": {
+      "avg": 25,
+      "count": 1
+    },
+    "turquoise circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "board pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern in": {
+      "avg": 25,
+      "count": 1
+    },
+    "right corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "clean tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "central empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty area": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle turquoise circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "turquoise circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal": {
+      "avg": 24,
+      "count": 2
+    },
+    "turquoise": {
+      "avg": 24,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 23,
+      "count": 1
+    },
+    "glacial": {
+      "avg": 23,
+      "count": 1
+    },
+    "lake": {
+      "avg": 23,
+      "count": 1
+    },
+    "mountain": {
+      "avg": 23,
+      "count": 1
+    },
+    "cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "crystal": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear": {
+      "avg": 23,
+      "count": 1
+    },
+    "water": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "mountains": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 23,
+      "count": 1
+    },
+    "turquoise glacial": {
+      "avg": 23,
+      "count": 1
+    },
+    "glacial lake": {
+      "avg": 23,
+      "count": 1
+    },
+    "lake with": {
+      "avg": 23,
+      "count": 1
+    },
+    "dark charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal mountain": {
+      "avg": 23,
+      "count": 1
+    },
+    "mountain cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "cliffs crystal": {
+      "avg": 23,
+      "count": 1
+    },
+    "crystal clear": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear water": {
+      "avg": 23,
+      "count": 1
+    },
+    "water reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflecting mountains": {
+      "avg": 23,
+      "count": 1
+    },
+    "mountains vast": {
+      "avg": 23,
+      "count": 1
+    },
+    "vast sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky area": {
+      "avg": 23,
+      "count": 1
+    },
+    "text overlay": {
+      "avg": 23,
+      "count": 1
+    },
+    "turquoise glacial lake": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal mountain cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "mountain cliffs crystal": {
+      "avg": 23,
+      "count": 1
+    },
+    "cliffs crystal clear": {
+      "avg": 23,
+      "count": 1
+    },
+    "crystal clear water": {
+      "avg": 23,
+      "count": 1
+    },
+    "clear water reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "water reflecting mountains": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "frame": {
+    "sankey": {
+      "avg": 24,
+      "count": 1
+    },
+    "flow": {
+      "avg": 24,
+      "count": 1
+    },
+    "thick": {
+      "avg": 24,
+      "count": 1
+    },
+    "curved": {
+      "avg": 24,
+      "count": 1
+    },
+    "bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "band": {
+      "avg": 24,
+      "count": 1
+    },
+    "down": {
+      "avg": 24,
+      "count": 1
+    },
+    "crossing": {
+      "avg": 24,
+      "count": 1
+    },
+    "middle": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal sankey": {
+      "avg": 24,
+      "count": 1
+    },
+    "sankey flow": {
+      "avg": 24,
+      "count": 1
+    },
+    "flow diagram": {
+      "avg": 24,
+      "count": 1
+    },
+    "two thick": {
+      "avg": 24,
+      "count": 1
+    },
+    "thick curved": {
+      "avg": 24,
+      "count": 1
+    },
+    "curved bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "bands flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing from": {
+      "avg": 24,
+      "count": 1
+    },
+    "top band": {
+      "avg": 24,
+      "count": 1
+    },
+    "band charcoal": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing down": {
+      "avg": 24,
+      "count": 1
+    },
+    "down bottom": {
+      "avg": 24,
+      "count": 1
+    },
+    "bottom band": {
+      "avg": 24,
+      "count": 1
+    },
+    "band turquoise": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing up": {
+      "avg": 24,
+      "count": 1
+    },
+    "up two": {
+      "avg": 24,
+      "count": 1
+    },
+    "two flow": {
+      "avg": 24,
+      "count": 1
+    },
+    "flow bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "bands total": {
+      "avg": 24,
+      "count": 1
+    },
+    "total crossing": {
+      "avg": 24,
+      "count": 1
+    },
+    "crossing in": {
+      "avg": 24,
+      "count": 1
+    },
+    "the middle": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal sankey flow": {
+      "avg": 24,
+      "count": 1
+    },
+    "sankey flow diagram": {
+      "avg": 24,
+      "count": 1
+    },
+    "thick curved bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "curved bands flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "band charcoal flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal flowing down": {
+      "avg": 24,
+      "count": 1
+    },
+    "band turquoise flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise flowing up": {
+      "avg": 24,
+      "count": 1
+    },
+    "macro": {
+      "avg": 24,
+      "count": 1
+    },
+    "mineral": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystal": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "vivid": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystalline": {
+      "avg": 24,
+      "count": 1
+    },
+    "facets": {
+      "avg": 24,
+      "count": 1
+    },
+    "catching": {
+      "avg": 24,
+      "count": 1
+    },
+    "geological": {
+      "avg": 24,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 24,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 24,
+      "count": 1
+    },
+    "depth": {
+      "avg": 24,
+      "count": 1
+    },
+    "field": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 24,
+      "count": 1
+    },
+    "macro shot": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise mineral": {
+      "avg": 24,
+      "count": 1
+    },
+    "mineral crystal": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystal cluster": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster on": {
+      "avg": 24,
+      "count": 1
+    },
+    "dark charcoal": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal matrix": {
+      "avg": 24,
+      "count": 1
+    },
+    "matrix rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock vivid": {
+      "avg": 24,
+      "count": 1
+    },
+    "vivid turquoise": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise crystalline": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystalline facets": {
+      "avg": 24,
+      "count": 1
+    },
+    "facets catching": {
+      "avg": 24,
+      "count": 1
+    },
+    "catching light": {
+      "avg": 24,
+      "count": 1
+    },
+    "light geological": {
+      "avg": 24,
+      "count": 1
+    },
+    "geological beauty": {
+      "avg": 24,
+      "count": 1
+    },
+    "beauty shallow": {
+      "avg": 24,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 24,
+      "count": 1
+    },
+    "depth of": {
+      "avg": 24,
+      "count": 1
+    },
+    "of field": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise mineral crystal": {
+      "avg": 24,
+      "count": 1
+    },
+    "mineral crystal cluster": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal matrix rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "matrix rock vivid": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock vivid turquoise": {
+      "avg": 24,
+      "count": 1
+    },
+    "vivid turquoise crystalline": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise crystalline facets": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystalline facets catching": {
+      "avg": 24,
+      "count": 1
+    },
+    "geological beauty shallow": {
+      "avg": 24,
+      "count": 1
+    },
+    "beauty shallow depth": {
+      "avg": 24,
+      "count": 1
+    },
+    "longest": {
+      "avg": 23,
+      "count": 1
+    },
+    "short": {
+      "avg": 23,
+      "count": 1
+    },
+    "medium-long": {
+      "avg": 23,
+      "count": 1
+    },
+    "shortest": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 23,
+      "count": 1
+    },
+    "vertically": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 23,
+      "count": 1
+    },
+    "chart frame": {
+      "avg": 23,
+      "count": 1
+    },
+    "background first": {
+      "avg": 23,
+      "count": 1
+    },
+    "first bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar longest": {
+      "avg": 23,
+      "count": 1
+    },
+    "longest in": {
+      "avg": 23,
+      "count": 1
+    },
+    "in charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "second bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "medium in": {
+      "avg": 23,
+      "count": 1
+    },
+    "third bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 23,
+      "count": 1
+    },
+    "short in": {
+      "avg": 23,
+      "count": 1
+    },
+    "in medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "fourth bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar medium-long": {
+      "avg": 23,
+      "count": 1
+    },
+    "medium-long in": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar shortest": {
+      "avg": 23,
+      "count": 1
+    },
+    "shortest in": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars total": {
+      "avg": 23,
+      "count": 1
+    },
+    "total stacked": {
+      "avg": 23,
+      "count": 1
+    },
+    "stacked vertically": {
+      "avg": 23,
+      "count": 1
+    },
+    "first bar longest": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal second bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "second bar medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "fourth bar medium-long": {
+      "avg": 23,
+      "count": 1
+    },
+    "turquoise fifth bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth bar shortest": {
+      "avg": 23,
+      "count": 1
+    },
+    "timeline": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "line": {
+      "avg": 23,
+      "count": 1
+    },
+    "far": {
+      "avg": 23,
+      "count": 1
+    },
+    "left-center": {
+      "avg": 23,
+      "count": 1
+    },
+    "right-center": {
+      "avg": 23,
+      "count": 1
+    },
+    "nodes": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal timeline": {
+      "avg": 23,
+      "count": 1
+    },
+    "timeline on": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal horizontal": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal line": {
+      "avg": 23,
+      "count": 1
+    },
+    "line with": {
+      "avg": 23,
+      "count": 1
+    },
+    "circles on": {
+      "avg": 23,
+      "count": 1
+    },
+    "it first": {
+      "avg": 23,
+      "count": 1
+    },
+    "first circle": {
+      "avg": 23,
+      "count": 1
+    },
+    "circle charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal at": {
+      "avg": 23,
+      "count": 1
+    },
+    "at far": {
+      "avg": 23,
+      "count": 1
+    },
+    "far left": {
+      "avg": 23,
+      "count": 1
+    },
+    "left second": {
+      "avg": 23,
+      "count": 1
+    },
+    "turquoise at": {
+      "avg": 23,
+      "count": 1
+    },
+    "at left-center": {
+      "avg": 23,
+      "count": 1
+    },
+    "left-center third": {
+      "avg": 23,
+      "count": 1
+    },
+    "center fourth": {
+      "avg": 23,
+      "count": 1
+    },
+    "at right-center": {
+      "avg": 23,
+      "count": 1
+    },
+    "right-center fifth": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "far right": {
+      "avg": 23,
+      "count": 1
+    },
+    "five nodes": {
+      "avg": 23,
+      "count": 1
+    },
+    "nodes total": {
+      "avg": 23,
+      "count": 1
+    },
+    "total evenly": {
+      "avg": 23,
+      "count": 1
+    },
+    "it first circle": {
+      "avg": 23,
+      "count": 1
+    },
+    "first circle charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "right-center fifth charcoal": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 23,
+      "count": 2
+    },
+    "charcoal": {
+      "avg": 22.7,
+      "count": 7
+    },
+    "minimal horizontal": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "diagram": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "diagram on": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "bar": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "in turquoise": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "circles": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "circle": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "five circles": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "matrix": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "turquoise": {
+      "avg": 22.4,
+      "count": 9
+    },
+    "minimal": {
+      "avg": 22.3,
+      "count": 8
+    },
+    "cool": {
+      "avg": 22.3,
+      "count": 8
+    },
+    "on cool": {
+      "avg": 22.3,
+      "count": 8
+    },
+    "cool gray": {
+      "avg": 22.3,
+      "count": 8
+    },
+    "chart": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "first": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "second": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "medium": {
+      "avg": 22.3,
+      "count": 4
+    },
+    "fourth": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "fifth": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "medium gray": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "light turquoise": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "charcoal second": {
+      "avg": 22,
+      "count": 2
+    },
+    "turquoise third": {
+      "avg": 22,
+      "count": 2
+    },
+    "gray fourth": {
+      "avg": 22,
+      "count": 2
+    },
+    "turquoise fifth": {
+      "avg": 22,
+      "count": 2
+    },
+    "in pale": {
+      "avg": 22,
+      "count": 2
+    },
+    "pale gray": {
+      "avg": 22,
+      "count": 2
+    },
+    "evenly": {
+      "avg": 22,
+      "count": 2
+    },
+    "spaced": {
+      "avg": 22,
+      "count": 2
+    },
+    "second turquoise": {
+      "avg": 22,
+      "count": 2
+    },
+    "third medium": {
+      "avg": 22,
+      "count": 2
+    },
+    "fourth light": {
+      "avg": 22,
+      "count": 2
+    },
+    "evenly spaced": {
+      "avg": 22,
+      "count": 2
+    },
+    "bubble": {
+      "avg": 22,
+      "count": 1
+    },
+    "different": {
+      "avg": 22,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 22,
+      "count": 1
+    },
+    "scattered": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 22,
+      "count": 1
+    },
+    "center-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "lower-left": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "lower-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 22,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal bubble": {
+      "avg": 22,
+      "count": 1
+    },
+    "bubble chart": {
+      "avg": 22,
+      "count": 1
+    },
+    "chart on": {
+      "avg": 22,
+      "count": 2
+    },
+    "circles of": {
+      "avg": 22,
+      "count": 1
+    },
+    "of different": {
+      "avg": 22,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 22,
+      "count": 1
+    },
+    "sizes scattered": {
+      "avg": 22,
+      "count": 1
+    },
+    "scattered large": {
+      "avg": 22,
+      "count": 1
+    },
+    "large charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle upper-left": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-left medium": {
+      "avg": 22,
+      "count": 1
+    },
+    "medium turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle center-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "center-right small": {
+      "avg": 22,
+      "count": 1
+    },
+    "gray circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle lower-left": {
+      "avg": 22,
+      "count": 1
+    },
+    "lower-left tiny": {
+      "avg": 22,
+      "count": 1
+    },
+    "tiny turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle upper-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-right medium": {
+      "avg": 22,
+      "count": 1
+    },
+    "medium charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle lower-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "lower-right five": {
+      "avg": 22,
+      "count": 1
+    },
+    "circles total": {
+      "avg": 22,
+      "count": 1
+    },
+    "high contrast": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 22,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal bubble chart": {
+      "avg": 22,
+      "count": 1
+    },
+    "different sizes scattered": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal circle upper-left": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle upper-left medium": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-left medium turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "medium turquoise circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise circle center-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle lower-left tiny": {
+      "avg": 22,
+      "count": 1
+    },
+    "lower-left tiny turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "tiny turquoise circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise circle upper-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle upper-right medium": {
+      "avg": 22,
+      "count": 1
+    },
+    "upper-right medium charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "medium charcoal circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal circle lower-right": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "radar": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape": {
+      "avg": 22,
+      "count": 2
+    },
+    "axes": {
+      "avg": 22,
+      "count": 1
+    },
+    "radiating": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 2
+    },
+    "polygon": {
+      "avg": 22,
+      "count": 1
+    },
+    "outline": {
+      "avg": 22,
+      "count": 1
+    },
+    "data": {
+      "avg": 22,
+      "count": 1
+    },
+    "values": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal radar": {
+      "avg": 22,
+      "count": 1
+    },
+    "radar chart": {
+      "avg": 22,
+      "count": 1
+    },
+    "pentagon shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape with": {
+      "avg": 22,
+      "count": 1
+    },
+    "five axes": {
+      "avg": 22,
+      "count": 1
+    },
+    "axes radiating": {
+      "avg": 22,
+      "count": 1
+    },
+    "radiating from": {
+      "avg": 22,
+      "count": 1
+    },
+    "center charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled polygon": {
+      "avg": 22,
+      "count": 1
+    },
+    "polygon with": {
+      "avg": 22,
+      "count": 1
+    },
+    "with turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise outline": {
+      "avg": 22,
+      "count": 1
+    },
+    "outline showing": {
+      "avg": 22,
+      "count": 1
+    },
+    "showing data": {
+      "avg": 22,
+      "count": 1
+    },
+    "data values": {
+      "avg": 22,
+      "count": 1
+    },
+    "values five": {
+      "avg": 22,
+      "count": 1
+    },
+    "axes total": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal radar chart": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal filled polygon": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "long": {
+      "avg": 22,
+      "count": 1
+    },
+    "rounded": {
+      "avg": 22,
+      "count": 1
+    },
+    "rectangle": {
+      "avg": 22,
+      "count": 1
+    },
+    "three-quarters": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "horizontal progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "bar centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 22,
+      "count": 1
+    },
+    "background long": {
+      "avg": 22,
+      "count": 1
+    },
+    "long rounded": {
+      "avg": 22,
+      "count": 1
+    },
+    "rounded rectangle": {
+      "avg": 22,
+      "count": 1
+    },
+    "rectangle left": {
+      "avg": 22,
+      "count": 1
+    },
+    "left three-quarters": {
+      "avg": 22,
+      "count": 1
+    },
+    "three-quarters filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled in": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining right": {
+      "avg": 22,
+      "count": 1
+    },
+    "gray bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress bar centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "long rounded rectangle": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "tiny": {
+      "avg": 21.5,
+      "count": 2
+    },
+    "chevron": {
+      "avg": 21,
+      "count": 1
+    },
+    "process": {
+      "avg": 21,
+      "count": 1
+    },
+    "arrow-shaped": {
+      "avg": 21,
+      "count": 1
+    },
+    "chevrons": {
+      "avg": 21,
+      "count": 1
+    },
+    "pointing": {
+      "avg": 21,
+      "count": 1
+    },
+    "row": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal chevron": {
+      "avg": 21,
+      "count": 1
+    },
+    "chevron process": {
+      "avg": 21,
+      "count": 1
+    },
+    "process diagram": {
+      "avg": 21,
+      "count": 1
+    },
+    "five arrow-shaped": {
+      "avg": 21,
+      "count": 1
+    },
+    "arrow-shaped chevrons": {
+      "avg": 21,
+      "count": 1
+    },
+    "chevrons pointing": {
+      "avg": 21,
+      "count": 1
+    },
+    "pointing right": {
+      "avg": 21,
+      "count": 1
+    },
+    "horizontal row": {
+      "avg": 21,
+      "count": 1
+    },
+    "row first": {
+      "avg": 21,
+      "count": 1
+    },
+    "first charcoal": {
+      "avg": 21,
+      "count": 1
+    },
+    "fifth pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "five chevrons": {
+      "avg": 21,
+      "count": 1
+    },
+    "chevrons total": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal chevron process": {
+      "avg": 21,
+      "count": 1
+    },
+    "chevron process diagram": {
+      "avg": 21,
+      "count": 1
+    },
+    "arrow-shaped chevrons pointing": {
+      "avg": 21,
+      "count": 1
+    },
+    "row first charcoal": {
+      "avg": 21,
+      "count": 1
+    },
+    "first charcoal second": {
+      "avg": 21,
+      "count": 1
+    },
+    "charcoal second turquoise": {
+      "avg": 21,
+      "count": 1
+    },
+    "turquoise fifth pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 21,
+      "count": 1
+    },
+    "dot": {
+      "avg": 21,
+      "count": 1
+    },
+    "grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 21,
+      "count": 1
+    },
+    "dots": {
+      "avg": 21,
+      "count": 1
+    },
+    "barely": {
+      "avg": 21,
+      "count": 1
+    },
+    "visible": {
+      "avg": 21,
+      "count": 1
+    },
+    "digital": {
+      "avg": 21,
+      "count": 1
+    },
+    "extremely": {
+      "avg": 21,
+      "count": 1
+    },
+    "very subtle": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle dot": {
+      "avg": 21,
+      "count": 1
+    },
+    "dot matrix": {
+      "avg": 21,
+      "count": 1
+    },
+    "matrix grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "grid pattern": {
+      "avg": 21,
+      "count": 1
+    },
+    "pattern in": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale turquoise": {
+      "avg": 21,
+      "count": 1
+    },
+    "turquoise on": {
+      "avg": 21,
+      "count": 1
+    },
+    "gray evenly": {
+      "avg": 21,
+      "count": 1
+    },
+    "spaced tiny": {
+      "avg": 21,
+      "count": 1
+    },
+    "tiny dots": {
+      "avg": 21,
+      "count": 1
+    },
+    "dots barely": {
+      "avg": 21,
+      "count": 1
+    },
+    "barely visible": {
+      "avg": 21,
+      "count": 1
+    },
+    "visible clean": {
+      "avg": 21,
+      "count": 1
+    },
+    "clean digital": {
+      "avg": 21,
+      "count": 1
+    },
+    "digital mood": {
+      "avg": 21,
+      "count": 1
+    },
+    "mood extremely": {
+      "avg": 21,
+      "count": 1
+    },
+    "extremely minimal": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle dot matrix": {
+      "avg": 21,
+      "count": 1
+    },
+    "dot matrix grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "matrix grid pattern": {
+      "avg": 21,
+      "count": 1
+    },
+    "evenly spaced tiny": {
+      "avg": 21,
+      "count": 1
+    },
+    "spaced tiny dots": {
+      "avg": 21,
+      "count": 1
+    },
+    "tiny dots barely": {
+      "avg": 21,
+      "count": 1
+    },
+    "dots barely visible": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "cool": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "cpu": {
+      "avg": 25,
+      "count": 1
+    },
+    "chip": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield": {
+      "avg": 25,
+      "count": 1
+    },
+    "code": {
+      "avg": 25,
+      "count": 1
+    },
+    "bracket": {
+      "avg": 25,
+      "count": 1
+    },
+    "turquoise": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "matching filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled flat": {
+      "avg": 25,
+      "count": 1
+    },
+    "flat icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons on": {
+      "avg": 25,
+      "count": 2
+    },
+    "on cool": {
+      "avg": 25,
+      "count": 1
+    },
+    "cool gray": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "cpu chip": {
+      "avg": 25,
+      "count": 1
+    },
+    "chip silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "code bracket": {
+      "avg": 25,
+      "count": 1
+    },
+    "bracket silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette turquoise": {
+      "avg": 25,
+      "count": 1
+    },
+    "turquoise fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill consistent": {
+      "avg": 25,
+      "count": 1
+    },
+    "consistent tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech style": {
+      "avg": 25,
+      "count": 1
+    },
+    "cpu chip silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "code bracket silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "bracket silhouette turquoise": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette turquoise fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "stethoscope": {
+      "avg": 25,
+      "count": 1
+    },
+    "heart": {
+      "avg": 25,
+      "count": 1
+    },
+    "pulse": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "pill": {
+      "avg": 25,
+      "count": 1
+    },
+    "capsule": {
+      "avg": 25,
+      "count": 1
+    },
+    "first": {
+      "avg": 25,
+      "count": 1
+    },
+    "aid": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "matching outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "heart with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with pulse": {
+      "avg": 25,
+      "count": 1
+    },
+    "pulse line": {
+      "avg": 25,
+      "count": 1
+    },
+    "pill capsule": {
+      "avg": 25,
+      "count": 1
+    },
+    "first aid": {
+      "avg": 25,
+      "count": 1
+    },
+    "aid cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outlines consistent": {
+      "avg": 25,
+      "count": 1
+    },
+    "first aid cross": {
+      "avg": 25,
+      "count": 1
+    },
+    "aid cross charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "cross charcoal outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "science": {
+      "avg": 25,
+      "count": 1
+    },
+    "laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "equipment": {
+      "avg": 25,
+      "count": 1
+    },
+    "screens": {
+      "avg": 25,
+      "count": 1
+    },
+    "lab": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration of": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern science": {
+      "avg": 25,
+      "count": 1
+    },
+    "science laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "laboratory with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with equipment": {
+      "avg": 25,
+      "count": 1
+    },
+    "equipment screens": {
+      "avg": 25,
+      "count": 1
+    },
+    "screens and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and lab": {
+      "avg": 25,
+      "count": 1
+    },
+    "lab bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and turquoise": {
+      "avg": 25,
+      "count": 1
+    },
+    "turquoise color": {
+      "avg": 25,
+      "count": 1
+    },
+    "color scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with cool": {
+      "avg": 25,
+      "count": 1
+    },
+    "gray accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern science laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "lab bench charcoal": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "background": {
+    "carbon": {
+      "avg": 25,
+      "count": 1
+    },
+    "fiber": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "material": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle carbon": {
+      "avg": 25,
+      "count": 1
+    },
+    "carbon fiber": {
+      "avg": 25,
+      "count": 1
+    },
+    "fiber weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in cool": {
+      "avg": 25,
+      "count": 1
+    },
+    "gray tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical material": {
+      "avg": 25,
+      "count": 1
+    },
+    "material pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle carbon fiber": {
+      "avg": 25,
+      "count": 1
+    },
+    "carbon fiber weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "fiber weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible technical material": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical material pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "material pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern modern industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "barely": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "visible": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "technical": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "pattern": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "extremely": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "minimal": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "very subtle": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "barely visible": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "mood extremely": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "extremely minimal": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "blueprint": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "pale": {
+      "avg": 24,
+      "count": 1
+    },
+    "engineering": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle blueprint": {
+      "avg": 24,
+      "count": 1
+    },
+    "blueprint grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "lines in": {
+      "avg": 24,
+      "count": 1
+    },
+    "in pale": {
+      "avg": 24,
+      "count": 1
+    },
+    "pale turquoise": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise on": {
+      "avg": 24,
+      "count": 1
+    },
+    "gray barely": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible engineering": {
+      "avg": 24,
+      "count": 1
+    },
+    "engineering grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "pattern technical": {
+      "avg": 24,
+      "count": 1
+    },
+    "technical clean": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle blueprint grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "blueprint grid lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "barely visible engineering": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible engineering grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "engineering grid pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid pattern technical": {
+      "avg": 24,
+      "count": 1
+    },
+    "cool": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "cool gray": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "turquoise": {
+      "avg": 23,
+      "count": 2
+    },
+    "on cool": {
+      "avg": 23,
+      "count": 2
+    },
+    "five-pointed": {
+      "avg": 22,
+      "count": 1
+    },
+    "star": {
+      "avg": 22,
+      "count": 1
+    },
+    "centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "outline": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 22,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 22,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "large five-pointed": {
+      "avg": 22,
+      "count": 1
+    },
+    "five-pointed star": {
+      "avg": 22,
+      "count": 1
+    },
+    "star centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 22,
+      "count": 1
+    },
+    "background turquoise": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled star": {
+      "avg": 22,
+      "count": 1
+    },
+    "star with": {
+      "avg": 22,
+      "count": 1
+    },
+    "with thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal outline": {
+      "avg": 22,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold clean": {
+      "avg": 22,
+      "count": 1
+    },
+    "geometric shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape high": {
+      "avg": 22,
+      "count": 1
+    },
+    "high contrast": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 22,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "five-pointed star centered": {
+      "avg": 22,
+      "count": 1
+    },
+    "turquoise filled star": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin charcoal outline": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal outline bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "inside": {
+      "avg": 24,
+      "count": 1
+    },
+    "underwater": {
+      "avg": 24,
+      "count": 1
+    },
+    "cavern": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystal": {
+      "avg": 24,
+      "count": 1
+    },
+    "clear": {
+      "avg": 24,
+      "count": 1
+    },
+    "water": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "formations": {
+      "avg": 24,
+      "count": 1
+    },
+    "beams": {
+      "avg": 24,
+      "count": 1
+    },
+    "penetrating": {
+      "avg": 24,
+      "count": 1
+    },
+    "mysterious": {
+      "avg": 24,
+      "count": 1
+    },
+    "serene": {
+      "avg": 24,
+      "count": 1
+    },
+    "shot inside": {
+      "avg": 24,
+      "count": 1
+    },
+    "inside an": {
+      "avg": 24,
+      "count": 1
+    },
+    "an underwater": {
+      "avg": 24,
+      "count": 1
+    },
+    "underwater cavern": {
+      "avg": 24,
+      "count": 1
+    },
+    "cavern with": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise crystal": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystal clear": {
+      "avg": 24,
+      "count": 1
+    },
+    "clear water": {
+      "avg": 24,
+      "count": 1
+    },
+    "water and": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal rock": {
+      "avg": 24,
+      "count": 1
+    },
+    "rock formations": {
+      "avg": 24,
+      "count": 1
+    },
+    "formations light": {
+      "avg": 24,
+      "count": 1
+    },
+    "light beams": {
+      "avg": 24,
+      "count": 1
+    },
+    "beams penetrating": {
+      "avg": 24,
+      "count": 1
+    },
+    "penetrating from": {
+      "avg": 24,
+      "count": 1
+    },
+    "above mysterious": {
+      "avg": 24,
+      "count": 1
+    },
+    "mysterious serene": {
+      "avg": 24,
+      "count": 1
+    },
+    "serene atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "atmosphere ample": {
+      "avg": 24,
+      "count": 2
+    },
+    "turquoise crystal clear": {
+      "avg": 24,
+      "count": 1
+    },
+    "crystal clear water": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal rock formations": {
+      "avg": 24,
+      "count": 1
+    },
+    "mysterious serene atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "northern": {
+      "avg": 24,
+      "count": 1
+    },
+    "over": {
+      "avg": 24,
+      "count": 1
+    },
+    "arctic": {
+      "avg": 24,
+      "count": 1
+    },
+    "aurora": {
+      "avg": 24,
+      "count": 1
+    },
+    "bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "night": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "composition": {
+      "avg": 24,
+      "count": 1
+    },
+    "ethereal": {
+      "avg": 24,
+      "count": 1
+    },
+    "natural": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 24,
+      "count": 1
+    },
+    "of northern": {
+      "avg": 24,
+      "count": 1
+    },
+    "northern lights": {
+      "avg": 24,
+      "count": 1
+    },
+    "lights over": {
+      "avg": 24,
+      "count": 1
+    },
+    "over dark": {
+      "avg": 24,
+      "count": 1
+    },
+    "dark arctic": {
+      "avg": 24,
+      "count": 1
+    },
+    "arctic landscape": {
+      "avg": 24,
+      "count": 1
+    },
+    "landscape turquoise": {
+      "avg": 24,
+      "count": 1
+    },
+    "turquoise and": {
+      "avg": 24,
+      "count": 1
+    },
+    "teal aurora": {
+      "avg": 24,
+      "count": 1
+    },
+    "aurora bands": {
+      "avg": 24,
+      "count": 1
+    },
+    "bands across": {
+      "avg": 24,
+      "count": 1
+    },
+    "deep charcoal": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal night": {
+      "avg": 24,
+      "count": 1
+    },
+    "night sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky vast": {
+      "avg": 24,
+      "count": 1
+    },
+    "vast sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 24,
+      "count": 1
+    },
+    "composition ethereal": {
+      "avg": 24,
+      "count": 1
+    },
+    "ethereal natural": {
+      "avg": 24,
+      "count": 1
+    },
+    "natural atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "northern lights over": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal night sky": {
+      "avg": 24,
+      "count": 1
+    },
+    "sky composition ethereal": {
+      "avg": 24,
+      "count": 1
+    },
+    "composition ethereal natural": {
+      "avg": 24,
+      "count": 1
+    },
+    "ethereal natural atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 23,
+      "count": 3
+    },
+    "turquoise": {
+      "avg": 23,
+      "count": 3
+    },
+    "charcoal": {
+      "avg": 23,
+      "count": 3
+    },
+    "atmosphere": {
+      "avg": 23,
+      "count": 3
+    },
+    "side": {
+      "avg": 23,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 23,
+      "count": 3
+    },
+    "one side": {
+      "avg": 23,
+      "count": 3
+    },
+    "side for": {
+      "avg": 23,
+      "count": 3
+    },
+    "text overlay": {
+      "avg": 23,
+      "count": 3
+    },
+    "cinematic shot": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "with turquoise": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "dark charcoal": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "lights": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "modern": {
+      "avg": 21,
+      "count": 1
+    },
+    "data": {
+      "avg": 21,
+      "count": 1
+    },
+    "server": {
+      "avg": 21,
+      "count": 1
+    },
+    "room": {
+      "avg": 21,
+      "count": 1
+    },
+    "corridor": {
+      "avg": 21,
+      "count": 1
+    },
+    "racks": {
+      "avg": 21,
+      "count": 1
+    },
+    "led": {
+      "avg": 21,
+      "count": 1
+    },
+    "indicator": {
+      "avg": 21,
+      "count": 1
+    },
+    "cool": {
+      "avg": 21,
+      "count": 1
+    },
+    "tech": {
+      "avg": 21,
+      "count": 1
+    },
+    "symmetrical": {
+      "avg": 21,
+      "count": 1
+    },
+    "perspective": {
+      "avg": 21,
+      "count": 1
+    },
+    "modern data": {
+      "avg": 21,
+      "count": 1
+    },
+    "data center": {
+      "avg": 21,
+      "count": 1
+    },
+    "center server": {
+      "avg": 21,
+      "count": 1
+    },
+    "server room": {
+      "avg": 21,
+      "count": 1
+    },
+    "room corridor": {
+      "avg": 21,
+      "count": 1
+    },
+    "corridor dark": {
+      "avg": 21,
+      "count": 1
+    },
+    "charcoal server": {
+      "avg": 21,
+      "count": 1
+    },
+    "server racks": {
+      "avg": 21,
+      "count": 1
+    },
+    "racks with": {
+      "avg": 21,
+      "count": 1
+    },
+    "turquoise led": {
+      "avg": 21,
+      "count": 1
+    },
+    "led indicator": {
+      "avg": 21,
+      "count": 1
+    },
+    "indicator lights": {
+      "avg": 21,
+      "count": 1
+    },
+    "lights cool": {
+      "avg": 21,
+      "count": 1
+    },
+    "cool tech": {
+      "avg": 21,
+      "count": 1
+    },
+    "tech atmosphere": {
+      "avg": 21,
+      "count": 1
+    },
+    "atmosphere symmetrical": {
+      "avg": 21,
+      "count": 1
+    },
+    "symmetrical perspective": {
+      "avg": 21,
+      "count": 1
+    },
+    "perspective ample": {
+      "avg": 21,
+      "count": 1
+    },
+    "server room corridor": {
+      "avg": 21,
+      "count": 1
+    },
+    "charcoal server racks": {
+      "avg": 21,
+      "count": 1
+    },
+    "turquoise led indicator": {
+      "avg": 21,
+      "count": 1
+    },
+    "led indicator lights": {
+      "avg": 21,
+      "count": 1
+    },
+    "indicator lights cool": {
+      "avg": 21,
+      "count": 1
+    },
+    "lights cool tech": {
+      "avg": 21,
+      "count": 1
+    },
+    "cool tech atmosphere": {
+      "avg": 21,
+      "count": 1
+    },
+    "tech atmosphere symmetrical": {
+      "avg": 21,
+      "count": 1
+    },
+    "atmosphere symmetrical perspective": {
+      "avg": 21,
+      "count": 1
+    }
+  }
+}

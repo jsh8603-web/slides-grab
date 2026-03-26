@@ -1,0 +1,25 @@
+{
+  "slide": 2,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Authoritative, data-driven, and forward-looking — conveying strategic urgency with measured confidence. Color palette: Primary , Accent , Background , Text , Muted. A subtle warm paper texture with faint grid lines suggesting growth and precision, cool-toned background with fine fiber pattern and grid lines creating a sense of analytical depth, muted blue-gray palette, no text 16:9 aspect ratio.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 160,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 4,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 25.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

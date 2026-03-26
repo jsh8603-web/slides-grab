@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #111;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .viewer-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation bar */
+    .nav-bar {
+      height: 48px;
+      background: #1a1a1a;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .nav-bar button {
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .nav-bar button:hover {
+      background: #555;
+    }
+
+    .nav-bar button:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .slide-counter {
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 60px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-fullscreen {
+      position: absolute;
+      right: 16px;
+      background: transparent !important;
+      font-size: 18px;
+      padding: 6px 10px !important;
+    }
+
+    /* Slide viewport */
+    .slide-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-scaler {
+      width: 720pt;
+      height: 405pt;
+      position: relative;
+      transform-origin: center center;
+    }
+
+    /* Slide frames (iframes) */
+    .slide-frame {
+      position: absolute;
+      inset: 0;
+      width: 720pt;
+      height: 405pt;
+      border: none;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .slide-frame.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer-container">
+    <!-- Navigation -->
+    <div class="nav-bar">
+      <button id="btn-prev" title="Previous (\u2190)">Prev</button>
+      <span class="slide-counter" id="counter">1 / 5</span>
+      <button id="btn-next" title="Next (\u2192)">Next</button>
+      <button class="btn-fullscreen" id="btn-fs" title="Fullscreen (F)">&#x26F6;</button>
+    </div>
+
+    <!-- Slide viewport -->
+    <div class="slide-viewport" id="viewport">
+      <div class="slide-scaler" id="scaler">
+        <iframe class="slide-frame active" data-slide="1" srcdoc="&lt;!DOCTYPE html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;UTF-8&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+&lt;style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: #1A2B4A;
+}
+.bg-img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #1A2B4A; opacity: 0.6;
+}
+.content {
+  position: relative; z-index: 2;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 48pt 56pt 56pt 56pt;
+}
+.tag-wrap { margin-bottom: 14pt; }
+.tag {
+  display: inline-block;
+  background: #C8A96E;
+  color: #1A2B4A;
+  font-size: 10pt; font-weight: 700;
+  padding: 3pt 10pt;
+  border-radius: 2pt;
+  letter-spacing: 0.5pt;
+}
+h1 {
+  font-size: 36pt; font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  text-shadow: 0 2px 8pt rgba(0,0,0,0.5);
+  margin-bottom: 10pt;
+}
+.subtitle {
+  font-size: 16pt; font-weight: 400;
+  color: #C8A96E;
+  text-shadow: 0 1px 4pt rgba(0,0,0,0.4);
+  line-height: 1.5;
+  margin-bottom: 20pt;
+}
+.meta {
+  font-size: 11pt; font-weight: 400;
+  color: #8A9BB5;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;img class=&quot;bg-img&quot; src=&quot;assets/slide-01-cover.png&quot; alt=&quot;AI 에이전트 표지&quot;>
+&lt;div class=&quot;overlay&quot;>&lt;/div>
+&lt;div class=&quot;content&quot;>
+  &lt;div class=&quot;tag-wrap&quot;>&lt;div class=&quot;tag&quot;>&lt;span>ENTERPRISE AI STRATEGY&lt;/span>&lt;/div>&lt;/div>
+  &lt;h1>&lt;span>AI 에이전트&lt;/span>&lt;br>&lt;span>실리콘 동료의 시대&lt;/span>&lt;/h1>
+  &lt;p class=&quot;subtitle&quot;>&lt;span>2030년 $120B 시장 — 먼저 움직이는 조직이 구조적 우위를 선점한다&lt;/span>&lt;/p>
+  &lt;p class=&quot;meta&quot;>&lt;span>2026.03 | AI 인프라 전략 브리핑&lt;/span>&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="2" srcdoc="&lt;!DOCTYPE html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;UTF-8&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+&lt;style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5F3EE;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+.header { margin-bottom: 18pt; }
+h1 {
+  font-size: 22pt; font-weight: 700;
+  color: #1A2B4A;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 12pt; font-weight: 400;
+  color: #6B7A8D;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14pt;
+  margin-bottom: 16pt;
+}
+.metric-card {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 18pt 14pt;
+  text-align: center;
+  border-top: 3pt solid #C8A96E;
+}
+.metric-num {
+  font-size: 32pt; font-weight: 800;
+  color: #1A2B4A;
+  margin-bottom: 4pt;
+}
+.metric-label {
+  font-size: 10pt; font-weight: 600;
+  color: #C8A96E;
+  margin-bottom: 4pt;
+}
+.metric-desc {
+  font-size: 10pt; font-weight: 400;
+  color: #6B7A8D;
+  line-height: 1.4;
+}
+.bottom-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12pt;
+  margin-top: auto;
+}
+.bottom-item {
+  display: flex; align-items: flex-start;
+  gap: 6pt;
+}
+.bottom-dot {
+  width: 6pt; height: 6pt;
+  border-radius: 50%;
+  background: #C8A96E;
+  margin-top: 4pt;
+  flex-shrink: 0;
+}
+.bottom-text {
+  font-size: 10pt; color: #1C1C1C;
+  line-height: 1.5;
+}
+.source {
+  font-size: 9pt; color: #6B7A8D;
+  margin-top: 8pt;
+  font-style: italic;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;slide&quot;>
+  &lt;div class=&quot;header&quot;>
+    &lt;h1>&lt;span>에이전트 AI는 선택이 아닌 생존 조건이 됐다&lt;/span>&lt;/h1>
+    &lt;p class=&quot;sub&quot;>&lt;span>글로벌 에이전트 AI 시장 전망 (2024 → 2030)&lt;/span>&lt;/p>
+  &lt;/div>
+  &lt;div class=&quot;metrics&quot;>
+    &lt;div class=&quot;metric-card&quot;>
+      &lt;p class=&quot;metric-num&quot;>&lt;span>$120B&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-label&quot;>&lt;span>2030 시장 규모&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-desc&quot;>&lt;span>2024년 대비 약 10배 성장&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;metric-card&quot;>
+      &lt;p class=&quot;metric-num&quot;>&lt;span>80%&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-label&quot;>&lt;span>기업 앱 탑재율&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-desc&quot;>&lt;span>Deloitte 2026 예측&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;metric-card&quot;>
+      &lt;p class=&quot;metric-num&quot;>&lt;span>46%+&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-label&quot;>&lt;span>연평균 성장률&lt;/span>&lt;/p>
+      &lt;p class=&quot;metric-desc&quot;>&lt;span>전체 IT 시장의 5배&lt;/span>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class=&quot;bottom-bar&quot;>
+    &lt;div class=&quot;bottom-item&quot;>
+      &lt;div class=&quot;bottom-dot&quot;>&lt;/div>
+      &lt;p class=&quot;bottom-text&quot;>&lt;span>78% 경영진 — &quot;운영 모델 재설계 필요&quot;&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;bottom-item&quot;>
+      &lt;div class=&quot;bottom-dot&quot;>&lt;/div>
+      &lt;p class=&quot;bottom-text&quot;>&lt;span>Google·MS·Salesforce 멀티에이전트 상용화 착수&lt;/span>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  &lt;p class=&quot;source&quot;>&lt;span>출처: Deloitte Global AI Agents Report 2026&lt;/span>&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="3" srcdoc="&lt;!DOCTYPE html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;UTF-8&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+&lt;style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5F3EE;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+.header { margin-bottom: 14pt; }
+h1 {
+  font-size: 20pt; font-weight: 700;
+  color: #1A2B4A;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 12pt; font-weight: 400;
+  color: #6B7A8D;
+}
+.flow {
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 6pt;
+  margin-bottom: 12pt;
+}
+.flow-row {
+  display: flex; align-items: center;
+  gap: 8pt;
+}
+.flow-box {
+  background: #1A2B4A;
+  color: #FFFFFF;
+  font-size: 10pt; font-weight: 600;
+  padding: 6pt 12pt;
+  border-radius: 4pt;
+  text-align: center;
+}
+.flow-box-accent {
+  background: #C8A96E;
+  color: #1A2B4A;
+}
+.flow-box-light {
+  background: #FFFFFF;
+  color: #1A2B4A;
+  border: 1pt solid #1A2B4A;
+}
+.flow-arrow {
+  font-size: 14pt; color: #6B7A8D;
+  line-height: 1;
+}
+.concepts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12pt;
+  flex: 1; min-height: 0;
+}
+.concept {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 12pt;
+  border-left: 3pt solid #C8A96E;
+}
+.concept-title {
+  font-size: 11pt; font-weight: 700;
+  color: #1A2B4A;
+  margin-bottom: 4pt;
+}
+.concept-desc {
+  font-size: 10pt; font-weight: 400;
+  color: #1C1C1C;
+  line-height: 1.5;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;slide&quot;>
+  &lt;div class=&quot;header&quot;>
+    &lt;h1>&lt;span>여러 AI가 협업해 복잡한 의사결정을 실행하는 시스템이다&lt;/span>&lt;/h1>
+    &lt;p class=&quot;sub&quot;>&lt;span>멀티에이전트 오케스트레이션의 작동 원리&lt;/span>&lt;/p>
+  &lt;/div>
+  &lt;div class=&quot;flow&quot;>
+    &lt;div class=&quot;flow-row&quot;>
+      &lt;div class=&quot;flow-box-accent&quot;>&lt;span>사용자 목표 입력&lt;/span>&lt;/div>
+    &lt;/div>
+    &lt;div class=&quot;flow-arrow&quot;>&lt;span>↓&lt;/span>&lt;/div>
+    &lt;div class=&quot;flow-row&quot;>
+      &lt;div class=&quot;flow-box&quot;>&lt;span>오케스트레이터 에이전트&lt;/span>&lt;/div>
+    &lt;/div>
+    &lt;div class=&quot;flow-arrow&quot;>&lt;span>↓&lt;/span>&lt;/div>
+    &lt;div class=&quot;flow-row&quot;>
+      &lt;div class=&quot;flow-box-light&quot;>&lt;span>데이터 수집&lt;/span>&lt;/div>
+      &lt;div class=&quot;flow-box-light&quot;>&lt;span>분석·판단&lt;/span>&lt;/div>
+      &lt;div class=&quot;flow-box-light&quot;>&lt;span>외부 시스템&lt;/span>&lt;/div>
+    &lt;/div>
+    &lt;div class=&quot;flow-arrow&quot;>&lt;span>↓&lt;/span>&lt;/div>
+    &lt;div class=&quot;flow-row&quot;>
+      &lt;div class=&quot;flow-box&quot;>&lt;span>결과 통합 → Human-on-the-loop 감독&lt;/span>&lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class=&quot;concepts&quot;>
+    &lt;div class=&quot;concept&quot;>
+      &lt;p class=&quot;concept-title&quot;>&lt;span>오케스트레이션&lt;/span>&lt;/p>
+      &lt;p class=&quot;concept-desc&quot;>&lt;span>목표를 서브태스크로 분해하고 에이전트에 배정하는 조율 메커니즘&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;concept&quot;>
+      &lt;p class=&quot;concept-title&quot;>&lt;span>거버넌스-as-code&lt;/span>&lt;/p>
+      &lt;p class=&quot;concept-desc&quot;>&lt;span>에이전트 행동 범위·권한·감사 로그를 코드로 정의하는 필수 체계&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;concept&quot;>
+      &lt;p class=&quot;concept-title&quot;>&lt;span>Human-on-the-loop&lt;/span>&lt;/p>
+      &lt;p class=&quot;concept-desc&quot;>&lt;span>인간이 전략적 감독자 역할로 전환 — 모든 직원이 에이전트 수퍼바이저&lt;/span>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="4" srcdoc="&lt;!DOCTYPE html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;UTF-8&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+&lt;style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5F3EE;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+.header { margin-bottom: 14pt; }
+h1 {
+  font-size: 20pt; font-weight: 700;
+  color: #1A2B4A;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 12pt; font-weight: 400;
+  color: #6B7A8D;
+}
+.compare-table {
+  display: grid;
+  grid-template-columns: 80pt 1fr 1fr;
+  gap: 0;
+  margin-bottom: 14pt;
+}
+.compare-header {
+  background: #1A2B4A;
+  color: #FFFFFF;
+  font-size: 10pt; font-weight: 600;
+  padding: 6pt 8pt;
+  text-align: center;
+}
+.compare-label {
+  background: #1A2B4A;
+  color: #FFFFFF;
+  font-size: 10pt; font-weight: 600;
+  padding: 6pt 8pt;
+  display: flex; align-items: center;
+}
+.compare-fail {
+  background: #FFFFFF;
+  border-bottom: 1pt solid #E8E4DE;
+  padding: 6pt 8pt;
+  font-size: 10pt; color: #6B7A8D;
+  line-height: 1.4;
+}
+.compare-success {
+  background: #FFFFFF;
+  border-bottom: 1pt solid #E8E4DE;
+  border-left: 2pt solid #C8A96E;
+  padding: 6pt 8pt;
+  font-size: 10pt; color: #1C1C1C;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.strategies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10pt;
+  flex: 1; min-height: 0;
+}
+.strategy {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 10pt;
+  border-top: 3pt solid #C8A96E;
+}
+.strategy-num {
+  font-size: 18pt; font-weight: 800;
+  color: #C8A96E;
+  margin-bottom: 2pt;
+}
+.strategy-title {
+  font-size: 11pt; font-weight: 700;
+  color: #1A2B4A;
+  margin-bottom: 4pt;
+}
+.strategy-desc {
+  font-size: 10pt; font-weight: 400;
+  color: #1C1C1C;
+  line-height: 1.5;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;slide&quot;>
+  &lt;div class=&quot;header&quot;>
+    &lt;h1>&lt;span>기존 프로세스에 에이전트를 얹으면 반드시 실패한다&lt;/span>&lt;/h1>
+    &lt;p class=&quot;sub&quot;>&lt;span>성공 기업과 실패 기업을 가르는 단 하나의 차이&lt;/span>&lt;/p>
+  &lt;/div>
+  &lt;div class=&quot;compare-table&quot;>
+    &lt;div class=&quot;compare-header&quot;>&lt;span>&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-header&quot;>&lt;span>실패 패턴&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-header&quot;>&lt;span>성공 패턴&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-label&quot;>&lt;span>접근 방식&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-fail&quot;>&lt;span>기존 프로세스 위에 에이전트 적층&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-success&quot;>&lt;span>에이전트 가정 하에 프로세스 재설계&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-label&quot;>&lt;span>인력 역할&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-fail&quot;>&lt;span>기존 역할 유지 + AI 보조 도구 추가&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-success&quot;>&lt;span>모든 직원 → 에이전트 수퍼바이저 전환&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-label&quot;>&lt;span>거버넌스&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-fail&quot;>&lt;span>사후 감사 및 수동 통제&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-success&quot;>&lt;span>거버넌스-as-code: 사전 정의된 행동 범위&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-label&quot;>&lt;span>결과&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-fail&quot;>&lt;span>속도 지연 + 오류 증가 + ROI 저조&lt;/span>&lt;/div>
+    &lt;div class=&quot;compare-success&quot;>&lt;span>운영비 절감 + 의사결정 속도 향상&lt;/span>&lt;/div>
+  &lt;/div>
+  &lt;div class=&quot;strategies&quot;>
+    &lt;div class=&quot;strategy&quot;>
+      &lt;p class=&quot;strategy-num&quot;>&lt;span>01&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-title&quot;>&lt;span>재설계 우선&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-desc&quot;>&lt;span>도입 전 &quot;에이전트가 맡는다면?&quot; 질문으로 업무 재구성 필수&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;strategy&quot;>
+      &lt;p class=&quot;strategy-num&quot;>&lt;span>02&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-title&quot;>&lt;span>거버넌스 내재화&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-desc&quot;>&lt;span>에이전트 권한·에스컬레이션·감사 로그를 코드로 먼저 정의&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;strategy&quot;>
+      &lt;p class=&quot;strategy-num&quot;>&lt;span>03&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-title&quot;>&lt;span>파일럿-학습-확산&lt;/span>&lt;/p>
+      &lt;p class=&quot;strategy-desc&quot;>&lt;span>1개 업무 단위 완전 재설계 후 효과 측정 → 조직 전체 확산&lt;/span>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+" sandbox="allow-same-origin"></iframe>
+        <iframe class="slide-frame" data-slide="5" srcdoc="&lt;!DOCTYPE html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;UTF-8&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css&quot;>
+&lt;style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5F3EE;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+.header { margin-bottom: 14pt; }
+h1 {
+  font-size: 20pt; font-weight: 700;
+  color: #1A2B4A;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 12pt; font-weight: 400;
+  color: #6B7A8D;
+}
+.roadmap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10pt;
+  margin-bottom: 14pt;
+}
+.phase {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 12pt;
+  position: relative;
+}
+.phase-tag {
+  display: inline-block;
+  background: #C8A96E;
+  color: #1A2B4A;
+  font-size: 9pt; font-weight: 700;
+  padding: 2pt 8pt;
+  border-radius: 2pt;
+  margin-bottom: 6pt;
+}
+.phase-title {
+  font-size: 12pt; font-weight: 700;
+  color: #1A2B4A;
+  margin-bottom: 6pt;
+}
+.phase-items {
+  list-style: none;
+}
+.phase-items li {
+  font-size: 10pt; color: #1C1C1C;
+  line-height: 1.5;
+  padding-left: 10pt;
+  position: relative;
+}
+.phase-items li::before {
+  content: &quot;·&quot;;
+  position: absolute;
+  left: 0;
+  color: #C8A96E;
+  font-weight: 700;
+}
+.divider {
+  width: 100%;
+  height: 1pt;
+  background: #E8E4DE;
+  margin-bottom: 12pt;
+}
+.takeaways {
+  display: flex; flex-direction: column;
+  gap: 6pt;
+  flex: 1; min-height: 0;
+}
+.takeaway {
+  display: flex; align-items: flex-start;
+  gap: 8pt;
+}
+.takeaway-num {
+  background: #1A2B4A;
+  color: #FFFFFF;
+  font-size: 10pt; font-weight: 700;
+  width: 18pt; height: 18pt;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1pt;
+}
+.takeaway-text {
+  font-size: 11pt; color: #1C1C1C;
+  line-height: 1.5;
+}
+.takeaway-bold {
+  font-weight: 700;
+  color: #1A2B4A;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;slide&quot;>
+  &lt;div class=&quot;header&quot;>
+    &lt;h1>&lt;span>실리콘 동료를 먼저 감독하는 조직이 다음 10년을 설계한다&lt;/span>&lt;/h1>
+    &lt;p class=&quot;sub&quot;>&lt;span>지금 시작해야 할 3가지 행동&lt;/span>&lt;/p>
+  &lt;/div>
+  &lt;div class=&quot;roadmap&quot;>
+    &lt;div class=&quot;phase&quot;>
+      &lt;div class=&quot;phase-tag&quot;>&lt;span>지금 (0~3개월)&lt;/span>&lt;/div>
+      &lt;p class=&quot;phase-title&quot;>&lt;span>탐색 + 기반 구축&lt;/span>&lt;/p>
+      &lt;ul class=&quot;phase-items&quot;>
+        &lt;li>&lt;span>에이전트 도입 후보 업무 식별&lt;/span>&lt;/li>
+        &lt;li>&lt;span>거버넌스-as-code 프레임워크 정의&lt;/span>&lt;/li>
+        &lt;li>&lt;span>에이전트 리터러시 교육 시작&lt;/span>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+    &lt;div class=&quot;phase&quot;>
+      &lt;div class=&quot;phase-tag&quot;>&lt;span>단기 (3~12개월)&lt;/span>&lt;/div>
+      &lt;p class=&quot;phase-title&quot;>&lt;span>파일럿 + 학습&lt;/span>&lt;/p>
+      &lt;ul class=&quot;phase-items&quot;>
+        &lt;li>&lt;span>파일럿 업무 완전 재설계 + 실행&lt;/span>&lt;/li>
+        &lt;li>&lt;span>ROI 측정 + 학습 반영&lt;/span>&lt;/li>
+        &lt;li>&lt;span>확산 대상 선정 + 역할 재정의&lt;/span>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+    &lt;div class=&quot;phase&quot;>
+      &lt;div class=&quot;phase-tag&quot;>&lt;span>중기 (1~3년)&lt;/span>&lt;/div>
+      &lt;p class=&quot;phase-title&quot;>&lt;span>전사 확산&lt;/span>&lt;/p>
+      &lt;ul class=&quot;phase-items&quot;>
+        &lt;li>&lt;span>에이전트 수퍼바이저 체계 구축&lt;/span>&lt;/li>
+        &lt;li>&lt;span>거버넌스-as-code 전사 적용&lt;/span>&lt;/li>
+        &lt;li>&lt;span>Human-on-the-loop 운영 모델 완성&lt;/span>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class=&quot;divider&quot;>&lt;/div>
+  &lt;div class=&quot;takeaways&quot;>
+    &lt;div class=&quot;takeaway&quot;>
+      &lt;div class=&quot;takeaway-num&quot;>&lt;span>1&lt;/span>&lt;/div>
+      &lt;p class=&quot;takeaway-text&quot;>&lt;span class=&quot;takeaway-bold&quot;>시장은 이미 움직이고 있다&lt;/span> &lt;span>— $120B, 46% CAGR. 관망의 비용이 도입의 비용을 초과하기 시작했다&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;takeaway&quot;>
+      &lt;div class=&quot;takeaway-num&quot;>&lt;span>2&lt;/span>&lt;/div>
+      &lt;p class=&quot;takeaway-text&quot;>&lt;span class=&quot;takeaway-bold&quot;>기술이 아닌 재설계가 핵심이다&lt;/span> &lt;span>— 에이전트를 얹지 말고, 에이전트를 가정하고 업무를 다시 설계하라&lt;/span>&lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;takeaway&quot;>
+      &lt;div class=&quot;takeaway-num&quot;>&lt;span>3&lt;/span>&lt;/div>
+      &lt;p class=&quot;takeaway-text&quot;>&lt;span class=&quot;takeaway-bold&quot;>모든 직원이 수퍼바이저다&lt;/span> &lt;span>— Human-on-the-loop 전환은 역할의 축소가 아닌 격상이다&lt;/span>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TOTAL = 5;
+    let current = 1;
+
+    const frames = document.querySelectorAll('.slide-frame');
+    const counter = document.getElementById('counter');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const scaler = document.getElementById('scaler');
+    const viewport = document.getElementById('viewport');
+
+    function goTo(n) {
+      n = Math.max(1, Math.min(TOTAL, n));
+      if (n === current) return;
+      frames[current - 1].classList.remove('active');
+      current = n;
+      frames[current - 1].classList.add('active');
+      counter.textContent = current + ' / ' + TOTAL;
+      btnPrev.disabled = current === 1;
+      btnNext.disabled = current === TOTAL;
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    btnPrev.addEventListener('click', prev);
+    btnNext.addEventListener('click', next);
+    btnPrev.disabled = true;
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') { e.preventDefault(); goTo(1); }
+      else if (e.key === 'End') { e.preventDefault(); goTo(TOTAL); }
+      else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen();
+      }
+    }
+    document.getElementById('btn-fs').addEventListener('click', toggleFullscreen);
+
+    // Auto-scale to fit viewport (95% fit)
+    function rescale() {
+      const vw = viewport.clientWidth;
+      const vh = viewport.clientHeight;
+      const slideW = scaler.offsetWidth;
+      const slideH = scaler.offsetHeight;
+      const scale = Math.min(vw / slideW, vh / slideH) * 0.95;
+      scaler.style.transform = 'scale(' + scale + ')';
+    }
+
+    window.addEventListener('resize', rescale);
+    document.addEventListener('fullscreenchange', () => setTimeout(rescale, 100));
+    rescale();
+  </script>
+</body>
+</html>

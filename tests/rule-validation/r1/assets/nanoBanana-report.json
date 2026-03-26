@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-03-22T07:06:46.957Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.9,
+    "min": 24,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 1,
+      "25-27": 3,
+      "22-24": 1,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 26.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 25.8,
+      "count": 4
+    }
+  },
+  "by_rule": {},
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 25,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The modules are dome-shaped rather than cylindrical, and the brass-toned metallic surfaces are very dark, appearing more like aged bronze or steel."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 4,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "server (avg 27, n=2)",
+        "hull (avg 27, n=2)",
+        "blue (avg 27, n=2)",
+        "filtering (avg 27, n=2)",
+        "photorealistic underwater (avg 27, n=2)"
+      ],
+      "bottom_keywords": [
+        "data (avg 25.2, n=3)",
+        "view (avg 25.3, n=2)",
+        "aerial (avg 25.3, n=2)",
+        "swimming (avg 25.8, n=2)",
+        "ocean water (avg 25.8, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "reflecting (avg 27.3, n=5)",
+        "smart (avg 27.3, n=5)",
+        "pattern (avg 27.2, n=5)",
+        "photography (avg 27.2, n=6)",
+        "editorial (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 77 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "garden (avg 25.5, n=5)",
+        "inside (avg 25.3, n=5)",
+        "illustration (avg 25.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 70 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "smallest (avg 26.7, n=6)",
+        "composition (avg 26.4, n=5)",
+        "rounded rectangles (avg 26.4, n=7)",
+        "by arrows (avg 26.4, n=7)",
+        "arrows (avg 26.4, n=7)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 225 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "charts (avg 27.5, n=5)",
+        "data warm paper (avg 27.5, n=5)",
+        "data warm (avg 27.5, n=5)",
+        "faint (avg 27.3, n=5)",
+        "paper texture (avg 27.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 105 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 160 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 5,
+    "retried": 0
+  }
+}

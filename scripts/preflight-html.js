@@ -1665,7 +1665,16 @@ async function runPlaywrightChecks(slidesDir, files) {
             const lineHeight = parseFloat(cs.lineHeight) || fontSize * 1.4;
             const padTop = parseFloat(cs.paddingTop) || 0;
             const padBot = parseFloat(cs.paddingBottom) || 0;
-            const contentHeight = r.height - padTop - padBot;
+            let contentHeight = r.height - padTop - padBot;
+            // Flex/grid cells with align-items may stretch taller than text content.
+            // Measure the inner text element height to avoid false positives.
+            const cellDisplay = cs.display;
+            if (cellDisplay === 'flex' || cellDisplay === 'inline-flex' || cellDisplay === 'grid') {
+              const textChild = cell.querySelector('span, p, a') || cell.firstElementChild;
+              if (textChild) {
+                contentHeight = textChild.getBoundingClientRect().height;
+              }
+            }
             const actualLines = Math.round(contentHeight / lineHeight);
             if (actualLines >= 2 && text.length <= 12) {
               issues.push({ text: text.substring(0, 30), tag: cell.tagName, type: 'multiline' });

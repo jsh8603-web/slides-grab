@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-03-19T03:31:54.798Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.1,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 10,
+      "23-24": 8,
+      "20-22": 2,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "icon": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IP-11": 2,
+    "IV-09": 2,
+    "IV-10": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 10,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a set of 4 matching outline icons in a 2x2 grid on a white background. The image provided is a single 3D illustration with solid elements, not outline icons, and is on a warm ivory background, not white."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The fourth arrow's color is not distinctively 'light copper' and appears to be the same shade as the second 'copper' arrow, instead of a lighter variation."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image features dark fragments, but a primary dark teal color is not prominently present as a main element. The background also has a noticeable dark gradient at the bottom, which slightly deviates from a uniform warm ivory background and the 'extremely minimal' description for the overall background."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"Background warm ivory\" as part of the color palette, but the image's background is predominantly a copper-gold sunrise sky with no distinct ivory color in a significant area. While warm light tones are present, they are part of the sunrise rather than a separate 'warm ivory' background."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "sophisticated (avg 25, n=2)",
+        "pale (avg 25, n=4)",
+        "chart frame (avg 25, n=2)",
+        "in pale (avg 25, n=2)",
+        "pale copper (avg 25, n=3)"
+      ],
+      "bottom_keywords": [
+        "icons (avg 21.5, n=2)",
+        "2x2 (avg 21.5, n=2)",
+        "icons on (avg 21.5, n=2)",
+        "2x2 grid (avg 21.5, n=2)",
+        "with copper (avg 21.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 23,
+    "retried": 3
+  }
+}

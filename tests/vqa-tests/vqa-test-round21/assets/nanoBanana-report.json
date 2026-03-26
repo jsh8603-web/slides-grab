@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-03-19T03:37:16.483Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.5,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 8,
+      "23-24": 7,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 22.8,
+      "count": 6
+    },
+    "background": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "icon": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 2,
+    "IP-09": 2,
+    "IP-03": 1,
+    "IP-11": 1,
+    "IV-10": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 1,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The image completely lacks the requested \"Large central e\". The background gradient also significantly differs from the prompt, transitioning from dark purple/indigo at the top to warm amber/reddish-brown in the mid-background, rather than \"deep indigo at bottom to dark purple at top\". The foreground plane where the objects rest is a soft cream, which is not part of the described deep indigo gradient."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image displays a rising bar chart, not a waterfall chart as requested. All bars are deep indigo and rising, differing from the prompt's instruction for a warm amber second bar dropping from the first bar top."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The relative lengths of the bars do not match the prompt: the top and bottom bars are of equal length, while the prompt specified the top bar as longest and the bottom bar as shortest. The middle bar is also the shortest, not medium length as requested."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The specific color and size distribution of the rectangles do not match the prompt's instruction (e.g., the second largest block is deep indigo, not warm amber; there's also an unmentioned outlined rectangle not packed with others)."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified a color palette of deep indigo and warm amber, but the image also includes a light blue/lavender color for one of the circles, which was not mentioned in the specified palette."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "sky (avg 25, n=3)",
+        "horizon (avg 25, n=2)",
+        "lights (avg 25, n=2)",
+        "cinematic wide (avg 25, n=3)",
+        "vast sky (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "bar (avg 19, n=2)",
+        "bars (avg 19, n=2)",
+        "chart frame (avg 19, n=2)",
+        "bars total (avg 19, n=2)",
+        "medium (avg 20, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 24,
+    "retried": 4
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-03-19T02:57:17.351Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.8,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 10,
+      "23-24": 7,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "background": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 2,
+    "IV-10": 3,
+    "IV-09": 3,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 6,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a three-quarter arc filled in gold and the remaining quarter in light gray, starting from the top going clockwise. The image shows a one-quarter arc filled in gold and the remaining three-quarters in light gray, with the gold section starting from the top going counter-clockwise."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image does not depict a minimal 3x3 grid of nine equal squares in a checkerboard pattern. Instead, it shows overlapping rectangular shapes. The color pattern does not alternate deep purple, gold, and light purple squares as described in the prompt. The overall arrangement is not a distinct grid but a clustered, dynamic composition."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 3,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "faint, unintelligible text fragments (e.g., 'bg', 'og')"
+        ]
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "soft light (avg 25, n=2)",
+        "lavender (avg 25, n=2)",
+        "icons (avg 25, n=2)",
+        "pale (avg 25, n=2)",
+        "2x2 (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "alternating (avg 18.5, n=2)",
+        "purple gold (avg 18.5, n=2)",
+        "3x3 (avg 19, n=3)",
+        "nine (avg 19, n=3)",
+        "equal (avg 19, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 22,
+    "retried": 2
+  }
+}

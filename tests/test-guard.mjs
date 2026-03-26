@@ -671,10 +671,11 @@ async function runPhaseF() {
 ## 수정 이력
 ### 이슈 #1: PF ERROR (slide-01) — gradient text
 - [x] A. 판정: 정탐-수정
-- [x] B. 탐지 코드 수정: PF-60 규칙 추가
-- [x] C. 재검증: preflight PASS
-- [x] D. change-log C-01 기록
-- [x] E. 회귀 테스트 PASS
+- [x] B. 대상 수정: slide-01 gradient 제거
+- [x] C. 원인 수정: html-prevention-rules.md에 gradient 금지 추가
+- [x] D. 재발 방지: PF-60 규칙 정상 검출 확인
+- [x] E. 테스트 통과, 회귀 테스트 PASS
+- [x] F. change-log C-01 기록
 `;
     const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
     assert('F7', 'Rule 7b 허용: 정탐-수정 완료 + 필수 항목 존재', !r.blocked,
@@ -812,12 +813,190 @@ async function runPhaseF() {
 ## 수정 이력
 ### 이슈 #1: PF ERROR (slide-01) — gradient
 - [x] A. 판정: 정탐-수정
-- [x] B. 탐지 코드 수정: PF-60 규칙 추가
-- [x] C. change-log C-01 기록
-- [x] D. 회귀 테스트 PASS
+- [x] B. 대상 수정: slide-01 gradient 제거
+- [x] C. 원인 수정: 직접 수정 (수동 생성)
+- [x] D. 재발 방지: PF-60 기존 규칙 정상 검출
+- [x] E. 테스트 통과, 회귀 테스트 PASS
+- [x] F. change-log C-01 기록
 `;
     const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
     assert('F21', 'Rule 7b 허용: 테스트 통과 + 회귀 모두 존재', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F22: 오탐 C에 파일명 없음 (우회 문구 "수정 불필요") → BLOCK
+  {
+    const newContent = `# Progress
+### 이슈 #1: IP WARN — 오탐
+- [x] A. 판정: 오탐
+- [x] B. 대상 수정: 해당 없음 (오탐)
+- [x] C. 원인 수정: 수정 불필요
+- [x] D. 재발 방지: 이미 처리됨
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F22', '포지티브 차단: 오탐 C에 탐지코드 파일명 없음 (우회 문구)', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F23: 오탐 C에 탐지코드 파일명 없이 "탐지 규칙 수정"만 → BLOCK
+  {
+    const newContent = `# Progress
+### 이슈 #1: IP WARN — 오탐
+- [x] A. 판정: 오탐
+- [x] B. 대상 수정: 해당 없음 (오탐)
+- [x] C. 원인 수정: 탐지 규칙 수정
+- [x] D. 재발 방지: C=D (탐지 코드 수정)
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F23', '포지티브 차단: 오탐 C에 구체적 파일명 없음', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F24: 오탐 C에 generate-images.mjs + D에 C=D → ALLOW
+  {
+    const newContent = `# Progress
+### 이슈 #1: IP WARN — 오탐
+- [x] A. 판정: 오탐
+- [x] B. 대상 수정: 해당 없음 (오탐)
+- [x] C. 원인 수정: generate-images.mjs IP-14 면제 조건 추가
+- [x] D. 재발 방지: C=D (탐지 코드 수정)
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F24', '포지티브 허용: 오탐 C에 generate-images.mjs + D에 C=D', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F25: 정탐-수정 C에 파일명 없음 (우회 문구) → BLOCK
+  {
+    const newContent = `# Progress
+### 이슈 #1: PF ERROR — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: slide-03 수정
+- [x] C. 원인 수정: 적절히 수정함
+- [x] D. 재발 방지: PF-28 정상 검출
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F25', '포지티브 차단: 정탐-수정 C에 생성 규칙 파일명 없음', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F26: 정탐-수정 C "직접 수정" + D "PF-28" → ALLOW
+  {
+    const newContent = `# Progress
+### 이슈 #1: PF ERROR — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: slide-03 수정
+- [x] C. 원인 수정: HTML 직접 수정 (수동 생성)
+- [x] D. 재발 방지: PF-28 기존 탐지 규칙 정상 검출
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F26', '포지티브 허용: 정탐-수정 C "직접 수정" + D "PF-28"', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F27: 오탐 D에 C=D도 파일명도 없음 → BLOCK
+  {
+    const newContent = `# Progress
+### 이슈 #1: IP WARN — 오탐
+- [x] A. 판정: 오탐
+- [x] B. 대상 수정: 해당 없음 (오탐)
+- [x] C. 원인 수정: generate-images.mjs IP-14 면제
+- [x] D. 재발 방지: 처리 완료
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F27', '포지티브 차단: 오탐 D에 파일명/C=D 없음', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F28: 정탐-수정 D에 규칙코드도 파일명도 없음 → BLOCK
+  {
+    const newContent = `# Progress
+### 이슈 #1: PF ERROR — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: slide-03 수정
+- [x] C. 원인 수정: HTML 직접 수정
+- [x] D. 재발 방지: 기존 규칙으로 충분
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F28', '포지티브 차단: 정탐-수정 D에 규칙코드/파일명 없음', r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F29: 정탐-수정 C에 html-prevention-rules.md → ALLOW
+  {
+    const newContent = `# Progress
+### 이슈 #1: PF ERROR — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: slide-06 수정
+- [x] C. 원인 수정: html-prevention-rules.md table 금지 규칙 추가
+- [x] D. 재발 방지: PF-63 기존 탐지 규칙 정상 검출
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F29', '포지티브 허용: 정탐-수정 C html-prevention-rules.md + D PF-63', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F30: 정탐-수정 D에 VP-02 규칙코드 → ALLOW
+  {
+    const newContent = `# Progress
+### 이슈 #1: VP WARN — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: slide-05 수정
+- [x] C. 원인 수정: HTML 직접 수정
+- [x] D. 재발 방지: VP-02 기존 규칙 정상 검출
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F30', '포지티브 허용: 정탐-수정 D에 VP-02', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F31: 오탐 C에 preflight-html.js + D에 preflight-html.js → ALLOW
+  {
+    const newContent = `# Progress
+### 이슈 #1: PF WARN — 오탐
+- [x] A. 판정: 오탐
+- [x] B. 대상 수정: 해당 없음 (오탐)
+- [x] C. 원인 수정: preflight-html.js PF-99 면제 조건 추가
+- [x] D. 재발 방지: preflight-html.js 동일 코드 수정
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F31', '포지티브 허용: 오탐 C/D 모두 preflight-html.js', !r.blocked,
+      `blocked=${r.blocked}`);
+  }
+
+  // F32: 정탐-수정 C에 nanoBanana-guide.md → ALLOW (이미지 파이프라인)
+  {
+    const newContent = `# Progress
+### 이슈 #1: IV ERROR — 정탐-수정
+- [x] A. 판정: 정탐-수정
+- [x] B. 대상 수정: 이미지 재생성
+- [x] C. 원인 수정: nanoBanana-guide.md 프롬프트 규칙 추가
+- [x] D. 재발 방지: IV-02 generate-images.mjs 탐지 확인
+- [x] E. 테스트 통과, 회귀 테스트 passed
+- [x] F. change-log C-01
+`;
+    const r = invokeGuard('slides/_guard-test/progress.md', 'Write', { content: newContent });
+    assert('F32', '포지티브 허용: 정탐-수정 C nanoBanana-guide + D generate-images', !r.blocked,
       `blocked=${r.blocked}`);
   }
 

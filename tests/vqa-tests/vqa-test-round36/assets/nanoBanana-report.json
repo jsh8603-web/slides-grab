@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-03-19T05:01:12.460Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 3,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.7,
+    "min": 13,
+    "max": 25,
+    "distribution": {
+      "25": 13,
+      "23-24": 3,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 1
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 22.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "background": {
+      "avg": 23,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 11,
+    "IV-10": 3,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 13,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 1,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 2,
+        "pf_reason": "The image is a photograph of a physical frame with many horizontal elements and labels, not a minimal horizontal bar chart frame with three bars, nor a clean flat vector as requested. The specified bar lengths (top longest, bar two medium, bar three shortest) are completely ignored. The prompt specified 'Absolutely' meaning strictly adherence was required, which was not met here for multiple aspects (vector, number of bars, specific bar lengths, bar chart concept). It delivered a decorative frame, not a data visualization frame and certainly not a clean flat vector with three bars total as requested. The style is also more decorative than 'minimal'. There is text in the image which was not requested by the prompt. The text in the image makes it harder to be used as a simple frame and can be distracting if used as a background for a presentation slide with additional content. This image is an illustration, not a frame for content, and definitely not a bar chart frame. Hence the low score in presentation fit and fidelity to prompt. Moreover, the prompt stated 'minimal' which this image is not due to the complexity of the physical frame, many rods, and numerous labels. So it fails to meet the criterion of being 'minimal' and 'clean flat vector' as well. The presence of text on the labels also goes against the likely implicit desire for a clean background or frame for content presentation. Finally, the colors specified were 'Primary forest', 'Accent copper', and 'Background linen', with 'Bar three shortest in light sage'. While forest green, copper, and linen are present, light sage is not explicitly visible as a distinct bar color, only the natural green sticks. The image is a physical object, not a 'clean flat vector'. So it fails in multiple aspects concerning the prompt which requested 'Absolutely' adherence. So it fails to be a minimal horizontal bar chart, a clean flat vector, and have only three bars. Thus the score of 1 is appropriate given the many deviations from prompt, especially the 'Absolutely' instruction. The text absence score is also 1 because it contains very prominent text that is not generic or decorative, but actual words, which make it extremely distracting. Hence overall a very low score in these two criteria is given. It is also not a bar chart, as the elements inside the frame are sticks and not bars representing data. It is a decorative piece, not a functional data visualization. Therefore the prompt fidelity should be 1. It is not a vector, it is not minimal, it does not have three bars, it does not represent a bar chart and it is not clean. There is also text present which would typically detract from a clean frame. The use of 'Absolutely' in the prompt makes a score of 1 for prompt fidelity necessary because it is almost a complete failure in following instructions. Thus the score of 1 in prompt fidelity is well justified. This is a very poor match for the prompt, the prompt requested a minimal horizontal bar chart frame, but the image is a decorative physical frame with many elements inside and not a bar chart, and is not minimal or a clean flat vector. This is a very bad match for the prompt. It is a completely different kind of image than what was requested. It is not a frame that can be used to insert text or content. It is a photograph of a physical object. The instruction stated 'Absolutely' which indicates a strict adherence was required, and the image failed on multiple key aspects: not a vector, not minimal, not a bar chart, not three bars. The presence of many labels with text further deviates from the 'clean' and 'minimal' aspects. Hence prompt fidelity is 1. The presence of prominent text also leads to a text absence score of 1. These two scores are crucial for the requested output. The prompt asked for a bar chart frame, this is not a bar chart, it's a decorative piece. It's not a frame that can be used to overlay text, so its presentation fit is also low. Hence, a low presentation fit score too. The image is a photograph, not a clean flat vector, which is a major deviation from the prompt. The prompt requested a bar chart frame, this is not a bar chart and not a frame suitable for overlaying text. This image also contains many labels with text, which makes it unsuitable for a clean frame. Thus, the fidelity to prompt is 1, text absence is 1, and presentation fit is 2, because it is not suitable as a frame for text, and not a bar chart. The prompt stated 'Absolutely' which means strict adherence was expected, and this image fails on many aspects, especially not being a clean flat vector, not being a bar chart, not being minimal, and not having three bars. These are fundamental deviations. Hence a score of 1 for prompt fidelity is appropriate. Also the text is extremely prominent, so text absence is 1. Therefore, the prompt fidelity is 1. There is also text in the image which makes it not clean. The prompt specified 'Absolutely' which means it should strictly adhere to all criteria, but it fails on multiple fronts: it's not a vector, not minimal, not a bar chart, and does not have only three bars. These are critical failures in meeting the prompt. Hence, a score of 1 for prompt fidelity is given. The text is also very prominent. Therefore, a text absence score of 1 is also given. The prompt asked for a 'frame', this image is a detailed illustration, not a simple frame for content. It is also not a 'clean flat vector' or a 'bar chart'. Hence, a low presentation fit is also justified. Therefore, the scores are justified. The prompt specified 'Absolutely' so strict adherence to ALL conditions was required. This image failed on multiple crucial points: It is not a clean flat vector, it is not minimal, it is not a bar chart, and it does not have three bars. These are all fundamental deviations. Therefore, a prompt fidelity score of 1 is warranted. The text is also extremely prominent on the tags, hence a text absence score of 1. This image is also not suitable as a frame for presentation slides, as it is a complex illustration with embedded text, making it distracting and non-functional as a generic frame. Therefore, a presentation fit score of 2 is appropriate. The color harmony and composition are good for what the image is, but not for what the prompt asked for. Thus, those scores are higher."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image displays only two wedges (green and copper) instead of the three specified in the prompt (wedge one forest green, wedge two copper, wedge three light sage). Additionally, the image has a realistic, textured appearance with shadows, which contradicts the 'Clean flat vector' style requested."
+      }
+    },
+    {
+      "slide": 19,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a 'Primary forest green' color, which is entirely absent from the image. The image is predominantly linen with copper threads, missing the green element from the requested color palette. "
+      }
+    },
+    {
+      "slide": 11,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "pf_reason": "The image has a portrait aspect ratio instead of the requested 16:9. The specified 'accent copper' color is not clearly visible, and 'primary forest' is very subtle, appearing more as a dark brown-green line rather than a primary color in the palette."
+      }
+    },
+    {
+      "slide": 16,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "rich (avg 25, n=2)",
+        "arc (avg 25, n=2)",
+        "brown (avg 25, n=2)",
+        "copper brown (avg 25, n=2)",
+        "circles (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "texture (avg 21.5, n=2)",
+        "feel organic (avg 21.5, n=2)",
+        "sage (avg 22.6, n=5)",
+        "organic (avg 22.7, n=3)",
+        "fine (avg 22.7, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "line (avg 24.8, n=5)",
+        "gold (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 21 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.7, n=5)",
+        "filled (avg 24.7, n=6)",
+        "silhouette (avg 24.7, n=6)",
+        "fill (avg 24.7, n=6)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 34 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "middle layer (avg 24.8, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 112 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.9, n=6)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)",
+        "woven (avg 24.7, n=6)",
+        "fabric (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 52 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 49 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 23,
+    "retried": 3
+  }
+}

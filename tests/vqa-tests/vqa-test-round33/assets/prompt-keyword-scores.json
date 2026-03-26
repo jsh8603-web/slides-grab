@@ -1,0 +1,1952 @@
+{
+  "cover": {
+    "charcoal": {
+      "avg": 25,
+      "count": 2
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan": {
+      "avg": 25,
+      "count": 2
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner tech modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "arctic": {
+      "avg": 25,
+      "count": 1
+    },
+    "icebergs": {
+      "avg": 25,
+      "count": 1
+    },
+    "floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold": {
+      "avg": 25,
+      "count": 1
+    },
+    "pristine": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "arctic icebergs": {
+      "avg": 25,
+      "count": 1
+    },
+    "icebergs floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky cold": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold pristine": {
+      "avg": 25,
+      "count": 1
+    },
+    "pristine atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "arctic icebergs floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan blue water": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue water under": {
+      "avg": 25,
+      "count": 1
+    },
+    "water under dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "under dramatic charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky cold pristine": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold pristine atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "bubble": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "bubble chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan lower-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan upper-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left medium charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium charcoal center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan lower-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-left medium pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagons": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested hexagons": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagons not": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer hexagon cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon cyan outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle hexagon charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon charcoal outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner hexagon filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon filled cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagons not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "middle": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "bar": {
+      "avg": 24,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 24,
+      "count": 1
+    },
+    "short": {
+      "avg": 24,
+      "count": 1
+    },
+    "bars": {
+      "avg": 24,
+      "count": 1
+    },
+    "side": {
+      "avg": 24,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 24,
+      "count": 1
+    },
+    "cyan bar": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal bar": {
+      "avg": 24,
+      "count": 1
+    },
+    "side by": {
+      "avg": 24,
+      "count": 1
+    },
+    "by side": {
+      "avg": 24,
+      "count": 1
+    },
+    "side important": {
+      "avg": 24,
+      "count": 1
+    },
+    "bars not": {
+      "avg": 24,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 24,
+      "count": 1
+    },
+    "by side important": {
+      "avg": 24,
+      "count": 1
+    },
+    "bars not more": {
+      "avg": 24,
+      "count": 1
+    },
+    "timeline": {
+      "avg": 24,
+      "count": 1
+    },
+    "line": {
+      "avg": 24,
+      "count": 1
+    },
+    "spaced": {
+      "avg": 24,
+      "count": 1
+    },
+    "circles": {
+      "avg": 24,
+      "count": 3
+    },
+    "nodes": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin cyan": {
+      "avg": 24,
+      "count": 1
+    },
+    "evenly spaced": {
+      "avg": 24,
+      "count": 1
+    },
+    "spaced circles": {
+      "avg": 24,
+      "count": 1
+    },
+    "it circle": {
+      "avg": 24,
+      "count": 1
+    },
+    "charcoal circle": {
+      "avg": 24,
+      "count": 1
+    },
+    "nodes not": {
+      "avg": 24,
+      "count": 1
+    },
+    "evenly spaced circles": {
+      "avg": 24,
+      "count": 1
+    },
+    "nodes not more": {
+      "avg": 24,
+      "count": 1
+    },
+    "pyramid": {
+      "avg": 24,
+      "count": 1
+    },
+    "layers": {
+      "avg": 24,
+      "count": 1
+    },
+    "narrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "layer": {
+      "avg": 24,
+      "count": 1
+    },
+    "layer cyan": {
+      "avg": 24,
+      "count": 1
+    },
+    "cyan middle": {
+      "avg": 24,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 24,
+      "count": 1
+    },
+    "layer charcoal": {
+      "avg": 24,
+      "count": 1
+    },
+    "layers not": {
+      "avg": 24,
+      "count": 1
+    },
+    "layer cyan middle": {
+      "avg": 24,
+      "count": 1
+    },
+    "cyan middle layer": {
+      "avg": 24,
+      "count": 1
+    },
+    "middle layer charcoal": {
+      "avg": 24,
+      "count": 1
+    },
+    "layers not more": {
+      "avg": 24,
+      "count": 1
+    },
+    "diagram": {
+      "avg": 24,
+      "count": 2
+    },
+    "outer": {
+      "avg": 24,
+      "count": 2
+    },
+    "snow": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "cyan": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "charcoal": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "important": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "not": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "more": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "fewer": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "not more": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "more not": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "not fewer": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "not more not": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "more not fewer": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "thin": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "evenly": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "circle": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cyan circle": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "chart": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "pale": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "hub-spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "lines": {
+      "avg": 23,
+      "count": 1
+    },
+    "smaller": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "hub-spoke diagram": {
+      "avg": 23,
+      "count": 1
+    },
+    "by thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin lines": {
+      "avg": 23,
+      "count": 1
+    },
+    "smaller circles": {
+      "avg": 23,
+      "count": 1
+    },
+    "it spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "charcoal spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "cyan spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "outer circles": {
+      "avg": 23,
+      "count": 1
+    },
+    "circles not": {
+      "avg": 23,
+      "count": 1
+    },
+    "by thin lines": {
+      "avg": 23,
+      "count": 1
+    },
+    "circles not more": {
+      "avg": 23,
+      "count": 1
+    },
+    "donut": {
+      "avg": 21,
+      "count": 1
+    },
+    "ring": {
+      "avg": 21,
+      "count": 1
+    },
+    "segment": {
+      "avg": 21,
+      "count": 1
+    },
+    "segments": {
+      "avg": 21,
+      "count": 1
+    },
+    "thick": {
+      "avg": 21,
+      "count": 1
+    },
+    "hollow": {
+      "avg": 21,
+      "count": 1
+    },
+    "donut chart": {
+      "avg": 21,
+      "count": 1
+    },
+    "chart ring": {
+      "avg": 21,
+      "count": 1
+    },
+    "cyan segment": {
+      "avg": 21,
+      "count": 1
+    },
+    "charcoal segment": {
+      "avg": 21,
+      "count": 1
+    },
+    "thick hollow": {
+      "avg": 21,
+      "count": 1
+    },
+    "hollow ring": {
+      "avg": 21,
+      "count": 1
+    },
+    "ring important": {
+      "avg": 21,
+      "count": 1
+    },
+    "segments not": {
+      "avg": 21,
+      "count": 1
+    },
+    "donut chart ring": {
+      "avg": 21,
+      "count": 1
+    },
+    "thick hollow ring": {
+      "avg": 21,
+      "count": 1
+    },
+    "hollow ring important": {
+      "avg": 21,
+      "count": 1
+    },
+    "segments not more": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow": {
+      "avg": 25,
+      "count": 2
+    },
+    "microchip": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "computing": {
+      "avg": 25,
+      "count": 1
+    },
+    "database": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "microchip silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud computing": {
+      "avg": 25,
+      "count": 1
+    },
+    "computing silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "database silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud computing silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield silhouette charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette charcoal fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "science": {
+      "avg": 25,
+      "count": 1
+    },
+    "laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "microscope": {
+      "avg": 25,
+      "count": 1
+    },
+    "test": {
+      "avg": 25,
+      "count": 1
+    },
+    "tubes": {
+      "avg": 25,
+      "count": 1
+    },
+    "computer": {
+      "avg": 25,
+      "count": 1
+    },
+    "workstation": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern science": {
+      "avg": 25,
+      "count": 1
+    },
+    "science laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "microscope test": {
+      "avg": 25,
+      "count": 1
+    },
+    "test tubes": {
+      "avg": 25,
+      "count": 1
+    },
+    "computer workstation": {
+      "avg": 25,
+      "count": 1
+    },
+    "workstation cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern science laboratory": {
+      "avg": 25,
+      "count": 1
+    },
+    "microscope test tubes": {
+      "avg": 25,
+      "count": 1
+    },
+    "computer workstation cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 24,
+      "count": 2
+    },
+    "grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "cloud": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "cyan": {
+      "avg": 24,
+      "count": 2
+    },
+    "outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "sun": {
+      "avg": 23,
+      "count": 1
+    },
+    "raindrop": {
+      "avg": 23,
+      "count": 1
+    },
+    "snowflake": {
+      "avg": 23,
+      "count": 1
+    },
+    "outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 23,
+      "count": 1
+    },
+    "snowflake cyan": {
+      "avg": 23,
+      "count": 1
+    },
+    "cyan outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "snowflake cyan outlines": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "background": {
+    "repeating": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "grid": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan": {
+      "avg": 25,
+      "count": 2
+    },
+    "honeycomb": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 2
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle repeating": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeating hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagonal grid": {
+      "avg": 25,
+      "count": 1
+    },
+    "grid pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale cyan": {
+      "avg": 25,
+      "count": 1
+    },
+    "honeycomb feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 2
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle repeating hexagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeating hexagonal grid": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagonal grid pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "honeycomb feel tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 2
+    },
+    "printed": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "board": {
+      "avg": 25,
+      "count": 1
+    },
+    "trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal": {
+      "avg": 25,
+      "count": 2
+    },
+    "technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle printed": {
+      "avg": 25,
+      "count": 1
+    },
+    "printed circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "board trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "trace pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle printed circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "printed circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "board trace pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine technical line": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical line pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "line pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern modern engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated": {
+      "avg": 25,
+      "count": 1
+    },
+    "degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape rotated": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated 45": {
+      "avg": 25,
+      "count": 1
+    },
+    "45 degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "degrees centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond shape rotated": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape rotated 45": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated 45 degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "45 degrees centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "cyan filled diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin charcoal outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "pale": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "fine": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "modern": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "feel": {
+      "avg": 24,
+      "count": 2
+    },
+    "tech": {
+      "avg": 24,
+      "count": 2
+    },
+    "feel tech": {
+      "avg": 24,
+      "count": 2
+    },
+    "tech modern": {
+      "avg": 24,
+      "count": 2
+    },
+    "feel tech modern": {
+      "avg": 24,
+      "count": 2
+    },
+    "carbon": {
+      "avg": 23,
+      "count": 1
+    },
+    "fiber": {
+      "avg": 23,
+      "count": 1
+    },
+    "weave": {
+      "avg": 23,
+      "count": 1
+    },
+    "texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "cool": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones": {
+      "avg": 23,
+      "count": 1
+    },
+    "woven": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle carbon": {
+      "avg": 23,
+      "count": 1
+    },
+    "carbon fiber": {
+      "avg": 23,
+      "count": 1
+    },
+    "fiber weave": {
+      "avg": 23,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "cool snow": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine woven": {
+      "avg": 23,
+      "count": 1
+    },
+    "woven pattern": {
+      "avg": 23,
+      "count": 1
+    },
+    "pattern feel": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle carbon fiber": {
+      "avg": 23,
+      "count": 1
+    },
+    "carbon fiber weave": {
+      "avg": 23,
+      "count": 1
+    },
+    "fiber weave texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "tones fine woven": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine woven pattern": {
+      "avg": 23,
+      "count": 1
+    },
+    "woven pattern feel": {
+      "avg": 23,
+      "count": 1
+    },
+    "pattern feel tech": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "droplet": {
+      "avg": 25,
+      "count": 1
+    },
+    "falling": {
+      "avg": 25,
+      "count": 1
+    },
+    "ripple": {
+      "avg": 25,
+      "count": 1
+    },
+    "rings": {
+      "avg": 25,
+      "count": 1
+    },
+    "shadow": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "clarity": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "water droplet": {
+      "avg": 25,
+      "count": 1
+    },
+    "droplet falling": {
+      "avg": 25,
+      "count": 1
+    },
+    "ripple rings": {
+      "avg": 25,
+      "count": 1
+    },
+    "rings charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal shadow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shadow reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystalline clarity": {
+      "avg": 25,
+      "count": 1
+    },
+    "clarity shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "water droplet falling": {
+      "avg": 25,
+      "count": 1
+    },
+    "ripple rings charcoal": {
+      "avg": 25,
+      "count": 1
+    },
+    "rings charcoal shadow": {
+      "avg": 25,
+      "count": 1
+    },
+    "charcoal shadow reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "shadow reflections crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections crystalline clarity": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystalline clarity shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "clarity shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern": {
+      "avg": 24,
+      "count": 1
+    },
+    "data": {
+      "avg": 24,
+      "count": 1
+    },
+    "server": {
+      "avg": 24,
+      "count": 1
+    },
+    "racks": {
+      "avg": 24,
+      "count": 1
+    },
+    "led": {
+      "avg": 24,
+      "count": 1
+    },
+    "indicator": {
+      "avg": 24,
+      "count": 1
+    },
+    "glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "environment": {
+      "avg": 24,
+      "count": 1
+    },
+    "cool": {
+      "avg": 24,
+      "count": 1
+    },
+    "tech": {
+      "avg": 24,
+      "count": 1
+    },
+    "rows": {
+      "avg": 24,
+      "count": 1
+    },
+    "servers": {
+      "avg": 24,
+      "count": 1
+    },
+    "stretching": {
+      "avg": 24,
+      "count": 1
+    },
+    "distance": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern data": {
+      "avg": 24,
+      "count": 1
+    },
+    "server racks": {
+      "avg": 24,
+      "count": 1
+    },
+    "cyan led": {
+      "avg": 24,
+      "count": 1
+    },
+    "led indicator": {
+      "avg": 24,
+      "count": 1
+    },
+    "indicator lights": {
+      "avg": 24,
+      "count": 1
+    },
+    "lights glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "environment cool": {
+      "avg": 24,
+      "count": 1
+    },
+    "cool tech": {
+      "avg": 24,
+      "count": 1
+    },
+    "tech atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "atmosphere rows": {
+      "avg": 24,
+      "count": 1
+    },
+    "servers stretching": {
+      "avg": 24,
+      "count": 1
+    },
+    "cyan led indicator": {
+      "avg": 24,
+      "count": 1
+    },
+    "led indicator lights": {
+      "avg": 24,
+      "count": 1
+    },
+    "indicator lights glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "environment cool tech": {
+      "avg": 24,
+      "count": 1
+    },
+    "cool tech atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "tech atmosphere rows": {
+      "avg": 24,
+      "count": 1
+    },
+    "blue": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "water": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cyan blue": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "blue water": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cyan blue water": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "cyan": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "charcoal": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "side": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "lights": {
+      "avg": 23,
+      "count": 2
+    },
+    "atmosphere": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "massive": {
+      "avg": 22,
+      "count": 1
+    },
+    "glacier": {
+      "avg": 22,
+      "count": 1
+    },
+    "calving": {
+      "avg": 22,
+      "count": 1
+    },
+    "rocky": {
+      "avg": 22,
+      "count": 1
+    },
+    "mountains": {
+      "avg": 22,
+      "count": 1
+    },
+    "framing": {
+      "avg": 22,
+      "count": 1
+    },
+    "scene": {
+      "avg": 22,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 22,
+      "count": 1
+    },
+    "arctic": {
+      "avg": 22,
+      "count": 1
+    },
+    "massive glacier": {
+      "avg": 22,
+      "count": 1
+    },
+    "glacier calving": {
+      "avg": 22,
+      "count": 1
+    },
+    "water charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "rocky mountains": {
+      "avg": 22,
+      "count": 1
+    },
+    "mountains framing": {
+      "avg": 22,
+      "count": 1
+    },
+    "scene dramatic": {
+      "avg": 22,
+      "count": 1
+    },
+    "dramatic arctic": {
+      "avg": 22,
+      "count": 1
+    },
+    "arctic atmosphere": {
+      "avg": 22,
+      "count": 1
+    },
+    "massive glacier calving": {
+      "avg": 22,
+      "count": 1
+    },
+    "blue water charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "rocky mountains framing": {
+      "avg": 22,
+      "count": 1
+    },
+    "scene dramatic arctic": {
+      "avg": 22,
+      "count": 1
+    },
+    "dramatic arctic atmosphere": {
+      "avg": 22,
+      "count": 1
+    },
+    "futuristic": {
+      "avg": 22,
+      "count": 1
+    },
+    "city": {
+      "avg": 22,
+      "count": 1
+    },
+    "skyline": {
+      "avg": 22,
+      "count": 1
+    },
+    "night": {
+      "avg": 22,
+      "count": 1
+    },
+    "neon": {
+      "avg": 22,
+      "count": 1
+    },
+    "reflecting": {
+      "avg": 22,
+      "count": 1
+    },
+    "wet": {
+      "avg": 22,
+      "count": 1
+    },
+    "streets": {
+      "avg": 22,
+      "count": 1
+    },
+    "cyberpunk": {
+      "avg": 22,
+      "count": 1
+    },
+    "sky": {
+      "avg": 22,
+      "count": 1
+    },
+    "composition": {
+      "avg": 22,
+      "count": 1
+    },
+    "futuristic city": {
+      "avg": 22,
+      "count": 1
+    },
+    "city skyline": {
+      "avg": 22,
+      "count": 1
+    },
+    "cyan neon": {
+      "avg": 22,
+      "count": 1
+    },
+    "neon lights": {
+      "avg": 22,
+      "count": 1
+    },
+    "lights reflecting": {
+      "avg": 22,
+      "count": 1
+    },
+    "wet charcoal": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal streets": {
+      "avg": 22,
+      "count": 1
+    },
+    "streets cyberpunk": {
+      "avg": 22,
+      "count": 1
+    },
+    "cyberpunk atmosphere": {
+      "avg": 22,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 22,
+      "count": 1
+    },
+    "futuristic city skyline": {
+      "avg": 22,
+      "count": 1
+    },
+    "cyan neon lights": {
+      "avg": 22,
+      "count": 1
+    },
+    "neon lights reflecting": {
+      "avg": 22,
+      "count": 1
+    },
+    "wet charcoal streets": {
+      "avg": 22,
+      "count": 1
+    },
+    "charcoal streets cyberpunk": {
+      "avg": 22,
+      "count": 1
+    },
+    "streets cyberpunk atmosphere": {
+      "avg": 22,
+      "count": 1
+    }
+  }
+}

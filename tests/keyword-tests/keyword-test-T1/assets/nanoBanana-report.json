@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-03-19T10:58:43.142Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 3,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.1,
+    "min": 21.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 1,
+      "22-24": 3,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 24.9,
+      "count": 5
+    }
+  },
+  "by_rule": {
+    "IP-08": 1,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 7,
+      "total": 21.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "W",
+          "UIS",
+          "30",
+          "N",
+          "S",
+          "E",
+          "TAIRA",
+          "PAIN"
+        ],
+        "pf_reason": "The image lacks distinct 'faint pencil route markings' on the navigation chart. While 'Accent Gold' and 'Background Off-White' are present, the 'Primary Navy' from the prompt's implied color palette is not visibly present as an object color within the image."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image perfectly captures the visual elements (seedling, cracked gray concrete, dramatic side lighting from the left) and the requested style. However, the specified 'Primary Navy' and 'Accent Gold' colors from the overall presentation palette are not incorporated into the image content, and the bright green of the seedling is not explicitly part of the given palette."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specifies 'Primary Navy' in the color palette, but navy is only a minor accent in the image (the small bag), with off-white and gold being the dominant colors. The overall style and elements match, but the color dominance is not as requested."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The accent gold color is missing. The left side of the image features a large off-white block, which was not described as part of the 'data center corridor' content, and makes the overall image asymmetrical, even though the corridor itself is largely symmetrical."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "concrete (avg 23.5, n=2)",
+        "editorial (avg 23.5, n=2)",
+        "photography (avg 23, n=2)"
+      ],
+      "bottom_keywords": [
+        "photography (avg 23, n=2)",
+        "concrete (avg 23.5, n=2)",
+        "editorial (avg 23.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.3, n=5)",
+        "pattern (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 40 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "pyramid (avg 26.9, n=5)",
+        "narrowest (avg 26.8, n=5)",
+        "narrowing down (avg 26.7, n=5)",
+        "sections narrowing down (avg 26.7, n=5)",
+        "tiers (avg 26.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 199 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern (avg 26.9, n=6)",
+        "paper (avg 26.9, n=6)",
+        "paper texture (avg 26.9, n=6)",
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "epic (avg 27.5, n=5)",
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 96 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 8,
+    "retried": 0
+  }
+}

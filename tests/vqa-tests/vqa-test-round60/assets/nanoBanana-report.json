@@ -1,0 +1,206 @@
+{
+  "timestamp": "2026-03-19T09:18:58.395Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 0,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.5,
+    "min": 11.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 7,
+      "25-27": 0,
+      "22-24": 0,
+      "17-21": 0,
+      "<17": 1
+    }
+  },
+  "by_category": {
+    "icon": {
+      "avg": 19.5,
+      "count": 2
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 27.5,
+      "count": 5
+    }
+  },
+  "by_rule": {
+    "IP-03": 1,
+    "IP-08": 7,
+    "IV-03": 1,
+    "IP-09": 4
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 11.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 2,
+        "composition": 2,
+        "color_harmony": 5,
+        "presentation_fit": 1,
+        "ch_reason": "",
+        "co_reason": "The image is visually dense with a prominent ship and detailed foreground elements (map, compass, spyglass), leaving very little clear negative space suitable for text overlay without obscuring key visual information. It is too busy for an icon/illustration.",
+        "detected_text": [
+          "Hurluware",
+          "illegible signature",
+          "stylized map symbols"
+        ],
+        "pf_reason": "The prompt requested a set of 5 flat design icons of sailing ship parts, but the image shows a realistic painting of a single sailing ship and maritime scene."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 4,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "sails (avg 27.5, n=6)",
+        "cinematic (avg 27.5, n=3)",
+        "wide-angle (avg 27.5, n=2)",
+        "tall (avg 27.5, n=4)",
+        "golden (avg 27.5, n=3)"
+      ],
+      "bottom_keywords": [
+        "bold (avg 24.3, n=2)",
+        "limited (avg 24.3, n=2)",
+        "sailing ship (avg 24.3, n=2)",
+        "blue warm (avg 24.3, n=2)",
+        "ocean blue warm (avg 24.3, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)",
+        "base (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "cloud (avg 25, n=5)",
+        "green (avg 24.8, n=5)",
+        "truck (avg 24.8, n=5)",
+        "warehouse (avg 24.8, n=5)",
+        "clipboard (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 26.9, n=5)",
+        "rounded rectangles (avg 26.9, n=5)",
+        "by arrows (avg 26.9, n=5)",
+        "rounded (avg 26.9, n=5)",
+        "narrowing (avg 26.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 173 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.6, n=5)",
+        "pattern warm (avg 26.6, n=5)",
+        "subtle cream (avg 26.6, n=5)",
+        "cream paper (avg 26.6, n=5)",
+        "subtle fiber (avg 26.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 10,
+    "retried": 2
+  }
+}

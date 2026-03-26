@@ -1,0 +1,221 @@
+{
+  "timestamp": "2026-03-19T08:24:37.536Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 7,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.8,
+    "min": 21,
+    "max": 27.5,
+    "distribution": {
+      "25": 0,
+      "23-24": 2,
+      "20-22": 6,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24.8,
+      "count": 11
+    },
+    "metaphor": {
+      "avg": 22,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 1,
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 9,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The image displays only 3 segments in the donut chart, whereas the prompt explicitly requested 4 segments with distinct color variations (Navy, dark orange, orange, and light orange)."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows only two arrow-shaped segments instead of the requested three, and the third 'light orange' segment is missing. The aspect ratio is also not 16:9 as implied by '16:'. The image is 16:9, but this is implied and not explicitly stated in the prompt, so I will focus on the content mismatch. However, the image is 16:9, which is good. The main issue is the number of segments and the third color."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The requested primary navy color is entirely absent, and accent orange dominates the image rather than being an accent. The background is warm, not neutral, as specified in the color palette instructions."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt specified an 'Accent orange' color for the palette, but this color is entirely absent from the image. The icons are white instead of using the specified accent color."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested five small orange circles, but the image shows six circles around the central navy circle. All other aspects of the prompt were followed accurately, including the style, colors, and overall concept of a minimal hub-spoke diagram without text."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.4,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "widest (avg 27.5, n=2)",
+        "subtle (avg 27.5, n=2)",
+        "pattern (avg 27.5, n=2)",
+        "rounded (avg 24.8, n=2)",
+        "warm (avg 24.8, n=2)"
+      ],
+      "bottom_keywords": [
+        "chevron (avg 20.3, n=2)",
+        "process (avg 20.3, n=2)",
+        "arrow-shaped (avg 20.3, n=2)",
+        "chevron process (avg 20.3, n=2)",
+        "arrow-shaped sections (avg 20.3, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 25.3, n=6)",
+        "line (avg 25.2, n=6)",
+        "empty (avg 25.2, n=6)",
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 25.1, n=6)",
+        "silhouette (avg 25.1, n=6)",
+        "green (avg 24.8, n=5)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "narrowing (avg 24.9, n=6)",
+        "sections narrowing (avg 24.9, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 136 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "paper (avg 25.2, n=6)",
+        "paper texture (avg 25.1, n=5)",
+        "artistic (avg 25, n=5)",
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 65 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 61 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 17,
+    "retried": 2
+  }
+}

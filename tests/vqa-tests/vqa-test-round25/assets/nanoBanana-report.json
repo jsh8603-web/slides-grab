@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-03-19T03:53:56.619Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.2,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 13,
+      "23-24": 5,
+      "20-22": 2,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "background": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 4,
+    "IP-09": 1,
+    "IP-03": 1,
+    "IP-11": 1,
+    "IV-10": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 11,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a 'light stone' background with 'subtle smooth concrete texture', but the image features a solid dark slate background with no visible texture. The specified 'Background light stone' was completely missed, as the primary background is dark slate. The accent color is accurate, but the primary background and texture are incorrect. This is a significant deviation from the prompt's core visual description for the background itself. The overall 'Extremely minimal' and 'Professional, contemporary' style are achieved, but the fundamental color and texture of the background are wrong. Overall, the colors do work well together and create a strong impact as a modern presentation background, but they deviate strongly from the prompt regarding the dominant background color and the texture element. Therefore the low score for fidelity is only because of the mismatch in the visual description of the texture and dominant background color of the image, rather than the aesthetic of the final image. Since this is a professional setting where the presenter may require a specific look and feel, it's critical to align with the given instructions in the prompt for high fidelity. For example, a light stone background may have been requested to contrast with certain elements the presenter intends to include on the slide, and by substituting that for a dark slate, the image no longer aligns with the presenter's specific needs, regardless of how good the final result is visually. However, if the presenter just needs an aesthetically pleasing and visually good background, then this image fits that criteria. But due to the specific and detailed nature of the prompt, the image must also align with that description to achieve a high fidelity score. The image did not achieve this. As a presentation image, this is beautiful, but as a generated image based on the prompt, it does not achieve high fidelity due to the critical differences between prompt and image.  The final aesthetic of the image itself is beautiful, but the prompt fidelity has a low score because of the deviation from the actual instructions in the prompt, regarding specific details such as dominant background color and texture, which were key to the prompt's instructions. While the image is appealing, it doesn't align with the detailed visual description provided, resulting in a low score for this criterion. The image does not meet a few of the prompt's key descriptors. These include: 1. The primary background color of the image is dark slate, not 'light stone' as specified. 2. There is no 'very subtle smooth concrete texture in light stone tones' or 'barely visible urban surface feel'; the background is a solid color. 3. The 'light stone' background color and 'subtle smooth concrete texture' are absent. It does however match the accent color and overall 'professional, contemporary, modern minimal mood, extremely minimal' style. The score reflects the significant deviation in the background color and texture, which are critical elements of the prompt. While the generated image is visually appealing, it fails to meet these specific instructional requirements. The rating is based on strict adherence to the prompt details, where this image falls short on key background specifications. However, the image overall has a strong visual aesthetic. This is a situation where the generated image is aesthetically strong, but deviates from key parts of the original prompt instructions. The rating of '2' for prompt fidelity acknowledges the mismatch in these specific visual details between the prompt and the image. If the prompt was more open-ended, the score would be higher. However, as it is a specific set of instructions, it must align to achieve a high score for fidelity. The '2' is not a comment on the artistic value of the image, which is excellent, but rather on its adherence to the specific technical instructions. Thus, the prompt fidelity is rated a 2, not because the generated image is poor, but because it does not meet the precise color and texture specifications in the prompt. The image presents a dark slate background, which directly contradicts the requested 'light stone' background and its associated 'smooth concrete texture'. This deviation from the specific instructions results in a low fidelity score, despite the image's overall aesthetic quality."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested four chevrons, but the image shows six. The specified color sequence (dark slate, warm coral, light slate, fourt) does not fully match the image's sequence (dark slate, warm coral, medium grey, warm coral, medium grey, light coral), and the prompt was cut off."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The third bar is a medium gray, not 'light slate' as specified in the prompt. The prompt defined 'light stone' for the background and 'dark slate' for the first bar, making 'light slate' ambiguous for the third bar's color, but the current color does not fit either defined slate."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The rock formations are primarily warm brown and orange tones, rather than the specified 'dark slate' primary color."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified the right three-fifths of the progress bar to be 'light gray', but the image shows this portion in a 'dark slate' color instead. The 'Primary dark slate' was listed in the color palette but not explicitly for that part of the progress bar. Also, the prompt mentioned 'light gray' for the remaining part, which is absent."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "thin (avg 25, n=2)",
+        "circle (avg 25, n=2)",
+        "with warm (avg 25, n=2)",
+        "icons (avg 25, n=2)",
+        "2x2 (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "tones (avg 22.5, n=2)",
+        "bar (avg 23, n=2)",
+        "first (avg 23.3, n=3)",
+        "second (avg 23.3, n=3)",
+        "slate second (avg 23.3, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "timestamp": "2026-03-19T11:51:55.033Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24,
+    "min": 18,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 2,
+      "25-27": 0,
+      "22-24": 5,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "metaphor": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 21.5,
+      "count": 3
+    },
+    "background": {
+      "avg": 26,
+      "count": 2
+    },
+    "icon": {
+      "avg": 27.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IP-14": 4,
+    "IP-15": 2,
+    "IV-03": 1,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 18,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 3,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The specified color palette of 'Forest green (#2E7D5E) and deep navy (#1A2B4A) tones' is not present. The dominant colors are various shades of brown and muted beige with some aged blue-green for water, not deep navy or forest green. The chart does not appear 'wooden'. The rest of the prompt is well-matched, however, the color discrepancy is significant to the prompt description. The chart also doesn't look like 'worn wooden navigation chart' but rather a worn paper map, which is a slight deviation from the prompt. However, 'worn' is there. 'Wooden' is not there. The main deviation is color and 'wooden'. I'll give it a 2 because 'wooden' and color are quite specific misses. However, if the prompt did not contain such specific color request, I would rate higher. So, for the rating, I'll go with 2 due to the color and 'wooden' miss. Let me re-evaluate, the core object (compass on map) and mood (moody directional light, shallow DOF) are there, but the specified colors and 'wooden' chart are not. I think a 3 is more appropriate, as a lot of elements are still there, but the colors are a big miss. Okay, I'll stick with 2 for a major color miss and 'wooden' chart miss, since these are prominent descriptors. No, I think 3 is fair, because the image still depicts an antique brass compass on a worn navigation chart with good lighting and DOF as requested, but misses the specific color palette and the 'wooden' chart texture. The 'deep shadows across the ornate compass face' are also not very deep. Let me re-evaluate, I'm going back and forth between 2 and 3. The prompt explicitly specifies colors and a 'wooden' chart. Neither are clearly present. This is a significant deviation for a strict reviewer. I'll go with 2, as these are strong requirements. Let me rewrite the pf_reason for a 2. The specified color palette of 'Forest green (#2E7D5E) and deep navy (#1A2B4A) tones' is not present; the image features browns and muted blues. Additionally, the chart appears to be paper/parchment rather than 'wooden'. The shadows across the compass face are present but not 'deep' as described. The core subject and photography style are correct. The color and texture details are missed. Therefore, 2 seems appropriate. Yes, I'll stick to 2. Let me ensure the reason explains the 2 score clearly. The specified color palette and 'wooden' chart are key elements missed. The shadows are also not 'deep'. This warrants a 2. The other aspects (compass, lighting, DOF) are correct. So, the missed elements are significant enough for a low score. The prompt is quite specific. Let's make it concise. The primary deviation is the absence of the specified 'Forest green' and 'deep navy' tones, as well as the 'wooden' texture for the navigation chart. The existing color scheme is predominantly brown and muted beige with some muted blue, which deviates significantly from the requested colors. The shadows on the compass are also not 'deep' as prompted. Therefore, the prompt fidelity is low due to these specific misses. Yes, this is a solid explanation for a 2. Let's make sure it's not too long. Okay. My pf_reason is good. I need to make sure 'detected_text' is good too. Yes, the compass has letters and numbers. The map has illegible script/symbols. I'll list these. All good. My self-correction led to a more refined answer. I'm now confident with a 2 and the accompanying explanation. Also, the crops provided didn't show any more text than what I initially identified. The general mood and object are there, but specific details like colors and material are missing which is what a strict reviewer would flag. Final check on schema. All required fields are there. No extra text. Single JSON object. Scalars, boolean, null are not doubles quoted. Values are double quoted. Okay. All good. My pf_reason is concise enough and explains the 2 score well. I'm satisfied. One last check, is the prompt description too specific to score high? Yes, the color codes are extremely specific, so missing them means a low score on that part. The image does not contain the described colors. So 2 is fair. The 'wooden' chart is also a miss. This confirms my choice for 2. What about text absence? The compass has letters (N, S, E, W) and numbers (degree markings). The map has faint, illegible script-like markings. These are present. So 3 is a reasonable score, meaning adequate, but not absent. 5 would be completely absent. 1 would be very prominent and distracting. 3 is fair. My detected text list is also good. Looks solid.}{\"prompt_fidelity\": 2, \"text_absence\": 3, \"composition\": 4, \"color_harmony\": 4, \"presentation_fit\": 4, \"ch_reason\": null, \"co_reason\": null, \"detected_text\": [\"N\", \"S\", \"E\", \"W\", \"degree markings\", \"illegible map text/symbols\"], \"pf_reason\": \"The primary deviation is the absence of the specified 'Forest green' and 'deep navy' tones; the image features browns and muted blues. Additionally, the chart appears to be paper/parchment rather than 'wooden'. The shadows across the compass face are present but not 'deep' as described.\"}"
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image contains 9 circular nodes, but the prompt requested 7 equally-spaced circular nodes."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "MARRIOTT",
+          "PRUDENTIAL"
+        ]
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 1,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "Seed stage",
+          "Series A"
+        ]
+      }
+    },
+    {
+      "slide": 7,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "co_reason": "The main subject (scales) is quite central and dominant, limiting significant negative space for text overlay without obscuring parts of the image.",
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "text_absence",
+      "avg": 3.3,
+      "severity": "HIGH",
+      "action": "Check IP-11 subjects (compass, clock, etc). Verify 'Absolutely no text' is present in all prompts. Consider adding 'no words, no letters, no characters' reinforcement.",
+      "affected_slides": [
+        1,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "rounded (avg 25.5, n=2)",
+        "nodes (avg 25.5, n=2)",
+        "grid (avg 25.5, n=2)",
+        "labels (avg 24.7, n=3)",
+        "annotations (avg 24.7, n=3)"
+      ],
+      "bottom_keywords": [
+        "photography (avg 22, n=2)",
+        "brass (avg 22.5, n=2)",
+        "directional (avg 22.5, n=2)",
+        "ornate (avg 22.5, n=2)",
+        "full (avg 22.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "pattern (avg 27.2, n=5)",
+        "glass (avg 27.1, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 48 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 58 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "tiers (avg 26.9, n=5)",
+        "narrowest (avg 26.8, n=5)",
+        "smallest (avg 26.5, n=5)",
+        "pyramid (avg 26.5, n=6)",
+        "widest (avg 26.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 213 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "data warm (avg 27.5, n=5)",
+        "data warm paper (avg 27.5, n=5)",
+        "fiber pattern (avg 27.2, n=6)",
+        "paper (avg 27.2, n=6)",
+        "paper texture (avg 27.2, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 94 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 134 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 10,
+    "retried": 2
+  }
+}

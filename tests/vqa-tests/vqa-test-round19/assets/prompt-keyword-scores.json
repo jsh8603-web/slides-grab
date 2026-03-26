@@ -1,0 +1,118 @@
+{
+  "cover": {},
+  "frame": {
+    "minimal": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "on soft": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "pink background": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "soft": {
+      "avg": 23.8,
+      "count": 6
+    },
+    "soft pink": {
+      "avg": 23.8,
+      "count": 6
+    },
+    "rose": {
+      "avg": 22.7,
+      "count": 6
+    },
+    "rose pink": {
+      "avg": 22.7,
+      "count": 6
+    },
+    "pink": {
+      "avg": 22.3,
+      "count": 7
+    }
+  },
+  "icon": {},
+  "background": {
+    "soft": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "pink": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "soft pink": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 24,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 24,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 24,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "mood extremely": {
+      "avg": 24,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 24,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "rose": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "rose pink": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 4
+    },
+    "pink": {
+      "avg": 24,
+      "count": 4
+    },
+    "side": {
+      "avg": 24,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24,
+      "count": 4
+    },
+    "one side": {
+      "avg": 24,
+      "count": 4
+    },
+    "side for": {
+      "avg": 24,
+      "count": 4
+    },
+    "text overlay": {
+      "avg": 24,
+      "count": 4
+    }
+  }
+}

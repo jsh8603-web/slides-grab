@@ -1,0 +1,193 @@
+{
+  "timestamp": "2026-03-19T09:58:36.901Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25,
+    "min": 23,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 0,
+      "22-24": 5,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 25,
+      "count": 8
+    }
+  },
+  "by_rule": {},
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified '5 small teal circles' but the image shows 8 small teal circles."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a donut chart with 3 sections and specified navy, teal, and light blue sections. The generated image only has 2 sections (navy and teal) and no light blue section."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The diagram shows 4 pointed sections instead of the requested 3."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The pointed sections are not strictly alternating navy and teal as described; there are two consecutive teal sections."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 3 small teal circles, but the image shows 4 small teal circles."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "bar (avg 27.5, n=2)",
+        "bars (avg 27.5, n=2)",
+        "blocks (avg 27.5, n=2)",
+        "alternating (avg 25.5, n=2)",
+        "donut (avg 25.3, n=2)"
+      ],
+      "bottom_keywords": [
+        "pointed (avg 23.5, n=2)",
+        "horizontally (avg 23.5, n=2)",
+        "pointed sections (avg 23.5, n=2)",
+        "radial (avg 23.8, n=2)",
+        "connection (avg 23.8, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.2, n=6)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.6, n=5)",
+        "silhouette (avg 25.6, n=5)",
+        "green (avg 25.6, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=5)",
+        "rounded rectangles (avg 27, n=5)",
+        "by arrows (avg 27, n=5)",
+        "rounded (avg 27, n=5)",
+        "narrowest (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 189 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "ocean (avg 27.5, n=6)",
+        "hull (avg 27.5, n=6)",
+        "billowing (avg 27.4, n=6)",
+        "photorealistic (avg 27.4, n=8)",
+        "ship (avg 27.4, n=8)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 92 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 8,
+    "retried": 0
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "cover": {},
+  "metaphor": {
+    "midnight": {
+      "avg": 23,
+      "count": 3
+    },
+    "blue": {
+      "avg": 23,
+      "count": 3
+    },
+    "midnight blue": {
+      "avg": 23,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 22.8,
+      "count": 4
+    },
+    "emerald": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "cinematic wide": {
+      "avg": 22.3,
+      "count": 3
+    }
+  },
+  "frame": {
+    "diagram": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "lavender": {
+      "avg": 24,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "midnight": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "blue": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "emerald": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "green": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "midnight blue": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "purple": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "light purple": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "first": {
+      "avg": 23,
+      "count": 3
+    },
+    "second": {
+      "avg": 23,
+      "count": 3
+    }
+  },
+  "icon": {},
+  "background": {
+    "subtle": {
+      "avg": 25,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 25,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 25,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 25,
+      "count": 3
+    }
+  }
+}

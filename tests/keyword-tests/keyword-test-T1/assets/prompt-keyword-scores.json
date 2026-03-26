@@ -1,0 +1,597 @@
+{
+  "frame": {
+    "process": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stages": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paths": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "node": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "markers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nodes": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suitable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "process flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by smooth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth curved": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved arrow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrow paths": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular node": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "node markers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nodes gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suitable as": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by smooth curved": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth curved arrow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved arrow paths": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular node markers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {},
+  "metaphor": {
+    "data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "corridor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "walls": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "electric": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "led": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strip": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lights": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "perfectly": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "symmetrical": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "composition": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "field": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "modern": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "polished": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "floor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "reflecting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cool": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "electric blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue led": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "led strip": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strip lights": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lights perfectly": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "perfectly symmetrical": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "symmetrical composition": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "composition cinematic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cinematic depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "field modern": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "modern infrastructure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure polished": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "polished concrete": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "concrete floor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "floor reflecting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "reflecting cool": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "electric blue led": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue led strip": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "led strip lights": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strip lights perfectly": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lights perfectly symmetrical": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "perfectly symmetrical composition": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "symmetrical composition cinematic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "composition cinematic depth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "field modern infrastructure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "modern infrastructure polished": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "infrastructure polished concrete": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "polished concrete floor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "concrete floor reflecting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "floor reflecting cool": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "concrete": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "editorial": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "product": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "product photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "photography": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3
+    },
+    "bright": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "seedling": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "emerging": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "powerfully": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cracked": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dramatic": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lighting": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shadows": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strong": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "contrast": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "breakthrough": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "macro": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bright green": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green seedling": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "seedling emerging": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "emerging powerfully": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "concrete dramatic": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strong contrast": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "contrast breakthrough": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "breakthrough growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "macro photography": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "photography shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bright green seedling": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green seedling emerging": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "seedling emerging powerfully": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "strong contrast breakthrough": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "contrast breakthrough growth": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "macro photography shallow": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "photography shallow dof": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

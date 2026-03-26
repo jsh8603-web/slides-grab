@@ -1,0 +1,2020 @@
+{
+  "cover": {
+    "steel": {
+      "avg": 25,
+      "count": 2
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine": {
+      "avg": 25,
+      "count": 2
+    },
+    "orange": {
+      "avg": 25,
+      "count": 2
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner": {
+      "avg": 25,
+      "count": 1
+    },
+    "confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine orange": {
+      "avg": 25,
+      "count": 2
+    },
+    "corner bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold tangerine orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "corner bold confident": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "mesa": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouettes": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "rock": {
+      "avg": 25,
+      "count": 1
+    },
+    "formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "western": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert mesa": {
+      "avg": 25,
+      "count": 1
+    },
+    "mesa silhouettes": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "rock formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic western": {
+      "avg": 25,
+      "count": 1
+    },
+    "western atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert mesa silhouettes": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine orange sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "orange sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "foreground dramatic western": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic western atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring important": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments not": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow ring important": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 25,
+      "count": 2
+    },
+    "short": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "first bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 25,
+      "count": 1
+    },
+    "side by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "side important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not": {
+      "avg": 25,
+      "count": 1
+    },
+    "first bar tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "by side important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 2
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "bubble": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-center": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal bubble": {
+      "avg": 25,
+      "count": 1
+    },
+    "bubble chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle lower-center": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal bubble chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium tangerine circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine circle center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagons": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested hexagons": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer hexagon steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle hexagon tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon tangerine outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner hexagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner hexagon filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "hexagon filled tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart": {
+      "avg": 24.8,
+      "count": 5
+    },
+    "minimal": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "warm": {
+      "avg": 24.7,
+      "count": 6
+    },
+    "first": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "steel": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "second": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "tangerine": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "important": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "not": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "more": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "fewer": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "not more": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "more not": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "not fewer": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "not more not": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "more not fewer": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "fourth": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "diagram": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "circle": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "circles": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "pale": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "orange": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "pale orange": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "chevron": {
+      "avg": 24,
+      "count": 1
+    },
+    "process": {
+      "avg": 24,
+      "count": 1
+    },
+    "arrow-shaped": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevrons": {
+      "avg": 24,
+      "count": 1
+    },
+    "pointing": {
+      "avg": 24,
+      "count": 1
+    },
+    "row": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal chevron": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevron process": {
+      "avg": 24,
+      "count": 1
+    },
+    "process diagram": {
+      "avg": 24,
+      "count": 1
+    },
+    "arrow-shaped chevrons": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevrons pointing": {
+      "avg": 24,
+      "count": 1
+    },
+    "row first": {
+      "avg": 24,
+      "count": 1
+    },
+    "first steel": {
+      "avg": 24,
+      "count": 1
+    },
+    "second tangerine": {
+      "avg": 24,
+      "count": 1
+    },
+    "fourth pale": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevrons not": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal chevron process": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevron process diagram": {
+      "avg": 24,
+      "count": 1
+    },
+    "arrow-shaped chevrons pointing": {
+      "avg": 24,
+      "count": 1
+    },
+    "row first steel": {
+      "avg": 24,
+      "count": 1
+    },
+    "fourth pale orange": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevrons not more": {
+      "avg": 24,
+      "count": 1
+    },
+    "organization": {
+      "avg": 24,
+      "count": 1
+    },
+    "connected": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "rows": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal organization": {
+      "avg": 24,
+      "count": 1
+    },
+    "organization chart": {
+      "avg": 24,
+      "count": 1
+    },
+    "connected by": {
+      "avg": 24,
+      "count": 1
+    },
+    "by thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "circle tangerine": {
+      "avg": 24,
+      "count": 1
+    },
+    "circle pale": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal organization chart": {
+      "avg": 24,
+      "count": 1
+    },
+    "connected by thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "by thin lines": {
+      "avg": 24,
+      "count": 1
+    },
+    "circle pale orange": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "crane": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "brick": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "safety": {
+      "avg": 25,
+      "count": 1
+    },
+    "cone": {
+      "avg": 25,
+      "count": 1
+    },
+    "wrench": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "crane silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "brick wall": {
+      "avg": 25,
+      "count": 1
+    },
+    "wall silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "safety cone": {
+      "avg": 25,
+      "count": 1
+    },
+    "cone silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "wrench silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "brick wall silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "safety cone silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "wrench silhouette steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "steel": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "icons": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 24,
+      "count": 2
+    },
+    "grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "isometric": {
+      "avg": 24,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern": {
+      "avg": 24,
+      "count": 1
+    },
+    "factory": {
+      "avg": 24,
+      "count": 1
+    },
+    "assembly": {
+      "avg": 24,
+      "count": 1
+    },
+    "line": {
+      "avg": 24,
+      "count": 1
+    },
+    "robot": {
+      "avg": 24,
+      "count": 1
+    },
+    "arm": {
+      "avg": 24,
+      "count": 1
+    },
+    "control": {
+      "avg": 24,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 24,
+      "count": 1
+    },
+    "accents": {
+      "avg": 24,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern factory": {
+      "avg": 24,
+      "count": 1
+    },
+    "assembly line": {
+      "avg": 24,
+      "count": 1
+    },
+    "line robot": {
+      "avg": 24,
+      "count": 1
+    },
+    "robot arm": {
+      "avg": 24,
+      "count": 1
+    },
+    "control panel": {
+      "avg": 24,
+      "count": 1
+    },
+    "panel steel": {
+      "avg": 24,
+      "count": 1
+    },
+    "assembly line robot": {
+      "avg": 24,
+      "count": 1
+    },
+    "line robot arm": {
+      "avg": 24,
+      "count": 1
+    },
+    "control panel steel": {
+      "avg": 24,
+      "count": 1
+    },
+    "panel": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "tangerine": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "lightning": {
+      "avg": 23,
+      "count": 1
+    },
+    "bolt": {
+      "avg": 23,
+      "count": 1
+    },
+    "battery": {
+      "avg": 23,
+      "count": 1
+    },
+    "solar": {
+      "avg": 23,
+      "count": 1
+    },
+    "wind": {
+      "avg": 23,
+      "count": 1
+    },
+    "turbine": {
+      "avg": 23,
+      "count": 1
+    },
+    "outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "simple": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "colors": {
+      "avg": 23,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 23,
+      "count": 1
+    },
+    "lightning bolt": {
+      "avg": 23,
+      "count": 1
+    },
+    "solar panel": {
+      "avg": 23,
+      "count": 1
+    },
+    "wind turbine": {
+      "avg": 23,
+      "count": 1
+    },
+    "turbine tangerine": {
+      "avg": 23,
+      "count": 1
+    },
+    "tangerine outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "simple composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "bold colors": {
+      "avg": 23,
+      "count": 1
+    },
+    "wind turbine tangerine": {
+      "avg": 23,
+      "count": 1
+    },
+    "turbine tangerine outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "simple composition bold": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition bold colors": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 25,
+      "count": 3
+    },
+    "sandstone": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 3
+    },
+    "warm": {
+      "avg": 25,
+      "count": 4
+    },
+    "pale": {
+      "avg": 25,
+      "count": 3
+    },
+    "cream": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely": {
+      "avg": 25,
+      "count": 3
+    },
+    "visible": {
+      "avg": 25,
+      "count": 3
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface": {
+      "avg": 25,
+      "count": 2
+    },
+    "earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "extremely": {
+      "avg": 25,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 25,
+      "count": 3
+    },
+    "subtle sandstone": {
+      "avg": 25,
+      "count": 1
+    },
+    "sandstone texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale cream": {
+      "avg": 25,
+      "count": 1
+    },
+    "cream tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible": {
+      "avg": 25,
+      "count": 3
+    },
+    "visible natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "extremely minimal": {
+      "avg": 25,
+      "count": 3
+    },
+    "subtle sandstone texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale cream tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "cream tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible natural stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural stone surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone surface warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface warm earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "board": {
+      "avg": 25,
+      "count": 1
+    },
+    "trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 2
+    },
+    "steel": {
+      "avg": 25,
+      "count": 4
+    },
+    "technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 2
+    },
+    "modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle circuit": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "board trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "trace pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale steel": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line pattern": {
+      "avg": 25,
+      "count": 2
+    },
+    "pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle circuit board": {
+      "avg": 25,
+      "count": 1
+    },
+    "circuit board trace": {
+      "avg": 25,
+      "count": 1
+    },
+    "board trace pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible technical line": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical line pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "line pattern modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern modern tech": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "oxidized": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine": {
+      "avg": 25,
+      "count": 2
+    },
+    "rust": {
+      "avg": 25,
+      "count": 1
+    },
+    "patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "base": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "artistic": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "oxidized metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine rust": {
+      "avg": 25,
+      "count": 1
+    },
+    "rust patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "base abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field artistic": {
+      "avg": 25,
+      "count": 1
+    },
+    "artistic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "oxidized metal surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich tangerine rust": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine rust patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "base abstract industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract industrial texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial texture shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field artistic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "crosshatch": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "structured": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle crosshatch": {
+      "avg": 25,
+      "count": 1
+    },
+    "crosshatch line": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle crosshatch line": {
+      "avg": 25,
+      "count": 1
+    },
+    "crosshatch line pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible woven texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven texture feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "right-pointing": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "right-pointing arrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrow centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "right-pointing arrow centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin tangerine outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine outline bold": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 25,
+      "count": 3
+    },
+    "molten": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "pouring": {
+      "avg": 25,
+      "count": 1
+    },
+    "intense": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine": {
+      "avg": 25,
+      "count": 3
+    },
+    "orange": {
+      "avg": 25,
+      "count": 2
+    },
+    "glow": {
+      "avg": 25,
+      "count": 1
+    },
+    "steel": {
+      "avg": 25,
+      "count": 3
+    },
+    "industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "power": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 2
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 2
+    },
+    "molten metal": {
+      "avg": 25,
+      "count": 1
+    },
+    "metal pouring": {
+      "avg": 25,
+      "count": 1
+    },
+    "intense tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine orange": {
+      "avg": 25,
+      "count": 2
+    },
+    "orange glow": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial power": {
+      "avg": 25,
+      "count": 1
+    },
+    "power atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "molten metal pouring": {
+      "avg": 25,
+      "count": 1
+    },
+    "intense tangerine orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine orange glow": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic contrast industrial": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast industrial power": {
+      "avg": 25,
+      "count": 1
+    },
+    "industrial power atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "long": {
+      "avg": 25,
+      "count": 1
+    },
+    "straight": {
+      "avg": 25,
+      "count": 1
+    },
+    "road": {
+      "avg": 25,
+      "count": 1
+    },
+    "autumn": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "amber": {
+      "avg": 25,
+      "count": 1
+    },
+    "leaves": {
+      "avg": 25,
+      "count": 1
+    },
+    "asphalt": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "perspective": {
+      "avg": 25,
+      "count": 1
+    },
+    "long straight": {
+      "avg": 25,
+      "count": 1
+    },
+    "straight road": {
+      "avg": 25,
+      "count": 1
+    },
+    "autumn trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "amber leaves": {
+      "avg": 25,
+      "count": 1
+    },
+    "asphalt road": {
+      "avg": 25,
+      "count": 1
+    },
+    "road warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "road perspective": {
+      "avg": 25,
+      "count": 1
+    },
+    "long straight road": {
+      "avg": 25,
+      "count": 1
+    },
+    "autumn trees tangerine": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees tangerine orange": {
+      "avg": 25,
+      "count": 1
+    },
+    "asphalt road warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "road warm golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "suspension": {
+      "avg": 25,
+      "count": 1
+    },
+    "bridge": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "cables": {
+      "avg": 25,
+      "count": 1
+    },
+    "towers": {
+      "avg": 25,
+      "count": 1
+    },
+    "open": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "suspension bridge": {
+      "avg": 25,
+      "count": 1
+    },
+    "bridge silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "open sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "suspension bridge silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "tangerine sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky steel": {
+      "avg": 25,
+      "count": 1
+    },
+    "open sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition architectural beauty": {
+      "avg": 25,
+      "count": 1
+    }
+  }
+}

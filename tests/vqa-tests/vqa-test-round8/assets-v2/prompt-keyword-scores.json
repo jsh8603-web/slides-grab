@@ -1,0 +1,266 @@
+{
+  "background": {
+    "cool": {
+      "avg": 25,
+      "count": 4
+    },
+    "cool blue": {
+      "avg": 25,
+      "count": 3
+    },
+    "deep": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 24.3,
+      "count": 7
+    },
+    "cinematic wide": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "wide shot": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "atmosphere": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "atmosphere sharp": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "atmosphere sharp focus": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "shot": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "shot of": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "sharp": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "focus": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "quality": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "sharp focus": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "focus high": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "high quality": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "blue": {
+      "avg": 24,
+      "count": 7
+    },
+    "soft": {
+      "avg": 24,
+      "count": 3
+    },
+    "lines": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "white": {
+      "avg": 23.6,
+      "count": 5
+    }
+  },
+  "cover": {
+    "cover": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "sharp": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "focus": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "quality": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "presentation cover": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "space sharp": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "sharp focus": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "focus high": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "high quality": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "frame": {
+    "line": {
+      "avg": 25,
+      "count": 3
+    },
+    "blue": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "background sharp": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "light blue": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "navy": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "clean": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "flat": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "vector": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "gray": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "sharp": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "focus": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "quality": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "clean flat": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "flat vector": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "vector on": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "light gray": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "gray background": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "sharp focus": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "focus high": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "high quality": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "clean flat vector": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "minimal": {
+      "avg": 24,
+      "count": 5
+    },
+    "in navy": {
+      "avg": 24,
+      "count": 3
+    },
+    "diagram": {
+      "avg": 23.3,
+      "count": 3
+    }
+  },
+  "icon": {
+    "navy": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "on white": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "white background": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 24,
+      "count": 4
+    },
+    "sharp": {
+      "avg": 24,
+      "count": 4
+    },
+    "focus": {
+      "avg": 24,
+      "count": 4
+    },
+    "quality": {
+      "avg": 24,
+      "count": 4
+    },
+    "sharp focus": {
+      "avg": 24,
+      "count": 4
+    },
+    "focus high": {
+      "avg": 24,
+      "count": 4
+    },
+    "high quality": {
+      "avg": 24,
+      "count": 4
+    }
+  }
+}

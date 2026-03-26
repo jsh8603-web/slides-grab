@@ -1,0 +1,1892 @@
+{
+  "cover": {
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper": {
+      "avg": 25,
+      "count": 2
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle copper thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper thin arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "giant": {
+      "avg": 25,
+      "count": 1
+    },
+    "redwood": {
+      "avg": 25,
+      "count": 1
+    },
+    "tree": {
+      "avg": 25,
+      "count": 1
+    },
+    "trunks": {
+      "avg": 25,
+      "count": 1
+    },
+    "brown": {
+      "avg": 25,
+      "count": 1
+    },
+    "bark": {
+      "avg": 25,
+      "count": 1
+    },
+    "canopy": {
+      "avg": 25,
+      "count": 1
+    },
+    "majestic": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "giant redwood": {
+      "avg": 25,
+      "count": 1
+    },
+    "redwood tree": {
+      "avg": 25,
+      "count": 1
+    },
+    "tree trunks": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper brown": {
+      "avg": 25,
+      "count": 1
+    },
+    "brown bark": {
+      "avg": 25,
+      "count": 1
+    },
+    "green canopy": {
+      "avg": 25,
+      "count": 1
+    },
+    "majestic forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "giant redwood tree": {
+      "avg": 25,
+      "count": 1
+    },
+    "redwood tree trunks": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper brown bark": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green canopy": {
+      "avg": 25,
+      "count": 1
+    },
+    "majestic forest atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "funnel": {
+      "avg": 25,
+      "count": 1
+    },
+    "linen": {
+      "avg": 25,
+      "count": 5
+    },
+    "widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "level": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "sections": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering": {
+      "avg": 25,
+      "count": 1
+    },
+    "downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green level": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper level": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale green": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green level": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest pale green": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 2
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "nodes": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "by curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle forest green": {
+      "avg": 25,
+      "count": 2
+    },
+    "venn": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "blended": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlapping": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "blended olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle copper overlap": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 25,
+      "count": 1
+    },
+    "four-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "six-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately four-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 24.3,
+      "count": 6
+    },
+    "green": {
+      "avg": 24.3,
+      "count": 6
+    },
+    "forest green": {
+      "avg": 24.3,
+      "count": 6
+    },
+    "copper": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "sage": {
+      "avg": 24,
+      "count": 4
+    },
+    "circle": {
+      "avg": 24,
+      "count": 4
+    },
+    "wedges": {
+      "avg": 21,
+      "count": 1
+    },
+    "instead": {
+      "avg": 21,
+      "count": 1
+    },
+    "specified": {
+      "avg": 21,
+      "count": 1
+    },
+    "wedge": {
+      "avg": 21,
+      "count": 1
+    },
+    "missing": {
+      "avg": 21,
+      "count": 1
+    },
+    "significant": {
+      "avg": 21,
+      "count": 1
+    },
+    "deviation": {
+      "avg": 21,
+      "count": 1
+    },
+    "explicit": {
+      "avg": 21,
+      "count": 1
+    },
+    "instruction": {
+      "avg": 21,
+      "count": 1
+    },
+    "complete": {
+      "avg": 21,
+      "count": 1
+    },
+    "wedges forest": {
+      "avg": 21,
+      "count": 1
+    },
+    "copper instead": {
+      "avg": 21,
+      "count": 1
+    },
+    "wedges specified": {
+      "avg": 21,
+      "count": 1
+    },
+    "prompt wedge": {
+      "avg": 21,
+      "count": 1
+    },
+    "significant deviation": {
+      "avg": 21,
+      "count": 1
+    },
+    "explicit instruction": {
+      "avg": 21,
+      "count": 1
+    },
+    "complete circle": {
+      "avg": 21,
+      "count": 1
+    },
+    "wedges forest green": {
+      "avg": 21,
+      "count": 1
+    },
+    "prompt s explicit": {
+      "avg": 21,
+      "count": 1
+    },
+    "s explicit instruction": {
+      "avg": 21,
+      "count": 1
+    },
+    "shows": {
+      "avg": 17,
+      "count": 2
+    },
+    "prompt": {
+      "avg": 17,
+      "count": 2
+    },
+    "requested": {
+      "avg": 13,
+      "count": 1
+    },
+    "bar": {
+      "avg": 13,
+      "count": 1
+    },
+    "but": {
+      "avg": 13,
+      "count": 1
+    },
+    "bars": {
+      "avg": 13,
+      "count": 1
+    },
+    "prompt requested": {
+      "avg": 13,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "linen": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "dog": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "cat": {
+      "avg": 25,
+      "count": 1
+    },
+    "fish": {
+      "avg": 25,
+      "count": 1
+    },
+    "bird": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "pet": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "dog silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "cat silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "fish silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "bird silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green": {
+      "avg": 25,
+      "count": 2
+    },
+    "green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "bird silhouette forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "watering": {
+      "avg": 25,
+      "count": 1
+    },
+    "can": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden": {
+      "avg": 25,
+      "count": 2
+    },
+    "shears": {
+      "avg": 25,
+      "count": 1
+    },
+    "wheelbarrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "glove": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "watering can": {
+      "avg": 25,
+      "count": 1
+    },
+    "can garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden shears": {
+      "avg": 25,
+      "count": 1
+    },
+    "glove copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "watering can garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "can garden shears": {
+      "avg": 25,
+      "count": 1
+    },
+    "glove copper outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "community": {
+      "avg": 25,
+      "count": 1
+    },
+    "raised": {
+      "avg": 25,
+      "count": 1
+    },
+    "beds": {
+      "avg": 25,
+      "count": 1
+    },
+    "tool": {
+      "avg": 25,
+      "count": 1
+    },
+    "shed": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "community garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "raised beds": {
+      "avg": 25,
+      "count": 1
+    },
+    "beds tool": {
+      "avg": 25,
+      "count": 1
+    },
+    "tool shed": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "linen accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "raised beds tool": {
+      "avg": 25,
+      "count": 1
+    },
+    "beds tool shed": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench forest green": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "background": {
+    "botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "leaf": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "art": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate": {
+      "avg": 25,
+      "count": 1
+    },
+    "contour": {
+      "avg": 25,
+      "count": 1
+    },
+    "drawing": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical leaf": {
+      "avg": 25,
+      "count": 1
+    },
+    "leaf line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line art": {
+      "avg": 25,
+      "count": 1
+    },
+    "art pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "linen delicate": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical contour": {
+      "avg": 25,
+      "count": 1
+    },
+    "contour drawing": {
+      "avg": 25,
+      "count": 1
+    },
+    "drawing feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle fine botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine botanical leaf": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical leaf line": {
+      "avg": 25,
+      "count": 1
+    },
+    "leaf line art": {
+      "avg": 25,
+      "count": 1
+    },
+    "line art pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "linen delicate botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate botanical contour": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical contour drawing": {
+      "avg": 25,
+      "count": 1
+    },
+    "contour drawing feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "drawing feel natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel natural elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "right-pointing": {
+      "avg": 24,
+      "count": 1
+    },
+    "arrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "right-pointing arrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "arrow centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled arrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin copper": {
+      "avg": 24,
+      "count": 1
+    },
+    "copper outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "right-pointing arrow centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "forest green filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "green filled arrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin copper outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "copper outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "natural": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "forest": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "green": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "forest green": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "linen": {
+      "avg": 23,
+      "count": 4
+    },
+    "pale forest": {
+      "avg": 23,
+      "count": 2
+    },
+    "pale forest green": {
+      "avg": 23,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "pale": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "fine": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "feel": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "copper": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "wood": {
+      "avg": 22,
+      "count": 1
+    },
+    "grain": {
+      "avg": 22,
+      "count": 1
+    },
+    "warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "tones": {
+      "avg": 22,
+      "count": 1
+    },
+    "surface": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle wood": {
+      "avg": 22,
+      "count": 1
+    },
+    "wood grain": {
+      "avg": 22,
+      "count": 1
+    },
+    "grain texture": {
+      "avg": 22,
+      "count": 1
+    },
+    "warm linen": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale copper": {
+      "avg": 22,
+      "count": 1
+    },
+    "copper tones": {
+      "avg": 22,
+      "count": 1
+    },
+    "tones fine": {
+      "avg": 22,
+      "count": 1
+    },
+    "fine natural": {
+      "avg": 22,
+      "count": 1
+    },
+    "natural wood": {
+      "avg": 22,
+      "count": 1
+    },
+    "wood surface": {
+      "avg": 22,
+      "count": 1
+    },
+    "surface feel": {
+      "avg": 22,
+      "count": 1
+    },
+    "organic warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle wood grain": {
+      "avg": 22,
+      "count": 1
+    },
+    "wood grain texture": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale copper tones": {
+      "avg": 22,
+      "count": 1
+    },
+    "copper tones fine": {
+      "avg": 22,
+      "count": 1
+    },
+    "tones fine natural": {
+      "avg": 22,
+      "count": 1
+    },
+    "fine natural wood": {
+      "avg": 22,
+      "count": 1
+    },
+    "natural wood surface": {
+      "avg": 22,
+      "count": 1
+    },
+    "wood surface feel": {
+      "avg": 22,
+      "count": 1
+    },
+    "surface feel organic": {
+      "avg": 22,
+      "count": 1
+    },
+    "feel organic warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "texture": {
+      "avg": 21.5,
+      "count": 2
+    },
+    "organic": {
+      "avg": 21.5,
+      "count": 2
+    },
+    "feel organic": {
+      "avg": 21.5,
+      "count": 2
+    },
+    "tweed": {
+      "avg": 21,
+      "count": 1
+    },
+    "woven": {
+      "avg": 21,
+      "count": 1
+    },
+    "threads": {
+      "avg": 21,
+      "count": 1
+    },
+    "fabric": {
+      "avg": 21,
+      "count": 1
+    },
+    "refined": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle tweed": {
+      "avg": 21,
+      "count": 1
+    },
+    "tweed woven": {
+      "avg": 21,
+      "count": 1
+    },
+    "woven texture": {
+      "avg": 21,
+      "count": 1
+    },
+    "copper threads": {
+      "avg": 21,
+      "count": 1
+    },
+    "linen fine": {
+      "avg": 21,
+      "count": 1
+    },
+    "fine woven": {
+      "avg": 21,
+      "count": 1
+    },
+    "woven fabric": {
+      "avg": 21,
+      "count": 1
+    },
+    "fabric feel": {
+      "avg": 21,
+      "count": 1
+    },
+    "organic refined": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle tweed woven": {
+      "avg": 21,
+      "count": 1
+    },
+    "tweed woven texture": {
+      "avg": 21,
+      "count": 1
+    },
+    "linen fine woven": {
+      "avg": 21,
+      "count": 1
+    },
+    "fine woven fabric": {
+      "avg": 21,
+      "count": 1
+    },
+    "woven fabric feel": {
+      "avg": 21,
+      "count": 1
+    },
+    "fabric feel organic": {
+      "avg": 21,
+      "count": 1
+    },
+    "feel organic refined": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "aged": {
+      "avg": 25,
+      "count": 1
+    },
+    "kettle": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "patina": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "sitting": {
+      "avg": 25,
+      "count": 1
+    },
+    "among": {
+      "avg": 25,
+      "count": 1
+    },
+    "herb": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "aged copper": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper kettle": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich patina": {
+      "avg": 25,
+      "count": 1
+    },
+    "patina tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones sitting": {
+      "avg": 25,
+      "count": 1
+    },
+    "sitting among": {
+      "avg": 25,
+      "count": 1
+    },
+    "among forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green herb": {
+      "avg": 25,
+      "count": 1
+    },
+    "herb plants": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "aged copper kettle": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich patina tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "patina tones sitting": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones sitting among": {
+      "avg": 25,
+      "count": 1
+    },
+    "sitting among forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "among forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green herb": {
+      "avg": 25,
+      "count": 1
+    },
+    "green herb plants": {
+      "avg": 25,
+      "count": 1
+    },
+    "herb plants warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants warm rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rustic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "mushrooms": {
+      "avg": 25,
+      "count": 1
+    },
+    "brown": {
+      "avg": 25,
+      "count": 1
+    },
+    "caps": {
+      "avg": 25,
+      "count": 1
+    },
+    "growing": {
+      "avg": 25,
+      "count": 1
+    },
+    "floor": {
+      "avg": 25,
+      "count": 1
+    },
+    "enchanting": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper brown": {
+      "avg": 25,
+      "count": 1
+    },
+    "brown caps": {
+      "avg": 25,
+      "count": 1
+    },
+    "caps growing": {
+      "avg": 25,
+      "count": 1
+    },
+    "green woodland": {
+      "avg": 25,
+      "count": 1
+    },
+    "woodland floor": {
+      "avg": 25,
+      "count": 1
+    },
+    "floor enchanting": {
+      "avg": 25,
+      "count": 1
+    },
+    "enchanting natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "copper brown caps": {
+      "avg": 25,
+      "count": 1
+    },
+    "brown caps growing": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green woodland": {
+      "avg": 25,
+      "count": 1
+    },
+    "green woodland floor": {
+      "avg": 25,
+      "count": 1
+    },
+    "woodland floor enchanting": {
+      "avg": 25,
+      "count": 1
+    },
+    "floor enchanting natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "enchanting natural detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural detail shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "moss": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "woodland": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "forest": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "copper": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "green": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "side": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "forest green": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "stream": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "over": {
+      "avg": 24,
+      "count": 1
+    },
+    "colored": {
+      "avg": 24,
+      "count": 1
+    },
+    "rocks": {
+      "avg": 24,
+      "count": 1
+    },
+    "lush": {
+      "avg": 24,
+      "count": 1
+    },
+    "ferns": {
+      "avg": 24,
+      "count": 1
+    },
+    "serene": {
+      "avg": 24,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 24,
+      "count": 3
+    },
+    "forest stream": {
+      "avg": 24,
+      "count": 1
+    },
+    "stream flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing over": {
+      "avg": 24,
+      "count": 1
+    },
+    "over copper": {
+      "avg": 24,
+      "count": 1
+    },
+    "copper colored": {
+      "avg": 24,
+      "count": 1
+    },
+    "colored rocks": {
+      "avg": 24,
+      "count": 1
+    },
+    "by lush": {
+      "avg": 24,
+      "count": 1
+    },
+    "lush forest": {
+      "avg": 24,
+      "count": 1
+    },
+    "green ferns": {
+      "avg": 24,
+      "count": 1
+    },
+    "moss serene": {
+      "avg": 24,
+      "count": 1
+    },
+    "serene woodland": {
+      "avg": 24,
+      "count": 1
+    },
+    "woodland atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "forest stream flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "stream flowing over": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing over copper": {
+      "avg": 24,
+      "count": 1
+    },
+    "over copper colored": {
+      "avg": 24,
+      "count": 1
+    },
+    "copper colored rocks": {
+      "avg": 24,
+      "count": 1
+    },
+    "by lush forest": {
+      "avg": 24,
+      "count": 1
+    },
+    "lush forest green": {
+      "avg": 24,
+      "count": 1
+    },
+    "forest green ferns": {
+      "avg": 24,
+      "count": 1
+    },
+    "moss serene woodland": {
+      "avg": 24,
+      "count": 1
+    },
+    "serene woodland atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "warm": {
+      "avg": 24,
+      "count": 2
+    },
+    "mixed": {
+      "avg": 23,
+      "count": 1
+    },
+    "autumn": {
+      "avg": 23,
+      "count": 1
+    },
+    "orange": {
+      "avg": 23,
+      "count": 1
+    },
+    "trees": {
+      "avg": 23,
+      "count": 1
+    },
+    "dappled": {
+      "avg": 23,
+      "count": 1
+    },
+    "golden": {
+      "avg": 23,
+      "count": 1
+    },
+    "sunlight": {
+      "avg": 23,
+      "count": 1
+    },
+    "canopy": {
+      "avg": 23,
+      "count": 1
+    },
+    "seasonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "mixed autumn": {
+      "avg": 23,
+      "count": 1
+    },
+    "autumn forest": {
+      "avg": 23,
+      "count": 1
+    },
+    "copper orange": {
+      "avg": 23,
+      "count": 1
+    },
+    "green trees": {
+      "avg": 23,
+      "count": 1
+    },
+    "trees dappled": {
+      "avg": 23,
+      "count": 1
+    },
+    "dappled golden": {
+      "avg": 23,
+      "count": 1
+    },
+    "golden sunlight": {
+      "avg": 23,
+      "count": 1
+    },
+    "canopy warm": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm seasonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "seasonal atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 23,
+      "count": 1
+    },
+    "mixed autumn forest": {
+      "avg": 23,
+      "count": 1
+    },
+    "forest green trees": {
+      "avg": 23,
+      "count": 1
+    },
+    "green trees dappled": {
+      "avg": 23,
+      "count": 1
+    },
+    "trees dappled golden": {
+      "avg": 23,
+      "count": 1
+    },
+    "dappled golden sunlight": {
+      "avg": 23,
+      "count": 1
+    },
+    "canopy warm seasonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm seasonal atmosphere": {
+      "avg": 23,
+      "count": 1
+    }
+  }
+}

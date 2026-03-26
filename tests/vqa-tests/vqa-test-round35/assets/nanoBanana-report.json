@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-03-19T04:51:36.488Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.3,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 7,
+      "20-22": 2,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 23,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.7,
+      "count": 6
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "background": {
+      "avg": 23.8,
+      "count": 5
+    },
+    "metaphor": {
+      "avg": 25,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 1,
+    "IP-09": 1,
+    "IV-10": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 7,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows an 18-square grid (3x6) instead of a 9-square grid (3x3). The pattern of colors and designs on the squares does not match the detailed description for each row."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"Background cream\" and \"Accent indigo\". The image uses indigo as the dominant background behind the subject and cream as borders, which is a misinterpretation of the color palette instructions. The indigo is not an accent but the main background, and the cream is a border, not the primary background as requested for the entire image."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The diagonal line pattern on the cream background is described as 'pale indigo' in the prompt, but appears as a very light cream/off-white in the image."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "side (avg 25, n=4)",
+        "texture (avg 25, n=3)",
+        "field (avg 25, n=2)",
+        "sky (avg 25, n=3)",
+        "composition (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "middle row (avg 19, n=2)",
+        "amber indigo (avg 19, n=2)",
+        "grid (avg 20.7, n=3)",
+        "middle (avg 21, n=3)",
+        "pale amber (avg 21.3, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "corner (avg 24.8, n=5)",
+        "line (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 21 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "green (avg 24.7, n=5)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 34 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "middle layer (avg 24.8, n=5)",
+        "outline middle (avg 24.8, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 103 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.9, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=6)",
+        "tech (avg 24.6, n=5)",
+        "woven (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 51 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 45 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

@@ -28,7 +28,7 @@ const SLIDES_DIR = path.join(PROJECT_ROOT, 'slides');
 const BASELINE_PATH = path.join(__dirname, 'detection-regression', 'full-baseline.json');
 
 // Presentations to always exclude (test directories)
-const ALWAYS_EXCLUDE = new Set(['_keyword-tests', '_vqa-tests', '_full-regression-test']);
+const ALWAYS_EXCLUDE = new Set([]);
 
 // ── ANSI helpers ──────────────────────────────────────────────────────────────
 

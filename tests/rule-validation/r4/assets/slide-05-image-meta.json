@@ -1,0 +1,38 @@
+{
+  "slide": 5,
+  "tier": null,
+  "type": "photo",
+  "category": "frame",
+  "prompt": "Style: Professional, data-driven, forward-looking executive briefing. A photorealistic wide-angle shot of a sleek modern glass office tower exterior photographed at golden hour, warm golden light reflecting off the glass facade in brilliant patterns, the building stands confidently against a deep navy blue sky with warm amber clouds, full frame composition conveys forward momentum and strategic confidence, off-center framing leaves space for text overlay, no text, photorealistic cinematic lighti",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 101,
+  "ip": [
+    {
+      "rule": "IP-08",
+      "level": "WARN",
+      "msg": "Prompt too long (756 chars > 600) — Flash may ignore parts"
+    },
+    {
+      "rule": "IP-15",
+      "level": "INFO",
+      "msg": "Only 1 frame keyword hit (composition) — target 2-4"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 2,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 4,
+      "pf_reason": "The image is in a stylized, animated aesthetic rather than the requested photorealistic style and the style doesn't fully align with a data-driven executive briefing as it leans more artistic/illustrative than professional corporate imagery for that specific context. There are also several cloud structures in the sky which were not specified in the prompt, distracting from the building itself, and the prompt implies a wide-angle shot of the building, whereas the building here is cropped at the bottom of the image, so it doesn't give a sense of the full building or its environment."
+    },
+    "total": 21,
+    "detected_text": [],
+    "reasons": {
+      "pf_reason": "The image is in a stylized, animated aesthetic rather than the requested photorealistic style and the style doesn't fully align with a data-driven executive briefing as it leans more artistic/illustrative than professional corporate imagery for that specific context. There are also several cloud structures in the sky which were not specified in the prompt, distracting from the building itself, and the prompt implies a wide-angle shot of the building, whereas the building here is cropped at the bottom of the image, so it doesn't give a sense of the full building or its environment."
+    }
+  }
+}

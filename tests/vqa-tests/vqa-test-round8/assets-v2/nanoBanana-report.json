@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-18T17:07:44.707Z",
+  "summary": {
+    "total": 27,
+    "pass": 23,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 4
+  },
+  "vqa": {
+    "avg": 24.1,
+    "min": 22,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 10,
+      "20-22": 2,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "cover": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "frame": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "icon": {
+      "avg": 24,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 2,
+    "IV-03": 2,
+    "IP-03": 2,
+    "IV-02": 2,
+    "IV-10": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 25,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a 'Background light gray', but the image features a 'pure black background'."
+      }
+    },
+    {
+      "slide": 27,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified 'A thick ring with about 75 percent filled in navy and 25 percent in light gray'. The image shows 75 percent filled in navy, but the remaining 25 percent is in an accent blue, not light gray. The light gray is only used for the background."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 19,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a single background of \"light gray\" or \"white\" with \"subtle thin diagonal lines in very light gray on white\". The image features a split background with deep navy and a light gray. The lines on the light gray section are darker than \"very light gray\" and the background isn't white. There are also prominent accent blue shapes which weren't explicitly described as part of the primary background pattern beyond \"accent blue\". The overall composition is good but deviates from the specific background description."
+      }
+    },
+    {
+      "slide": 23,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 23,
+    "retried": 0
+  }
+}

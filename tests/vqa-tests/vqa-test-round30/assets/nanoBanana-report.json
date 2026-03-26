@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-03-19T04:31:04.555Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24,
+    "min": 22,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 5,
+      "20-22": 4,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-11": 1,
+    "IP-03": 1,
+    "IV-10": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt asks for a third wedge light coral covering roughly a quarter, but the image shows a very small light coral wedge and a prominent light blue wedge that is not explicitly described. The distribution of wedge sizes does not precisely match the prompt's description (e.g., first wedge coral is more than a third)."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested four smaller circles connected to the center, but the image displays eight smaller circles."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a thin coral horizontal line with three circles on it, but the image shows three circles without any connecting line. The third circle was also specified as 'light coral' but appears to be the same shade as the first coral circle.  The 'vibrant coastal' style is also not strongly present beyond the colors themselves, lacking any texture or visual interest that might convey vibrancy or a coastal feel beyond basic color association. It's too simplistic to be considered vibrant or truly professional in its current form for a professional presentation without additional elements. The description of 'a minimal horizontal timeline' is also not met without the line itself. The color of the third circle is the same as the first, not 'light coral' as specified. This significantly deviates from the prompt's core visual instructions for the timeline element. Overall, it misses key structural and color details for the circles and the line. The image generated is too simplistic and abstract to be truly considered 'vibrant coastal' and a 'timeline' as prompted. The core elements of 'a thin coral horizontal line with three circles on it' are not present, as there is no horizontal line connecting or underneath the circles. The third circle is also the same coral as the first, not 'light coral' as specified. These are significant deviations from the prompt's instructions regarding the primary visual elements. The aesthetic itself is quite generic, lacking specific professional or vibrant coastal characteristics beyond the color palette."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The background is cream instead of white as specified. The icons have dual outlines (coral and dark) instead of solely coral outlines. The overall aesthetic is more muted than vibrant coastal."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'Background cream' in the color palette, but the image features a warm coral background with a lighter coral central area, rather than cream. While a 'Warm coral background' was also mentioned, the 'Background cream' instruction was not met. There is no cream color in the image."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "areas (avg 25, n=2)",
+        "grid (avg 25, n=2)",
+        "wave (avg 25, n=2)",
+        "subtle (avg 25, n=3)",
+        "barely (avg 25, n=3)"
+      ],
+      "bottom_keywords": [
+        "first (avg 22.3, n=4)",
+        "connected (avg 22.5, n=2)",
+        "second (avg 22.8, n=5)",
+        "circle (avg 22.8, n=4)",
+        "vibrant (avg 23, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "thin (avg 25, n=5)",
+        "gold (avg 25, n=5)",
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "atmosphere (avg 25, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 13 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.6, n=5)",
+        "filled (avg 24.6, n=6)",
+        "silhouette (avg 24.6, n=6)",
+        "fill (avg 24.6, n=6)",
+        "coral (avg 24.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "bright teal (avg 24.7, n=5)",
+        "silver (avg 24.7, n=5)",
+        "ice (avg 24.7, n=5)",
+        "midnight (avg 24.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 63 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.8, n=6)",
+        "pattern (avg 24.6, n=9)",
+        "thin (avg 24.5, n=6)",
+        "in pale (avg 24.4, n=5)",
+        "centered (avg 24.4, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 37 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sunset sky (avg 25, n=5)",
+        "sunset (avg 25, n=6)",
+        "water (avg 24.9, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "field (avg 24.9, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 31 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

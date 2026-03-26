@@ -1,0 +1,851 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "payment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terminals": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "transaction": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "streams": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyscrapers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "facades": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "district": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grading": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing neon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neon payment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "payment terminals": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "transaction streams": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "streams flowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyscrapers soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass facades": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "facades aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial district": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "futuristic city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk glowing neon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing neon payment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neon payment terminals": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "transaction streams flowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyscrapers soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off glass facades": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass facades aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "facades aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected financial district": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "visualization": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scattered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metrics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "upward": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "market": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "trends": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data visualization": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture scattered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth metrics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metrics soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowing curved": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting upward": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "upward market": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "market trends": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "trends muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture scattered": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing growth metrics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth metrics soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metrics soft fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowing curved lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curved lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting upward": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting upward market": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "upward market trends": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "market trends muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "trends muted warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted warm tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 5
+    },
+    "close-up": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "embedded": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circuit": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "board": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "patterns": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beneath": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metallic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerging": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "material": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "contrast": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "close-up grain": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood surface": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle embedded": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "embedded circuit": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circuit board": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "board patterns": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "patterns beneath": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beneath ornate": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate metallic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metallic financial": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural material": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "material contrast": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm amber": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green tones": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "close-up grain texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood surface": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle embedded circuit": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "embedded circuit board": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circuit board patterns": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "board patterns beneath": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "patterns beneath ornate": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beneath ornate metallic": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate metallic financial": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural material contrast": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology warm amber": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green tones": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-03-19T03:09:08.976Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.9,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 8,
+      "23-24": 9,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23,
+      "count": 8
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-10": 2,
+    "IP-09": 1,
+    "IP-11": 1,
+    "IV-09": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 6,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested five horizontal layers, but the image shows four solid layers and a top outline. Additionally, the color order for the second and third layers is reversed compared to the prompt: the image shows the second layer as mustard and the third layer as olive, whereas the prompt specified 'Second layer olive. Third layer mustard.'"
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image contains an extra small light green circle in the center not specified in the prompt. The prompt only described three circles, but the image shows four, with one of the 'olive' circles being a much lighter shade than the others and not consistent with the primary olive green color mentioned for the other two circles. Also the specified 'small olive circle' in the lower left is dark olive, while an unmentioned very small circle in the middle is a light green shade, which also deviates from the prompt's implied palette for additional circles (which would be olive or mustard). The prompt was cut off, but based on the explicit instructions for three circles, the image deviates by adding a fourth and inconsistent shade of green for it. Although the specified three circles are mostly correctly placed and colored, the presence of the additional, unprompted element lowers fidelity substantially given the minimal nature of the prompt's request for specific elements. The prompt also described 'One small olive circle in the lower left' and 'One t' at the end; the image contains a small *dark* olive circle in the lower left, which is consistent with one of the requested elements. However, the unexpected additional small, lighter green circle centrally located, makes the image deviate from the precise instructions for the number and color of elements. Specifically, the prompt listed 'one large olive', 'one medium mustard', 'one small olive', implying exactly three distinct circles. The image has four, and the fourth is of a different green hue. This adds an element not asked for and slightly alters the overall color distribution requested for the 'olive' elements."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image displays five horizontal lines with dot pairs, but the prompt requested only four horizontal lines and four pairs total."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "While the image captures the cinematic wide shot of a golden wheat field at sunset with warm mustard gold tones and ample sky for text, the specified 'primary olive green' is more of an undertone in the sky rather than a distinct primary color. The soft warm light is present, but its origin directly 'from left' is not strongly evident."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The indicator triangle is at the center bottom (50% mark) instead of at the 'two-th' (presumably two-thirds) position on the arc as specified in the prompt. Also, the prompt was cut off at \"two-th\". The interpretation assumes two-thirds of the way along the arc, which is not depicted by the central indicator."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "botanical (avg 25, n=2)",
+        "leaf (avg 25, n=2)",
+        "organic (avg 25, n=3)",
+        "organic natural (avg 25, n=2)",
+        "water (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "chart on (avg 22, n=2)",
+        "small olive (avg 22.5, n=2)",
+        "second (avg 22.5, n=2)",
+        "fourth (avg 22.5, n=2)",
+        "with olive (avg 22.7, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

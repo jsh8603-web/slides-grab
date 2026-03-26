@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-03-18T15:25:07.488Z",
+  "summary": {
+    "total": 25,
+    "pass": 24,
+    "warn": 17,
+    "fail": 3,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 21.3,
+    "min": 17,
+    "max": 25,
+    "distribution": {
+      "25": 3,
+      "23-24": 2,
+      "20-22": 17,
+      "15-19": 2,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "background": {
+      "avg": 21.2,
+      "count": 10
+    },
+    "icon": {
+      "avg": 22,
+      "count": 5
+    },
+    "frame": {
+      "avg": 20.6,
+      "count": 5
+    }
+  },
+  "by_rule": {
+    "IV-09": 5,
+    "IP-09": 2,
+    "IV-10": 5,
+    "IP-03": 2,
+    "IP-08": 1,
+    "IV-03": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 10,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 3,
+        "presentation_fit": 3,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 13,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 3,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    }
+  ]
+}

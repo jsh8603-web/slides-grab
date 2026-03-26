@@ -1,0 +1,873 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rolling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "turbines": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "distant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scale": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "renewable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "energy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "infrastructure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rolling green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind turbines": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "distant horizon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "renewable energy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "energy infrastructure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar farm stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rolling green hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant horizon aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "renewable energy infrastructure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "standing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pastel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradients": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "opportunity": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turbines standing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm ocean": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pastel sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky gradients": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore wind turbines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind turbines standing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm ocean water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk wide-angle composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pastel sky gradients": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm orange cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange cinematic atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic atmosphere conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere conveying scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edges": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "trends": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green edges": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edges data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth trends": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green edges data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edges data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting financial charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leaf": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "symbolizing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "connection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "investing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green leaf": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leaf resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "it catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic connection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable investing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished wood surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green leaf resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "it catching soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching soft natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

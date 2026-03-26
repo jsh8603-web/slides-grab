@@ -1,0 +1,372 @@
+{
+  "timestamp": "2026-03-18T15:03:14.337Z",
+  "presentation": "vqa-test-round1",
+  "mode": "vqa-batch",
+  "summary": {
+    "total": 25,
+    "scored": 0,
+    "skipped": 25,
+    "errors": 0
+  },
+  "vqa": {
+    "avg": 20.7,
+    "min": 15,
+    "max": 25
+  },
+  "results": [
+    {
+      "file": "slide-01-finance-skyline.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-02-growth-seedling.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-03-lighthouse-storm.png",
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-04-zen-stones-balance.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-05-professional-handshake.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-06-data-center-corridor.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-07-neural-network-abstract.png",
+      "total": 15,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 1,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": [
+          "AI"
+        ]
+      },
+      "detected_text": [
+        "AI"
+      ],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-08-container-port-dawn.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-09-glass-forest-sphere.png",
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-10-stethoscope-minimal.png",
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-11-book-to-birds.png",
+      "total": 18,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 4,
+        "presentation_fit": 3,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-12-rolling-hills-road.png",
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 3,
+        "presentation_fit": 3,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-13-muted-geometric-background.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-14-soft-gradient-background.png",
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-15-dark-moody-background.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-16-business-icons-2x2.png",
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-17-hr-icons-3x2.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-18-minimal-line-icons.png",
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-19-timeline-5-nodes.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-20-process-4-steps.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-21-isometric-office.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-22-dark-theme-cover.png",
+      "total": 25,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-23-warm-theme-cover.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-24-mountain-sunrise-ultrawide.png",
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    },
+    {
+      "file": "slide-25-athlete-starting-blocks.png",
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      },
+      "detected_text": [],
+      "had_prompt": true
+    }
+  ]
+}

@@ -1,0 +1,1976 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "ocean": {
+      "avg": 23,
+      "count": 1
+    },
+    "cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "sapphire": {
+      "avg": 23,
+      "count": 2
+    },
+    "blue": {
+      "avg": 23,
+      "count": 2
+    },
+    "crashing": {
+      "avg": 23,
+      "count": 1
+    },
+    "waves": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose": {
+      "avg": 23,
+      "count": 2
+    },
+    "gold": {
+      "avg": 23,
+      "count": 2
+    },
+    "sunset": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "majestic": {
+      "avg": 23,
+      "count": 1
+    },
+    "coastal": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic ocean": {
+      "avg": 23,
+      "count": 1
+    },
+    "ocean cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "sapphire blue": {
+      "avg": 23,
+      "count": 2
+    },
+    "blue crashing": {
+      "avg": 23,
+      "count": 1
+    },
+    "crashing waves": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose gold": {
+      "avg": 23,
+      "count": 2
+    },
+    "gold sunset": {
+      "avg": 23,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "majestic coastal": {
+      "avg": 23,
+      "count": 1
+    },
+    "coastal atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic ocean cliffs": {
+      "avg": 23,
+      "count": 1
+    },
+    "sapphire blue crashing": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue crashing waves": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose gold sunset": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold sunset sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "majestic coastal atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "line": {
+      "avg": 23,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 23,
+      "count": 1
+    },
+    "modern": {
+      "avg": 23,
+      "count": 1
+    },
+    "empty": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich sapphire": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle rose": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "thin diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "line luxurious": {
+      "avg": 23,
+      "count": 1
+    },
+    "luxurious modern": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich sapphire blue": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle rose gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose gold thin": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold thin diagonal": {
+      "avg": 23,
+      "count": 1
+    },
+    "line luxurious modern": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "frame": {
+    "organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "child": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "child circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "pink colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue pale pink": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale pink colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "bubble": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-center": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue lower-center": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue upper-left medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left medium rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium rose gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold center-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated": {
+      "avg": 25,
+      "count": 1
+    },
+    "degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamonds": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered rotated": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated 45": {
+      "avg": 25,
+      "count": 1
+    },
+    "45 degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "degrees outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested diamonds": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered rotated 45": {
+      "avg": 25,
+      "count": 1
+    },
+    "rotated 45 degrees": {
+      "avg": 25,
+      "count": 1
+    },
+    "45 degrees outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "degrees outer diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer diamond sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond sapphire blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle diamond rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond rose gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner diamond filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "diamond filled sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled sapphire blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "medium": {
+      "avg": 24,
+      "count": 2
+    },
+    "pyramid": {
+      "avg": 24,
+      "count": 1
+    },
+    "layers": {
+      "avg": 24,
+      "count": 1
+    },
+    "narrow": {
+      "avg": 24,
+      "count": 1
+    },
+    "level": {
+      "avg": 24,
+      "count": 1
+    },
+    "blue level": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold level": {
+      "avg": 24,
+      "count": 1
+    },
+    "sapphire blue level": {
+      "avg": 24,
+      "count": 1
+    },
+    "rose gold level": {
+      "avg": 24,
+      "count": 1
+    },
+    "circle": {
+      "avg": 24,
+      "count": 2
+    },
+    "thin": {
+      "avg": 24,
+      "count": 2
+    },
+    "lines": {
+      "avg": 24,
+      "count": 2
+    },
+    "smaller": {
+      "avg": 24,
+      "count": 2
+    },
+    "outer": {
+      "avg": 24,
+      "count": 2
+    },
+    "blue circle": {
+      "avg": 24,
+      "count": 2
+    },
+    "by thin": {
+      "avg": 24,
+      "count": 2
+    },
+    "thin lines": {
+      "avg": 24,
+      "count": 2
+    },
+    "smaller circles": {
+      "avg": 24,
+      "count": 2
+    },
+    "sapphire blue circle": {
+      "avg": 24,
+      "count": 2
+    },
+    "by thin lines": {
+      "avg": 24,
+      "count": 2
+    },
+    "pearl": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "sapphire": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "blue": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "rose": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "gold": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "sapphire blue": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "rose gold": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "pale": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "pink": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "pale pink": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "abstract": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "digital": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "graphic": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "photograph": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "physical": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "object": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "abstract digital": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "digital graphic": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "physical object": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "abstract digital graphic": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 23,
+      "count": 1
+    },
+    "short": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "side": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "side by": {
+      "avg": 23,
+      "count": 1
+    },
+    "by side": {
+      "avg": 23,
+      "count": 1
+    },
+    "side abstract": {
+      "avg": 23,
+      "count": 1
+    },
+    "sapphire blue bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose gold bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 23,
+      "count": 1
+    },
+    "by side abstract": {
+      "avg": 23,
+      "count": 1
+    },
+    "side abstract digital": {
+      "avg": 23,
+      "count": 1
+    },
+    "hub-spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "evenly": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "it spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "pink spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "outer circles": {
+      "avg": 23,
+      "count": 1
+    },
+    "rose gold spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "pale pink spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "segment": {
+      "avg": 22,
+      "count": 1
+    },
+    "segments": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick": {
+      "avg": 22,
+      "count": 1
+    },
+    "hollow": {
+      "avg": 22,
+      "count": 1
+    },
+    "blue segment": {
+      "avg": 22,
+      "count": 1
+    },
+    "gold segment": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick hollow": {
+      "avg": 22,
+      "count": 1
+    },
+    "sapphire blue segment": {
+      "avg": 22,
+      "count": 1
+    },
+    "rose gold segment": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "pearl": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "diamond": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "necklace": {
+      "avg": 25,
+      "count": 1
+    },
+    "watch": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxury": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "digital": {
+      "avg": 25,
+      "count": 1
+    },
+    "graphic": {
+      "avg": 25,
+      "count": 1
+    },
+    "photograph": {
+      "avg": 25,
+      "count": 1
+    },
+    "physical": {
+      "avg": 25,
+      "count": 1
+    },
+    "object": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "diamond silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "necklace silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "watch silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract digital": {
+      "avg": 25,
+      "count": 1
+    },
+    "digital graphic": {
+      "avg": 25,
+      "count": 1
+    },
+    "physical object": {
+      "avg": 25,
+      "count": 1
+    },
+    "watch silhouette sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette sapphire blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract digital graphic": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "suitcase": {
+      "avg": 25,
+      "count": 1
+    },
+    "passport": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe": {
+      "avg": 25,
+      "count": 1
+    },
+    "airplane": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose": {
+      "avg": 25,
+      "count": 2
+    },
+    "gold": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "airplane rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold": {
+      "avg": 25,
+      "count": 2
+    },
+    "gold outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "airplane rose gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "jewelry": {
+      "avg": 25,
+      "count": 1
+    },
+    "boutique": {
+      "avg": 25,
+      "count": 1
+    },
+    "display": {
+      "avg": 25,
+      "count": 1
+    },
+    "cases": {
+      "avg": 25,
+      "count": 1
+    },
+    "mirrors": {
+      "avg": 25,
+      "count": 1
+    },
+    "velvet": {
+      "avg": 25,
+      "count": 1
+    },
+    "stands": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "jewelry boutique": {
+      "avg": 25,
+      "count": 1
+    },
+    "display cases": {
+      "avg": 25,
+      "count": 1
+    },
+    "cases mirrors": {
+      "avg": 25,
+      "count": 1
+    },
+    "velvet stands": {
+      "avg": 25,
+      "count": 1
+    },
+    "stands sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "pearl accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "display cases mirrors": {
+      "avg": 25,
+      "count": 1
+    },
+    "velvet stands sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "stands sapphire blue": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 25,
+      "count": 3
+    },
+    "satin": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "pearl": {
+      "avg": 25,
+      "count": 4
+    },
+    "pale": {
+      "avg": 25,
+      "count": 3
+    },
+    "rose": {
+      "avg": 25,
+      "count": 3
+    },
+    "gold": {
+      "avg": 25,
+      "count": 3
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine": {
+      "avg": 25,
+      "count": 3
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel": {
+      "avg": 25,
+      "count": 3
+    },
+    "modern": {
+      "avg": 25,
+      "count": 3
+    },
+    "refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle satin": {
+      "avg": 25,
+      "count": 1
+    },
+    "satin weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm pearl": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold": {
+      "avg": 25,
+      "count": 3
+    },
+    "gold tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle satin weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "satin weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale rose gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold tones fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones fine smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine smooth fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth fabric surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric surface feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface feel modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel modern refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "grid": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 2
+    },
+    "sapphire": {
+      "avg": 25,
+      "count": 3
+    },
+    "delicate": {
+      "avg": 25,
+      "count": 1
+    },
+    "engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "precise": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "grid pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale sapphire": {
+      "avg": 25,
+      "count": 2
+    },
+    "pearl delicate": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "engineering paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel precise": {
+      "avg": 25,
+      "count": 1
+    },
+    "precise modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pearl delicate engineering": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate engineering paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "engineering paper feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper feel precise": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel precise modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble": {
+      "avg": 25,
+      "count": 1
+    },
+    "vein": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle marble": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble vein": {
+      "avg": 25,
+      "count": 1
+    },
+    "vein pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pearl fine": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle marble vein": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble vein pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pearl fine stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "fine stone veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone veining feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining feel luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel luxurious modern": {
+      "avg": 25,
+      "count": 1
+    },
+    "rounded": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "rectangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "gentle": {
+      "avg": 25,
+      "count": 1
+    },
+    "corners": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled rounded": {
+      "avg": 25,
+      "count": 1
+    },
+    "rounded rectangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gentle corners": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled rounded": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled rounded rectangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rose gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline bold": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "macro": {
+      "avg": 25,
+      "count": 2
+    },
+    "crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "geode": {
+      "avg": 25,
+      "count": 1
+    },
+    "brilliant": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystals": {
+      "avg": 25,
+      "count": 1
+    },
+    "mineral": {
+      "avg": 25,
+      "count": 1
+    },
+    "veins": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 25,
+      "count": 2
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 2
+    },
+    "depth": {
+      "avg": 25,
+      "count": 2
+    },
+    "field": {
+      "avg": 25,
+      "count": 2
+    },
+    "side": {
+      "avg": 25,
+      "count": 3
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal geode": {
+      "avg": 25,
+      "count": 1
+    },
+    "geode interior": {
+      "avg": 25,
+      "count": 1
+    },
+    "brilliant blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue crystals": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold mineral": {
+      "avg": 25,
+      "count": 1
+    },
+    "mineral veins": {
+      "avg": 25,
+      "count": 1
+    },
+    "veins dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty shallow": {
+      "avg": 25,
+      "count": 2
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue sapphire crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire crystal geode": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal geode interior": {
+      "avg": 25,
+      "count": 1
+    },
+    "brilliant blue crystals": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold mineral": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold mineral veins": {
+      "avg": 25,
+      "count": 1
+    },
+    "mineral veins dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "veins dramatic geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic geological beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological beauty shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty shallow depth": {
+      "avg": 25,
+      "count": 2
+    },
+    "morpho": {
+      "avg": 25,
+      "count": 1
+    },
+    "butterfly": {
+      "avg": 25,
+      "count": 1
+    },
+    "wing": {
+      "avg": 25,
+      "count": 1
+    },
+    "iridescent": {
+      "avg": 25,
+      "count": 1
+    },
+    "scales": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue morpho": {
+      "avg": 25,
+      "count": 1
+    },
+    "morpho butterfly": {
+      "avg": 25,
+      "count": 1
+    },
+    "butterfly wing": {
+      "avg": 25,
+      "count": 1
+    },
+    "iridescent sapphire": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue scales": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue morpho butterfly": {
+      "avg": 25,
+      "count": 1
+    },
+    "morpho butterfly wing": {
+      "avg": 25,
+      "count": 1
+    },
+    "iridescent sapphire blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue scales": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections natural beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural beauty shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "city": {
+      "avg": 25,
+      "count": 1
+    },
+    "skyline": {
+      "avg": 25,
+      "count": 1
+    },
+    "hour": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "building": {
+      "avg": 25,
+      "count": 1
+    },
+    "lights": {
+      "avg": 25,
+      "count": 1
+    },
+    "urban": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegance": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern city": {
+      "avg": 25,
+      "count": 1
+    },
+    "city skyline": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue hour": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold building": {
+      "avg": 25,
+      "count": 1
+    },
+    "building lights": {
+      "avg": 25,
+      "count": 1
+    },
+    "lights urban": {
+      "avg": 25,
+      "count": 1
+    },
+    "urban elegance": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegance atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "modern city skyline": {
+      "avg": 25,
+      "count": 1
+    },
+    "sapphire blue sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "rose gold building": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold building lights": {
+      "avg": 25,
+      "count": 1
+    },
+    "building lights urban": {
+      "avg": 25,
+      "count": 1
+    },
+    "lights urban elegance": {
+      "avg": 25,
+      "count": 1
+    },
+    "urban elegance atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "blue": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "sapphire": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "rose": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "gold": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "rose gold": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "sapphire blue": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "interior": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "modern": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "luxury": {
+      "avg": 24,
+      "count": 1
+    },
+    "hotel": {
+      "avg": 24,
+      "count": 1
+    },
+    "lobby": {
+      "avg": 24,
+      "count": 1
+    },
+    "walls": {
+      "avg": 24,
+      "count": 1
+    },
+    "metallic": {
+      "avg": 24,
+      "count": 1
+    },
+    "fixtures": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "luxury hotel": {
+      "avg": 24,
+      "count": 1
+    },
+    "hotel lobby": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold metallic": {
+      "avg": 24,
+      "count": 1
+    },
+    "metallic fixtures": {
+      "avg": 24,
+      "count": 1
+    },
+    "fixtures elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant modern": {
+      "avg": 24,
+      "count": 1
+    },
+    "modern interior": {
+      "avg": 24,
+      "count": 1
+    },
+    "luxury hotel lobby": {
+      "avg": 24,
+      "count": 1
+    },
+    "rose gold metallic": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold metallic fixtures": {
+      "avg": 24,
+      "count": 1
+    },
+    "metallic fixtures elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "fixtures elegant modern": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant modern interior": {
+      "avg": 24,
+      "count": 1
+    }
+  }
+}

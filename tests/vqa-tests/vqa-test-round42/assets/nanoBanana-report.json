@@ -1,0 +1,228 @@
+{
+  "timestamp": "2026-03-19T06:29:22.162Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 8,
+    "fail": 2,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 22.4,
+    "min": 15,
+    "max": 25,
+    "distribution": {
+      "25": 6,
+      "23-24": 4,
+      "20-22": 8,
+      "15-19": 2,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 21.5,
+      "count": 13
+    },
+    "cover": {
+      "avg": 25,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "background": {
+      "avg": 21,
+      "count": 1
+    },
+    "icon": {
+      "avg": 24.5,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IV-09": 17,
+    "IP-08": 1,
+    "IP-09": 1,
+    "IV-10": 1,
+    "IV-03": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 15,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 2,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [
+          "pata pata"
+        ],
+        "pf_reason": "The image has 7 ascending steps instead of the requested 5. The aspect ratio is approximately 1:1, not 16:9. Faint text is visible at the bottom left."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The image depicts a stylized letter 'A' rather than the requested minimal hub-spoke diagram with one large indigo circle in the center and thin lines connecting. While the colors and the three accent circles are present, the core structure is different from the prompt's description of a hub-spoke diagram with a central circle. Instead it generated a letter 'A'. The prompt also explicitly mentioned 'Absolutely no text, no n' which means the letter 'A' is not intended and it is a prompt fidelity issue."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The image displays 6 ascending steps instead of the requested 3. Additionally, the specified color sequence 'first step lime, second green, third indigo' is not followed; the image features multiple shades of green and blue, deviating from the exact prompt."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 4 arrow segments instead of 3. The color sequence is also incorrect, showing three shades of indigo/blue followed by lime green, instead of indigo, lime, and light green as requested."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 6 steps instead of the requested 4 steps."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.1,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 32,
+      "severity": "HIGH",
+      "action": "FAIL rate 32% exceeds 30%. Review VQA gate threshold (current: 20) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "water (avg 25, n=2)",
+        "filled (avg 25, n=2)",
+        "widest (avg 24.5, n=2)",
+        "widest indigo (avg 24.5, n=2)",
+        "rounded (avg 23.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "hub-spoke (avg 18, n=2)",
+        "thin (avg 18, n=2)",
+        "lines (avg 18, n=2)",
+        "connecting (avg 18, n=2)",
+        "indigo circle (avg 18, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "slate (avg 24.8, n=5)",
+        "near (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "filled (avg 24.7, n=6)",
+        "silhouette (avg 24.7, n=6)",
+        "modern (avg 24.6, n=5)",
+        "olive (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 37 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [
+        "prompt (avg 19, n=6)"
+      ],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 118 proven keywords, 1 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "paper (avg 25, n=5)",
+        "artistic (avg 25, n=5)",
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "indigo (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 60 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 28,
+    "retried": 8
+  }
+}

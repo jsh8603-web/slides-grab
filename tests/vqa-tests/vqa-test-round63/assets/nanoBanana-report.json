@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-03-19T09:56:41.560Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.6,
+    "min": 24,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 5,
+      "25-27": 1,
+      "22-24": 2,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 2
+    },
+    "metaphor": {
+      "avg": 27.3,
+      "count": 5
+    }
+  },
+  "by_rule": {
+    "IP-09": 4,
+    "IP-03": 1,
+    "IP-08": 7,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 3,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "sun symbol"
+        ]
+      }
+    },
+    {
+      "slide": 4,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a set of 5 flat design icons, but only 4 icons are present in the image. The specific icon for 'keel' is missing or not distinctly represented as a separate icon."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "cinematic (avg 27.5, n=3)",
+        "wide-angle (avg 27.5, n=2)",
+        "golden (avg 27.5, n=3)",
+        "sunset (avg 27.5, n=2)",
+        "golden-hour (avg 27.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "mast (avg 25.5, n=2)",
+        "ocean blue (avg 26.5, n=3)",
+        "sail (avg 26.5, n=3)",
+        "gold (avg 26.5, n=3)",
+        "warm gold (avg 26.5, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "atmosphere (avg 27.1, n=6)",
+        "pattern (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 38 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=6)",
+        "forest green (avg 25.8, n=6)",
+        "filled (avg 25.6, n=6)",
+        "silhouette (avg 25.6, n=6)",
+        "green (avg 25.6, n=7)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=5)",
+        "rounded rectangles (avg 27, n=5)",
+        "by arrows (avg 27, n=5)",
+        "rounded (avg 27, n=5)",
+        "narrowest (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 189 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "catching (avg 26.1, n=6)",
+        "gold (avg 26, n=9)",
+        "warm (avg 26, n=13)",
+        "blue (avg 25.8, n=6)",
+        "water (avg 25.8, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 84 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 8,
+    "retried": 0
+  }
+}

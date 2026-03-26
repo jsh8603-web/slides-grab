@@ -1,0 +1,706 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "amber": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "labels": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "annotations": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "cinematic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "aerial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "wind": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "turbines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "hillside": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "golden": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "hour": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tall": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "turbine": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "towers": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "atmosphere": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "energy": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "progress": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sunlight": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tones": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "editorial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "photography": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "composition": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cinematic aerial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "wind turbines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green hillside": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "golden hour": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "hour tall": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "turbine towers": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated atmosphere": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "energy progress": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "progress warm": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm golden": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "golden sunlight": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "amber tones": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "editorial photography": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "golden hour tall": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "energy progress warm": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "progress warm golden": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm golden sunlight": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terrain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gently": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "post": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open terrain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terrain under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind gently": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gently moving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moving grass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fence post": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain detail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detail shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "solar panels stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open terrain under": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terrain under dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "under dramatic golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour sky wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky wind gently": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind gently moving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gently moving grass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels wooden fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden fence post": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain detail shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detail shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "golden": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "wind": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "editorial": {
+      "avg": 26.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "wide-angle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "lush": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "valley": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tall": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "modern": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "turbines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "dawn": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "atmosphere": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sustainable": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "future": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sunrise": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cinematic wide-angle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "lush green": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green valley": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tall modern": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "modern wind": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "wind turbines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated atmosphere": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sustainable future": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "future golden": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "golden sunrise": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "lush green valley": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tall modern wind": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "modern wind turbines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sustainable future golden": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "future golden sunrise": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    }
+  }
+}

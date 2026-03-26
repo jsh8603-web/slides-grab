@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-03-19T04:47:20.415Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.2,
+    "min": 22,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 6,
+      "20-22": 3,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 2,
+    "IV-10": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 'Four wedges total forming a complete circle' and specified 'Wedge three light pink. Wedge four pale gray'. The image only shows two wedges (magenta and a grey/slate color) and is missing the light pink and pale gray wedges."
+      }
+    },
+    {
+      "slide": 17,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "Ruler markings (numbers and lines)"
+        ]
+      }
+    },
+    {
+      "slide": 18,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The magenta arc covers significantly less than six-tenths of the circle, appearing closer to four-tenths. The remaining portion is a dark grey (slate) rather than a light grey as specified in the prompt for the accent color."
+      }
+    },
+    {
+      "slide": 16,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image includes prominent green aurora bands, whereas the prompt specified only 'magenta and pink bands'."
+      }
+    },
+    {
+      "slide": 19,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested an 'Accent slate' color which is entirely absent from the image. The image is otherwise a good match for the description of a polka dot pattern on a blush white background with pale magenta dots, but the missing accent color reduces fidelity to the specified palette."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "petals (avg 25, n=2)",
+        "blue (avg 25, n=2)",
+        "romantic (avg 25, n=2)",
+        "magenta pink (avg 25, n=3)",
+        "slate blue (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "circle (avg 22.7, n=3)",
+        "bold (avg 23.5, n=2)",
+        "going (avg 23.5, n=2)",
+        "clockwise (avg 23.5, n=2)",
+        "going clockwise (avg 23.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "corner (avg 24.8, n=5)",
+        "line (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 20 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "green (avg 24.7, n=5)",
+        "isometric (avg 24.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 31 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "middle layer (avg 24.8, n=5)",
+        "outline middle (avg 24.8, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 89 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.9, n=5)",
+        "technical (avg 24.8, n=5)",
+        "woven (avg 24.6, n=5)",
+        "cinematic (avg 24.6, n=7)",
+        "regular (avg 24.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 47 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 44 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

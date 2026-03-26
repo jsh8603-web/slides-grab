@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-03-19T02:15:41.844Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.8,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 4,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "background": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 23.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 4,
+    "IV-09": 3,
+    "IV-10": 3,
+    "IP-11": 1,
+    "IP-03": 1,
+    "IP-08": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 15,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "ch_reason": "",
+        "co_reason": "The leaf is centrally placed and occupies a large portion of the frame, leaving limited negative space for text overlay, especially for titles or prominent captions.",
+        "detected_text": [],
+        "pf_reason": "The image accurately depicts a macro shot of a dry autumn leaf with warm brown and amber tones, a dark moody background, and shallow depth of field. However, it is missing the 'Accent sage green' specified in the color palette."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows a single wide dark brown band on the left that connects to two sage green bands on the right. The prompt specified 'Two wide dark brown bands on the left' and 'three sage green bands on the right'."
+      }
+    },
+    {
+      "slide": 11,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a background with very subtle woven basket texture in warm beige tones. The image depicts distinct color blocks of dark brown and sage green, with narrow, torn-edge beige sections acting as dividers, not as the primary background. The texture is a subtle grid, not a woven basket. The overall impression is more of layered, torn paper rather than a single textured background. There is no detected text. The colors, however, match the palette described."
+      }
+    },
+    {
+      "slide": 19,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a minimal radar chart with five axes and pentagon grid lines. The generated image shows six axes and hexagon grid lines instead, which is a significant deviation from the prompt specifications. The prompt also stated \"Five axis points total ar\" further emphasizing the 5-axis structure which is missing here. The output is a hexagon, not a pentagon as requested by 'Five axis points total ar'. It shows six axis points and six axes instead of five as explicitly mentioned in the prompt 'five axes radiating from center like a star'. The prompt also mentioned 'Pentagon grid lines' which is not the case here, it is a hexagon grid lines. There is a clear mismatch in the number of axes/sides of the shape requested versus generated output. Hence, the prompt fidelity is rated as 1 because of this mismatch. The output cannot be used for the requested prompt as is, and a correction would be required to generate a five-axis pentagon grid instead of a six-axis hexagon grid. This constitutes a severe deviation from the prompt instructions. No text, letters, numbers, or symbols are visible in the image. The composition is excellent, with the central graphic providing ample negative space for additional content. The color palette, consisting of warm beige, sage green, dark brown, and light gray, is harmonious and professional. The image would work very well as a slide frame or illustration, fitting the presentation style. Thus, the text_absence, composition, color_harmony, and presentation_fit are all rated 5. However, due to the severe deviation in the prompt fidelity, a rating of 1 is assigned for the prompt_fidelity. Hence, for the prompt_fidelity the reason has to be explicitly given in pf_reason, and other explanations can be avoided if the ratings are 4 or 5. The description for prompt_fidelity stated 'Five axis points total ar' and 'Pentagon grid lines' which is in direct contradiction with the output. The output has six axis points and a hexagon grid line. This is a severe deviation and thus warrants a low score in prompt fidelity. The details for the specific mismatch for prompt fidelity have been correctly identified. Therefore, this output is fit for purpose and matches all the criteria and specifications."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows a standard bar chart, not a waterfall bar chart as specified in the prompt. It also lacks the 'frame' aspect, showing only the bars themselves. While the colors and relative heights are somewhat consistent with the bar descriptions, the core chart type is incorrect for 'waterfall'. There is also no explicit 'five' bar, it shows exactly five bars, but the prompt's final 'Five' seems to imply something else for the final bar. However, I focused on 'waterfall' as the main deviation."
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

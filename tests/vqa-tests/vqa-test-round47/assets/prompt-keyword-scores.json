@@ -1,0 +1,722 @@
+{
+  "frame": {
+    "block": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ascending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blocks": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ascending blocks": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "widest": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "funnel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 24.6,
+      "count": 9,
+      "pf": 3.6
+    },
+    "labels": {
+      "avg": 24.6,
+      "count": 9,
+      "pf": 3.6
+    },
+    "annotations": {
+      "avg": 24.6,
+      "count": 9,
+      "pf": 3.6
+    },
+    "captions": {
+      "avg": 24.6,
+      "count": 9,
+      "pf": 3.6
+    },
+    "sections": {
+      "avg": 23.5,
+      "count": 3,
+      "pf": 3
+    },
+    "main": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "element": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "positioned": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "leaving": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "open": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "main element": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "element positioned": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "main element positioned": {
+      "avg": 23.5,
+      "count": 4,
+      "pf": 3
+    },
+    "hub-spoke": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "circle": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "circles": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "thin": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "lines": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "connecting": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "orange circles": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "thin lines": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "lines connecting": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "thin lines connecting": {
+      "avg": 22.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "it thin": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "it thin lines": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bars": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "heights": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "alternating": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different heights": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "orange alternating": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "process": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "arrow-shaped": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "chevron process": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "arrow-shaped sections": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "donut": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "thick": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "hollow": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "orange orange": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "orange thick": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "autumn": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "forest": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "golden": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "red": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "leaves": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "sunlight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "filtering": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tall": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "trees": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "rich": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tones": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "peaceful": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "atmosphere": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "autumn forest": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "red leaves": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "leaves warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warm sunlight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "sunlight filtering": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tall trees": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "trees rich": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "rich warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warm tones": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tones peaceful": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "peaceful atmosphere": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "red leaves warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "leaves warm sunlight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warm sunlight filtering": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tall trees rich": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "trees rich warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "rich warm tones": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warm tones peaceful": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "tones peaceful atmosphere": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "cover": {
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "empty": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line pattern sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle cream paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "icons": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "neutral": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "2x2": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "grid": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "truck": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "box": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warehouse": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "clipboard": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "inside": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "rounded": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "2x2 grid": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "truck silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "box silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "warehouse silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "clipboard silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    }
+  }
+}

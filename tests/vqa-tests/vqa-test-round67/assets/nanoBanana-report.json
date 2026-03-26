@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-03-19T10:11:01.601Z",
+  "summary": {
+    "total": 10,
+    "pass": 10,
+    "warn": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.1,
+    "min": 23.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 6,
+      "25-27": 0,
+      "22-24": 4,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "frame": {
+      "avg": 26.3,
+      "count": 6
+    },
+    "icon": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 23.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 24.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-03": 7
+  },
+  "weakest_slides": [
+    {
+      "slide": 7,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The specified primary dark blue color is absent from the image. While the accent emerald and background off-white are present, the primary color palette instruction was not followed. "
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image is square (1:1) instead of the requested 16: aspect ratio. All other prompt elements are met excellently. The funnel itself is well-generated and matches the description perfectly, but the overall image dimensions deviate from the prompt's implied aspect ratio requirement."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 6 sections in the donut chart instead of the requested 5. It uses two distinct colors rather than varying shades as described in the prompt for the sections. The prompt specified 'varying shades of dark blue and emerald' implying a gradient or different tones of each color, but it shows just two distinct colors alternating."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified a color palette including 'Primary dark blue' and 'Accent emerald', which are not present in the image. The geometric accents are a desaturated blue-grey rather than 'dark blue'."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "gradient (avg 27.5, n=2)",
+        "rounded (avg 27.5, n=2)",
+        "subtle (avg 26, n=2)",
+        "main (avg 26, n=2)",
+        "element (avg 26, n=2)"
+      ],
+      "bottom_keywords": [
+        "sections (avg 22.8, n=3)",
+        "alternating (avg 24, n=2)",
+        "muted (avg 24, n=2)",
+        "off-light (avg 25.2, n=6)",
+        "labels (avg 25.2, n=6)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.6, n=5)",
+        "silhouette (avg 25.6, n=5)",
+        "green (avg 25.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=5)",
+        "rounded rectangles (avg 27, n=5)",
+        "by arrows (avg 27, n=5)",
+        "rounded (avg 27, n=5)",
+        "narrowest (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 195 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=5)",
+        "ship (avg 27.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 92 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 11,
+    "retried": 1
+  }
+}

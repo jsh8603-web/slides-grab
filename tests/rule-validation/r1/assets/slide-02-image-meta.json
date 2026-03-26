@@ -1,0 +1,25 @@
+{
+  "slide": 2,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "An aerial view of a crowded urban data center rooftop with large cooling towers emitting steam, surrounded by dense city buildings, warm directional lighting from the late afternoon sun, photorealistic texture warm directional, faint grid lines suggesting urban density, no text, 16:9 aspect ratio. Sharp focus, high quality. Ample negative space on one side for text overlay.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 99,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 4,
+      "detected_text": []
+    },
+    "total": 24,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

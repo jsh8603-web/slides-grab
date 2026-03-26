@@ -1,0 +1,338 @@
+{
+  "background": {
+    "metaphor": {
+      "avg": 25,
+      "count": 3
+    },
+    "strong": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "blue": {
+      "avg": 24.6,
+      "count": 5
+    },
+    "soft": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "cool": {
+      "avg": 24.4,
+      "count": 5
+    },
+    "shot": {
+      "avg": 24.3,
+      "count": 7
+    },
+    "sky": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "tones": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "cool blue": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "blue tones": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "cool blue tones": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "clean": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "cinematic wide": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "wide shot": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "shot of": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "cinematic": {
+      "avg": 24.1,
+      "count": 10
+    },
+    "sharp": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "focus": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "quality": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "sharp focus": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "focus high": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "high quality": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "modern": {
+      "avg": 24,
+      "count": 4
+    },
+    "tones with": {
+      "avg": 24,
+      "count": 3
+    },
+    "depth": {
+      "avg": 24,
+      "count": 4
+    },
+    "pattern": {
+      "avg": 24,
+      "count": 4
+    },
+    "gray": {
+      "avg": 24,
+      "count": 3
+    },
+    "macro": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "close-up": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "visible": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "shallow": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "cinematic macro": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "macro close-up": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "close-up of": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "shallow depth": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "depth of": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "of field": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "field sharp": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "cinematic macro close-up": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "field sharp focus": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "warm": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "field": {
+      "avg": 23.5,
+      "count": 4
+    }
+  },
+  "cover": {
+    "cover": {
+      "avg": 24,
+      "count": 3
+    },
+    "sharp": {
+      "avg": 24,
+      "count": 3
+    },
+    "focus": {
+      "avg": 24,
+      "count": 3
+    },
+    "quality": {
+      "avg": 24,
+      "count": 3
+    },
+    "presentation cover": {
+      "avg": 24,
+      "count": 3
+    },
+    "space sharp": {
+      "avg": 24,
+      "count": 3
+    },
+    "sharp focus": {
+      "avg": 24,
+      "count": 3
+    },
+    "focus high": {
+      "avg": 24,
+      "count": 3
+    },
+    "high quality": {
+      "avg": 24,
+      "count": 3
+    }
+  },
+  "frame": {
+    "diagram": {
+      "avg": 22.8,
+      "count": 4
+    },
+    "minimal": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "navy": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "clean": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "flat": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "vector": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "gray": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "sharp": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "focus": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "quality": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "clean flat": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "flat vector": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "vector on": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "light gray": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "gray background": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "background sharp": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "sharp focus": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "focus high": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "high quality": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "clean flat vector": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "blue": {
+      "avg": 22.5,
+      "count": 4
+    }
+  },
+  "icon": {
+    "white": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "navy": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "on white": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "white background": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "sharp": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "focus": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "quality": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "sharp focus": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "focus high": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "high quality": {
+      "avg": 22.5,
+      "count": 4
+    }
+  }
+}

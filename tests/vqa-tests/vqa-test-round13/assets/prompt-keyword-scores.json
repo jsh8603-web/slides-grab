@@ -1,0 +1,83 @@
+{
+  "cover": {},
+  "frame": {
+    "warm": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "beige": {
+      "avg": 24,
+      "count": 3
+    },
+    "tan": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "lines": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "chart": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "brown": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "sage": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "green": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "dark brown": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "sage green": {
+      "avg": 23.3,
+      "count": 8
+    },
+    "chart frame": {
+      "avg": 23,
+      "count": 3
+    }
+  },
+  "background": {
+    "minimal": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 23.3,
+      "count": 3
+    }
+  },
+  "icon": {
+    "beige": {
+      "avg": 25,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "warm": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "tones": {
+      "avg": 23,
+      "count": 3
+    }
+  }
+}

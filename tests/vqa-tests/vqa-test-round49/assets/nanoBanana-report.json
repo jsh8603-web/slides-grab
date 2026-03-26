@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-03-19T08:29:18.069Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 6,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.9,
+    "min": 20,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 5,
+      "25-27": 3,
+      "22-24": 6,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 25.1,
+      "count": 11
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 23.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 23.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt requested a minimal chevron process diagram with 3 arrow-shaped segments, but the image only shows 2 segments. The third 'light orange' segment is missing."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt specifies 'Thin lines connecting' within a minimal hub-spoke diagram, implying lines connect the central hub to the four outer spokes. The image includes four additional lines radiating diagonally outwards from the center that are not connected to any orange circles, making it more akin to a star or compass design rather than a traditional hub-spoke structure with only four designated spokes."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "detected_text": [],
+        "pf_reason": "The image is not in a 16:9 aspect ratio as requested; it is square."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 'five small orange circles', but the image shows eight. There are also no 'l' characters in the prompt, which is an unusual request, and the image indeed contains no text characters at all (including 'l')."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified an 'Accent orange' color which is entirely missing from the image, altering the intended color palette."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "sections (avg 26.8, n=3)",
+        "block (avg 26.5, n=2)",
+        "ascending (avg 26.5, n=2)",
+        "blocks (avg 26.5, n=2)",
+        "ascending blocks (avg 26.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "hub-spoke (avg 22.8, n=2)",
+        "circle (avg 22.8, n=2)",
+        "circles (avg 22.8, n=2)",
+        "thin (avg 22.8, n=2)",
+        "lines (avg 22.8, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "sophisticated (avg 26, n=5)",
+        "subtle (avg 25.7, n=6)",
+        "line (avg 25.6, n=6)",
+        "empty (avg 25.6, n=6)",
+        "atmosphere (avg 25.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 27 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "inside (avg 24.7, n=5)",
+        "rounded (avg 24.7, n=5)",
+        "box (avg 24.6, n=5)",
+        "sun (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 42 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "narrowing (avg 25.3, n=6)",
+        "sections narrowing (avg 25.3, n=6)",
+        "narrowing down (avg 25.3, n=6)",
+        "sections narrowing down (avg 25.3, n=6)",
+        "narrowest (avg 25.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 141 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "paper (avg 25.6, n=6)",
+        "paper texture (avg 25.5, n=6)",
+        "fiber (avg 25.3, n=6)",
+        "cream (avg 25.3, n=6)",
+        "artistic (avg 25, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 65 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 57 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 15,
+    "retried": 0
+  }
+}

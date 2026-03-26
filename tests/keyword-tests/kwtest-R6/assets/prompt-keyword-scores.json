@@ -1,0 +1,755 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "node": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "educational": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "library": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interior": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "screens": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "learning": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "educational technology": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation tall": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall sophisticated": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated library": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "library interior": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern learning": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "learning warm": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ambient": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "educational technology innovation": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation tall": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation tall sophisticated": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall sophisticated library": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated library interior": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern learning warm": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "learning warm ambient": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ambient lighting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "education": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "education data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "education data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream faint indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "knowledge": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass panels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels knowledge": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "knowledge growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green plants wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants wooden shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass panels knowledge": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "panels knowledge growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "library": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "academic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "campus library": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "academic excellence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern campus library": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "academic excellence golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "timestamp": "2026-03-19T09:05:49.673Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.6,
+    "min": 10.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 6,
+      "25-27": 3,
+      "22-24": 5,
+      "17-21": 0,
+      "<17": 1
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24,
+      "count": 11
+    },
+    "metaphor": {
+      "avg": 23,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 26,
+      "count": 1
+    },
+    "icon": {
+      "avg": 27.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-08": 10,
+    "IP-09": 1,
+    "IV-09": 2,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 10.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 1,
+        "composition": 3,
+        "color_harmony": 3,
+        "presentation_fit": 2,
+        "ch_reason": "The chosen color palette of transparent blue, orange, light blue, and gold for the bars, combined with dark blue text and a neutral background, is acceptable but lacks a strong, cohesive harmony often desired for a polished professional presentation.",
+        "co_reason": "The prominent \"ASCENSION\" text at the bottom significantly reduces the available negative space for other slide elements like titles or descriptions, making the layout less flexible for a presentation slide.",
+        "detected_text": [
+          "ASCENSION"
+        ],
+        "pf_reason": "The image shows 4 ascending 3D bars instead of 3 flat vector steps. The requested color progression (orange, dark orange, navy) is not followed, with the image displaying blue, orange, light blue, and gold bars. Crucially, the prompt explicitly stated \"Absolutely no text,\" yet the word \"ASCENSION\" is prominently displayed."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 4 bars, but the image shows 5. Also, the colors were specified to alternate (navy and orange), but the last two bars are both orange, breaking the alternating pattern specified in the prompt. The image is not 16:9, it is square 1:1 format. This deviation from the specified aspect ratio is a significant drawback for a presentation slide asset, as it will require cropping or padding to fit a standard widescreen presentation format, potentially altering the intended visual balance or leaving awkward empty spaces. As the prompt specified the aspect ratio, this is a clear mismatch and a fundamental issue for an image intended as a presentation slide asset. The image is square, not 16:9 as requested. This is a significant deviation for a presentation slide asset."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt requested 4 ascending steps, but the image shows 5. The fourth step was specified as navy, but appears orange, with navy being the fifth step."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt asked for a minimal chevron process diagram with 3 distinct arrow-shaped segments, but the image shows a single arrow-like shape within a circle. The specific color distribution (first navy, second orange, third light orange) for the segments was also not met."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"five small orange circles evenly spaced around it\", but the image shows eight small orange circles."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 33,
+      "severity": "HIGH",
+      "action": "FAIL rate 33% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "widest (avg 27.5, n=2)",
+        "rounded (avg 27.5, n=2)",
+        "subtle (avg 26.8, n=2)",
+        "pattern (avg 26.8, n=2)",
+        "main (avg 26.1, n=4)"
+      ],
+      "bottom_keywords": [
+        "stepped (avg 20.8, n=2)",
+        "like (avg 20.8, n=2)",
+        "stairs (avg 20.8, n=2)",
+        "progressively (avg 20.8, n=2)",
+        "taller (avg 20.8, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 26.9, n=5)",
+        "pattern sophisticated (avg 26.9, n=5)",
+        "line pattern sophisticated (avg 26.9, n=5)",
+        "pattern (avg 26.8, n=5)",
+        "base (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)",
+        "olive (avg 24.6, n=5)",
+        "olive green (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 47 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 26.8, n=5)",
+        "rounded rectangles (avg 26.8, n=5)",
+        "by arrows (avg 26.8, n=5)",
+        "rounded (avg 26.8, n=5)",
+        "narrowing (avg 26.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 149 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.7, n=5)",
+        "pattern warm (avg 26.7, n=5)",
+        "subtle cream (avg 26.7, n=5)",
+        "cream paper (avg 26.7, n=5)",
+        "subtle fiber (avg 26.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 6
+  }
+}

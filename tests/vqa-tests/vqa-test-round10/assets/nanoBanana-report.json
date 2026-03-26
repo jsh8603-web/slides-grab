@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-03-19T01:57:18.288Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 6,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.8,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 3,
+      "20-22": 6,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "frame": {
+      "avg": 23.6,
+      "count": 10
+    },
+    "icon": {
+      "avg": 21,
+      "count": 2
+    },
+    "background": {
+      "avg": 25,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IV-03": 2,
+    "IP-08": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 9,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "Missing the specified 'warm orange' accent color. The primary color 'dark charcoal' is used for the icon containers, while the icons themselves are white, which was not explicitly stated in the prompt for the icon fill color."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"Primary dark charcoal\" as part of the color palette, but this color is entirely absent from the image. The icons are orange outlines on a white background, with a cream overall background."
+      }
+    },
+    {
+      "slide": 14,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt specified a primary dark charcoal color, which is not present in the image. The requested accent warm orange is also not clearly identifiable as an accent."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'exactly 4 bars' but the image contains 5 bars, which is a clear deviation from the explicit instruction for the number of elements in the chart frame. The bars also have a subtle shadow, making it not perfectly 'flat vector'. However, the primary issue is the number of bars."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested exactly 4 horizontal tiers, but the image shows only 3 tiers. The color distribution also deviates from the prompt's implied structure for multiple tiers. With 3 tiers, the two upper tiers are orange, while the prompt specified only the top tier in orange and the bottom tier in charcoal. The middle tier's color is not explicitly stated but having two orange tiers is a deviation. It's a 3-tier pyramid, not a 4-tier. Also, the middle tier is orange, but the prompt implies only the bottom tier should be charcoal and the top tier orange, suggesting other tiers might follow a pattern or be charcoal. In the image, the bottom is charcoal, and the two upper ones are orange."
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

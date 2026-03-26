@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-03-19T04:05:50.992Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.4,
+    "min": 23,
+    "max": 25,
+    "distribution": {
+      "25": 13,
+      "23-24": 7,
+      "20-22": 0,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 23,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-03": 10,
+    "IV-10": 2,
+    "IV-02": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 6,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested three horizontal lines, but the image shows five."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified an 'Accent silver' color, which is not visibly present in the image. The square backgrounds behind the icons are light grey, not silver."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "Outlines are dark grey/black, not silver as specified in the prompt."
+      }
+    },
+    {
+      "slide": 11,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "While an ice white background with subtle texture is present, the prominent midnight blue section on the left makes the overall background not predominantly 'ice white' as implied by 'Background ice white' in the prompt's main background description. The blue element is too large to be considered merely an accent or primary color on a predominantly ice-white background structure."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The sphere appears more dark blue/black and reflective than a \"silver metallic surface with subtle blue reflections\" as described in the prompt."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "lake (avg 25, n=2)",
+        "water (avg 25, n=2)",
+        "cinematic wide (avg 25, n=3)",
+        "sky area (avg 25, n=2)",
+        "light blue (avg 25, n=4)"
+      ],
+      "bottom_keywords": [
+        "sleek (avg 20.3, n=3)",
+        "line (avg 21, n=3)",
+        "icons (avg 23, n=2)",
+        "2x2 (avg 23, n=2)",
+        "telescope (avg 23, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "cinematic (avg 24.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 1 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "isometric (avg 24.6, n=5)",
+        "illustration (avg 24.6, n=5)",
+        "scheme (avg 24.6, n=5)",
+        "accents (avg 24.6, n=5)",
+        "isometric illustration (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "bright teal (avg 24.7, n=5)",
+        "pink background (avg 24.6, n=5)",
+        "warm ivory (avg 24.4, n=5)",
+        "slate (avg 24.4, n=11)",
+        "dark slate (avg 24.4, n=11)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 13 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.7, n=5)",
+        "thin (avg 24.3, n=6)",
+        "pattern in (avg 24.3, n=6)",
+        "ivory (avg 24.3, n=7)",
+        "pale (avg 24.3, n=8)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 20 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "golden (avg 24.9, n=5)",
+        "cinematic wide (avg 24.9, n=6)",
+        "purple (avg 24.8, n=5)",
+        "atmosphere ample (avg 24.7, n=6)",
+        "depth (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 18 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

@@ -1,0 +1,955 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layout": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "node": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2 grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid layout": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layout subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2 grid layout": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid layout subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layout subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "retail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flagship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "store": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "displays": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "retail technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern flagship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flagship store": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "store interior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass displays": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury retail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "retail soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "retail technology innovation": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology innovation cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern flagship store": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flagship store interior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass displays": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury retail soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "retail soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient indigo lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "visualization": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "fine": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "fiber": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "faint": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "indigo": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "edges": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "desaturated": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "muted": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data visualization": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "visualization warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "paper texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "fine fiber": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "fiber pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "faint indigo": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "line pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "edges desaturated": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "desaturated muted": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data visualization warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "visualization warm paper": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm paper texture": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "fine fiber pattern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "edges desaturated muted": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical-inspired": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "display": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sheer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curtains": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "near": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody interior": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical-inspired modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden display": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "display shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows wind-blown": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown sheer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sheer curtains": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curtains near": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "near open": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical-inspired modern retail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden display shelving": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural grain warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric shadows wind-blown": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows wind-blown sheer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind-blown sheer curtains": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sheer curtains near": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "curtains near open": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "near open windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "open windows cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows cinematic shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "retail": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "modern retail": {
+      "avg": 25,
+      "count": 2,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "facades": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vitality": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "retail district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall building": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building facades": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial vitality": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vitality warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern retail district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn tall": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall building": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall building facades": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial vitality warm": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vitality warm golden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunrise": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

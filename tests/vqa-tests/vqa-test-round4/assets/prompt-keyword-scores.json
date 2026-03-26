@@ -1,0 +1,198 @@
+{
+  "frame": {
+    "chart": {
+      "avg": 21,
+      "count": 3
+    },
+    "chart frame": {
+      "avg": 21,
+      "count": 3
+    },
+    "thin": {
+      "avg": 21,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 21,
+      "count": 4
+    },
+    "frame": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "navy": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "clean flat": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "vector style": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "clean flat vector": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "clean": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "flat": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "vector": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "gray": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "flat vector": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "light gray": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "gray background": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "blue": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "light blue": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "icon": {
+    "white": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "on white": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "white background": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "navy": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "clean": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "blue": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "cover": {
+    "cover": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "teal": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "presentation cover": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "background": {
+    "shot of": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 21.3,
+      "count": 7
+    },
+    "dramatic": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "sky": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "deep": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "shadows": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 21,
+      "count": 4
+    },
+    "surface": {
+      "avg": 21,
+      "count": 3
+    },
+    "blue": {
+      "avg": 21,
+      "count": 4
+    },
+    "lighting": {
+      "avg": 21,
+      "count": 3
+    },
+    "subtle": {
+      "avg": 21,
+      "count": 3
+    },
+    "soft": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "shot": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "metaphor": {
+      "avg": 20.7,
+      "count": 7
+    },
+    "composition": {
+      "avg": 20,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "shallow": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "depth": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "shallow depth": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "clean": {
+      "avg": 19.3,
+      "count": 3
+    }
+  }
+}

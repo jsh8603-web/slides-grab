@@ -1,0 +1,82 @@
+{
+  "cover": {},
+  "frame": {
+    "minimal": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "slate": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "bright": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "dark slate": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "bright teal": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "chart": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "stacked": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "chart frame": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "icon": {},
+  "background": {
+    "feel": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "slate": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "dark slate": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "side": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "one side": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "side for": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "text overlay": {
+      "avg": 24.5,
+      "count": 4
+    }
+  }
+}

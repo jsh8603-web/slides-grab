@@ -1,0 +1,491 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "espresso": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brown": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "camel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "espresso brown": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "camel gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular flow subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "material": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "craftsmanship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical plant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plant fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural material": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "moody cinematic close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical plant fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric shadows natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows natural material": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atelier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "creative": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern sustainable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fashion atelier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "creative excellence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern sustainable fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sustainable fashion atelier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "creative excellence warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "excellence warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

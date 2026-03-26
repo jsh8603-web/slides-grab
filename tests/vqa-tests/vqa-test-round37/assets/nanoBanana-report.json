@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-03-19T05:05:23.400Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.4,
+    "min": 22,
+    "max": 25,
+    "distribution": {
+      "25": 13,
+      "23-24": 6,
+      "20-22": 1,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 23,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.9,
+      "count": 7
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IP-08": 5,
+    "IV-10": 3,
+    "IP-11": 2,
+    "IP-03": 1,
+    "IV-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "Segments three and four (light blue and pale pink) are swapped compared to the prompt description. There are also very subtle, almost ghosted texture artifacts within some segments, which slightly detract from a truly 'minimal' and 'clean' aesthetic."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The waves are not a distinct 'sapphire blue'; they appear as a natural ocean blue and white foam, rather than a saturated sapphire tone. The rest of the prompt is well-matched, particularly the rose gold sunset sky and dramatic cliffs with ample space for text overlay, but the specific blue color for the waves is not met as requested. The overall style is professional and majestic. No text was generated, which is good. The composition provides sufficient space for text overlay in the vast sky area, which is a significant plus for presentation fit. The colors work together harmoniously, creating a beautiful and dramatic scene appropriate for a professional presentation. Thus, it earns an excellent score for presentation fit, composition, and color harmony. The text absence is also perfectly met. The only minor deviation is the specific shade of blue for the waves. If the waves were more distinctly sapphire, the prompt fidelity would be higher. Thus, 3 for prompt fidelity to reflect the slight color deviation, while maintaining high scores for other aspects due to excellent execution in those areas."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 'a subtle rose gold thin diagonal accent line', but the image features multiple diagonal lines and a prominent central rectangular frame, which is a more complex design than specified."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 25, n=3)",
+        "icons (avg 25, n=2)",
+        "2x2 (avg 25, n=2)",
+        "grid (avg 25, n=3)",
+        "diamond (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "pink (avg 23.5, n=4)",
+        "pale pink (avg 23.5, n=4)",
+        "abstract (avg 23.7, n=6)",
+        "digital (avg 23.7, n=6)",
+        "graphic (avg 23.7, n=6)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=7)",
+        "subtle (avg 24.8, n=5)",
+        "line (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 22 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "filled (avg 24.8, n=6)",
+        "silhouette (avg 24.8, n=6)",
+        "fill (avg 24.8, n=6)",
+        "green (avg 24.8, n=7)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 34 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 116 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)",
+        "line (avg 24.6, n=5)",
+        "tech (avg 24.6, n=5)",
+        "cinematic (avg 24.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sand (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 52 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

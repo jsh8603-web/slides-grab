@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-03-19T03:25:24.646Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 1,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.5,
+    "min": 13,
+    "max": 25,
+    "distribution": {
+      "25": 9,
+      "23-24": 9,
+      "20-22": 1,
+      "15-19": 0,
+      "<15": 1
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 22.3,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-09": 3,
+    "IP-11": 1,
+    "IV-10": 2,
+    "IP-03": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 18,
+      "total": 13,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 1,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 2,
+        "co_reason": "The existing text 'CREATIVE DESIGNS' at the bottom reduces the available negative space for additional text overlay, making it less flexible as a general slide frame.",
+        "detected_text": [
+          "CREATIVE",
+          "DESIGNS"
+        ],
+        "pf_reason": "The prompt requested a minimal thick progress ring with an arc covering four-fifths of the circle, but the image shows a decorative crescent shape with a rose, covering less than four-fifths, and includes a rose."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt specified two smooth wavy layers, bottom dark gray and top rose pink, as a clean flat vector stacked area chart frame on a soft pink background. The image shows three wavy layers (dark gray, light pink, dark red/burgundy), with dark gray on top, and includes a floral pattern and a textured background, which deviates from the \"clean flat vector\" style and the requested layer count/order."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 3,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "$"
+        ]
+      }
+    },
+    {
+      "slide": 13,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 16,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "scattered (avg 25, n=2)",
+        "and rose (avg 25, n=2)",
+        "filled (avg 25, n=2)",
+        "elegant (avg 24.7, n=3)",
+        "atmosphere (avg 24.7, n=3)"
+      ],
+      "bottom_keywords": [
+        "with subtle (avg 23.5, n=2)",
+        "delicate (avg 23.5, n=2)",
+        "abstract (avg 23.5, n=2)",
+        "subtle (avg 23.8, n=5)",
+        "cinematic (avg 24, n=5)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 22,
+    "retried": 2
+  }
+}

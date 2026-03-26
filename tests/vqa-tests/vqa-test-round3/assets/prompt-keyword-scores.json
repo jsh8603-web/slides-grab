@@ -1,0 +1,166 @@
+{
+  "frame": {
+    "light blue": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "bold": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "flat": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "vector": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "navy": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "blue": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "clean": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "white": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "flat vector": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "vector style": {
+      "avg": 22.8,
+      "count": 4
+    },
+    "white background": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "diagram": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "circles": {
+      "avg": 21.7,
+      "count": 3
+    }
+  },
+  "cover": {
+    "deep": {
+      "avg": 21,
+      "count": 3
+    },
+    "cover background": {
+      "avg": 21,
+      "count": 3
+    },
+    "background deep": {
+      "avg": 21,
+      "count": 3
+    },
+    "cover": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "presentation cover": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "base": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "background": {
+    "cinematic": {
+      "avg": 21,
+      "count": 3
+    },
+    "blue": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "lighting": {
+      "avg": 19.8,
+      "count": 5
+    },
+    "close-up": {
+      "avg": 19.7,
+      "count": 3
+    },
+    "warm": {
+      "avg": 19.2,
+      "count": 5
+    },
+    "colors": {
+      "avg": 18.8,
+      "count": 5
+    },
+    "clean": {
+      "avg": 18.6,
+      "count": 5
+    },
+    "simple": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "composition": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "bold": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "simple composition": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "composition bold": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "bold colors": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "simple composition bold": {
+      "avg": 18.3,
+      "count": 4
+    },
+    "composition bold colors": {
+      "avg": 18.3,
+      "count": 4
+    }
+  },
+  "icon": {
+    "clean": {
+      "avg": 21,
+      "count": 3
+    },
+    "white": {
+      "avg": 21,
+      "count": 3
+    },
+    "on white": {
+      "avg": 21,
+      "count": 3
+    },
+    "white background": {
+      "avg": 21,
+      "count": 3
+    }
+  }
+}

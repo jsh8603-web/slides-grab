@@ -1,0 +1,25 @@
+{
+  "slide": 1,
+  "tier": null,
+  "type": "photo",
+  "category": "cover",
+  "prompt": "A photorealistic underwater scene showing a cylindrical server module submerged in deep ocean water, with cool teal light reflecting off the metal hull, small fish swimming nearby, deep navy blue water fading to black below, warm golden light from above filtering through the surface, full cinematic wide angle view, no text, 16:9 aspect ratio. Large empty area for text overlay. Sharp focus, high quality.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 52,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 26.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

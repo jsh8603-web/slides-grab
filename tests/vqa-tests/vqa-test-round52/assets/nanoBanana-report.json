@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-03-19T08:35:00.732Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 11,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.1,
+    "min": 22,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 4,
+      "25-27": 0,
+      "22-24": 11,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 23.6,
+      "count": 11
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 23.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 1,
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 4 arrow-shaped segments, but the image shows 5. The second segment's color is brown, not dark orange as specified in the prompt."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows 5 ascending blocks, not 4 steps. The specific color assignment per step (first light orange, etc.) is not followed; instead, it's a pattern of navy blocks topped with orange. The style is a 3D render with reflections and shadows, not a clean flat vector as requested."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The image displays 3 segments in the donut chart instead of the requested 4. It also features 3 distinct colors (navy, dark orange, light orange) rather than the specified 4 (navy, dark orange, orange, and light orange)."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "pf_reason": "The image does not have a 16:9 aspect ratio as requested in the prompt; it is a square image. "
+      }
+    },
+    {
+      "slide": 2,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 4 ascending steps instead of the requested 3. The color progression also deviates from the prompt's specification for 3 steps (first step orange, second dark orange, third navy). There are two initial orange steps with slight variations before the darker orange/brown and then navy."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 2.8,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 27.5, n=2)",
+        "pattern (avg 27.5, n=2)",
+        "atmosphere (avg 25.5, n=2)",
+        "warm (avg 25.5, n=2)",
+        "tones (avg 25.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "block (avg 21.5, n=2)",
+        "ascending (avg 21.5, n=2)",
+        "blocks (avg 21.5, n=2)",
+        "ascending blocks (avg 21.5, n=2)",
+        "chevron (avg 22.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 26.4, n=6)",
+        "pattern sophisticated (avg 26.4, n=6)",
+        "line pattern sophisticated (avg 26.4, n=6)",
+        "pattern (avg 26.3, n=6)",
+        "base (avg 26.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "inside (avg 24.8, n=6)",
+        "rounded (avg 24.8, n=6)",
+        "neutral (avg 24.7, n=6)",
+        "truck (avg 24.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "narrowing (avg 26.5, n=6)",
+        "sections narrowing (avg 26.5, n=6)",
+        "narrowing down (avg 26.5, n=6)",
+        "sections narrowing down (avg 26.5, n=6)",
+        "narrowest (avg 26.5, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 147 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.1, n=6)",
+        "pattern warm (avg 26.1, n=6)",
+        "subtle cream (avg 26.1, n=6)",
+        "cream paper (avg 26.1, n=6)",
+        "subtle fiber (avg 26.1, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 17,
+    "retried": 2
+  }
+}

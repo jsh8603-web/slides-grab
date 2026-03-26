@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+.slide {
+  width: 100%; height: 100%;
+  position: relative;
+}
+.bg-img {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #1B2A4A;
+  opacity: 0.7;
+}
+.content {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 36pt 48pt;
+}
+h1 {
+  font-size: 18pt; font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin-bottom: 14pt;
+  text-shadow: 0 2px 8pt rgba(0,0,0,0.5);
+}
+.actions {
+  display: flex; flex-direction: column;
+  gap: 8pt;
+  margin-bottom: 16pt;
+  flex: 1; min-height: 0;
+}
+.action {
+  display: flex; align-items: flex-start;
+  gap: 8pt;
+}
+.action-num {
+  background: #FF6B35;
+  color: #1B2A4A;
+  font-size: 10pt; font-weight: 700;
+  width: 18pt; height: 18pt;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1pt;
+}
+.action-text {
+  font-size: 11pt; color: #FFFFFF;
+  line-height: 1.5;
+  text-shadow: 0 1px 4pt rgba(0,0,0,0.4);
+}
+.action-bold {
+  font-weight: 700;
+  color: #FF6B35;
+}
+.cta-box {
+  background: #FF6B35;
+  border-radius: 6pt;
+  padding: 12pt 16pt;
+}
+.cta-text {
+  font-size: 12pt; font-weight: 700;
+  color: #1B2A4A;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="bg-img" src="assets/slide-05-image.png" alt="">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1><span>기술보다 전략이 먼저다 — 지금 해야 할 세 가지</span></h1>
+    <div class="actions">
+      <div class="action">
+        <div class="action-num"><span>1</span></div>
+        <p class="action-text"><span class="action-bold">전략 연계</span> <span>— AI 에이전트 목표를 사업 KPI에 직접 연결, 18개월 내 측정 가능한 ROI 목표 설정</span></p>
+      </div>
+      <div class="action">
+        <div class="action-num"><span>2</span></div>
+        <p class="action-text"><span class="action-bold">준비도 구축</span> <span>— 데이터 파이프라인 · 거버넌스 · 인력 재교육을 기술 도입 전에 선행 (78% 임원 필요성 인식)</span></p>
+      </div>
+      <div class="action">
+        <div class="action-num"><span>3</span></div>
+        <p class="action-text"><span class="action-bold">선점 실행</span> <span>— 14%만 배포 준비 완료인 지금이 선점 창. 고객 서비스·운영 중 1개 영역 즉시 파일럿</span></p>
+      </div>
+    </div>
+    <div class="cta-box">
+      <p class="cta-text"><span>귀사의 첫 번째 에이전트 대상 프로세스를 오늘 식별하십시오</span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

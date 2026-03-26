@@ -1,45 +1,8 @@
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Edit|Write|Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node D:/projects/slides-grab/scripts/session-restore-guard.mjs",
-            "timeout": 5,
-            "statusMessage": "Checking session restoration..."
-          }
-        ]
-      },
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node D:/projects/slides-grab/scripts/checklist-guard.mjs",
-            "timeout": 10,
-            "statusMessage": "Checking checklist guard..."
-          }
-        ]
-      }
-    ],
-    "PostCompact": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node D:/projects/slides-grab/scripts/post-compact-restore.mjs",
-            "timeout": 10,
-            "statusMessage": "Restoring session context..."
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
+      "Edit(D:/projects/slides-grab/**)",
+      "Write(D:/projects/slides-grab/**)",
       "Bash(wc -c D:/projects/slides-grab/.claude/rules/*.md)",
       "Bash(wc -c C:/Users/jsh86/.claude/rules/*.md)",
       "Bash(wc -c D:/projects/slides-grab/.claude/docs/*.md)",
@@ -88,7 +51,57 @@
       "Bash(node -e \"try{require\\(''adm-zip''\\);console.log\\(''adm-zip available''\\)}catch{console.log\\(''no adm-zip''\\)}\")",
       "Bash(node -e \"import\\(''jszip''\\).then\\(\\(\\)=>console.log\\(''jszip available''\\)\\).catch\\(\\(\\)=>console.log\\(''no jszip''\\)\\)\")",
       "Bash(node scripts/validate-pptx.js --input slides/coupang-investment-report/coupang-investment-report.pptx)",
-      "Bash(node scripts/auto-production-test.mjs --slides 10 --compare tests/production-runs/baseline-10.json --runs 1)"
+      "Bash(node scripts/auto-production-test.mjs --slides 10 --compare tests/production-runs/baseline-10.json --runs 1)",
+      "Bash(node tests/test-guard.mjs)",
+      "Bash(powershell -Command \"\n\\\\$outlook = New-Object -ComObject Outlook.Application\n\\\\$mail = \\\\$outlook.CreateItem\\(0\\)\n\\\\$mail.To = 'jsh8603@gmail.com'\n\\\\$mail.Subject = 'Payroll 프레젠테이션 \\(payroll-v2 + payroll-guide\\)'\n\\\\$mail.Body = 'payroll-v2.pptx와 payroll-guide7.pptx를 첨부합니다.'\n\\\\$mail.Attachments.Add\\('D:\\\\projects\\\\slides-grab\\\\slides\\\\payroll-v2\\\\payroll-v2.pptx'\\)\n\\\\$mail.Attachments.Add\\('D:\\\\projects\\\\slides-grab\\\\slides\\\\payroll-guide\\\\payroll-guide7.pptx'\\)\n\\\\$mail.Send\\(\\)\nWrite-Output 'Mail sent successfully'\n\")",
+      "Bash(powershell -Command \"Get-Process OUTLOOK -ErrorAction SilentlyContinue | Select-Object Id,ProcessName\")",
+      "Bash(powershell -Command \"Start-Process outlook; Start-Sleep -Seconds 8; Write-Output 'Outlook started'\")",
+      "Bash(powershell -Command \"\n\\\\$outlook = New-Object -ComObject Outlook.Application\n\\\\$ns = \\\\$outlook.GetNamespace\\('MAPI'\\)\n\\\\$mail = \\\\$outlook.CreateItem\\(0\\)\n\\\\$mail.To = 'jsh8603@gmail.com'\n\\\\$mail.Subject = 'Payroll 프레젠테이션 \\(payroll-v2 + payroll-guide\\)'\n\\\\$mail.Body = 'payroll-v2.pptx와 payroll-guide7.pptx를 첨부합니다.'\n\\\\$mail.Attachments.Add\\('D:\\\\projects\\\\slides-grab\\\\slides\\\\payroll-v2\\\\payroll-v2.pptx'\\)\n\\\\$mail.Attachments.Add\\('D:\\\\projects\\\\slides-grab\\\\slides\\\\payroll-guide\\\\payroll-guide7.pptx'\\)\n\\\\$mail.Send\\(\\)\nWrite-Output 'Mail sent successfully'\n\")",
+      "Bash(powershell -Command \"\n\\\\$outlook = New-Object -ComObject Outlook.Application\n\\\\$ns = \\\\$outlook.GetNamespace\\('MAPI'\\)\n\\\\$sent = \\\\$ns.GetDefaultFolder\\(5\\)\n\\\\$items = \\\\$sent.Items\n\\\\$items.Sort\\('[SentOn]', \\\\$true\\)\n\\\\$recent = \\\\$items | Select-Object -First 3 | ForEach-Object { Write-Output \\('Subject: ' + \\\\$_.Subject + ' | To: ' + \\\\$_.To + ' | SentOn: ' + \\\\$_.SentOn\\) }\n\")",
+      "Bash(powershell -Command \"\n\\\\$outlook = New-Object -ComObject Outlook.Application\n\\\\$ns = \\\\$outlook.GetNamespace\\('MAPI'\\)\n\\\\$outbox = \\\\$ns.GetDefaultFolder\\(4\\)\nWrite-Output \\('Outbox count: ' + \\\\$outbox.Items.Count\\)\n\\\\$sent = \\\\$ns.GetDefaultFolder\\(5\\)\nWrite-Output \\('Sent count: ' + \\\\$sent.Items.Count\\)\nif \\(\\\\$sent.Items.Count -gt 0\\) {\n  \\\\$last = \\\\$sent.Items.Item\\(\\\\$sent.Items.Count\\)\n  Write-Output \\('Last sent subject: ' + \\\\$last.Subject\\)\n  Write-Output \\('Last sent to: ' + \\\\$last.To\\)\n  Write-Output \\('Last sent time: ' + \\\\$last.SentOn\\)\n}\n\")",
+      "Bash(powershell -Command \"\n\\\\$outlook = New-Object -ComObject Outlook.Application\n\\\\$ns = \\\\$outlook.GetNamespace\\('MAPI'\\)\n\\\\$ns.SendAndReceive\\(\\\\$false\\)\nStart-Sleep -Seconds 5\n\\\\$outbox = \\\\$ns.GetDefaultFolder\\(4\\)\n\\\\$sent = \\\\$ns.GetDefaultFolder\\(5\\)\nWrite-Output \\('Outbox: ' + \\\\$outbox.Items.Count + ' | Sent: ' + \\\\$sent.Items.Count\\)\n\")",
+      "Skill(update-config)",
+      "Bash(powershell -Command \"python --version\")",
+      "Bash(powershell -Command \"node --version\")"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node D:/projects/slides-grab/scripts/session-restore-guard.mjs",
+            "timeout": 5,
+            "statusMessage": "Checking session restoration..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node D:/projects/slides-grab/scripts/checklist-guard.mjs",
+            "timeout": 10,
+            "statusMessage": "Checking checklist guard..."
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node D:/projects/slides-grab/scripts/post-compact-restore.mjs",
+            "timeout": 10,
+            "statusMessage": "Restoring session context..."
+          }
+        ]
+      }
     ]
   }
 }

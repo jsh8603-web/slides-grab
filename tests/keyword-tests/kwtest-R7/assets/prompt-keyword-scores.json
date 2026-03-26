@@ -1,0 +1,660 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nodes": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flow subtle gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spaceport": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "launch": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tower": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouetted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern spaceport": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall launch": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "launch tower": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tower silhouetted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk tall launch": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall launch tower": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "launch tower silhouetted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "slate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "slate faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data fine paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "slate faint gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vessel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sail": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden sailing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sailing vessel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm sea": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sail catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wooden sailing vessel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky atmospheric grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture dramatic directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "observatory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dome": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scientific": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wonder": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern observatory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "observatory dome": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scientific wonder": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wonder golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern observatory dome": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scientific wonder golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wonder golden sunrise": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-03-18T16:16:43.541Z",
+  "summary": {
+    "total": 25,
+    "pass": 25,
+    "warn": 21,
+    "fail": 4,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 20.2,
+    "min": 17,
+    "max": 22,
+    "distribution": {
+      "25": 0,
+      "23-24": 0,
+      "20-22": 21,
+      "15-19": 4,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 20.2,
+      "count": 12
+    },
+    "icon": {
+      "avg": 20,
+      "count": 5
+    },
+    "cover": {
+      "avg": 21,
+      "count": 2
+    },
+    "frame": {
+      "avg": 20,
+      "count": 6
+    }
+  },
+  "by_rule": {
+    "IV-10": 4,
+    "IP-03": 3,
+    "IV-02": 1,
+    "IP-08": 1,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 19,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 3,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 16,
+      "total": 18,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 2,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": [
+          "Red cross symbol",
+          "White cross symbol"
+        ]
+      }
+    },
+    {
+      "slide": 13,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 21,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 4,
+        "presentation_fit": 3,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.1,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 43,
+      "severity": "HIGH",
+      "action": "FAIL rate 43% exceeds 30%. Review VQA gate threshold (current: 20) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 37,
+    "retried": 12
+  }
+}

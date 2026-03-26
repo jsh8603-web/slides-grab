@@ -1,0 +1,232 @@
+{
+  "timestamp": "2026-03-19T12:13:49.826Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 2,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.9,
+    "min": 18,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 1,
+      "25-27": 1,
+      "22-24": 2,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "frame": {
+      "avg": 21.3,
+      "count": 2
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IP-14": 4,
+    "IP-15": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 18,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 1,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "DATA COLLECTION",
+          "PROCESSING",
+          "APPLICATION"
+        ],
+        "pf_reason": "The prompt requested the 'application' tier to be at the 'smallest base', but the image shows it at the widest base."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 1,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "한글",
+          "20 20",
+          "GLAZI",
+          "Talk",
+          "Rusk"
+        ]
+      }
+    },
+    {
+      "slide": 3,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested streams converging into a central hub, but the image shows streams diverging from a central hub, which is the opposite direction of flow specified in the prompt. Also, 'on cr' at the end of the prompt seems cut off and was not fully addressed by the image."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 26,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "text_absence",
+      "avg": 2.7,
+      "severity": "HIGH",
+      "action": "Check IP-11 subjects (compass, clock, etc). Verify 'Absolutely no text' is present in all prompts. Consider adding 'no words, no letters, no characters' reinforcement.",
+      "affected_slides": [
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.4,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 43,
+      "severity": "HIGH",
+      "action": "FAIL rate 43% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "cinematic (avg 26.8, n=2)",
+        "wide-angle (avg 26.8, n=2)",
+        "aerial (avg 26.8, n=2)",
+        "city (avg 26.8, n=2)",
+        "dusk (avg 26.8, n=2)"
+      ],
+      "bottom_keywords": [
+        "main (avg 21.8, n=2)",
+        "element (avg 21.8, n=2)",
+        "offset (avg 21.8, n=2)",
+        "labels (avg 21.8, n=2)",
+        "annotations (avg 21.8, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "photography (avg 27.3, n=5)",
+        "pattern (avg 27.2, n=5)",
+        "illuminating (avg 27.1, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 68 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "smallest (avg 26.8, n=5)",
+        "widest (avg 26.4, n=5)",
+        "narrowing down (avg 26.3, n=5)",
+        "sections narrowing down (avg 26.3, n=5)",
+        "down (avg 26.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 220 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "charts (avg 27.5, n=5)",
+        "data warm paper (avg 27.5, n=6)",
+        "data warm (avg 27.5, n=6)",
+        "faint (avg 27.3, n=5)",
+        "fiber pattern (avg 27.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 104 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 150 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 7,
+    "retried": 2
+  }
+}

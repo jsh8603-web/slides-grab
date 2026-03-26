@@ -1,0 +1,46 @@
+{
+  "slide": 4,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "Style: Professional, data-driven, forward-looking executive briefing. No text.",
+  "attempt": 3,
+  "finishReason": "STOP",
+  "brightness": 77,
+  "ip": [
+    {
+      "rule": "IP-08",
+      "level": "WARN",
+      "msg": "Prompt too long (636 chars > 600) — Flash may ignore parts"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 1,
+      "text_absence": 2,
+      "composition": 3,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "co_reason": "The image is very busy with detailed screens and a glowing table, leaving limited clean negative space for text overlay without obscuring content.",
+      "detected_text": [
+        "INFORMATION SESSION",
+        "PEN SULTING HOUSE",
+        "KANACF",
+        "various unreadable text and symbols"
+      ],
+      "pf_reason": "The image shows a modern executive briefing room with people and digital displays, which completely contradicts the prompt's description of an ancient stone labyrinth seen from above with warm golden hour light."
+    },
+    "total": 16.5,
+    "detected_text": [
+      "INFORMATION SESSION",
+      "PEN SULTING HOUSE",
+      "KANACF",
+      "various unreadable text and symbols"
+    ],
+    "reasons": {
+      "pf_reason": "The image shows a modern executive briefing room with people and digital displays, which completely contradicts the prompt's description of an ancient stone labyrinth seen from above with warm golden hour light.",
+      "co_reason": "The image is very busy with detailed screens and a glowing table, leaving limited clean negative space for text overlay without obscuring content."
+    }
+  }
+}

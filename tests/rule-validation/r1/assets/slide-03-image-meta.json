@@ -1,0 +1,25 @@
+{
+  "slide": 3,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "A photorealistic underwater photograph of a white cylindrical submarine server capsule resting on the ocean floor, with bioluminescent particles reflecting off its surface, deep blue and teal water, warm golden light filtering from distant surface, intricate cable connections visible along the hull, no text, 16:9 aspect ratio. Sharp focus, high quality. Ample negative space on one side for text overlay. Use natural realistic colors appropriate to the subject, not artificial color palette.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 77,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 27.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

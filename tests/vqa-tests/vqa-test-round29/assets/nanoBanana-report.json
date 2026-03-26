@@ -1,0 +1,212 @@
+{
+  "timestamp": "2026-03-19T04:25:08.523Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.8,
+    "min": 23,
+    "max": 25,
+    "distribution": {
+      "25": 16,
+      "23-24": 4,
+      "20-22": 0,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 5
+    },
+    "metaphor": {
+      "avg": 25,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IV-03": 10,
+    "IP-09": 1,
+    "IV-10": 3,
+    "IP-03": 1,
+    "IP-11": 1,
+    "IV-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 10,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'Primary steel gray' as part of the color palette, but this color is entirely absent from the image. The image only uses tangerine for outlines and warm white for the background, missing the primary color element requested by the prompt. However, the icons themselves and their layout match the description well, and the specified accent and background colors are correct for what is present in the image. The stroke weight is uniform and consistent as requested. The lack of the primary color is the only significant deviation from the prompt's instructions. As such, the image is adequate with regard to the prompt, but not good or excellent as it deviates in a significant aspect of the color palette requested. Therefore, the image has been given a score of 3 for prompt fidelity. (Prompt - Style: Professional, bold modern. Color palette: Primary steel gray , Accent tangerine , Background warm white. A set of 4 matching outline icons on white background in a 2x2 grid: a lightning bolt, a battery, a solar panel, a wind turbine. Tangerine outlines. Uniform 2px stroke weight. Consistent s). The generated image successfully depicted the 4 icons in the correct positions, with the tangerine outlines, and on a warm white background, with professional, bold, and modern aesthetic. The uniform 2px stroke weight and consistent style were also achieved. However, the prompt specifically requested 'Primary steel gray' in the color palette, which is not present in the image. Therefore, the image doesn't fully adhere to the specified color palette. The lack of one of the main colors requested is a significant deviation from the prompt. Thus, a rating of 3 for prompt fidelity is assigned. The image is adequate, matching most of the prompt, but not good or excellent as it misses a key color element. However, other aspects like the uniform 2px stroke weight and consistent style were successfully implemented. The image is adequate, as it matches most of the prompt's requirements, but the absence of the 'Primary steel gray' color prevents a higher score. So, a score of 3 is assigned to reflect its adequate but incomplete fulfillment of the prompt. (Prompt - Style: Professional, bold modern. Color palette: Primary steel gray , Accent tangerine , Background warm white. A set of 4 matching outline icons on white background in a 2x2 grid: a lightning bolt, a battery, a solar panel, a wind turbine. Tangerine outlines. Uniform 2px stroke weight. Consistent s) The image successfully renders the requested set of four outline icons (lightning bolt, battery, solar panel, wind turbine) in a 2x2 grid on a warm white background with tangerine outlines and uniform stroke weight, aligning with the "
+      }
+    },
+    {
+      "slide": 6,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The 'tangerine' accent color is quite muted in the image, appearing more like a burnt orange or rust, rather than a bold, vibrant tangerine as the prompt might suggest for 'bold modern' style. The rightmost circle also has a very pale peach color, which was not explicitly mentioned in the truncated prompt but generally fits the muted palette. The overall palette is more muted than 'bold modern' might imply for some interpretations of 'bold'. However, the structure and main colors match well."
+      }
+    },
+    {
+      "slide": 17,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 4,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "stylized 'P' shapes on boxes",
+          "abstract symbols on control panel"
+        ]
+      }
+    },
+    {
+      "slide": 1,
+      "total": 25,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "bold (avg 25, n=2)",
+        "tangerine orange (avg 25, n=4)",
+        "cinematic (avg 25, n=5)",
+        "sunset (avg 25, n=2)",
+        "sky (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "panel (avg 22, n=2)",
+        "icons (avg 22.5, n=2)",
+        "2x2 (avg 22.5, n=2)",
+        "grid (avg 22.5, n=2)",
+        "2x2 grid (avg 22.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 25, n=5)",
+        "thin (avg 25, n=5)",
+        "gold (avg 25, n=5)",
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 13 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.6, n=5)",
+        "filled (avg 24.5, n=6)",
+        "silhouette (avg 24.5, n=6)",
+        "fill (avg 24.5, n=6)",
+        "coral (avg 24.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 29 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "bright teal (avg 24.7, n=5)",
+        "silver (avg 24.7, n=5)",
+        "ice (avg 24.7, n=5)",
+        "midnight (avg 24.7, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 40 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.8, n=6)",
+        "pattern (avg 24.5, n=8)",
+        "in pale (avg 24.4, n=5)",
+        "thin (avg 24.4, n=6)",
+        "pattern in (avg 24.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 29 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sunset (avg 25, n=5)",
+        "water (avg 24.9, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "golden (avg 24.9, n=7)",
+        "field (avg 24.9, n=7)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 29 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 1
+  }
+}

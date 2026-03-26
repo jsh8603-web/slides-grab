@@ -1,0 +1,179 @@
+{
+  "frame": {
+    "shades": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections alternating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bar": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "bars": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "blocks": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "alternating": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 4
+    },
+    "donut": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "blue": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "labels": {
+      "avg": 25,
+      "count": 8,
+      "pf": 3.5
+    },
+    "annotations": {
+      "avg": 25,
+      "count": 8,
+      "pf": 3.5
+    },
+    "main": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "element": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "offset": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "main element": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "element offset": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "main element offset": {
+      "avg": 24.5,
+      "count": 4,
+      "pf": 3
+    },
+    "sections": {
+      "avg": 24.4,
+      "count": 4,
+      "pf": 3.3
+    },
+    "radial": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "connection": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "circle": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "thin": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "lines": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "circles": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "radial connection": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "by thin": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "thin lines": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "by thin lines": {
+      "avg": 23.8,
+      "count": 2,
+      "pf": 2.5
+    },
+    "pointed": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "horizontally": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "different": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shade": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pointed sections": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "different shade": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue sections": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  }
+}

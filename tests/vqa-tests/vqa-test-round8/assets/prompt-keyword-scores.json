@@ -1,0 +1,164 @@
+{
+  "background": {
+    "tones": {
+      "avg": 21.6,
+      "count": 5
+    },
+    "cinematic wide": {
+      "avg": 21.6,
+      "count": 5
+    },
+    "wide shot": {
+      "avg": 21.6,
+      "count": 5
+    },
+    "cool": {
+      "avg": 21.4,
+      "count": 8
+    },
+    "shot of": {
+      "avg": 21.3,
+      "count": 7
+    },
+    "shot": {
+      "avg": 21.2,
+      "count": 9
+    },
+    "cinematic": {
+      "avg": 21.1,
+      "count": 11
+    },
+    "white": {
+      "avg": 21,
+      "count": 6
+    },
+    "blue": {
+      "avg": 21,
+      "count": 10
+    },
+    "blue and": {
+      "avg": 21,
+      "count": 3
+    },
+    "and white": {
+      "avg": 21,
+      "count": 3
+    },
+    "soft": {
+      "avg": 21,
+      "count": 3
+    },
+    "cool blue": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "water": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "night": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "deep": {
+      "avg": 20.5,
+      "count": 6
+    },
+    "sky": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "atmosphere": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "frame": {
+    "line": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "light blue": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "blue": {
+      "avg": 22,
+      "count": 5
+    },
+    "navy": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "clean": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "flat": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "vector": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "gray": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "clean flat": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "flat vector": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "vector on": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "light gray": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "gray background": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "clean flat vector": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "minimal": {
+      "avg": 21.4,
+      "count": 5
+    },
+    "in navy": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "diagram": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "icon": {
+    "navy": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "on white": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "white background": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 21,
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "frame": {
+    "funnel": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "widest": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing down": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing down": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "flowchart": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 25,
+      "count": 1,
+      "pf": 5
+    },
+    "bar": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "bars": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "different": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "heights": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "alternating": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "different heights": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "orange alternating": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "alternating colors": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "orange alternating colors": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "chevron": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3.5
+    },
+    "process": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3.5
+    },
+    "arrow-shaped": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3.5
+    },
+    "chevron process": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3.5
+    },
+    "arrow-shaped sections": {
+      "avg": 23,
+      "count": 2,
+      "pf": 3.5
+    },
+    "sections": {
+      "avg": 22.8,
+      "count": 4,
+      "pf": 3.5
+    },
+    "colors": {
+      "avg": 22.7,
+      "count": 3,
+      "pf": 3
+    },
+    "staircase": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 2.5
+    },
+    "ascending": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 2.5
+    },
+    "levels": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 2.5
+    },
+    "ascending levels": {
+      "avg": 22.5,
+      "count": 2,
+      "pf": 2.5
+    },
+    "level": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "orange": {
+      "avg": 21.9,
+      "count": 10,
+      "pf": 3
+    },
+    "shows": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "steps": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "instead": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "requested": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "specified": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "sequence": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "matched": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "additionally": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "there": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "step": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "present": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "steps instead": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "matched additionally": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "orange step": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "step present": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "orange step present": {
+      "avg": 20,
+      "count": 1,
+      "pf": 1
+    },
+    "donut": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "cream": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "hollow": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "orange orange": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "cream sections": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "sections thick": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "cream sections thick": {
+      "avg": 20,
+      "count": 1,
+      "pf": 2
+    },
+    "arrows": {
+      "avg": 19.5,
+      "count": 2,
+      "pf": 3
+    },
+    "thick": {
+      "avg": 17,
+      "count": 2,
+      "pf": 1.5
+    },
+    "prompt": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "explicitly": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "stated": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "flow": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "hub-spoke": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "circle": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "circles": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "connecting": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "elements": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "thin": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "lines": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "prompt explicitly": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "explicitly stated": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "orange circles": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "connecting elements": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "thick arrows": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "thin lines": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    },
+    "prompt explicitly stated": {
+      "avg": 14,
+      "count": 1,
+      "pf": 1
+    }
+  }
+}

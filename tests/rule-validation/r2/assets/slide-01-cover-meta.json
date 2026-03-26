@@ -1,0 +1,40 @@
+{
+  "slide": 1,
+  "tier": null,
+  "type": "photo",
+  "category": "cover",
+  "prompt": "Style: Authoritative, forward-looking, and strategically urgent — conveying both the inevitability of AI agent adoption and the cost of inaction. Color palette: Primary (Deep Navy), Accent (Warm Gold), Background (Warm Ivory), Text (Near Black), Muted (Steel Gray). A photorealistic wide-angle view of a sleek modern corporate office at dusk, warm golden light reflecting off tall glass towers visible through floor-to-ceiling windows, a lone professional silhouetted at a standing desk surrounded by",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 126,
+  "ip": [
+    {
+      "rule": "IP-08",
+      "level": "WARN",
+      "msg": "Prompt too long (705 chars > 600) — Flash may ignore parts"
+    },
+    {
+      "rule": "IP-09",
+      "level": "WARN",
+      "msg": "Landscape ratio 16:9 with vertical keywords — mismatch"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 2,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": [
+        "Illegible text and symbols within holographic displays"
+      ]
+    },
+    "total": 23,
+    "detected_text": [
+      "Illegible text and symbols within holographic displays"
+    ],
+    "reasons": {}
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-03-19T04:19:05.668Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.2,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 12,
+      "23-24": 4,
+      "20-22": 4,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "background": {
+      "avg": 23.8,
+      "count": 5
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-10": 2,
+    "IP-08": 1,
+    "IV-09": 3,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 8,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows a three-by-five grid with 15 squares, not a three-by-three grid with 9 squares as specified. The specific color distribution requested for a 3x3 grid also does not match the generated image's 3x5 layout."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The horizontal line is broken into segments, not a continuous line as implied by 'A thin deep plum horizontal line'. Additionally, the color of the third circle is the background color (lavender mist), which was not designated as a primary or accent color for elements on the line."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 18,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The deep plum arc appears to cover closer to six-tenths rather than seven-tenths of the circle. The remaining portion of the ring is divided into two distinct colors (champagne and a light grey), whereas the prompt implies one accent color for the remainder."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "refined (avg 25, n=3)",
+        "plum purple (avg 25, n=4)",
+        "luxurious refined (avg 25, n=3)",
+        "flowers (avg 25, n=2)",
+        "sky (avg 25, n=3)"
+      ],
+      "bottom_keywords": [
+        "pale champagne (avg 21.5, n=2)",
+        "pale (avg 22.7, n=3)",
+        "middle (avg 23, n=2)",
+        "medium (avg 23, n=2)",
+        "first (avg 23, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "empty (avg 24.8, n=6)",
+        "cinematic (avg 24.6, n=6)",
+        "sky (avg 24.5, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 10 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.6, n=5)",
+        "coral (avg 24.4, n=5)",
+        "filled (avg 24.4, n=6)",
+        "silhouette (avg 24.4, n=6)",
+        "fill (avg 24.4, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "bright teal (avg 24.7, n=5)",
+        "silver (avg 24.7, n=5)",
+        "ice (avg 24.7, n=6)",
+        "midnight (avg 24.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 43 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.8, n=7)",
+        "thin (avg 24.5, n=6)",
+        "in pale (avg 24.4, n=5)",
+        "centered (avg 24.4, n=6)",
+        "filled (avg 24.4, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 27 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "golden (avg 24.9, n=5)",
+        "water (avg 24.9, n=6)",
+        "field (avg 24.9, n=6)",
+        "cinematic wide (avg 24.9, n=6)",
+        "shallow (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 27 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

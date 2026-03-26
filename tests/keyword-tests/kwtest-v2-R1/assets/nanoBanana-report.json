@@ -1,0 +1,219 @@
+{
+  "timestamp": "2026-03-19T12:00:44.091Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 1,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.2,
+    "min": 17,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 1,
+      "25-27": 2,
+      "22-24": 1,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 17,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 26.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-15": 1,
+    "IP-14": 2,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 17,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 2,
+        "color_harmony": 5,
+        "presentation_fit": 2,
+        "ch_reason": "",
+        "co_reason": "The central diagram is too dominant and leaves insufficient negative space for title and content text overlay.",
+        "detected_text": [],
+        "pf_reason": "The prompt requested 'four tiers', but the image displays seven concentric rings."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The campus depicted does not distinctly resemble a hospital; it appears more like a corporate or university campus, lacking typical hospital architectural cues or signage."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 4,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "EXIT"
+        ]
+      }
+    },
+    {
+      "slide": 4,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 4,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "Caduceus symbol",
+          "Heart symbol",
+          "DNA double helix symbol",
+          "Microscope/Cell structure symbol",
+          "Abstract medical/scientific symbols"
+        ]
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 33,
+      "severity": "HIGH",
+      "action": "FAIL rate 33% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "tones (avg 27, n=2)",
+        "texture (avg 27, n=2)",
+        "gold (avg 26.5, n=2)",
+        "medical (avg 26.5, n=2)",
+        "warm gold (avg 26.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "cinematic (avg 25, n=2)",
+        "wide-angle (avg 25, n=2)",
+        "hospital (avg 25, n=2)",
+        "dusk (avg 25, n=2)",
+        "green (avg 25.5, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "wide-angle (avg 27.5, n=5)",
+        "soft (avg 27.5, n=5)",
+        "dusk (avg 27.3, n=5)",
+        "aerial (avg 27.3, n=5)",
+        "pattern (avg 27.2, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 53 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "tiers (avg 26.9, n=5)",
+        "narrowest (avg 26.8, n=5)",
+        "smallest (avg 26.5, n=5)",
+        "pyramid (avg 26.5, n=5)",
+        "widest (avg 26.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 213 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "data warm paper (avg 27.5, n=5)",
+        "data warm (avg 27.5, n=6)",
+        "fiber pattern (avg 27.3, n=6)",
+        "paper (avg 27.3, n=6)",
+        "paper texture (avg 27.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 99 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 142 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 6,
+    "retried": 1
+  }
+}

@@ -1,0 +1,1366 @@
+{
+  "cover": {
+    "photorealistic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "underwater": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cylindrical": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "module": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "submerged": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cool": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hull": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "swimming": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nearby": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filtering": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic underwater": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "underwater scene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cylindrical server": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server module": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "module submerged": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ocean water": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal hull": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fish swimming": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "swimming nearby": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue water": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water fading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface full": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic underwater scene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cylindrical server module": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server module submerged": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fish swimming nearby": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue water fading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface full cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "server": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "capsule": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "particles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "connections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hull": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic underwater": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "submarine server": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server capsule": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "capsule resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bioluminescent particles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "particles reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface intricate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate cable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cable connections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cylindrical submarine server": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "submarine server capsule": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server capsule resting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bioluminescent particles reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "particles reflecting off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant surface intricate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface intricate cable": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate cable connections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "underwater": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "off": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "concept": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illustration": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "south": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "korean": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coastline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "module": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "east": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "turbines": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coastal": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fishing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "village": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shore": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic concept": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "concept illustration": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "south korean": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "korean coastline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "underwater data": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "east sea": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by offshore": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore wind": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wind turbines": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon traditional": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional coastal": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coastal fishing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fishing village": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shore reflecting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off calm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm sea": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface full": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic concept illustration": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "south korean coastline": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by offshore wind": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offshore wind turbines": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon traditional coastal": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "traditional coastal fishing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coastal fishing village": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shore reflecting off": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off calm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off calm sea": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm sea surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sea surface full": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "angle aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective warm golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cylindrical": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "submarine": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "ocean": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "floor": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "bioluminescent": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "surface": {
+      "avg": 26.3,
+      "count": 3,
+      "pf": 4.7
+    },
+    "water": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "golden": {
+      "avg": 26.3,
+      "count": 3,
+      "pf": 4.7
+    },
+    "intricate": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "cylindrical submarine": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "ocean floor": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "water warm": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "warm golden": {
+      "avg": 26.3,
+      "count": 3,
+      "pf": 4.7
+    },
+    "water warm golden": {
+      "avg": 26.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "photorealistic": {
+      "avg": 25.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "warm": {
+      "avg": 25.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "sea": {
+      "avg": 25.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "aerial": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 4.5
+    },
+    "data": {
+      "avg": 25.2,
+      "count": 3,
+      "pf": 4.3
+    },
+    "futuristic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "vision": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "modules": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "fiber": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "optic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "cables": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "life": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "swimming": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "them": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "brass-toned": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "metallic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "surfaces": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "riveted": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "textures": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "indigo": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "beams": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "penetrating": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic futuristic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "futuristic vision": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "submarine data": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "by glowing": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing fiber": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "fiber optic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "optic cables": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "cables bioluminescent": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "bioluminescent sea": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "sea life": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "life swimming": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "them brass-toned": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "brass-toned metallic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "metallic surfaces": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "intricate riveted": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "riveted textures": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "ocean water": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "beams penetrating": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic futuristic vision": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "cylindrical submarine data": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "by glowing fiber": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "glowing fiber optic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "fiber optic cables": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "optic cables bioluminescent": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "cables bioluminescent sea": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "bioluminescent sea life": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "sea life swimming": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "them brass-toned metallic": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "brass-toned metallic surfaces": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "intricate riveted textures": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "ocean water warm": {
+      "avg": 25,
+      "count": 1,
+      "pf": 4
+    },
+    "view": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "crowded": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "urban": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "rooftop": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "cooling": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "towers": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "emitting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "steam": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "dense": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "city": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "buildings": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "directional": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "lighting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "late": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "afternoon": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "sun": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "texture": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "faint": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "grid": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "lines": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "suggesting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "density": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "aerial view": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "crowded urban": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "urban data": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "cooling towers": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "towers emitting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "emitting steam": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "by dense": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "dense city": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "city buildings": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "buildings warm": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "warm directional": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "directional lighting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "late afternoon": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "afternoon sun": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "sun photorealistic": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic texture": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "texture warm": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "directional faint": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "faint grid": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "grid lines": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "lines suggesting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "suggesting urban": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "urban density": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "crowded urban data": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "cooling towers emitting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "towers emitting steam": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "by dense city": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "dense city buildings": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "city buildings warm": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "buildings warm directional": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "warm directional lighting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "late afternoon sun": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "afternoon sun photorealistic": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "sun photorealistic texture": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "photorealistic texture warm": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "texture warm directional": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "warm directional faint": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "directional faint grid": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "faint grid lines": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "grid lines suggesting": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "lines suggesting urban": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    },
+    "suggesting urban density": {
+      "avg": 24,
+      "count": 1,
+      "pf": 4
+    }
+  }
+}

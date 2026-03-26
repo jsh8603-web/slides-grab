@@ -1,0 +1,25 @@
+{
+  "slide": 3,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Professional, data-driven, forward-looking executive briefing. A photorealistic close-up of an intricate brass clockwork mechanism with texture warm directional lighting casting long precise shadows across the gear surfaces, traditional craftsmanship aesthetic with deep focus reveals the interlocking precision of the components, elevated 45-degree angle shot composition, rich amber and dark metallic tones, pure white () background isolating the mechanism as a corporate metaphor, no text, ",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 154,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 27.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

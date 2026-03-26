@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-03-18T16:07:19.206Z",
+  "summary": {
+    "total": 25,
+    "pass": 25,
+    "warn": 21,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 21.2,
+    "min": 19,
+    "max": 25,
+    "distribution": {
+      "25": 2,
+      "23-24": 1,
+      "20-22": 21,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 21.7,
+      "count": 11
+    },
+    "icon": {
+      "avg": 20.4,
+      "count": 5
+    },
+    "cover": {
+      "avg": 22,
+      "count": 3
+    },
+    "frame": {
+      "avg": 20.7,
+      "count": 6
+    }
+  },
+  "by_rule": {
+    "IP-03": 3,
+    "IV-02": 1,
+    "IV-03": 1,
+    "IV-10": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 4,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 4,
+        "presentation_fit": 3,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 7,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 9,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 10,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": []
+}

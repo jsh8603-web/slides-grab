@@ -1,0 +1,3224 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "bamboo": {
+      "avg": 25,
+      "count": 1
+    },
+    "stems": {
+      "avg": 25,
+      "count": 1
+    },
+    "dense": {
+      "avg": 25,
+      "count": 1
+    },
+    "grove": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 2
+    },
+    "gold": {
+      "avg": 25,
+      "count": 2
+    },
+    "sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "zen": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic shot": {
+      "avg": 25,
+      "count": 1
+    },
+    "of tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall bamboo": {
+      "avg": 25,
+      "count": 1
+    },
+    "bamboo stems": {
+      "avg": 25,
+      "count": 1
+    },
+    "stems in": {
+      "avg": 25,
+      "count": 1
+    },
+    "dense grove": {
+      "avg": 25,
+      "count": 1
+    },
+    "grove dark": {
+      "avg": 25,
+      "count": 1
+    },
+    "dark forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "forest green": {
+      "avg": 25,
+      "count": 2
+    },
+    "green tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich gold": {
+      "avg": 25,
+      "count": 2
+    },
+    "gold sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "filtering through": {
+      "avg": 25,
+      "count": 1
+    },
+    "through serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene zen": {
+      "avg": 25,
+      "count": 1
+    },
+    "zen atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere vast": {
+      "avg": 25,
+      "count": 1
+    },
+    "left side": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall bamboo stems": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft rich gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich gold sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold sunlight filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene zen atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "understated": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxury": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "green background": {
+      "avg": 25,
+      "count": 1
+    },
+    "single thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold horizontal": {
+      "avg": 25,
+      "count": 1
+    },
+    "horizontal line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line in": {
+      "avg": 25,
+      "count": 1
+    },
+    "third understated": {
+      "avg": 25,
+      "count": 1
+    },
+    "understated luxury": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxury mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "central empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty area": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rich gold": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "short": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal vertical": {
+      "avg": 25,
+      "count": 1
+    },
+    "vertical bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart frame": {
+      "avg": 25,
+      "count": 2
+    },
+    "first bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green second": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold third": {
+      "avg": 25,
+      "count": 1
+    },
+    "third bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 25,
+      "count": 1
+    },
+    "short in": {
+      "avg": 25,
+      "count": 1
+    },
+    "green fourth": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium-tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-tall in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold four": {
+      "avg": 25,
+      "count": 2
+    },
+    "vertical bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "total side": {
+      "avg": 25,
+      "count": 1
+    },
+    "side by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "first bar tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green second": {
+      "avg": 25,
+      "count": 1
+    },
+    "green second bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "green fourth bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth bar medium-tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle at": {
+      "avg": 25,
+      "count": 1
+    },
+    "top connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines to": {
+      "avg": 25,
+      "count": 1
+    },
+    "three circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles below": {
+      "avg": 25,
+      "count": 1
+    },
+    "left circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold center": {
+      "avg": 25,
+      "count": 1
+    },
+    "center circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle light": {
+      "avg": 25,
+      "count": 1
+    },
+    "green right": {
+      "avg": 25,
+      "count": 1
+    },
+    "right circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "four circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "two rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "by thin lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle rich gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle pale gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked area": {
+      "avg": 25,
+      "count": 1
+    },
+    "area chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold top": {
+      "avg": 25,
+      "count": 1
+    },
+    "top layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer light": {
+      "avg": 25,
+      "count": 1
+    },
+    "green three": {
+      "avg": 25,
+      "count": 1
+    },
+    "three smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked from": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer rich gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar": {
+      "avg": 24,
+      "count": 2
+    },
+    "medium": {
+      "avg": 24,
+      "count": 2
+    },
+    "bars": {
+      "avg": 24,
+      "count": 2
+    },
+    "bars total": {
+      "avg": 24,
+      "count": 2
+    },
+    "connected": {
+      "avg": 24,
+      "count": 2
+    },
+    "circles": {
+      "avg": 24,
+      "count": 2
+    },
+    "large forest": {
+      "avg": 24,
+      "count": 2
+    },
+    "green circle": {
+      "avg": 24,
+      "count": 2
+    },
+    "circles total": {
+      "avg": 24,
+      "count": 2
+    },
+    "forest green circle": {
+      "avg": 24,
+      "count": 2
+    },
+    "middle": {
+      "avg": 24,
+      "count": 2
+    },
+    "chart": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "rich": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "gold": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "rich gold": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "light green": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "pale": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "sage": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "forest": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "green": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "on pale": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "pale sage": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "sage background": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "forest green": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "pale gold": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "hub-spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "diagram": {
+      "avg": 23,
+      "count": 1
+    },
+    "smaller": {
+      "avg": 23,
+      "count": 1
+    },
+    "evenly": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "upper-right": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-right": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-left": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth": {
+      "avg": 23,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 23,
+      "count": 1
+    },
+    "outer": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal hub-spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "hub-spoke diagram": {
+      "avg": 23,
+      "count": 1
+    },
+    "diagram on": {
+      "avg": 23,
+      "count": 1
+    },
+    "circle in": {
+      "avg": 23,
+      "count": 1
+    },
+    "center connected": {
+      "avg": 23,
+      "count": 1
+    },
+    "connected to": {
+      "avg": 23,
+      "count": 1
+    },
+    "five smaller": {
+      "avg": 23,
+      "count": 1
+    },
+    "smaller circles": {
+      "avg": 23,
+      "count": 1
+    },
+    "circles arranged": {
+      "avg": 23,
+      "count": 1
+    },
+    "arranged evenly": {
+      "avg": 23,
+      "count": 1
+    },
+    "evenly around": {
+      "avg": 23,
+      "count": 1
+    },
+    "around it": {
+      "avg": 23,
+      "count": 1
+    },
+    "it first": {
+      "avg": 23,
+      "count": 1
+    },
+    "first spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold at": {
+      "avg": 23,
+      "count": 1
+    },
+    "top second": {
+      "avg": 23,
+      "count": 1
+    },
+    "second spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke light": {
+      "avg": 23,
+      "count": 1
+    },
+    "green at": {
+      "avg": 23,
+      "count": 1
+    },
+    "at upper-right": {
+      "avg": 23,
+      "count": 1
+    },
+    "upper-right third": {
+      "avg": 23,
+      "count": 1
+    },
+    "third spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke pale": {
+      "avg": 23,
+      "count": 1
+    },
+    "at lower-right": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-right fourth": {
+      "avg": 23,
+      "count": 1
+    },
+    "fourth spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "medium green": {
+      "avg": 23,
+      "count": 1
+    },
+    "at lower-left": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-left fifth": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "at upper-left": {
+      "avg": 23,
+      "count": 1
+    },
+    "upper-left five": {
+      "avg": 23,
+      "count": 1
+    },
+    "five outer": {
+      "avg": 23,
+      "count": 1
+    },
+    "outer circles": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal hub-spoke diagram": {
+      "avg": 23,
+      "count": 1
+    },
+    "it first spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "first spoke rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke rich gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke pale gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-right fourth spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "fourth spoke medium": {
+      "avg": 23,
+      "count": 1
+    },
+    "spoke medium green": {
+      "avg": 23,
+      "count": 1
+    },
+    "lower-left fifth spoke": {
+      "avg": 23,
+      "count": 1
+    },
+    "fifth spoke gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "gantt": {
+      "avg": 23,
+      "count": 1
+    },
+    "different": {
+      "avg": 23,
+      "count": 1
+    },
+    "positions": {
+      "avg": 23,
+      "count": 1
+    },
+    "extending": {
+      "avg": 23,
+      "count": 1
+    },
+    "halfway": {
+      "avg": 23,
+      "count": 1
+    },
+    "three-quarters": {
+      "avg": 23,
+      "count": 1
+    },
+    "end": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal gantt": {
+      "avg": 23,
+      "count": 1
+    },
+    "gantt chart": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "bars at": {
+      "avg": 23,
+      "count": 1
+    },
+    "at different": {
+      "avg": 23,
+      "count": 1
+    },
+    "different vertical": {
+      "avg": 23,
+      "count": 1
+    },
+    "vertical positions": {
+      "avg": 23,
+      "count": 1
+    },
+    "positions top": {
+      "avg": 23,
+      "count": 1
+    },
+    "top bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar forest": {
+      "avg": 23,
+      "count": 1
+    },
+    "green starting": {
+      "avg": 23,
+      "count": 1
+    },
+    "left extending": {
+      "avg": 23,
+      "count": 1
+    },
+    "extending halfway": {
+      "avg": 23,
+      "count": 1
+    },
+    "halfway middle": {
+      "avg": 23,
+      "count": 1
+    },
+    "middle bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold starting": {
+      "avg": 23,
+      "count": 1
+    },
+    "quarter extending": {
+      "avg": 23,
+      "count": 1
+    },
+    "extending to": {
+      "avg": 23,
+      "count": 1
+    },
+    "to three-quarters": {
+      "avg": 23,
+      "count": 1
+    },
+    "three-quarters bottom": {
+      "avg": 23,
+      "count": 1
+    },
+    "bottom bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar light": {
+      "avg": 23,
+      "count": 1
+    },
+    "half extending": {
+      "avg": 23,
+      "count": 1
+    },
+    "to end": {
+      "avg": 23,
+      "count": 1
+    },
+    "end three": {
+      "avg": 23,
+      "count": 1
+    },
+    "three bars": {
+      "avg": 23,
+      "count": 1
+    },
+    "different positions": {
+      "avg": 23,
+      "count": 1
+    },
+    "minimal gantt chart": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar forest green": {
+      "avg": 23,
+      "count": 1
+    },
+    "forest green starting": {
+      "avg": 23,
+      "count": 1
+    },
+    "extending halfway middle": {
+      "avg": 23,
+      "count": 1
+    },
+    "halfway middle bar": {
+      "avg": 23,
+      "count": 1
+    },
+    "middle bar rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "bar rich gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich gold starting": {
+      "avg": 23,
+      "count": 1
+    },
+    "first": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "second": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "fourth": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "chart on": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "background first": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "circle": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "starting": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "starting from": {
+      "avg": 22.5,
+      "count": 2
+    },
+    "thick": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "going": {
+      "avg": 22,
+      "count": 1
+    },
+    "clockwise": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "three-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "two-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal thick": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "ring on": {
+      "avg": 22,
+      "count": 1
+    },
+    "background arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 22,
+      "count": 1
+    },
+    "top going": {
+      "avg": 22,
+      "count": 1
+    },
+    "going clockwise": {
+      "avg": 22,
+      "count": 1
+    },
+    "clockwise forest": {
+      "avg": 22,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc covering": {
+      "avg": 22,
+      "count": 1
+    },
+    "covering approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "approximately three-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "three-fifths of": {
+      "avg": 22,
+      "count": 1
+    },
+    "the circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining two-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "two-fifths in": {
+      "avg": 22,
+      "count": 1
+    },
+    "gray bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal thick progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick progress ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "going clockwise forest": {
+      "avg": 22,
+      "count": 1
+    },
+    "clockwise forest green": {
+      "avg": 22,
+      "count": 1
+    },
+    "forest green filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "green filled arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled arc covering": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc covering approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "covering approximately three-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle remaining two-fifths": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "covering": {
+      "avg": 21,
+      "count": 2
+    },
+    "pie": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge": {
+      "avg": 20,
+      "count": 1
+    },
+    "roughly": {
+      "avg": 20,
+      "count": 1
+    },
+    "remainder": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedges": {
+      "avg": 20,
+      "count": 1
+    },
+    "complete": {
+      "avg": 20,
+      "count": 1
+    },
+    "minimal pie": {
+      "avg": 20,
+      "count": 1
+    },
+    "pie chart": {
+      "avg": 20,
+      "count": 1
+    },
+    "first wedge": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge forest": {
+      "avg": 20,
+      "count": 1
+    },
+    "green covering": {
+      "avg": 20,
+      "count": 1
+    },
+    "covering roughly": {
+      "avg": 20,
+      "count": 1
+    },
+    "roughly one": {
+      "avg": 20,
+      "count": 1
+    },
+    "third second": {
+      "avg": 20,
+      "count": 1
+    },
+    "second wedge": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge rich": {
+      "avg": 20,
+      "count": 1
+    },
+    "gold covering": {
+      "avg": 20,
+      "count": 1
+    },
+    "third wedge": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge light": {
+      "avg": 20,
+      "count": 1
+    },
+    "covering one": {
+      "avg": 20,
+      "count": 1
+    },
+    "quarter fourth": {
+      "avg": 20,
+      "count": 1
+    },
+    "fourth wedge": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge pale": {
+      "avg": 20,
+      "count": 1
+    },
+    "covering the": {
+      "avg": 20,
+      "count": 1
+    },
+    "the remainder": {
+      "avg": 20,
+      "count": 1
+    },
+    "remainder four": {
+      "avg": 20,
+      "count": 1
+    },
+    "four wedges": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedges total": {
+      "avg": 20,
+      "count": 1
+    },
+    "complete circle": {
+      "avg": 20,
+      "count": 1
+    },
+    "minimal pie chart": {
+      "avg": 20,
+      "count": 1
+    },
+    "first wedge forest": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge forest green": {
+      "avg": 20,
+      "count": 1
+    },
+    "forest green covering": {
+      "avg": 20,
+      "count": 1
+    },
+    "green covering roughly": {
+      "avg": 20,
+      "count": 1
+    },
+    "second wedge rich": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge rich gold": {
+      "avg": 20,
+      "count": 1
+    },
+    "rich gold covering": {
+      "avg": 20,
+      "count": 1
+    },
+    "gold covering roughly": {
+      "avg": 20,
+      "count": 1
+    },
+    "fourth wedge pale": {
+      "avg": 20,
+      "count": 1
+    },
+    "wedge pale gold": {
+      "avg": 20,
+      "count": 1
+    },
+    "pale gold covering": {
+      "avg": 20,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "sage": {
+      "avg": 25,
+      "count": 2
+    },
+    "leaf": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain": {
+      "avg": 25,
+      "count": 1
+    },
+    "tree": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "matching filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled flat": {
+      "avg": 25,
+      "count": 1
+    },
+    "flat icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "on pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale sage": {
+      "avg": 25,
+      "count": 2
+    },
+    "sage background": {
+      "avg": 25,
+      "count": 1
+    },
+    "leaf silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "tree silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green": {
+      "avg": 25,
+      "count": 2
+    },
+    "green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill consistent": {
+      "avg": 25,
+      "count": 1
+    },
+    "consistent natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural style": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun silhouette forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "glass": {
+      "avg": 25,
+      "count": 1
+    },
+    "greenhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants": {
+      "avg": 25,
+      "count": 1
+    },
+    "potting": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "tools": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration of": {
+      "avg": 25,
+      "count": 1
+    },
+    "glass greenhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "greenhouse with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with plants": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants potting": {
+      "avg": 25,
+      "count": 1
+    },
+    "potting bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "bench and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden tools": {
+      "avg": 25,
+      "count": 1
+    },
+    "tools forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold color": {
+      "avg": 25,
+      "count": 1
+    },
+    "color scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "sage accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "plants potting bench": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden tools forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "tools forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale sage accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 24,
+      "count": 2
+    },
+    "grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "icons on": {
+      "avg": 24,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 24,
+      "count": 2
+    },
+    "rich": {
+      "avg": 24,
+      "count": 2
+    },
+    "gold": {
+      "avg": 24,
+      "count": 2
+    },
+    "rich gold": {
+      "avg": 24,
+      "count": 2
+    },
+    "outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "fork": {
+      "avg": 23,
+      "count": 1
+    },
+    "knife": {
+      "avg": 23,
+      "count": 1
+    },
+    "coffee": {
+      "avg": 23,
+      "count": 1
+    },
+    "cup": {
+      "avg": 23,
+      "count": 1
+    },
+    "cupcake": {
+      "avg": 23,
+      "count": 1
+    },
+    "chef": {
+      "avg": 23,
+      "count": 1
+    },
+    "hat": {
+      "avg": 23,
+      "count": 1
+    },
+    "outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "matching outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 23,
+      "count": 1
+    },
+    "fork and": {
+      "avg": 23,
+      "count": 1
+    },
+    "and knife": {
+      "avg": 23,
+      "count": 1
+    },
+    "coffee cup": {
+      "avg": 23,
+      "count": 1
+    },
+    "chef hat": {
+      "avg": 23,
+      "count": 1
+    },
+    "hat rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "gold outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "outlines consistent": {
+      "avg": 23,
+      "count": 1
+    },
+    "chef hat rich": {
+      "avg": 23,
+      "count": 1
+    },
+    "hat rich gold": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich gold outlines": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "background": {
+    "important": {
+      "avg": 25,
+      "count": 1
+    },
+    "prompt": {
+      "avg": 25,
+      "count": 1
+    },
+    "requested": {
+      "avg": 25,
+      "count": 1
+    },
+    "moss-like": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 2
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "provided": {
+      "avg": 25,
+      "count": 1
+    },
+    "detailed": {
+      "avg": 25,
+      "count": 1
+    },
+    "product": {
+      "avg": 25,
+      "count": 1
+    },
+    "display": {
+      "avg": 25,
+      "count": 1
+    },
+    "prominent": {
+      "avg": 25,
+      "count": 1
+    },
+    "items": {
+      "avg": 25,
+      "count": 1
+    },
+    "not": {
+      "avg": 25,
+      "count": 1
+    },
+    "important the": {
+      "avg": 25,
+      "count": 1
+    },
+    "the prompt": {
+      "avg": 25,
+      "count": 1
+    },
+    "prompt requested": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle moss-like": {
+      "avg": 25,
+      "count": 1
+    },
+    "moss-like organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture and": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface the": {
+      "avg": 25,
+      "count": 1
+    },
+    "image provided": {
+      "avg": 25,
+      "count": 1
+    },
+    "provided is": {
+      "avg": 25,
+      "count": 1
+    },
+    "detailed product": {
+      "avg": 25,
+      "count": 1
+    },
+    "product display": {
+      "avg": 25,
+      "count": 1
+    },
+    "display with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with prominent": {
+      "avg": 25,
+      "count": 1
+    },
+    "prominent items": {
+      "avg": 25,
+      "count": 1
+    },
+    "items not": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle background": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle moss-like organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "moss-like organic texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible natural surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "detailed product display": {
+      "avg": 25,
+      "count": 1
+    },
+    "prominent items not": {
+      "avg": 25,
+      "count": 1
+    },
+    "fern": {
+      "avg": 25,
+      "count": 1
+    },
+    "frond": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeat": {
+      "avg": 25,
+      "count": 1
+    },
+    "fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle fern": {
+      "avg": 25,
+      "count": 1
+    },
+    "fern frond": {
+      "avg": 25,
+      "count": 1
+    },
+    "frond silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern in": {
+      "avg": 25,
+      "count": 1
+    },
+    "light green": {
+      "avg": 25,
+      "count": 1
+    },
+    "green on": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical repeat": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeat fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "fresh natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle fern frond": {
+      "avg": 25,
+      "count": 1
+    },
+    "fern frond silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "frond silhouette pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible botanical repeat": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical repeat fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeat fresh natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "regular": {
+      "avg": 25,
+      "count": 1
+    },
+    "octagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "large regular": {
+      "avg": 25,
+      "count": 1
+    },
+    "regular octagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "octagon centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 25,
+      "count": 1
+    },
+    "sage background": {
+      "avg": 25,
+      "count": 1
+    },
+    "background forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled octagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "octagon with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "geometric shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "regular octagon centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled octagon": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin rich gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "pale": {
+      "avg": 24,
+      "count": 3
+    },
+    "sage": {
+      "avg": 24,
+      "count": 3
+    },
+    "barely": {
+      "avg": 24,
+      "count": 3
+    },
+    "visible": {
+      "avg": 24,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "on pale": {
+      "avg": 24,
+      "count": 3
+    },
+    "pale sage": {
+      "avg": 24,
+      "count": 3
+    },
+    "barely visible": {
+      "avg": 24,
+      "count": 3
+    },
+    "gold": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "texture": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "extremely": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "minimal": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "sage barely": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "mood extremely": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "extremely minimal": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pale sage barely": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "sage barely visible": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "foil": {
+      "avg": 22,
+      "count": 1
+    },
+    "shimmer": {
+      "avg": 22,
+      "count": 1
+    },
+    "warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "metallic": {
+      "avg": 22,
+      "count": 1
+    },
+    "warmth": {
+      "avg": 22,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 22,
+      "count": 1
+    },
+    "understated": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle gold": {
+      "avg": 22,
+      "count": 1
+    },
+    "gold foil": {
+      "avg": 22,
+      "count": 1
+    },
+    "foil shimmer": {
+      "avg": 22,
+      "count": 1
+    },
+    "shimmer texture": {
+      "avg": 22,
+      "count": 1
+    },
+    "texture in": {
+      "avg": 22,
+      "count": 1
+    },
+    "in warm": {
+      "avg": 22,
+      "count": 1
+    },
+    "warm pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale gold": {
+      "avg": 22,
+      "count": 1
+    },
+    "gold on": {
+      "avg": 22,
+      "count": 1
+    },
+    "visible metallic": {
+      "avg": 22,
+      "count": 1
+    },
+    "metallic warmth": {
+      "avg": 22,
+      "count": 1
+    },
+    "warmth luxurious": {
+      "avg": 22,
+      "count": 1
+    },
+    "luxurious understated": {
+      "avg": 22,
+      "count": 1
+    },
+    "understated mood": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle gold foil": {
+      "avg": 22,
+      "count": 1
+    },
+    "gold foil shimmer": {
+      "avg": 22,
+      "count": 1
+    },
+    "foil shimmer texture": {
+      "avg": 22,
+      "count": 1
+    },
+    "warm pale gold": {
+      "avg": 22,
+      "count": 1
+    },
+    "barely visible metallic": {
+      "avg": 22,
+      "count": 1
+    },
+    "visible metallic warmth": {
+      "avg": 22,
+      "count": 1
+    },
+    "metallic warmth luxurious": {
+      "avg": 22,
+      "count": 1
+    },
+    "warmth luxurious understated": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "golden": {
+      "avg": 25,
+      "count": 2
+    },
+    "wheat": {
+      "avg": 25,
+      "count": 1
+    },
+    "ears": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "heads": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 2
+    },
+    "harvest": {
+      "avg": 25,
+      "count": 1
+    },
+    "of golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden wheat": {
+      "avg": 25,
+      "count": 1
+    },
+    "wheat ears": {
+      "avg": 25,
+      "count": 1
+    },
+    "ears against": {
+      "avg": 25,
+      "count": 1
+    },
+    "dark green": {
+      "avg": 25,
+      "count": 1
+    },
+    "green field": {
+      "avg": 25,
+      "count": 1
+    },
+    "field background": {
+      "avg": 25,
+      "count": 1
+    },
+    "background rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain heads": {
+      "avg": 25,
+      "count": 1
+    },
+    "heads catching": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth of": {
+      "avg": 25,
+      "count": 1
+    },
+    "of field": {
+      "avg": 25,
+      "count": 1
+    },
+    "field harvest": {
+      "avg": 25,
+      "count": 1
+    },
+    "harvest atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden wheat ears": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich gold grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold grain heads": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain heads catching": {
+      "avg": 25,
+      "count": 1
+    },
+    "heads catching warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching warm sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm sunlight shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field harvest atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "emerald": {
+      "avg": 25,
+      "count": 1
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "sparkles": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "deep emerald": {
+      "avg": 25,
+      "count": 1
+    },
+    "emerald green": {
+      "avg": 25,
+      "count": 1
+    },
+    "green water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden light": {
+      "avg": 25,
+      "count": 1
+    },
+    "light reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections on": {
+      "avg": 25,
+      "count": 1
+    },
+    "on surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface forest": {
+      "avg": 25,
+      "count": 1
+    },
+    "green depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight sparkles": {
+      "avg": 25,
+      "count": 1
+    },
+    "sparkles serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "emerald green water": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface forest green": {
+      "avg": 25,
+      "count": 1
+    },
+    "forest green depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold sunlight sparkles": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight sparkles serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "sparkles serene natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene natural atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural atmosphere abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere abstract pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight": {
+      "avg": 24,
+      "count": 3
+    },
+    "atmosphere": {
+      "avg": 24,
+      "count": 3
+    },
+    "aerial": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pattern": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cinematic aerial": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "aerial shot": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "gold sunlight": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pattern ample": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "rich gold sunlight": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "green": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "rich": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "gold": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "side": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "rich gold": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "one side": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "side for": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "text overlay": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "macro": {
+      "avg": 23,
+      "count": 2
+    },
+    "cinematic macro": {
+      "avg": 23,
+      "count": 2
+    },
+    "macro shot": {
+      "avg": 23,
+      "count": 2
+    },
+    "natural": {
+      "avg": 23,
+      "count": 2
+    },
+    "forest": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "forest green": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "down": {
+      "avg": 22,
+      "count": 1
+    },
+    "dense": {
+      "avg": 22,
+      "count": 1
+    },
+    "rainforest": {
+      "avg": 22,
+      "count": 1
+    },
+    "canopy": {
+      "avg": 22,
+      "count": 1
+    },
+    "treetops": {
+      "avg": 22,
+      "count": 1
+    },
+    "occasional": {
+      "avg": 22,
+      "count": 1
+    },
+    "patches": {
+      "avg": 22,
+      "count": 1
+    },
+    "lush": {
+      "avg": 22,
+      "count": 1
+    },
+    "tropical": {
+      "avg": 22,
+      "count": 1
+    },
+    "uniform": {
+      "avg": 22,
+      "count": 1
+    },
+    "looking down": {
+      "avg": 22,
+      "count": 1
+    },
+    "down at": {
+      "avg": 22,
+      "count": 1
+    },
+    "at dense": {
+      "avg": 22,
+      "count": 1
+    },
+    "dense rainforest": {
+      "avg": 22,
+      "count": 1
+    },
+    "rainforest canopy": {
+      "avg": 22,
+      "count": 1
+    },
+    "canopy deep": {
+      "avg": 22,
+      "count": 1
+    },
+    "deep forest": {
+      "avg": 22,
+      "count": 1
+    },
+    "green treetops": {
+      "avg": 22,
+      "count": 1
+    },
+    "treetops with": {
+      "avg": 22,
+      "count": 1
+    },
+    "with occasional": {
+      "avg": 22,
+      "count": 1
+    },
+    "occasional rich": {
+      "avg": 22,
+      "count": 1
+    },
+    "sunlight patches": {
+      "avg": 22,
+      "count": 1
+    },
+    "patches lush": {
+      "avg": 22,
+      "count": 1
+    },
+    "lush tropical": {
+      "avg": 22,
+      "count": 1
+    },
+    "tropical atmosphere": {
+      "avg": 22,
+      "count": 1
+    },
+    "atmosphere vast": {
+      "avg": 22,
+      "count": 1
+    },
+    "vast uniform": {
+      "avg": 22,
+      "count": 1
+    },
+    "uniform canopy": {
+      "avg": 22,
+      "count": 1
+    },
+    "canopy pattern": {
+      "avg": 22,
+      "count": 1
+    },
+    "dense rainforest canopy": {
+      "avg": 22,
+      "count": 1
+    },
+    "forest green treetops": {
+      "avg": 22,
+      "count": 1
+    },
+    "occasional rich gold": {
+      "avg": 22,
+      "count": 1
+    },
+    "gold sunlight patches": {
+      "avg": 22,
+      "count": 1
+    },
+    "sunlight patches lush": {
+      "avg": 22,
+      "count": 1
+    },
+    "patches lush tropical": {
+      "avg": 22,
+      "count": 1
+    },
+    "lush tropical atmosphere": {
+      "avg": 22,
+      "count": 1
+    },
+    "uniform canopy pattern": {
+      "avg": 22,
+      "count": 1
+    },
+    "autumn": {
+      "avg": 21,
+      "count": 1
+    },
+    "leaf": {
+      "avg": 21,
+      "count": 1
+    },
+    "detailed": {
+      "avg": 21,
+      "count": 1
+    },
+    "vein": {
+      "avg": 21,
+      "count": 1
+    },
+    "structure": {
+      "avg": 21,
+      "count": 1
+    },
+    "amber": {
+      "avg": 21,
+      "count": 1
+    },
+    "tones": {
+      "avg": 21,
+      "count": 1
+    },
+    "stem": {
+      "avg": 21,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 21,
+      "count": 1
+    },
+    "backlight": {
+      "avg": 21,
+      "count": 1
+    },
+    "intimate": {
+      "avg": 21,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 21,
+      "count": 1
+    },
+    "single autumn": {
+      "avg": 21,
+      "count": 1
+    },
+    "autumn leaf": {
+      "avg": 21,
+      "count": 1
+    },
+    "leaf showing": {
+      "avg": 21,
+      "count": 1
+    },
+    "showing detailed": {
+      "avg": 21,
+      "count": 1
+    },
+    "detailed vein": {
+      "avg": 21,
+      "count": 1
+    },
+    "vein structure": {
+      "avg": 21,
+      "count": 1
+    },
+    "structure rich": {
+      "avg": 21,
+      "count": 1
+    },
+    "gold and": {
+      "avg": 21,
+      "count": 1
+    },
+    "and amber": {
+      "avg": 21,
+      "count": 1
+    },
+    "amber tones": {
+      "avg": 21,
+      "count": 1
+    },
+    "tones with": {
+      "avg": 21,
+      "count": 1
+    },
+    "with forest": {
+      "avg": 21,
+      "count": 1
+    },
+    "green stem": {
+      "avg": 21,
+      "count": 1
+    },
+    "stem dramatic": {
+      "avg": 21,
+      "count": 1
+    },
+    "dramatic backlight": {
+      "avg": 21,
+      "count": 1
+    },
+    "backlight intimate": {
+      "avg": 21,
+      "count": 1
+    },
+    "intimate natural": {
+      "avg": 21,
+      "count": 1
+    },
+    "natural beauty": {
+      "avg": 21,
+      "count": 1
+    },
+    "beauty ample": {
+      "avg": 21,
+      "count": 1
+    },
+    "detailed vein structure": {
+      "avg": 21,
+      "count": 1
+    },
+    "vein structure rich": {
+      "avg": 21,
+      "count": 1
+    },
+    "structure rich gold": {
+      "avg": 21,
+      "count": 1
+    },
+    "forest green stem": {
+      "avg": 21,
+      "count": 1
+    },
+    "green stem dramatic": {
+      "avg": 21,
+      "count": 1
+    },
+    "stem dramatic backlight": {
+      "avg": 21,
+      "count": 1
+    },
+    "dramatic backlight intimate": {
+      "avg": 21,
+      "count": 1
+    },
+    "backlight intimate natural": {
+      "avg": 21,
+      "count": 1
+    },
+    "intimate natural beauty": {
+      "avg": 21,
+      "count": 1
+    }
+  }
+}

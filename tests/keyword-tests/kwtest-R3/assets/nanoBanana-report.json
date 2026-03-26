@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-03-19T11:05:49.192Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 25.5,
+    "min": 22.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 0,
+      "22-24": 2,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 22.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 25,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IP-09": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 3,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The geometric line patterns along the edges are dark grey/black, not indigo as specified in the prompt, and are more distinct than \"very faint\"."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": [
+          "CASIO",
+          "CROCS",
+          "TIO KIDS"
+        ]
+      }
+    },
+    {
+      "slide": 2,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 4,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "orange (avg 27.5, n=2)",
+        "interior (avg 27.5, n=2)",
+        "lighting (avg 27.5, n=2)",
+        "indigo (avg 25.8, n=3)",
+        "retail (avg 25.8, n=3)"
+      ],
+      "bottom_keywords": [
+        "warm (avg 24.2, n=3)",
+        "subtle (avg 25, n=2)",
+        "tall (avg 25, n=2)",
+        "sophisticated (avg 25, n=2)",
+        "atmosphere (avg 25, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.3, n=5)",
+        "pattern (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 40 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "pyramid (avg 26.9, n=5)",
+        "narrowest (avg 26.8, n=5)",
+        "flowchart (avg 26.8, n=6)",
+        "rounded rectangles (avg 26.8, n=6)",
+        "by arrows (avg 26.8, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 203 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern (avg 26.9, n=5)",
+        "paper (avg 26.9, n=5)",
+        "paper texture (avg 26.9, n=5)",
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "epic (avg 27.5, n=5)",
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 104 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 5,
+    "retried": 0
+  }
+}

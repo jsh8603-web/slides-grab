@@ -1,0 +1,35 @@
+{
+  "slide": 5,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Authoritative, forward-looking, and strategically urgent — conveying both the inevitability of AI agent adoption and the cost of inaction. Color palette: Primary (Deep Navy), Accent (Warm Gold), Background (Warm Ivory), Text (Near Black), Muted (Steel Gray). A photorealistic wide-angle view of a vast modern boardroom at dawn, warm golden light flooding in through panoramic windows and reflecting off a long polished conference table, full environmental depth with the city skyline awakening",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 98,
+  "ip": [
+    {
+      "rule": "IP-08",
+      "level": "WARN",
+      "msg": "Prompt too long (631 chars > 600) — Flash may ignore parts"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 2,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": [
+        "AI"
+      ]
+    },
+    "total": 24.5,
+    "detected_text": [
+      "AI"
+    ],
+    "reasons": {}
+  }
+}

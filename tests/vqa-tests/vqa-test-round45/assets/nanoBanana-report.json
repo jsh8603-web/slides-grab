@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-03-19T06:51:05.933Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 6,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.5,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 8,
+      "23-24": 1,
+      "20-22": 6,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 23.4,
+      "count": 11
+    },
+    "cover": {
+      "avg": 25,
+      "count": 1
+    },
+    "background": {
+      "avg": 23,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 22,
+      "count": 1
+    },
+    "icon": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-09": 2,
+    "IV-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 10,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 3,
+        "detected_text": [],
+        "pf_reason": "The image is not in the requested 16:9 aspect ratio."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 3 arrow-shaped segments, but the image shows 4. The color progression also deviates, as it features two orange arrows before the light orange one, instead of a direct sequence of navy, orange, and light orange."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a staircase with 4 ascending steps. The image generated features 5 ascending bars/steps. The color progression also deviates slightly due to the additional step."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified 'Five small orange circles evenly spaced around it', but the image shows six small orange circles."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "co_reason": "The diagram is perfectly centered, leaving minimal space for text overlay such as titles or bullet points without obscuring the main graphic.",
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "widest (avg 25, n=2)",
+        "rounded (avg 25, n=2)",
+        "subtle (avg 24, n=2)",
+        "pattern (avg 24, n=2)",
+        "block (avg 23.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "warm (avg 20, n=2)",
+        "tones (avg 20, n=2)",
+        "atmosphere (avg 21, n=2)",
+        "chevron (avg 21.5, n=2)",
+        "process (avg 21.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "slate (avg 24.8, n=5)",
+        "near (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 26 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "filled (avg 24.8, n=5)",
+        "silhouette (avg 24.8, n=5)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 117 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "paper (avg 25, n=5)",
+        "artistic (avg 25, n=5)",
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 62 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 62 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 18,
+    "retried": 3
+  }
+}

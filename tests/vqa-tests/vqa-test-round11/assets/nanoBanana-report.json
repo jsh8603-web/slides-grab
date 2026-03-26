@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-03-19T02:05:19.450Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.7,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 9,
+      "23-24": 5,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 22.8,
+      "count": 5
+    },
+    "frame": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "icon": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IP-09": 1,
+    "IV-09": 2,
+    "IV-03": 2,
+    "IP-03": 1,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 1,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The background of the mountains and snow is white/grey, not soft lavender as specified in the color palette."
+      }
+    },
+    {
+      "slide": 7,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The background color is a dark purple/indigo, not the requested 'soft lavender'. The other segments match the description well."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The top layer of the pyramid is a light greyish purple, not light lavender as specified in the prompt."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The image is missing the specified 'Accent emerald' color. The outlines have a subtle cyan/teal secondary effect, but it's not a distinct emerald accent as described in the prompt's color palette."
+      }
+    },
+    {
+      "slide": 17,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The image accurately depicts a rainforest canopy with sunlight and emerald leaves. However, the specified 'soft lavender' background color is entirely missing; the background is predominantly dark green/blue-green. The overall color palette does not fully match the requested 'Primary midnight blue, Accent emerald, Background soft lavender', leaning more towards natural deep greens and blues."
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 19,
+    "retried": 0
+  }
+}

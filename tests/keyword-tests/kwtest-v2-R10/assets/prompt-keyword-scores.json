@@ -1,0 +1,1263 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atelier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "workspace": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scraps": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bolts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "oak": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "streaming": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arched": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bronze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant atelier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atelier workspace": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leather scraps": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton bolts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long oak": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "oak table": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall arched": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arched windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fashion photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant atelier workspace": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk rich leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich leather scraps": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton bolts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "long oak table": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "oak table soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall arched windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arched windows warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows warm earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field editorial fashion": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial fashion photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "parchment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "weave": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream parchment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "parchment surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "weave warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting casting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern texture soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft cream parchment": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream parchment surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine natural grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural grain organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain organic cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton fibers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "weave warm ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting casting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting casting gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting gentle shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "artisan": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hands": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stitching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thread": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vintage": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thimble": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spool": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nearby": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "bronze": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bokeh": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "craftsmanship": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heritage": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "artisan hands": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hands stitching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stitching grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold thread": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thread ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate vintage": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vintage brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass thimble": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden spool": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spool nearby": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nearby rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bronze highlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "macro photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "artisan hands stitching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hands stitching grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stitching grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm leather": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold thread ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thread ornate vintage": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate vintage brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vintage brass thimble": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden spool nearby": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spool nearby rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "nearby rich earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bronze highlights macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "highlights macro photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "textile": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farmhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greens": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hopeful": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green textile": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "textile farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "distant hills": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood farmhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "windows earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bronze tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural greens": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greens serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hopeful atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle aerial view": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush green textile": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green textile farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic cotton plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cotton plants stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elegant wood farmhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm glowing windows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing windows earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bronze tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural greens serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

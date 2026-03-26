@@ -1,0 +1,163 @@
+{
+  "cover": {},
+  "frame": {
+    "minimal horizontal": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "light olive": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "green": {
+      "avg": 23.1,
+      "count": 7
+    },
+    "olive green": {
+      "avg": 23.1,
+      "count": 7
+    },
+    "minimal": {
+      "avg": 23,
+      "count": 8
+    },
+    "chart": {
+      "avg": 23,
+      "count": 3
+    },
+    "cream": {
+      "avg": 23,
+      "count": 8
+    },
+    "olive": {
+      "avg": 23,
+      "count": 8
+    },
+    "mustard": {
+      "avg": 23,
+      "count": 7
+    },
+    "on cream": {
+      "avg": 23,
+      "count": 8
+    },
+    "cream background": {
+      "avg": 23,
+      "count": 8
+    },
+    "in olive": {
+      "avg": 23,
+      "count": 3
+    },
+    "stacked": {
+      "avg": 22.7,
+      "count": 3
+    }
+  },
+  "icon": {
+    "cream": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "olive": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "green": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "olive green": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "cream": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "natural": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "feel": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 24.3,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "atmosphere ample": {
+      "avg": 25,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "atmosphere": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "side": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "one side": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "side for": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "text overlay": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "olive": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "warm": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "golden": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "green": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "warm golden": {
+      "avg": 24.7,
+      "count": 3
+    }
+  }
+}

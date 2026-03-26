@@ -1,0 +1,94 @@
+{
+  "cover": {},
+  "metaphor": {
+    "amber": {
+      "avg": 25,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "golden": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "warm": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "frame": {
+    "cream": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "with exactly": {
+      "avg": 24.1,
+      "count": 7
+    },
+    "chart": {
+      "avg": 24,
+      "count": 3
+    },
+    "amber": {
+      "avg": 24,
+      "count": 5
+    },
+    "on cream": {
+      "avg": 24,
+      "count": 3
+    },
+    "cream background": {
+      "avg": 24,
+      "count": 3
+    },
+    "connected": {
+      "avg": 24,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 23.9,
+      "count": 9
+    },
+    "exactly": {
+      "avg": 23.9,
+      "count": 8
+    },
+    "orange": {
+      "avg": 23.9,
+      "count": 9
+    },
+    "charcoal": {
+      "avg": 23.8,
+      "count": 8
+    },
+    "diagram": {
+      "avg": 23,
+      "count": 3
+    },
+    "diagram with": {
+      "avg": 23,
+      "count": 3
+    }
+  },
+  "icon": {},
+  "background": {
+    "subtle": {
+      "avg": 25,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 25,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 25,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 25,
+      "count": 3
+    }
+  }
+}

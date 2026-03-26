@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-03-18T16:44:32.411Z",
+  "summary": {
+    "total": 27,
+    "pass": 22,
+    "warn": 17,
+    "fail": 1,
+    "skipped": 5
+  },
+  "vqa": {
+    "avg": 21.3,
+    "min": 19,
+    "max": 25,
+    "distribution": {
+      "25": 2,
+      "23-24": 2,
+      "20-22": 17,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 21.3,
+      "count": 12
+    },
+    "frame": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "icon": {
+      "avg": 21,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 2,
+    "IV-10": 4,
+    "IV-02": 3,
+    "IV-03": 1,
+    "IP-03": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 27,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 14,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 16,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 3.4,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 26,
+    "retried": 4
+  }
+}

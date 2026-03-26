@@ -1,0 +1,863 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "circular": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "elements": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "level": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "main": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pyramid structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted silver": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo circular": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing gold smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold smallest middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest middle tier": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beneath": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "backdrop": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm beige": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beneath surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ivory tones blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm beige faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beige faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orbit": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spacecraft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scattered": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stars": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cloud": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "low orbit": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunlight": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere edge": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek commercial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial spacecraft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spacecraft silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scattered stars": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stars aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cloud layers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden sunlight": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunlight illuminating": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek commercial spacecraft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "commercial spacecraft silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scattered stars aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stars aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rays": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "spreading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lens": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flare": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indigo": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hopeful": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise over": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over earth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth horizon": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rays spreading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere aerial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle lens": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lens flare": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient sky": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky serene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise over earth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over earth horizon": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere aerial perspective": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle lens flare": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm gold gradient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold gradient sky": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient sky serene": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

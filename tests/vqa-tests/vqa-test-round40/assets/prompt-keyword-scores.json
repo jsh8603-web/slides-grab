@@ -1,0 +1,1708 @@
+{
+  "cover": {
+    "soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach": {
+      "avg": 25,
+      "count": 2
+    },
+    "gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "fading": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "near": {
+      "avg": 25,
+      "count": 1
+    },
+    "casual": {
+      "avg": 25,
+      "count": 1
+    },
+    "friendly": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin denim": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "line near": {
+      "avg": 25,
+      "count": 1
+    },
+    "casual friendly": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft peach gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin denim blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "wooden": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "pier": {
+      "avg": 25,
+      "count": 1
+    },
+    "extending": {
+      "avg": 25,
+      "count": 1
+    },
+    "ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "relaxed": {
+      "avg": 25,
+      "count": 1
+    },
+    "coastal": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "wooden beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach pier": {
+      "avg": 25,
+      "count": 1
+    },
+    "pier extending": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "ocean under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky relaxed": {
+      "avg": 25,
+      "count": 1
+    },
+    "relaxed coastal": {
+      "avg": 25,
+      "count": 1
+    },
+    "coastal atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "wooden beach pier": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach pier extending": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue ocean under": {
+      "avg": 25,
+      "count": 1
+    },
+    "ocean under peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "under peach sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky relaxed": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky relaxed coastal": {
+      "avg": 25,
+      "count": 1
+    },
+    "relaxed coastal atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "dumbbell": {
+      "avg": 25,
+      "count": 1
+    },
+    "vertically": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "has": {
+      "avg": 25,
+      "count": 1
+    },
+    "dot": {
+      "avg": 25,
+      "count": 1
+    },
+    "pairs": {
+      "avg": 25,
+      "count": 1
+    },
+    "even": {
+      "avg": 25,
+      "count": 1
+    },
+    "spacing": {
+      "avg": 25,
+      "count": 1
+    },
+    "line has": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach dot": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim dot": {
+      "avg": 25,
+      "count": 1
+    },
+    "even spacing": {
+      "avg": 25,
+      "count": 1
+    },
+    "bubble": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "lower-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "upper-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach upper-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach lower-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue upper-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes scattered": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale blue upper-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "stepped": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "ascending": {
+      "avg": 25,
+      "count": 1
+    },
+    "steps": {
+      "avg": 25,
+      "count": 1
+    },
+    "step": {
+      "avg": 25,
+      "count": 1
+    },
+    "shortest": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "stepped progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "ascending steps": {
+      "avg": 25,
+      "count": 1
+    },
+    "shortest peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach step": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest denim": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "stepped progress bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "shortest peach step": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest denim blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 23.5,
+      "count": 6
+    },
+    "lines": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "bar": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "peach": {
+      "avg": 23,
+      "count": 6
+    },
+    "denim": {
+      "avg": 23,
+      "count": 6
+    },
+    "pale": {
+      "avg": 23,
+      "count": 3
+    },
+    "waterfall": {
+      "avg": 22,
+      "count": 1
+    },
+    "bars": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin": {
+      "avg": 22,
+      "count": 2
+    },
+    "tall": {
+      "avg": 22,
+      "count": 1
+    },
+    "stepping": {
+      "avg": 22,
+      "count": 1
+    },
+    "down": {
+      "avg": 22,
+      "count": 1
+    },
+    "short": {
+      "avg": 22,
+      "count": 1
+    },
+    "by thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "lines bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "peach tall": {
+      "avg": 22,
+      "count": 1
+    },
+    "tall bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "stepping down": {
+      "avg": 22,
+      "count": 1
+    },
+    "down bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "peach short": {
+      "avg": 22,
+      "count": 1
+    },
+    "short stepping": {
+      "avg": 22,
+      "count": 1
+    },
+    "peach tall bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "stepping down bar": {
+      "avg": 22,
+      "count": 1
+    },
+    "peach short stepping": {
+      "avg": 22,
+      "count": 1
+    },
+    "short stepping down": {
+      "avg": 22,
+      "count": 1
+    },
+    "waffle": {
+      "avg": 22,
+      "count": 1
+    },
+    "four-by-four": {
+      "avg": 22,
+      "count": 1
+    },
+    "grid": {
+      "avg": 22,
+      "count": 1
+    },
+    "equal": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "ten": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "sixteen": {
+      "avg": 22,
+      "count": 1
+    },
+    "four-by-four grid": {
+      "avg": 22,
+      "count": 1
+    },
+    "equal squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares ten": {
+      "avg": 22,
+      "count": 1
+    },
+    "ten squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled peach": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "sixteen squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "equal squares ten": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares ten squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "ten squares filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares filled peach": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares filled pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "zigzag": {
+      "avg": 22,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 22,
+      "count": 1
+    },
+    "fine": {
+      "avg": 22,
+      "count": 1
+    },
+    "herringbone": {
+      "avg": 22,
+      "count": 1
+    },
+    "feel": {
+      "avg": 22,
+      "count": 1
+    },
+    "modern": {
+      "avg": 22,
+      "count": 1
+    },
+    "casual": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron zigzag": {
+      "avg": 22,
+      "count": 1
+    },
+    "zigzag pattern": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale denim": {
+      "avg": 22,
+      "count": 1
+    },
+    "fine herringbone": {
+      "avg": 22,
+      "count": 1
+    },
+    "herringbone feel": {
+      "avg": 22,
+      "count": 1
+    },
+    "feel modern": {
+      "avg": 22,
+      "count": 1
+    },
+    "modern casual": {
+      "avg": 22,
+      "count": 1
+    },
+    "subtle thin chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin chevron zigzag": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron zigzag pattern": {
+      "avg": 22,
+      "count": 1
+    },
+    "fine herringbone feel": {
+      "avg": 22,
+      "count": 1
+    },
+    "herringbone feel modern": {
+      "avg": 22,
+      "count": 1
+    },
+    "feel modern casual": {
+      "avg": 22,
+      "count": 1
+    },
+    "includes": {
+      "avg": 19,
+      "count": 1
+    },
+    "people": {
+      "avg": 19,
+      "count": 1
+    },
+    "foreground": {
+      "avg": 19,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 19,
+      "count": 1
+    },
+    "which": {
+      "avg": 19,
+      "count": 1
+    },
+    "were": {
+      "avg": 19,
+      "count": 1
+    },
+    "part": {
+      "avg": 19,
+      "count": 1
+    },
+    "prompt": {
+      "avg": 19,
+      "count": 1
+    },
+    "distribution": {
+      "avg": 19,
+      "count": 1
+    },
+    "rings": {
+      "avg": 19,
+      "count": 1
+    },
+    "does": {
+      "avg": 19,
+      "count": 1
+    },
+    "match": {
+      "avg": 19,
+      "count": 1
+    },
+    "description": {
+      "avg": 19,
+      "count": 1
+    },
+    "outer": {
+      "avg": 19,
+      "count": 1
+    },
+    "middle": {
+      "avg": 19,
+      "count": 1
+    },
+    "inner": {
+      "avg": 19,
+      "count": 1
+    },
+    "arcs": {
+      "avg": 19,
+      "count": 1
+    },
+    "instead": {
+      "avg": 19,
+      "count": 1
+    },
+    "have": {
+      "avg": 19,
+      "count": 1
+    },
+    "mix": {
+      "avg": 19,
+      "count": 1
+    },
+    "segments": {
+      "avg": 19,
+      "count": 1
+    },
+    "which were": {
+      "avg": 19,
+      "count": 1
+    },
+    "rings does": {
+      "avg": 19,
+      "count": 1
+    },
+    "outer peach": {
+      "avg": 19,
+      "count": 1
+    },
+    "peach middle": {
+      "avg": 19,
+      "count": 1
+    },
+    "middle denim": {
+      "avg": 19,
+      "count": 1
+    },
+    "peach arcs": {
+      "avg": 19,
+      "count": 1
+    },
+    "arcs instead": {
+      "avg": 19,
+      "count": 1
+    },
+    "rings have": {
+      "avg": 19,
+      "count": 1
+    },
+    "denim segments": {
+      "avg": 19,
+      "count": 1
+    },
+    "outer peach middle": {
+      "avg": 19,
+      "count": 1
+    },
+    "peach middle denim": {
+      "avg": 19,
+      "count": 1
+    },
+    "peach arcs instead": {
+      "avg": 19,
+      "count": 1
+    }
+  },
+  "background": {
+    "treemap": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 3
+    },
+    "rectangles": {
+      "avg": 25,
+      "count": 1
+    },
+    "different": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "together": {
+      "avg": 25,
+      "count": 1
+    },
+    "largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach": {
+      "avg": 25,
+      "count": 3
+    },
+    "denim": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "blocks": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed together": {
+      "avg": 25,
+      "count": 1
+    },
+    "together largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "largest peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "different sizes packed": {
+      "avg": 25,
+      "count": 1
+    },
+    "sizes packed together": {
+      "avg": 25,
+      "count": 1
+    },
+    "packed together largest": {
+      "avg": 25,
+      "count": 1
+    },
+    "together largest peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "watercolor": {
+      "avg": 25,
+      "count": 1
+    },
+    "wash": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "artistic": {
+      "avg": 25,
+      "count": 1
+    },
+    "gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "blush": {
+      "avg": 25,
+      "count": 1
+    },
+    "friendly": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle watercolor": {
+      "avg": 25,
+      "count": 1
+    },
+    "watercolor wash": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft artistic": {
+      "avg": 25,
+      "count": 1
+    },
+    "artistic gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "gradient blush": {
+      "avg": 25,
+      "count": 1
+    },
+    "blush friendly": {
+      "avg": 25,
+      "count": 1
+    },
+    "friendly warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle watercolor wash": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones soft artistic": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft artistic gradient": {
+      "avg": 25,
+      "count": 1
+    },
+    "artistic gradient blush": {
+      "avg": 25,
+      "count": 1
+    },
+    "gradient blush friendly": {
+      "avg": 25,
+      "count": 1
+    },
+    "blush friendly warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "heart": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "heart shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled heart": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin denim": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach filled heart": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin denim blue": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "graduation": {
+      "avg": 25,
+      "count": 1
+    },
+    "cap": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "book": {
+      "avg": 25,
+      "count": 1
+    },
+    "pencil": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe": {
+      "avg": 25,
+      "count": 1
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "education": {
+      "avg": 25,
+      "count": 1
+    },
+    "graduation cap": {
+      "avg": 25,
+      "count": 1
+    },
+    "cap silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "book silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "pencil silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette denim": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "graduation cap silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe silhouette denim": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette denim blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "cloud": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "grid": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "denim": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "blue": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "denim blue": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "shopping": {
+      "avg": 24,
+      "count": 1
+    },
+    "bag": {
+      "avg": 24,
+      "count": 1
+    },
+    "price": {
+      "avg": 24,
+      "count": 1
+    },
+    "tag": {
+      "avg": 24,
+      "count": 1
+    },
+    "gift": {
+      "avg": 24,
+      "count": 1
+    },
+    "box": {
+      "avg": 24,
+      "count": 1
+    },
+    "cart": {
+      "avg": 24,
+      "count": 1
+    },
+    "peach": {
+      "avg": 24,
+      "count": 2
+    },
+    "retail": {
+      "avg": 24,
+      "count": 1
+    },
+    "shopping bag": {
+      "avg": 24,
+      "count": 1
+    },
+    "price tag": {
+      "avg": 24,
+      "count": 1
+    },
+    "gift box": {
+      "avg": 24,
+      "count": 1
+    },
+    "shopping cart": {
+      "avg": 24,
+      "count": 1
+    },
+    "cart peach": {
+      "avg": 24,
+      "count": 1
+    },
+    "shopping cart peach": {
+      "avg": 24,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 24,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "cute": {
+      "avg": 24,
+      "count": 1
+    },
+    "ice": {
+      "avg": 24,
+      "count": 1
+    },
+    "cream": {
+      "avg": 24,
+      "count": 1
+    },
+    "shop": {
+      "avg": 24,
+      "count": 1
+    },
+    "display": {
+      "avg": 24,
+      "count": 1
+    },
+    "counter": {
+      "avg": 24,
+      "count": 1
+    },
+    "stools": {
+      "avg": 24,
+      "count": 1
+    },
+    "awning": {
+      "avg": 24,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 24,
+      "count": 1
+    },
+    "cute ice": {
+      "avg": 24,
+      "count": 1
+    },
+    "ice cream": {
+      "avg": 24,
+      "count": 1
+    },
+    "cream shop": {
+      "avg": 24,
+      "count": 1
+    },
+    "display counter": {
+      "avg": 24,
+      "count": 1
+    },
+    "counter stools": {
+      "avg": 24,
+      "count": 1
+    },
+    "awning peach": {
+      "avg": 24,
+      "count": 1
+    },
+    "cute ice cream": {
+      "avg": 24,
+      "count": 1
+    },
+    "ice cream shop": {
+      "avg": 24,
+      "count": 1
+    },
+    "display counter stools": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 25,
+      "count": 4
+    },
+    "peach": {
+      "avg": 25,
+      "count": 4
+    },
+    "colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "umbrella": {
+      "avg": 25,
+      "count": 1
+    },
+    "sandy": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim": {
+      "avg": 25,
+      "count": 4
+    },
+    "blue": {
+      "avg": 25,
+      "count": 4
+    },
+    "ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "summer": {
+      "avg": 25,
+      "count": 1
+    },
+    "relaxed": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 3
+    },
+    "sky": {
+      "avg": 25,
+      "count": 3
+    },
+    "peach colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "beach umbrella": {
+      "avg": 25,
+      "count": 1
+    },
+    "sandy beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue": {
+      "avg": 25,
+      "count": 4
+    },
+    "blue ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "summer relaxed": {
+      "avg": 25,
+      "count": 1
+    },
+    "relaxed atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach colored beach": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored beach umbrella": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue ocean": {
+      "avg": 25,
+      "count": 1
+    },
+    "summer relaxed atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "blooming": {
+      "avg": 25,
+      "count": 1
+    },
+    "orchard": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "pink": {
+      "avg": 25,
+      "count": 1
+    },
+    "blossoms": {
+      "avg": 25,
+      "count": 1
+    },
+    "clear": {
+      "avg": 25,
+      "count": 2
+    },
+    "fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "spring": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 2
+    },
+    "blooming peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach orchard": {
+      "avg": 25,
+      "count": 1
+    },
+    "orchard trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "pink peach": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach blossoms": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue clear": {
+      "avg": 25,
+      "count": 1
+    },
+    "clear sky": {
+      "avg": 25,
+      "count": 2
+    },
+    "sky fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "fresh spring": {
+      "avg": 25,
+      "count": 1
+    },
+    "spring atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 2
+    },
+    "blooming peach orchard": {
+      "avg": 25,
+      "count": 1
+    },
+    "peach orchard trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "pink peach blossoms": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue clear": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue clear sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "clear sky fresh": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky fresh spring": {
+      "avg": 25,
+      "count": 1
+    },
+    "fresh spring atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "macarons": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate": {
+      "avg": 25,
+      "count": 1
+    },
+    "pastry": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "soft cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate pastry": {
+      "avg": 25,
+      "count": 1
+    },
+    "pastry detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "delicate pastry detail": {
+      "avg": 25,
+      "count": 1
+    },
+    "pastry detail shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "detail shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot": {
+      "avg": 25,
+      "count": 1
+    },
+    "air": {
+      "avg": 25,
+      "count": 1
+    },
+    "balloons": {
+      "avg": 25,
+      "count": 1
+    },
+    "stripes": {
+      "avg": 25,
+      "count": 1
+    },
+    "floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunrise": {
+      "avg": 25,
+      "count": 1
+    },
+    "joyful": {
+      "avg": 25,
+      "count": 1
+    },
+    "festival": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful hot": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot air": {
+      "avg": 25,
+      "count": 1
+    },
+    "air balloons": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue stripes": {
+      "avg": 25,
+      "count": 1
+    },
+    "stripes floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunrise joyful": {
+      "avg": 25,
+      "count": 1
+    },
+    "joyful festival": {
+      "avg": 25,
+      "count": 1
+    },
+    "festival atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "colorful hot air": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot air balloons": {
+      "avg": 25,
+      "count": 1
+    },
+    "denim blue stripes": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue stripes floating": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunrise joyful festival": {
+      "avg": 25,
+      "count": 1
+    },
+    "joyful festival atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  }
+}

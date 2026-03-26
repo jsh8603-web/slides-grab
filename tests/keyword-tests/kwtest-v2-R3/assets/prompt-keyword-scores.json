@@ -1,0 +1,1195 @@
+{
+  "cover": {
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft-focus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "network": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "infrastructure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "evening": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial soft-focus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk interconnected": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red network": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "network lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "infrastructure calm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm evening": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "evening sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk interconnected buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interconnected buildings glowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red network lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "network lines wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines wide-angle perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle perspective conveying": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "infrastructure calm evening": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "calm evening sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "glowing": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "red": {
+      "avg": 26,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "operations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "monitors": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "room": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouettes": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analysts": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "watching": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "real-time": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "threat": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dashboards": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "alert": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "indicators": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern security": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security operations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk rows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing monitors": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "monitors casting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting soft": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "room silhouettes": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analysts watching": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "watching real-time": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "real-time threat": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "threat dashboards": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dashboards dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic atmospheric": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric lighting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle red": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red alert": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "alert indicators": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle view": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern security operations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glowing monitors casting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "monitors casting soft": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting soft blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analysts watching real-time": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "watching real-time threat": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "real-time threat dashboards": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "threat dashboards dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dashboards dramatic atmospheric": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic atmospheric lighting": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle red alert": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red alert indicators": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "frame": {
+    "pyramid": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "made": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ascending": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tier": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "defense": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "phase": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rendered": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edges": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers ascending": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest base": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base layer": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tier representing": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity defense": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "defense phase": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "phase rendered": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element offset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smallest base layer": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity defense phase": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "defense phase rendered": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element offset": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "textured": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analytical charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "textured surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern details": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones faint grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines suggesting analytical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting analytical charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "analytical charts soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts soft natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "close-up": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interlocking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mechanics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ai-driven": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "threat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "detection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metallic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "embedded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden gears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gears interlocking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "intricate mechanics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ai-driven threat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "threat detection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate wooden gears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden gears interlocking": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm tones representing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ai-driven threat detection": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural wood structure": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood structure warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

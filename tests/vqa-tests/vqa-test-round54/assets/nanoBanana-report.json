@@ -1,0 +1,230 @@
+{
+  "timestamp": "2026-03-19T08:40:54.674Z",
+  "summary": {
+    "total": 15,
+    "pass": 14,
+    "warn": 6,
+    "fail": 3,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.4,
+    "min": 14.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 6,
+      "25-27": 0,
+      "22-24": 6,
+      "17-21": 1,
+      "<17": 1
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24,
+      "count": 10
+    },
+    "metaphor": {
+      "avg": 23.5,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 3,
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 1,
+      "total": 14.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 1,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "detected_text": [
+          "Growth",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "pf_reason": "The image shows a detailed 3D bar chart with 7 bars and a line graph, instead of a minimal staircase with 4 steps. The prompt specified a clean flat vector style, but the image is 3D rendered. Most significantly, the prompt explicitly requested 'Absolutely no text, no numbers', yet the image contains 'Growth' on the y-axis and numbers 1-7 on the x-axis."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 21.5,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows a circular diagram with ring segments, not a chevron process diagram with 4 arrow-shaped segments pointing right. The prompt also specified distinct shades of orange (dark, standard, light), which are not present; the image uses only one shade of orange."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested four small orange circles at top, right, bottom, left, but the image displays eight small orange circles."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a donut chart with 4 segments, but the image only shows 3 segments. It also requested a flat vector style, but the image has a subtle 3D effect with shadows. The specified color variations (dark orange) are not clearly present as distinct segments. It has navy, a medium orange, and a lighter orange. If the medium and lighter orange were meant to cover the 'dark orange, orange, and light orange' then it's still missing one segment. If it's just navy, orange, light orange then it only has 3. If there were 4 distinct segments this would be improved. Assuming it has to be 4 clearly distinct segments. It also requested 'clean flat vector' but there are shadows giving it a 3D depth. Overall the segment count is the biggest issue. It also seems to miss the specific 'dark orange' color if there are only two oranges. If the two oranges together are meant to be 'dark orange, orange, and light orange' then it still only has two tones. This contributes to the lower score. If it was flat vector, it would also be better. But the most significant issue is the 3 segments vs 4 segments. If I consider the lighter orange to be 'light orange', the darker orange to be 'orange', then I'm still missing 'dark orange' and a 4th segment. If I consider the darker orange to be 'dark orange', then I'm missing 'orange' and a 4th segment. Either way, the count is off. I will stick to the segment count and the flat vector style as the reasons. The image has 3 distinct colored parts, not 4 segments as requested. The prompt specifically listed 'Navy, dark orange, orange, and light orange' which implies 4 colors/segments. The image has a dark blue, a mid-orange, and a light orange. This is only 3 segments. The 'clean flat vector' was also not fully met due to the subtle 3D effect. The segment count is the primary reason for the low score. There are only 3 segments visible. The prompt asked for 4. The requested colors 'Navy, dark orange, orange, and light orange' imply 4 distinct segments as well. The image shows navy, a medium orange, and a light orange. This means either it's missing a color, or it's missing a segment. Or both. The main thing is that 3 is not 4. The lack of a flat vector style due to the shadows is also a minor deviation. So, 3 segments vs 4 requested. And flat vector vs subtle 3D. The segment count is the primary issue. It only has 3 segments when 4 were requested. The prompt also specified 'clean flat vector' which is not fully met as the donut chart has subtle shadows giving it a 3D effect. The colors are also not clearly 'Navy, dark orange, orange, and light orange' as only three distinct color tones (navy, a medium orange, and a lighter orange) are present. The primary reason for the score is the segment count mismatch (3 instead of 4). The prompt requested 'A minimal donut chart with 4 segments. Navy, dark orange, orange, and light orange'. The image clearly shows only 3 segments, in navy, a medium orange, and a lighter orange. Additionally, the prompt asked for a 'Clean flat vector' style, but the image exhibits subtle 3D rendering with shadows. The segment count mismatch is the most significant deviation."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 'Accent orange', but the image uses white for the icon silhouettes instead of orange."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 2.9,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 37,
+      "severity": "HIGH",
+      "action": "FAIL rate 37% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 27.5, n=2)",
+        "pattern (avg 27.5, n=2)",
+        "warm (avg 25.5, n=2)",
+        "tones (avg 25.5, n=2)",
+        "atmosphere (avg 25.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "block (avg 23, n=2)",
+        "ascending (avg 23, n=2)",
+        "blocks (avg 23, n=2)",
+        "ascending blocks (avg 23, n=2)",
+        "orange (avg 23.2, n=8)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 26.8, n=6)",
+        "pattern sophisticated (avg 26.8, n=6)",
+        "line pattern sophisticated (avg 26.8, n=6)",
+        "pattern (avg 26.7, n=6)",
+        "base (avg 26.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "inside (avg 24.7, n=6)",
+        "rounded (avg 24.7, n=6)",
+        "sun (avg 24.6, n=5)",
+        "modern (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 26.7, n=6)",
+        "rectangles (avg 26.7, n=6)",
+        "rounded rectangles (avg 26.7, n=6)",
+        "by arrows (avg 26.7, n=6)",
+        "rounded (avg 26.7, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 148 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.5, n=6)",
+        "pattern warm (avg 26.5, n=6)",
+        "subtle cream (avg 26.5, n=6)",
+        "cream paper (avg 26.5, n=6)",
+        "subtle fiber (avg 26.5, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 56 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 19,
+    "retried": 5
+  }
+}

@@ -1,0 +1,2836 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "calm": {
+      "avg": 25,
+      "count": 1
+    },
+    "lake": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflecting": {
+      "avg": 25,
+      "count": 1
+    },
+    "full": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver": {
+      "avg": 25,
+      "count": 2
+    },
+    "moon": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "peaceful": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 25,
+      "count": 1
+    },
+    "calm lake": {
+      "avg": 25,
+      "count": 1
+    },
+    "lake reflecting": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflecting full": {
+      "avg": 25,
+      "count": 1
+    },
+    "full moonlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlight midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue": {
+      "avg": 25,
+      "count": 2
+    },
+    "blue water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver moon": {
+      "avg": 25,
+      "count": 1
+    },
+    "moon reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene peaceful": {
+      "avg": 25,
+      "count": 1
+    },
+    "peaceful atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere vast": {
+      "avg": 25,
+      "count": 1
+    },
+    "vast sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky area": {
+      "avg": 25,
+      "count": 1
+    },
+    "text overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "calm lake reflecting": {
+      "avg": 25,
+      "count": 1
+    },
+    "lake reflecting full": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflecting full moonlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "full moonlight midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlight midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue water": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver moon reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "moon reflections serene": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections serene peaceful": {
+      "avg": 25,
+      "count": 1
+    },
+    "serene peaceful atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "near": {
+      "avg": 25,
+      "count": 1
+    },
+    "sleek": {
+      "avg": 25,
+      "count": 1
+    },
+    "sophisticated": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "cover rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue background": {
+      "avg": 25,
+      "count": 1
+    },
+    "single thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver horizontal": {
+      "avg": 25,
+      "count": 1
+    },
+    "accent line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line near": {
+      "avg": 25,
+      "count": 1
+    },
+    "near bottom": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom sleek": {
+      "avg": 25,
+      "count": 1
+    },
+    "sleek sophisticated": {
+      "avg": 25,
+      "count": 1
+    },
+    "sophisticated mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "central empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty area": {
+      "avg": 25,
+      "count": 1
+    },
+    "area simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple composition bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition bold colors": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "second": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "short": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-long": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "horizontal bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart frame": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice light": {
+      "avg": 25,
+      "count": 5
+    },
+    "top bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "longest in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue second": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver third": {
+      "avg": 25,
+      "count": 1
+    },
+    "third bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 25,
+      "count": 1
+    },
+    "short in": {
+      "avg": 25,
+      "count": 1
+    },
+    "light blue": {
+      "avg": 25,
+      "count": 4
+    },
+    "blue fourth": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium-long": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-long in": {
+      "avg": 25,
+      "count": 1
+    },
+    "in pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale silver": {
+      "avg": 25,
+      "count": 2
+    },
+    "silver four": {
+      "avg": 25,
+      "count": 2
+    },
+    "horizontal bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars total": {
+      "avg": 25,
+      "count": 1
+    },
+    "total stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue second": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue second bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "second bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue fourth bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "fourth bar medium-long": {
+      "avg": 25,
+      "count": 1
+    },
+    "funnel": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 2
+    },
+    "narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "sections": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering": {
+      "avg": 25,
+      "count": 1
+    },
+    "downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal funnel": {
+      "avg": 25,
+      "count": 1
+    },
+    "funnel on": {
+      "avg": 25,
+      "count": 1
+    },
+    "top widest": {
+      "avg": 25,
+      "count": 1
+    },
+    "widest section": {
+      "avg": 25,
+      "count": 1
+    },
+    "section midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle section": {
+      "avg": 25,
+      "count": 1
+    },
+    "section silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver bottom": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom narrowest": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrowest section": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue three": {
+      "avg": 25,
+      "count": 1
+    },
+    "three sections": {
+      "avg": 25,
+      "count": 1
+    },
+    "sections total": {
+      "avg": 25,
+      "count": 1
+    },
+    "total tapering": {
+      "avg": 25,
+      "count": 1
+    },
+    "tapering downward": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 2
+    },
+    "corners": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected": {
+      "avg": 25,
+      "count": 2
+    },
+    "curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "going": {
+      "avg": 25,
+      "count": 2
+    },
+    "clockwise": {
+      "avg": 25,
+      "count": 2
+    },
+    "nodes": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal square": {
+      "avg": 25,
+      "count": 1
+    },
+    "square cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagram on": {
+      "avg": 25,
+      "count": 1
+    },
+    "four circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles at": {
+      "avg": 25,
+      "count": 1
+    },
+    "at corners": {
+      "avg": 25,
+      "count": 1
+    },
+    "corners of": {
+      "avg": 25,
+      "count": 1
+    },
+    "square connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "going clockwise": {
+      "avg": 25,
+      "count": 2
+    },
+    "clockwise top-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "top-left midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue top-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "top-right silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver bottom-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue bottom-left": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom-left pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "four nodes": {
+      "avg": 25,
+      "count": 1
+    },
+    "nodes total": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going clockwise": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 2
+    },
+    "row": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "one midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle at": {
+      "avg": 25,
+      "count": 1
+    },
+    "two silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles in": {
+      "avg": 25,
+      "count": 1
+    },
+    "the middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle row": {
+      "avg": 25,
+      "count": 1
+    },
+    "row connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected to": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottom row": {
+      "avg": 25,
+      "count": 1
+    },
+    "to middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle seven": {
+      "avg": 25,
+      "count": 1
+    },
+    "seven circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles total": {
+      "avg": 25,
+      "count": 1
+    },
+    "three rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle row connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "scatter": {
+      "avg": 25,
+      "count": 1
+    },
+    "plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "roughly": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagonal": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "alternating": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal scatter": {
+      "avg": 25,
+      "count": 1
+    },
+    "scatter plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "plot on": {
+      "avg": 25,
+      "count": 1
+    },
+    "background dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots arranged": {
+      "avg": 25,
+      "count": 1
+    },
+    "arranged roughly": {
+      "avg": 25,
+      "count": 1
+    },
+    "roughly in": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagonal line": {
+      "avg": 25,
+      "count": 1
+    },
+    "line from": {
+      "avg": 25,
+      "count": 1
+    },
+    "to upper-right": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-right midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver dots": {
+      "avg": 25,
+      "count": 1
+    },
+    "dots alternating": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal scatter plot": {
+      "avg": 25,
+      "count": 1
+    },
+    "upper-right midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver dots alternating": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "covering": {
+      "avg": 25,
+      "count": 1
+    },
+    "remaining": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring on": {
+      "avg": 25,
+      "count": 1
+    },
+    "background arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "starting from": {
+      "avg": 25,
+      "count": 1
+    },
+    "top going": {
+      "avg": 25,
+      "count": 1
+    },
+    "clockwise midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc covering": {
+      "avg": 25,
+      "count": 1
+    },
+    "covering exactly": {
+      "avg": 25,
+      "count": 1
+    },
+    "the circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle remaining": {
+      "avg": 25,
+      "count": 1
+    },
+    "remaining half": {
+      "avg": 25,
+      "count": 1
+    },
+    "gray bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "going clockwise midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "clockwise midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arc covering": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "ice": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "midnight": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "blue": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "silver": {
+      "avg": 24.7,
+      "count": 6
+    },
+    "on ice": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "midnight blue": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "chart": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "stacked": {
+      "avg": 24,
+      "count": 2
+    },
+    "vertically": {
+      "avg": 24,
+      "count": 2
+    },
+    "minimal horizontal": {
+      "avg": 24,
+      "count": 2
+    },
+    "stacked vertically": {
+      "avg": 24,
+      "count": 2
+    },
+    "line": {
+      "avg": 24,
+      "count": 2
+    },
+    "chart on": {
+      "avg": 24,
+      "count": 2
+    },
+    "ice white": {
+      "avg": 24,
+      "count": 2
+    },
+    "dumbbell": {
+      "avg": 23,
+      "count": 1
+    },
+    "lines": {
+      "avg": 23,
+      "count": 1
+    },
+    "has": {
+      "avg": 23,
+      "count": 1
+    },
+    "dot": {
+      "avg": 23,
+      "count": 1
+    },
+    "pairs": {
+      "avg": 23,
+      "count": 1
+    },
+    "even": {
+      "avg": 23,
+      "count": 1
+    },
+    "spacing": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal dumbbell": {
+      "avg": 23,
+      "count": 1
+    },
+    "dumbbell chart": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal lines": {
+      "avg": 23,
+      "count": 1
+    },
+    "lines stacked": {
+      "avg": 23,
+      "count": 1
+    },
+    "vertically each": {
+      "avg": 23,
+      "count": 1
+    },
+    "each line": {
+      "avg": 23,
+      "count": 1
+    },
+    "line has": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue dot": {
+      "avg": 23,
+      "count": 1
+    },
+    "dot on": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver dot": {
+      "avg": 23,
+      "count": 1
+    },
+    "three pairs": {
+      "avg": 23,
+      "count": 1
+    },
+    "pairs total": {
+      "avg": 23,
+      "count": 1
+    },
+    "with even": {
+      "avg": 23,
+      "count": 1
+    },
+    "even spacing": {
+      "avg": 23,
+      "count": 1
+    },
+    "lines stacked vertically": {
+      "avg": 23,
+      "count": 1
+    },
+    "midnight blue dot": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "icons": {
+      "avg": 23,
+      "count": 2
+    },
+    "ice": {
+      "avg": 23,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 23,
+      "count": 2
+    },
+    "grid": {
+      "avg": 23,
+      "count": 2
+    },
+    "rocket": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "planet": {
+      "avg": 23,
+      "count": 1
+    },
+    "ring": {
+      "avg": 23,
+      "count": 1
+    },
+    "star": {
+      "avg": 23,
+      "count": 1
+    },
+    "telescope": {
+      "avg": 23,
+      "count": 2
+    },
+    "midnight": {
+      "avg": 23,
+      "count": 2
+    },
+    "blue": {
+      "avg": 23,
+      "count": 2
+    },
+    "fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "matching filled": {
+      "avg": 23,
+      "count": 1
+    },
+    "filled flat": {
+      "avg": 23,
+      "count": 1
+    },
+    "flat icons": {
+      "avg": 23,
+      "count": 1
+    },
+    "icons on": {
+      "avg": 23,
+      "count": 2
+    },
+    "on ice": {
+      "avg": 23,
+      "count": 1
+    },
+    "ice light": {
+      "avg": 23,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 23,
+      "count": 2
+    },
+    "rocket silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "planet with": {
+      "avg": 23,
+      "count": 1
+    },
+    "with ring": {
+      "avg": 23,
+      "count": 1
+    },
+    "ring silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "star silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "telescope silhouette": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette midnight": {
+      "avg": 23,
+      "count": 1
+    },
+    "midnight blue": {
+      "avg": 23,
+      "count": 2
+    },
+    "blue fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "fill consistent": {
+      "avg": 23,
+      "count": 1
+    },
+    "telescope silhouette midnight": {
+      "avg": 23,
+      "count": 1
+    },
+    "silhouette midnight blue": {
+      "avg": 23,
+      "count": 1
+    },
+    "midnight blue fill": {
+      "avg": 23,
+      "count": 1
+    },
+    "outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "desk": {
+      "avg": 23,
+      "count": 1
+    },
+    "lamp": {
+      "avg": 23,
+      "count": 1
+    },
+    "filing": {
+      "avg": 23,
+      "count": 1
+    },
+    "cabinet": {
+      "avg": 23,
+      "count": 1
+    },
+    "stapler": {
+      "avg": 23,
+      "count": 1
+    },
+    "paper": {
+      "avg": 23,
+      "count": 1
+    },
+    "clip": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver": {
+      "avg": 23,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "matching outline": {
+      "avg": 23,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 23,
+      "count": 1
+    },
+    "desk lamp": {
+      "avg": 23,
+      "count": 1
+    },
+    "filing cabinet": {
+      "avg": 23,
+      "count": 1
+    },
+    "paper clip": {
+      "avg": 23,
+      "count": 1
+    },
+    "clip silver": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "outlines consistent": {
+      "avg": 23,
+      "count": 1
+    },
+    "paper clip silver": {
+      "avg": 23,
+      "count": 1
+    },
+    "clip silver outlines": {
+      "avg": 23,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 23,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 23,
+      "count": 1
+    },
+    "observatory": {
+      "avg": 23,
+      "count": 1
+    },
+    "building": {
+      "avg": 23,
+      "count": 1
+    },
+    "dome": {
+      "avg": 23,
+      "count": 1
+    },
+    "control": {
+      "avg": 23,
+      "count": 1
+    },
+    "room": {
+      "avg": 23,
+      "count": 1
+    },
+    "night": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "view": {
+      "avg": 23,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 23,
+      "count": 1
+    },
+    "accents": {
+      "avg": 23,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 23,
+      "count": 1
+    },
+    "illustration of": {
+      "avg": 23,
+      "count": 1
+    },
+    "small observatory": {
+      "avg": 23,
+      "count": 1
+    },
+    "observatory building": {
+      "avg": 23,
+      "count": 1
+    },
+    "building with": {
+      "avg": 23,
+      "count": 1
+    },
+    "with telescope": {
+      "avg": 23,
+      "count": 1
+    },
+    "telescope dome": {
+      "avg": 23,
+      "count": 1
+    },
+    "dome control": {
+      "avg": 23,
+      "count": 1
+    },
+    "control room": {
+      "avg": 23,
+      "count": 1
+    },
+    "room and": {
+      "avg": 23,
+      "count": 1
+    },
+    "and night": {
+      "avg": 23,
+      "count": 1
+    },
+    "night sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky view": {
+      "avg": 23,
+      "count": 1
+    },
+    "view midnight": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue and": {
+      "avg": 23,
+      "count": 1
+    },
+    "and silver": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver color": {
+      "avg": 23,
+      "count": 1
+    },
+    "color scheme": {
+      "avg": 23,
+      "count": 1
+    },
+    "scheme with": {
+      "avg": 23,
+      "count": 1
+    },
+    "with ice": {
+      "avg": 23,
+      "count": 1
+    },
+    "ice white": {
+      "avg": 23,
+      "count": 1
+    },
+    "white accents": {
+      "avg": 23,
+      "count": 1
+    },
+    "accents clean": {
+      "avg": 23,
+      "count": 1
+    },
+    "telescope dome control": {
+      "avg": 23,
+      "count": 1
+    },
+    "dome control room": {
+      "avg": 23,
+      "count": 1
+    },
+    "night sky view": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky view midnight": {
+      "avg": 23,
+      "count": 1
+    },
+    "view midnight blue": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "background": {
+    "noise": {
+      "avg": 25,
+      "count": 1
+    },
+    "static": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle noise": {
+      "avg": 25,
+      "count": 1
+    },
+    "noise grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "and pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible static": {
+      "avg": 25,
+      "count": 1
+    },
+    "static feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "clean technical": {
+      "avg": 25,
+      "count": 1
+    },
+    "technical mood": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle noise grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "noise grain texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale silver tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible static": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible static feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "equilateral": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "large equilateral": {
+      "avg": 25,
+      "count": 1
+    },
+    "equilateral triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered on": {
+      "avg": 25,
+      "count": 1
+    },
+    "background midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold clean": {
+      "avg": 25,
+      "count": 1
+    },
+    "geometric shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape high": {
+      "avg": 25,
+      "count": 1
+    },
+    "high contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "equilateral triangle centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue filled triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin silver outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver outline bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "pale": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "pale silver": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "on ice": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "ice": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "ice white": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "grain": {
+      "avg": 24,
+      "count": 2
+    },
+    "texture": {
+      "avg": 24,
+      "count": 2
+    },
+    "cool": {
+      "avg": 24,
+      "count": 2
+    },
+    "tones": {
+      "avg": 24,
+      "count": 2
+    },
+    "barely": {
+      "avg": 24,
+      "count": 3
+    },
+    "visible": {
+      "avg": 24,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 24,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 24,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 24,
+      "count": 3
+    },
+    "texture in": {
+      "avg": 24,
+      "count": 2
+    },
+    "in cool": {
+      "avg": 24,
+      "count": 2
+    },
+    "cool ice": {
+      "avg": 24,
+      "count": 2
+    },
+    "tones barely": {
+      "avg": 24,
+      "count": 2
+    },
+    "barely visible": {
+      "avg": 24,
+      "count": 3
+    },
+    "mood extremely": {
+      "avg": 24,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 24,
+      "count": 3
+    },
+    "tones barely visible": {
+      "avg": 24,
+      "count": 2
+    },
+    "regular": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "tiny": {
+      "avg": 24,
+      "count": 1
+    },
+    "dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "evenly": {
+      "avg": 24,
+      "count": 1
+    },
+    "spaced": {
+      "avg": 24,
+      "count": 1
+    },
+    "micro": {
+      "avg": 24,
+      "count": 1
+    },
+    "precise": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle regular": {
+      "avg": 24,
+      "count": 1
+    },
+    "regular grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "grid of": {
+      "avg": 24,
+      "count": 1
+    },
+    "of tiny": {
+      "avg": 24,
+      "count": 1
+    },
+    "tiny dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "dots in": {
+      "avg": 24,
+      "count": 1
+    },
+    "in pale": {
+      "avg": 24,
+      "count": 1
+    },
+    "silver on": {
+      "avg": 24,
+      "count": 1
+    },
+    "white evenly": {
+      "avg": 24,
+      "count": 1
+    },
+    "evenly spaced": {
+      "avg": 24,
+      "count": 1
+    },
+    "spaced micro": {
+      "avg": 24,
+      "count": 1
+    },
+    "micro dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "dots barely": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible clean": {
+      "avg": 24,
+      "count": 1
+    },
+    "clean precise": {
+      "avg": 24,
+      "count": 1
+    },
+    "precise mood": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle regular grid": {
+      "avg": 24,
+      "count": 1
+    },
+    "evenly spaced micro": {
+      "avg": 24,
+      "count": 1
+    },
+    "spaced micro dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "micro dots barely": {
+      "avg": 24,
+      "count": 1
+    },
+    "dots barely visible": {
+      "avg": 24,
+      "count": 1
+    },
+    "brushed": {
+      "avg": 23,
+      "count": 1
+    },
+    "aluminum": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "sleek": {
+      "avg": 23,
+      "count": 1
+    },
+    "modern": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle brushed": {
+      "avg": 23,
+      "count": 1
+    },
+    "brushed aluminum": {
+      "avg": 23,
+      "count": 1
+    },
+    "aluminum texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "white tones": {
+      "avg": 23,
+      "count": 1
+    },
+    "visible fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "fine horizontal": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizontal grain": {
+      "avg": 23,
+      "count": 1
+    },
+    "grain sleek": {
+      "avg": 23,
+      "count": 1
+    },
+    "sleek modern": {
+      "avg": 23,
+      "count": 1
+    },
+    "modern mood": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle brushed aluminum": {
+      "avg": 23,
+      "count": 1
+    },
+    "brushed aluminum texture": {
+      "avg": 23,
+      "count": 1
+    },
+    "barely visible fine": {
+      "avg": 23,
+      "count": 1
+    },
+    "grain sleek modern": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "starfield": {
+      "avg": 25,
+      "count": 1
+    },
+    "void": {
+      "avg": 25,
+      "count": 1
+    },
+    "countless": {
+      "avg": 25,
+      "count": 1
+    },
+    "stars": {
+      "avg": 25,
+      "count": 1
+    },
+    "nebula": {
+      "avg": 25,
+      "count": 1
+    },
+    "wisps": {
+      "avg": 25,
+      "count": 1
+    },
+    "cosmic": {
+      "avg": 25,
+      "count": 1
+    },
+    "infinite": {
+      "avg": 25,
+      "count": 1
+    },
+    "feeling": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic wide": {
+      "avg": 25,
+      "count": 2
+    },
+    "space starfield": {
+      "avg": 25,
+      "count": 1
+    },
+    "starfield midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue void": {
+      "avg": 25,
+      "count": 1
+    },
+    "void with": {
+      "avg": 25,
+      "count": 1
+    },
+    "with countless": {
+      "avg": 25,
+      "count": 1
+    },
+    "countless silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver white": {
+      "avg": 25,
+      "count": 2
+    },
+    "white stars": {
+      "avg": 25,
+      "count": 1
+    },
+    "stars and": {
+      "avg": 25,
+      "count": 1
+    },
+    "and subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle nebula": {
+      "avg": 25,
+      "count": 1
+    },
+    "nebula wisps": {
+      "avg": 25,
+      "count": 1
+    },
+    "wisps vast": {
+      "avg": 25,
+      "count": 1
+    },
+    "vast cosmic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cosmic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere deep": {
+      "avg": 25,
+      "count": 1
+    },
+    "deep infinite": {
+      "avg": 25,
+      "count": 1
+    },
+    "infinite feeling": {
+      "avg": 25,
+      "count": 1
+    },
+    "feeling ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "starfield midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue void": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle nebula wisps": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow-covered": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain": {
+      "avg": 25,
+      "count": 1
+    },
+    "peak": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlit": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow": {
+      "avg": 25,
+      "count": 1
+    },
+    "surfaces": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold": {
+      "avg": 25,
+      "count": 1
+    },
+    "crisp": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow-covered mountain": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain peak": {
+      "avg": 25,
+      "count": 1
+    },
+    "peak under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver moonlit": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlit snow": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow surfaces": {
+      "avg": 25,
+      "count": 1
+    },
+    "surfaces cold": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold crisp": {
+      "avg": 25,
+      "count": 1
+    },
+    "crisp atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "in sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky area": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow-covered mountain peak": {
+      "avg": 25,
+      "count": 1
+    },
+    "mountain peak under": {
+      "avg": 25,
+      "count": 1
+    },
+    "peak under midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "under midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "midnight blue sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue sky silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky silver moonlit": {
+      "avg": 25,
+      "count": 1
+    },
+    "silver moonlit snow": {
+      "avg": 25,
+      "count": 1
+    },
+    "moonlit snow surfaces": {
+      "avg": 25,
+      "count": 1
+    },
+    "snow surfaces cold": {
+      "avg": 25,
+      "count": 1
+    },
+    "surfaces cold crisp": {
+      "avg": 25,
+      "count": 1
+    },
+    "cold crisp atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "aerial": {
+      "avg": 25,
+      "count": 1
+    },
+    "frozen": {
+      "avg": 25,
+      "count": 1
+    },
+    "lake": {
+      "avg": 25,
+      "count": 1
+    },
+    "intricate": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice": {
+      "avg": 25,
+      "count": 1
+    },
+    "patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "water": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "cracks": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "scale": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic aerial": {
+      "avg": 25,
+      "count": 1
+    },
+    "aerial shot": {
+      "avg": 25,
+      "count": 1
+    },
+    "frozen lake": {
+      "avg": 25,
+      "count": 1
+    },
+    "lake surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "with intricate": {
+      "avg": 25,
+      "count": 1
+    },
+    "intricate ice": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "patterns midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "blue deep": {
+      "avg": 25,
+      "count": 1
+    },
+    "deep water": {
+      "avg": 25,
+      "count": 1
+    },
+    "water visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible through": {
+      "avg": 25,
+      "count": 1
+    },
+    "through silver": {
+      "avg": 25,
+      "count": 1
+    },
+    "white ice": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice cracks": {
+      "avg": 25,
+      "count": 1
+    },
+    "cracks natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic scale": {
+      "avg": 25,
+      "count": 1
+    },
+    "scale ample": {
+      "avg": 25,
+      "count": 1
+    },
+    "frozen lake surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "intricate ice patterns": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice patterns midnight": {
+      "avg": 25,
+      "count": 1
+    },
+    "patterns midnight blue": {
+      "avg": 25,
+      "count": 1
+    },
+    "ice cracks natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "cracks natural abstract": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural abstract beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "abstract beauty dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty dramatic scale": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "midnight": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "blue": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "silver": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "midnight blue": {
+      "avg": 24.5,
+      "count": 4
+    },
+    "atmosphere": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "side": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "one side": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "side for": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "text overlay": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 2
+    },
+    "surface": {
+      "avg": 24,
+      "count": 2
+    },
+    "surface with": {
+      "avg": 24,
+      "count": 2
+    },
+    "macro": {
+      "avg": 23,
+      "count": 1
+    },
+    "polished": {
+      "avg": 23,
+      "count": 1
+    },
+    "chrome": {
+      "avg": 23,
+      "count": 1
+    },
+    "sphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "surroundings": {
+      "avg": 23,
+      "count": 1
+    },
+    "metallic": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 23,
+      "count": 1
+    },
+    "sleek": {
+      "avg": 23,
+      "count": 1
+    },
+    "futuristic": {
+      "avg": 23,
+      "count": 1
+    },
+    "studio": {
+      "avg": 23,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 23,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 23,
+      "count": 1
+    },
+    "macro shot": {
+      "avg": 23,
+      "count": 1
+    },
+    "polished chrome": {
+      "avg": 23,
+      "count": 1
+    },
+    "chrome sphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "sphere reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflecting its": {
+      "avg": 23,
+      "count": 1
+    },
+    "its midnight": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue surroundings": {
+      "avg": 23,
+      "count": 1
+    },
+    "surroundings silver": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver metallic": {
+      "avg": 23,
+      "count": 1
+    },
+    "metallic surface": {
+      "avg": 23,
+      "count": 1
+    },
+    "with subtle": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle blue": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue reflections": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflections sleek": {
+      "avg": 23,
+      "count": 1
+    },
+    "sleek futuristic": {
+      "avg": 23,
+      "count": 1
+    },
+    "futuristic atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere studio": {
+      "avg": 23,
+      "count": 1
+    },
+    "studio lighting": {
+      "avg": 23,
+      "count": 1
+    },
+    "lighting ample": {
+      "avg": 23,
+      "count": 1
+    },
+    "polished chrome sphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "chrome sphere reflecting": {
+      "avg": 23,
+      "count": 1
+    },
+    "midnight blue surroundings": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue surroundings silver": {
+      "avg": 23,
+      "count": 1
+    },
+    "surroundings silver metallic": {
+      "avg": 23,
+      "count": 1
+    },
+    "silver metallic surface": {
+      "avg": 23,
+      "count": 1
+    },
+    "subtle blue reflections": {
+      "avg": 23,
+      "count": 1
+    },
+    "blue reflections sleek": {
+      "avg": 23,
+      "count": 1
+    },
+    "reflections sleek futuristic": {
+      "avg": 23,
+      "count": 1
+    },
+    "sleek futuristic atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "futuristic atmosphere studio": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere studio lighting": {
+      "avg": 23,
+      "count": 1
+    }
+  }
+}

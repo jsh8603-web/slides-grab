@@ -1,0 +1,291 @@
+{
+  "cover": {},
+  "frame": {
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "chart frame": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale copper": {
+      "avg": 25,
+      "count": 2
+    },
+    "diagram": {
+      "avg": 25,
+      "count": 2
+    },
+    "circles": {
+      "avg": 25,
+      "count": 2
+    },
+    "outer": {
+      "avg": 25,
+      "count": 2
+    },
+    "diagram on": {
+      "avg": 25,
+      "count": 2
+    },
+    "filled": {
+      "avg": 25,
+      "count": 2
+    },
+    "chart": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "circle": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "background first": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "minimal": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "warm": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "ivory": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "on warm": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "warm ivory": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "ivory background": {
+      "avg": 24.4,
+      "count": 7
+    },
+    "copper": {
+      "avg": 24.3,
+      "count": 6
+    },
+    "first": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "second": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "medium": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "fourth": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "teal second": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "copper third": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "medium teal": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "teal fourth": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "copper four": {
+      "avg": 23.5,
+      "count": 2
+    }
+  },
+  "icon": {
+    "warm": {
+      "avg": 24,
+      "count": 2
+    },
+    "ivory": {
+      "avg": 24,
+      "count": 2
+    },
+    "warm ivory": {
+      "avg": 24,
+      "count": 2
+    },
+    "icons": {
+      "avg": 22,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 22,
+      "count": 2
+    },
+    "grid": {
+      "avg": 22,
+      "count": 2
+    },
+    "2x2 grid": {
+      "avg": 22,
+      "count": 2
+    },
+    "copper": {
+      "avg": 22,
+      "count": 2
+    }
+  },
+  "background": {
+    "texture": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "barely": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible": {
+      "avg": 25,
+      "count": 2
+    },
+    "barely visible": {
+      "avg": 25,
+      "count": 2
+    },
+    "on warm": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "warm": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "ivory": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "feel": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "warm ivory": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "feel extremely": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "feel extremely minimal": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "copper": {
+      "avg": 24,
+      "count": 3
+    },
+    "in warm": {
+      "avg": 24,
+      "count": 2
+    },
+    "pattern": {
+      "avg": 24,
+      "count": 2
+    },
+    "architectural": {
+      "avg": 24,
+      "count": 2
+    },
+    "pattern in": {
+      "avg": 24,
+      "count": 2
+    },
+    "architectural feel": {
+      "avg": 24,
+      "count": 2
+    },
+    "architectural feel extremely": {
+      "avg": 24,
+      "count": 2
+    }
+  },
+  "metaphor": {
+    "rich": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "side": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "overlay": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "one side": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "side for": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "text overlay": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "warm": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 3
+    },
+    "copper": {
+      "avg": 24,
+      "count": 3
+    },
+    "depth": {
+      "avg": 24,
+      "count": 2
+    },
+    "sky": {
+      "avg": 23.5,
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slide": 4,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "Style: Authoritative, forward-looking, and strategically urgent — conveying both the inevitability of AI agent adoption and the cost of inaction. Color palette: Primary (Deep Navy), Accent (Warm Gold), Background (Warm Ivory), Text (Near Black), Muted (Steel Gray). A moody directional light photograph of a weathered wooden surface with visible grain running along a forked path carved into it, one direction leading toward rough splintered texture and the other toward smooth polished finish, brass",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 62,
+  "ip": [
+    {
+      "rule": "IP-08",
+      "level": "WARN",
+      "msg": "Prompt too long (741 chars > 600) — Flash may ignore parts"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 25,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-03-19T11:19:53.368Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.1,
+    "min": 22.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 2,
+      "25-27": 2,
+      "22-24": 1,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "cover": {
+      "avg": 26.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 24.5,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IP-09": 2
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The image depicts a moody scene with a wooden pier and calm water, aligning with many aspects of the prompt. However, the lighting appears to be dusk/dawn with a cool palette rather than a warm 'golden hour'. The water shows long exposure streaks rather than distinct 'gentle ripples'."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 4,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "H (on helipad, abstract)"
+        ]
+      }
+    },
+    {
+      "slide": 5,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "steel (avg 27.5, n=2)",
+        "cyan (avg 27, n=2)",
+        "urban (avg 27, n=2)",
+        "modern (avg 26.5, n=2)",
+        "smart (avg 26.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "golden (avg 24.5, n=2)",
+        "texture (avg 25, n=2)",
+        "cinematic (avg 25.2, n=3)",
+        "modern (avg 26.5, n=2)",
+        "smart (avg 26.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "pattern (avg 27.2, n=5)",
+        "sophisticated atmosphere (avg 27.2, n=6)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 44 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 55 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "pyramid (avg 27, n=5)",
+        "flowchart (avg 27, n=6)",
+        "rounded rectangles (avg 27, n=6)",
+        "by arrows (avg 27, n=6)",
+        "rounded (avg 27, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 208 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern (avg 27, n=6)",
+        "paper (avg 27, n=6)",
+        "paper texture (avg 27, n=6)",
+        "fiber (avg 26.9, n=6)",
+        "fiber pattern warm (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 91 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sea (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)",
+        "ocean (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 126 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 5,
+    "retried": 0
+  }
+}

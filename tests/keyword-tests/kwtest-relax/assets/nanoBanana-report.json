@@ -1,0 +1,206 @@
+{
+  "timestamp": "2026-03-19T12:20:22.375Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.6,
+    "min": 23,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 5,
+      "25-27": 2,
+      "22-24": 1,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 27,
+      "count": 3
+    },
+    "cover": {
+      "avg": 26.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 23,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 27.5,
+      "count": 2
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-15": 5,
+    "IP-09": 1,
+    "IV-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The gear process icon has an orange fill accent instead of a green fill accent as specified in the prompt. Additionally, the background is light gray, not white as requested, though this is a minor deviation compared to the color of the gear accent. The strokes are also thicker than 2px, which is a minor discrepancy from the prompt."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 26,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The top tier of the pyramid is a solid deep navy color, whereas the prompt implies a subtle gradient from deep navy to orange across all sections as they narrow down progressively, or at least encompassing the top tier in a gradient transition to orange rather than being solid blue. However, the overall color progression from navy to orange is present across the tiers and the general pyramid structure matches the description well. It's a minor divergence from the gradient detail in the prompt phrasing for the top tier. "
+      }
+    },
+    {
+      "slide": 1,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27.5, n=2)",
+        "rectangles (avg 27.5, n=2)",
+        "arrows (avg 27.5, n=2)",
+        "flow (avg 27.5, n=2)",
+        "node (avg 27.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "texture (avg 24, n=2)",
+        "warm (avg 24, n=2)",
+        "subtle (avg 24.7, n=3)",
+        "base (avg 25.4, n=4)",
+        "rounded (avg 26, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "reflecting (avg 27.3, n=5)",
+        "smart (avg 27.3, n=5)",
+        "photography (avg 27.3, n=6)",
+        "pattern (avg 27.2, n=5)",
+        "glass (avg 27.2, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 76 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "smallest (avg 26.8, n=5)",
+        "composition (avg 26.4, n=5)",
+        "widest (avg 26.4, n=5)",
+        "narrowing down (avg 26.3, n=5)",
+        "sections narrowing down (avg 26.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 221 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "charts (avg 27.5, n=5)",
+        "data warm paper (avg 27.5, n=6)",
+        "data warm (avg 27.5, n=6)",
+        "faint (avg 27.3, n=5)",
+        "paper texture (avg 27.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 105 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 159 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 9,
+    "retried": 1
+  }
+}

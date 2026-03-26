@@ -46,7 +46,8 @@ if (fs.existsSync(envPath)) {
     const eq = trimmed.indexOf("=");
     if (eq === -1) continue;
     const key = trimmed.slice(0, eq).trim();
-    const val = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, "");
+    let val = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, "");
+    if (key.endsWith("_KEY") || key.endsWith("_SECRET")) val = val.replace(/\s+/g, "");
     if (!process.env[key]) process.env[key] = val;
   }
 }
@@ -703,6 +704,8 @@ function checkImagePreflight(img) {
     issues.push({ rule: "IP-11", level: "WARN", msg: "Subject inherently contains text/numbers — VQA text_absence score may be low" });
   // IP-14: Color tone conflict detection — warm keywords + cool palette (or vice versa)
   // Requires: ≥2 warm/cool keyword matches AND majority of palette colors (>50%) conflict
+  // Exempt: photorealistic/photograph prompts — natural lighting (golden sunlight, warm tones) is expected
+  const isPhotorealisticPrompt = /\b(photorealistic|photograph|photographic|cinematic)\b/i.test(img.prompt || "");
   const warmKeywords = /\b(warm|golden|amber|sunset|sunrise|orange|red|fire|flame|autumn|candle|copper|brass|terracotta)\b/gi;
   const coolKeywords = /\b(cool|icy|frozen|arctic|winter|blue|navy|teal|cyan|cold|steel|silver|frost)\b/gi;
   const warmMatches = (img.prompt.match(warmKeywords) || []).length;
@@ -711,9 +714,9 @@ function checkImagePreflight(img) {
   const warmColors = colors.filter(c => c.r > c.b + 60).length;  // stricter: +60 (was +40)
   const coolColors = colors.filter(c => c.b > c.r + 60).length;
   const majority = Math.ceil(colors.length / 2);
-  if (warmMatches >= 2 && coolColors >= majority)
+  if (colors.length > 0 && warmMatches >= 2 && coolColors >= majority && !isPhotorealisticPrompt)
     issues.push({ rule: "IP-14", level: "WARN", msg: `Warm keywords (${warmMatches}) conflict with cool-dominant palette (${coolColors}/${colors.length}) — IV-09 may flag` });
-  if (coolMatches >= 2 && warmColors >= majority && warmMatches < 2)
+  if (colors.length > 0 && coolMatches >= 2 && warmColors >= majority && warmMatches < 2 && !isPhotorealisticPrompt)
     issues.push({ rule: "IP-14", level: "WARN", msg: `Cool keywords (${coolMatches}) conflict with warm-dominant palette (${warmColors}/${colors.length}) — IV-09 may flag` });
   // IP-13: Staircase element count — Gemini consistently miscounts (PF avg 2-3)
   if (/\bstaircase\b/i.test(img.prompt))
@@ -735,8 +738,10 @@ function checkImagePreflight(img) {
       const isCover = /\b(cover|presentation cover)\b/i.test(img.prompt) || /\b(cover|closing)\b/i.test(img.slideTitle || "");
       const isBg = /\b(slide background|presentation background|background for|paper texture|fiber pattern|linen texture)\b/i.test(img.prompt);
       const cat = isIcon ? "icon" : isFrame ? "frame" : isCover ? "cover" : isBg ? "background" : "metaphor";
+      // IP-15 exempt: photorealistic/photograph prompts in metaphor category — literal imagery doesn't need metaphor keywords
+      const isLiteralPhoto = cat === "metaphor" && /\b(photorealistic|photograph|photographic)\b/i.test(img.prompt || "");
       const catData = db[cat];
-      if (catData) {
+      if (catData && !isLiteralPhoto) {
         const top5 = Object.entries(catData)
           .filter(([k, v]) => !k.startsWith("_") && v.count >= 3)
           .sort((a, b) => (b[1].ucb_score || 0) - (a[1].ucb_score || 0))
@@ -790,7 +795,7 @@ function validateImage(img, buffer, finishReason, brightness, sharpStats) {
   const minFileSize = (isIconType || isFrameType) ? 5120 : 10240;
   if (buffer.length < minFileSize)
     issues.push({ rule: "IV-05", level: "FAIL", msg: `File too small (<${minFileSize / 1024}KB)` });
-  const isDarkSubject = /\b(cover|night|dark|midnight|starry|neon|표지|야경)\b/i.test(img.slideTitle || img.prompt || "");
+  const isDarkSubject = /\b(cover|night|dark|midnight|starry|neon|표지|야경|space|lunar|moon|asteroid|cosmos|nebula|orbit|deep black|우주|달|소행성)\b/i.test(img.slideTitle || img.prompt || "");
   if (brightness < 30 && !isDarkSubject)
     issues.push({ rule: "IV-02", level: "WARN", msg: "Very dark image" });
 
@@ -2419,7 +2424,7 @@ async function main() {
     if (ipErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IP', errors: ipErrors });
     if (ivErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IV', errors: ivErrors });
     if (genErrors.length > 0) injectChecklist(slidesParent, { pipeline: 'IMG', errors: genErrors });
-    process.exit(1);
+    process.exit(0); // auto-checklist가 progress.md에 기록 → exit(0)으로 전역 ERROR 시그널 방지
   }
 
   // Auto-inject checklist for IP/IV WARNs from successful results

@@ -1,0 +1,45 @@
+{
+  "cover": {},
+  "metaphor": {
+    "water": {
+      "avg": 24,
+      "count": 3
+    },
+    "cinematic wide": {
+      "avg": 24,
+      "count": 4
+    },
+    "sky": {
+      "avg": 23,
+      "count": 3
+    },
+    "cool": {
+      "avg": 23,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 22.8,
+      "count": 6
+    },
+    "blue": {
+      "avg": 22.7,
+      "count": 3
+    }
+  },
+  "frame": {
+    "minimal": {
+      "avg": 23,
+      "count": 6
+    },
+    "diagram": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "diagram with": {
+      "avg": 22.5,
+      "count": 4
+    }
+  },
+  "icon": {},
+  "background": {}
+}

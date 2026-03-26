@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-03-19T11:48:01.071Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.5,
+    "min": 22,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 2,
+      "25-27": 1,
+      "22-24": 5,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 3
+    },
+    "icon": {
+      "avg": 22,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IP-11": 1,
+    "IP-09": 1,
+    "IP-15": 2,
+    "IP-14": 3
+  },
+  "weakest_slides": [
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 1,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "faint watermarks"
+        ],
+        "pf_reason": "Background is light gray, not white as specified. Funnel icon includes a diagonal line, suggesting 'no filter' rather than a standard filter."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 22.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "co_reason": "The image is visually busy, lacking sufficient clean negative space for easy text overlay, which is crucial for a presentation slide.",
+        "detected_text": [],
+        "pf_reason": "The prompt requested a 'clean centered composition with negative space,' but the image presents a very full and busy cityscape with limited negative space, making it challenging for text overlay."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 7 rounded rectangles, but the image displays 9."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image does not show sections narrowing down from left to right like a pyramid progression. The two rounded rectangles are of equal size. All other aspects of the prompt were met well, including the colors and overall style of the flowchart elements, and absence of text or labels. The 'arrows' are more of a gold accent within the rectangle shapes, not distinct arrows connecting the shapes themselves, but this is a minor interpretation difference given the 'gold accent' prompt part. However, the lack of 'pyramid progression' is a significant divergence from the prompt's structural description. Therefore, a score of 3 is given. A slight adjustment could involve making the right rectangle smaller and the ribbon connecting them also diminishing in size, thereby creating the desired 'pyramid progression'. Alternately, the prompt might have intended for the 'nodes' themselves to be shaped like a pyramid progression, but as vector rectangles it would have been hard to achieve. The current interpretation has the shapes themselves being consistent, whereas the prompt would have intended the overall structure or connection to appear as a narrowing 'pyramid progression'. The current rendition is simply a flow or connection of two identically sized nodes. Overall, the rendering is elegant and professional, but misses a key structural element described in the prompt related to the progression of elements' size. Also, the term 'flowchart' usually refers to connected shapes/nodes that each represent a step in a process, and can be different sizes or shapes. The current rendition is more like two connected horizontal banners. Despite the good quality of other elements, the missing pyramid progression and the slightly ambiguous flowchart aspect affects prompt fidelity. Thus, the current rating is 3. A higher rating would require a clearer depiction of 'sections narrowing down from left to right like a pyramid progression', perhaps by making the right rectangle noticeably smaller or having the ribbon itself gradually narrow, or even by using different shapes for the 'nodes' (e.g., triangle-like shapes). The current output is rather static in its interpretation of 'progression'. This element needs to be more dynamically rendered to improve the score. The gold accents are well-done and the navy color is also quite accurate. Overall, the image is beautiful and well-rendered, but it deviates from the structural aspect of the prompt and hence the rating is given as 3 for prompt fidelity. A slight adjustment to the prompt could make it less ambiguous, for example, '2 rounded rectangles, with the right one being smaller than the left, connected by a ribbon that narrows down from left to right, creating a pyramid progression effect'. This would make it easier to interpret and render correctly. In its current form, the prompt has a degree of ambiguity as to how 'sections narrowing down from left to right like a pyramid progression' should be interpreted. If the intention was for the overall width of the entire structure (including the connecting ribbon) to be narrower from left to right, then this could have been achieved by making the gap between the two rectangles wider, or making the ribbon connecting them narrower as it goes to the right, or by making the elements themselves narrower. The current rendition has elements that are generally of similar height and width, and there is no clear sense of 'progression'. The image is quite balanced and symmetrical, whereas a pyramid progression would imply an asymmetry. This is the main reason for the score of 3 for prompt fidelity. All other aspects such as 'minimal flat vector', 'rounded rectangles', 'subtle gradient ribbon', 'deep navy', 'warm gold accent', 'clean light gray background', 'no text', and 'no label' are well-matched. So, a minor structural misinterpretation that impacts the overall flow of the image as specified in the prompt is the main reason for the current score. The elements are rendered well in their individual aspects, but the combined structure does not fully convey the specified 'pyramid progression'."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a 'cinematic wide-angle aerial shot', but the image depicts a low-angle shot of the seedling from ground level, which is a significant departure from the requested perspective."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "texture (avg 26.8, n=3)",
+        "moody (avg 26.5, n=2)",
+        "ornate (avg 26.5, n=2)",
+        "brass (avg 26.5, n=2)",
+        "wooden (avg 26.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "corners (avg 22.5, n=2)",
+        "rounded corners (avg 22.5, n=2)",
+        "rounded (avg 22.8, n=3)",
+        "gold (avg 22.8, n=3)",
+        "labels (avg 22.8, n=3)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "pattern (avg 27.2, n=5)",
+        "glass (avg 27.1, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 48 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 55 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "pyramid (avg 27.1, n=5)",
+        "flowchart (avg 27.1, n=6)",
+        "rounded rectangles (avg 27.1, n=6)",
+        "by arrows (avg 27.1, n=6)",
+        "rounded (avg 27.1, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 211 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern (avg 27.1, n=5)",
+        "paper (avg 27.1, n=5)",
+        "paper texture (avg 27.1, n=5)",
+        "fiber (avg 27, n=5)",
+        "pattern (avg 26.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 92 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)",
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 129 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 8,
+    "retried": 0
+  }
+}

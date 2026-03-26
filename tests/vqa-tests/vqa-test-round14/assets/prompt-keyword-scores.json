@@ -1,0 +1,115 @@
+{
+  "cover": {},
+  "frame": {
+    "chart": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "purple": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "deep purple": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "light purple": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "lilac": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "gold": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "on lilac": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "lilac background": {
+      "avg": 22.6,
+      "count": 5
+    }
+  },
+  "background": {
+    "lilac": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "minimal": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "purple": {
+      "avg": 24,
+      "count": 4
+    },
+    "gold": {
+      "avg": 24,
+      "count": 4
+    },
+    "on lilac": {
+      "avg": 24,
+      "count": 3
+    },
+    "lilac background": {
+      "avg": 24,
+      "count": 3
+    },
+    "deep purple": {
+      "avg": 24,
+      "count": 3
+    },
+    "abstract": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "lines": {
+      "avg": 22.7,
+      "count": 3
+    }
+  },
+  "icon": {
+    "lilac": {
+      "avg": 25,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "purple": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "side": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "one side": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "side for": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "text overlay": {
+      "avg": 24.8,
+      "count": 4
+    }
+  }
+}

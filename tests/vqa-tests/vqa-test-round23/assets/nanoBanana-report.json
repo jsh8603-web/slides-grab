@@ -1,0 +1,144 @@
+{
+  "timestamp": "2026-03-19T03:45:42.691Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.3,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 5,
+      "23-24": 8,
+      "20-22": 7,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24,
+      "count": 2
+    },
+    "frame": {
+      "avg": 22.4,
+      "count": 9
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "background": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 23,
+      "count": 3
+    }
+  },
+  "by_rule": {
+    "IV-09": 9,
+    "IV-10": 3,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 7,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows six chevrons instead of the five specified in the prompt. The color sequence also does not fully match the partial sequence provided in the prompt. The fourth chevron is turquoise and the fifth is medium gray, which were not explicitly mentioned for those positions. The last chevron is light gray/white, while the prompt was cut off after \"fourth light tur\". Also, the prompt states \"Accent turquoise\" (singular) but turquoise is used for two chevrons. The image shows a repeating pattern rather than a unique color for each of the five chevrons as implied by the prompt. However, the background color and general style are correct. The main issue is the number of chevrons. Additionally, the third chevron is charcoal, not medium gray. The first is charcoal, second turquoise, third charcoal, fourth turquoise, fifth charcoal, sixth light gray. This does not match the prompt description of \"First charcoal, second turquoise, third medium gray, fourth light tur\". The image's third chevron is charcoal, not medium gray. The actual image's chevron colors are: charcoal, turquoise, charcoal, turquoise, charcoal, light gray/white. This is a significant deviation in color sequence as well. My apologies for the earlier partial analysis. Let me re-evaluate based on this detailed comparison. The description for colors: \"First charcoal, second turquoise, third medium gray, fourth light tur\". The image colors: first charcoal, second turquoise, third charcoal, fourth turquoise, fifth charcoal, sixth light gray/white. The second charcoal in the image directly contradicts the prompt's third chevron being 'medium gray'. Also, the prompt states 'five' chevrons, but the image has 'six'. This is a very low fidelity. Let me update the prompt fidelity score to 1 and adjust the reason accordingly. This will be a more accurate assessment. Yes, definitely a 1 for prompt fidelity given the multiple deviations. Reconsidering the pf_reason based on more precise color comparison. The description of colors provided in the prompt is: "
+      }
+    },
+    {
+      "slide": 14,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "10K",
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "CALM"
+        ]
+      }
+    },
+    {
+      "slide": 19,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"Extremely min\" and a \"very subtle dot matrix grid pattern\" as the primary visual element, but the image includes prominent curved lines in the accent color, making it less minimalist than described."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The medium turquoise circle is more central than 'center-right' as specified. The prompt also only explicitly describes 3 out of the 5 circles present, leading to additional, undescribed circles in the image."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested a pentagon shape with five axes, but the image shows a hexagon shape with six axes. The inner polygon also appears to be a hexagon, not a pentagon. There are also six axes radiating from the center, not five. The 'Clea' at the end of the prompt seems cut off, but the main geometric discrepancy is clear. The data values indicated by the turquoise outline are also for six segments, not five, despite a portion of the outline suggesting fewer segments for one of the 'arms'. It is clearly a hexagon based diagram though not a pentagon as requested. Overall, it's a good image, but it does not match the prompt's geometric requirements accurately. The partial data fill suggests a radar chart, but it's based on a hexagon, not a pentagon. It has a modern tech style, the specified color palette (charcoal, turquoise, cool gray), and is minimal, but the core shape and number of axes are incorrect based on the prompt's explicit mention of a 'pentagon shape with five axes'. The image shows a hexagonal base with six axes. Also the data is shown to be for two segments and not for all segments. This could be interpreted as showing data values for the given segment and the lack of other data points making it less complete than if all segments had data values shown. It does seem to only indicate data for two segments and not fully cover all segments if it is a radar chart. This is also a major point of non-fidelity as the prompt states 'showing data values' which would imply it showing data values for all sections and not just one or two portions. If it is a full radar chart showing values for all axes then that is not what is shown. If it is showing data values for a given subset of values then it is not indicating that. As such, the image is not a complete radar chart showing full data values for a pentagon, and the number of axes/sides is incorrect. It's a radar chart, but not as specified regarding shape and axes, and the data representation is incomplete compared to a typical radar chart fully showing all data values."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "icons (avg 25, n=2)",
+        "2x2 (avg 25, n=2)",
+        "icons on (avg 25, n=2)",
+        "2x2 grid (avg 25, n=2)",
+        "technical (avg 24.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "data (avg 21.5, n=2)",
+        "charcoal second (avg 22, n=2)",
+        "turquoise third (avg 22, n=2)",
+        "gray fourth (avg 22, n=2)",
+        "turquoise fifth (avg 22, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

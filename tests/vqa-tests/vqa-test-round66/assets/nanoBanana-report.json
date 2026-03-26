@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-03-19T10:07:29.625Z",
+  "summary": {
+    "total": 6,
+    "pass": 5,
+    "warn": 1,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.6,
+    "min": 23,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 4,
+      "25-27": 0,
+      "22-24": 1,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 26.6,
+      "count": 5
+    }
+  },
+  "by_rule": {},
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 3 small coral circles, but the image displays 4."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "chevron (avg 27.5, n=2)",
+        "pointed (avg 27.5, n=2)",
+        "sections (avg 27.5, n=2)",
+        "horizontally (avg 27.5, n=2)",
+        "pointed sections (avg 27.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "coral (avg 24.9, n=5)",
+        "labels (avg 24.9, n=5)",
+        "annotations (avg 24.9, n=5)",
+        "main (avg 25.3, n=2)",
+        "element (avg 25.3, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.6, n=5)",
+        "silhouette (avg 25.6, n=5)",
+        "green (avg 25.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=5)",
+        "rounded rectangles (avg 27, n=5)",
+        "by arrows (avg 27, n=5)",
+        "rounded (avg 27, n=5)",
+        "narrowest (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 193 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=6)",
+        "ship (avg 27.4, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 92 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 7,
+    "retried": 2
+  }
+}

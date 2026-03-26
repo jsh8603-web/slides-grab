@@ -1,0 +1,35 @@
+{
+  "slide": 1,
+  "tier": null,
+  "type": "photo",
+  "category": "frame",
+  "prompt": "Style: Professional, data-driven, forward-looking executive briefing. A photorealistic wide-angle shot of a sleek modern office at dusk with warm golden light reflecting off floor-to-ceiling windows, abstract geometric light patterns suggesting digital neural pathways overlaid on the warm amber interior glow, professional corporate atmosphere, full frame composition with off-center depth creating breathing room, no text, cover photorealistic style, cinematic lighting. 16:9 aspect ratio. Clean fl",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 131,
+  "ip": [
+    {
+      "rule": "IP-15",
+      "level": "INFO",
+      "msg": "Only 1 frame keyword hit (composition) — target 2-4"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 4,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": [
+        "illegible characters and symbols in data visualizations"
+      ]
+    },
+    "total": 25,
+    "detected_text": [
+      "illegible characters and symbols in data visualizations"
+    ],
+    "reasons": {}
+  }
+}

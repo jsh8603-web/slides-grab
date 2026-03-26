@@ -1,0 +1,28 @@
+{
+  "slide": 5,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "A photorealistic futuristic vision of multiple cylindrical submarine data center modules arranged on the ocean floor, connected by glowing fiber optic cables, bioluminescent sea life swimming around them, brass-toned metallic surfaces with intricate riveted textures, deep indigo and teal ocean water, warm golden light beams penetrating from the surface above, no text, 16:9 aspect ratio.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 71,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": [],
+      "pf_reason": "The modules are dome-shaped rather than cylindrical, and the brass-toned metallic surfaces are very dark, appearing more like aged bronze or steel."
+    },
+    "total": 25,
+    "detected_text": [],
+    "reasons": {
+      "pf_reason": "The modules are dome-shaped rather than cylindrical, and the brass-toned metallic surfaces are very dark, appearing more like aged bronze or steel."
+    }
+  }
+}

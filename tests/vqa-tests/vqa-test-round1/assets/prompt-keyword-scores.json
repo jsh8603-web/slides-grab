@@ -1,0 +1,113 @@
+{
+  "background": {
+    "lighting": {
+      "avg": 21.4,
+      "count": 5
+    },
+    "lighting from": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 21,
+      "count": 3
+    },
+    "white": {
+      "avg": 21,
+      "count": 3
+    },
+    "blue": {
+      "avg": 21,
+      "count": 5
+    },
+    "dramatic": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "subtle": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "creating": {
+      "avg": 19.8,
+      "count": 5
+    },
+    "long": {
+      "avg": 19.8,
+      "count": 4
+    },
+    "shadows": {
+      "avg": 19.8,
+      "count": 4
+    },
+    "warm": {
+      "avg": 19.6,
+      "count": 5
+    },
+    "single": {
+      "avg": 19.3,
+      "count": 3
+    },
+    "green": {
+      "avg": 19.3,
+      "count": 3
+    },
+    "left creating": {
+      "avg": 19.3,
+      "count": 3
+    },
+    "creating long": {
+      "avg": 19.3,
+      "count": 3
+    },
+    "abstract": {
+      "avg": 19.3,
+      "count": 4
+    },
+    "golden": {
+      "avg": 18.7,
+      "count": 3
+    },
+    "bright": {
+      "avg": 18.7,
+      "count": 3
+    }
+  },
+  "icon": {
+    "icons": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "grid": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "icons on": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "on white": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "white background": {
+      "avg": 21.8,
+      "count": 4
+    }
+  },
+  "frame": {
+    "frame": {
+      "avg": 20.7,
+      "count": 3
+    }
+  },
+  "cover": {}
+}

@@ -1,0 +1,678 @@
+{
+  "cover": {
+    "fintech": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "transformation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mint": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fintech innovation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern glass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass financial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial building": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall structure": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "structure reflecting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "transformation green": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mint ambient": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fintech innovation cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern glass financial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass financial building": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial building tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building tall structure": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall structure reflecting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mint ambient lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heavy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vault": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "door": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fittings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aged": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heavy wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden vault": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vault door": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass fittings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial security": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heavy wooden vault": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden vault door": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass fittings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial security shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fintech": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bathed": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunrise": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "innovation": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern fintech": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fintech campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass building": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "building bathed": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden sunrise": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern fintech campus": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "early dawn tall": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dawn tall glass": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall glass building": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass building bathed": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden sunrise": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

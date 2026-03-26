@@ -1,0 +1,258 @@
+{
+  "cover": {
+    "blue": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "single": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "cover": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "negative": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "space": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "presentation cover": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "negative space": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "cover background": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "background": {
+    "shallow": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "field": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "lighting from": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "shallow depth": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "depth of": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "of field": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "creating": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "depth": {
+      "avg": 21.8,
+      "count": 6
+    },
+    "soft": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "teal": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 21.4,
+      "count": 5
+    },
+    "deep": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "warm": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "lighting": {
+      "avg": 21,
+      "count": 7
+    },
+    "through": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "blue": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "dramatic": {
+      "avg": 20.5,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 20,
+      "count": 4
+    },
+    "wide-angle": {
+      "avg": 20,
+      "count": 3
+    },
+    "shot": {
+      "avg": 20,
+      "count": 4
+    },
+    "cool": {
+      "avg": 20,
+      "count": 3
+    },
+    "cinematic wide-angle": {
+      "avg": 20,
+      "count": 3
+    },
+    "wide-angle shot": {
+      "avg": 20,
+      "count": 3
+    },
+    "shot of": {
+      "avg": 20,
+      "count": 3
+    },
+    "cool blue": {
+      "avg": 20,
+      "count": 3
+    },
+    "cinematic wide-angle shot": {
+      "avg": 20,
+      "count": 3
+    }
+  },
+  "icon": {
+    "lighting": {
+      "avg": 24,
+      "count": 3
+    },
+    "contrast": {
+      "avg": 24,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 3
+    },
+    "high contrast": {
+      "avg": 24,
+      "count": 3
+    },
+    "contrast cinematic": {
+      "avg": 24,
+      "count": 3
+    },
+    "cinematic lighting": {
+      "avg": 24,
+      "count": 3
+    },
+    "contrast cinematic lighting": {
+      "avg": 24,
+      "count": 3
+    },
+    "clean": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "white": {
+      "avg": 22,
+      "count": 4
+    },
+    "on white": {
+      "avg": 22,
+      "count": 4
+    },
+    "white background": {
+      "avg": 22,
+      "count": 4
+    },
+    "icons": {
+      "avg": 21,
+      "count": 3
+    },
+    "grid": {
+      "avg": 21,
+      "count": 3
+    },
+    "chart": {
+      "avg": 21,
+      "count": 3
+    },
+    "navy": {
+      "avg": 21,
+      "count": 3
+    },
+    "icons on": {
+      "avg": 21,
+      "count": 3
+    }
+  },
+  "frame": {
+    "vector": {
+      "avg": 22,
+      "count": 3
+    },
+    "flat vector": {
+      "avg": 22,
+      "count": 3
+    },
+    "vector style": {
+      "avg": 22,
+      "count": 3
+    },
+    "white background": {
+      "avg": 22,
+      "count": 3
+    },
+    "blue": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "navy": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "flat": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "white": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "light blue": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "frame": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "clean": {
+      "avg": 20.6,
+      "count": 5
+    },
+    "frame for": {
+      "avg": 20.3,
+      "count": 3
+    }
+  }
+}

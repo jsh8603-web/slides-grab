@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-03-18T17:13:07.580Z",
+  "summary": {
+    "total": 25,
+    "pass": 25,
+    "warn": 6,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.5,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 9,
+      "23-24": 10,
+      "20-22": 6,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 24.1,
+      "count": 13
+    },
+    "cover": {
+      "avg": 24,
+      "count": 3
+    },
+    "frame": {
+      "avg": 22.6,
+      "count": 5
+    },
+    "icon": {
+      "avg": 22.5,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-03": 2,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 15,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt specified a light gray background, but the image has a white background. While the overall style and content match, the background color is a deviation from the prompt's instructions. The prompt also mentioned \"cinematic\" and \"diverse\" which are not strongly reflected in this clean, minimalist icon style, but the rest of the description takes precedence."
+      }
+    },
+    {
+      "slide": 2,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt specified a primary deep navy color palette, but the image prominently features a red maple leaf. The background is light gray/blue-gray, not dark as requested by 'Dark blurred background'."
+      }
+    },
+    {
+      "slide": 22,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested \"A minimal funnel diagram with 4 horizontal layers,\" but the image shows 6 layers."
+      }
+    },
+    {
+      "slide": 10,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified \"Four bars,\" but the image displays five horizontal bars."
+      }
+    },
+    {
+      "slide": 11,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 'Four arrow-shaped chevrons', but the image displays six chevrons."
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 25,
+    "retried": 0
+  }
+}

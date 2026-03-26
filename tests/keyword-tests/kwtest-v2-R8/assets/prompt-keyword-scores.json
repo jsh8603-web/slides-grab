@@ -1,0 +1,1053 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "facility": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stainless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bioreactors": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hydroponic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "production": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "floor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "workers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coats": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern food": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "technology facility": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting illuminating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek stainless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stainless steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "steel bioreactors": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hydroponic towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full production": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "production floor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coats shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern food technology": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food technology facility": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft warm lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm lighting illuminating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting illuminating sleek": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illuminating sleek stainless": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sleek stainless steel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stainless steel bioreactors": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hydroponic towers aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers aerial perspective": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full production floor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coats shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "warm-toned": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlapping": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "translucent": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "amber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle grid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines overlapping": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlapping translucent": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "translucent amber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle grid lines": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid lines overlapping": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lines overlapping translucent": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlapping translucent amber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "suggesting growth charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth charts data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper aesthetic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "high-tech": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouses": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart farm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "over rows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "high-tech greenhouses": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouses stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle wood": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground atmospheric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmospheric haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "high-tech greenhouses stretching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "horizon warm earth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm earth tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle wood fence": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground atmospheric haze": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27,
+      "count": 2,
+      "pf": 5
+    },
+    "close-up": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautifully": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plant-based": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "protein": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "window": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grading": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fresh": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "herbs": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "microgreens": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garnish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "close-up editorial": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautifully plated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plated plant-based": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plant-based protein": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "protein dish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate wooden": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden table": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural window": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grading fresh": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fresh herbs": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "microgreens garnish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garnish shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "food photography": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "beautifully plated plant-based": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plated plant-based protein": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plant-based protein dish": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate wooden table": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden table soft": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "table soft natural": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural window": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting warm shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm shadows grain": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows grain texture": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grading fresh herbs": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "microgreens garnish shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garnish shallow depth": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

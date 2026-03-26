@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-03-19T08:32:07.829Z",
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "warn": 8,
+    "fail": 2,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.2,
+    "min": 21,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 4,
+      "25-27": 1,
+      "22-24": 8,
+      "17-21": 2,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24.1,
+      "count": 11
+    },
+    "metaphor": {
+      "avg": 23,
+      "count": 1
+    },
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "icon": {
+      "avg": 22,
+      "count": 1
+    },
+    "background": {
+      "avg": 24.5,
+      "count": 1
+    }
+  },
+  "by_rule": {
+    "IV-09": 2,
+    "IP-09": 1,
+    "IV-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows 4 ascending bars/steps instead of the requested 3. The specified color sequence for 3 steps (orange, dark orange, navy) is therefore not followed due to the incorrect number of elements."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested 3 arrow-shaped segments, but the image shows only 2. It also requested a third light orange segment which is missing."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified 'five small orange circles', but the image displays eight small orange circles."
+      }
+    },
+    {
+      "slide": 15,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt specified 'Accent orange' in the color palette, but no orange is present in the generated image."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image shows 5 ascending bars instead of 4 steps. The fourth bar is dark orange instead of navy as specified in the prompt."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "prompt_fidelity",
+      "avg": 2.9,
+      "severity": "MEDIUM",
+      "action": "Prompts may be too complex for Flash. Check IP-08 (length > 500). Simplify descriptions or split into key visual elements."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "widest (avg 27.5, n=2)",
+        "subtle (avg 26, n=2)",
+        "pattern (avg 26, n=2)",
+        "atmosphere (avg 25.3, n=2)",
+        "sections (avg 25.2, n=3)"
+      ],
+      "bottom_keywords": [
+        "block (avg 22, n=2)",
+        "ascending (avg 22, n=2)",
+        "blocks (avg 22, n=2)",
+        "ascending blocks (avg 22, n=2)",
+        "hub-spoke (avg 22.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "line pattern (avg 26.3, n=6)",
+        "pattern sophisticated (avg 26.3, n=6)",
+        "line pattern sophisticated (avg 26.3, n=6)",
+        "pattern (avg 26.1, n=6)",
+        "base (avg 26, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 32 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "inside (avg 24.9, n=6)",
+        "rounded (avg 24.9, n=6)",
+        "green (avg 24.8, n=5)",
+        "neutral (avg 24.8, n=6)",
+        "truck (avg 24.8, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 50 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "narrowing (avg 26, n=6)",
+        "sections narrowing (avg 26, n=6)",
+        "narrowing down (avg 26, n=6)",
+        "sections narrowing down (avg 26, n=6)",
+        "narrowest (avg 26, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 150 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.1, n=6)",
+        "pattern warm (avg 26, n=6)",
+        "subtle cream (avg 26, n=6)",
+        "cream paper (avg 26, n=6)",
+        "subtle fiber (avg 26, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 74 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "sunset sky (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 57 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 18,
+    "retried": 3
+  }
+}

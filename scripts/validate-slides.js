@@ -430,26 +430,29 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  const failure = {
-    generatedAt: new Date().toISOString(),
-    frame: {
-      widthPt: FRAME_PT.width,
-      heightPt: FRAME_PT.height,
-      widthPx: FRAME_PX.width,
-      heightPx: FRAME_PX.height
-    },
-    slides: [],
-    summary: {
-      totalSlides: 0,
-      passedSlides: 0,
-      failedSlides: 0,
-      criticalIssues: 1,
-      warnings: 0
-    },
-    error: error instanceof Error ? error.message : String(error)
-  };
+const isMain = process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url;
+if (isMain) {
+  main().catch((error) => {
+    const failure = {
+      generatedAt: new Date().toISOString(),
+      frame: {
+        widthPt: FRAME_PT.width,
+        heightPt: FRAME_PT.height,
+        widthPx: FRAME_PX.width,
+        heightPx: FRAME_PX.height
+      },
+      slides: [],
+      summary: {
+        totalSlides: 0,
+        passedSlides: 0,
+        failedSlides: 0,
+        criticalIssues: 1,
+        warnings: 0
+      },
+      error: error instanceof Error ? error.message : String(error)
+    };
 
-  process.stdout.write(`${JSON.stringify(failure, null, 2)}\n`);
-  process.exit(1);
-});
+    process.stdout.write(`${JSON.stringify(failure, null, 2)}\n`);
+    process.exit(1);
+  });
+}

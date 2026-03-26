@@ -1,0 +1,2148 @@
+{
+  "cover": {
+    "red": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold": {
+      "avg": 24,
+      "count": 1
+    },
+    "line": {
+      "avg": 24,
+      "count": 1
+    },
+    "near": {
+      "avg": 24,
+      "count": 1
+    },
+    "regal": {
+      "avg": 24,
+      "count": 1
+    },
+    "classic": {
+      "avg": 24,
+      "count": 1
+    },
+    "empty": {
+      "avg": 24,
+      "count": 1
+    },
+    "burgundy red": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin gold": {
+      "avg": 24,
+      "count": 1
+    },
+    "line near": {
+      "avg": 24,
+      "count": 1
+    },
+    "regal classic": {
+      "avg": 24,
+      "count": 1
+    },
+    "rich burgundy red": {
+      "avg": 24,
+      "count": 1
+    },
+    "rich": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "burgundy": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "rich burgundy": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "cinematic": {
+      "avg": 23,
+      "count": 1
+    },
+    "gothic": {
+      "avg": 23,
+      "count": 1
+    },
+    "cathedral": {
+      "avg": 23,
+      "count": 1
+    },
+    "interior": {
+      "avg": 23,
+      "count": 1
+    },
+    "stained": {
+      "avg": 23,
+      "count": 1
+    },
+    "glass": {
+      "avg": 23,
+      "count": 1
+    },
+    "windows": {
+      "avg": 23,
+      "count": 1
+    },
+    "golden": {
+      "avg": 23,
+      "count": 1
+    },
+    "beams": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "architectural": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "ceiling": {
+      "avg": 23,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 23,
+      "count": 1
+    },
+    "gothic cathedral": {
+      "avg": 23,
+      "count": 1
+    },
+    "cathedral interior": {
+      "avg": 23,
+      "count": 1
+    },
+    "burgundy stained": {
+      "avg": 23,
+      "count": 1
+    },
+    "stained glass": {
+      "avg": 23,
+      "count": 1
+    },
+    "glass windows": {
+      "avg": 23,
+      "count": 1
+    },
+    "beams dramatic": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic architectural": {
+      "avg": 23,
+      "count": 1
+    },
+    "architectural atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "gothic cathedral interior": {
+      "avg": 23,
+      "count": 1
+    },
+    "rich burgundy stained": {
+      "avg": 23,
+      "count": 1
+    },
+    "burgundy stained glass": {
+      "avg": 23,
+      "count": 1
+    },
+    "stained glass windows": {
+      "avg": 23,
+      "count": 1
+    },
+    "beams dramatic architectural": {
+      "avg": 23,
+      "count": 1
+    },
+    "dramatic architectural atmosphere": {
+      "avg": 23,
+      "count": 1
+    }
+  },
+  "frame": {
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 3
+    },
+    "medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "shortest": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 2
+    },
+    "vertically": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy middle": {
+      "avg": 25,
+      "count": 2
+    },
+    "middle bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar shortest": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked vertically": {
+      "avg": 25,
+      "count": 1
+    },
+    "vertically important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy middle bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked vertically important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer burgundy middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy middle layer": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle layer gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "layer pale rose": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth wavy layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "wavy layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "nested circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles not": {
+      "avg": 25,
+      "count": 1
+    },
+    "concentric circles centered": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles centered outer": {
+      "avg": 25,
+      "count": 1
+    },
+    "centered outer circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "outer circle burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle burgundy outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy outline middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline middle circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle circle gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle gold outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outline inner": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline inner circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "inner circle filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle filled gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "ivory": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "burgundy": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "gold": {
+      "avg": 24.2,
+      "count": 5
+    },
+    "more": {
+      "avg": 24,
+      "count": 4
+    },
+    "fewer": {
+      "avg": 24,
+      "count": 4
+    },
+    "not more": {
+      "avg": 24,
+      "count": 4
+    },
+    "more not": {
+      "avg": 24,
+      "count": 4
+    },
+    "not fewer": {
+      "avg": 24,
+      "count": 4
+    },
+    "not more not": {
+      "avg": 24,
+      "count": 4
+    },
+    "more not fewer": {
+      "avg": 24,
+      "count": 4
+    },
+    "funnel": {
+      "avg": 24,
+      "count": 1
+    },
+    "widest": {
+      "avg": 24,
+      "count": 1
+    },
+    "narrowest": {
+      "avg": 24,
+      "count": 1
+    },
+    "sections": {
+      "avg": 24,
+      "count": 1
+    },
+    "tapering": {
+      "avg": 24,
+      "count": 1
+    },
+    "downward": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal funnel": {
+      "avg": 24,
+      "count": 1
+    },
+    "widest burgundy": {
+      "avg": 24,
+      "count": 1
+    },
+    "tapering downward": {
+      "avg": 24,
+      "count": 1
+    },
+    "downward important": {
+      "avg": 24,
+      "count": 1
+    },
+    "sections not": {
+      "avg": 24,
+      "count": 1
+    },
+    "tapering downward important": {
+      "avg": 24,
+      "count": 1
+    },
+    "sections not more": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal": {
+      "avg": 23.7,
+      "count": 6
+    },
+    "chart": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "diagram": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "pale": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "rose": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "important": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "not": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "pale rose": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "process": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons": {
+      "avg": 22,
+      "count": 1
+    },
+    "pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "row": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal chevron": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron process": {
+      "avg": 22,
+      "count": 1
+    },
+    "process diagram": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped chevrons": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons not": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal chevron process": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevron process diagram": {
+      "avg": 22,
+      "count": 1
+    },
+    "arrow-shaped chevrons pointing": {
+      "avg": 22,
+      "count": 1
+    },
+    "chevrons not more": {
+      "avg": 22,
+      "count": 1
+    },
+    "completely": {
+      "avg": 21,
+      "count": 1
+    },
+    "lacks": {
+      "avg": 21,
+      "count": 1
+    },
+    "requested": {
+      "avg": 21,
+      "count": 1
+    },
+    "pie": {
+      "avg": 21,
+      "count": 1
+    },
+    "shows": {
+      "avg": 21,
+      "count": 1
+    },
+    "curtains": {
+      "avg": 21,
+      "count": 1
+    },
+    "banner": {
+      "avg": 21,
+      "count": 1
+    },
+    "instead": {
+      "avg": 21,
+      "count": 1
+    },
+    "also": {
+      "avg": 21,
+      "count": 1
+    },
+    "contains": {
+      "avg": 21,
+      "count": 1
+    },
+    "despite": {
+      "avg": 21,
+      "count": 1
+    },
+    "prompt": {
+      "avg": 21,
+      "count": 1
+    },
+    "explicitly": {
+      "avg": 21,
+      "count": 1
+    },
+    "stating": {
+      "avg": 21,
+      "count": 1
+    },
+    "there": {
+      "avg": 21,
+      "count": 1
+    },
+    "present": {
+      "avg": 21,
+      "count": 1
+    },
+    "either": {
+      "avg": 21,
+      "count": 1
+    },
+    "specified": {
+      "avg": 21,
+      "count": 1
+    },
+    "wedge": {
+      "avg": 21,
+      "count": 1
+    },
+    "missing": {
+      "avg": 21,
+      "count": 1
+    },
+    "completely lacks": {
+      "avg": 21,
+      "count": 1
+    },
+    "requested minimal": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal pie": {
+      "avg": 21,
+      "count": 1
+    },
+    "pie chart": {
+      "avg": 21,
+      "count": 1
+    },
+    "chart it": {
+      "avg": 21,
+      "count": 1
+    },
+    "it shows": {
+      "avg": 21,
+      "count": 1
+    },
+    "shows curtains": {
+      "avg": 21,
+      "count": 1
+    },
+    "banner instead": {
+      "avg": 21,
+      "count": 1
+    },
+    "instead it": {
+      "avg": 21,
+      "count": 1
+    },
+    "it also": {
+      "avg": 21,
+      "count": 1
+    },
+    "also contains": {
+      "avg": 21,
+      "count": 1
+    },
+    "prompt explicitly": {
+      "avg": 21,
+      "count": 1
+    },
+    "explicitly stating": {
+      "avg": 21,
+      "count": 1
+    },
+    "stating there": {
+      "avg": 21,
+      "count": 1
+    },
+    "present either": {
+      "avg": 21,
+      "count": 1
+    },
+    "either as": {
+      "avg": 21,
+      "count": 1
+    },
+    "as specified": {
+      "avg": 21,
+      "count": 1
+    },
+    "requested minimal pie": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal pie chart": {
+      "avg": 21,
+      "count": 1
+    },
+    "pie chart it": {
+      "avg": 21,
+      "count": 1
+    },
+    "chart it shows": {
+      "avg": 21,
+      "count": 1
+    },
+    "it shows curtains": {
+      "avg": 21,
+      "count": 1
+    },
+    "banner instead it": {
+      "avg": 21,
+      "count": 1
+    },
+    "it also contains": {
+      "avg": 21,
+      "count": 1
+    },
+    "prompt explicitly stating": {
+      "avg": 21,
+      "count": 1
+    },
+    "explicitly stating there": {
+      "avg": 21,
+      "count": 1
+    },
+    "present either as": {
+      "avg": 21,
+      "count": 1
+    },
+    "either as specified": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "background": {
+    "aged": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 2
+    },
+    "warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "antique": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "scholarly": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle aged": {
+      "avg": 25,
+      "count": 1
+    },
+    "aged parchment": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm ivory": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible antique": {
+      "avg": 25,
+      "count": 1
+    },
+    "antique paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel classic": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic scholarly": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle aged parchment": {
+      "avg": 25,
+      "count": 1
+    },
+    "aged parchment texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale gold tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible antique": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible antique paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "antique paper feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper feel classic": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel classic scholarly": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "velvet": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "folds": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching": {
+      "avg": 25,
+      "count": 1
+    },
+    "peaks": {
+      "avg": 25,
+      "count": 1
+    },
+    "opulent": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy velvet": {
+      "avg": 25,
+      "count": 1
+    },
+    "velvet fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric peaks": {
+      "avg": 25,
+      "count": 1
+    },
+    "peaks opulent": {
+      "avg": 25,
+      "count": 1
+    },
+    "opulent texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field regal": {
+      "avg": 25,
+      "count": 1
+    },
+    "regal atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious burgundy velvet": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy velvet fabric": {
+      "avg": 25,
+      "count": 1
+    },
+    "fabric peaks opulent": {
+      "avg": 25,
+      "count": 1
+    },
+    "peaks opulent texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "opulent texture shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field regal atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeating": {
+      "avg": 25,
+      "count": 1
+    },
+    "fleur-de-lis": {
+      "avg": 25,
+      "count": 1
+    },
+    "french": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle repeating": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeating fleur-de-lis": {
+      "avg": 25,
+      "count": 1
+    },
+    "fleur-de-lis motif": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic french": {
+      "avg": 25,
+      "count": 1
+    },
+    "french decorative": {
+      "avg": 25,
+      "count": 1
+    },
+    "decorative pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern regal": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle repeating fleur-de-lis": {
+      "avg": 25,
+      "count": 1
+    },
+    "repeating fleur-de-lis motif": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible classic french": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic french decorative": {
+      "avg": 25,
+      "count": 1
+    },
+    "french decorative pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "decorative pattern regal": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern regal refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "five-pointed": {
+      "avg": 24,
+      "count": 1
+    },
+    "star": {
+      "avg": 24,
+      "count": 1
+    },
+    "centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "five-pointed star": {
+      "avg": 24,
+      "count": 1
+    },
+    "star centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "burgundy filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled star": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin gold": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "five-pointed star centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "burgundy filled star": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin gold outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "gold outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "burgundy": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "subtle": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "barely": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "visible": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "classic": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "regal": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "pale gold": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "barely visible": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "ivory": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "gold": {
+      "avg": 23.4,
+      "count": 5
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "pale": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "pattern": {
+      "avg": 23,
+      "count": 2
+    },
+    "decorative": {
+      "avg": 23,
+      "count": 2
+    },
+    "motif": {
+      "avg": 23,
+      "count": 2
+    },
+    "refined": {
+      "avg": 23,
+      "count": 2
+    },
+    "ivory barely": {
+      "avg": 23,
+      "count": 2
+    },
+    "visible classic": {
+      "avg": 23,
+      "count": 2
+    },
+    "regal refined": {
+      "avg": 23,
+      "count": 2
+    },
+    "ivory barely visible": {
+      "avg": 23,
+      "count": 2
+    },
+    "barely visible classic": {
+      "avg": 23,
+      "count": 2
+    },
+    "two-by-two": {
+      "avg": 22,
+      "count": 1
+    },
+    "grid": {
+      "avg": 22,
+      "count": 1
+    },
+    "equal": {
+      "avg": 22,
+      "count": 1
+    },
+    "squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "rose": {
+      "avg": 22,
+      "count": 1
+    },
+    "cells": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal two-by-two": {
+      "avg": 22,
+      "count": 1
+    },
+    "two-by-two grid": {
+      "avg": 22,
+      "count": 1
+    },
+    "equal squares": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale rose": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal two-by-two grid": {
+      "avg": 22,
+      "count": 1
+    },
+    "damask": {
+      "avg": 21,
+      "count": 1
+    },
+    "ornamental": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle damask": {
+      "avg": 21,
+      "count": 1
+    },
+    "damask ornamental": {
+      "avg": 21,
+      "count": 1
+    },
+    "ornamental pattern": {
+      "avg": 21,
+      "count": 1
+    },
+    "classic decorative": {
+      "avg": 21,
+      "count": 1
+    },
+    "decorative motif": {
+      "avg": 21,
+      "count": 1
+    },
+    "motif regal": {
+      "avg": 21,
+      "count": 1
+    },
+    "subtle damask ornamental": {
+      "avg": 21,
+      "count": 1
+    },
+    "damask ornamental pattern": {
+      "avg": 21,
+      "count": 1
+    },
+    "visible classic decorative": {
+      "avg": 21,
+      "count": 1
+    },
+    "classic decorative motif": {
+      "avg": 21,
+      "count": 1
+    },
+    "decorative motif regal": {
+      "avg": 21,
+      "count": 1
+    },
+    "motif regal refined": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "ivory": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "music": {
+      "avg": 25,
+      "count": 1
+    },
+    "note": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "violin": {
+      "avg": 25,
+      "count": 1
+    },
+    "microphone": {
+      "avg": 25,
+      "count": 1
+    },
+    "headphone": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "musical": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "music note": {
+      "avg": 25,
+      "count": 1
+    },
+    "note silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "violin silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "microphone silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "headphone silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "music note silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "headphone silhouette burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette burgundy fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "crown": {
+      "avg": 25,
+      "count": 1
+    },
+    "scepter": {
+      "avg": 25,
+      "count": 1
+    },
+    "shield": {
+      "avg": 25,
+      "count": 1
+    },
+    "castle": {
+      "avg": 25,
+      "count": 1
+    },
+    "tower": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "heraldic": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "castle tower": {
+      "avg": 25,
+      "count": 1
+    },
+    "tower gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "castle tower gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "tower gold outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic": {
+      "avg": 25,
+      "count": 1
+    },
+    "library": {
+      "avg": 25,
+      "count": 1
+    },
+    "room": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "bookshelves": {
+      "avg": 25,
+      "count": 1
+    },
+    "reading": {
+      "avg": 25,
+      "count": 1
+    },
+    "desk": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic library": {
+      "avg": 25,
+      "count": 1
+    },
+    "library room": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall bookshelves": {
+      "avg": 25,
+      "count": 1
+    },
+    "bookshelves reading": {
+      "avg": 25,
+      "count": 1
+    },
+    "reading desk": {
+      "avg": 25,
+      "count": 1
+    },
+    "globe burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "ivory accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "classic library room": {
+      "avg": 25,
+      "count": 1
+    },
+    "tall bookshelves reading": {
+      "avg": 25,
+      "count": 1
+    },
+    "bookshelves reading desk": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "wine": {
+      "avg": 25,
+      "count": 1
+    },
+    "being": {
+      "avg": 25,
+      "count": 1
+    },
+    "poured": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "glass": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "reflections": {
+      "avg": 25,
+      "count": 1
+    },
+    "moody": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "feeling": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 2
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 2
+    },
+    "red wine": {
+      "avg": 25,
+      "count": 1
+    },
+    "wine being": {
+      "avg": 25,
+      "count": 1
+    },
+    "being poured": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal glass": {
+      "avg": 25,
+      "count": 1
+    },
+    "glass rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy wine": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric feeling": {
+      "avg": 25,
+      "count": 1
+    },
+    "red wine being": {
+      "avg": 25,
+      "count": 1
+    },
+    "wine being poured": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal glass rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "glass rich burgundy": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich burgundy wine": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious atmospheric feeling": {
+      "avg": 25,
+      "count": 1
+    },
+    "ornate": {
+      "avg": 25,
+      "count": 1
+    },
+    "palace": {
+      "avg": 25,
+      "count": 1
+    },
+    "ballroom": {
+      "avg": 25,
+      "count": 1
+    },
+    "carpeting": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gilded": {
+      "avg": 25,
+      "count": 1
+    },
+    "columns": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "chandeliers": {
+      "avg": 25,
+      "count": 1
+    },
+    "casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "grand": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 25,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "ornate palace": {
+      "avg": 25,
+      "count": 1
+    },
+    "palace ballroom": {
+      "avg": 25,
+      "count": 1
+    },
+    "burgundy carpeting": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold gilded": {
+      "avg": 25,
+      "count": 1
+    },
+    "gilded columns": {
+      "avg": 25,
+      "count": 1
+    },
+    "columns dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic chandeliers": {
+      "avg": 25,
+      "count": 1
+    },
+    "chandeliers casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "casting dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "grand architectural": {
+      "avg": 25,
+      "count": 1
+    },
+    "architectural atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "ornate palace ballroom": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold gilded columns": {
+      "avg": 25,
+      "count": 1
+    },
+    "gilded columns dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "columns dramatic chandeliers": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic chandeliers casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "chandeliers casting dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "casting dramatic golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "grand architectural atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "burgundy": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "golden": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "red": {
+      "avg": 24,
+      "count": 2
+    },
+    "atmosphere": {
+      "avg": 24,
+      "count": 2
+    },
+    "autumn": {
+      "avg": 23,
+      "count": 1
+    },
+    "grapevines": {
+      "avg": 23,
+      "count": 1
+    },
+    "sunlit": {
+      "avg": 23,
+      "count": 1
+    },
+    "leaves": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm": {
+      "avg": 23,
+      "count": 1
+    },
+    "harvest": {
+      "avg": 23,
+      "count": 1
+    },
+    "rolling": {
+      "avg": 23,
+      "count": 1
+    },
+    "vineyard": {
+      "avg": 23,
+      "count": 1
+    },
+    "rows": {
+      "avg": 23,
+      "count": 1
+    },
+    "stretching": {
+      "avg": 23,
+      "count": 1
+    },
+    "horizon": {
+      "avg": 23,
+      "count": 1
+    },
+    "sky": {
+      "avg": 23,
+      "count": 1
+    },
+    "burgundy red": {
+      "avg": 23,
+      "count": 1
+    },
+    "red autumn": {
+      "avg": 23,
+      "count": 1
+    },
+    "autumn grapevines": {
+      "avg": 23,
+      "count": 1
+    },
+    "golden sunlit": {
+      "avg": 23,
+      "count": 1
+    },
+    "sunlit leaves": {
+      "avg": 23,
+      "count": 1
+    },
+    "leaves warm": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm harvest": {
+      "avg": 23,
+      "count": 1
+    },
+    "harvest atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere rolling": {
+      "avg": 23,
+      "count": 1
+    },
+    "rolling vineyard": {
+      "avg": 23,
+      "count": 1
+    },
+    "vineyard rows": {
+      "avg": 23,
+      "count": 1
+    },
+    "rows stretching": {
+      "avg": 23,
+      "count": 1
+    },
+    "burgundy red autumn": {
+      "avg": 23,
+      "count": 1
+    },
+    "red autumn grapevines": {
+      "avg": 23,
+      "count": 1
+    },
+    "golden sunlit leaves": {
+      "avg": 23,
+      "count": 1
+    },
+    "sunlit leaves warm": {
+      "avg": 23,
+      "count": 1
+    },
+    "leaves warm harvest": {
+      "avg": 23,
+      "count": 1
+    },
+    "warm harvest atmosphere": {
+      "avg": 23,
+      "count": 1
+    },
+    "harvest atmosphere rolling": {
+      "avg": 23,
+      "count": 1
+    },
+    "atmosphere rolling vineyard": {
+      "avg": 23,
+      "count": 1
+    },
+    "rolling vineyard rows": {
+      "avg": 23,
+      "count": 1
+    },
+    "vineyard rows stretching": {
+      "avg": 23,
+      "count": 1
+    }
+  }
+}

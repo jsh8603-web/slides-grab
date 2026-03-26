@@ -1,0 +1,1233 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "integrated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sensor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "networks": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "streetlights": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cool": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cyan": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hints": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers integrated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "integrated sensor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sensor networks": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour glow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glow blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cool cyan": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cyan data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky photorealistic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photorealistic urban": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern smart city": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart city skyline": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting reflecting off": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting off glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "off glass towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass towers integrated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers integrated sensor": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "integrated sensor networks": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour glow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour glow blending": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cool cyan data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky photorealistic urban": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "frame": {
+    "warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "visualization": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flowing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "streams": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "particles": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "converging": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hub": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "paper": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "aesthetic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gradients": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "representation": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "urban": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sensor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "networks": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "composition": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "streaks": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cream": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "element": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "offset": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "labels": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "annotations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data visualization": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flowing streams": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "particles converging": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hub data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm paper": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "paper aesthetic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft gradients": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "urban sensor": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sensor data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data flowing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cream paper": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "paper texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main element": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "element offset": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm data visualization": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "hub data warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "data warm paper": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm paper aesthetic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "urban sensor data": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sensor data flowing": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "cream paper texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main element offset": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "metaphor": {
+    "ornate": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "aerial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "futuristic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "city": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "plaza": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "twilight": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ambient": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "glow": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "embedded": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ground": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sensors": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "gathering": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "data": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "fountain": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sculpture": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "dusk": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sky": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cloud": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "layers": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cinematic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "wide-angle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "composition": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "stone": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "materials": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ornate aerial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "futuristic city": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "city plaza": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "twilight warm": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm ambient": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ambient glow": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "embedded ground": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ground sensors": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sensors citizens": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "citizens gathering": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "data fountain": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "fountain sculpture": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sculpture soft": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "soft dusk": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "dusk sky": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "gentle cloud": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cloud layers": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "layers cinematic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cinematic wide-angle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "wide-angle composition": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "stone urban": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "urban materials": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "futuristic city plaza": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "twilight warm ambient": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm ambient glow": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "embedded ground sensors": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "ground sensors citizens": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sensors citizens gathering": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "data fountain sculpture": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "fountain sculpture soft": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sculpture soft dusk": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "soft dusk sky": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "gentle cloud layers": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cloud layers cinematic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "layers cinematic wide-angle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cinematic wide-angle composition": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "stone urban materials": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "urban": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "citizens": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "wood": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "soft": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "gentle": {
+      "avg": 24.8,
+      "count": 2,
+      "pf": 4.5
+    },
+    "grain": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cozy": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neighborhood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "park": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "interacting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "kiosks": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "information": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "boards": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "benches": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bokeh": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lifestyle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "documentary": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cozy urban": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban neighborhood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neighborhood park": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour citizens": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "citizens interacting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smart kiosks": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "information boards": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "boards texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wood benches": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground soft": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural lighting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle bokeh": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bokeh lifestyle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lifestyle documentary": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "documentary photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm grain texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cozy urban neighborhood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "urban neighborhood park": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour citizens": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour citizens interacting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "information boards texture": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "boards texture warm": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm wood": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm wood benches": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "foreground soft natural": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft natural lighting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gentle bokeh lifestyle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bokeh lifestyle documentary": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lifestyle documentary photography": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

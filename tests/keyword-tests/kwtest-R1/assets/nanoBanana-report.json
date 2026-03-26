@@ -1,0 +1,228 @@
+{
+  "timestamp": "2026-03-19T11:06:52.843Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.8,
+    "min": 23,
+    "max": 26,
+    "distribution": {
+      "27.5": 0,
+      "25-27": 2,
+      "22-24": 3,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "background": {
+      "avg": 26,
+      "count": 1
+    },
+    "icon": {
+      "avg": 24.5,
+      "count": 1
+    },
+    "cover": {
+      "avg": 26,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 23.8,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IV-03": 1,
+    "IP-09": 2,
+    "IP-14": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 5,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image depicts futuristic buildings and landscape but does not clearly represent a hospital campus. The specified 'Accent Purple' color is also absent from the palette."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "+"
+        ]
+      }
+    },
+    {
+      "slide": 4,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "100x",
+          "1.25",
+          "10x"
+        ]
+      }
+    },
+    {
+      "slide": 2,
+      "total": 26,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 26,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "text_absence",
+      "avg": 3.2,
+      "severity": "HIGH",
+      "action": "Check IP-11 subjects (compass, clock, etc). Verify 'Absolutely no text' is present in all prompts. Consider adding 'no words, no letters, no characters' reinforcement.",
+      "affected_slides": [
+        1,
+        3,
+        4,
+        5,
+        5
+      ]
+    },
+    {
+      "criterion": "overall_fail_rate",
+      "avg": 44,
+      "severity": "HIGH",
+      "action": "FAIL rate 44% exceeds 30%. Review VQA gate threshold (current: 22) or VQA prompt strictness. See docs/vqa-pipeline-maintenance.md §2."
+    },
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "texture (avg 25.3, n=2)",
+        "warm (avg 23.8, n=2)",
+        "purple (avg 23.2, n=3)",
+        "photography (avg 23, n=2)",
+        "editorial (avg 23, n=2)"
+      ],
+      "bottom_keywords": [
+        "tall (avg 21, n=2)",
+        "hospital (avg 21, n=2)",
+        "building (avg 21, n=2)",
+        "glass (avg 21, n=2)",
+        "sophisticated (avg 21, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.3, n=6)",
+        "pattern (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 40 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "pyramid (avg 26.9, n=5)",
+        "flowchart (avg 26.9, n=6)",
+        "rounded rectangles (avg 26.9, n=6)",
+        "by arrows (avg 26.9, n=6)",
+        "rounded (avg 26.9, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 204 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "subtle cream (avg 26.6, n=5)",
+        "cream paper (avg 26.6, n=5)",
+        "subtle fiber (avg 26.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 83 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "epic (avg 27.5, n=5)",
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 105 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 9,
+    "retried": 4
+  }
+}

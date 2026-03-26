@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: #1A2B4A;
+}
+.bg-img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #1A2B4A; opacity: 0.6;
+}
+.content {
+  position: relative; z-index: 2;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 48pt 56pt 56pt 56pt;
+}
+.tag-wrap { margin-bottom: 14pt; }
+.tag {
+  display: inline-block;
+  background: #C8A96E;
+  color: #1A2B4A;
+  font-size: 10pt; font-weight: 700;
+  padding: 3pt 10pt;
+  border-radius: 2pt;
+  letter-spacing: 0.5pt;
+}
+h1 {
+  font-size: 36pt; font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  text-shadow: 0 2px 8pt rgba(0,0,0,0.5);
+  margin-bottom: 10pt;
+}
+.subtitle {
+  font-size: 16pt; font-weight: 400;
+  color: #C8A96E;
+  text-shadow: 0 1px 4pt rgba(0,0,0,0.4);
+  line-height: 1.5;
+  margin-bottom: 20pt;
+}
+.meta {
+  font-size: 11pt; font-weight: 400;
+  color: #8A9BB5;
+}
+</style>
+</head>
+<body>
+<img class="bg-img" src="assets/slide-01-cover.png" alt="AI 에이전트 표지">
+<div class="overlay"></div>
+<div class="content">
+  <div class="tag-wrap"><div class="tag"><span>ENTERPRISE AI STRATEGY</span></div></div>
+  <h1><span>AI 에이전트</span><br><span>실리콘 동료의 시대</span></h1>
+  <p class="subtitle"><span>2030년 $120B 시장 — 먼저 움직이는 조직이 구조적 우위를 선점한다</span></p>
+  <p class="meta"><span>2026.03 | AI 인프라 전략 브리핑</span></p>
+</div>
+</body>
+</html>

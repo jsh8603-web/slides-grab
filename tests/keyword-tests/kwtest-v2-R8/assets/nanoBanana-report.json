@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-03-19T12:08:38.443Z",
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "warn": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 26.7,
+    "min": 24.5,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 1,
+      "22-24": 1,
+      "17-21": 0,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "background": {
+      "avg": 27.5,
+      "count": 1
+    },
+    "frame": {
+      "avg": 24.5,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 27,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IP-14": 4,
+    "IP-15": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 24.5,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested icons representing \"biotech and agritech and logistics\". While the biotech (DNA/flask) and logistics (truck) icons are consistent, the image uses a CPU icon in two tiers where an agritech icon (like the leaf icon present in other tiers) would be expected based on the prompt's intent. This deviates from a consistent representation of the requested categories."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 26.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 5,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "cinematic (avg 27.5, n=2)",
+        "wide-angle (avg 27.5, n=2)",
+        "dusk (avg 27.5, n=2)",
+        "aerial (avg 27.5, n=2)",
+        "cinematic wide-angle (avg 27.5, n=2)"
+      ],
+      "bottom_keywords": [
+        "grain (avg 22.8, n=2)",
+        "grain texture (avg 22.8, n=2)",
+        "texture warm (avg 22.8, n=2)",
+        "grain texture warm (avg 22.8, n=2)",
+        "amber (avg 23.3, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "pattern (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "sophisticated atmosphere (avg 27.1, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.7, n=5)",
+        "green (avg 25.6, n=5)",
+        "garden (avg 25.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 66 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "smallest (avg 26.8, n=6)",
+        "widest (avg 26.4, n=5)",
+        "narrowing down (avg 26.3, n=5)",
+        "sections narrowing down (avg 26.3, n=5)",
+        "down (avg 26.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 220 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "data warm paper (avg 27.5, n=5)",
+        "data warm (avg 27.5, n=5)",
+        "faint (avg 27.3, n=5)",
+        "fiber pattern (avg 27.3, n=5)",
+        "paper (avg 27.3, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 102 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "scale (avg 27.5, n=5)",
+        "full (avg 27.5, n=5)",
+        "sail (avg 27.5, n=5)",
+        "sailing (avg 27.5, n=5)",
+        "epic (avg 27.5, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 148 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 6,
+    "retried": 1
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "cover": {},
+  "icon": {
+    "coral": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "icons": {
+      "avg": 24,
+      "count": 4
+    },
+    "grid": {
+      "avg": 24,
+      "count": 4
+    },
+    "icons on": {
+      "avg": 24,
+      "count": 4
+    },
+    "charcoal": {
+      "avg": 24,
+      "count": 4
+    },
+    "2x2": {
+      "avg": 23.7,
+      "count": 3
+    },
+    "2x2 grid": {
+      "avg": 23.7,
+      "count": 3
+    }
+  },
+  "frame": {
+    "charcoal": {
+      "avg": 24,
+      "count": 4
+    },
+    "minimal": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "coral": {
+      "avg": 23.6,
+      "count": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 22.3,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 24,
+      "count": 3
+    },
+    "amber": {
+      "avg": 24,
+      "count": 3
+    }
+  }
+}

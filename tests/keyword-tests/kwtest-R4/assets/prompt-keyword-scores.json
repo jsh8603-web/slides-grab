@@ -1,0 +1,705 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "peak": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "labels": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "annotations": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base gradient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "main element offset": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "cover": {
+    "cybersecurity": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strategy": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "room": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rack": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "servers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lights": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surfaces": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity strategy": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strategy cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "server room": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall rack": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rack servers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security red": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "metal surfaces": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity strategy cinematic": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall rack servers": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "security red led": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "slate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serious": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cybersecurity data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "slate faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated serious": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serious muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated serious muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tech": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "red": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vigilance": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic wide-angle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern tech": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tech campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass buildings": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vigilance moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "modern tech campus": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "vigilance moody dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody dramatic sky": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "dramatic": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "lighting": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "editorial": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "photography": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "editorial photography": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "close-up": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "heavy": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wooden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "door": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "antique": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "iron": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lock": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grain": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shadows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "security": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "access": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "control": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dof": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "moody close-up": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "heavy wooden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wooden door": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "antique iron": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "iron lock": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grain texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "texture dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "access control": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "photography shallow": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shallow dof": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "heavy wooden door": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "antique iron lock": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grain texture dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "editorial photography shallow": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "photography shallow dof": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

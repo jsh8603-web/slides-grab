@@ -1,0 +1,165 @@
+{
+  "background": {
+    "cool blue": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "blue tones": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "tones with": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "cool blue tones": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "tones": {
+      "avg": 22,
+      "count": 4
+    },
+    "cool": {
+      "avg": 21.8,
+      "count": 5
+    },
+    "cinematic wide": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "wide shot": {
+      "avg": 21.8,
+      "count": 4
+    },
+    "shot of": {
+      "avg": 21.6,
+      "count": 5
+    },
+    "shot": {
+      "avg": 21.5,
+      "count": 6
+    },
+    "warm": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "blue": {
+      "avg": 21.4,
+      "count": 5
+    },
+    "modern": {
+      "avg": 21.3,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 21.1,
+      "count": 9
+    },
+    "strong": {
+      "avg": 21,
+      "count": 3
+    },
+    "pattern": {
+      "avg": 21,
+      "count": 4
+    },
+    "gray": {
+      "avg": 21,
+      "count": 3
+    },
+    "clean": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "sky": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "depth": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "soft": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "cover": {},
+  "frame": {
+    "minimal": {
+      "avg": 22,
+      "count": 3
+    },
+    "navy": {
+      "avg": 22,
+      "count": 3
+    },
+    "blue": {
+      "avg": 22,
+      "count": 3
+    },
+    "clean": {
+      "avg": 22,
+      "count": 3
+    },
+    "flat": {
+      "avg": 22,
+      "count": 3
+    },
+    "vector": {
+      "avg": 22,
+      "count": 3
+    },
+    "gray": {
+      "avg": 22,
+      "count": 3
+    },
+    "clean flat": {
+      "avg": 22,
+      "count": 3
+    },
+    "flat vector": {
+      "avg": 22,
+      "count": 3
+    },
+    "vector on": {
+      "avg": 22,
+      "count": 3
+    },
+    "light gray": {
+      "avg": 22,
+      "count": 3
+    },
+    "gray background": {
+      "avg": 22,
+      "count": 3
+    },
+    "clean flat vector": {
+      "avg": 22,
+      "count": 3
+    }
+  },
+  "icon": {
+    "white": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "navy": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "on white": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "white background": {
+      "avg": 22.3,
+      "count": 3
+    }
+  }
+}

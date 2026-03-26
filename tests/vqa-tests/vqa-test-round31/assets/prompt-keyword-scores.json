@@ -1,0 +1,2208 @@
+{
+  "cover": {
+    "olive": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand": {
+      "avg": 25,
+      "count": 2
+    },
+    "colored": {
+      "avg": 25,
+      "count": 2
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "line": {
+      "avg": 25,
+      "count": 1
+    },
+    "near": {
+      "avg": 25,
+      "count": 1
+    },
+    "earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand colored": {
+      "avg": 25,
+      "count": 2
+    },
+    "colored thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "line near": {
+      "avg": 25,
+      "count": 1
+    },
+    "earthy natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand colored thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling": {
+      "avg": 25,
+      "count": 1
+    },
+    "vineyard": {
+      "avg": 25,
+      "count": 1
+    },
+    "hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "hour": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling vineyard": {
+      "avg": 25,
+      "count": 1
+    },
+    "vineyard hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "green tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden hour": {
+      "avg": 25,
+      "count": 1
+    },
+    "hour rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling vineyard hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "green tones under": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones under golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "under golden sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand colored sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden hour rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "hour rustic mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic mediterranean atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "donut": {
+      "avg": 25,
+      "count": 2
+    },
+    "chart": {
+      "avg": 25,
+      "count": 3
+    },
+    "ring": {
+      "avg": 25,
+      "count": 2
+    },
+    "segment": {
+      "avg": 25,
+      "count": 1
+    },
+    "sage": {
+      "avg": 25,
+      "count": 5
+    },
+    "segments": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick": {
+      "avg": 25,
+      "count": 2
+    },
+    "hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "important": {
+      "avg": 25,
+      "count": 4
+    },
+    "not": {
+      "avg": 25,
+      "count": 4
+    },
+    "more": {
+      "avg": 25,
+      "count": 4
+    },
+    "fewer": {
+      "avg": 25,
+      "count": 4
+    },
+    "minimal donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "segment olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "segment sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "ring important": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments not": {
+      "avg": 25,
+      "count": 1
+    },
+    "not more": {
+      "avg": 25,
+      "count": 4
+    },
+    "more not": {
+      "avg": 25,
+      "count": 4
+    },
+    "not fewer": {
+      "avg": 25,
+      "count": 4
+    },
+    "minimal donut chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut chart ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "segment olive green": {
+      "avg": 25,
+      "count": 1
+    },
+    "segment sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick hollow ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "hollow ring important": {
+      "avg": 25,
+      "count": 1
+    },
+    "segments not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "not more not": {
+      "avg": 25,
+      "count": 4
+    },
+    "more not fewer": {
+      "avg": 25,
+      "count": 4
+    },
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "short": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium-tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "tan": {
+      "avg": 25,
+      "count": 2
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "side": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar tallest": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar short": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium-tall": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale tan": {
+      "avg": 25,
+      "count": 2
+    },
+    "side by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "side important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not": {
+      "avg": 25,
+      "count": 1
+    },
+    "side by side": {
+      "avg": 25,
+      "count": 1
+    },
+    "by side important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "circle": {
+      "avg": 25,
+      "count": 2
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "smaller": {
+      "avg": 25,
+      "count": 1
+    },
+    "circles": {
+      "avg": 25,
+      "count": 2
+    },
+    "child": {
+      "avg": 25,
+      "count": 1
+    },
+    "colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization": {
+      "avg": 25,
+      "count": 1
+    },
+    "organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "green circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "by thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "smaller circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "child circles": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand sage": {
+      "avg": 25,
+      "count": 1
+    },
+    "sage pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "tan colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal organization chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green circle": {
+      "avg": 25,
+      "count": 1
+    },
+    "by thin lines": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand sage pale": {
+      "avg": 25,
+      "count": 1
+    },
+    "sage pale tan": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale tan colors": {
+      "avg": 25,
+      "count": 1
+    },
+    "pyramid": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "narrow": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal pyramid": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers not": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green middle": {
+      "avg": 25,
+      "count": 1
+    },
+    "green middle sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "layers not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "going": {
+      "avg": 25,
+      "count": 2
+    },
+    "clockwise": {
+      "avg": 25,
+      "count": 2
+    },
+    "nodes": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal triangular": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "going clockwise": {
+      "avg": 25,
+      "count": 2
+    },
+    "nodes not": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal triangular cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular cycle diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going clockwise": {
+      "avg": 25,
+      "count": 1
+    },
+    "nodes not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 25,
+      "count": 1
+    },
+    "eight-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "two-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal thick": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "progress ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 25,
+      "count": 1
+    },
+    "clockwise olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "approximately eight-tenths": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal thick progress": {
+      "avg": 25,
+      "count": 1
+    },
+    "thick progress ring": {
+      "avg": 25,
+      "count": 1
+    },
+    "going clockwise olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "clockwise olive green": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "green filled arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 25,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 25,
+      "count": 1
+    },
+    "green": {
+      "avg": 24.9,
+      "count": 7
+    },
+    "olive green": {
+      "avg": 24.9,
+      "count": 7
+    },
+    "minimal": {
+      "avg": 24.8,
+      "count": 8
+    },
+    "parchment": {
+      "avg": 24.8,
+      "count": 8
+    },
+    "olive": {
+      "avg": 24.8,
+      "count": 8
+    },
+    "sand": {
+      "avg": 24.8,
+      "count": 6
+    },
+    "colored": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "sand colored": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "pale": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "scatter": {
+      "avg": 24,
+      "count": 1
+    },
+    "plot": {
+      "avg": 24,
+      "count": 1
+    },
+    "dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "clusters": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal scatter": {
+      "avg": 24,
+      "count": 1
+    },
+    "scatter plot": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster olive": {
+      "avg": 24,
+      "count": 1
+    },
+    "green dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster sand": {
+      "avg": 24,
+      "count": 1
+    },
+    "colored dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal scatter plot": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster olive green": {
+      "avg": 24,
+      "count": 1
+    },
+    "olive green dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "cluster sand colored": {
+      "avg": 24,
+      "count": 1
+    },
+    "sand colored dots": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 24,
+      "count": 1
+    },
+    "herringbone": {
+      "avg": 24,
+      "count": 1
+    },
+    "woven": {
+      "avg": 24,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "barely": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevron": {
+      "avg": 24,
+      "count": 1
+    },
+    "weave": {
+      "avg": 24,
+      "count": 1
+    },
+    "texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "earthy": {
+      "avg": 24,
+      "count": 1
+    },
+    "refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "extremely": {
+      "avg": 24,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle herringbone": {
+      "avg": 24,
+      "count": 1
+    },
+    "herringbone woven": {
+      "avg": 24,
+      "count": 1
+    },
+    "woven pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "pale olive": {
+      "avg": 24,
+      "count": 1
+    },
+    "parchment barely": {
+      "avg": 24,
+      "count": 1
+    },
+    "barely visible": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible chevron": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevron weave": {
+      "avg": 24,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "texture earthy": {
+      "avg": 24,
+      "count": 1
+    },
+    "earthy refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "extremely minimal": {
+      "avg": 24,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 24,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle herringbone woven": {
+      "avg": 24,
+      "count": 1
+    },
+    "herringbone woven pattern": {
+      "avg": 24,
+      "count": 1
+    },
+    "parchment barely visible": {
+      "avg": 24,
+      "count": 1
+    },
+    "barely visible chevron": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible chevron weave": {
+      "avg": 24,
+      "count": 1
+    },
+    "chevron weave texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "weave texture earthy": {
+      "avg": 24,
+      "count": 1
+    },
+    "texture earthy refined": {
+      "avg": 24,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "parchment": {
+      "avg": 25,
+      "count": 2
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "wheat": {
+      "avg": 25,
+      "count": 1
+    },
+    "stalk": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "tractor": {
+      "avg": 25,
+      "count": 1
+    },
+    "barn": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive": {
+      "avg": 25,
+      "count": 2
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "agricultural": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "wheat stalk": {
+      "avg": 25,
+      "count": 1
+    },
+    "stalk silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "tractor silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "barn silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green": {
+      "avg": 25,
+      "count": 2
+    },
+    "green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "wheat stalk silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "sun silhouette olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette olive green": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "frying": {
+      "avg": 25,
+      "count": 1
+    },
+    "pan": {
+      "avg": 25,
+      "count": 1
+    },
+    "whisk": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling": {
+      "avg": 25,
+      "count": 1
+    },
+    "pin": {
+      "avg": 25,
+      "count": 1
+    },
+    "oven": {
+      "avg": 25,
+      "count": 1
+    },
+    "mitt": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand": {
+      "avg": 25,
+      "count": 2
+    },
+    "colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "frying pan": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling pin": {
+      "avg": 25,
+      "count": 1
+    },
+    "oven mitt": {
+      "avg": 25,
+      "count": 1
+    },
+    "mitt sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "colored outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "oven mitt sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "mitt sand colored": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand colored outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "farm": {
+      "avg": 25,
+      "count": 1
+    },
+    "vegetable": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "greenhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "farmhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic farm": {
+      "avg": 25,
+      "count": 1
+    },
+    "vegetable garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden greenhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "farmhouse olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "vegetable garden greenhouse": {
+      "avg": 25,
+      "count": 1
+    },
+    "farmhouse olive green": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 25,
+      "count": 2
+    },
+    "kraft": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 2
+    },
+    "warm": {
+      "avg": 25,
+      "count": 2
+    },
+    "pale": {
+      "avg": 25,
+      "count": 2
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible": {
+      "avg": 25,
+      "count": 2
+    },
+    "natural": {
+      "avg": 25,
+      "count": 2
+    },
+    "grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "extremely": {
+      "avg": 25,
+      "count": 2
+    },
+    "minimal": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle kraft": {
+      "avg": 25,
+      "count": 1
+    },
+    "kraft paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm parchment": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale sand": {
+      "avg": 25,
+      "count": 2
+    },
+    "sand tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible natural": {
+      "avg": 25,
+      "count": 2
+    },
+    "natural paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "extremely minimal": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle kraft paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "kraft paper texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "pale sand tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible natural": {
+      "avg": 25,
+      "count": 2
+    },
+    "visible natural paper": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural paper grain": {
+      "avg": 25,
+      "count": 1
+    },
+    "paper grain warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "grain warm organic": {
+      "avg": 25,
+      "count": 1
+    },
+    "wicker": {
+      "avg": 25,
+      "count": 1
+    },
+    "basket": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "artisanal": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle wicker": {
+      "avg": 25,
+      "count": 1
+    },
+    "wicker basket": {
+      "avg": 25,
+      "count": 1
+    },
+    "basket weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm artisanal": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle wicker basket": {
+      "avg": 25,
+      "count": 1
+    },
+    "wicker basket weave": {
+      "avg": 25,
+      "count": 1
+    },
+    "basket weave texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible natural woven": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural woven pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "woven pattern warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern warm artisanal": {
+      "avg": 25,
+      "count": 1
+    },
+    "parchment": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "sand": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "regular": {
+      "avg": 24,
+      "count": 1
+    },
+    "pentagon": {
+      "avg": 24,
+      "count": 1
+    },
+    "centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "olive": {
+      "avg": 24,
+      "count": 1
+    },
+    "green": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "regular pentagon": {
+      "avg": 24,
+      "count": 1
+    },
+    "pentagon centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "olive green": {
+      "avg": 24,
+      "count": 1
+    },
+    "green filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled pentagon": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin sand": {
+      "avg": 24,
+      "count": 1
+    },
+    "sand outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "regular pentagon centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "olive green filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "green filled pentagon": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin sand outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "sand outline bold": {
+      "avg": 24,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "cinematic": {
+      "avg": 25,
+      "count": 4
+    },
+    "sunlit": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive": {
+      "avg": 25,
+      "count": 4
+    },
+    "grove": {
+      "avg": 25,
+      "count": 1
+    },
+    "gnarled": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees": {
+      "avg": 25,
+      "count": 2
+    },
+    "casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "long": {
+      "avg": 25,
+      "count": 1
+    },
+    "shadows": {
+      "avg": 25,
+      "count": 1
+    },
+    "green": {
+      "avg": 25,
+      "count": 2
+    },
+    "leaves": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand": {
+      "avg": 25,
+      "count": 4
+    },
+    "golden": {
+      "avg": 25,
+      "count": 2
+    },
+    "sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean": {
+      "avg": 25,
+      "count": 2
+    },
+    "pastoral": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 2
+    },
+    "side": {
+      "avg": 25,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 3
+    },
+    "sunlit olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive grove": {
+      "avg": 25,
+      "count": 1
+    },
+    "gnarled olive": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "casting long": {
+      "avg": 25,
+      "count": 1
+    },
+    "long shadows": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green": {
+      "avg": 25,
+      "count": 2
+    },
+    "green leaves": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlight filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean pastoral": {
+      "avg": 25,
+      "count": 1
+    },
+    "pastoral atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunlit olive grove": {
+      "avg": 25,
+      "count": 1
+    },
+    "gnarled olive trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive trees casting": {
+      "avg": 25,
+      "count": 1
+    },
+    "trees casting long": {
+      "avg": 25,
+      "count": 1
+    },
+    "casting long shadows": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green leaves": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand golden sunlight": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sunlight filtering": {
+      "avg": 25,
+      "count": 1
+    },
+    "mediterranean pastoral atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "layered": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm": {
+      "avg": 25,
+      "count": 3
+    },
+    "earth": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 2
+    },
+    "shrubs": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 2
+    },
+    "layered desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "canyon walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm earth": {
+      "avg": 25,
+      "count": 1
+    },
+    "earth tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "green desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert shrubs": {
+      "avg": 25,
+      "count": 1
+    },
+    "shrubs dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "layered desert canyon": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert canyon walls": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm earth tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive green desert": {
+      "avg": 25,
+      "count": 1
+    },
+    "green desert shrubs": {
+      "avg": 25,
+      "count": 1
+    },
+    "desert shrubs dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "shrubs dramatic geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic geological formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "dried": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "seed": {
+      "avg": 25,
+      "count": 1
+    },
+    "pods": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "textures": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "dried botanical": {
+      "avg": 25,
+      "count": 1
+    },
+    "botanical flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "seed pods": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "earthy textures": {
+      "avg": 25,
+      "count": 1
+    },
+    "textures shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "rustic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "dried botanical flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive tones natural": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones natural earthy": {
+      "avg": 25,
+      "count": 1
+    },
+    "natural earthy textures": {
+      "avg": 25,
+      "count": 1
+    },
+    "earthy textures shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "textures shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "field warm rustic": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm rustic atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling": {
+      "avg": 25,
+      "count": 1
+    },
+    "tuscan": {
+      "avg": 25,
+      "count": 1
+    },
+    "hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "cypress": {
+      "avg": 25,
+      "count": 1
+    },
+    "groves": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "open": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling tuscan": {
+      "avg": 25,
+      "count": 1
+    },
+    "tuscan hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "cypress trees": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive groves": {
+      "avg": 25,
+      "count": 1
+    },
+    "groves under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "sand sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset warm": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "open sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "rolling tuscan hills": {
+      "avg": 25,
+      "count": 1
+    },
+    "olive groves under": {
+      "avg": 25,
+      "count": 1
+    },
+    "groves under golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "under golden sand": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sand sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset warm mediterranean": {
+      "avg": 25,
+      "count": 1
+    },
+    "open sky composition": {
+      "avg": 25,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "timestamp": "2026-03-19T03:41:48.228Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.8,
+    "min": 20,
+    "max": 25,
+    "distribution": {
+      "25": 12,
+      "23-24": 3,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.3,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 23.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IP-09": 3,
+    "IV-10": 3,
+    "IP-08": 2,
+    "IV-09": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": [],
+        "pf_reason": "The first wedge (forest green) covers approximately half of the pie chart, not roughly one third as specified in the prompt."
+      }
+    },
+    {
+      "slide": 16,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a 'forest green stem' and 'primary forest green' which is largely absent; the stem is dark brown/reddish, and forest green is not a primary color in the image."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a 'very subtle gold foil shimmer texture' and 'barely visible metallic warmth', but the image features distinct, more prominent gold shimmering lines as artistic elements rather than a subtle background texture."
+      }
+    },
+    {
+      "slide": 13,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt describes a cinematic aerial shot of a dense rainforest canopy, but the image includes a large solid pale sage block occupying half the frame, rather than the pale sage being a background element *within* the canopy shot."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The empty portion of the progress ring is filled with light grey instead of matching the pale sage background or being transparent, which would be more minimal or consistent with the specified palette."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "serene (avg 25, n=2)",
+        "dark forest (avg 25, n=2)",
+        "chart frame (avg 25, n=2)",
+        "gold four (avg 25, n=2)",
+        "thin (avg 25, n=3)"
+      ],
+      "bottom_keywords": [
+        "texture (avg 17.5, n=2)",
+        "texture in (avg 17.5, n=2)",
+        "green tones (avg 19, n=2)",
+        "in pale (avg 19, n=2)",
+        "surface (avg 19, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 22,
+    "retried": 2
+  }
+}

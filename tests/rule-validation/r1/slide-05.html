@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 720pt; height: 405pt;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: #0A2647;
+}
+.bg-img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #0A2647; opacity: 0.7;
+}
+.content {
+  position: relative; z-index: 2;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  padding: 36pt 48pt 40pt 48pt;
+}
+h1 {
+  font-size: 28pt; font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8pt rgba(0,0,0,0.5);
+  margin-bottom: 4pt;
+}
+.sub {
+  font-size: 14pt; font-weight: 400;
+  color: #B0C4DE;
+  text-shadow: 0 1px 4pt rgba(0,0,0,0.3);
+  margin-bottom: 18pt;
+}
+.proposals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12pt;
+  margin-bottom: 16pt;
+}
+.proposal {
+  background: #122B47;
+  border: 1pt solid #1E4976;
+  border-radius: 6pt;
+  padding: 14pt 12pt;
+  overflow: hidden;
+}
+.p-num {
+  font-size: 20pt; font-weight: 800;
+  color: #00BCD4;
+  margin-bottom: 4pt;
+}
+.p-title {
+  font-size: 12pt; font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6pt;
+}
+.p-desc {
+  font-size: 10pt; font-weight: 400;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+.stats-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10pt;
+  margin-top: auto;
+}
+.stat-item {
+  text-align: center;
+  padding: 8pt 6pt;
+  background: #2196F3;
+  border-radius: 4pt;
+}
+.stat-num {
+  font-size: 18pt; font-weight: 800;
+  color: #FFFFFF;
+}
+.stat-label {
+  font-size: 10pt; font-weight: 400;
+  color: #E0F2FE;
+  margin-top: 2pt;
+}
+.cta {
+  text-align: center;
+  margin-top: 6pt;
+  font-size: 14pt; font-weight: 500;
+  color: #64748B;
+  font-style: italic;
+  text-shadow: 0 1px 4pt rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+<img class="bg-img" src="assets/slide-05-image.png" alt="미래 해저 데이터센터 비전">
+<div class="overlay"></div>
+<div class="content">
+  <h1><span>지금 투자하지 않으면 격차는 돌이킬 수 없다</span></h1>
+  <p class="sub"><span>3가지 즉각 실행 제언</span></p>
+  <div class="proposals">
+    <div class="proposal">
+      <p class="p-num"><span>01</span></p>
+      <p class="p-title"><span>법제 선행 정비</span></p>
+      <p class="p-desc"><span>해저 시설물 특별법 및 EEZ 활용 근거를 2025년 내 착수</span></p>
+    </div>
+    <div class="proposal">
+      <p class="p-num"><span>02</span></p>
+      <p class="p-title"><span>민관 공동 파일럿</span></p>
+      <p class="p-desc"><span>KIOST 실증 기반 2027년 상용 파일럿 추진, EUR 195M 매칭</span></p>
+    </div>
+    <div class="proposal">
+      <p class="p-num"><span>03</span></p>
+      <p class="p-title"><span>기술 표준 주도</span></p>
+      <p class="p-desc"><span>IEC, ITU 해저 DC 표준화에 선제 참여하여 글로벌 주도권 확보</span></p>
+    </div>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-item">
+      <p class="stat-num"><span>1/8</span></p>
+      <p class="stat-label"><span>고장률 감소</span></p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-num"><span>45%</span></p>
+      <p class="stat-label"><span>냉각 절감</span></p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-num"><span>1.1</span></p>
+      <p class="stat-label"><span>KIOST PUE</span></p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-num"><span>10만</span></p>
+      <p class="stat-label"><span>2035 목표</span></p>
+    </div>
+  </div>
+  <p class="cta"><span>바다는 준비됐다. 한국은?</span></p>
+</div>
+</body>
+</html>

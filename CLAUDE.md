@@ -194,6 +194,32 @@ Step/Phase 완료, 수정 발생, IL 기록, 게이트 통과 시 **즉시** 갱
 **검증**: {검증 명령어 + 통과 기준}
 ```
 
+## 전역 시스템 연동 규칙
+
+이 프로젝트는 전역 훅/가드 시스템(`~/.claude/hooks/promotion-signal.js`)의 **하위**로 동작한다.
+
+### 유지되는 전역 보호
+- rm-rf / push main 차단 (PreToolUse Bash 가드)
+- H4 코드 품질 inject (세션 1회, .js/.mjs 파일 Write 시)
+- H3/H6 세션 복원 / 압축 복원 inject
+
+### 프로젝트가 우선하는 영역
+- **파이프라인 체크리스트**: `checklist-guard.mjs`가 전역 H8(pipeline-discipline)보다 구체적 — H8 inject는 보조 참고용
+- **세션 복원**: `session-restore-guard.mjs`가 전역 H3보다 구체적 (프레젠테이션별 progress.md 기반)
+- **에러 기록**: 파이프라인 에러(PF/VP/COM/IV/IP)는 `progress.md` + `change-log.md`에 기록 — 전역 promotion-log.md에 기록 불필요
+
+### pending-promotion.txt 처리 기준
+전역 analyze가 이 프로젝트 작업에서 pending-promotion.txt를 생성한 경우:
+- **ERROR**: 파이프라인 명령(convert-native, preflight-html, validate-pptx, generate-images) 실행 중 발생 → `[SKIP: 파이프라인 정상 동작 — progress.md/change-log.md에서 처리됨]`
+- **ERROR**: 파이프라인 외 에러(npm install 실패, 네트워크 에러 등) → 기록조건에 따라 판단
+- **REQUEST**: docs/ 참조 → `[SKIP: 프로젝트 내부 절차]`
+- **PATTERN/KNOWLEDGE**: 프로젝트 외부 지식(새 API, 새 도구) → 기록조건에 따라 판단 (범용이면 전역 기록)
+
+### 가드 실행 순서
+1. 전역 guard (pending-promotion.txt) — 미처리 시 모든 도구 차단
+2. session-restore-guard.mjs (.restore-marker) — 세션 복원 미완료 시 차단
+3. checklist-guard.mjs (progress.md) — 체크리스트 미완료 시 파이프라인 코드 수정 차단
+
 ## 온디맨드 참조 (`.claude/docs/` — 자동 로드 안 됨, 필요 시 Read)
 
 - `presentation-flow.md` — 워크플로우 공통 (progress 템플릿, 체크박스, 세션 복원)
@@ -211,9 +237,19 @@ Step/Phase 완료, 수정 발생, IL 기록, 게이트 통과 시 **즉시** 갱
 
 ## 폴더 구조
 
-- `slides/{프레젠테이션명}/` — 슬라이드 HTML + 출력 PPTX/PDF
+- `slides/{프레젠테이션명}/` — 슬라이드 HTML + 출력 PPTX/PDF (프로덕션 전용)
+- `tests/` — 테스트 슬라이드 + 회귀/스트레스/검증 데이터
 - `scripts/` — 빌드/변환/유틸
 - `.claude/skills/` — 스킬 정의 (plan/design/pptx/presentation)
+
+### 테스트 슬라이드 정리 규칙
+테스트 완료 후 테스트용 슬라이드는 `slides/`에 남기지 않고 `tests/` 하위로 이동한다.
+- `tests/keyword-tests/` — VQA 키워드 실험 아카이브
+- `tests/vqa-tests/` — VQA 파이프라인 라운드별 테스트
+- `tests/rule-validation/` — PF/VP 규칙 검증 슬라이드
+- `tests/stress-slides/` — 스트레스 테스트 슬라이드
+- `tests/full-regression-test/` — 전체 회귀 테스트
+- 보존 대상: HTML, outline, manifest, JSON 리포트. 삭제 대상: 대용량 이미지(>100KB), 생성된 PPTX
 
 ## Critical Rules
 

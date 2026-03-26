@@ -1,0 +1,118 @@
+{
+  "cover": {},
+  "frame": {
+    "diagram": {
+      "avg": 25,
+      "count": 3
+    },
+    "diagram on": {
+      "avg": 25,
+      "count": 3
+    },
+    "circle": {
+      "avg": 24.3,
+      "count": 3
+    },
+    "red": {
+      "avg": 23.8,
+      "count": 6
+    },
+    "second": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "warm light": {
+      "avg": 23.8,
+      "count": 6
+    },
+    "crimson red": {
+      "avg": 23.8,
+      "count": 6
+    },
+    "minimal": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "warm": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "crimson": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "on warm": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "chart": {
+      "avg": 23.3,
+      "count": 3
+    }
+  },
+  "icon": {},
+  "background": {
+    "subtle": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "texture": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "warm": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "very subtle": {
+      "avg": 22.7,
+      "count": 3
+    },
+    "warm white": {
+      "avg": 22.7,
+      "count": 3
+    }
+  },
+  "metaphor": {
+    "crimson": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "dramatic": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "side": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "overlay": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "one side": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "side for": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "text overlay": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "cinematic": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "red": {
+      "avg": 23.3,
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "frame": {
+    "flowchart": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rectangles": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "arrows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "smooth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flow": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "navy-to-gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gradient": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "node": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "lines": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "labels": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "annotations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded rectangles": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "by arrows": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flow subtle": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle navy-to-gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "navy-to-gold gradient": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold gradient": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flow subtle navy-to-gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle navy-to-gold gradient": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data-heavy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "compete": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlaid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "overlaid charts": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "edge desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "metaphor": {
+    "bright": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "seedling": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "emerging": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "powerfully": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "cracked": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "concrete": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "moody": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "dramatic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "lighting": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "shadows": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "grain-like": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "highlights": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "breakthrough": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "growth": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "macro": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "photography": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "shallow": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "dof": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "editorial": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "gold": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "tones": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "bright green": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green seedling": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "seedling emerging": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "emerging powerfully": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "concrete moody": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "moody dramatic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm grain-like": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "grain-like highlights": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "highlights breakthrough": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "breakthrough growth": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "macro photography": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "shallow dof": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm gold": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "bright green seedling": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "green seedling emerging": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "seedling emerging powerfully": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "concrete moody dramatic": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "warm grain-like highlights": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "grain-like highlights breakthrough": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "highlights breakthrough growth": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    }
+  }
+}

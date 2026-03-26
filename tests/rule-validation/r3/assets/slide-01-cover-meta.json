@@ -1,0 +1,31 @@
+{
+  "slide": 1,
+  "tier": null,
+  "type": "photo",
+  "category": "cover",
+  "prompt": "Style: Authoritative, data-driven, and forward-looking — conveying strategic urgency with measured confidence. Color palette: Primary , Accent , Background , Text , Muted. A photorealistic aerial night view of tall glass towers reflecting off each other, warm golden ambient light emanating from within the buildings, full cinematic depth of field conveying a sophisticated atmosphere of technological convergence, no text 16:9 aspect ratio. Large empty area for text overlay. Sharp focus, high quali",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 56,
+  "ip": [
+    {
+      "rule": "IP-09",
+      "level": "WARN",
+      "msg": "Landscape ratio 16:9 with vertical keywords — mismatch"
+    }
+  ],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 4,
+      "text_absence": 5,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 26,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

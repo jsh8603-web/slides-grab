@@ -1,0 +1,2200 @@
+{
+  "cover": {
+    "plum": {
+      "avg": 25,
+      "count": 2
+    },
+    "purple": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne": {
+      "avg": 25,
+      "count": 2
+    },
+    "gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "arc": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "empty": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum purple": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle champagne": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "gold thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle champagne gold": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne gold thin": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 25,
+      "count": 1
+    },
+    "cascading": {
+      "avg": 25,
+      "count": 1
+    },
+    "wisteria": {
+      "avg": 25,
+      "count": 1
+    },
+    "flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "romantic": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "overlay": {
+      "avg": 25,
+      "count": 1
+    },
+    "cascading wisteria": {
+      "avg": 25,
+      "count": 1
+    },
+    "wisteria flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky romantic": {
+      "avg": 25,
+      "count": 1
+    },
+    "romantic garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "garden atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "cascading wisteria flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky romantic garden": {
+      "avg": 25,
+      "count": 1
+    },
+    "romantic garden atmosphere": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "frame": {
+    "bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "shortest": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked": {
+      "avg": 25,
+      "count": 1
+    },
+    "vertically": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar chart": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar longest": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "bar shortest": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked vertically": {
+      "avg": 25,
+      "count": 1
+    },
+    "vertically important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum middle bar": {
+      "avg": 25,
+      "count": 1
+    },
+    "middle bar medium": {
+      "avg": 25,
+      "count": 1
+    },
+    "stacked vertically important": {
+      "avg": 25,
+      "count": 1
+    },
+    "bars not more": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal triangular": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "cycle diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle connected": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "minimal triangular cycle": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangular cycle diagram": {
+      "avg": 25,
+      "count": 1
+    },
+    "triangle connected by": {
+      "avg": 25,
+      "count": 1
+    },
+    "connected by curved": {
+      "avg": 25,
+      "count": 1
+    },
+    "by curved arrows": {
+      "avg": 25,
+      "count": 1
+    },
+    "curved arrows going": {
+      "avg": 25,
+      "count": 1
+    },
+    "arrows going clockwise": {
+      "avg": 25,
+      "count": 1
+    },
+    "chart": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "pie": {
+      "avg": 24,
+      "count": 1
+    },
+    "wedge": {
+      "avg": 24,
+      "count": 1
+    },
+    "roughly": {
+      "avg": 24,
+      "count": 1
+    },
+    "remainder": {
+      "avg": 24,
+      "count": 1
+    },
+    "wedges": {
+      "avg": 24,
+      "count": 1
+    },
+    "complete": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal pie": {
+      "avg": 24,
+      "count": 1
+    },
+    "pie chart": {
+      "avg": 24,
+      "count": 1
+    },
+    "first wedge": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum covering": {
+      "avg": 24,
+      "count": 1
+    },
+    "covering roughly": {
+      "avg": 24,
+      "count": 1
+    },
+    "second wedge": {
+      "avg": 24,
+      "count": 1
+    },
+    "wedge champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "champagne covering": {
+      "avg": 24,
+      "count": 1
+    },
+    "purple covering": {
+      "avg": 24,
+      "count": 1
+    },
+    "complete circle": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal pie chart": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum covering roughly": {
+      "avg": 24,
+      "count": 1
+    },
+    "second wedge champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "wedge champagne covering": {
+      "avg": 24,
+      "count": 1
+    },
+    "champagne covering roughly": {
+      "avg": 24,
+      "count": 1
+    },
+    "champagne": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "purple": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "middle": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "important": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "not": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "more": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "fewer": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "plum middle": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "not more": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "more not": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "not fewer": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "not more not": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "more not fewer": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "circles": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "nodes": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "circle champagne": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "nodes not": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "nodes not more": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "going": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "clockwise": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "going clockwise": {
+      "avg": 23.5,
+      "count": 2
+    },
+    "minimal": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "lavender": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "mist": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "plum": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "lavender mist": {
+      "avg": 23.3,
+      "count": 6
+    },
+    "circle": {
+      "avg": 23.3,
+      "count": 4
+    },
+    "first": {
+      "avg": 23,
+      "count": 2
+    },
+    "covering": {
+      "avg": 23,
+      "count": 2
+    },
+    "second": {
+      "avg": 23,
+      "count": 2
+    },
+    "timeline": {
+      "avg": 22,
+      "count": 1
+    },
+    "thin": {
+      "avg": 22,
+      "count": 1
+    },
+    "line": {
+      "avg": 22,
+      "count": 1
+    },
+    "far": {
+      "avg": 22,
+      "count": 1
+    },
+    "left-center": {
+      "avg": 22,
+      "count": 1
+    },
+    "right-center": {
+      "avg": 22,
+      "count": 1
+    },
+    "fourth": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "evenly": {
+      "avg": 22,
+      "count": 1
+    },
+    "spaced": {
+      "avg": 22,
+      "count": 1
+    },
+    "it first": {
+      "avg": 22,
+      "count": 1
+    },
+    "first circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "second circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "right-center fourth": {
+      "avg": 22,
+      "count": 1
+    },
+    "fourth circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "pale champagne": {
+      "avg": 22,
+      "count": 1
+    },
+    "evenly spaced": {
+      "avg": 22,
+      "count": 1
+    },
+    "spaced important": {
+      "avg": 22,
+      "count": 1
+    },
+    "it first circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "second circle champagne": {
+      "avg": 22,
+      "count": 1
+    },
+    "right-center fourth circle": {
+      "avg": 22,
+      "count": 1
+    },
+    "fourth circle pale": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle pale champagne": {
+      "avg": 22,
+      "count": 1
+    },
+    "evenly spaced important": {
+      "avg": 22,
+      "count": 1
+    },
+    "funnel": {
+      "avg": 22,
+      "count": 1
+    },
+    "widest": {
+      "avg": 22,
+      "count": 1
+    },
+    "narrowest": {
+      "avg": 22,
+      "count": 1
+    },
+    "sections": {
+      "avg": 22,
+      "count": 1
+    },
+    "tapering": {
+      "avg": 22,
+      "count": 1
+    },
+    "downward": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast": {
+      "avg": 22,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 22,
+      "count": 1
+    },
+    "lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal funnel": {
+      "avg": 22,
+      "count": 1
+    },
+    "tapering downward": {
+      "avg": 22,
+      "count": 1
+    },
+    "downward important": {
+      "avg": 22,
+      "count": 1
+    },
+    "sections not": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic": {
+      "avg": 22,
+      "count": 1
+    },
+    "cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "tapering downward important": {
+      "avg": 22,
+      "count": 1
+    },
+    "sections not more": {
+      "avg": 22,
+      "count": 1
+    },
+    "contrast cinematic lighting": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "starting": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "seven-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "three-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal thick": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "progress ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc starting": {
+      "avg": 22,
+      "count": 1
+    },
+    "plum filled": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc covering": {
+      "avg": 22,
+      "count": 1
+    },
+    "covering approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "approximately seven-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle remaining": {
+      "avg": 22,
+      "count": 1
+    },
+    "remaining three-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "donut shape": {
+      "avg": 22,
+      "count": 1
+    },
+    "minimal thick progress": {
+      "avg": 22,
+      "count": 1
+    },
+    "thick progress ring": {
+      "avg": 22,
+      "count": 1
+    },
+    "plum filled arc": {
+      "avg": 22,
+      "count": 1
+    },
+    "filled arc covering": {
+      "avg": 22,
+      "count": 1
+    },
+    "arc covering approximately": {
+      "avg": 22,
+      "count": 1
+    },
+    "covering approximately seven-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "circle remaining three-tenths": {
+      "avg": 22,
+      "count": 1
+    },
+    "bold simple donut": {
+      "avg": 22,
+      "count": 1
+    },
+    "simple donut shape": {
+      "avg": 22,
+      "count": 1
+    }
+  },
+  "background": {
+    "silk": {
+      "avg": 25,
+      "count": 1
+    },
+    "satin": {
+      "avg": 25,
+      "count": 1
+    },
+    "texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "glossy": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious": {
+      "avg": 25,
+      "count": 2
+    },
+    "refined": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle silk": {
+      "avg": 25,
+      "count": 1
+    },
+    "silk satin": {
+      "avg": 25,
+      "count": 1
+    },
+    "satin texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm lavender": {
+      "avg": 25,
+      "count": 1
+    },
+    "mist tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth glossy": {
+      "avg": 25,
+      "count": 1
+    },
+    "glossy surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "luxurious refined": {
+      "avg": 25,
+      "count": 2
+    },
+    "subtle silk satin": {
+      "avg": 25,
+      "count": 1
+    },
+    "silk satin texture": {
+      "avg": 25,
+      "count": 1
+    },
+    "warm lavender mist": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender mist tones": {
+      "avg": 25,
+      "count": 1
+    },
+    "mist tones barely": {
+      "avg": 25,
+      "count": 1
+    },
+    "tones barely visible": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible smooth": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible smooth glossy": {
+      "avg": 25,
+      "count": 1
+    },
+    "smooth glossy surface": {
+      "avg": 25,
+      "count": 1
+    },
+    "glossy surface feel": {
+      "avg": 25,
+      "count": 1
+    },
+    "surface feel luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "feel luxurious refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble": {
+      "avg": 25,
+      "count": 1
+    },
+    "swirl": {
+      "avg": 25,
+      "count": 1
+    },
+    "pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle marble": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble swirl": {
+      "avg": 25,
+      "count": 1
+    },
+    "swirl pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegant veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle marble swirl": {
+      "avg": 25,
+      "count": 1
+    },
+    "marble swirl pattern": {
+      "avg": 25,
+      "count": 1
+    },
+    "barely visible elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "visible elegant veining": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegant veining luxurious": {
+      "avg": 25,
+      "count": 1
+    },
+    "veining luxurious refined": {
+      "avg": 25,
+      "count": 1
+    },
+    "subtle": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "barely": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "visible": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "extremely": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "barely visible": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "extremely minimal": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "elegant": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "mist barely": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "lavender mist barely": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "mist barely visible": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "bokeh": {
+      "avg": 24,
+      "count": 1
+    },
+    "circles": {
+      "avg": 24,
+      "count": 1
+    },
+    "soft": {
+      "avg": 24,
+      "count": 1
+    },
+    "glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "orbs": {
+      "avg": 24,
+      "count": 1
+    },
+    "dreamy": {
+      "avg": 24,
+      "count": 1
+    },
+    "subtle bokeh": {
+      "avg": 24,
+      "count": 1
+    },
+    "warm champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible soft": {
+      "avg": 24,
+      "count": 1
+    },
+    "soft glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "glowing orbs": {
+      "avg": 24,
+      "count": 1
+    },
+    "orbs dreamy": {
+      "avg": 24,
+      "count": 1
+    },
+    "dreamy elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "barely visible soft": {
+      "avg": 24,
+      "count": 1
+    },
+    "visible soft glowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "soft glowing orbs": {
+      "avg": 24,
+      "count": 1
+    },
+    "glowing orbs dreamy": {
+      "avg": 24,
+      "count": 1
+    },
+    "orbs dreamy elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "oval": {
+      "avg": 24,
+      "count": 1
+    },
+    "centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "shape": {
+      "avg": 24,
+      "count": 1
+    },
+    "oval centered": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum filled": {
+      "avg": 24,
+      "count": 1
+    },
+    "filled oval": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "champagne outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum filled oval": {
+      "avg": 24,
+      "count": 1
+    },
+    "thin champagne outline": {
+      "avg": 24,
+      "count": 1
+    },
+    "champagne outline bold": {
+      "avg": 24,
+      "count": 1
+    },
+    "minimal": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "lavender": {
+      "avg": 23.8,
+      "count": 5
+    },
+    "mist": {
+      "avg": 23.8,
+      "count": 5
+    },
+    "lavender mist": {
+      "avg": 23.8,
+      "count": 5
+    },
+    "champagne": {
+      "avg": 23.5,
+      "count": 4
+    },
+    "plum": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "pale": {
+      "avg": 23,
+      "count": 2
+    },
+    "pale plum": {
+      "avg": 23,
+      "count": 2
+    },
+    "three-by-three": {
+      "avg": 21,
+      "count": 1
+    },
+    "grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "nine": {
+      "avg": 21,
+      "count": 1
+    },
+    "equal": {
+      "avg": 21,
+      "count": 1
+    },
+    "squares": {
+      "avg": 21,
+      "count": 1
+    },
+    "row": {
+      "avg": 21,
+      "count": 1
+    },
+    "purple": {
+      "avg": 21,
+      "count": 1
+    },
+    "middle": {
+      "avg": 21,
+      "count": 1
+    },
+    "medium": {
+      "avg": 21,
+      "count": 1
+    },
+    "cells": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal three-by-three": {
+      "avg": 21,
+      "count": 1
+    },
+    "three-by-three grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "nine equal": {
+      "avg": 21,
+      "count": 1
+    },
+    "equal squares": {
+      "avg": 21,
+      "count": 1
+    },
+    "plum champagne": {
+      "avg": 21,
+      "count": 1
+    },
+    "purple middle": {
+      "avg": 21,
+      "count": 1
+    },
+    "middle row": {
+      "avg": 21,
+      "count": 1
+    },
+    "row pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "plum pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale champagne": {
+      "avg": 21,
+      "count": 1
+    },
+    "champagne lavender": {
+      "avg": 21,
+      "count": 1
+    },
+    "row medium": {
+      "avg": 21,
+      "count": 1
+    },
+    "medium plum": {
+      "avg": 21,
+      "count": 1
+    },
+    "plum medium": {
+      "avg": 21,
+      "count": 1
+    },
+    "medium champagne": {
+      "avg": 21,
+      "count": 1
+    },
+    "champagne pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale lavender": {
+      "avg": 21,
+      "count": 1
+    },
+    "lavender nine": {
+      "avg": 21,
+      "count": 1
+    },
+    "nine cells": {
+      "avg": 21,
+      "count": 1
+    },
+    "minimal three-by-three grid": {
+      "avg": 21,
+      "count": 1
+    },
+    "nine equal squares": {
+      "avg": 21,
+      "count": 1
+    },
+    "purple middle row": {
+      "avg": 21,
+      "count": 1
+    },
+    "middle row pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "row pale plum": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale plum pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "plum pale champagne": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale champagne lavender": {
+      "avg": 21,
+      "count": 1
+    },
+    "row medium plum": {
+      "avg": 21,
+      "count": 1
+    },
+    "medium plum medium": {
+      "avg": 21,
+      "count": 1
+    },
+    "plum medium champagne": {
+      "avg": 21,
+      "count": 1
+    },
+    "medium champagne pale": {
+      "avg": 21,
+      "count": 1
+    },
+    "champagne pale lavender": {
+      "avg": 21,
+      "count": 1
+    },
+    "pale lavender nine": {
+      "avg": 21,
+      "count": 1
+    },
+    "lavender nine cells": {
+      "avg": 21,
+      "count": 1
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 25,
+      "count": 1
+    },
+    "icons": {
+      "avg": 25,
+      "count": 2
+    },
+    "lavender": {
+      "avg": 25,
+      "count": 2
+    },
+    "mist": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2": {
+      "avg": 25,
+      "count": 2
+    },
+    "grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "handbag": {
+      "avg": 25,
+      "count": 1
+    },
+    "silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "heel": {
+      "avg": 25,
+      "count": 1
+    },
+    "shoe": {
+      "avg": 25,
+      "count": 1
+    },
+    "dress": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunglasses": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum": {
+      "avg": 25,
+      "count": 2
+    },
+    "fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "elegant": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender mist": {
+      "avg": 25,
+      "count": 1
+    },
+    "2x2 grid": {
+      "avg": 25,
+      "count": 2
+    },
+    "handbag silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "heel shoe": {
+      "avg": 25,
+      "count": 1
+    },
+    "shoe silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "dress silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunglasses silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum fill": {
+      "avg": 25,
+      "count": 1
+    },
+    "heel shoe silhouette": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline": {
+      "avg": 25,
+      "count": 1
+    },
+    "candle": {
+      "avg": 25,
+      "count": 1
+    },
+    "flame": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "stack": {
+      "avg": 25,
+      "count": 1
+    },
+    "bamboo": {
+      "avg": 25,
+      "count": 1
+    },
+    "stick": {
+      "avg": 25,
+      "count": 1
+    },
+    "essential": {
+      "avg": 25,
+      "count": 1
+    },
+    "oil": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottle": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne": {
+      "avg": 25,
+      "count": 2
+    },
+    "outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "outline icons": {
+      "avg": 25,
+      "count": 1
+    },
+    "candle flame": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot stone": {
+      "avg": 25,
+      "count": 1
+    },
+    "stone stack": {
+      "avg": 25,
+      "count": 1
+    },
+    "bamboo stick": {
+      "avg": 25,
+      "count": 1
+    },
+    "essential oil": {
+      "avg": 25,
+      "count": 1
+    },
+    "oil bottle": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottle champagne": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "hot stone stack": {
+      "avg": 25,
+      "count": 1
+    },
+    "essential oil bottle": {
+      "avg": 25,
+      "count": 1
+    },
+    "oil bottle champagne": {
+      "avg": 25,
+      "count": 1
+    },
+    "bottle champagne outlines": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric": {
+      "avg": 25,
+      "count": 1
+    },
+    "illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "fashion": {
+      "avg": 25,
+      "count": 1
+    },
+    "boutique": {
+      "avg": 25,
+      "count": 1
+    },
+    "interior": {
+      "avg": 25,
+      "count": 1
+    },
+    "clothing": {
+      "avg": 25,
+      "count": 1
+    },
+    "racks": {
+      "avg": 25,
+      "count": 1
+    },
+    "mirror": {
+      "avg": 25,
+      "count": 1
+    },
+    "fitting": {
+      "avg": 25,
+      "count": 1
+    },
+    "room": {
+      "avg": 25,
+      "count": 1
+    },
+    "scheme": {
+      "avg": 25,
+      "count": 1
+    },
+    "accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "isometric illustration": {
+      "avg": 25,
+      "count": 1
+    },
+    "fashion boutique": {
+      "avg": 25,
+      "count": 1
+    },
+    "boutique interior": {
+      "avg": 25,
+      "count": 1
+    },
+    "clothing racks": {
+      "avg": 25,
+      "count": 1
+    },
+    "racks mirror": {
+      "avg": 25,
+      "count": 1
+    },
+    "fitting room": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender accents": {
+      "avg": 25,
+      "count": 1
+    },
+    "fashion boutique interior": {
+      "avg": 25,
+      "count": 1
+    },
+    "clothing racks mirror": {
+      "avg": 25,
+      "count": 1
+    }
+  },
+  "metaphor": {
+    "dramatic": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple": {
+      "avg": 25,
+      "count": 3
+    },
+    "sunset": {
+      "avg": 25,
+      "count": 2
+    },
+    "sky": {
+      "avg": 25,
+      "count": 2
+    },
+    "cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden": {
+      "avg": 25,
+      "count": 2
+    },
+    "horizon": {
+      "avg": 25,
+      "count": 2
+    },
+    "composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "majestic": {
+      "avg": 25,
+      "count": 1
+    },
+    "atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic purple": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky": {
+      "avg": 25,
+      "count": 2
+    },
+    "plum cloud": {
+      "avg": 25,
+      "count": 1
+    },
+    "cloud formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne golden": {
+      "avg": 25,
+      "count": 2
+    },
+    "sky composition": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition majestic": {
+      "avg": 25,
+      "count": 1
+    },
+    "majestic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "dramatic purple sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum cloud formations": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky composition majestic": {
+      "avg": 25,
+      "count": 1
+    },
+    "composition majestic atmospheric": {
+      "avg": 25,
+      "count": 1
+    },
+    "macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "amethyst": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "facets": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching": {
+      "avg": 25,
+      "count": 1
+    },
+    "edges": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "field": {
+      "avg": 25,
+      "count": 2
+    },
+    "cinematic macro": {
+      "avg": 25,
+      "count": 1
+    },
+    "amethyst crystal": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystal cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum purple": {
+      "avg": 25,
+      "count": 2
+    },
+    "purple crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "crystalline facets": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching edges": {
+      "avg": 25,
+      "count": 1
+    },
+    "edges rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "amethyst crystal cluster": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum purple crystalline": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple crystalline facets": {
+      "avg": 25,
+      "count": 1
+    },
+    "catching edges rich": {
+      "avg": 25,
+      "count": 1
+    },
+    "edges rich geological": {
+      "avg": 25,
+      "count": 1
+    },
+    "rich geological beauty": {
+      "avg": 25,
+      "count": 1
+    },
+    "geological beauty shallow": {
+      "avg": 25,
+      "count": 1
+    },
+    "beauty shallow depth": {
+      "avg": 25,
+      "count": 1
+    },
+    "endless": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "stretching": {
+      "avg": 25,
+      "count": 1
+    },
+    "flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "under": {
+      "avg": 25,
+      "count": 1
+    },
+    "provence": {
+      "avg": 25,
+      "count": 1
+    },
+    "endless lavender": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender field": {
+      "avg": 25,
+      "count": 1
+    },
+    "field rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "rows stretching": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "flowers under": {
+      "avg": 25,
+      "count": 1
+    },
+    "under champagne": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky provence": {
+      "avg": 25,
+      "count": 1
+    },
+    "provence atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "endless lavender field": {
+      "avg": 25,
+      "count": 1
+    },
+    "lavender field rows": {
+      "avg": 25,
+      "count": 1
+    },
+    "field rows stretching": {
+      "avg": 25,
+      "count": 1
+    },
+    "plum purple flowers": {
+      "avg": 25,
+      "count": 1
+    },
+    "purple flowers under": {
+      "avg": 25,
+      "count": 1
+    },
+    "flowers under champagne": {
+      "avg": 25,
+      "count": 1
+    },
+    "under champagne golden": {
+      "avg": 25,
+      "count": 1
+    },
+    "champagne golden sunset": {
+      "avg": 25,
+      "count": 1
+    },
+    "golden sunset sky": {
+      "avg": 25,
+      "count": 1
+    },
+    "sunset sky provence": {
+      "avg": 25,
+      "count": 1
+    },
+    "sky provence atmosphere": {
+      "avg": 25,
+      "count": 1
+    },
+    "cinematic": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "plum": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "champagne": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "side": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "overlay": {
+      "avg": 24.8,
+      "count": 4
+    },
+    "rich": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "depth": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "atmosphere": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "luxurious": {
+      "avg": 24,
+      "count": 1
+    },
+    "silk": {
+      "avg": 24,
+      "count": 1
+    },
+    "fabric": {
+      "avg": 24,
+      "count": 1
+    },
+    "draped": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing": {
+      "avg": 24,
+      "count": 1
+    },
+    "folds": {
+      "avg": 24,
+      "count": 1
+    },
+    "highlights": {
+      "avg": 24,
+      "count": 1
+    },
+    "peaks": {
+      "avg": 24,
+      "count": 1
+    },
+    "texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "fashion": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum silk": {
+      "avg": 24,
+      "count": 1
+    },
+    "silk fabric": {
+      "avg": 24,
+      "count": 1
+    },
+    "fabric draped": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing folds": {
+      "avg": 24,
+      "count": 1
+    },
+    "folds champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "fabric peaks": {
+      "avg": 24,
+      "count": 1
+    },
+    "peaks rich": {
+      "avg": 24,
+      "count": 1
+    },
+    "rich texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "depth elegant": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant fashion": {
+      "avg": 24,
+      "count": 1
+    },
+    "fashion atmosphere": {
+      "avg": 24,
+      "count": 1
+    },
+    "plum silk fabric": {
+      "avg": 24,
+      "count": 1
+    },
+    "silk fabric draped": {
+      "avg": 24,
+      "count": 1
+    },
+    "flowing folds champagne": {
+      "avg": 24,
+      "count": 1
+    },
+    "fabric peaks rich": {
+      "avg": 24,
+      "count": 1
+    },
+    "peaks rich texture": {
+      "avg": 24,
+      "count": 1
+    },
+    "depth elegant fashion": {
+      "avg": 24,
+      "count": 1
+    },
+    "elegant fashion atmosphere": {
+      "avg": 24,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,1067 @@
+{
+  "cover": {
+    "startup": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fundraising": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strategy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "district": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "composition": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "title": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "startup fundraising": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fundraising strategy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strategy cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "financial district": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "startup fundraising strategy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fundraising strategy cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "strategy cinematic aerial": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dusk glass towers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass towers reflecting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "towers reflecting warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflecting warm golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft ambient lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "icon": {
+    "icons": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2x2": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "grid": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "upward": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "growth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "handshake": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "partnership": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "team": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "silhouette": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "group": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "target": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bullseye": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "share": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2-color": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stroke": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "filled": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shadow": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "labels": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "annotations": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2x2 grid": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "upward bar": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "handshake partnership": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "team silhouette": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "silhouette group": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "target bullseye": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "icons share": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue 2px": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px stroke": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stroke rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rounded corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "filled silhouette": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "team silhouette group": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "blue 2px stroke": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "2px stroke rounded": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stroke rounded corners": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "background": {
+    "antique": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "balance": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scales": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "marble": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "three-point": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softbox": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "classical": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "precision": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "negotiation": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fair": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terms": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "antique brass": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass balance": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "balance scales": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished marble": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "marble surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface three-point": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "three-point softbox": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "softbox lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle shadows": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "classical precision": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fair terms": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "terms sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "antique brass balance": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass balance scales": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "polished marble surface": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "marble surface three-point": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface three-point softbox": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "three-point softbox lighting": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle shadows shallow": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows shallow dof": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fair terms sophisticated": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "frame": {
+    "timeline": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "flow": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "equally-spaced": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "circular": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "nodes": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "thin": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "curved": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "ribbon": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "path": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "subtle": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "gradient": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "clearly": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "labels": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "annotations": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "10 equally-spaced": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "equally-spaced circular": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "circular nodes": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "thin curved": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "curved ribbon": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "ribbon path": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "subtle gradient": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "10 equally-spaced circular": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "equally-spaced circular nodes": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "thin curved ribbon": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "curved ribbon path": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "metaphor": {
+    "green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "seedling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cracked": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "concrete": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pavement": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lighting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "breakthrough": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "odds": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green seedling": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "seedling emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cracked concrete": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "concrete pavement": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pavement dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour warmth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmth breakthrough": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "breakthrough growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "odds macro": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "macro photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "epic atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green seedling emerging": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cracked concrete pavement": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "concrete pavement dramatic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden hour warmth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "hour warmth breakthrough": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warmth breakthrough growth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "odds macro photography": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture epic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture epic atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

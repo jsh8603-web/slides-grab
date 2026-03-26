@@ -1,0 +1,174 @@
+{
+  "frame": {
+    "chevron": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "pointed": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "sections": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "horizontally": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "alternating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pointed sections": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "horizontally alternating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "blue sections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "graduating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base graduating": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "coral": {
+      "avg": 26.4,
+      "count": 4,
+      "pf": 4.3
+    },
+    "labels": {
+      "avg": 26.4,
+      "count": 4,
+      "pf": 4.3
+    },
+    "annotations": {
+      "avg": 26.4,
+      "count": 4,
+      "pf": 4.3
+    },
+    "main": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "element": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "offset": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "main element": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "element offset": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "main element offset": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "radial": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "connection": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "circle": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thin": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "circles": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "radial connection": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "by thin": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thin lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "coral circles": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "by thin lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  }
+}

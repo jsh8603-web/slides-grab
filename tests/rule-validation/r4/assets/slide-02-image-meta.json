@@ -1,0 +1,31 @@
+{
+  "slide": 2,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "Style: Professional, data-driven, forward-looking executive briefing. A professional presentation background featuring an abstract upward landscape with faint grid lines suggesting exponential growth momentum, warm white tones with subtle dark navy geometric shapes rising from the lower left, clean minimal corporate aesthetic, growth trajectory implied by diagonal light gradients across the full composition, faint grid suggesting a data-driven structure, negative space for text overlay on the le",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 218,
+  "ip": [],
+  "iv": [
+    {
+      "rule": "IV-03",
+      "level": "WARN",
+      "msg": "White minimalist design — brightness check relaxed"
+    }
+  ],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 5,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 27.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

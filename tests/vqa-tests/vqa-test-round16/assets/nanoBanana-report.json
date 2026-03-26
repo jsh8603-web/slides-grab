@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-03-19T03:05:18.485Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.7,
+    "min": 19,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 3,
+      "20-22": 5,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 25,
+      "count": 3
+    },
+    "background": {
+      "avg": 22.5,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 23.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-03": 11,
+    "IP-09": 1,
+    "IP-03": 1,
+    "IP-11": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 14,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": [],
+        "pf_reason": "The image shows an abstract 3D object instead of a cinematic wide shot of a dark city street at night in the rain with a moody atmospheric cyberpunk feel. The red elements are part of the object rather than neon reflections."
+      }
+    },
+    {
+      "slide": 18,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested the indicator triangle to be at the three-quarter mark, but it is positioned in the middle of the arc."
+      }
+    },
+    {
+      "slide": 19,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image lacks the very subtle cross-hatch pattern in light gray and delicate woven texture feel mentioned in the prompt. The background is plain warm white, without the specified texture."
+      }
+    },
+    {
+      "slide": 3,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "co_reason": "The central placement of the donut chart leaves no dedicated space for text overlay or a title, limiting its versatility as a slide illustration.",
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 12,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified a \"Background warm white\", but the image's background is dark grey/black. While there is a warm white glow, it is not the background itself."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "aerial (avg 25, n=2)",
+        "glowing (avg 25, n=2)",
+        "rock (avg 25, n=2)",
+        "contrast (avg 25, n=2)",
+        "cinematic aerial (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "city (avg 17.5, n=2)",
+        "street (avg 17.5, n=2)",
+        "night (avg 17.5, n=2)",
+        "reflections (avg 17.5, n=2)",
+        "wet (avg 17.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 22,
+    "retried": 2
+  }
+}

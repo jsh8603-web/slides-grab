@@ -1,0 +1,33 @@
+{
+  "slide": 5,
+  "tier": null,
+  "type": "photo",
+  "category": "background",
+  "prompt": "Style: Authoritative, data-driven, and forward-looking — conveying strategic urgency with measured confidence. Color palette: Primary , Accent , Background , Text , Muted. A photorealistic view of a vast modern boardroom at dawn, warm golden light reflecting off a long polished conference table, full environmental depth with the city skyline awakening through panoramic windows, conveying decisive leadership and forward vision, no text 16:9 aspect ratio.",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 92,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 2,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": [
+        "unreadable numerical patterns and characters on holographic displays",
+        "fragmented text-like artifacts (e.g., '2MRAE') on the bottom left holographic display",
+        "unreadable data labels and symbols on laptop screens"
+      ]
+    },
+    "total": 23.5,
+    "detected_text": [
+      "unreadable numerical patterns and characters on holographic displays",
+      "fragmented text-like artifacts (e.g., '2MRAE') on the bottom left holographic display",
+      "unreadable data labels and symbols on laptop screens"
+    ],
+    "reasons": {}
+  }
+}

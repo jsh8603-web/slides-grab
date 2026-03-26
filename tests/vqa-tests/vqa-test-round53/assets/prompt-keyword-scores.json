@@ -1,0 +1,550 @@
+{
+  "frame": {
+    "pyramid": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tiers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "widest": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "smallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "funnel": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sections narrowing down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "flowchart": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded rectangles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "by arrows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "orange": {
+      "avg": 24.5,
+      "count": 8,
+      "pf": 3.3
+    },
+    "labels": {
+      "avg": 24.5,
+      "count": 8,
+      "pf": 3.3
+    },
+    "annotations": {
+      "avg": 24.5,
+      "count": 8,
+      "pf": 3.3
+    },
+    "captions": {
+      "avg": 24.5,
+      "count": 8,
+      "pf": 3.3
+    },
+    "main": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "element": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "positioned": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "leaving": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "open": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "main element": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "element positioned": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "main element positioned": {
+      "avg": 24.2,
+      "count": 3,
+      "pf": 3
+    },
+    "sections": {
+      "avg": 23.8,
+      "count": 3,
+      "pf": 3
+    },
+    "bar": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bars": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "heights": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "alternating": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different heights": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "orange alternating": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "block": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "ascending": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "blocks": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "ascending blocks": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "hub-spoke": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "circle": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "circles": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thin": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "connecting": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "orange circles": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "it thin": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thin lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "lines connecting": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "it thin lines": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thin lines connecting": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "chevron": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "process": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "arrow-shaped": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "chevron process": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "arrow-shaped sections": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "donut": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "thick": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "hollow": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "orange orange": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "orange thick": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "cover": {
+    "base": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "subtle": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "line": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "pattern": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "sophisticated": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "atmosphere": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "empty": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "line pattern": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "pattern sophisticated": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "line pattern sophisticated": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle cream": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle cream paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cream paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "icons": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "neutral": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grid": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "truck": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "box": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warehouse": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clipboard": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "inside": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rounded": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "2x2 grid": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "truck silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "box silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warehouse silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    },
+    "clipboard silhouette": {
+      "avg": 26.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

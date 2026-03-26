@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-03-19T04:15:38.944Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 0,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.8,
+    "min": 24,
+    "max": 25,
+    "distribution": {
+      "25": 15,
+      "23-24": 5,
+      "20-22": 0,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 24.5,
+      "count": 2
+    },
+    "frame": {
+      "avg": 24.7,
+      "count": 7
+    },
+    "icon": {
+      "avg": 24.7,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 24.8,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-03": 10,
+    "IP-09": 1,
+    "IV-09": 2,
+    "IP-03": 1,
+    "IV-10": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 1,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 6,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 8,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 16,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 17,
+      "total": 24,
+      "scores": {
+        "prompt_fidelity": 4,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "water (avg 25, n=4)",
+        "serene atmosphere (avg 25, n=2)",
+        "chart (avg 25, n=2)",
+        "first (avg 25, n=4)",
+        "outer (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "tropical (avg 24.5, n=2)",
+        "pale mint (avg 24.5, n=2)",
+        "circle pearl (avg 24.5, n=2)",
+        "morning (avg 24.5, n=2)",
+        "emerald (avg 24.7, n=18)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "empty (avg 25, n=5)",
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "cinematic (avg 24.5, n=6)",
+        "sky (avg 24.4, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 10 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.6, n=5)",
+        "coral (avg 24.4, n=5)",
+        "charcoal (avg 24.3, n=5)",
+        "isometric (avg 24.3, n=6)",
+        "illustration (avg 24.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 22 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "ice light (avg 25, n=5)",
+        "bright teal (avg 24.7, n=5)",
+        "silver (avg 24.7, n=6)",
+        "ice (avg 24.7, n=7)",
+        "midnight (avg 24.7, n=7)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 23 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "natural (avg 24.7, n=5)",
+        "in pale (avg 24.4, n=5)",
+        "thin (avg 24.4, n=6)",
+        "pattern in (avg 24.3, n=5)",
+        "centered (avg 24.3, n=6)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 22 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "golden (avg 24.9, n=5)",
+        "cinematic wide (avg 24.9, n=7)",
+        "purple (avg 24.8, n=5)",
+        "atmosphere ample (avg 24.8, n=6)",
+        "depth (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 19 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}

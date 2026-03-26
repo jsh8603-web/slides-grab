@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-03-19T02:10:59.734Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.8,
+    "min": 21,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 3,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "icon": {
+      "avg": 24.2,
+      "count": 6
+    },
+    "frame": {
+      "avg": 23.6,
+      "count": 5
+    },
+    "background": {
+      "avg": 22.3,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-03": 20,
+    "IV-09": 1,
+    "IP-03": 1,
+    "IV-10": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 8,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "detected_text": [],
+        "pf_reason": "Dots are of uniform size, not varying sizes as specified in the prompt."
+      }
+    },
+    {
+      "slide": 12,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "co_reason": "The composition is generally good for a background, offering plenty of negative space. The vertical line on the left, while contributing to structure, is a somewhat unusual element for a minimal background and could potentially interfere with text alignment depending on the content.",
+        "detected_text": [],
+        "pf_reason": "The vertical dark line on the left and the coral dot in the top right were not explicitly requested and make it slightly less \"extremely minimal\" than described in the prompt."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "no symbol"
+        ]
+      }
+    },
+    {
+      "slide": 16,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image lacks the specified green fields and warm golden hour light. The \"background off-white\" is not visible as the fields fill the entire frame."
+      }
+    },
+    {
+      "slide": 19,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image displays a half-arc in coral with the remaining half in light gray, whereas the prompt requested a three-quarter arc in coral with the remaining quarter in light gray. The prompt also specified primary charcoal, but light gray was used instead for the non-coral portion of the ring."
+      }
+    }
+  ],
+  "recommendations": [],
+  "vqa_attempts": {
+    "total": 21,
+    "retried": 2
+  }
+}

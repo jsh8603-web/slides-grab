@@ -1,0 +1,212 @@
+{
+  "timestamp": "2026-03-19T06:23:35.384Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 7,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23.2,
+    "min": 19,
+    "max": 25,
+    "distribution": {
+      "25": 8,
+      "23-24": 4,
+      "20-22": 7,
+      "15-19": 1,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 22.5,
+      "count": 13
+    },
+    "cover": {
+      "avg": 25,
+      "count": 1
+    },
+    "metaphor": {
+      "avg": 23.3,
+      "count": 3
+    },
+    "background": {
+      "avg": 25,
+      "count": 1
+    },
+    "icon": {
+      "avg": 25,
+      "count": 2
+    }
+  },
+  "by_rule": {
+    "IP-08": 5,
+    "IV-09": 3,
+    "IP-09": 2,
+    "IV-03": 1,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 2,
+      "total": 19,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 4,
+        "pf_reason": "The prompt specified a minimal chevron diagram with 3 arrow-shaped segments, with the third segment being 'light amber'. The image generated has 5 segments, and the third segment is 'slate' (dark grey)."
+      }
+    },
+    {
+      "slide": 20,
+      "total": 20,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The prompt requested a minimal staircase with 4 ascending steps and specific step colors (first step light amber, second amber, third dark amber, fourth slate). The image displays a staircase with more steps (approx. 8-10) and all steps are a uniform dark grey/slate color, with amber lighting beneath them. The prompt also requested a 'clean flat vector' style, but the image is a realistic photograph."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified five small amber circles, but the image shows eight outer circles instead of five."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified 4 arrow-shaped segments, but the image shows 5 segments."
+      }
+    },
+    {
+      "slide": 4,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 4,
+        "co_reason": "The central placement of the pyramid, while balanced, limits flexible negative space for common slide text overlays (e.g., title, bullet points).",
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "subtle (avg 25, n=2)",
+        "texture (avg 25, n=2)",
+        "tones (avg 25, n=2)",
+        "bar (avg 24, n=2)",
+        "bars (avg 24, n=2)"
+      ],
+      "bottom_keywords": [
+        "chevron (avg 20.5, n=2)",
+        "process (avg 20.5, n=2)",
+        "arrow-shaped (avg 20.5, n=2)",
+        "chevron process (avg 20.5, n=2)",
+        "arrow-shaped segments (avg 20.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "central empty (avg 25, n=5)",
+        "empty area (avg 25, n=5)",
+        "green (avg 24.9, n=5)",
+        "near (avg 24.8, n=5)",
+        "line near (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 25 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "green (avg 24.8, n=5)",
+        "modern (avg 24.6, n=5)",
+        "olive (avg 24.6, n=5)",
+        "olive green (avg 24.6, n=5)",
+        "scheme (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 35 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "centered outer (avg 25, n=5)",
+        "ice light (avg 25, n=5)",
+        "linen (avg 25, n=5)",
+        "minimal diagram (avg 24.8, n=5)",
+        "sand (avg 24.8, n=5)"
+      ],
+      "bottom_keywords": [
+        "prompt (avg 19, n=5)"
+      ],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 121 proven keywords, 1 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "artistic (avg 25, n=5)",
+        "pearl (avg 25, n=5)",
+        "technical (avg 24.8, n=5)",
+        "slate (avg 24.8, n=5)",
+        "weave (avg 24.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 65 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "contrast (avg 25, n=5)",
+        "cinematic wide (avg 24.9, n=5)",
+        "purple (avg 24.9, n=5)",
+        "olive (avg 24.9, n=5)",
+        "indigo (avg 24.9, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 62 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 24,
+    "retried": 4
+  }
+}

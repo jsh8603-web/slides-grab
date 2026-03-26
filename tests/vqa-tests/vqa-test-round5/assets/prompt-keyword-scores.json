@@ -1,0 +1,266 @@
+{
+  "background": {
+    "tones": {
+      "avg": 22.3,
+      "count": 4
+    },
+    "tones with": {
+      "avg": 22.3,
+      "count": 4
+    },
+    "cinematic": {
+      "avg": 22,
+      "count": 6
+    },
+    "white": {
+      "avg": 22,
+      "count": 4
+    },
+    "metaphor": {
+      "avg": 21.9,
+      "count": 8
+    },
+    "soft": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "metaphor simple": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "metaphor simple composition": {
+      "avg": 21.7,
+      "count": 3
+    },
+    "lighting": {
+      "avg": 21.6,
+      "count": 5
+    },
+    "warm": {
+      "avg": 21.5,
+      "count": 8
+    },
+    "simple": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "composition": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "bold": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "colors": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "simple composition": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "composition bold": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "bold colors": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "simple composition bold": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "composition bold colors": {
+      "avg": 21.5,
+      "count": 4
+    },
+    "side": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "cinematic close-up": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "side lighting": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "subtle": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "gray": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "with subtle": {
+      "avg": 21.3,
+      "count": 3
+    },
+    "depth": {
+      "avg": 21,
+      "count": 5
+    },
+    "close-up": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "shallow": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "field": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "close-up of": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "shallow depth": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "depth of": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "of field": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "directional": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "icon": {
+    "cinematic": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "dramatic": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "lighting": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "contrast": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "high contrast": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "contrast cinematic": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "cinematic lighting": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "contrast cinematic lighting": {
+      "avg": 20.7,
+      "count": 3
+    },
+    "white": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "navy": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "on white": {
+      "avg": 20.3,
+      "count": 3
+    },
+    "white background": {
+      "avg": 20.3,
+      "count": 3
+    }
+  },
+  "cover": {
+    "cover": {
+      "avg": 22,
+      "count": 3
+    },
+    "presentation cover": {
+      "avg": 22,
+      "count": 3
+    }
+  },
+  "frame": {
+    "thin": {
+      "avg": 21,
+      "count": 3
+    },
+    "minimal": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "diagram": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "gray": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "flat": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "vector": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "light blue": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "light gray": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "gray background": {
+      "avg": 20.8,
+      "count": 4
+    },
+    "clean flat": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "flat vector": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "clean flat vector": {
+      "avg": 20.8,
+      "count": 5
+    },
+    "navy": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "blue": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "clean": {
+      "avg": 20.7,
+      "count": 6
+    },
+    "vector style": {
+      "avg": 20.5,
+      "count": 4
+    }
+  }
+}

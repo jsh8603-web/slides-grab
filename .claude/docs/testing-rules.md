@@ -82,7 +82,7 @@ PF/VP 코드 수정
   → 확정 후: node tests/run-full-regression.mjs --save
 ```
 
-**자동 탐색**: `slides/` 하위에서 `slide-*.html`이 있는 디렉토리 + 디렉토리명과 일치하는 PPTX 자동 탐색. `_keyword-tests/`, `_vqa-tests/` 제외.
+**자동 탐색**: `slides/` 하위에서 `slide-*.html`이 있는 디렉토리 + 디렉토리명과 일치하는 PPTX 자동 탐색. 테스트 슬라이드는 `tests/`에 별도 보관 (slides/ 폴더에 없음).
 
 ---
 

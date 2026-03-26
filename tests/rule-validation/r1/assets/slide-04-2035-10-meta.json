@@ -1,0 +1,25 @@
+{
+  "slide": 4,
+  "tier": null,
+  "type": "photo",
+  "category": "metaphor",
+  "prompt": "A photorealistic concept illustration of South Korean coastline with an underwater data center module visible below the surface of the East Sea, surrounded by offshore wind turbines on the horizon, traditional coastal fishing village visible on the shore, reflecting off calm sea surface, full wide angle aerial perspective, warm golden sunset light, no text, 16:9 aspect ratio. Sharp focus, high quality. Ample negative space on one side for text overlay. Use natural realistic colors appropriate to",
+  "attempt": 1,
+  "finishReason": "STOP",
+  "brightness": 112,
+  "ip": [],
+  "iv": [],
+  "vqa": {
+    "scores": {
+      "prompt_fidelity": 5,
+      "text_absence": 5,
+      "composition": 4,
+      "color_harmony": 5,
+      "presentation_fit": 5,
+      "detected_text": []
+    },
+    "total": 26.5,
+    "detected_text": [],
+    "reasons": {}
+  }
+}

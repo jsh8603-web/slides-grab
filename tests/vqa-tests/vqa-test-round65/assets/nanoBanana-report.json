@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-03-19T10:05:11.275Z",
+  "summary": {
+    "total": 6,
+    "pass": 6,
+    "warn": 2,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24.8,
+    "min": 21,
+    "max": 27.5,
+    "distribution": {
+      "27.5": 3,
+      "25-27": 0,
+      "22-24": 2,
+      "17-21": 1,
+      "<17": 0
+    }
+  },
+  "by_category": {
+    "frame": {
+      "avg": 24.8,
+      "count": 6
+    }
+  },
+  "by_rule": {},
+  "weakest_slides": [
+    {
+      "slide": 4,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The image displays 5 chevron sections instead of the requested 4."
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested 3 small coral circles, but the image shows 4 circles connected to the central navy circle. Also, the description says 'evenly spaced around it', but the four circles form a square, not an even radial distribution you would expect from 3 circles around a central one. However, the four circles are evenly spaced from each other in the square formation, so this is a minor point compared to the number of circles discrepancy. This is a clear deviation from the prompt's specifications regarding the number of accent elements. Other aspects like style and color palette match well. Because of the clear deviation in the number of elements requested, the score is below average for prompt fidelity. "
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows only 2 pointed sections instead of the requested 3, and it lacks the specified light blue section. It only features navy and coral sections."
+      }
+    },
+    {
+      "slide": 1,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 2,
+      "total": 27.5,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": []
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "donut (avg 27.5, n=2)",
+        "main (avg 26.1, n=4)",
+        "element (avg 26.1, n=4)",
+        "offset (avg 26.1, n=4)",
+        "main element (avg 26.1, n=4)"
+      ],
+      "bottom_keywords": [
+        "chevron (avg 22, n=2)",
+        "pointed (avg 22, n=2)",
+        "horizontally (avg 22, n=2)",
+        "pointed sections (avg 22, n=2)",
+        "sections (avg 24.8, n=4)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    },
+    {
+      "criterion": "cumulative_keywords_cover",
+      "severity": "INFO",
+      "top_keywords": [
+        "atmosphere (avg 27.2, n=5)",
+        "line pattern (avg 27.1, n=5)",
+        "pattern sophisticated (avg 27.1, n=5)",
+        "line pattern sophisticated (avg 27.1, n=5)",
+        "pattern (avg 27, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'cover': 39 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_icon",
+      "severity": "INFO",
+      "top_keywords": [
+        "forest (avg 25.8, n=5)",
+        "forest green (avg 25.8, n=5)",
+        "filled (avg 25.6, n=5)",
+        "silhouette (avg 25.6, n=5)",
+        "green (avg 25.6, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'icon': 54 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_frame",
+      "severity": "INFO",
+      "top_keywords": [
+        "flowchart (avg 27, n=5)",
+        "rounded rectangles (avg 27, n=5)",
+        "by arrows (avg 27, n=5)",
+        "rounded (avg 27, n=5)",
+        "narrowest (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'frame': 194 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_background",
+      "severity": "INFO",
+      "top_keywords": [
+        "fiber pattern warm (avg 26.8, n=5)",
+        "pattern warm (avg 26.8, n=5)",
+        "fiber pattern (avg 26.8, n=5)",
+        "paper (avg 26.8, n=5)",
+        "paper texture (avg 26.8, n=5)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'background': 81 proven keywords, 0 weak keywords, 0 blocked."
+    },
+    {
+      "criterion": "cumulative_keywords_metaphor",
+      "severity": "INFO",
+      "top_keywords": [
+        "ocean (avg 27.5, n=5)",
+        "hull (avg 27.5, n=5)",
+        "billowing (avg 27.4, n=5)",
+        "photorealistic (avg 27.4, n=7)",
+        "ship (avg 27.4, n=7)"
+      ],
+      "bottom_keywords": [],
+      "blocked_keywords": [],
+      "action": "Category 'metaphor': 92 proven keywords, 0 weak keywords, 0 blocked."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 6,
+    "retried": 0
+  }
+}

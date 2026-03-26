@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-03-19T03:18:59.082Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 5,
+    "fail": 1,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 23,
+    "min": 10,
+    "max": 25,
+    "distribution": {
+      "25": 9,
+      "23-24": 5,
+      "20-22": 5,
+      "15-19": 0,
+      "<15": 1
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 21.3,
+      "count": 7
+    },
+    "background": {
+      "avg": 23.8,
+      "count": 4
+    },
+    "icon": {
+      "avg": 23,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-10": 1,
+    "IV-03": 1,
+    "IP-11": 1,
+    "IV-09": 2,
+    "IP-03": 1,
+    "IP-09": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 18,
+      "total": 10,
+      "scores": {
+        "prompt_fidelity": 1,
+        "text_absence": 1,
+        "composition": 2,
+        "color_harmony": 4,
+        "presentation_fit": 2,
+        "co_reason": "While the chart is adequately framed, the axis labels are poorly organized and contain errors ('1,00%', '150%' bar being shorter than 60%, duplicate '20%', and out-of-order '60%, 50%'), which significantly detracts from its clarity and balance.",
+        "detected_text": [
+          "1,00%",
+          "150%",
+          "60%",
+          "40%",
+          "20%",
+          "10%",
+          "0%",
+          "0",
+          "10%",
+          "20%",
+          "20%",
+          "30%",
+          "60%",
+          "50%"
+        ],
+        "pf_reason": "The image displays a horizontal bar chart, not a waterfall chart as described in the prompt. The specified bar placement and behavior for a waterfall chart are completely absent."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 21,
+      "scores": {
+        "prompt_fidelity": 2,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The image shows six steps instead of the requested four steps. The second step is a darker blue, not bright blue as specified. Additionally, the prompt specified a \"light blue\" for the fourth step, but there are multiple shades of light blue, extending beyond four steps. The image depicts a gradient of blues. It shows more steps than requested. The colors don't match exactly. The image shows six steps ascending from dark to light blue, instead of the specified four steps with distinct colors. The requested second step was 'bright blue' which is not evident. The fourth step was 'light blue', but there are three lighter blue steps at the end. The image shows six steps instead of the requested four. The colors of the steps are not exactly as described (e.g., the second step is not bright blue). The image shows six steps instead of the requested four. The specific shades for the second and fourth steps are not accurately represented. The second step is a medium-dark blue, not a bright blue. The sequence of light blues also doesn't map directly to a single "
+      }
+    },
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 4,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt requested the first navy line to be 'going up' and the second bright blue line to be 'going down then up'. In the image, both lines follow a similar wavy upward trajectory, and the bright blue line does not distinctly go 'down then up' in a different manner than the navy line, as both lines have a similar general shape and upward trend with minor waves. Both lines also end with arrows pointing upwards, suggesting an overall upward movement for both, which is not fully consistent with \"going down then up\" for the second line as a distinct characteristic from the first one being merely \"going up\". The term 'line chart frame' is only partially represented since there are only two lines crossing the canvas, without any axis/frame components typical of a line chart, but this is a minor detail for a 'minimal' frame expectation. Also, the arrows are part of the lines, making them an integrated element of the lines, so are acceptable and do not count as text/symbols."
+      }
+    },
+    {
+      "slide": 9,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "N",
+          "W",
+          "E",
+          "S"
+        ]
+      }
+    },
+    {
+      "slide": 13,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 2,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [
+          "freephoto.com"
+        ]
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "sky (avg 25, n=2)",
+        "circle (avg 25, n=2)",
+        "thin (avg 25, n=2)",
+        "texture (avg 25, n=2)",
+        "corporate (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "important (avg 10.5, n=2)",
+        "prompt (avg 10.5, n=2)",
+        "important the (avg 10.5, n=2)",
+        "bar chart (avg 10.5, n=2)",
+        "chart as (avg 10.5, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 22,
+    "retried": 2
+  }
+}

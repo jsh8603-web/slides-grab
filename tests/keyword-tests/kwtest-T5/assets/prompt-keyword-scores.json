@@ -1,0 +1,1275 @@
+{
+  "frame": {
+    "moody": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "compass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "resting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "worn": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scale": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "instrument": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aged": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canvas": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dof": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "photography": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass compass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "compass resting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "worn wooden": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden surface": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full scale": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "aged canvas": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow dof": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "editorial photography": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass compass": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass compass resting": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "worn wooden surface": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture directional": {
+      "avg": 25.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ribbon": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sections": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "narrowing": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "down": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "like": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pyramid": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "progression": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "element": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "offset": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gradient ribbon": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sections narrowing": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "narrowing down": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pyramid progression": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main element": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "element offset": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle gradient ribbon": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "sections narrowing down": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "main element offset": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "flowchart": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "rounded": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "rectangles": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "arrows": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "flow": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "subtle": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "gradient": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "node": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "has": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "base": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "fill": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "warm": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "gold": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "labels": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "annotations": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "rounded rectangles": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "by arrows": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "flow subtle": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "subtle gradient": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "node has": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "base fill": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "warm gold": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "flow subtle gradient": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "path": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "corners": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "gradient path": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "rounded corners": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "subtle gradient path": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "metaphor": {
+    "moody": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "balance": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scales": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "casting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shadows": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "instrument": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canvas": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "backdrop": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moody cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass balance": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "balance scales": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wooden surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "full scale": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canvas backdrop": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "backdrop shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ornate brass balance": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "brass balance scales": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain texture warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture warm directional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canvas backdrop shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "backdrop shallow dof": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "shallow": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "dof": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "shallow dof": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "cinematic": {
+      "avg": 24.8,
+      "count": 3,
+      "pf": 3.7
+    },
+    "editorial": {
+      "avg": 24.8,
+      "count": 3,
+      "pf": 3.7
+    },
+    "photography": {
+      "avg": 24.8,
+      "count": 3,
+      "pf": 3.7
+    },
+    "editorial photography": {
+      "avg": 24.8,
+      "count": 3,
+      "pf": 3.7
+    },
+    "green": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "seedling": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "emerging": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rich": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soil": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green seedling": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "seedling emerging": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk soft": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm golden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green seedling emerging": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk soft warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft warm golden": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "wide-angle": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "aerial": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "dusk": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "sophisticated": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "atmosphere": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "innovation": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "soft": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "golden": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "cinematic wide-angle": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "wide-angle aerial": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "sophisticated atmosphere": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "cinematic wide-angle aerial": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "modern": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "financial": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "tall": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "glass": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "towers": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "technology": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "skyline": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "composition": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "modern financial": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "financial district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk tall": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "tall glass": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "glass towers": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "technology innovation": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "innovation soft": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "soft golden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "modern financial district": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dusk tall glass": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "tall glass towers": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "technology innovation soft": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    },
+    "innovation soft golden": {
+      "avg": 22.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "icon": {
+    "icons": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2x2": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "grid": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "network": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "share": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "nodes": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "funnel": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "filter": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "stroke": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "handshake": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "shadow": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "shield": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "checklist": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2px": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "rounded": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "corners": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "warm": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "gold": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "equal": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "visual": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "weight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "labels": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "annotations": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2x2 grid": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "grid network": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "network share": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "nodes funnel": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "funnel filter": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "shield silhouette": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "silhouette checklist": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "checklist icons": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "icons share": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2px stroke": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "stroke rounded": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "rounded corners": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "warm gold": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "share equal": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "equal visual": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "visual weight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2x2 grid network": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "grid network share": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "nodes funnel filter": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "shield silhouette checklist": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "silhouette checklist icons": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "checklist icons share": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "2px stroke rounded": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "stroke rounded corners": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "icons share equal": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "share equal visual": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    },
+    "equal visual weight": {
+      "avg": 22,
+      "count": 1,
+      "pf": 4
+    }
+  },
+  "background": {
+    "subtle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "statistics": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "base": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "faint": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle data": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "desaturated muted": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "paper texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle data warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "data warm paper": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fine fiber pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fiber pattern warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern warm texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  }
+}

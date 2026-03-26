@@ -1,0 +1,2232 @@
+{
+  "cover": {
+    "cinematic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bamboo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "stems": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dense": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grove": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "gold": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "zen": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall bamboo": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bamboo stems": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dense grove": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "green tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich gold": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "gold sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene zen": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "zen atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tall bamboo stems": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "soft rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich gold sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold sunlight filtering": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene zen atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "line": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "understated": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "luxury": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "empty": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "understated luxury": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    }
+  },
+  "frame": {
+    "tallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "short": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "medium-tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bar tallest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bar short": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bar medium-tall": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wavy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle layer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth wavy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wavy layers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer forest green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green middle": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green middle layer": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "middle layer rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "layer rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "smooth wavy layers": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organization": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "thin": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "lines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "rows": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "by thin": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "thin lines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "circle rich": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "circle pale": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "by thin lines": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "circle rich gold": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "circle pale gold": {
+      "avg": 26,
+      "count": 1,
+      "pf": 4
+    },
+    "bar": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 4
+    },
+    "bars": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 4
+    },
+    "middle": {
+      "avg": 25.5,
+      "count": 2,
+      "pf": 4
+    },
+    "labels": {
+      "avg": 24.8,
+      "count": 4,
+      "pf": 3.5
+    },
+    "annotations": {
+      "avg": 24.8,
+      "count": 4,
+      "pf": 3.5
+    },
+    "rich": {
+      "avg": 24.6,
+      "count": 6,
+      "pf": 3.5
+    },
+    "gold": {
+      "avg": 24.6,
+      "count": 6,
+      "pf": 3.5
+    },
+    "rich gold": {
+      "avg": 24.6,
+      "count": 6,
+      "pf": 3.5
+    },
+    "pale": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "sage": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "forest": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "green": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "pale sage": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "forest green": {
+      "avg": 24.4,
+      "count": 7,
+      "pf": 3.3
+    },
+    "pale gold": {
+      "avg": 24.1,
+      "count": 4,
+      "pf": 3.3
+    },
+    "circles": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "green circle": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "forest green circle": {
+      "avg": 23.5,
+      "count": 2,
+      "pf": 3
+    },
+    "gantt": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "positions": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "extending": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "halfway": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "three-quarters": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "end": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar forest": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green starting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "extending halfway": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "halfway middle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "middle bar": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar rich": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold starting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "different positions": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar forest green": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "forest green starting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "extending halfway middle": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "halfway middle bar": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "middle bar rich": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "bar rich gold": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "rich gold starting": {
+      "avg": 23.5,
+      "count": 1,
+      "pf": 3
+    },
+    "starting": {
+      "avg": 23.3,
+      "count": 2,
+      "pf": 2.5
+    },
+    "circle": {
+      "avg": 23,
+      "count": 4,
+      "pf": 2.5
+    },
+    "thick": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "progress": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "arc": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "filled": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "approximately": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "three-fifths": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "two-fifths": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "bold": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "simple": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "donut": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "shape": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "thick progress": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "arc starting": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "green filled": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "filled arc": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "approximately three-fifths": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "bold simple": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "simple donut": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "donut shape": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "forest green filled": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "green filled arc": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "bold simple donut": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "simple donut shape": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "pie": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "remainder": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedges": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge forest": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge rich": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge pale": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge forest green": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge rich gold": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "wedge pale gold": {
+      "avg": 22,
+      "count": 1,
+      "pf": 2
+    },
+    "main": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "element": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "offset": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "main element": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "element offset": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "main element offset": {
+      "avg": 22,
+      "count": 2,
+      "pf": 2
+    },
+    "radial": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "connection": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "smaller": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "upper-right": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "lower-right": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "lower-left": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "upper-left": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "outer": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "radial connection": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "smaller circles": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke rich": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke pale": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke gold": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "outer circles": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke rich gold": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    },
+    "spoke pale gold": {
+      "avg": 21,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "icon": {
+    "filled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "sage": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "leaf": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mountain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tree": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "fill": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale sage": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "leaf silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "mountain silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tree silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "green fill": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sun silhouette forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette forest green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green fill": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "isometric": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "illustration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "potting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bench": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garden": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tools": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "isometric illustration": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "glass greenhouse": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants potting": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "potting bench": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garden tools": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tools forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "plants potting bench": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "garden tools forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tools forest green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "icons": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "2x2": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "grid": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "2x2 grid": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "rich": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "gold": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "rich gold": {
+      "avg": 25.3,
+      "count": 2,
+      "pf": 3.5
+    },
+    "fork": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "knife": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "coffee": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "cup": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "cupcake": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "chef": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "hat": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "coffee cup": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "chef hat": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "hat rich": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "chef hat rich": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    },
+    "hat rich gold": {
+      "avg": 23,
+      "count": 1,
+      "pf": 2
+    }
+  },
+  "background": {
+    "moss-like": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green": {
+      "avg": 27.5,
+      "count": 3,
+      "pf": 5
+    },
+    "tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fresh": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "subtle moss-like": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moss-like organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "organic texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green tones": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface fresh": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fresh organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle moss-like organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "moss-like organic texture": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural surface fresh": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface fresh organic": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "frond": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "botanical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "repeat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fern frond": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "frond silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "silhouette pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "botanical repeat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "repeat fresh": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fresh natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "subtle fern frond": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "fern frond silhouette": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "frond silhouette pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "botanical repeat fresh": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "repeat fresh natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "regular": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "octagon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "bold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shape": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "regular octagon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green filled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "filled octagon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green filled": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green filled octagon": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "thin rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pale": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "sage": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "pale sage": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "subtle": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "texture": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "gold": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "foil": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shimmer": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "metallic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warmth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "luxurious": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "understated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold foil": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "foil shimmer": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "shimmer texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm pale": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "pale gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "metallic warmth": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warmth luxurious": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "luxurious understated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "subtle gold foil": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "gold foil shimmer": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "foil shimmer texture": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warm pale gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "metallic warmth luxurious": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "warmth luxurious understated": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  },
+  "metaphor": {
+    "aerial": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "down": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dense": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rainforest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canopy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "treetops": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "occasional": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight": {
+      "avg": 27.5,
+      "count": 3,
+      "pf": 5
+    },
+    "patches": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "atmosphere": {
+      "avg": 27.5,
+      "count": 3,
+      "pf": 5
+    },
+    "uniform": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "pattern": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "cinematic aerial": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "dense rainforest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rainforest canopy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green treetops": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "occasional rich": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold sunlight": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "sunlight patches": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "patches lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "tropical atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "uniform canopy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "canopy pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "dense rainforest canopy": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green treetops": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "occasional rich gold": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich gold sunlight": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "gold sunlight patches": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight patches lush": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "patches lush tropical": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "lush tropical atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "uniform canopy pattern": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "wheat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "ears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heads": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "depth": {
+      "avg": 27.5,
+      "count": 2,
+      "pf": 5
+    },
+    "harvest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden wheat": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "wheat ears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green field": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain heads": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heads catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field harvest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "harvest atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "golden wheat ears": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "rich gold grain": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold grain heads": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "grain heads catching": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "heads catching warm": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "catching warm sunlight": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "warm sunlight shallow": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight shallow depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "field harvest atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "reflections": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface forest": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "green depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight sparkles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkles serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "natural atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "emerald green water": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "surface forest green": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "forest green depth": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "gold sunlight sparkles": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sunlight sparkles serene": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "sparkles serene natural": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "serene natural atmosphere": {
+      "avg": 27.5,
+      "count": 1,
+      "pf": 5
+    },
+    "cinematic": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "green": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "rich": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "gold": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "rich gold": {
+      "avg": 26.8,
+      "count": 4,
+      "pf": 4.5
+    },
+    "forest": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "forest green": {
+      "avg": 26.5,
+      "count": 3,
+      "pf": 4.3
+    },
+    "macro": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "cinematic macro": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "natural": {
+      "avg": 26,
+      "count": 2,
+      "pf": 4
+    },
+    "autumn": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "leaf": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "detailed": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "vein": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "amber": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "tones": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stem": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "backlight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "intimate": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "beauty": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "autumn leaf": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "detailed vein": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "vein structure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure rich": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "amber tones": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green stem": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stem dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dramatic backlight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "backlight intimate": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "intimate natural": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "natural beauty": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "detailed vein structure": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "vein structure rich": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "structure rich gold": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "forest green stem": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "green stem dramatic": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "stem dramatic backlight": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "dramatic backlight intimate": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "backlight intimate natural": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    },
+    "intimate natural beauty": {
+      "avg": 24.5,
+      "count": 1,
+      "pf": 3
+    }
+  }
+}

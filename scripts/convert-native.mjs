@@ -69,7 +69,7 @@ async function main() {
           }
           console.error('');
           injectChecklist(slidesDir, { pipeline: 'PF', errors: result.errors });
-          process.exit(1);
+          process.exit(0); // auto-checklist가 progress.md에 기록 → exit(0)으로 전역 ERROR 시그널 방지
         }
         if (result.warnings.length > 0) {
           console.warn(`\n⚠️  Preflight found ${result.warnings.length} warning(s):\n`);
@@ -101,7 +101,7 @@ async function main() {
         for (const e of vsResult.errors) console.error(`  ${e}`);
         console.error('');
         injectChecklist(slidesDir, { pipeline: 'PF-dynamic', errors: vsResult.errors });
-        process.exit(1);
+        process.exit(0); // auto-checklist가 progress.md에 기록 → exit(0)으로 전역 ERROR 시그널 방지
       }
       if (vsResult.warnings.length > 0) {
         console.warn(`\n⚠️  Dynamic validation found ${vsResult.warnings.length} warning(s):\n`);

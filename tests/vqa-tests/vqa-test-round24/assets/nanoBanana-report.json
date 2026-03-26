@@ -1,0 +1,141 @@
+{
+  "timestamp": "2026-03-19T03:49:48.145Z",
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "vqa": {
+    "avg": 24,
+    "min": 22,
+    "max": 25,
+    "distribution": {
+      "25": 11,
+      "23-24": 5,
+      "20-22": 4,
+      "15-19": 0,
+      "<15": 0
+    }
+  },
+  "by_category": {
+    "cover": {
+      "avg": 25,
+      "count": 2
+    },
+    "frame": {
+      "avg": 23.4,
+      "count": 7
+    },
+    "background": {
+      "avg": 24.3,
+      "count": 4
+    },
+    "icon": {
+      "avg": 24,
+      "count": 3
+    },
+    "metaphor": {
+      "avg": 24.3,
+      "count": 4
+    }
+  },
+  "by_rule": {
+    "IV-10": 2,
+    "IP-03": 1
+  },
+  "weakest_slides": [
+    {
+      "slide": 5,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "pf_reason": "The prompt specified specific colors for the three circles, but the bottom-right circle is light pink instead of a color implied by the prompt's pattern (the prompt text was cut off). The generated image uses light pink for the bottom-right circle, which deviates from the pattern set by the prompt's specified colors for the other two circles. If the prompt was implying specific colors for all circles, this one is off; otherwise, the prompt is incomplete to judge fully for this particular circle, but the overall color palette matches the specified ones for the other elements. Given the incompleteness, it's safer to mark as a deviation where a specific color was expected for that position."
+      }
+    },
+    {
+      "slide": 6,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "ch_reason": "",
+        "co_reason": "",
+        "detected_text": [],
+        "pf_reason": "The prompt specified a color palette of 'Primary burgundy, Accent antique gold, Background ivory.' The image includes a third line that is light pink, which is not part of the specified palette."
+      }
+    },
+    {
+      "slide": 8,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 4,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The diagram introduces additional colors (peach, light gold, darker red) for the spokes and outer circles that are not part of the specified \"Primary burgundy, Accent antique gold\" palette for the diagram elements."
+      }
+    },
+    {
+      "slide": 13,
+      "total": 22,
+      "scores": {
+        "prompt_fidelity": 5,
+        "text_absence": 4,
+        "composition": 3,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "co_reason": "The image is aesthetically rich and detailed, but it lacks sufficient clear negative space for effective text overlays without potentially obscuring key visual elements or making text hard to read against the busy background.",
+        "detected_text": []
+      }
+    },
+    {
+      "slide": 3,
+      "total": 23,
+      "scores": {
+        "prompt_fidelity": 3,
+        "text_absence": 5,
+        "composition": 5,
+        "color_harmony": 5,
+        "presentation_fit": 5,
+        "detected_text": [],
+        "pf_reason": "The antique gold segment covers roughly a quarter instead of roughly a third of the donut chart as specified in the prompt."
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "criterion": "keyword_analysis",
+      "severity": "INFO",
+      "top_keywords": [
+        "thin (avg 25, n=3)",
+        "thin antique (avg 25, n=2)",
+        "thin antique gold (avg 25, n=2)",
+        "atmosphere (avg 25, n=4)",
+        "sky (avg 25, n=2)"
+      ],
+      "bottom_keywords": [
+        "circles (avg 22, n=2)",
+        "connected (avg 22, n=2)",
+        "curved (avg 22, n=2)",
+        "going (avg 22, n=2)",
+        "circle (avg 22, n=2)"
+      ],
+      "action": "Top keywords: include in future prompts. Bottom keywords: consider replacing or removing."
+    }
+  ],
+  "vqa_attempts": {
+    "total": 20,
+    "retried": 0
+  }
+}
